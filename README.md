@@ -24,9 +24,7 @@ The `-d` flag allows one to start the process without tying up the current termi
 This repository is built on top of the [Cookiecutter-django](https://github.com/pydanny/cookiecutter-django), a speedy way to set up a production ready project for development. For further 
 
 ## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-
-Please make sure to update tests as appropriate.
+This project is built by the Red Afro Limited for the client Mzalendo Trust.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
