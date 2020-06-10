@@ -1,22 +1,25 @@
-.. Dokeza 2.0 documentation master file, created by
+.. Dokeza documentation master file, created by
    sphinx-quickstart.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+   
+Welcome to Dokeza's documentation!
+==================================
 
-Welcome to Dokeza 2.0's documentation!
-======================================================================
+The Dokeza platform makes it possible for the public to participate in the development of a legislative bill in a structured manner. It was developed for the `Mzalendo Trust <http://info.mzalendo.com/>`_ by the `Red Afro Limited <https://ra.co.ke>`_, a private company, based in Kenya, that develops software for the civil society organisations worldwide.
+
+Contents:
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
 
-   pycharm/configuration
-
+   overview.rst
+   install.rst
+   deploy.rst
+   docker_ec2.rst
+   apps.rst
 
 
 Indices and tables
 ==================
 
 * :ref:`genindex`
-* :ref:`modindex`
 * :ref:`search`
