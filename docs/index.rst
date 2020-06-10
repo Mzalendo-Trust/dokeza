@@ -12,8 +12,6 @@ Welcome to Dokeza 2.0's documentation!
 
    pycharm/configuration
 
-
-
 Indices and tables
 ==================
 

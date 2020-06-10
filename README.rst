@@ -1,7 +1,44 @@
-Dokeza 2.0
-==========
+Dokeza 2.0 Platform
+===================
 
-This repo is a new implementation of the Dokeza platform using the latest version of Djang 3 and Python 3.8
+The **Dokeza platform** allows the Kenyan public to participate in the development of a legislative bill in a structured manner. The platform allows for sections of legislative bills to be annotated and commented on. 
+
+The ability for an interested member of the public to comment on the entire bill is also possible. Go to the `Dokeza platform <https://dokeza.mzalendo.com/>`_ and have a look at how it is done.
+
+Installation
+-------------
+
+This repo is a new implementation of the Dokeza platform using the latest version of Djang 3 and Python 3.8. 
+
+The Dokeza implementation is built using the `Docker <https://www.docker.com/>`_ for an easier and more consistent way to develop and deploy the platform.
+
+Make sure the `docker` application is installed on your development environment. Clone this repo and enter it. Once you are in, run
+
+::
+
+$ docker-compose -f local.yml build
+
+
+Once the build process is complete, you may now start up the platform in `docker`.
+
+::
+
+$ docker-compose -f local.yml up -d
+
+The `-d` flag allows one to start the process without tying up the current terminal window as the application starts up.
+
+Usage
+-----
+This repository is built on top of the `Cookiecutter-django <https://github.com/pydanny/cookiecutter-django>`_, a speedy way to set up a production ready project for development. For further 
+
+Ownership
+---------
+
+This project is built by the Red Afro Limited for Mzalendo Trust.
+
+License
+-------
+`MIT <https://choosealicense.com/licenses/mit/>`_
 
 .. image:: https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg
      :target: https://github.com/pydanny/cookiecutter-django/
@@ -9,116 +46,5 @@ This repo is a new implementation of the Dokeza platform using the latest versio
 .. image:: https://img.shields.io/badge/code%20style-black-000000.svg
      :target: https://github.com/ambv/black
      :alt: Black code style
-
-
-Settings
---------
-
-Moved to settings_.
-
-.. _settings: http://cookiecutter-django.readthedocs.io/en/latest/settings.html
-
-Basic Commands
---------------
-
-Setting Up Your Users
-^^^^^^^^^^^^^^^^^^^^^
-
-* To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
-
-* To create an **superuser account**, use this command::
-
-    $ python manage.py createsuperuser
-
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
-
-Type checks
-^^^^^^^^^^^
-
-Running type checks with mypy:
-
-::
-
-  $ mypy dokeza_2_0
-
-Test coverage
-^^^^^^^^^^^^^
-
-To run the tests, check your test coverage, and generate an HTML coverage report::
-
-    $ coverage run -m pytest
-    $ coverage html
-    $ open htmlcov/index.html
-
-Running tests with py.test
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-::
-
-  $ pytest
-
-Live reloading and Sass CSS compilation
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-Moved to `Live reloading and SASS compilation`_.
-
-.. _`Live reloading and SASS compilation`: http://cookiecutter-django.readthedocs.io/en/latest/live-reloading-and-sass-compilation.html
-
-
-
-Celery
-^^^^^^
-
-This app comes with Celery.
-
-To run a celery worker:
-
-.. code-block:: bash
-
-    cd dokeza_2_0
-    celery -A config.celery_app worker -l info
-
-Please note: For Celery's import magic to work, it is important *where* the celery commands are run. If you are in the same folder with *manage.py*, you should be right.
-
-
-
-
-Email Server
-^^^^^^^^^^^^
-
-In development, it is often nice to be able to see emails that are being sent from your application. For that reason local SMTP server `MailHog`_ with a web interface is available as docker container.
-
-Container mailhog will start automatically when you will run all docker containers.
-Please check `cookiecutter-django Docker documentation`_ for more details how to start all containers.
-
-With MailHog running, to view messages that are sent by your application, open your browser and go to ``http://127.0.0.1:8025``
-
-.. _mailhog: https://github.com/mailhog/MailHog
-
-
-
-Sentry
-^^^^^^
-
-Sentry is an error logging aggregator service. You can sign up for a free account at  https://sentry.io/signup/?code=cookiecutter  or download and host it yourself.
-The system is setup with reasonable defaults, including 404 logging and integration with the WSGI application.
-
-You must set the DSN url in production.
-
-
-Deployment
-----------
-
-The following details how to deploy this application.
-
-
-
-Docker
-^^^^^^
-
-See detailed `cookiecutter-django Docker documentation`_.
-
-.. _`cookiecutter-django Docker documentation`: http://cookiecutter-django.readthedocs.io/en/latest/deployment-with-docker.html
-
 
 
