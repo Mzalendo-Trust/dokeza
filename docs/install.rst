@@ -68,40 +68,21 @@ This will give print out the options to use when creating the machine. Then type
 
 The ``dev-machine`` will have a fixed IP. Confirm that you are in the root folder of the project, by listing the files. You should see ``production.yml`` and ``local.yml``.
 
-For Development
----------------
-The ``local.yml`` is the file that controls your local development stack. The ``-f`` attribute informs ``docker-compose`` that it should use the file ``local.yml``.
-
-To build and fire up docker for development, you should type::
-
-    $ docker-compose -f local.yml build
-
-Once the build process is complete, type in::
-
-    $ docker-compose -f local.yml up -d
-
-The ``d`` attribute is to detach the CLI from the command process. To see what the URL of the machine to use, type::
-
-    $ docker-machine ls
-
-On your browser, navigate to the URL http://192.168.99.100:8000 for the ``default`` docker machine or the URL found related fixed IP of the ``dev-machine`` when you list the docker machines on the CLI.
-
-Install PostgeSQL and PostGIS
+Install PostGIS
 -----------------------------
 
-Navigate to the Docker container that has the PostgreSQL database::
+We have replaced in the Postgres ``DockerFile`` with the ``postgis/postgis`` image on from the Docker hub. 
 
-    $ docker exec -it <postgres_container_id> bash
-    root@<postgres_container_id>:/# apt-get update
-    root@<postgres_container_id>:/# apt-get install postgresql-9.x-postgis
+The ``postgis/postgis`` image provides tags for running Postgres with PostGIS extensions installed. This image is based on the official postgres image and provides debian and alpine variants for PostGIS both 2.5.x and 3.0.x for each supported version of Postgres (9.5, 9.6, 10, 11, and 12). 
 
-This will take some time. The download is over 400MB. Finally, enable GIS for the database::
+Additionally, an image version is provided which is built from the latest version of Postgres (12) with versions of PostGIS and its dependencies built from their respective master branches.
 
-    root@<postgres_container_id>:/# psql -U [yourdatabase] -c "CREATE EXTENSION postgis;"
+This image ensures that the default database created by the parent postgres image will have the following extensions installed:
 
-The command will be echoed on the CLI, `CREATE EXTENSION`. You can exit after that.
-
-We advice to immediately deploy these initial docker images to the cloud to make sure that the devlopment environment and the production environment are in sync.
+- postgis
+- postgis_topology
+- fuzzystrmatch
+- postgis_tiger_geocoder
 
 Now open your text editor and code some magic.
 

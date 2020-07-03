@@ -9,6 +9,14 @@
 	],
 "creatorBuild": "32186",
 "files": {
+	"/.coverage": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.coverage",
+		"oF": 0
+		},
 	"/.dockerignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -41,28 +49,20 @@
 		"oAP": "/.envs/.local/.postgres",
 		"oF": 0
 		},
-	"/.envs/.production/.django": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.envs/.production/.django",
-		"oF": 0
-		},
-	"/.envs/.production/.postgres": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.envs/.production/.postgres",
-		"oF": 0
-		},
 	"/.gitattributes": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/.gitattributes",
+		"oF": 0
+		},
+	"/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.gitignore",
 		"oF": 0
 		},
 	"/.ipython/profile_default/history.sqlite": {
@@ -101,6 +101,47 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/.pylintrc",
+		"oF": 0
+		},
+	"/.pytest_cache/.gitignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.pytest_cache/.gitignore",
+		"oF": 0
+		},
+	"/.pytest_cache/CACHEDIR.TAG": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.pytest_cache/CACHEDIR.TAG",
+		"oF": 0
+		},
+	"/.pytest_cache/README.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.pytest_cache/README.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"/.pytest_cache/v/cache": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/.pytest_cache/v/cache",
 		"oF": 0
 		},
 	"/azure-pipelines.yml": {
@@ -383,6 +424,14 @@
 		"oAP": "/config/settings/test.py",
 		"oF": 0
 		},
+	"/config/urls-complete.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/urls-complete.py",
+		"oF": 0
+		},
 	"/config/urls.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -439,12 +488,36 @@
 		"oAP": "/docs/deploy.rst",
 		"oF": 0
 		},
-	"/docs/docker_ec2.rst": {
+	"/docs/deployment.rst": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/docs/docker_ec2.rst",
+		"oAP": "/docs/deployment.rst",
+		"oF": 0
+		},
+	"/docs/development.rst": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/development.rst",
+		"oF": 0
+		},
+	"/docs/docker.rst": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/docker.rst",
+		"oF": 0
+		},
+	"/docs/index.rst": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/index.rst",
 		"oF": 0
 		},
 	"/docs/install.rst": {
@@ -1022,6 +1095,232 @@
 		"oAP": "/dokeza_2_0/utils/storages.py",
 		"oF": 0
 		},
+	"/htmlcov/coverage_html.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/htmlcov/coverage_html-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/htmlcov/dokeza_2_0___init___py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0___init___py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_conftest_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_conftest_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_contrib___init___py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_contrib___init___py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_contrib_sites___init___py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_contrib_sites___init___py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users___init___py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users___init___py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_admin_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_admin_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_api_serializers_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_api_serializers_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_api_views_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_api_views_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_apps_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_apps_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_forms_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_forms_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_models_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_models_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_tasks_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_tasks_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_urls_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_urls_py.html",
+		"oF": 0
+		},
+	"/htmlcov/dokeza_2_0_users_views_py.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/dokeza_2_0_users_views_py.html",
+		"oF": 0
+		},
+	"/htmlcov/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/index.html",
+		"oF": 0
+		},
+	"/htmlcov/jquery.ba-throttle-debounce.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/htmlcov/jquery.ba-throttle-debounce.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/htmlcov/jquery.hotkeys.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/htmlcov/jquery.hotkeys-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/htmlcov/jquery.isonscreen.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/htmlcov/jquery.isonscreen-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/htmlcov/jquery.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/htmlcov/jquery.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/htmlcov/jquery.tablesorter.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/htmlcov/jquery.tablesorter.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/htmlcov/keybd_closed.png": {
+		"ft": 32768,
+		"iS": 112,
+		"oA": 0,
+		"oAP": "/htmlcov/keybd_closed.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/htmlcov/keybd_open.png": {
+		"ft": 32768,
+		"iS": 112,
+		"oA": 0,
+		"oAP": "/htmlcov/keybd_open.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/htmlcov/status.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/htmlcov/status-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/htmlcov/style.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/htmlcov/style-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/local.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -1068,6 +1367,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/pytest.ini",
+		"oF": 0
+		},
+	"/README.rst": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/README.rst",
 		"oF": 0
 		},
 	"/requirements/base.txt": {

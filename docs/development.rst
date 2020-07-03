@@ -118,7 +118,7 @@ The three envs we are presented with here are ``POSTGRES_DB``, ``POSTGRES_USER``
 
 One final touch: should you ever need to merge ``.envs/production/*`` in a single ``.env`` run the ``merge_production_dotenvs_in_dotenv.py``: ::
 
-    $ python merge_production_dotenvs_in_dotenv.py
+    $ docker-compose -f local.yml run --rm django python merge_production_dotenvs_in_dotenv.py
 
 The ``.env`` file will then be created, with all your production envs residing beside each other.
 
@@ -178,8 +178,7 @@ When developing locally you can go with MailHog_ for email testing provided ``us
 
 Celery tasks in local development
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-When not using docker Celery tasks are set to run in Eager mode, so that a full stack is not needed. When using docker the task
-scheduler will be used by default.
+When not using docker Celery tasks are set to run in Eager mode, so that a full stack is not needed. When using docker the task scheduler will be used by default.
 
 If you need tasks to be executed on the main thread during development set CELERY_TASK_ALWAYS_EAGER = True in config/settings/local.py.
 
