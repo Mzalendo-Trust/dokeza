@@ -1,81 +1,134 @@
-Deploy
-========
+Deployment with Docker
+======================
 
-This is where you describe how the project is deployed in production.
+.. index:: deployment, docker, docker-compose, compose
 
 
-Install Let's Encrypt
+Prerequisites
+-------------
+
+* Docker 17.05+.
+* Docker Compose 1.17+
+
+
+Understanding the Docker Compose Setup
+--------------------------------------
+
+Before you begin, check out the ``production.yml`` file in the root of this project. Keep note of how it provides configuration for the following services:
+
+* ``django``: your application running behind ``Gunicorn``;
+* ``postgres``: PostgreSQL database with the application's relational data;
+* ``redis``: Redis instance for caching;
+* ``traefik``: Traefik reverse proxy with HTTPS on by default.
+
+Provided you have opted for Celery (via setting ``use_celery`` to ``y``) there are three more services:
+
+* ``celeryworker`` running a Celery worker process;
+* ``celerybeat`` running a Celery beat process;
+* ``flower`` running Flower_.
+
+The ``flower`` service is served by Traefik over HTTPS, through the port ``5555``. For more information about Flower and its login credentials, check out :ref:`CeleryFlower` instructions for local environment.
+
+.. _`Flower`: https://github.com/mher/flower
+
+
+Configuring the Stack
 ---------------------
 
-For HTTPS, we have chosen Let's Encrypt. On the CLI, one must generate a dhparams.pem file before running docker-compose in a production environment.
+The majority of services above are configured through the use of environment variables. Just check out :ref:`envs` and you will know the drill.
 
-    1. Open the **compose/nginx/dhparams.example.pem** and save it as **dhparams.pem** in the same location.
+To obtain logs and information about crashes in a production setup, make sure that you have access to an external Sentry instance (e.g. by creating an account with `sentry.io`_), and set the ``SENTRY_DSN`` variable. Logs of level `logging.ERROR` are sent as Sentry events. Therefore, in order to send a Sentry event use:
 
-    2. For a standard cookiecutter-django project, the command to create it is - 
- 
-    $ openssl dhparam -out compose/nginx/dhparams.pem 2048
+.. code-block:: python
 
+    import logging
+    logging.error("This event is sent to Sentry", extra={"<example_key>": "<example_value>"})
 
-Install on the Production Server
---------------------------------
-
-The deployment instructions here are for Digital Ocean, though one can use the preferred Cloud company. The important thing is the deployment is on Docker.
-
-Navigate to the project's root folder on the CLI. List the Docker machines present::
-
-    $ docker-machine ls
-
-Create your production server on Digital Ocean using the following command on the CLI::
-
-    $ docker-machine create --driver digitalocean --help
-
-This will give all the options needed to spin up a Digital Ocean (DO) 'droplet'. For this size of project, these are the minimum specs and preferred location::
-
-    $ docker-machine create --driver digitalocean --digitalocean-size 1gb \ --digitalocean-image ubuntu-16-04-x64 --digitalocean-region lon1 \ --digitalocean-access-token=$DOTOKEN machine-name
-
-    $ eval $(docker-machine env machine-name)
-
-NOTE: Take the IP of the droplet and put it on the the environment variable file, *.env* in the ``DJANGO_ALLOWED_HOSTS`` before you begin the Docker Build process.
-
-Navigate to the root folder of the project, and beginning by building by building he project on the production server::
-
-    $ docker-compose -f production.yml build
-
-and after some amount of time::
-
-    $ docker-compose -f production.yml up -d
-
-Immediately create the database and the superuser::
-
-    $ docker-compose run django python manage.py makemigrations
-    $ docker-compose run django python manage.py migrate
-    $ docker-compose run django python manage.py createsuperuser
+The `extra` parameter allows you to send additional information about the context of this error.
 
 
-Install PostgeSQL and PostGIS
----------------------------------
+You will probably also need to setup the Mail backend, for example by adding a `Mailgun`_ API key and a `Mailgun`_ sender domain, otherwise, the account creation view will crash and result in a 500 error when the backend attempts to send an email to the account owner.
 
-Navigate to the Docker container that has the PostgreSQL database::
+.. _sentry.io: https://sentry.io/welcome
+.. _Mailgun: https://mailgun.com
 
-    $ docker ps -a
-    $ docker exec -it <postgres_container_id> bash
-    root@<postgres_container_id>:/# apt-get update
-    root@<postgres_container_id>:/# apt-get install postgresql-9.x-postgis
 
-This will take some time. The download is over 400MB. Finally, enable GIS for the database::
+.. warning::
 
-    root@<postgres_container_id>:/# psql -U [yourdatabase] -c "CREATE EXTENSION postgis;"
+    .. include:: mailgun.rst
 
-The command will be echoed on the CLI, ```CREATE EXTENSION```. You can exit after that.
 
-To see what the URL of the DO droplet that is related to **machine_name** use, type::
+Optional: Use AWS IAM Role for EC2 instance
+-------------------------------------------
 
-    $ docker-machine ls
+If you are deploying to AWS, you can use the IAM role to substitute AWS credentials, after which it's safe to remove the ``AWS_ACCESS_KEY_ID`` AND ``AWS_SECRET_ACCESS_KEY`` from ``.envs/.production/.django``. To do it, create an `IAM role`_ and `attach`_ it to the existing EC2 instance or create a new EC2 instance with that role. The role should assume, at minimum, the ``AmazonS3FullAccess`` permission.
 
-On your browser, navigate to the URL http://<machine_name_IP>.
+.. _IAM role: https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html
+.. _attach: https://aws.amazon.com/blogs/security/easily-replace-or-attach-an-iam-role-to-an-existing-ec2-instance-by-using-the-ec2-console/
 
-To access the admin, type the URL ```machine_name_IP\admin```. Enter the superuser name and password and confirm everything is intact.
 
-Optional Installation
----------------------
+HTTPS is On by Default
+----------------------
 
+SSL (Secure Sockets Layer) is a standard security technology for establishing an encrypted link between a server and a client, typically in this case, a web server (website) and a browser. Not having HTTPS means that malicious network users can sniff authentication credentials between your website and end users' browser.
+
+It is always better to deploy a site behind HTTPS and will become crucial as the web services extend to the IoT (Internet of Things). For this reason, we have set up a number of security defaults to help make your website secure:
+
+* If you are not using a subdomain of the domain name set in the project, then remember to put your staging/production IP address in the ``DJANGO_ALLOWED_HOSTS`` environment variable (see :ref:`settings`) before you deploy your website. Failure to do this will mean you will not have access to your website through the HTTP protocol.
+
+* Access to the Django admin is set up by default to require HTTPS in production or once *live*.
+
+The Traefik reverse proxy used in the default configuration will get you a valid certificate from Lets Encrypt and update it automatically. All you need to do to enable this is to make sure that your DNS records are pointing to the server Traefik runs on.
+
+You can read more about this feature and how to configure it, at `Automatic HTTPS`_ in the Traefik docs.
+
+.. _Automatic HTTPS: https://docs.traefik.io/configuration/acme/
+
+
+(Optional) Postgres Data Volume Modifications
+---------------------------------------------
+
+Postgres is saving its database files to the ``production_postgres_data`` volume by default. Change that if you want something else and make sure to make backups since this is not done automatically.
+
+
+Building & Running Production Stack
+-----------------------------------
+
+You will need to build the stack first. To do that, run::
+
+    docker-compose -f production.yml build
+
+Once this is ready, you can run it with::
+
+    docker-compose -f production.yml up
+
+To run the stack and detach the containers, run::
+
+    docker-compose -f production.yml up -d
+
+To run a migration, open up a second terminal and run::
+
+   docker-compose -f production.yml run --rm django python manage.py migrate
+
+To create a superuser, run::
+
+   docker-compose -f production.yml run --rm django python manage.py createsuperuser
+
+If you need a shell, run::
+
+   docker-compose -f production.yml run --rm django python manage.py shell
+
+To check the logs out, run::
+
+   docker-compose -f production.yml logs
+
+If you want to scale your application, run::
+
+   docker-compose -f production.yml scale django=4
+   docker-compose -f production.yml scale celeryworker=2
+
+.. warning:: don't try to scale ``postgres``, ``celerybeat``, or ``traefik``.
+
+To see how your containers are doing run::
+
+    docker-compose -f production.yml ps

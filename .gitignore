@@ -158,8 +158,8 @@ typings/
 !.vscode/launch.json
 !.vscode/extensions.json
 
-
-
+# Codekit 
+config.codekit3
 
 
 ### Windows template

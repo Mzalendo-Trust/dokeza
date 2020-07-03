@@ -11,11 +11,13 @@ Contents:
 .. toctree::
    :maxdepth: 2
 
-   overview.rst
-   install.rst
-   deploy.rst
-   docker_ec2.rst
-   apps.rst
+   overview
+   install
+   development
+   deploy
+   docker
+   apps
+   testing
 
 
 Indices and tables
