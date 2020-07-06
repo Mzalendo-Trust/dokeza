@@ -1544,6 +1544,14 @@
 		"oAP": "/compose/local/django/start",
 		"oF": 0
 		},
+	"/compose/local/onlyoffice/Dockerfile": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/local/onlyoffice/Dockerfile",
+		"oF": 0
+		},
 	"/compose/production/aws/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,

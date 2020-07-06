@@ -13,7 +13,7 @@ services:
     container_name: django
     depends_on:
       - postgres
-      - mailhog
+      - mailhog     
     volumes:
       - .:/app
     env_file:
@@ -74,3 +74,20 @@ services:
     ports:
       - "5555:5555"
     command: /start-flower
+
+  nginx-proxy:
+    image: jwilder/nginx-proxy:alpine
+    container_name: nginx-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./certs:/etc/nginx/certs
+    restart: always
+    depends_on:
+      - django
+
+  # onlyoffice:
+  #   image: onlyoffice/documentserver
+  #   container_name: onlyoffice
