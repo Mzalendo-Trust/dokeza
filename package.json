@@ -1,0 +1,41 @@
+{
+  "name": "dokeza",
+  "version": "0.2.0",
+  "author": {
+    "name": "Njuguna Gathere",
+    "email": "dokeza.tng@mailhero.io"
+  },
+  "scripts": {
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "dev": "npm run development",
+    "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "hot": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "prod": "npm run production",
+    "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+  },
+  "dependencies": {
+    "glob-all": "^3.1.0",
+    "laravel-mix": "^5.0.4",
+    "path": "^0.12.7",
+    "purgecss-webpack-plugin": "^2.3.0",
+    "purgecss-whitelister": "^2.3.1"
+  },
+  "devDependencies": {
+    "annotator": "^2.0.0-dev.2",
+    "bootstrap": "^4.5.0",
+    "browserify": "^16.5.1",
+    "cross-env": "^7.0.2",
+    "font-awesome": "^4.7.0",
+    "fullcalendar": "^5.1.0",
+    "jquery": "^3.5.1",
+    "moment": "^2.27.0",
+    "popper.js": "^1.16.1",
+    "resolve-url-loader": "3.1.1",
+    "sass": "^1.26.9",
+    "sass-loader": "9.0.1",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.43.0"
+  }
+}

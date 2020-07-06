@@ -1,0 +1,237 @@
+/* purgecss start ignore */
+@import url('https://fonts.googleapis.com/css?family=Rubik:300,300i,400,400i,500,500i,700,700i');
+@import url('https://fonts.googleapis.com/css?family=Merriweather:400,400i,700,900');
+
+* {
+  font-family: Rubik, san-serif;
+}
+
+/*Navbar*/
+
+.dz--navbar {
+  height: 60px;
+  padding-top: 0;
+  padding-bottom: 0;
+  background: #000000;
+  background-image: linear-gradient(90deg, #000000 30%, #009e57 10%);
+}
+
+.dz--navbar .nav-link {
+  height: 60px;
+  padding: 1.1rem 0;
+  color: #eeeeee;
+}
+
+.dz--navbar .nav-item.active {
+  background: #00522d;
+}
+
+.dz--navbar .nav-link:hover {
+  color: #00522d;
+}
+
+.dz--navbar .nav-item.active .nav-link:hover {
+  color: #009e57;
+}
+
+.navbar-brand {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.navbar-brand img {
+  margin-left: -8px;
+}
+
+.dz--submenu {
+  background: #00522d;
+  margin-top: -20px;
+}
+
+.dz--submenu .nav-link {
+  color: #eeeeee;
+}
+
+.dz--submenu .nav-link:hover {
+  color: #009e57;
+}
+
+.dz--submenu .nav-link.active {
+  background: #ffffff;
+  color: #00522d;
+}
+
+
+/*Main*/
+
+.dz--main {
+  padding-bottom: 1rem;
+}
+
+.dz--heading-5 {
+  background: #009e57;
+  color: #eeeeee;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  font-size: 1rem;
+}
+
+.dz--card .card-header,
+.dz--card .card-title {
+  font-size: 1rem;
+}
+
+.dz--card .card-text {
+  font-size: 0.8rem;
+}
+
+.dz--card .btn {
+  font-size: 0.7rem;
+  background: #c22710;
+  border: none;
+}
+
+.dz--bills {
+  padding-top: 2.5rem;
+}
+
+.dz--card_bill {
+  padding-bottom: 2rem;
+}
+
+.dz--card_news .card,
+.dz--card_about .card,
+.dz--card_calender-event .card {
+  border: none;
+}
+
+.dz--card_date,
+.dz--card_location,
+.dz--card_venue {
+  font-size: 0.5rem;
+}
+
+.dz--card_location,
+.dz--card_venue {
+  line-height: 0.9rem;
+}
+
+.dz--card_calender-event {}
+
+.dz--card_inverse .card {
+  background: #e6f5ef;
+}
+
+
+/*Bills*/
+
+.dz--card_bill-desc {
+  font-size: 0.4rem;
+  text-transform: uppercase;
+}
+
+.dz--card_senate-bill {
+  background: #2e0940;
+  color: #eeeeee;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.dz--card_national-assembly-bill {
+  background: #573d0c;
+  color: #eeeeee;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+}
+
+.card-header {
+  margin: 0;
+}
+
+.dz--btn_link {
+  font-size: 0.6rem;
+}
+
+.btn.dz--btn_annotate {
+  background: rgba(19, 144, 70, 0.3);
+  border: none;
+  color: black;
+  font-size: 0.8rem;
+  border-radius: 0;
+}
+
+.btn.dz--btn_comment {
+  background: #520b00;
+  border: none;
+}
+
+
+
+/*Signup*/
+.dz--form_email-signup {}
+
+.dz--btn_facebook {
+  background: #3b5998;
+  border-color: #3b5998;
+}
+
+.dz--btn_facebook:hover {
+  background: #2c4372;
+  border-color: #2c4372;
+}
+
+.dz--btn_twitter {
+  background: #55acee;
+  border-color: #55acee;
+}
+
+.dz--btn_twitter:hover {
+  background: #2595e9;
+  border-color: #2595e9;
+}
+
+.dz--btn_google {
+  background: #dd4b39;
+  border-color: #dd4b39;
+}
+
+.dz--btn_google:hover {
+  background: #c43322;
+  border-color: #c43322;
+}
+
+/*Footer*/
+
+.dz--footer {
+  color: #eeeeee;
+  font-size: 0.8rem;
+  background: #000000;
+  border-top: 5px #c22710 solid;
+  margin-top: 1rem;
+}
+
+.dz--footer a {
+  color: #eeeeee;
+}
+
+.dz--footer a:hover {
+  color: #009e57;
+}
+
+.dz--footer_copyright {
+  padding: 1rem 0;
+}
+
+.dz--footer_links {
+  display: block;
+  margin-right: 2rem;
+}
+
+.dz--footer_links>dt {
+  text-transform: uppercase;
+  padding: 0.5rem 0;
+}
+
+.dz--footer_links>dd {
+  line-height: 0.5rem;
+}

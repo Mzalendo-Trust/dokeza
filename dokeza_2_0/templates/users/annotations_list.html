@@ -1,0 +1,64 @@
+{% extends "_layouts/base_user.html" %}
+{% load i18n static %}
+{% load social_share %}
+<!-- Main Content -->
+{% block content %}
+  <div class="row justify-content-between">
+    <!-- Sidebar -->
+    <aside class="dz-aside col-sm-4">
+      <div class="card">
+        <div class="card-header dz-annotation__header">
+          <h4>Annotations Archives</h4>
+        </div>
+        <div class="card-block">
+          <h5 class="dz-annotation__item">
+            <a href="{% url 'users:annotations_year_archive' 2017 %}">2017</a>
+          </h5>
+        </div>
+      </div>
+    </aside>
+    <!-- END Sidebar -->
+    <!-- Annotations -->
+    <article class="col-sm-8">
+    {% for obj in object_list %}
+      <div class="dz-annotation">
+        <h2 class="card-header dz-annotation__header">Bill: <a class="card-inverse" href="{% url 'bills:detail' obj.get_bill_slug %}">{{ obj.get_bill_slug }}</a></h5>
+        <div class="card-block">
+          <h3 class="annotation-heading">Annotation</h3>
+          <p class="dz-annotation__page"><span>&hellip;</span> {{ obj.quote }}</p>
+          <blockquote class="blockquote">
+            <h6 class="annotation-subheading">Entry on annotation</h6>
+            <p class="mb-0 blockquote-footer">{{ obj.text }}</p>
+          </blockquote>
+          <div class="d-flex dz-user__content justify-content-start annotation-bg">
+            <div class="col-6 p-2">
+              <a href="{{ obj.get_absolute_url }}" target="_blank" class="btn btn-sm btn-success">Go to annotation thread</a>
+              <a href="{{ obj.get_delete_url }}" class="btn btn-sm btn-danger">Delete annotation</a>
+            </div>
+            <div class="col-6 ml-auto p-2">
+              <p class="dz-user__content--time mb-2 text-muted">{{ obj.updated|timesince }} ago.</p>
+            </div>
+            <div class="class__share col-12">
+              <div class="text-share">Share</div>
+              {% post_to_twitter '"{{ obj.text|safe|truncatechars:50 }}" - annotation on #Dokeza by @MzalendoTrust.' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              {% post_to_facebook annot_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              {% post_to_linkedin obj.text object_or_url "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" %}
+              {% post_to_gplus annot_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              {% send_email obj.text 'I am reading {{ obj.text|safe }} on the Dokeza platform built by Mzalendo. Check out' annot_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% empty %}
+      <div class="card">
+        <h5 class="card-header card-inverse card-danger">Annotations on Bills</h5>
+        <div class="card-block no-content">
+          <h6>You have not made any annotations yet.</h6>
+      </div>
+    {% endfor %}
+    </article>
+  <!-- END Annotations -->
+</div>
+{% endblock content%}
+<!-- END Main Content -->

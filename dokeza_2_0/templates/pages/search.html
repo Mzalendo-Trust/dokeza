@@ -1,0 +1,52 @@
+{% extends "_layouts/base.html" %}
+<!-- Sub-Navigation Block -->
+{% block title %}- Search Results{% endblock title %}
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/help.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+<!-- END Sub-Navigation Block -->
+<!-- Main Content -->
+{% block content %}
+<section class="dz-main__content dz-search__results">
+  <!-- About Dokeza -->
+  <h1 class="dz-main__content-heading">Search Results</h1>
+  <form class="dz-search dz-search__bar " method="GET" action="{% url 'search' %}">{% csrf_token %}
+    <div class="input-group">
+      <input type="text" class="form-control form-control-sm" placeholder="Search for&hellip;">
+      <span class="input-group-btn">
+        <button class="btn btn-sm btn-success" type="button">Go!</button>
+      </span>
+    </div>
+  </form>
+  {% for item in search_items %}
+  {{ item }}
+  {% empty %}
+  <p>
+    <strong><em>There are no search results for your query.</em></strong>
+  </p>
+  {% endfor %}
+  <hr>
+</section>
+<section class="dz-contacts dz-contacts__search">
+  <h4>Contacts</h4>
+  <h6 class="">Email</h6>
+  <p class="adr">
+    <a class="url" href="http://info.mzalendo.com/">Mzalendo Trust</a><br>
+    Email: <span class="email">info@mzalendo.com</span>
+  </p>
+  <h6 class="">Postal Address</h6>
+  <p class="adr">
+    <a class="url" href="http://info.mzalendo.com/">Mzalendo Trust</a><br>
+    <span class="street-address">PO Box 21765</span> —
+    <span class="postal-code">00505</span><br>
+    <span class="region">Nairobi</span>,
+    <span class="country-name">Kenya</span>
+    <span>Heinrich Boll Foundation, Prof. Wangari Mathai Road (Former Forest Road).</span>
+  </p>
+</section>
+{% endblock content%}
+<!-- END Main Content -->

@@ -1,0 +1,100 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+{% load post_lists %}
+<!-- Sub-Navigation Block -->
+{% block title %}Analysis List{% endblock title %}
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/home.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+<!-- END Sub-Navigation Block -->
+<!-- Main Content -->
+{% block content %}
+<!-- News Content -->
+<section class="dz-main__content">
+  <div class="dz-news">
+    <h1 class="dz-main__heading">Analysis</h1>
+    {% for post in posts %}
+    <article class="dz-news__post">
+      <div class="dz-news__content">
+        <div class="dz-news__thumbnail">
+          {% if post.image %}
+          <img src="{{ post.image.url }}" alt="{{ post.title }} Picture">
+          {% else %}
+          <img src="{% static 'dist/images/public/default-image.svg' %}" alt="">
+          {% endif %}
+        </div>
+        <div class="dz-news__excerpt">
+          <a href="{{ post.get_absolute_url }}">
+            <h2>{{ post.title }}</h2>
+          </a>
+          <div class="news-intro">
+            {{ post.content|safe|truncatewords:30 }}
+          </div>
+          <div class="dz-news__detail">
+            {{ post.publish }} by {{ post.author.full_name }}&nbsp;
+            <span class="dz-news__detail--break">
+              <strong>Catergories</strong>: {% for name in post.tags.names %}
+              {% if forloop.last %}
+              {{ name }}
+              {% else %}
+              {{ name }},
+              {% endif %}
+              {% endfor %}
+            </span>
+          </div>
+          <div class="dz-news__link">
+            <a href="{{ post.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+          </div>
+        </div>
+      </div>
+    </article>
+    {% empty %}
+    <p>
+      "There is no published analysis."
+    </p>
+    {% endfor %}
+  </div>
+</section>
+<!-- END News Content -->
+{% endblock content%}
+<!-- END Main Content -->
+<!-- News Submenu -->
+{% block submenus %}
+<div class="dz-main__submenu dz-news__submenu list-group">
+  <li class="list-group-item">
+    <ol class="list-unstyled">
+      <li>
+        <h5 class="text-muted">Categories</h5>
+      </li>
+      {% for tag in tags %}
+      <li><a href="{% url 'tagged' tag.slug %}">{{ tag.name|capfirst }}</a></li>
+      {% empty %}
+      <li>No Categories</li>
+      {% endfor %}
+    </ol>
+  </li>
+  <li class="list-group-item">
+    <ol class="list-unstyled">
+      <li>
+        <h5 class="text-muted">Archives</h5>
+      </li>
+      {% get_post_list as posts_list %}
+      {% for years, months in posts_list %}
+      <li>{{ years }} -
+        {% for month_number, month_name in months.items %}
+        <a href="/analysis/{{ years }}/{{ month_name|lower }}/">{{ month_name }}</a>
+        {% if not forloop.last %},{% endif %}
+        {% endfor %}
+      </li>
+      {% empty %}
+      <li>No posted analysis yet.</li>
+      {% endfor %}
+    </ol>
+  </li>
+</div>
+{% endblock submenus %}
+<!-- END News Submenu -->

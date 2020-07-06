@@ -1,0 +1,6 @@
+{% block sub-navigation %}
+<a class="subnav-link {% if stingo == 'help' %} active {% endif %}" href="{% url 'help' %}">FAQs</a>
+<a class="subnav-link {% if stingo == 'help' %} active {% endif %}" href="{% url 'sitemap' %}">Sitemap</a>
+<a class="subnav-link {% if stingo == 'privacy' %} active {% endif %}" href="{% url 'privacy' %}">Privacy Policy</a>
+<a class="subnav-head {% if stingo == 'search' %} active {% endif %}" href="{% url 'search' %}">Search Results</a>
+{% endblock sub-navigation %}

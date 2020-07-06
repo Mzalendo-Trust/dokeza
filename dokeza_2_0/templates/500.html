@@ -1,13 +1,18 @@
-{% extends "base.html" %}
-
-{% block title %}Server Error{% endblock %}
-
+{% extends "_layouts/base.html" %}
+{% load static %}
+<!-- Sub-Navigation Block -->
+{% block sub-navigation %}
+<div class="dz-sub-navigation">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/home.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+{% block title %}Internal Server Error{% endblock %}
 {% block content %}
-<h1>Ooops!!! 500</h1>
-
-<h3>Looks like something went wrong!</h3>
-
-<p>We track these errors automatically, but if the problem persists feel free to contact us. In the meantime, try refreshing.</p>
+<div class="dz-error col-8">
+  <h1>We have had an internal server error</h1>
+  <img class="dz-error__pic" src=" {% static 'dist/images/dokeza-error.svg' %}" alt="">
+  <p>Don't panic. Looks like something went wrong! We track these errors automatically, but if the problem persists feel free to contact us. In the meantime, try refreshing.</p>
+</div>
 {% endblock content %}
-
-

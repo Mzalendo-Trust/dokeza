@@ -1,0 +1,20 @@
+{% extends "_layouts/base.html" %}
+
+{% load i18n %}
+{% load account %}
+
+{% block title %}{% trans "Confirm E-mail Address" %}{% endblock %}
+
+{% block content %}
+<div class="container user__entry">
+  <div class="user__page">
+    <div class="user__form">
+        <h1>{% trans "Confirm E-mail Address" %}</h1>
+
+        {% user_display email_address.user as user_display %}
+                
+        <p>{% blocktrans with email_address.email as email %}You have confirmed that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail address for user {{ user_display }}.{% endblocktrans %}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

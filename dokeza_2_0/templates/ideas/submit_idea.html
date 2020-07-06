@@ -1,0 +1,32 @@
+{% extends "ideas/base_ideas.html" %}
+{% load i18n static %}
+{% load crispy_forms_tags %}
+
+{% block header %}
+   <h1 class="dz-main__heading">Submit to Parliament</h1>
+{% endblock header %}
+<!-- Main Content -->
+{% block content %}
+  <!-- Draft-An-Idea -->
+  <section class="dz-mainbar">
+    <div class="card">
+      <div class="card-block">
+        <form method="POST" class="post-form">
+          <p class="form-story">Please submit your requests and equiries by filling out the form below.
+          The Mzalendo team will reach out to you as soon as possible.</p>
+          {% csrf_token %}
+          {{ form|crispy }}
+          <button type="submit" class="save btn btn-success">Save Idea</button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <!-- END Draft-An-Idea -->
+{% endblock content%}
+<!-- END Main Content -->
+{% block ckeditor %}
+  <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}">
+    </script>
+  <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock ckeditor %}
+</div>

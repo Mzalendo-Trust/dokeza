@@ -1,9 +1,19 @@
-{% extends "base.html" %}
-
-{% block title %}Page not found{% endblock %}
-
+{% extends "_layouts/base.html" %}
+{% load static %}
+<!-- Sub-Navigation Block -->
+{% block sub-navigation %}
+<div class="dz-sub-navigation">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/home.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+{% block title %}Page Not found{% endblock %}
 {% block content %}
-<h1>Page not found</h1>
-
-<p>This is not the page you were looking for.</p>
+<div class="dz-error col-8">
+  <h1>We Did Not Find That Page</h1>
+  <img class="dz-error__pic" src=" {% static 'dist/images/dokeza-error.svg' %}" alt="">
+  <p>We are sorry that this is not the page you were looking for.<br>
+    Click on any of the links above to navigate back to the pages that we are sure exist.</p>
+</div>
 {% endblock content %}

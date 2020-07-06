@@ -1,0 +1,70 @@
+{% extends "_layouts/base_user.html" %}
+{% load i18n static %}
+{% load social_share %}
+<!-- Main Content -->
+{% block content %}
+  <div class="dz-main__content user-annotations">
+    <!-- Sidebar -->
+    <aside class="dz-aside">
+      <div class="card">
+        <div class="card-header dz-annotation__header">
+          <h4>Annotation Archives</h4>
+        </div>
+        <div class="annotation-years">
+          <ol>
+            {% for date in date_list %}
+              <li class="dz-annotation__item">{{ date|date:"F Y" }}</li>
+            {% empty %}
+            <div class="no-content">
+              <p>There are no archives</p>
+            </div>  
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </aside>
+    <!-- END Sidebar -->
+    <!-- Annotations -->
+    <article class="dz-article">
+    {% for annot in user_annotations %}
+      <div class="dz-annotation">
+        <h2 class="card-header dz-annotation__header">Bill: <a class="card-inverse" href="{% url 'bills:detail' annot.get_bill_slug %}">{{ annot.get_bill_slug }}</a></h5>
+        <div class="card-block">
+          <h3 class="annotation-heading">Annotation</h3>
+          <p class="dz-annotation__page"><span>&hellip;</span> {{ annot.quote }}</p>
+          <blockquote class="blockquote">
+            <h6 class="annotation-subheading">Entry on annotation</h6>
+            <p class="mb-0 blockquote-footer">{{ annot.text }}</p>
+          </blockquote>
+          <div class="d-flex dz-user__content justify-content-start annotation-bg">
+            <div class="col-6 p-2">
+              <a href="{{ annot.get_absolute_url }}" target="_blank" class="btn btn-sm btn-success">Go to annotation thread</a>
+              <a href="{{ annot.get_delete_url }}" class="btn btn-sm btn-danger">Delete annotation</a>
+            </div>
+            <div class="col-6 ml-auto p-2">
+              <p class="dz-user__content--time mb-2 text-muted">{{ annot.updated|timesince }} ago.</p>
+            </div>
+            <div class="class__share col-12">
+              <div class="text-share">Share</div>
+              {% post_to_twitter '"{{ annot.text|safe|truncatechars:50 }}" - annotation on #Dokeza by @MzalendoTrust.' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              {% post_to_facebook annot_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              {% post_to_linkedin annot.text object_or_url "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" %}
+              {% post_to_gplus annot_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              {% send_email annot.text 'I am reading {{ annot.text|safe }} on the Dokeza platform built by Mzalendo. Check out' annot_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      {% empty %}
+      <div class="card">
+        <h5 class="card-header user-annotations__header">Bill Annotations</h5>
+        <div class="no-content">
+          <p>You have not made any annotations yet.</p>
+      </div>
+    {% endfor %}
+    </article>
+  <!-- END Annotations -->
+</div>
+{% endblock content%}
+<!-- END Main Content -->

@@ -1,0 +1,10 @@
+{% extends "_layouts/base.html" %}
+{% load static i18n %}
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/bills.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+{% block breadcrumbs %}<a href="/bills/">Bills</a>{% endblock breadcrumbs %}

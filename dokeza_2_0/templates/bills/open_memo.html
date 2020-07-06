@@ -1,0 +1,57 @@
+{% extends "bills/base_memo.html" %}
+<!-- Main Content -->
+{% block title %} - Bills open for Memoranda{% endblock title %}
+{% block content %}
+<div class="dz-main__content">
+  <div class="dz-bills__content col-12 col-lg-12">
+    <!-- Bills -->
+    <section id="all__bills" class="dz-bills">
+      <h1 class="dz-main__heading">Bills open for Memoranda</h1>
+      <div class="dz-bills__list">
+        <!--Bills-->
+        <div class="row">
+          {% for bill in object_list %}
+          <div class="dz-bills__card">
+            <div class="card p-1">
+              <a href="{{ bill.get_absolute_url }}">
+                <div class="dz-home__bills-{{ bill.get_bill_from_display|slugify|lower }} ">
+                  <h5 class="dz-home__bill-heading">{{ bill.title|capfirst }}</h5>
+                  <span class="dz-house__name dz-{{ bill.get_bill_from_display|slugify|lower }}">
+                    {% if bill.get_bill_from_display == none %}
+                    Discussion Draft
+                    {% else %}
+                    {{ bill.get_bill_from_display }}
+                    {% endif %}
+                  </span>
+                </div>
+              </a>
+              <div class="card-block">
+                <div class="bill-details">
+                  <div class="bill-sponsor">SPONSOR: {{ bill.sponsor }}<br>
+                    <em>{{ bill.get_sponsor_title_display }}</em>
+                  </div>
+                  <div class="bill-dates"><strong>{{ bill.annotations|length }}</strong> Annotations | <strong>{{ bill.comments.count }}</strong> Comments
+                  </div>
+                </div>
+                <p class="card-text">{{ bill.purpose|truncatewords:25 }}
+                </p>
+                <a href="{{ bill.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+              </div>
+            </div>
+          </div>
+          {% empty %}
+          There are no bills open for Memoranda.
+          {% endfor %}
+          {% if is_paginated %}
+          {% include '_partials/pagination.html' %}
+          {% endif %}
+        </div>
+        <!--END Bills Cards-->
+      </div>
+    </section>
+    <!-- END Bills Section -->
+    <hr>
+  </div>
+</div>
+{% endblock content%}
+<!-- END Main Content -->

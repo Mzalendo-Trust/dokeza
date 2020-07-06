@@ -1,0 +1,45 @@
+<div class="pagination-container
+">
+  <ul class="pagination">
+    {% if page_obj.has_previous %}
+    <li>
+      <a href="?page={{ page_obj.previous_page_number }}">
+        <svg class="enabled" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+          <path fill="none" d="M0 0h32v32H0z" />
+          <path id="left_arrow" d="M5.276 18.638a2.95 2.95 0 0 1 0-5.276l18.98-9.49A3.969 3.969 0 0 1 30 7.422v17.032a4.046 4.046 0 0 1-5.855 3.618l-18.87-9.434z" fill-rule="nonzero" /></svg>
+      </a>
+    </li>
+    {% else %}
+    <li>
+      <svg class="disabled" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+        <path fill="none" d="M0 0h32v32H0z" />
+        <path id="left_arrow" d="M5.276 18.638a2.95 2.95 0 0 1 0-5.276l18.98-9.49A3.969 3.969 0 0 1 30 7.422v17.032a4.046 4.046 0 0 1-5.855 3.618l-18.87-9.434z" fill-rule="nonzero" />
+      </svg>
+    </li>
+    {% endif %}
+    {% for i in paginator.page_range %}
+    {% if page_obj.number == i %}
+    <li class="active"><span>{{ i }}</span></li>
+    {% else %}
+    <li class="active">
+      <a class="live" href="?page={{ i }}">{{ i }}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% if page_obj.has_next %}
+    <li>
+      <a href="?page={{ page_obj.next_page_number }}">
+        <svg class="enabled" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+          <path fill="none" d="M0 0h32v32H0z" />
+          <path id="right_arrow" d="M26.724 13.362a2.95 2.95 0 0 1 0 5.276l-18.98 9.49A3.969 3.969 0 0 1 2 24.578V7.546a4.046 4.046 0 0 1 5.855-3.619l18.87 9.435z" fill-rule="nonzero" /></svg>
+      </a>
+    </li>
+    {% else %}
+    <li>
+      <svg class="disabled" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414">
+        <path fill="none" d="M0 0h32v32H0z" />
+        <path id="right_arrow" d="M26.724 13.362a2.95 2.95 0 0 1 0 5.276l-18.98 9.49A3.969 3.969 0 0 1 2 24.578V7.546a4.046 4.046 0 0 1 5.855-3.619l18.87 9.435z" fill-rule="nonzero" />
+      </svg>
+    </li>
+    {% endif %}
+  </ul>
+</div>

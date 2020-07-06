@@ -1,0 +1,71 @@
+{% extends "_layouts/base_user.html" %}
+{% load i18n static %}
+{% load social_share %}
+{% block title %}- My Comments{% endblock title %}
+<!-- Main Content -->
+{% block content %}
+  <div class="dz-main__content user-comments">
+    <!-- Sidebar -->
+    <aside class="dz-aside">
+      <div class="card">
+        <div class="card-header dz-comment__header">
+          <h4>Comment Archives</h4>
+        </div>
+        <div class="comment-years">
+          <ul>
+            <li class="dz-comment__item">
+              <a href="{% url 'users:comment_year_archive' 2017 %}">2017</a>
+            </li>
+          </ul>
+          <ol class="dz-comment__item">
+            {% for date in date_list %}
+              <li>{{ date|date:"F Y" }}</li>
+            {% empty %}
+              <p>There are no archives</p>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </aside>
+    <!-- END Sidebar -->
+    <!-- Comments -->
+    <article class="dz-article">
+    {% for comment in user_comments %}
+      <div class="">
+        <h5 class="card-header dz-comment__header"><span class="header-replies p-0">Comment on </span>"{{ comment.content_object.title }}"</h5>
+        <div class="card-block">
+           <p class="dz-comment dz-comment__page">
+            "{{ comment.content }}"
+            </p>
+            <div class="d-flex dz-user__content justify-content-start comment-bg">
+              <div class="col-6 p-2">
+                <a href="{{ comment.get_absolute_url }}" class="btn btn-sm btn-success">Go to comment thread</a>
+                <a href="{{ comment.get_delete_url }}" class="btn btn-sm btn-danger">Delete comment</a>
+              </div>
+              <div class="col-6 ml-auto p-2">
+                <p class="dz-user__content--time mb-2 text-muted">{{ comment.timestamp|timesince }} ago.</p>
+              </div>
+              <div class="class__share col-12">
+                <div class="text-share">Share</div>
+                {% post_to_twitter '"{{ comment.content|safe }}" - comment on #Dokeza by @MzalendoTrust.' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% post_to_facebook object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% post_to_linkedin comment.content object_or_url "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" %}
+                {% post_to_gplus object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% send_email comment.content 'I am reading {{ comment.content|safe }} by Mzalendo Dokeza. Check out' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              </div>
+            </div>
+        </div>
+      </div>
+      <hr>
+    {% empty %}
+    <div class="card">
+        <h5 class="card-header dz-comment__header">Comments</h5>
+        <div class="card-block no-content">
+          <h6>You have not commented on any bill.</h6>
+        </div>
+    {% endfor %}
+    </article>
+    <!-- END Annotations -->
+  </div>
+{% endblock content%}
+<!-- END Main Content -->

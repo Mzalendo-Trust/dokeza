@@ -1,0 +1,191 @@
+{% extends "other_docs/base_doc.html" %}
+{% load static %} {% load urlify %} {% load crispy_forms_tags %}
+{% load social_share %}
+
+{% block title %}Document: {{ object.title }}{% endblock title %}
+{% block breadcrumbs %} {{ block.super }} {% endblock breadcrumbs %}
+{% block content %}
+  <!--Main-->
+  <div class="dz-bill">
+    <!-- Document content sidebar -->
+    <aside>
+      <!--Card-->
+      <div class="card">
+        <div class="card-block">
+          <div class="dz-bill_details">
+            <h4 class="card-title">INSTITUTION: {{ doc.institution }}</h4>
+            <div class="bill-specs">
+              <p class="bill-dates"><strong> {{ doc.annotations|length }}</strong> Annotations | <strong>{{ doc.comments.count }}</strong> Comments<br />
+              <strong>Last updated:</strong> {{doc.updated_date|date:"d M Y"|default:"--"}}</p>
+              <p class="bill-actions">
+                Highlight text to <span class="dz--btn_annotate btn btn-primary btn-sm">Annotate</span></p>
+                <p class="bill-actions">Click to leave a <a href="#comments" class="dz--btn_comment btn btn-primary btn-sm">Comment</a>
+              </p>
+            </div>
+            <div class="bill-pic">
+              {% if object.bill_pic %}
+                <img class="bill-cover" src="{{ object.bill_pic.url }}" alt="">
+              {% else %}
+                {% if object.bill_from == 1 %}
+                  <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="">
+                  {% elif object.bill_from == 2 %}
+                  <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_senate.svg' %}" alt="">
+                {% else %}
+                  <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft.svg' %}" alt="">
+                {% endif %}
+              {% endif %}
+            </div>
+          </div>
+          <hr>
+          <p class="card-text">
+            <h6 class="dz--aside_title">Clause</h6>
+            <ol class="ul">
+              {% for list in toc %} {{ list|safe|capfirst }} {% endfor %}
+            </ol>
+          </p>
+        </div>
+      </div>
+      <!--END Card-->
+    </aside>
+    <!-- END Bill content sidebar -->
+    <!-- Bill Content -->
+    <div class="bill-content">
+      <h1>{{ object.get_object_from_display }}</h1>
+      <h2>{{ object.title }}</h2>
+      <div id="content"> {{ object.body|safe }}</div>
+      <hr>
+      <div class="bill-details">
+        <em><p>Created on {{ object.created }}
+          <br>Submitted by: <strong>{{ object.owner.full_name }}</strong></p></em>
+          {% if object.pdf  %}
+      {% endif %}
+      </div>
+    </div>
+    <!-- END Bill Content -->
+    <!-- Annotations -->
+    <div class="annotation-control">
+      <svg id="an_icon" class="annot_icon" viewBox="0 0 150 150" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"><path fill="none" d="M0 0h150v150H0z"/><path fill="#c2e7d5" d="M0 0h150v150H0z"/><path d="M25 125l8.964-21.775 12.81 12.81L25 125zm62.762-75.572l12.81 12.81-51.234 51.235-12.81-12.81 51.666-51.668-.432.433zm29.46 1.283a1.81 1.81 0 0 1 2.562 0 1.806 1.806 0 0 1 0 2.56L86.482 86.572a1.81 1.81 0 1 1-2.563-2.56l21.775-21.775-17.932-17.932 7.685-7.685 17.932 17.933 3.843-3.843zm5.125-10.247l-8.968 8.964-12.807-12.807 8.965-8.968a9.06 9.06 0 0 1 12.81 12.81z" fill="#094222" fill-rule="nonzero"/></svg>
+      <div class="dz-annotations">
+      <h6>Annotations</h6>
+      <hr>
+      <div id="annot_tabs" class="annotation__tabs annotation__tabs--all">
+        <div id="all__annots" class="annots annots__header annots__header--active" aria-pressed="true">All Annotations</div>
+        {% if request.user.is_authenticated %}
+          <!-- If registered -->
+          <div id="my__annots" class="annots annots__header" aria-pressed="false">My annotations</div>
+        {% else %}
+          <!-- If not registered -->
+          <div class="annots annots__header annots__signin">
+            <a href="{% url 'account_signup' %}" class="">Sign up</a> or <a href="{% url 'account_login' %}" class="">Log in</a>
+          </div>
+        {% endif %}
+      </div>
+      <!-- All Annotations -->
+      <div id="annots-all" class="dz-annotations__all">
+        {% for annot in bill_annotations %}
+          <div class="{% if request.user == annot.user %}dz-annotations__all--my{% endif %}">
+            <small>
+              <a href="#" class="annot__content ">
+                <div class="d-flex w-100 justify-content-between">
+                  <p class="mb-1"><strong>{{ annot.user }}</strong></p>
+                  <p class="mb-1"><small>{{ annot.updated|timesince }} ago.</small></p>
+                </div>
+                <p class="mb-1">{{ annot.text }}</p>
+              </a>
+              <div class="class__share">
+                <div class="text-share">Share</div>
+                {% post_to_twitter '{{ annot.text|truncatewords:15|safe }} by @MzalendoWatch.' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% post_to_facebook object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% post_to_linkedin annot.text|truncatewords:15|safe object_or_url "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" %}
+                {% post_to_gplus object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% send_email annot.text|truncatewords:15|safe 'I am reading {{ annot.text|safe }} by Mzalendo Dokeza. Check out' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              </div>
+            </small>
+          </div>
+          <hr>          
+        {% endfor %}
+      </div>
+      <!-- END All Annotations -->
+      <!-- My Annotations -->
+      <div id="annots-my" class="dz-annotations__my">
+        {% if request.user.is_authenticated %}
+          {% for annot in my_annotations %}
+            <small>
+              <a href="#" class="annot__content">
+                <div class="d-flex w-100 justify-content-between">
+                  <p class="mb-1"><strong>{{ annot.user }}</strong></p>
+                  <p class="mb-1"><small>{{ annot.updated|timesince }} ago.</small></p>
+                </div>
+                <p class="mb-1">{{ annot.text }}</p>
+              </a>
+              <div class="class__share">
+                <div class="text-share">Share</div>
+                {% post_to_twitter '{{ annot.text|truncatewords:15|safe }} by @MzalendoWatch.' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% post_to_facebook object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% post_to_linkedin annot.text|truncatewords:15|safe object_or_url "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" %}
+                {% post_to_gplus object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;' %}
+                {% send_email annot.text|truncatewords:15|safe 'I am reading {{ annot.text|safe }} by Mzalendo Dokeza. Check out' object_or_url '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;' %}
+              </div>
+            </small>
+          {% empty %}
+            <p class="pl-3 mb-0 dz-annotations__my--empty" > <small>You have no annotations to this document.</small></p>
+          {% endfor %}
+        {% else %}
+          <p>You are not logged in.</p>
+        {% endif %}
+      </div>
+      <!-- END My Annotations -->
+    </div>
+    </div>
+    <!-- END Annotations -->
+  </div>
+  <!-- Comments on the Bill -->
+  <div class="dz-comments row">
+    <div class="comment-section">
+      <h6 id="comments" class='lead comments-head'>Comments</h6>
+      {% if request.user.is_authenticated %}
+        <form method="POST" action="."> {% csrf_token %}
+          {{ comment_form|crispy }}
+          <input type='submit' value='Post comment' class='btn btn-dokeza'>
+        </form>
+      {% else %}
+        <p>You must login to comment </p>
+      {% endif %}
+      <hr/>
+      {% for comment in comments %}
+        <blockquote class="blockquote comment-bg">
+          <p class="dz-comment">{{ comment.content }}</p>
+          <footer class="comment-details">
+            <strong>{{ comment.user }} </strong>| {{ comment.timestamp|timesince }} ago | {% if comment.children.count > 0 %}{{ comment.children.count }} Comment{% if comment.children.count > 1 %}s{% endif %} |
+            {% endif %}
+            <a class='' href='{{ comment.get_absolute_url }}'>Comment Thread</a></footer>
+          <h4 class="header-replies">Replies to this comment</h4>
+          <div class='comment-reply'>
+            {% for child_comment in comment.children %}
+              <blockquote class="blockquote comment-replies">
+                <p class="dz-comment__child">{{ child_comment.content }}</p>
+                <footer class="comment-details"><strong>{{ child_comment.user }}</strong> | {{ child_comment.timestamp|timesince }} ago</footer>
+              </blockquote>
+            {% endfor %}
+            {% if request.user.is_authenticated %}
+              <form method="POST" action="."> {% csrf_token %} {{ comment_form|crispy }}
+                <input type='hidden' name='parent_id' value='{{ comment.id }}'>
+                <input type='submit' value='Reply' class='btn btn-dokeza'>
+              </form>
+            {% else %}
+              <p>You must login to comment </p>
+            {% endif %}
+          </div>
+        </blockquote>
+        <hr/>
+      {% endfor %}
+    </div>
+  </div>
+  <!-- END Comments -->
+  <!--END Main-->
+{% endblock content %}
+<!-- Annotator Block -->
+{% block annotatorjs %}
+<script src="{% static 'dist/js/vendor/annotator-1.2.10-min.js' %}"></script>
+<script src="{% static 'dev/js/dokeza-annotator.js' %}"></script>
+{% endblock annotatorjs %}

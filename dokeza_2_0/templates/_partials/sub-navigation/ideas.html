@@ -1,0 +1,11 @@
+{% block sidebar%}
+  <!-- Sidebar -->
+  <aside class="dz-sidebar sticky-top">
+    <div class="list-group idea-bar">
+      <a href="{% url 'ideas:list' %}" class="idea-bar__list {% if mpango == 'all_ideas' %} active {% endif %}">All Submitted Ideas</a>
+      <a href="{% url 'ideas:my_ideas' %}" class="idea-bar__list {% if mpango == 'my_ideas' %} active {% endif %}">My Ideas</a>
+      <a href="{% url 'ideas:submit_idea' %}" class="idea-bar__list {% if mpango == 'submit_idea' %} active {% endif %}">Add New Idea</a>
+    </div>
+  </aside>
+  <!-- END Sidebar -->
+{% endblock sidebar%}

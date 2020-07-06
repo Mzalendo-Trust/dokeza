@@ -1,0 +1,56 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+{% block title %}Memoranda - List{% endblock title %}
+<!-- Sub-Navigation Block -->
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/public-participation.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+<!-- END Sub-Navigation Block -->
+<!-- Main Content -->
+{% block content %}
+<div class="dz-main__content">
+  <!-- Memoranda Section -->
+  <section class="dz-memoranda">
+    <h1 class="dz-main__heading">Memoranda</h1>
+    <!-- Memoranda Cards-->
+    {% for memo in memoranda %}
+    <div class="dz-memoranda__card col-12 col-sm-6 col-md-4 p-2">
+      <div class="card">
+        <a class="public-heading" href="{{ memo.get_absolute_url }} ">
+          <h6 class="card-header dz-memoranda__card--heading"> {{ memo.title }}</h6>
+        </a>
+        <div class="card-block">
+          <p class="text-muted"><strong>Deadline:</strong> {{ memo.deadline }}</p>
+          <div class="image-view">
+            {% if memo.image %}
+            <img class="memo-icon" src="{{ memo.image.url }}" alt="Petition image">
+            {% else %}
+            <img class="memo-icon" src="{% static 'dist/images/public/memo-icon.svg' %}" alt="">
+            {% endif %}
+          </div>
+          <p class="card-text">{{ memo.content|truncatewords:20}}
+          </p>
+          <div class="dz-memo">
+            <div class="dz-memo__read">
+              <a href="{{ memo.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+            </div>
+            <div class="dz-memo__house">
+              <span class="dz-house__name dz-{{ memo.get_submit_to_display|slugify|lower }}">{{memo.get_submit_to_display }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    There is currently no request for memoranda.
+    {% endfor %}
+    <!--END Memoranda Cards-->
+  </section>
+  <!-- END Memoranda Section -->
+</div>
+{% endblock content%}
+<!-- END Main Content -->

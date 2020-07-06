@@ -1,0 +1,130 @@
+{% extends "_layouts/base.html" %}
+<!-- Sub-Navigation Block -->
+{% block title %}- Help{% endblock title %}
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/help.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %} -->
+<!-- END Sub-Navigation Block -->
+<!-- Main Content -->
+{% block content %}
+<div class="dz-main__content">
+  <!-- FAQs -->
+  <section class="dz-faqs">
+    <h1 class="dz-main__heading">FAQs</h1>
+    <div id="accordion" role="tablist" aria-multiselectable="true">
+      <div class="card border-0">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          <div id="headingOne" class="card-header alert-success" role="tab">
+            <span class="plus-icon animate zoomIn" style="visibility: visible; animation-name: zoomIn; -webkit-animation-name: zoomIn;"><span></span><span></span></span>
+            <h5 class="mb-0">
+              <em>Question:</em> How friendly is the site; especially people without android phones?
+            </h5>
+          </div>
+        </a>
+        <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne">
+          <div class="card-block">
+            We have built this platform using the best "Open Source" technology we could find. The website is optimised for modern web browsers and should adjust to fit the screen of any mobile device. If the device you are using is a "feature" phone, we recommend you get at least a "smart" phone with the latest web browsers, or if you have access to a tablet or desktop computer, you may find the experience even better.
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          <div id="headingTwo" class="card-header alert-success" role="tab">
+            <h5 class="mb-0">
+              <em>Question:</em> What’s the place of institutions in providing direction?
+            </h5>
+          </div>
+        </a>
+        <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="card-block">
+            Depending on area of interest; the interested institution can give comments on a Bill affecting them or partner with Mzalendo to prepare a memoranda on the same.
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          <div id="headingThree" class="card-header alert-success" role="tab">
+            <h5 class="mb-0">
+              <em>Question:</em> Are there push-notifications or you have to be on the platform constantly?
+            </h5>
+          </div>
+        </a>
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="card-block">
+            At the moment you have to visit the platform to find out what is new. We hope to add the ability to send newsletters and push notifications at a later date.
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+          <div id="headingFour" class="card-header alert-success" role="tab">
+            <h5 class="mb-0">
+              <em>Question:</em> What is the certainty that my issues will be considered when putting together a memoranda to accompany the bill?
+            </h5>
+          </div>
+        </a>
+        <div id="collapseFour" class="collapse" role="tabpanel" aria-labelledby="headingFour">
+          <div class="card-block">
+            All issues raised will be considered but at the discretion of Mzalendo. As a rule, vulgar language or attacks on other users will not be encouraged.
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseThree">
+          <div id="headingFive" class="card-header alert-success" role="tab">
+            <h5 class="mb-0">
+              <em>Question:</em> Can I use any language to give my comments?
+            </h5>
+          </div>
+        </a>
+        <div id="collapseFive" class="collapse" role="tabpanel" aria-labelledby="headingFive">
+          <div class="card-block">
+            Only Kiswahili or English will be considered. At the moment, all our national legislation is in English. So English is highly encouraged so that we do not lose the point being made while interpreting.
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+          <div id="headingSix" class="card-header alert-success" role="tab">
+            <h5 class="mb-0">
+              How will the memoranda look like? Does it list those who participated by name?
+            </h5>
+          </div>
+        </a>
+        <div id="collapseSix" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="card-block">
+            Those who partner with Mzalendo will be credited accordingly.
+          </div>
+        </div>
+      </div>
+      <div class="card border-0">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+          <div id="headingSeven" class="card-header alert-success" role="tab">
+            <h5 class="mb-0">
+              <em>Question:</em> How will Mzalendo offer immediate feedback?
+            </h5>
+          </div>
+        </a>
+        <div id="collapseSeven" class="collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="card-block">
+            We will send an email alert to all who contribute to a bill with annotations or commentry. We are working to offer alerts of bills that are related to a user's "county of interest". This will be an "opt-in" feature.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END FAQs -->
+  <!-- Sitemap -->
+  <section class="dz-faqs">
+    <a href="{% url 'sitemap' %}">
+      <h1 class="dz-main__heading">Sitemap</h1>
+    </a>
+  </section>
+  <!-- END Sitemap -->
+</div>
+{% endblock content%}
+<!-- END Main Content -->

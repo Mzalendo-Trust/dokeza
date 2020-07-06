@@ -1,0 +1,53 @@
+{% extends "other_docs/base_doc.html" %}
+<!-- Main Content -->
+{% block title %}Documents - List{% endblock title %}
+{% block content %}
+<div class="dz-main__content">
+  <div class="dz-bills__content">
+    <!-- Documents -->
+    <section id="all__bills" class="dz-bills">
+      <h1 class="dz-main__heading">Documents open for Public Participation</h1>
+      <div class="dz-bills__list">
+        <!--Bills-->
+        {% for doc in object_list %}
+        <div class="dz-bills__card">
+          <div class="card p-1">
+            <a href="{{ doc.get_absolute_url }}">
+              {% if doc.institution.name == "Mzalendo Trust" %}
+              <div class="dz-docs dz-docs__mzalendo">
+                {% else %}
+                <div class="dz-docs dz-docs__civic">
+                  {% endif %}
+                  <h5 class="docs-heading">{{ doc.title|capfirst }}</h5>
+                </div>
+            </a>
+            <div class="card-block">
+              <p class="bill-sponsor"><strong>
+                  Institution: {{ doc.institution }}
+                </strong></p>
+              <p class="bill-dates"><strong>{{ doc.annotations|length }}</strong> Annotations | <strong>{{ doc.comments.count }}</strong> Comments<br />
+                <strong>Created on:</strong> {{doc.created|date:"d M Y"|default:"--"}}</p>
+              <p class="card-text">{{ doc.purpose|truncatewords:25 }}
+              </p>
+              <a href="{{ doc.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+            </div>
+          </div>
+        </div>
+        {% empty %}
+        <h1 class="dz-main__heading">No Documents</h1>
+        <p class="card-text">
+          There are no documents open for public Participation.
+        </p>
+        {% endfor %}
+        {% if is_paginated %}
+        {% include '_partials/pagination.html' %}
+        {% endif %}
+        <!--END Bills Cards-->
+      </div>
+    </section>
+    <!-- END Bills Section -->
+    <hr>
+  </div>
+</div>
+{% endblock content%}
+<!-- END Main Content -->

@@ -1,0 +1,67 @@
+{% extends "analysis/news_list.html" %}
+{% load static %}
+
+<!-- Main Content -->
+{% block content %}
+  <!-- Monthly Analysis Content -->
+  <section class="dz-main__content">
+    <div class="dz-news">
+      <h1 class="dz-main__heading">Analysis for the month of {{ month|date:"F Y" }}</h1>
+      {% for post in object_list %}
+        <article class="dz-news__post">
+          <a href="{{ post.get_absolute_url }}">
+            <h2 class="dz-news__post--heading">{{ post.title }}</h2>
+          </a>
+          <div class="dz-news__content">
+            <a class="dz-news__thumbnail" href="{{ post.get_absolute_url }}">
+              {% if post.image.url %}
+                <img src="{{ post.image.url }}" alt="{{ post.title }} Picture">
+              {% else %}
+                <img src=" {% static 'dist/images/bills/bills_draft.svg' %}" alt="">
+              {% endif %}
+            </a>
+            <div class="dz-news__excerpt">
+              {{ post.content|safe|truncatewords:30 }}
+              <p class="dz-news__detail">
+                {{ post.publish }} by {{ post.author.full_name }}&nbsp;
+                <span class="dz-news__detail--break">
+                  <strong>Catergories</strong>: {% for name in post.tags.names %}
+                    {% if forloop.last %}
+                      {{ name }}
+                    {% else %}
+                      {{ name }},
+                    {% endif %}
+                  {% endfor %}
+                </span>
+              </p>
+              <div class="dz-news__link">
+                <a href="{{ post.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+              </div>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+      <div class="page-links">
+        <div class="page-links__box">
+          <div class="page-links__box--left">
+            {% if previous_month %}
+            <span class="active">Previous Month:</span> <a href="/analysis/{{ previous_month|date:"Y/M" }}"> {{ previous_month|date:"F Y" }}</a>
+          {% else %}
+            <span class="inactive">Previous Month: No analysis</span>
+          {% endif %}
+          </div>
+        </div>
+        <div class="page-links__box">
+          <div class="page-links__box--right">
+            {% if next_month %}
+            <span class="active">Next Month:</span> <a href="/analysis/{{ next_month|date:"Y/M" }}">{{ next_month|date:"F Y" }}</a>
+          {% else %}
+            <span class="inactive">Next Month: No analysis</span>
+          {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock content%}
+<!-- END Main Content -->

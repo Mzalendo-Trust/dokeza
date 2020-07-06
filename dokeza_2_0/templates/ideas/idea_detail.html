@@ -1,0 +1,90 @@
+{% extends "ideas/base_ideas.html" %}
+{% load static %} {% load urlify %} {% load crispy_forms_tags %}
+{% load social_share %}
+
+{% block title %}Idea: {{ object.title }}{% endblock title %}
+
+{% block header %}
+   <h1 class="dz-main__heading">My Idea</h1>
+{% endblock header %}
+  <!-- My Ideas -->
+  {% block content %}
+  <section class="dz-mainbar">
+    <div class="row">
+      <div class="dz-ideas dz-ideas__detail ">
+         <h5 class="dz-ideas__heading">{{ object.title }}</h5>
+         <div class="row">
+          <div class="idea-details idea-details__status">
+            <div class="idea-type">Submission:&nbsp;&nbsp;<span class="dz-house__name dz-ideas__{{ object.get_idea_type_display|slugify }}">{{ object.get_idea_type_display }}</span></div>
+            <div class="idea-house idea-house__detail">House:&nbsp;&nbsp;<span class="dz-house__name dz-{{ object.get_submit_to_display|slugify}} ">{{ object.get_submit_to_display}}</span>
+            </div> 
+            <div class="idea-status idea-status__detail">
+              {% if object.private == 1 %}<span class="idea-private">private</span>{% endif %}
+              {% if object.draft == 1 %}<span class="idea-draft">draft</span>{% endif %}
+            </div>
+          </div>
+          <div class="idea-edit idea-edit__detail">
+            <span class="">Edit:&nbsp;&nbsp;</span>
+            <div class="editing-icon">
+              <a href="{{ object.get_absolute_url }}update">
+                <svg class="edit_icon" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                <rect id="Editing" x="0" y="0" width="40" height="40" style="fill:none;"/>
+                <path id="pencil" d="M5.947,31.271l2.782,2.782l-4.729,1.947l1.947,-4.729Zm0.462,-1.122l0.46,-1.117l20.552,-20.552l4.083,4.116l-20.536,20.535l-1.117,0.46l-3.442,-3.442Zm28.742,-21.201l-2.87,2.869l-4.098,-4.098l2.869,-2.87c1.132,-1.132 2.967,-1.132 4.099,0c1.132,1.132 1.132,2.967 0,4.099Z" style="fill:#c22710;"/>
+              </svg>
+              </a>
+            </div>
+            </div>
+        </div>
+      </div>
+      <div class="idea-content"> {{ object.content|safe }}</div>
+    </div>
+    <hr class="mt-0" />
+    <form action="POST">
+      <p class="user-action">Do you agree with this proposal? Vote for it, even if you have no comment to add.</p>
+      <button class="btn btn-primary">Agree</button> <button class="btn btn-danger">Disagree</button>
+    </form>
+    <hr />
+    <div class="dz-comments row">
+    <div class="comment-section">
+      <h6 id="comments" class='lead comments-head'>Comments</h6>
+      {% if request.user.is_authenticated %}
+        <form method="POST" action="."> {% csrf_token %}
+          {{ comment_form|crispy }}
+          <input type='submit' value='Post comment' class='btn btn-dokeza'>
+        </form>
+      {% else %}
+        <p>You must login to comment </p>
+      {% endif %}
+      <hr/>
+      {% for comment in comments %}
+        <blockquote class="blockquote comment-bg">
+          <p class="dz-comment">{{ comment.content }}</p>
+          <footer class="comment-details">
+            <strong>{{ comment.user }} </strong>| {{ comment.timestamp|timesince }} ago | {% if comment.children.count > 0 %}{{ comment.children.count }} Comment{% if comment.children.count > 1 %}s{% endif %} |
+            {% endif %}
+            <a class='' href='{{ comment.get_absolute_url }}'>Comment Thread</a></footer>
+          <h4 class="header-replies">Replies to this comment</h4>
+          <div class='comment-reply'>
+            {% for child_comment in comment.children %}
+              <blockquote class="blockquote comment-replies">
+                <p class="dz-comment__child">{{ child_comment.content }}</p>
+                <footer class="comment-details"><strong>{{ child_comment.user }}</strong> | {{ child_comment.timestamp|timesince }} ago</footer>
+              </blockquote>
+            {% endfor %}
+            {% if request.user.is_authenticated %}
+              <form method="POST" action="."> {% csrf_token %} {{ comment_form|crispy }}
+                <input type='hidden' name='parent_id' value='{{ comment.id }}'>
+                <input type='submit' value='Reply' class='btn btn-dokeza'>
+              </form>
+            {% else %}
+              <p>You must login to comment </p>
+            {% endif %}
+          </div>
+        </blockquote>
+      {% endfor %}
+    </div>
+  </div>
+  </section>
+  
+  <!-- END My Ideas -->
+{% endblock content%}

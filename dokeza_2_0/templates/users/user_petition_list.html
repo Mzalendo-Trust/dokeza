@@ -1,0 +1,40 @@
+{% extends "_layouts/base_user.html" %}
+{% load i18n static %}
+
+<!-- Main Content -->
+{% block content %}
+  <div class="row justify-content-between">
+    <!-- Sidebar -->
+    <aside class="dz-aside col-sm-3">
+      <div class="list-group">
+        <h6 class="list-group-item list-group-item-info">Petition Drafts</h6>
+        <small>
+        <a href="{% url 'users:petitions' %}" class="list-group-item list-group-item-action active">All Draft Petitions</a>
+        <a href="{% url 'users:draft-petition' %}" class="list-group-item list-group-item-action">Add New Draft Petition</a>
+        <a href="#" class="list-group-item list-group-item-action">Tags</a>
+        </small>
+      </div>
+      <hr>
+    </aside>
+    <!-- END Sidebar -->
+    <!-- Petition List-->
+    <article class="col-sm-9">
+      <div class="card">
+        <div class="card-header alert-info">
+         <h3>My Petitions</h3>
+        </div>
+        <div class="card-block">
+          {% for petition in my_petitions %}
+            <h3>{{ petition.title }}</h3>
+            <p>{{petition.content|safe|truncatewords:20 }}</p>
+            <p>{{ petition.publish|timesince }}</p>
+            <p><a href="{{ petition.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read &hellip;</a>
+                        <a href="{% url 'users:update_petition' petition.slug %}" class="btn btn-outline-primary btn-sm">Edit &hellip;</a></p>
+          {% endfor %}
+        </div>
+      </div>
+    </article>
+    <!-- END Petition List-->
+  </div>
+{% endblock content%}
+<!-- END Main Content -->

@@ -1,0 +1,19 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+<!-- Sub-Navigation Block -->
+{% block sub-navigation %}
+<div class="dz-sub-navigation">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/home.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+{% block title %}Web site Maintenance{% endblock %}
+{% block content %}
+<div class="dz-error col-8">
+  <h1>Dokeza Maintenance Mode</h1>
+  <img class="dz-error__pic" src=" {% static 'dist/images/dokeza.png' %} " alt="">
+  <p>We are currently updating the website and adding some exciting features. This will not last more than one hour.</p>
+  <p>Please check again at some other time.</p>
+</div>
+{% endblock content %}

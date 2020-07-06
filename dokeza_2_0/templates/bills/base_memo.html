@@ -1,0 +1,21 @@
+{% extends "_layouts/base.html" %}
+{% load static i18n %}
+
+{% block pagination %}
+<!-- Pagination -->
+  <div class="pagination pagination-sm justify-content-center">
+   {% if page.obj %}
+     {% if page_obj.has_previous %}
+         <span class="page-item"><a class="page-link" href="?page={{ page_obj.previous_page_number }}" tabindex="-1">Previous</a></span>
+      {% endif %}
+
+      <span class="page-item page-link active">{{ page_obj.number }}</span>
+      &nbsp;of&nbsp;<span class="page-item page-link">{{ paginator.num_pages }}</span>     
+
+      {% if page_obj.has_next %}
+        <span class="page-item"><a class="page-link" href="?page={{ page_obj.next_page_number }}">next</a></span>
+      {% endif %}
+   {% endif %}
+  </div>
+<!-- END Pagination -->
+{% endblock pagination %}

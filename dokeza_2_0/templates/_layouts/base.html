@@ -1,0 +1,60 @@
+{% load static i18n %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Dokeza {% block title %}{% endblock title %}</title>
+  {% include '_partials/meta.html' %}
+  <!-- Extra JS -->
+  {% block extra_js %}{% endblock extra_js %}
+  <!-- Fullcalendar Styles -->
+  {% block fullcalendarstyles %}{% endblock fullcalendarstyles %}
+</head>
+
+<body>
+  <!-- Header -->
+  <!-- Navigation -->
+  <!-- Main-navigation -->
+  <header class="dz-header dz-navigation">
+    {% include '_partials/navigation.html' %}
+    <!-- END Main-navigation -->
+    <!-- Sub-navigation -->
+    {% block sub-navigation %}{% endblock sub-navigation %}
+    <!-- END Sub-navigation -->
+    <!-- END Navigation -->
+    <!-- END Header -->
+  </header>
+  <!-- Main. -->
+  <section class="dz-main container-fluid {% if page == " events" %}dz-public__events{% endif %}">
+    <div class="container">
+      {% block header %}{% endblock header %}
+      {% block sidebar%}{% endblock sidebar%}
+      {% block content %}{% endblock content %}
+      {% block pagination %}{% endblock pagination %}
+    </div>
+    <!-- Footer. -->
+    <footer class="dz-footer">
+      {% include '_partials/footer.html' %}
+    </footer>
+    <!-- END Footer. -->
+  </section>
+  <!-- END Main. -->
+  <!-- SCRIPTS. -->
+  <!-- Third Party Scripts. -->
+  <!-- Google Analytics -->
+  {% include '_partials/ga.html' %}
+  <!-- Vendor Scripts -->
+  <!-- jQuery script -->
+  <script src=" {% static 'dist/js/vendor/jquery-3.5.1.min.js' %} "></script>
+  <script src="{% static 'dist/js/vendor/bootstrap.min.js' %}"></script>
+  <!-- Fullcalendar Block -->
+  {% block fullcalendar %} {% endblock fullcalendar %}
+  <!-- Annotator Block -->
+  {% block annotatorjs %} {% endblock annotatorjs %}
+  <!-- CKEditor Block -->
+  {% block ckeditor %} {% endblock ckeditor %}
+  <!-- Project Scripts. -->
+  <script src="{% static 'dev/js/dokeza.js' %}"></script>
+</body>
+
+</html>

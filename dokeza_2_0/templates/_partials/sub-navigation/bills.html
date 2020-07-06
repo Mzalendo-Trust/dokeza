@@ -1,0 +1,8 @@
+{% block sub-navigation %}
+<a id="bill_list" class="subnav-link {% if stingo == 'all' %} active {% endif %}" href="/bills/">All</a>
+<a id="assembly_list" class="subnav-link {% if stingo == 'assembly' %} active {% endif %}" href="/bills/assembly/">National Assembly</a>
+<a id="senate_list" class="subnav-link {% if stingo == 'senate' %} active {% endif %}" href="/bills/senate/">Senate</a>
+<a id="submit_idea" class="subnav-link {% if stingo == 'idea' %} active {% endif %}" href="/ideas/submit_idea/">Submit an	 idea</a>
+{% endblock sub-navigation %}
+
+

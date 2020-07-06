@@ -1,13 +1,16 @@
-{% extends "account/base.html" %}
+{% extends "_layouts/base.html" %}
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
+{% block title %}{% trans "Verify Your E-mail Address" %}{% endblock %}
 
-{% block inner %}
+{% block content %}
+   <div class="col-xs-9, col-sm-9">
     <h1>{% trans "Verify Your E-mail Address" %}</h1>
 
-    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.{% endblocktrans %}</p>
-
+    <p>{% blocktrans %}We have sent an e-mail to you for verification. Follow the link provided to finalize the signup process. Please contact us if you do not receive it within a few minutes.</p>
+    <p>
+    The email link will expire in 3 days. Make sure that you verify your account within this period. In case you do not verify you account, it will be deleted.{% endblocktrans %}</p>
+  </div>
 {% endblock %}
 

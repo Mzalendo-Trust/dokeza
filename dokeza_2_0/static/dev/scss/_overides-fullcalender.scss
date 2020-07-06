@@ -1,0 +1,97 @@
+.dz-events__calender {
+  // background-color: darken($dz-clr--lightorange, 5%);
+
+  .fc {
+    padding: 1rem;
+    &-event {
+      border-color: lighten($dz-clr--lightorange, 2%);
+      background-color: $dz-clr--orange !important;
+      color: $dz-clr--lightorange !important;
+      font-size: 0.75rem;
+      margin: 0;
+      padding: 0.2rem;
+
+      &-dot {
+        background-color: darken($dz-clr--lightorange, 40%);
+      }
+    }
+    &-icon {
+      height: 1.2em;
+      line-height: 1em;
+      overflow: hidden;
+      font-family: "Roboto", Courier, monospace;
+      font-weight: 100;
+    }
+    &-list-item,
+    &-list-heading-main,
+    &-list-heading-alt {
+      font-size: 0.875rem;
+    }
+
+    &-scroller.fc-day-grid-container {
+      height: 100% !important;
+    }
+
+    &-toolbar {
+      margin-bottom: 0 !important;
+      padding-top: 0.4rem;
+      // padding-right: 0.75rem;
+      // padding-left: 0.75rem;
+      button {
+        background-image: none;
+        border: 0;
+        text-shadow: none;
+      }
+    }
+
+    &-view-container {
+      // padding-bottom: 0.75rem;
+    }
+
+    &-center {
+      display: block !important;
+
+      > h2 {
+        padding: 0.4rem 0;
+        color: #2b0800;
+        font-size: 1.4rem;
+      }
+    }
+
+    &-day-header {
+      padding: 5px;
+      border-color: $dz-clr--lightmaroon;
+      // background-color: #2b0800;
+      color: darken($dz-clr--lightorange, 100%);
+      font-size: 0.875rem;
+    }
+
+    &-day,
+    &-view,
+    &-widget-content {
+      border-color: $dz-clr--lightorange !important;
+      font-size: 0.75rem;
+    }
+
+    &-state {
+      &-default {
+        background-color: $dz-clr--grey-red;
+        background-image: none;
+      }
+
+      &-hover,
+      &-down,
+      &-active {
+        background-color: darken($dz-clr--lightmaroon, 25%);
+      }
+
+      &-active {
+        background-image: linear-gradient(
+          to top,
+          darken($dz-clr--lightmaroon, 10%),
+          darken($dz-clr--lightmaroon, 20%)
+        );
+      }
+    }
+  }
+}

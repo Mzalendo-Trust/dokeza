@@ -1,0 +1,41 @@
+{% extends "_layouts/base.html" %}
+
+<!-- Main Content -->
+{% block content %}
+
+<h5 class="p-3">Login to annotate or comment on bills</h5>
+<div class="row pt-4 container">
+    <div class="col-12 col-md-6">
+        <hr>
+        <h6 class="p-1">Email Login</h6>
+        <hr>
+        <form class="dz-form__email-signup form-signin">
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="email" id="inputEmail" class="form-control mb-3 p-3" placeholder="Email address" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control mb-3 p-3" placeholder="Password" required>
+            <button class="btn btn-primary btn-block mb-3 p-3" type="submit">Login</button>
+        </form>
+        <div>Forgot your password?
+            <a href="#">Reset Here&hellip;</a>
+        </div>
+        <div>
+            <hr>
+            <div class="pt-2 pb-2">You dont have an account</div>
+            <a class="btn btn-outline-danger" role="button" href="#">Register</a>
+        </div>
+    </div>
+    <div class="col-12 col-md-6">
+        <hr>
+        <h6 class="p-1">Login via social media</h6>
+        <hr>
+        <form class="dz--form_social-media form-signin">
+            <a class="btn btn-primary dz-btn__facebook btn-block mb-3 p-3" role="button" href="#"><i class="fa fa-facebook" aria-hidden="true"></i> Sign up with Facebook</a>
+            <a class="btn btn-primary dz-btn__twitter btn-block mb-3 p-3" role="button" href="#"><i class="fa fa-twitter" aria-hidden="true"></i> Sign up with Twitter</a>
+            <a class="btn btn-primary dz-btn__google btn-block mb-3 p-3" role="button" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i> Sign up with Google+</a>
+        </form>
+    </div>
+</div>
+
+{% endblock content%}
+<!-- END Main Content -->

@@ -68,14 +68,29 @@ THIRD_PARTY_APPS = [
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
+    # These are the activated social account logins:
+    'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.twitter',
+    
     "django_celery_beat",
+    'hitcount',
+    'taggit',
     "rest_framework",
     "rest_framework.authtoken",
+    'schedule',
 ]
 
 LOCAL_APPS = [
     "dokeza_2_0.users.apps.UsersConfig",
     # Your stuff: custom apps go here
+    'annotator',
+    'bills',
+    'comments',
+    'ideas.apps.IdeasConfig',
+    'other_docs.apps.DocsConfig',
+    'posts',
+    'public_participation.apps.PublicParticipationConfig',
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
@@ -92,6 +107,24 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
+
+# # Some really nice defaults
+# ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+# ACCOUNT_USERNAME_REQUIRED = False
+
+# ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
+# ACCOUNT_AUTHENTICATION_METHOD = 'email'
+# ACCOUNT_EMAIL_REQUIRED = True
+# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+# # ACCOUNT_SIGNUP_FORM_CLASS = 'dokeza_2_0.users.forms.SignupForm'
+
+# ACCOUNT_ALLOW_REGISTRATION = env.bool(
+#     'DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
+# # ACCOUNT_ADAPTER = 'dokeza_2_0.users.adapters.AccountAdapter'
+# ACCOUNT_ADAPTER = 'dokeza_2_0.users.adapters.DokezaAccountAdapter'
+# SOCIALACCOUNT_ADAPTER = 'dokeza_2_0.users.adapters.SocialAccountAdapter'
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
 AUTH_USER_MODEL = "users.User"
 # https://docs.djangoproject.com/en/dev/ref/settings/#login-redirect-url
@@ -300,3 +333,64 @@ REST_FRAMEWORK = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# CKEDITOR Apps
+INSTALLED_APPS += (
+    'ckeditor',
+    'ckeditor_uploader',
+)
+
+# CKEDITOR settings
+
+# CKEDITOR_JQUERY_URL = 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js'
+CKEDITOR_IMAGE_BACKEND = "pillow"
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_RESTRICT_BY_USER = True
+CKEDITOR_BROWSE_SHOW_DIRS = True
+
+# This is to allow django-ckeditor to work with AWS S3
+AWS_QUERYSTRING_AUTH = False
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        "removePlugins": "stylesheetparser",
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
+            ['Undo', 'Redo'],
+            ['Scayt'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['Image', 'Iframe', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar'],
+            ['Source', 'CodeSnippet'],
+            ['Maximize'],
+            '/',
+            ['Bold', 'Italic', 'Underline', 'Strike',
+             'Subscript', 'Superscript', '-', 'RemoveFormat'],
+            ['TextColor', 'BGColor'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent',
+             'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Blockquote'],
+            ['Styles', 'Format'],
+        ],
+        'uiColor': '#a8d0b4',
+        'extraPlugins': 'scayt',
+        'extraPlugins': 'codesnippet',
+        'extraAllowedContent': 'div[*]',
+    },
+    'front_ckeditor': {
+        'toolbar': 'Custom',
+        'toolbar_Custom': [
+            ['Bold', 'Italic', 'Underline', 'Strike',
+             'Subscript', 'Superscript', '-', 'RemoveFormat'],
+            ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord'],
+            ['Undo', 'Redo'],
+            ['Scayt'],
+            ['Link', 'Unlink', 'Anchor'],
+            ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent',
+             'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'Blockquote'],
+            ['Styles', 'Format'],
+        ],
+        'height': 300,
+        'width': '100%',
+        'uiColor': '#fae8c3',
+    },
+}

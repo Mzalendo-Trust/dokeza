@@ -1,0 +1,18 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+<!-- Sub-Navigation Block -->
+{% block sub-navigation %}
+<div class="dz-sub-navigation">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/home.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+{% block title %}Forbidden (403){% endblock %}
+{% block content %}
+<div class="dz-error col-8 justify-">
+  <h1>We Did Not Find That Page</h1>
+  <img class="dz-error__pic" src=" {% static 'dist/images/dokeza-error.svg' %}" alt="">
+  <p>CSRF verification failed. Request aborted.</p>
+</div>
+{% endblock content %}

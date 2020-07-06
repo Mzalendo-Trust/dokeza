@@ -1,0 +1,46 @@
+{% extends "ideas/base_ideas.html" %}
+{% load i18n static %}
+
+{% block header %}
+   <h1 class="dz-main__heading">My Ideas</h1>
+{% endblock header %}
+  <!-- My Ideas -->
+  {% block content %}
+  <section class="dz-mainbar">
+    <div class="row">
+      {% for idea in my_ideas %}
+      <div class="dz-ideas__card">
+        <div class="card">
+          <a href="{{ idea.get_absolute_url }}">
+            <div class="dz-ideas">
+              <h5 class="dz-ideas__heading">{{ idea.title|capfirst }}</h5>
+              <div class="row">
+                <div class="idea-type">Submission:&nbsp;&nbsp;
+                  <span class="dz-house__name dz-ideas__{{ idea.get_idea_type_display|slugify }}">{{ idea.get_idea_type_display }}</span>
+                </div>
+                <div class="idea-house">House:&nbsp;&nbsp;<span class="dz-house__name dz-{{ idea.get_submit_to_display|slugify}} ">{{ idea.get_submit_to_display}}</span></div> 
+              </div>
+            </div>
+          </a>
+          <div class="card-block">
+            <div class="idea-details">
+              <div class="row">
+                <div class="idea-status">
+                  {% if idea.private == 1 %}<span class="idea-private">private</span>{% endif %}
+                  {% if idea.draft == 1 %}<span class="idea-draft">draft</span>{% endif %}
+                </div>
+                <div class="idea-dates"><strong>{{ idea.comments.count }} Comments</strong></div>
+              </div>
+              <div class="card-text">{{ idea.content|safe|truncatewords:25 }}</div>
+            </div>
+            <a href="{{ idea.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+          </div>
+        </div>
+      </div>
+      {% empty %}
+        <p>You have not submitted any ideas yet.</p>
+      {% endfor %}
+    </div>
+  </section>
+  <!-- END My Ideas -->
+{% endblock content%}

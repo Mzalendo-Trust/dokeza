@@ -1,0 +1,10 @@
+{% extends "_layouts/base.html" %} {% load i18n static %}
+<!-- Sub-Navigation Block -->
+{% block sub-navigation %}
+<div class="dz-sub-navigation dz-user__standard">
+    <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+        {% include '_partials/sub-navigation/user_standard.html' %}
+    </nav>
+</div>
+{% endblock sub-navigation %}
+<!-- END Sub-Navigation Block -->

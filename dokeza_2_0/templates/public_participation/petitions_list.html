@@ -1,0 +1,49 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+{% block title %}Petitions - List{% endblock title %}
+<!-- Sub-Navigation Block -->
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/public-participation.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+<!-- END Sub-Navigation Block -->
+<!-- Main Content -->
+{% block content %}
+<div class="dz-main__content">
+  <!-- Petitions Section -->
+  <section class="dz-petitions">
+    <h1 class="dz-main__heading">Petitions</h1>
+    <!-- Petitions Cards-->
+    {% for petition in petitions %}
+    <div class="dz-petitions__card">
+      <div class="card">
+        <a class="public-heading" href="{{ petition.get_absolute_url }}">
+          <h4 class="card-header dz-petitions__card--heading">{{ petition.title }}</h4>
+        </a>
+        <div class="card-block">
+          <p class="text-muted"><strong>Deadline:</strong> {{ petition.deadline }}</p>
+          <div class="image-view">
+            {% if petition.image %}
+            <img class="petition-icon" src="{{ petition.image.url }}" alt="Petition image">
+            {% else %}
+            <img class="petition-icon" src="{% static 'dist/images/public/petition-icon.svg' %}" alt="">
+            {% endif %}
+          </div>
+          <p class="card-text">{{ petition.content|safe|truncatewords:20 }}
+          </p>
+          <a href="{{ petition.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more&hellip;</a>
+        </div>
+      </div>
+    </div>
+    {% empty %}
+    There are currently no petitions.
+    {% endfor %}
+    <!--END Petitions Cards-->
+  </section>
+  <!-- END Petitions Section -->
+</div>
+{% endblock content%}
+<!-- END Main Content -->

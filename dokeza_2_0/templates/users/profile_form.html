@@ -1,0 +1,25 @@
+{% extends "_layouts/base_user.html" %}
+
+{% load i18n static %}
+{% load crispy_forms_tags %}
+
+{% block title %}{{ user.username }}{% endblock %}
+
+{% block content %}
+<div class="container user__entry">
+  <div class="user__page">
+    <h2 class="user__profile">User Profile Details</h2>
+    <h3>{{ user.full_name}}</h3>
+    <form class="form-horizontal" method="post" action="{% url 'users:profile_update' %}">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <div class="control-group">
+        <div class="controls">
+         <a href="{% url 'users:update' %}" class="btn btn-secondary ">Back</a>
+          <button type="submit" class="btn btn-primary">Update</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends "_layouts/base_user.html" %}
+{% load i18n static %}
+
+{% block quillcss %}
+  <link href="https://cdn.quilljs.com/1.2.3/quill.snow.css" rel="stylesheet">
+{% endblock quillcss %}
+
+<!-- Main Content -->
+{% block content %}
+  <div class="row justify-content-between">
+    <!-- Sidebar -->
+    <aside class="dz-aside col-sm-3">
+      <div class="list-group">
+        <h6 class="list-group-item list-group-item-info">Petition Drafts</h6>
+        <small>
+          <a href="#" class="list-group-item list-group-item-action">All Draft Petitions</a>
+          <a href="#" class="list-group-item list-group-item-action active">Add New Draft Petition</a>
+          <a href="#" class="list-group-item list-group-item-action">Categories</a>
+          <a href="#" class="list-group-item list-group-item-action">Tags</a>
+        </small>
+      </div>
+      <hr>
+      <div class="list-group">
+        <h6 class="list-group-item list-group-item-info">Publish</h6>
+        <small>
+        <li class="list-group-item justify-content-between">
+          <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-outline-primary">Preview</button>
+            <button type="button" class="btn btn-outline-primary">Publish</button>
+          </div>
+        </li>
+        <li class="list-group-item justify-content-between">
+          <div>Status</div><span class="badge badge-default">DRAFT</span>
+        </li>
+        </small>
+      </div>
+    </aside>
+    <!-- END Sidebar -->
+    <!-- Draft-A-Petition -->
+    <article class="col-sm-9">
+      <div class="card">
+        <div class="card-header alert-info">
+          <ul class="nav nav-tabs card-header-tabs justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link active" href="#">Add/Edit Draft Petition</a>
+            </li>
+            <li class="nav-item">
+              <div class="btn-group btn-group-sm" role="group" aria-label="Draft Petition">
+                <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target=".previewContent">Preview Draft Petition</button>
+                <button type="button" class="btn btn-primary">Publish Petition</button>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="card-block">
+          <form>
+            <div class="form-group">
+              <label for="petitionTitle">
+                <small class="form-text">Petition Title</small>
+              </label>
+              <input type="text" class="form-control form-control-lg" id="petitionTitle" aria-describedby="petitionTitleHelp" placeholder="Enter the Petition Title">
+            </div>
+            <hr>
+            <div class="form-group">
+              <label for="draftContent">Draft Content</label>
+              <div id="draftContent"></div>
+            </div>
+          </form>
+          <a href="#" class="btn btn-success">Save Draft</a>
+        </div>
+      </div>
+    </article>
+    <!-- END Draft-A-Petition -->
+    <!-- Preview Modal -->
+    <div class="modal fade previewContent" tabindex="-1" role="dialog" aria-labelledby="previewContentLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="previewContentLabel">Title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            ...
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save petition changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- END Preview Modal -->
+  </div>
+{% endblock content%}
+<!-- END Main Content -->
+<!-- Quill Editor Block -->
+{% block quill %}
+  <script src="https://cdn.quilljs.com/1.2.3/quill.js"></script>
+  <script src="{% static 'dist/js/dokeza-quill.js' %}"></script>
+{% endblock quill %}

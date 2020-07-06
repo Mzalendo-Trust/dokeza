@@ -1,0 +1,24 @@
+{% extends "bills/bill_detail.html" %}
+{% load static %}
+
+{% block subtitle %} Bill: {{ title }}
+  {% if object == request.user %}User: {{ object.username }}
+{% endblock subtitle %}
+
+{% block annotations %}
+<div class="container">
+  
+  <div class="row">
+  <h2>Annotations</h2>
+    <div class="col-sm-4">
+      <a class="btn btn-primary" href="" role="button">Home</a>
+      {% if object == request.user %}
+        <a class="btn btn-primary" href="" role="button">Mine</a>
+      {% endif %}
+      <a class="btn btn-primary" href="" role="button">All</a>
+    </div>
+  </div>
+
+</div>
+{% endblock annotations %}
+

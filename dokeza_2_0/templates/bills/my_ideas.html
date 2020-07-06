@@ -1,0 +1,51 @@
+{% extends "bills/base_bill.html" %}
+{% load i18n static %}
+{% load crispy_forms_tags %}
+
+<!-- Main Content -->
+<div class="dz-main__content">
+{% block content %}
+  <h1 class="dz-main__heading">How a Bill becomes Law</h1>
+<!-- Sidebar -->
+  <aside class="dz-sidebar sticky-top">
+    <div class="list-group idea-bar">
+      <a href="{% url 'bills:ideas' %}" class="idea-bar__list">All Submitted Ideas</a>
+      <a href="{% url 'bills:my_ideas' %}" class="idea-bar__list">My Ideas</a>
+      <a href="{% url 'bills:submit_idea' %}" class="idea-bar__list active">Add New Idea</a>
+    </div>
+    <hr>
+    <div class="status-group">
+      <h6 class="status-title">Status</h6>
+      <div class="status-bar">
+        <div class="idea-status">
+          <span class="badge badge-default">DRAFT</span>
+        </div>
+        <div class="idea-status">
+          {% if object.private == False %}
+            <span class="badge badge-primary">PUBLISHED</span>
+          {% else %}
+            <span class="badge badge-danger">PRIVATE</span>
+          {% endif %}
+      </div>
+      </div>
+      
+    </div>
+  </aside>
+  <!-- END Sidebar -->
+  <!-- Draft-An-Idea -->
+  <section class="dz-mainbar">
+    <div class="card">
+      <div class="card-block">
+        You have not submitted any ideas.
+      </div>
+    </div>
+  </section>
+  <!-- END Draft-An-Idea -->
+{% endblock content%}
+<!-- END Main Content -->
+{% block ckeditor %}
+  <script type="text/javascript" src="{% static 'ckeditor/ckeditor-init.js' %}">
+    </script>
+  <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+{% endblock ckeditor %}
+</div>

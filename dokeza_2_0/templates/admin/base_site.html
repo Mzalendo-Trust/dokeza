@@ -1,0 +1,14 @@
+{% extends "admin/base.html" %}
+
+{% load static %}
+
+{% block title %}{{ title }} | Mzalendo Dokeza Admin Panel'){% endblock %}
+
+{% block branding %}
+<img class="dokeza-logo" src="{% static 'dist/images/dokeza-icon.png' %}" alt="Dokeza Logo">
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">Mzalendo Dokeza Admin Panel</a>
+</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}

@@ -1,0 +1,52 @@
+{% extends "_layouts/base.html" %}
+<!-- Sub-Navigation Block -->
+{% block title %}- Contacts{% endblock title %}
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/home.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+<!-- END Sub-Navigation Block -->
+<!-- Main Content -->
+{% block content %}
+<div class="dz-main__content">
+  <div class="dz-contacts__content">
+    <section class="dz-contacts">
+      <h1 class="dz-main__content-heading">Get in Touch</h1>
+      <p>
+        Incase of any query or comment, do get in touch with Mzalendo Trust via any of the provided contact details.
+      </p>
+    </section>
+    <hr>
+    <section class="dz-contacts">
+      <h2 class="dz-main__content-heading">Postal Address</h2>
+      <p>
+        Every so often we do appreciate receiving snail via the following address.
+      </p>
+      <p class="adr">
+        <a class="url" href="http://info.mzalendo.com/">Mzalendo Trust</a><br>
+        <span class="street-address">PO Box 21765</span> —
+        <span class="postal-code">00505</span><br>
+        <span class="region">Nairobi</span>,
+        <span class="country-name">Kenya</span>
+        <span>Heinrich Boll Foundation, Prof. Wangari Mathai Road (Former Forest Road).</span>
+      </p>
+    </section>
+    <hr>
+    <section class="dz-contacts">
+      <h2 class="dz-main__content-heading">Phone/Email Contacts</h2>
+      <p>
+        Incase you are in rush, You can always Call or Email us via the following details.
+      </p>
+      <p class="adr">
+        <a class="url" href="http://info.mzalendo.com/">Mzalendo Trust</a><br>
+        Email: <span class="email">info@mzalendo.com</span><br>
+        Tel: <span class="tel">+254 726 464063</span>
+      </p>
+    </section>
+  </div>
+</div>
+{% endblock content%}
+<!-- END Main Content -->

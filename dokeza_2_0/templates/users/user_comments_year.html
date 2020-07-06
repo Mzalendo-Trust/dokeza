@@ -1,0 +1,48 @@
+{% extends "_layouts/base_user.html" %}
+{% load i18n static %}
+{% load social_share %}
+<!-- Main Content -->
+{% block content %}
+  <div class="row justify-content-between">
+    <!-- Sidebar -->
+    <aside class="dz-aside col-sm-3">
+      <div class="card">
+        <div class="card-header dz-comment__header">
+          Comment Archives
+        </div>
+        <div class="card-block">
+          <ol class="list-unstyled">
+            {% for date in date_list %}
+              <li>{{ date|date:"F Y" }}</li>
+            {% endfor %}
+          </ol>
+        </div>
+      </div>
+    </aside>
+    <!-- END Sidebar -->
+    <!-- Comments -->
+    <article class="col-sm-9">
+      <h1>All Comments for {{ year|date:"Y" }}</h1>
+      <hr>
+      {% for obj in object_list %}
+        <h5 class="card-header dz-comment__header mb-3">{{ obj.content_object.title }} - <em>{{ obj.timestamp|date:"F j, Y" }}</em></h5>
+         
+        <p>{{ obj.content|truncatewords:15 }}</p>
+        <div class="d-flex dz-user__content justify-content-start comment-bg">
+          <div class="col-6 p-2">
+          <a href="{{ obj.get_absolute_url }}" class="btn btn-sm btn-success">Go to comment</a></div>
+        </div>
+        <hr>
+      {% empty %}
+        <div class="card">
+          <h5 class="card-header card-inverse card-info">Comments</h5>
+          <div class="card-block no-content">
+            <h6>You have not commented on any bill.</h6>
+          </div>
+        </div>
+      {% endfor %}
+    </article>
+    <!-- END Comments -->
+  </div>
+{% endblock content%}
+<!-- END Main Content -->
