@@ -272,7 +272,7 @@ dokeza_2_0/media/
 
 .pytest_cache/
 
-
+certs/*
 .ipython/
 .env
 .envs/*
