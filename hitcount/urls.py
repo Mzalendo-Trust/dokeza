@@ -6,5 +6,5 @@ from django.urls import path
 from hitcount.views import HitCountJSONView
 
 urlpatterns = [
-    path('hit/ajax/$', HitCountJSONView.as_view(), name='hit_ajax'),
+    path('hit/ajax/', HitCountJSONView.as_view(), name='hit_ajax'),
 ]

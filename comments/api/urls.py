@@ -8,6 +8,6 @@ from .views import (
 
 urlpatterns = [
     path('', CommentListAPIView.as_view(), name='list'),
-    path('create/$', CommentCreateAPIView.as_view(), name='create'),
-    path('(?P<pk>\d+)/$', CommentDetailAPIView.as_view(), name='thread'),
+    path('create/', CommentCreateAPIView.as_view(), name='create'),
+    path('(<pk>\d+)/', CommentDetailAPIView.as_view(), name='thread'),
 ]

@@ -5,5 +5,5 @@ from .views import (
 )
 
 urlpatterns = [
-    path('events/$', PublicEventListAPIView.as_view(), name='events-list'),
+    path('events/', PublicEventListAPIView.as_view(), name='events-list'),
 ]

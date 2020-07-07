@@ -11,6 +11,6 @@ urlpatterns = [
     path('demo/', views.DemoView.as_view(), name='demo'),
     path('root/', views.root, name='root'),
     path('comment/', views.AnnotationCommentView.as_view(), name='comment'),
-    path('update/(?P<id>[\w-]+)/', views.read_update_delete, name='read_update_delete'),
-    path('delete/(?P<id>[\w-]+)/', views.read_update_delete, name='read_update_delete'),
+    path('update/<id>[\w-]+/', views.read_update_delete, name='read_update_delete'),
+    path('delete/<id>[\w-]+/', views.read_update_delete, name='read_update_delete'),
 ]

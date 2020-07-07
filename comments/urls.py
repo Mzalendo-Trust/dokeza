@@ -10,6 +10,6 @@ from .views import (
 app_name="comments"
 
 urlpatterns = [
-    path('(?P<id>\d+)/', comment_thread, name='thread'),
-    path('(?P<id>\d+)/delete/', comment_delete, name='delete'),
+    path('<id>\d+/', comment_thread, name='thread'),
+    path('<id>\d+/delete/', comment_delete, name='delete'),
 ]

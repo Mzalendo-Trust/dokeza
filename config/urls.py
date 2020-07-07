@@ -28,7 +28,7 @@ urlpatterns = [
     path('privacy-policy/', PrivacyView.as_view(), name='privacy'),
     path('contacts/', ContactView.as_view(), name='contacts'),
     path('search/', SearchView.as_view(), name='search'),
-    path('tag/(?P<slug>[-\w]+)/', TagIndexView.as_view(), name='tagged'),
+    path('tag/<slug>/', TagIndexView.as_view(), name='tagged'),
     path('google6b1213ccd54381fc\.html', TemplateView.as_view(template_name="google6b1213ccd54381fc.html")),
     
     # Django Admin, use {% url 'admin:index' %}

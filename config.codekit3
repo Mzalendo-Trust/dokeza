@@ -152,6 +152,5289 @@
 		"oAP": "/build/.pytest_cache/v/cache",
 		"oF": 0
 		},
+	"/allauth/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/__init__.py",
+		"oF": 0
+		},
+	"/allauth/account/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/account/__init__.py",
+		"oF": 0
+		},
+	"/allauth/account/adapter.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/adapter.py",
+		"oF": 0
+		},
+	"/allauth/account/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/admin.py",
+		"oF": 0
+		},
+	"/allauth/account/app_settings.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/app_settings.py",
+		"oF": 0
+		},
+	"/allauth/account/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/apps.py",
+		"oF": 0
+		},
+	"/allauth/account/auth_backends.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/auth_backends.py",
+		"oF": 0
+		},
+	"/allauth/account/decorators.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/decorators.py",
+		"oF": 0
+		},
+	"/allauth/account/forms.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/forms.py",
+		"oF": 0
+		},
+	"/allauth/account/management/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/account/management/__init__.py",
+		"oF": 0
+		},
+	"/allauth/account/management/commands/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/account/management/commands/__init__.py",
+		"oF": 0
+		},
+	"/allauth/account/management/commands/account_unsetmultipleprimaryemails.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/management/commands/account_unsetmultipleprimaryemails.py",
+		"oF": 0
+		},
+	"/allauth/account/managers.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/managers.py",
+		"oF": 0
+		},
+	"/allauth/account/migrations/0001_initial.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/allauth/account/migrations/0002_email_max_length.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/migrations/0002_email_max_length.py",
+		"oF": 0
+		},
+	"/allauth/account/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/account/migrations/__init__.py",
+		"oF": 0
+		},
+	"/allauth/account/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/models.py",
+		"oF": 0
+		},
+	"/allauth/account/signals.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/signals.py",
+		"oF": 0
+		},
+	"/allauth/account/templatetags/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/account/templatetags/__init__.py",
+		"oF": 0
+		},
+	"/allauth/account/templatetags/account.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/templatetags/account.py",
+		"oF": 0
+		},
+	"/allauth/account/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/tests.py",
+		"oF": 0
+		},
+	"/allauth/account/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/urls.py",
+		"oF": 0
+		},
+	"/allauth/account/utils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/utils.py",
+		"oF": 0
+		},
+	"/allauth/account/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/account/views.py",
+		"oF": 0
+		},
+	"/allauth/app_settings.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/app_settings.py",
+		"oF": 0
+		},
+	"/allauth/exceptions.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/exceptions.py",
+		"oF": 0
+		},
+	"/allauth/locale/ar/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/ar/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/cs/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/cs/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/da/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/da/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/de/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/de/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/el/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/el/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/en/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/en/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/es/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/es/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/eu/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/eu/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/fa/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/fa/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/fi/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/fi/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/fr/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/fr/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/he/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/he/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/hr/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/hr/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/hu/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/hu/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/it/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/it/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/ja/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/ja/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/ko/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/ko/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/ky/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/ky/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/lt/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/lt/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/lv/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/lv/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/nl/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/nl/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/no/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/no/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/pl/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/pl/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/pt_BR/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/pt_BR/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/pt_PT/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/pt_PT/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/ru/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/ru/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/sk/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/sk/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/sr/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/sr/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/sr_Latn/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/sr_Latn/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/sv/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/sv/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/th/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/th/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/tr/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/tr/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/uk/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/uk/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/zh_CN/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/zh_CN/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/zh_Hans/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/zh_Hans/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/zh_Hant/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/zh_Hant/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/zh_TW/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/zh_TW/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/adapter.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/adapter.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/admin.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/app_settings.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/app_settings.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/apps.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/fields.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/fields.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/forms.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/forms.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/helpers.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/helpers.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/migrations/0001_initial.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/migrations/0002_token_max_lengths.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/migrations/0002_token_max_lengths.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/migrations/0003_extra_data_default_dict.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/migrations/0003_extra_data_default_dict.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/migrations/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/agave/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/agave/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/agave/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/agave/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/agave/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/agave/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/agave/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/agave/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/agave/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/agave/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/amazon/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon_cognito/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/amazon_cognito/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon_cognito/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon_cognito/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon_cognito/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon_cognito/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon_cognito/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon_cognito/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon_cognito/utils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon_cognito/utils.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/amazon_cognito/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/amazon_cognito/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/angellist/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/angellist/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/angellist/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/angellist/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/angellist/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/angellist/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/angellist/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/angellist/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/angellist/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/angellist/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/asana/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/asana/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/asana/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/asana/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/asana/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/asana/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/asana/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/asana/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/asana/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/asana/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/asana/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/asana/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/auth0/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/auth0/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/auth0/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/auth0/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/auth0/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/auth0/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/auth0/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/auth0/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/auth0/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/auth0/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/authentiq/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/authentiq/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/authentiq/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/authentiq/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/authentiq/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/authentiq/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/authentiq/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/authentiq/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/authentiq/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/authentiq/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/azure/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/azure/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/azure/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/azure/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/azure/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/azure/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/azure/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/azure/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/azure/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/azure/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/azure/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/azure/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/baidu/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/baidu/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/baidu/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/baidu/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/baidu/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/baidu/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/baidu/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/baidu/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/baidu/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/baidu/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/base.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/base.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/basecamp/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/basecamp/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/basecamp/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/basecamp/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/basecamp/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/basecamp/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/basecamp/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/basecamp/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/basecamp/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/basecamp/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/battlenet/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/battlenet/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/battlenet/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/battlenet/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/battlenet/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/battlenet/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/battlenet/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/battlenet/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/battlenet/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/battlenet/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/battlenet/validators.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/battlenet/validators.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/battlenet/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/battlenet/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/bitbucket/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket_oauth2/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/bitbucket_oauth2/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket_oauth2/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket_oauth2/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket_oauth2/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket_oauth2/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket_oauth2/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket_oauth2/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitbucket_oauth2/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitbucket_oauth2/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitly/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/bitly/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitly/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitly/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitly/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitly/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitly/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitly/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/bitly/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/bitly/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/box/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/box/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/box/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/box/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/box/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/box/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/box/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/box/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/box/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/box/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/cern/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/cern/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/cern/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/cern/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/cern/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/cern/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/cern/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/cern/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/cern/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/cern/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/coinbase/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/coinbase/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/coinbase/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/coinbase/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/coinbase/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/coinbase/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/coinbase/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/coinbase/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/coinbase/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/coinbase/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dataporten/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/dataporten/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dataporten/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dataporten/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dataporten/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dataporten/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dataporten/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dataporten/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dataporten/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dataporten/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dataporten/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dataporten/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/daum/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/daum/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/daum/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/daum/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/daum/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/daum/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/daum/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/daum/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/daum/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/daum/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/daum/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/daum/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/digitalocean/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/digitalocean/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/digitalocean/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/digitalocean/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/digitalocean/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/digitalocean/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/digitalocean/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/digitalocean/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/digitalocean/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/digitalocean/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/discord/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/discord/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/discord/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/discord/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/discord/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/discord/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/discord/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/discord/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/discord/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/discord/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/disqus/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/disqus/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/disqus/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/disqus/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/disqus/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/disqus/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/disqus/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/disqus/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/disqus/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/disqus/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/douban/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/douban/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/douban/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/douban/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/douban/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/douban/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/douban/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/douban/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/douban/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/douban/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/doximity/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/doximity/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/doximity/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/doximity/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/doximity/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/doximity/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/doximity/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/doximity/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/doximity/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/doximity/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/draugiem/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/draugiem/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/draugiem/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/draugiem/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/draugiem/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/draugiem/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/draugiem/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/draugiem/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/draugiem/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/draugiem/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dropbox/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/dropbox/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dropbox/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dropbox/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dropbox/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dropbox/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dropbox/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dropbox/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dropbox/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dropbox/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dwolla/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/dwolla/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dwolla/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dwolla/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dwolla/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dwolla/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dwolla/test.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dwolla/test.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dwolla/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dwolla/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/dwolla/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/dwolla/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edmodo/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/edmodo/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edmodo/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edmodo/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edmodo/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edmodo/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edmodo/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edmodo/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edmodo/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edmodo/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edx/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/edx/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edx/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edx/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edx/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edx/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edx/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edx/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/edx/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/edx/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eventbrite/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/eventbrite/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eventbrite/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eventbrite/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eventbrite/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eventbrite/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eventbrite/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eventbrite/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eventbrite/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eventbrite/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eveonline/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/eveonline/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eveonline/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eveonline/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eveonline/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eveonline/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eveonline/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eveonline/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/eveonline/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/eveonline/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/evernote/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/evernote/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/evernote/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/evernote/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/evernote/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/evernote/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/evernote/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/evernote/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/evernote/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/evernote/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/exist/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/exist/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/exist/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/exist/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/exist/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/exist/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/exist/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/exist/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/exist/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/exist/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/facebook/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/data/FacebookLocales.xml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/data/FacebookLocales.xml",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/forms.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/forms.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/locale.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/locale.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/static/facebook/js/fbconnect.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/static/facebook/js/fbconnect-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/allauth/socialaccount/providers/facebook/templates/facebook/fbconnect.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/templates/facebook/fbconnect.html",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/facebook/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/facebook/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/feedly/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/feedly/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/feedly/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/feedly/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/feedly/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/feedly/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/feedly/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/feedly/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/feedly/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/feedly/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fivehundredpx/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/fivehundredpx/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fivehundredpx/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fivehundredpx/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fivehundredpx/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fivehundredpx/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fivehundredpx/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fivehundredpx/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fivehundredpx/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fivehundredpx/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fivehundredpx/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fivehundredpx/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/flickr/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/flickr/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/flickr/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/flickr/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/flickr/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/flickr/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/flickr/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/flickr/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/flickr/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/flickr/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/foursquare/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/foursquare/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/foursquare/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/foursquare/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/foursquare/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/foursquare/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/foursquare/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/foursquare/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/foursquare/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/foursquare/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fxa/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/fxa/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fxa/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fxa/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fxa/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fxa/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fxa/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fxa/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fxa/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fxa/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/fxa/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/fxa/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/github/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/github/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/github/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/github/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/github/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/github/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/github/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/github/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/github/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/github/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/gitlab/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/gitlab/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/gitlab/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/gitlab/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/gitlab/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/gitlab/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/gitlab/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/gitlab/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/gitlab/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/gitlab/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/globus/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/globus/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/globus/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/globus/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/globus/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/globus/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/globus/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/globus/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/globus/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/globus/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/google/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/google/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/google/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/google/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/google/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/google/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/google/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/google/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/google/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/google/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/hubic/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/hubic/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/hubic/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/hubic/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/hubic/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/hubic/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/hubic/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/hubic/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/hubic/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/hubic/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/instagram/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/instagram/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/instagram/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/instagram/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/instagram/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/instagram/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/instagram/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/instagram/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/instagram/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/instagram/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/jupyterhub/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/jupyterhub/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/jupyterhub/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/jupyterhub/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/jupyterhub/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/jupyterhub/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/jupyterhub/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/jupyterhub/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/jupyterhub/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/jupyterhub/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/kakao/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/kakao/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/kakao/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/kakao/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/kakao/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/kakao/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/kakao/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/kakao/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/kakao/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/kakao/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/kakao/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/kakao/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/keycloak/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/keycloak/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/keycloak/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/keycloak/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/keycloak/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/keycloak/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/keycloak/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/keycloak/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/keycloak/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/keycloak/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/line/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/line/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/line/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/line/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/line/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/line/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/line/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/line/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/line/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/line/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/line/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/line/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/linkedin/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin_oauth2/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/linkedin_oauth2/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin_oauth2/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin_oauth2/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin_oauth2/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin_oauth2/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin_oauth2/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin_oauth2/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/linkedin_oauth2/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/linkedin_oauth2/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailchimp/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/mailchimp/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailchimp/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailchimp/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailchimp/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailchimp/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailchimp/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailchimp/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailchimp/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailchimp/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailru/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/mailru/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailru/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailru/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailru/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailru/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailru/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailru/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mailru/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mailru/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/meetup/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/meetup/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/meetup/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/meetup/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/meetup/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/meetup/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/meetup/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/meetup/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/meetup/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/meetup/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/meetup/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/meetup/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/microsoft/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/microsoft/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/microsoft/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/microsoft/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/microsoft/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/microsoft/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/microsoft/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/microsoft/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/microsoft/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/microsoft/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/microsoft/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/microsoft/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mixer/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/mixer/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mixer/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mixer/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mixer/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mixer/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mixer/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mixer/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/mixer/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/mixer/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/naver/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/naver/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/naver/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/naver/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/naver/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/naver/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/naver/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/naver/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/naver/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/naver/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/naver/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/naver/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/nextcloud/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/nextcloud/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/nextcloud/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/nextcloud/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/nextcloud/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/nextcloud/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/nextcloud/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/nextcloud/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/nextcloud/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/nextcloud/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/oauth/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth/client.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth/client.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth2/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/oauth2/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth2/client.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth2/client.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth2/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth2/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth2/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth2/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/oauth2/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/oauth2/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/odnoklassniki/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/odnoklassniki/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/odnoklassniki/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/odnoklassniki/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/odnoklassniki/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/odnoklassniki/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/odnoklassniki/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/odnoklassniki/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/odnoklassniki/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/odnoklassniki/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/openid/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/admin.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/forms.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/forms.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/migrations/0001_initial.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/openid/migrations/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/utils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/utils.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openid/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openid/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openstreetmap/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/openstreetmap/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openstreetmap/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openstreetmap/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openstreetmap/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openstreetmap/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openstreetmap/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openstreetmap/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/openstreetmap/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/openstreetmap/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/orcid/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/orcid/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/orcid/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/orcid/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/orcid/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/orcid/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/orcid/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/orcid/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/orcid/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/orcid/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/patreon/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/patreon/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/patreon/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/patreon/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/patreon/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/patreon/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/patreon/test.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/patreon/test.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/patreon/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/patreon/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/patreon/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/patreon/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/paypal/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/paypal/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/paypal/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/paypal/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/paypal/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/paypal/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/paypal/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/paypal/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/paypal/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/paypal/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/persona/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/persona/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/persona/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/persona/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/persona/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/persona/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/persona/templates/persona/auth.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/persona/templates/persona/auth.html",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/persona/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/persona/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/persona/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/persona/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/persona/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/persona/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/pinterest/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/pinterest/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/pinterest/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/pinterest/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/pinterest/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/pinterest/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/pinterest/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/pinterest/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/pinterest/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/pinterest/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/quickbooks/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/quickbooks/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/quickbooks/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/quickbooks/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/quickbooks/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/quickbooks/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/quickbooks/test.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/quickbooks/test.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/quickbooks/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/quickbooks/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/quickbooks/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/quickbooks/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/reddit/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/reddit/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/reddit/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/reddit/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/reddit/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/reddit/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/reddit/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/reddit/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/reddit/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/reddit/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/robinhood/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/robinhood/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/robinhood/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/robinhood/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/robinhood/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/robinhood/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/robinhood/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/robinhood/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/robinhood/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/robinhood/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/salesforce/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/salesforce/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/salesforce/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/salesforce/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/salesforce/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/salesforce/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/salesforce/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/salesforce/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/salesforce/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/salesforce/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/sharefile/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/sharefile/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/sharefile/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/sharefile/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/sharefile/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/sharefile/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/sharefile/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/sharefile/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/sharefile/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/sharefile/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/shopify/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/shopify/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/shopify/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/shopify/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/shopify/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/shopify/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/shopify/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/shopify/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/shopify/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/shopify/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/slack/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/slack/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/slack/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/slack/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/slack/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/slack/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/slack/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/slack/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/slack/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/slack/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/slack/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/slack/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/soundcloud/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/soundcloud/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/soundcloud/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/soundcloud/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/soundcloud/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/soundcloud/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/soundcloud/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/soundcloud/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/soundcloud/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/soundcloud/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/spotify/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/spotify/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/spotify/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/spotify/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/spotify/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/spotify/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/spotify/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/spotify/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/spotify/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/spotify/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stackexchange/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/stackexchange/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stackexchange/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stackexchange/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stackexchange/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stackexchange/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stackexchange/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stackexchange/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stackexchange/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stackexchange/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/steam/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/steam/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/steam/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/steam/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/steam/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/steam/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/steam/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/steam/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/steam/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/steam/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/strava/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/strava/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/strava/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/strava/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/strava/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/strava/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/strava/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/strava/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/strava/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/strava/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stripe/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/stripe/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stripe/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stripe/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stripe/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stripe/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stripe/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stripe/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stripe/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stripe/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/telegram/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/telegram/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/telegram/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/telegram/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/telegram/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/telegram/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/telegram/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/telegram/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/trello/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/trello/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/trello/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/trello/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/trello/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/trello/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/trello/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/trello/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/trello/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/trello/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/tumblr/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/tumblr/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/tumblr/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/tumblr/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/tumblr/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/tumblr/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/tumblr/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/tumblr/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/tumblr/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/tumblr/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twentythreeandme/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/twentythreeandme/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twentythreeandme/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twentythreeandme/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twentythreeandme/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twentythreeandme/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twentythreeandme/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twentythreeandme/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twentythreeandme/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twentythreeandme/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitch/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/twitch/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitch/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitch/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitch/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitch/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitch/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitch/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitch/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitch/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitter/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/twitter/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitter/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitter/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitter/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitter/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitter/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitter/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/twitter/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/twitter/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/untappd/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/untappd/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/untappd/client.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/untappd/client.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/untappd/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/untappd/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/untappd/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/untappd/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/untappd/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/untappd/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/untappd/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/untappd/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/vimeo/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo_oauth2/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/vimeo_oauth2/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo_oauth2/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo_oauth2/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo_oauth2/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo_oauth2/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo_oauth2/test.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo_oauth2/test.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo_oauth2/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo_oauth2/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vimeo_oauth2/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vimeo_oauth2/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vk/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/vk/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vk/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vk/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vk/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vk/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vk/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vk/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/vk/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/vk/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weibo/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/weibo/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weibo/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weibo/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weibo/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weibo/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weibo/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weibo/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weibo/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weibo/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weixin/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/weixin/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weixin/client.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weixin/client.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weixin/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weixin/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weixin/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weixin/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weixin/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weixin/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/weixin/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/weixin/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/windowslive/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/windowslive/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/windowslive/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/windowslive/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/windowslive/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/windowslive/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/windowslive/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/windowslive/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/windowslive/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/windowslive/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/xing/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/xing/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/xing/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/xing/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/xing/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/xing/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/xing/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/xing/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/xing/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/xing/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yahoo/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/yahoo/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yahoo/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yahoo/models.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yahoo/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yahoo/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yahoo/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yahoo/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yahoo/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yahoo/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yahoo/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yahoo/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yandex/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/yandex/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yandex/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yandex/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yandex/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yandex/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yandex/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yandex/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/yandex/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/yandex/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/ynab/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/ynab/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/ynab/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/ynab/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/ynab/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/ynab/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/ynab/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/ynab/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/ynab/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/ynab/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/signals.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/signals.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/templatetags/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/templatetags/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/templatetags/socialaccount.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/templatetags/socialaccount.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/views.py",
+		"oF": 0
+		},
+	"/allauth/templates/account/account_inactive.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/account_inactive.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/base.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/base.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/email.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/email_confirmation_message.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/email_confirmation_message.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/email_confirmation_signup_message.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/email_confirmation_signup_message.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/email_confirmation_signup_subject.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/email_confirmation_signup_subject.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/email_confirmation_subject.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/email_confirmation_subject.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/password_reset_key_message.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/password_reset_key_message.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/password_reset_key_subject.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/password_reset_key_subject.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/email_confirm.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email_confirm.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/login.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/login.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/logout.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/logout.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/cannot_delete_primary_email.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/cannot_delete_primary_email.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/email_confirmation_sent.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/email_confirmation_sent.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/email_confirmed.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/email_confirmed.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/email_deleted.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/email_deleted.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/logged_in.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/logged_in.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/logged_out.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/logged_out.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/password_changed.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/password_changed.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/password_set.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/password_set.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/primary_email_set.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/primary_email_set.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/messages/unverified_primary_email.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/messages/unverified_primary_email.txt",
+		"oF": 0
+		},
+	"/allauth/templates/account/password_change.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/password_change.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/password_reset.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/password_reset.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/password_reset_done.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/password_reset_done.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/password_reset_from_key.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/password_reset_from_key.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/password_reset_from_key_done.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/password_reset_from_key_done.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/password_set.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/password_set.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/signup.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/signup.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/signup_closed.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/signup_closed.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/snippets/already_logged_in.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/snippets/already_logged_in.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/verification_sent.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/verification_sent.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/verified_email_required.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/verified_email_required.html",
+		"oF": 0
+		},
+	"/allauth/templates/base.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/base.html",
+		"oF": 0
+		},
+	"/allauth/templates/openid/base.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/openid/base.html",
+		"oF": 0
+		},
+	"/allauth/templates/openid/login.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/openid/login.html",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/authentication_error.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/authentication_error.html",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/base.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/base.html",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/connections.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/connections.html",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/login_cancelled.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/login_cancelled.html",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/messages/account_connected.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/messages/account_connected.txt",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/messages/account_connected_other.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/messages/account_connected_other.txt",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/messages/account_connected_updated.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/messages/account_connected_updated.txt",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/messages/account_disconnected.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/messages/account_disconnected.txt",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/signup.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/signup.html",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/snippets/login_extra.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/snippets/login_extra.html",
+		"oF": 0
+		},
+	"/allauth/templates/socialaccount/snippets/provider_list.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/socialaccount/snippets/provider_list.html",
+		"oF": 0
+		},
+	"/allauth/templates/tests/test_403_csrf.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/tests/test_403_csrf.html",
+		"oF": 0
+		},
+	"/allauth/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/tests.py",
+		"oF": 0
+		},
+	"/allauth/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/urls.py",
+		"oF": 0
+		},
+	"/allauth/utils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/utils.py",
+		"oF": 0
+		},
 	"/annotator/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
