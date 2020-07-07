@@ -23,13 +23,13 @@ sitemaps = {
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
-    path('about/$', AboutView.as_view(), name='about'),
-    path('help/$', HelpView.as_view(), name='help'),
-    path('privacy-policy/$', PrivacyView.as_view(), name='privacy'),
-    path('contacts/$', ContactView.as_view(), name='contacts'),
-    path('search/$', SearchView.as_view(), name='search'),
-    path('tag/(?P<slug>[-\w]+)/$', TagIndexView.as_view(), name='tagged'),
-    path('google6b1213ccd54381fc\.html$', TemplateView.as_view(template_name="google6b1213ccd54381fc.html")),
+    path('about/', AboutView.as_view(), name='about'),
+    path('help/', HelpView.as_view(), name='help'),
+    path('privacy-policy/', PrivacyView.as_view(), name='privacy'),
+    path('contacts/', ContactView.as_view(), name='contacts'),
+    path('search/', SearchView.as_view(), name='search'),
+    path('tag/(?P<slug>[-\w]+)/', TagIndexView.as_view(), name='tagged'),
+    path('google6b1213ccd54381fc\.html', TemplateView.as_view(template_name="google6b1213ccd54381fc.html")),
     
     # Django Admin, use {% url 'admin:index' %}
     path(settings.ADMIN_URL, admin.site.urls),
@@ -46,7 +46,7 @@ urlpatterns = [
     path("ckeditor/", include("ckeditor_uploader.urls")),
     path('analysis/', include('posts.urls', namespace='posts')),
     path('events/', include('public_participation.urls', namespace='public_participation')),
-    path('sitemap/$', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
+    path('sitemap/', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
 
     # Annotation
     path('annotations/', include('annotator.urls', namespace='annotations')),
@@ -63,7 +63,7 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
     # path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    # path('api/auth/token/$', get_jwt_token),
+    # path('api/auth/token/', get_jwt_token),
     # path('api/users/', include('dokeza_2_0.users.api.urls', namespace='users-api')),
 
     # Access APIs

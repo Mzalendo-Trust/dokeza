@@ -49,6 +49,14 @@
 		"oAP": "/.envs/.local/.postgres",
 		"oF": 0
 		},
+	"/.envs/.production/.django": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.envs/.production/.django",
+		"oF": 0
+		},
 	"/.gitattributes": {
 		"cB": 0,
 		"ft": 8192,
@@ -358,46 +366,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/annotator/apps.py",
-		"oF": 0
-		},
-	"/annotator/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/annotator/migrations/0002_auto_20170329_1228.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/0002_auto_20170329_1228.py",
-		"oF": 0
-		},
-	"/annotator/migrations/0003_auto_20170329_2302.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/0003_auto_20170329_2302.py",
-		"oF": 0
-		},
-	"/annotator/migrations/0004_auto_20170404_0221.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/0004_auto_20170404_0221.py",
-		"oF": 0
-		},
-	"/annotator/migrations/0005_auto_20170426_1413.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/0005_auto_20170426_1413.py",
 		"oF": 0
 		},
 	"/annotator/migrations/__init__.py": {
@@ -864,70 +832,6 @@
 		"oAP": "/bills/managers.py",
 		"oF": 0
 		},
-	"/bills/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/bills/migrations/0002_auto_20170308_2140.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0002_auto_20170308_2140.py",
-		"oF": 0
-		},
-	"/bills/migrations/0003_auto_20170315_1435.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0003_auto_20170315_1435.py",
-		"oF": 0
-		},
-	"/bills/migrations/0004_bill_bill_pic.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0004_bill_bill_pic.py",
-		"oF": 0
-		},
-	"/bills/migrations/0005_auto_20170324_2040.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0005_auto_20170324_2040.py",
-		"oF": 0
-		},
-	"/bills/migrations/0006_auto_20170423_2231.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0006_auto_20170423_2231.py",
-		"oF": 0
-		},
-	"/bills/migrations/0007_auto_20170602_1957.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0007_auto_20170602_1957.py",
-		"oF": 0
-		},
-	"/bills/migrations/0008_bill_bill_stage.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/0008_bill_bill_stage.py",
-		"oF": 0
-		},
 	"/bills/migrations/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -1374,30 +1278,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/comments/forms.py",
-		"oF": 0
-		},
-	"/comments/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/comments/migrations/0002_auto_20170604_2309.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/0002_auto_20170604_2309.py",
-		"oF": 0
-		},
-	"/comments/migrations/0003_auto_20180112_1243.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/0003_auto_20180112_1243.py",
 		"oF": 0
 		},
 	"/comments/migrations/__init__.py": {
@@ -4818,6 +4698,198 @@
 		"oAP": "/django_countries/widgets.py",
 		"oF": 0
 		},
+	"/django_social_share/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/__init__.py",
+		"oF": 0
+		},
+	"/django_social_share/__pycache__/__init__.cpython-35.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/__pycache__/__init__.cpython-35.pyc",
+		"oF": 0
+		},
+	"/django_social_share/__pycache__/__init__.cpython-36.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/__pycache__/__init__.cpython-36.pyc",
+		"oF": 0
+		},
+	"/django_social_share/__pycache__/models.cpython-35.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/__pycache__/models.cpython-35.pyc",
+		"oF": 0
+		},
+	"/django_social_share/__pycache__/models.cpython-36.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/__pycache__/models.cpython-36.pyc",
+		"oF": 0
+		},
+	"/django_social_share/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/apps.py",
+		"oF": 0
+		},
+	"/django_social_share/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/models.py",
+		"oF": 0
+		},
+	"/django_social_share/templates/django_social_share/templatetags/post_to_facebook.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templates/django_social_share/templatetags/post_to_facebook.html",
+		"oF": 0
+		},
+	"/django_social_share/templates/django_social_share/templatetags/post_to_gplus.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templates/django_social_share/templatetags/post_to_gplus.html",
+		"oF": 0
+		},
+	"/django_social_share/templates/django_social_share/templatetags/post_to_linkedin.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templates/django_social_share/templatetags/post_to_linkedin.html",
+		"oF": 0
+		},
+	"/django_social_share/templates/django_social_share/templatetags/post_to_twitter.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templates/django_social_share/templatetags/post_to_twitter.html",
+		"oF": 0
+		},
+	"/django_social_share/templates/django_social_share/templatetags/send_email.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templates/django_social_share/templatetags/send_email.html",
+		"oF": 0
+		},
+	"/django_social_share/templatetags/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/templatetags/__init__.py",
+		"oF": 0
+		},
+	"/django_social_share/templatetags/__pycache__/__init__.cpython-35.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/templatetags/__pycache__/__init__.cpython-35.pyc",
+		"oF": 0
+		},
+	"/django_social_share/templatetags/__pycache__/__init__.cpython-36.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/templatetags/__pycache__/__init__.cpython-36.pyc",
+		"oF": 0
+		},
+	"/django_social_share/templatetags/__pycache__/social_share.cpython-35.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templatetags/__pycache__/social_share.cpython-35.pyc",
+		"oF": 0
+		},
+	"/django_social_share/templatetags/__pycache__/social_share.cpython-36.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templatetags/__pycache__/social_share.cpython-36.pyc",
+		"oF": 0
+		},
+	"/django_social_share/templatetags/social_share.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/templatetags/social_share.py",
+		"oF": 0
+		},
+	"/django_social_share/tests/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/tests/__init__.py",
+		"oF": 0
+		},
+	"/django_social_share/tests/__pycache__/__init__.cpython-35.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/django_social_share/tests/__pycache__/__init__.cpython-35.pyc",
+		"oF": 0
+		},
+	"/django_social_share/tests/__pycache__/tests.cpython-35.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/tests/__pycache__/tests.cpython-35.pyc",
+		"oF": 0
+		},
+	"/django_social_share/tests/runtests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/tests/runtests.py",
+		"oF": 0
+		},
+	"/django_social_share/tests/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/tests/tests.py",
+		"oF": 0
+		},
+	"/django_social_share/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/django_social_share/views.py",
+		"oF": 0
+		},
 	"/docs/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5001,6 +5073,599 @@
 		"oA": 1,
 		"oAP": "/dokeza_2_0/contrib/sites/migrations/__init__.py",
 		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/css/base-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/base-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/base.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/base-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/changelists.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/changelists-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/dashboard.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/dashboard-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/fonts.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/fonts-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/forms.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/forms-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/login.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/login-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/pagedown.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/pagedown-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/rtl.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/rtl-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/css/widgets.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/css/widgets-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/admin/fonts/LICENSE.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/fonts/LICENSE.txt",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/fonts/README.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/fonts/README.txt",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/fonts/Roboto-Bold-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/fonts/Roboto-Bold-webfont.woff",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/fonts/Roboto-Light-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/fonts/Roboto-Light-webfont.woff",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/fonts/Roboto-Regular-webfont.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/fonts/Roboto-Regular-webfont.woff",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/img/calendar-icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/calendar-icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/gis/move_vertex_off.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/gis/move_vertex_off.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/gis/move_vertex_on.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/gis/move_vertex_on.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-addlink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-addlink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-alert.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-alert.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-calendar.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-calendar.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-changelink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-changelink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-clock.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-clock.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-deletelink.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-deletelink.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-no.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-no.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-unknown-alt.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-unknown-alt.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-unknown.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-unknown.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/icon-yes.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/icon-yes.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/inline-delete.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/inline-delete.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/LICENSE": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/img/LICENSE",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/img/README.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/img/README.txt",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/img/search.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/search.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/selector-icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/selector-icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/sorting-icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/sorting-icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/tooltag-add.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/tooltag-add.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/img/tooltag-arrowright.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/admin/img/tooltag-arrowright.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/admin/js/actions.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/actions-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/actions.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/actions.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/admin/DateTimeShortcuts.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/admin/DateTimeShortcuts-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/admin/RelatedObjectLookups.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/admin/RelatedObjectLookups-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/calendar.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/calendar-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/collapse.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/collapse-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/collapse.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/collapse.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/core.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/core-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/inlines.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/inlines-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/inlines.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/inlines.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/jquery.init.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/jquery.init-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/prepopulate.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/prepopulate-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/prepopulate.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/prepopulate.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/SelectBox.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/SelectBox-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/SelectFilter2.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/SelectFilter2-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/timeparse.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/timeparse-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/urlify.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/urlify-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/vendor/jquery/jquery.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/vendor/jquery/jquery-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/vendor/jquery/jquery.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/vendor/jquery/jquery.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/js/vendor/jquery/min/jquery-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/vendor/jquery/min/jquery-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/admin/js/vendor/xregexp/xregexp.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/admin/js/vendor/xregexp/xregexp.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
 		},
 	"/dokeza_2_0/static/ckeditor/adapters/jquery.js": {
 		"bF": 0,
@@ -18137,6 +18802,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/dokeza_2_0/static/dist/css/dokeza-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/dokeza-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/dokeza_2_0/static/dist/css/dokeza.css": {
 		"aP": 1,
 		"bl": 0,
@@ -18931,17 +19606,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/dokeza_2_0/static/dist/js/dokeza-annotator.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-annotator.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/dokeza-annotator.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -18949,17 +19613,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/dokeza-annotator.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -18975,17 +19628,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -18993,17 +19635,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/dokeza.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -20237,22 +20868,6 @@
 		"oAP": "/dokeza_2_0/users/forms.py",
 		"oF": 0
 		},
-	"/dokeza_2_0/users/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/users/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/dokeza_2_0/users/migrations/0002_institution_profile.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/users/migrations/0002_institution_profile.py",
-		"oF": 0
-		},
 	"/dokeza_2_0/users/migrations/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -20579,22 +21194,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/hitcount/managers.py",
-		"oF": 0
-		},
-	"/hitcount/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/hitcount/migrations/0002_auto_20170308_2140.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/migrations/0002_auto_20170308_2140.py",
 		"oF": 0
 		},
 	"/hitcount/migrations/__init__.py": {
@@ -21213,30 +21812,6 @@
 		"oAP": "/ideas/forms.py",
 		"oF": 0
 		},
-	"/ideas/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/ideas/migrations/0002_auto_20190222_2032.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/0002_auto_20190222_2032.py",
-		"oF": 0
-		},
-	"/ideas/migrations/0003_submittedidea_private.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/0003_submittedidea_private.py",
-		"oF": 0
-		},
 	"/ideas/migrations/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -21561,14 +22136,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/other_docs/forms.py",
-		"oF": 0
-		},
-	"/other_docs/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/0001_initial.py",
 		"oF": 0
 		},
 	"/other_docs/migrations/__init__.py": {
@@ -22025,102 +22592,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/posts/forms.py",
-		"oF": 0
-		},
-	"/posts/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/posts/migrations/0002_auto_20170308_2140.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0002_auto_20170308_2140.py",
-		"oF": 0
-		},
-	"/posts/migrations/0003_memorandum_image.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0003_memorandum_image.py",
-		"oF": 0
-		},
-	"/posts/migrations/0004_auto_20170405_1704.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0004_auto_20170405_1704.py",
-		"oF": 0
-		},
-	"/posts/migrations/0005_auto_20170409_1802.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0005_auto_20170409_1802.py",
-		"oF": 0
-		},
-	"/posts/migrations/0006_auto_20170411_2351.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0006_auto_20170411_2351.py",
-		"oF": 0
-		},
-	"/posts/migrations/0007_petition_tags.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0007_petition_tags.py",
-		"oF": 0
-		},
-	"/posts/migrations/0008_petition_draft.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0008_petition_draft.py",
-		"oF": 0
-		},
-	"/posts/migrations/0009_auto_20170423_2231.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0009_auto_20170423_2231.py",
-		"oF": 0
-		},
-	"/posts/migrations/0010_auto_20180112_1243.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0010_auto_20180112_1243.py",
-		"oF": 0
-		},
-	"/posts/migrations/0011_auto_20181015_1304.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0011_auto_20181015_1304.py",
-		"oF": 0
-		},
-	"/posts/migrations/0012_auto_20181122_2152.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/0012_auto_20181122_2152.py",
 		"oF": 0
 		},
 	"/posts/migrations/__init__.py": {
@@ -22697,22 +23168,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/public_participation/apps.py",
-		"oF": 0
-		},
-	"/public_participation/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/public_participation/migrations/0002_publicevent.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/migrations/0002_publicevent.py",
 		"oF": 0
 		},
 	"/public_participation/migrations/__init__.py": {

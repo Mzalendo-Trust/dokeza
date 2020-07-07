@@ -74,6 +74,7 @@ THIRD_PARTY_APPS = [
     'allauth.socialaccount.providers.twitter',
     
     "django_celery_beat",
+    'django_social_share',
     'hitcount',
     'taggit',
     "rest_framework",
@@ -107,23 +108,6 @@ AUTHENTICATION_BACKENDS = [
     "django.contrib.auth.backends.ModelBackend",
     "allauth.account.auth_backends.AuthenticationBackend",
 ]
-
-# # Some really nice defaults
-# ACCOUNT_USER_MODEL_USERNAME_FIELD = None
-# ACCOUNT_USERNAME_REQUIRED = False
-
-# ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
-# ACCOUNT_AUTHENTICATION_METHOD = 'email'
-# ACCOUNT_EMAIL_REQUIRED = True
-# ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
-# ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
-# # ACCOUNT_SIGNUP_FORM_CLASS = 'dokeza_2_0.users.forms.SignupForm'
-
-# ACCOUNT_ALLOW_REGISTRATION = env.bool(
-#     'DJANGO_ACCOUNT_ALLOW_REGISTRATION', True)
-# # ACCOUNT_ADAPTER = 'dokeza_2_0.users.adapters.AccountAdapter'
-# ACCOUNT_ADAPTER = 'dokeza_2_0.users.adapters.DokezaAccountAdapter'
-# SOCIALACCOUNT_ADAPTER = 'dokeza_2_0.users.adapters.SocialAccountAdapter'
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-user-model
 AUTH_USER_MODEL = "users.User"
@@ -307,19 +291,25 @@ CELERY_TASK_TIME_LIMIT = 5 * 60
 CELERY_TASK_SOFT_TIME_LIMIT = 60
 # http://docs.celeryproject.org/en/latest/userguide/configuration.html#beat-scheduler
 CELERY_BEAT_SCHEDULER = "django_celery_beat.schedulers:DatabaseScheduler"
+
 # django-allauth
 # ------------------------------------------------------------------------------
 ACCOUNT_ALLOW_REGISTRATION = env.bool("DJANGO_ACCOUNT_ALLOW_REGISTRATION", True)
 # https://django-allauth.readthedocs.io/en/latest/configuration.html
-ACCOUNT_AUTHENTICATION_METHOD = "username"
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
+ACCOUNT_AUTHENTICATION_METHOD = 'email'
+ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
 ACCOUNT_ADAPTER = "dokeza_2_0.users.adapters.AccountAdapter"
-# https://django-allauth.readthedocs.io/en/latest/configuration.html
 SOCIALACCOUNT_ADAPTER = "dokeza_2_0.users.adapters.SocialAccountAdapter"
+
+# Some really nice defaults
+ACCOUNT_USER_MODEL_USERNAME_FIELD = None
+ACCOUNT_USERNAME_REQUIRED = False
+
+ACCOUNT_DEFAULT_HTTP_PROTOCOL = "https"
+# ACCOUNT_SIGNUP_FORM_CLASS = 'dokeza_2_0.users.forms.SignupForm'
+SOCIALACCOUNT_ADAPTER = 'dokeza_2_0.users.adapters.SocialAccountAdapter'
 
 # django-rest-framework
 # -------------------------------------------------------------------------------

@@ -13,12 +13,27 @@ from .boundaries import KENYAN_CONSTITUENCIES, KENYAN_COUNTIES
 
 class User(AbstractUser):
 
-    # First Name and Last Name do not cover name patterns
-    # around the globe.
-    name = CharField(_("Name of User"), blank=True, max_length=255)
+    # We have added required fields =>
+    first_name = models.CharField(_('first name'), max_length=30)
+    last_name = models.CharField(_('last name'), max_length=30)
+    email = models.EmailField(_('email address'), unique=True)
+
+    def __str__(self):
+        if self.get_full_name():
+            return self.get_full_name()
+        else:
+            return self.email
+
+    def get_profile(self):
+        instance = self
+        qs = Profile.objects.filter_by_instance(instance)
+        return qs
+
+    def full_name(self):
+        return self.get_full_name()
 
     def get_absolute_url(self):
-        return reverse("users:detail", kwargs={"username": self.username})
+        return reverse('users:detail', kwargs={'email': self.email})
 
 
 class Institution(models.Model):
