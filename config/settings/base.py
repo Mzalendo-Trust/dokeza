@@ -52,6 +52,8 @@ WSGI_APPLICATION = "config.wsgi.application"
 
 # APPS
 # ------------------------------------------------------------------------------
+# After every block of apps installed, 'makemigrations' and 'migrate'.
+
 DJANGO_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -71,7 +73,6 @@ THIRD_PARTY_APPS = [
     # These are the activated social account logins:
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.twitter',
     
     "django_celery_beat",
     'django_social_share',

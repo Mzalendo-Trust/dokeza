@@ -4,6 +4,9 @@ from datetime import datetime, timedelta
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
+mnames = "January February March April May June July August September October November December"
+mnames = mnames.split()
+
 
 class HomeView(TemplateView):
     template_name = 'index.html'
@@ -70,3 +73,50 @@ class SearchView(TemplateView):
         context['page'] = 'help'
         context['stingo'] = 'search'
         return context
+
+
+
+class CalendarView(TemplateView):
+    template_name = 'public_participation/public_list.html'
+
+    def get_context_data(self, *args, **kwargs):
+        """Listing of days in `month`."""
+        year = time.localtime()[0]
+        month = time.localtime()[1]
+        lst = []
+
+        # apply next / previous change
+        change = ()
+        if change in ("next", "prev"):
+            now, mdelta = datetime(year, month, 1), timedelta(days=31)
+            if change == "next":
+                mod = mdelta
+            elif change == "prev":
+                mod = -mdelta
+
+            year, month = (now + mod).timetuple()[:2]
+
+        # init variables
+        cal = calendar.Calendar()
+        month_days = cal.itermonthdays(year, month)
+        nyear, nmonth, nday = time.localtime()[:3]
+        lst = [[]]
+        week = 0
+
+        # make month lists containing list of days for each week
+        # each day tuple will contain list of events and 'current' indicator
+        for day in month_days:
+            events = current = False   # are there events for this day; current day?
+            if day:
+                events = PublicEvent.objects.filter(
+                    start__year=year, start__month=month, start__day=day)
+                if day == nday and year == nyear and month == nmonth:
+                    current = True
+
+            lst[week].append((day, events, current))
+            if len(lst[week]) == 7:
+                lst.append([])
+                week += 1
+
+        return dict(year=year, month=month, month_days=lst,
+                    mname=mnames[month - 1])

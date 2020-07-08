@@ -6323,14 +6323,6 @@
 		"oAP": "/bills/views.py",
 		"oF": 0
 		},
-	"/celerybeat.pid": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/celerybeat.pid",
-		"oF": 0
-		},
 	"/certs/afropro.local.crt": {
 		"cB": 0,
 		"ft": 8192,
