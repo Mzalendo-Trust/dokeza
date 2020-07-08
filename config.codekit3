@@ -6323,6 +6323,14 @@
 		"oAP": "/bills/views.py",
 		"oF": 0
 		},
+	"/celerybeat.pid": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/celerybeat.pid",
+		"oF": 0
+		},
 	"/certs/afropro.local.crt": {
 		"cB": 0,
 		"ft": 8192,
@@ -26103,6 +26111,14 @@
 		"oAP": "/dokeza_2_0/templates/users/user_updateapetition.html",
 		"oF": 0
 		},
+	"/dokeza_2_0/token_handler.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/token_handler.py",
+		"oF": 0
+		},
 	"/dokeza_2_0/users/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -26127,6 +26143,14 @@
 		"oAP": "/dokeza_2_0/users/admin.py",
 		"oF": 0
 		},
+	"/dokeza_2_0/users/api/permissions.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/api/permissions.py",
+		"oF": 0
+		},
 	"/dokeza_2_0/users/api/serializers.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -26135,12 +26159,52 @@
 		"oAP": "/dokeza_2_0/users/api/serializers.py",
 		"oF": 0
 		},
+	"/dokeza_2_0/users/api/serializers_.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/api/serializers_.py",
+		"oF": 0
+		},
+	"/dokeza_2_0/users/api/tests_api.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/api/tests_api.py",
+		"oF": 0
+		},
+	"/dokeza_2_0/users/api/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/api/urls.py",
+		"oF": 0
+		},
 	"/dokeza_2_0/users/api/views.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/users/api/views.py",
+		"oF": 0
+		},
+	"/dokeza_2_0/users/api/views_.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/api/views_.py",
+		"oF": 0
+		},
+	"/dokeza_2_0/users/api/views_old.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/api/views_old.py",
 		"oF": 0
 		},
 	"/dokeza_2_0/users/apps.py": {

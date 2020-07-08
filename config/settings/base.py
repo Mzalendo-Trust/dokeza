@@ -4,6 +4,7 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import environ
+import datetime
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # dokeza_2_0/
@@ -73,7 +74,7 @@ THIRD_PARTY_APPS = [
     # These are the activated social account logins:
     'allauth.socialaccount.providers.facebook',
     'allauth.socialaccount.providers.google',
-    
+    'corsheaders',
     "django_celery_beat",
     'django_social_share',
     'hitcount',
@@ -324,6 +325,12 @@ REST_FRAMEWORK = {
 }
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+JWT_AUTH = {
+    'JWT_RESPONSE_PAYLOAD_HANDLER':
+        'dokeza_2_0.token_handler.jwt_response_payload_handler',
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(days=1),
+}
 
 # CKEDITOR Apps
 INSTALLED_APPS += (

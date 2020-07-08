@@ -4,20 +4,39 @@ from datetime import datetime, timedelta
 from django.http import HttpResponse
 from django.views.generic import TemplateView
 
+from public_participation.models import PublicEvent
+from bills.models import Bill
+from other_docs.models import Doc
+from posts.models import Post, Memorandum
+
 mnames = "January February March April May June July August September October November December"
 mnames = mnames.split()
 
+class JSONResponse(HttpResponse):
+    """
+    An HttpResponse that renders its content into JSON.
+    """
+
+    def __init__(self, data, **kwargs):
+        content = JSONRenderer().render(data)
+        kwargs['content_type'] = 'application/json'
+        super(JSONResponse, self).__init__(content, **kwargs)
+
+
+def Root(request):
+    return JSONResponse({"name": "The Dokeza Annotation Store.", "version": "0.1.0"})
+    
 
 class HomeView(TemplateView):
     template_name = 'index.html'
 
     def get_context_data(self, **kwargs):
         context = super(HomeView, self).get_context_data(**kwargs)
-        # context['bills'] = Bill.objects.filter(private=False).order_by('-updated_date')
-        # context['other_docs'] = Doc.objects.order_by('-created')
-        # context['news'] = Post.objects.all().filter(draft=False).order_by('-publish')
+        context['bills'] = Bill.objects.filter(private=False).order_by('-updated_date')
+        context['other_docs'] = Doc.objects.order_by('-created')
+        context['news'] = Post.objects.all().filter(draft=False).order_by('-publish')
         # context['events'] = PublicEvent.objects.all()
-        # context['memoranda'] = Memorandum.objects.all().order_by('-deadline')
+        context['memoranda'] = Memorandum.objects.all().order_by('-deadline')
         context['page'] = 'home'
         # context['stingo'] = 'latest'
         return context
