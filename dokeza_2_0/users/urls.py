@@ -1,6 +1,7 @@
 from django.urls import path
 
 from . import views
+from src.views import index, actions
 
 app_name = "users"
 urlpatterns = [
@@ -17,8 +18,15 @@ urlpatterns = [
     # URL pattern for the User Drafts
     path("~draft-bill/", views.UserBillDraftView.as_view(), name="draft-bill"),
     path("~draft-petition/", views.UserPetitionDraftView.as_view(), name="draft-petition"),
-    path("drafts/petitions/", views.UserPetitionListView.as_view(), name="petitions"),
-    path("drafts/petition/<slug>/", views.UserPetitionUpdateView.as_view(), name="update_petition"),
-    path("drafts/bills/", views.UserBillListView.as_view(), name="bills"),
-    path("drafts/bill/<slug>/", views.UserBillUpdateView.as_view(), name='update_bill'),
+    path("~drafts/petitions/", views.UserPetitionListView.as_view(), name="petitions"),
+    path("~drafts/petition/<slug>/", views.UserPetitionUpdateView.as_view(), name="update_petition"),
+    path("~drafts/bills/", views.UserBillListView.as_view(), name="bills"),
+    path("~drafts/bill/<slug>/", views.UserBillUpdateView.as_view(), name='update_bill'),
+    path("~documents/", index.default, name="documents"),
+    path("~documents/upload", actions.upload),
+    path("~documents/conver", actions.convert),
+    path("~documents/create", actions.createNew),
+    path("~documents/edit", actions.edit),
+    path("~documents/track", actions.track),
+    path("~documents/remove", actions.remove)
 ]

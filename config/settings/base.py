@@ -5,6 +5,8 @@ from pathlib import Path
 
 import environ
 import datetime
+import os
+import doc_config
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # dokeza_2_0/
@@ -392,3 +394,5 @@ CKEDITOR_CONFIGS = {
         'uiColor': '#fae8c3',
     },
 }
+
+# ONLYOFFICE Document Server

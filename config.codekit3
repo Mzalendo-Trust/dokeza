@@ -41,6 +41,14 @@
 		"oAP": "/.envs/.local/.django",
 		"oF": 0
 		},
+	"/.envs/.local/.documentserver": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.envs/.local/.documentserver",
+		"oF": 0
+		},
 	"/.envs/.local/.postgres": {
 		"cB": 0,
 		"ft": 8192,
@@ -5835,6 +5843,14 @@
 		"oAP": "/azure-pipelines.yml",
 		"oF": 0
 		},
+	"/backup_2020_07_07T09_49_38.sql.gz": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/backup_2020_07_07T09_49_38.sql.gz",
+		"oF": 0
+		},
 	"/bills/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -6739,6 +6755,14 @@
 		"oAP": "/compose/local/onlyoffice/Dockerfile",
 		"oF": 0
 		},
+	"/compose/local/onlyoffice/run-document-server.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/local/onlyoffice/run-document-server.sh",
+		"oF": 0
+		},
 	"/compose/production/aws/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
@@ -6779,6 +6803,14 @@
 		"oAP": "/compose/production/django/celery/flower/start",
 		"oF": 0
 		},
+	"/compose/production/django/celery/wait-for-it.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django/celery/wait-for-it.sh",
+		"oF": 0
+		},
 	"/compose/production/django/celery/worker/start": {
 		"cB": 0,
 		"ft": 8192,
@@ -6801,6 +6833,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/production/django/entrypoint",
+		"oF": 0
+		},
+	"/compose/production/django/run_celery.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django/run_celery.sh",
 		"oF": 0
 		},
 	"/compose/production/django/start": {
@@ -10195,6 +10235,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_social_share/views.py",
+		"oF": 0
+		},
+	"/doc_config.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/doc_config.py",
 		"oF": 0
 		},
 	"/docs/__init__.py": {
@@ -24047,6 +24095,19 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/dokeza_2_0/static/dev/scss/onlyoffice.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dev/scss/onlyoffice.css",
+		"oF": 0,
+		"oS": 0,
+		"sct": 0
+		},
 	"/dokeza_2_0/static/dev/vendor/annotator-1.2.10-full.js": {
 		"bF": 0,
 		"ft": 64,
@@ -24957,17 +25018,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/dokeza_2_0/static/dist/js/vendor/annotator.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/annotator.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/vendor/annotator.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -24979,17 +25029,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/vendor/bootstrap.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -24997,17 +25036,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/fullcalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/fullcalendar.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -25030,6 +25058,61 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery-3.5.1.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/vendor/jquery-ui.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery-ui-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/vendor/jquery.blockUI.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.blockUI-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/vendor/jquery.fileupload.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.fileupload-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/vendor/jquery.iframe-transport.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.iframe-transport-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/vendor/jscript.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/jscript-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -26047,6 +26130,14 @@
 		"oAP": "/dokeza_2_0/templates/users/user_detail.html",
 		"oF": 0
 		},
+	"/dokeza_2_0/templates/users/user_documents.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/users/user_documents.html",
+		"oF": 0
+		},
 	"/dokeza_2_0/templates/users/user_draftabill.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -26237,14 +26328,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/users/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/dokeza_2_0/users/migrations/0002_auto_20200708_1257.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/users/migrations/0002_auto_20200708_1257.py",
 		"oF": 0
 		},
 	"/dokeza_2_0/users/migrations/__init__.py": {
@@ -28717,6 +28800,571 @@
 		"oAP": "/requirements/production.txt",
 		"oF": 0
 		},
+	"/schedule/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/__init__.py",
+		"oF": 0
+		},
+	"/schedule/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/admin.py",
+		"oF": 0
+		},
+	"/schedule/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/apps.py",
+		"oF": 0
+		},
+	"/schedule/feeds/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/feeds/__init__.py",
+		"oF": 0
+		},
+	"/schedule/feeds/ical.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/feeds/ical.py",
+		"oF": 0
+		},
+	"/schedule/forms.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/forms.py",
+		"oF": 0
+		},
+	"/schedule/locale/de/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/de/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/de/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/de/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/en/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/en/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/en/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/en/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/es/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/es/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/es/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/es/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/fi/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/fi/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/fi/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/fi/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/fr/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/fr/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/fr/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/fr/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/it/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/it/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/it/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/it/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/pt_BR/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/pt_BR/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/pt_BR/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/pt_BR/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/ru/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/ru/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/ru/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/ru/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/locale/zh/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/zh/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/schedule/locale/zh/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/locale/zh/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/schedule/migrations/0001_initial.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/schedule/migrations/0002_auto_20200720_1509.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/migrations/0002_auto_20200720_1509.py",
+		"oF": 0
+		},
+	"/schedule/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/migrations/__init__.py",
+		"oF": 0
+		},
+	"/schedule/models/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/models/__init__.py",
+		"oF": 0
+		},
+	"/schedule/models/calendars.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/models/calendars.py",
+		"oF": 0
+		},
+	"/schedule/models/events.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/models/events.py",
+		"oF": 0
+		},
+	"/schedule/models/rules.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/models/rules.py",
+		"oF": 0
+		},
+	"/schedule/periods.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/periods.py",
+		"oF": 0
+		},
+	"/schedule/settings.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/settings.py",
+		"oF": 0
+		},
+	"/schedule/static/schedule.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/schedule/static/schedule-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/schedule/static/schedule.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/schedule/static/schedule-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/schedule/templates/base.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/base.html",
+		"oF": 0
+		},
+	"/schedule/templates/fullcalendar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/fullcalendar.html",
+		"oF": 0
+		},
+	"/schedule/templates/fullcalendar_modal.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/fullcalendar_modal.html",
+		"oF": 0
+		},
+	"/schedule/templates/fullcalendar_script.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/fullcalendar_script.html",
+		"oF": 0
+		},
+	"/schedule/templates/profiles/schedule.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/profiles/schedule.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_create_event_options.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_create_event_options.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_daily_table.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_daily_table.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_day_cell.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_day_cell.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_day_cell_big.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_day_cell_big.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_detail.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_detail.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_dialogs.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_dialogs.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_event_options.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_event_options.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_event_title.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_event_title.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_month_table.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_month_table.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/_prevnext.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templates/schedule/_prevnext.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar_compact_month.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar_compact_month.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar_day.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar_day.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar_list.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar_list.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar_month.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar_month.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar_tri_month.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar_tri_month.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar_week.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar_week.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/calendar_year.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/calendar_year.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/cancel_occurrence.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/cancel_occurrence.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/create_event.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/create_event.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/delete_event.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/delete_event.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/edit_occurrence.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/edit_occurrence.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/event.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/event.html",
+		"oF": 0
+		},
+	"/schedule/templates/schedule/occurrence.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templates/schedule/occurrence.html",
+		"oF": 0
+		},
+	"/schedule/templatetags/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/schedule/templatetags/__init__.py",
+		"oF": 0
+		},
+	"/schedule/templatetags/scheduletags.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/templatetags/scheduletags.py",
+		"oF": 0
+		},
+	"/schedule/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/urls.py",
+		"oF": 0
+		},
+	"/schedule/utils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/utils.py",
+		"oF": 0
+		},
+	"/schedule/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/views.py",
+		"oF": 0
+		},
+	"/schedule/widgets.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/schedule/widgets.py",
+		"oF": 0
+		},
 	"/setup.cfg": {
 		"cB": 0,
 		"ft": 8192,
@@ -28725,16 +29373,421 @@
 		"oAP": "/setup.cfg",
 		"oF": 0
 		},
-	"/webpack.mix-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
+	"/src/utils/docManager.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
 		"oA": 0,
-		"oAP": "/webpack.mix-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
+		"oAP": "/src/utils/docManager.py",
+		"oF": 0
+		},
+	"/src/utils/fileUtils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/utils/fileUtils.py",
+		"oF": 0
+		},
+	"/src/utils/historyManager.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/utils/historyManager.py",
+		"oF": 0
+		},
+	"/src/utils/jwtManager.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/utils/jwtManager.py",
+		"oF": 0
+		},
+	"/src/utils/serviceConverter.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/utils/serviceConverter.py",
+		"oF": 0
+		},
+	"/src/utils/users.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/utils/users.py",
+		"oF": 0
+		},
+	"/src/views/actions.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/views/actions.py",
+		"oF": 0
+		},
+	"/src/views/index.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/src/views/index.py",
+		"oF": 0
+		},
+	"/taggit/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/taggit/__init__.py",
+		"oF": 0
+		},
+	"/taggit/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/admin.py",
+		"oF": 0
+		},
+	"/taggit/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/apps.py",
+		"oF": 0
+		},
+	"/taggit/forms.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/forms.py",
+		"oF": 0
+		},
+	"/taggit/locale/cs/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/cs/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/cs/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/cs/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/de/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/de/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/de/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/de/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/el/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/el/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/el/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/el/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/en/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/en/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/en/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/en/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/eo/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/eo/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/eo/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/eo/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/es/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/es/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/es/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/es/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/fi/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/fi/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/fi/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/fi/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/fr/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/fr/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/fr/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/fr/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/he/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/he/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/he/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/he/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/it/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/it/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/it/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/it/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/ja/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/ja/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/ja/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/ja/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/nb/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/nb/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/nb/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/nb/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/nl/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/nl/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/nl/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/nl/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/pt_BR/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/pt_BR/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/pt_BR/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/pt_BR/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/ru/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/ru/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/ru/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/ru/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/tr/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/tr/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/tr/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/tr/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/locale/zh_Hans/LC_MESSAGES/django.mo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/zh_Hans/LC_MESSAGES/django.mo",
+		"oF": 0
+		},
+	"/taggit/locale/zh_Hans/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/locale/zh_Hans/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/taggit/managers.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/managers.py",
+		"oF": 0
+		},
+	"/taggit/migrations/0001_initial.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/taggit/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/taggit/migrations/__init__.py",
+		"oF": 0
+		},
+	"/taggit/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/models.py",
+		"oF": 0
+		},
+	"/taggit/utils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/utils.py",
+		"oF": 0
+		},
+	"/taggit/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/taggit/views.py",
+		"oF": 0
 		},
 	"/webpack.mix.js": {
 		"bF": 0,

@@ -8,7 +8,7 @@ from rest_framework.serializers import (
     ValidationError
 )
 
-from dokeza.users.api.serializers import UserDetailSerializer
+from dokeza_2_0.users.api.serializers import UserDetailSerializer
 
 from comments.models import Comment
 

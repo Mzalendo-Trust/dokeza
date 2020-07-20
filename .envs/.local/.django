@@ -15,5 +15,5 @@ CELERY_FLOWER_PASSWORD=debug
 
 # HTTPS
 # ------------------------------------------------------------------------------
-VIRTUAL_HOST=afropro.local
-VIRTUAL_PORT=8000
+# VIRTUAL_HOST=afropro.local
+# VIRTUAL_PORT=8000

@@ -8,6 +8,8 @@ from .views import (
     BillUpdateAPIView,
 )
 
+app_name="bills"
+
 urlpatterns = [
     path('', BillListAPIView.as_view(), name='list'),
     path('create/', BillCreateAPIView.as_view(), name='create'),

@@ -1,13 +1,13 @@
-from django.conf.urls import url
+from django.urls import path
 
 from .views import UserCreateAPIView, UserLoginAPIView
 # UserDetailAPIView, UserUpdateAPIView, UserRedirectAPIView UserListAPIView
 
-
+app_name = "users"
 urlpatterns = [
     # url(r'^$', UserListAPIView.as_view(), name='list'),
-    url(r'^login/$', UserLoginAPIView.as_view(), name='login'),
-    url(r'^register/$', UserCreateAPIView.as_view(), name='register'),
+    path('login/', UserLoginAPIView.as_view(), name='login'),
+    path('register/', UserCreateAPIView.as_view(), name='register'),
 
     # url(r'^(?P<username>[\w.@+-]+)/$', UserDetailAPIView.as_view(), name='detail'),
     # url(r'^~redirect/$', UserRedirectAPIView.as_view(), name='redirect'),

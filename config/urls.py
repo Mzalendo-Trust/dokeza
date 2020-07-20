@@ -8,6 +8,7 @@ from django.views import defaults as default_views
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
+from dokeza_2_0.users.api.views import get_jwt_token
 from .views import HomeView, SearchView, HomeView, AboutView, HelpView, ContactView, PrivacyView
 from posts.views import TagIndexView
 from posts.sitemap import PostSitemap, PetitionSitemap, MemorandumSitemap
@@ -62,16 +63,16 @@ urlpatterns += [
     path("api/", include("config.api_router")),
     # DRF auth token
     path("auth-token/", obtain_auth_token),
-    # path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    # path('api/auth/token/', get_jwt_token),
-    # path('api/users/', include('dokeza_2_0.users.api.urls', namespace='users-api')),
+    path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
+    path('api/auth/token/', get_jwt_token),
+    path('api/users/', include('dokeza_2_0.users.api.urls', namespace='users-api')),
 
     # Access APIs
-    # path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
-    # path('api/bills/', include('bills.api.urls', namespace='bills-api')),
-    # path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
-    # path('api/comments/', include('comments.api.urls', namespace='comments-api')),
-    # path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))
+    path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
+    path('api/bills/', include('bills.api.urls', namespace='bills-api')),
+    path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
+    path('api/comments/', include('comments.api.urls', namespace='comments-api')),
+    path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))
 ]
 
 if settings.DEBUG:

@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView, CreateView, FormView, Upd
 from django.views.generic.detail import SingleObjectMixin
 
 
-# from dokeza.users.models import User, Profile
+# from dokeza_2_0.users.models import User, Profile
 from .models import SubmittedIdea
 from .forms import SubmitIdeaForm
 from comments.forms import CommentForm

@@ -2,10 +2,10 @@
 <a class="subnav-link {% if stingo == 'profile' %} active {% endif %}" href="/users/{{ request.user.email }}">Profile</a>
 <a class="subnav-link {% if stingo == 'annotations' %} active {% endif %}" href="{% url 'users:annotations' %}">My Annotations</a>
 <a class="subnav-link {% if stingo == 'comments' %} active {% elif view.stingo == 'comments' %} active {% endif %}" href="{% url 'users:comments' %}">My Comments</a>
+<a class="subnav-link {% if stingo == 'documents' %} active {% elif view.stingo == 'documents' %} active {% endif %}" href="{% url 'users:documents' %}">My Documents</a>
 <a class="subnav-link {% if stingo == 'my_petitions' %} active {% endif %}" href="{% url 'ideas:my_ideas' %}">My Ideas</a>
 {% if request.user.profile.is_member_of_parliament %}
-  <a class="subnav-link {% if stingo == 'my_bills' %} active {% endif %}" href="{% url 'users:bills' %}">My Bills</a>
-  <a class="subnav-link {% if stingo == 'draft_bill' %} active {% endif %}" href="{% url 'users:draft-bill' %}">Draft a Bill</a>
+<a class="subnav-link {% if stingo == 'my_bills' %} active {% endif %}" href="{% url 'users:bills' %}">My Bills</a>
+<a class="subnav-link {% if stingo == 'draft_bill' %} active {% endif %}" href="{% url 'users:draft-bill' %}">Draft a Bill</a>
 {% endif %}
-
 {% endblock sub-navigation %}

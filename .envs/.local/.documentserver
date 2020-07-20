@@ -1,0 +1,50 @@
+# Advanced configuration option for turning off the HSTS configuration. Applicable only when SSL is in use. Defaults to true.
+ONLYOFFICE_HTTPS_HSTS_ENABLED=true
+
+# Advanced configuration option for setting the HSTS max-age in the onlyoffice nginx vHost configuration.
+# Applicable only when SSL is in use.
+ONLYOFFICE_HTTPS_HSTS_MAXAGE=31536000
+
+# The path to the SSL certificate to use
+# SSL_CERTIFICATE_PATH=/var/www/onlyoffice/Data/certs/tls.crt
+
+# The path to the SSL certificate's private key.
+# SSL_KEY_PATH=/var/www/onlyoffice/Data/certs/tls.key
+
+# The path to the Diffie-Hellman parameter.
+# SSL_DHPARAM_PATH=/var/www/onlyoffice/Data/certs/dhparam.pem
+
+# Enable verification of client certificates using the CA_CERTIFICATES_PATH file. 
+SSL_VERIFY_CLIENT=false
+
+# The database type. Supported values are postgres, mariadb or mysql.
+DB_TYPE=postgres
+DB_HOST=onlyoffice-postgresql
+DB_PORT=5432
+DB_NAME=onlyoffice
+DB_USER=onlyoffice
+DB_PWD=
+
+#: The AMQP URI to connect to message broker server.
+AMQP_URI=amqp://guest:guest@onlyoffice-rabbitmq
+AMQP_TYPE=rabbitmq
+
+# The IP address or the name of the host where the Redis server is running.
+# REDIS_SERVER_HOST=
+# REDIS_SERVER_PORT=
+
+# Defines the number of nginx worker processes.
+# NGINX_WORKER_PROCESSES=
+
+# Sets the maximum number of simultaneous connections that can be opened by a nginx worker process.
+# NGINX_WORKER_CONNECTIONS=
+
+# These will be enabled for the JSON Web Token validation by the ONLYOFFICE Document Server
+# JWT_ENABLED=true
+# JWT_SECRET=secret
+
+# Defines the http header that will be used to send the JSON Web Token.
+# JWT_HEADER=Authorization
+
+# Specifies the enabling the token validation in the request body to the ONLYOFFICE Document Server.
+# JWT_IN_BODY=true

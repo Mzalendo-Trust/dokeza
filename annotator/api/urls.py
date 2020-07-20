@@ -8,6 +8,8 @@ from .views import (
     AnnotationUpdateAPIView,
 )
 
+app_name="annotator"
+
 urlpatterns = [
     path('', AnnotationListAPIView.as_view(), name='list'),
     path('create/', AnnotationCreateAPIView.as_view(), name='create'),

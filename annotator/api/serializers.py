@@ -3,10 +3,10 @@ from rest_framework.authentication import BasicAuthentication, SessionAuthentica
 from rest_framework.serializers import ModelSerializer, HyperlinkedIdentityField, SerializerMethodField
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
-# from dokeza.users.api.serializers import UserDetailSerializer
+# from dokeza_2_0.users.api.serializers import UserDetailSerializer
 from comments.api.serializers import CommentSerializer
 from comments.models import Comment
-from dokeza.users.api.serializers import UserDetailSerializer
+from dokeza_2_0.users.api.serializers import UserDetailSerializer
 
 from annotator.models import Annotation
 

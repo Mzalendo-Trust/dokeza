@@ -14,6 +14,7 @@ mix
   .copyDirectory(`${devPath}images/`, `${distPath}images/`)
   .sass(`${devPath}scss/dokeza.scss`, `${distPath}css/`)
   .sass(`${devPath}scss/annotator.scss`, `${distPath}css/`)
+  .sass(`${devPath}scss/onlyoffice.scss`, `${distPath}css/`)
   .sass(`${devPath}scss/calendar.scss`, `${distPath}css/`)
   .sass(`${devPath}scss/mzalendo.scss`, `${distPath}css/`)
   .babel(`${devPath}js/dokeza.js`, `${distPath}js/dokeza.min.js`)

@@ -30,9 +30,9 @@ from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly,
 )
 
-from dokeza.users.models import User, Visitor  # Institution, Visitor, Profile
+from dokeza_2_0.users.models import User, Visitor  # Institution, Visitor, Profile
 
-# from dokeza.users.api.pagination import BillLimitOffsetPagination, BillPageNumberPagination
+# from dokeza_2_0.users.api.pagination import BillLimitOffsetPagination, BillPageNumberPagination
 from bills.api.permissions import IsOwnerOrReadOnly
 from .serializers import (
     # UserCreateUpdateSerializer,

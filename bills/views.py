@@ -6,7 +6,7 @@ from django.views.generic import ListView, DetailView, FormView, TemplateView
 from django.views.generic.detail import SingleObjectMixin
 from bs4 import BeautifulSoup
 
-# from dokeza.users.models import User, Profile
+# from dokeza_2_0.users.models import User, Profile
 from .models import Bill
 from annotator.models import Annotation
 from comments.forms import CommentForm, AnnotCommentForm
@@ -230,4 +230,4 @@ class BillDisplayView(View):
         return view(request, *args, **kwargs)
 
 
-# BillDraftView() is located in dokeza.users.views.
+# BillDraftView() is located in dokeza_2_0.users.views.
