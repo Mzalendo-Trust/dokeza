@@ -1,3 +1,6 @@
+import doc_config
+import json
+
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
@@ -5,6 +8,7 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
 from django.utils.translation import ugettext_lazy as _
 from django.utils.decorators import method_decorator
+from django.views import View
 from django.views.generic import DetailView, ListView, RedirectView, TemplateView, UpdateView, CreateView
 
 from django.views.generic.dates import YearArchiveView
@@ -21,6 +25,7 @@ from .models import User, Profile
 
 from bills.forms import BillForm
 from posts.forms import PetitionForm
+from config.utils import docManager
 
 User = get_user_model()
 
@@ -88,7 +93,6 @@ class UserRedirectView(LoginRequiredMixin, RedirectView):
 user_redirect_view = UserRedirectView.as_view()
 
 
-
 class ProfileObjectMixin(SingleObjectMixin):
     """
     Provides views with the current user's profile.
@@ -137,7 +141,7 @@ class ProfileUpdateView(ProfileObjectMixin, UpdateView):
 # User Panels Views
 # ---------------------------------------------------------
 
-class UserAnnotationView(TemplateView, DetailView):
+class UserAnnotationView(TemplateView):
     template_name = 'users/user_annotations_list.html'
 
     def get_context_data(self, **kwargs):
@@ -164,8 +168,8 @@ class UserCommentsView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(UserCommentsView, self).get_context_data(**kwargs)
-        # user_comments = [comms for comms in Comment.objects.filter(user=self.request.user)]
-        # context['user_comments'] = user_comments
+        user_comments = [comms for comms in Comment.objects.filter(user=self.request.user)]
+        context['user_comments'] = user_comments
         context['page'] = 'users'
         context['stingo'] = 'comments'
         return context
@@ -181,6 +185,23 @@ class UserCommentsArchiveView(YearArchiveView):
 
     def get_queryset(self):
         return Comment.objects.filter(user=self.request.user)
+
+
+class UserDocumentsView(LoginRequiredMixin, TemplateView):
+    template_name = 'users/user_documents.html'
+    
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        # context['user_documents'] = user_documents
+        context['page'] = 'users'
+        context['languages'] = docManager.LANGUAGES,
+        context['preloadurl'] = doc_config.DOC_SERV_PRELOADER_URL,
+        context['editExt'] = json.dumps(doc_config.DOC_SERV_EDITED),
+        context['convExt'] = json.dumps(doc_config.DOC_SERV_CONVERT),
+        # context['files'] = docManager.getStoredFiles(request),
+        context['stingo'] = 'documents'
+        print(context)
+        return context
 
 
 class UserBillListView(LoginRequiredMixin, ListView):

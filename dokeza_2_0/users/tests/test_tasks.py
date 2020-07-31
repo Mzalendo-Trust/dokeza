@@ -6,7 +6,7 @@ from dokeza_2_0.users.tests.factories import UserFactory
 
 pytestmark = pytest.mark.django_db
 
-
+# @pytest.mark.django_db
 def test_user_count(settings):
     """A basic test to execute the get_users_count Celery task."""
     UserFactory.create_batch(3)

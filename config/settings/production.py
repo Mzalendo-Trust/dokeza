@@ -111,13 +111,13 @@ TEMPLATES[-1]["OPTIONS"]["loaders"] = [  # type: ignore[index] # noqa F405
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-from-email
 DEFAULT_FROM_EMAIL = env(
-    "DJANGO_DEFAULT_FROM_EMAIL", default="Dokeza 2.0 <noreply@dokeza.mzalendo.com>"
+    "DJANGO_DEFAULT_FROM_EMAIL", default="Dokeza Web Platform <admin@mzalendo.com>"
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#server-email
 SERVER_EMAIL = env("DJANGO_SERVER_EMAIL", default=DEFAULT_FROM_EMAIL)
 # https://docs.djangoproject.com/en/dev/ref/settings/#email-subject-prefix
 EMAIL_SUBJECT_PREFIX = env(
-    "DJANGO_EMAIL_SUBJECT_PREFIX", default="[Dokeza 2.0]"
+    "DJANGO_EMAIL_SUBJECT_PREFIX", default="[Hello from Dokeza]"
 )
 
 # ADMIN

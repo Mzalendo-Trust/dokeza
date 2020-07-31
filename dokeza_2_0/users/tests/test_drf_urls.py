@@ -5,6 +5,7 @@ from dokeza_2_0.users.models import User
 
 pytestmark = pytest.mark.django_db
 
+# @pytest.mark.django_db
 
 def test_user_detail(user: User):
     assert (

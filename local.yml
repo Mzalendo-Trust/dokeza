@@ -3,7 +3,13 @@ version: '3'
 volumes:
   local_postgres_data: {}
   local_postgres_data_backups: {}
-  # onlyoffice_postgresql_data: {}
+  # documentserver_postgresql_data: {}
+  dokeza_vers_2:
+    external: true
+
+networks:
+  dokeza-network:
+  ds-network:
 
 services:
   django: &django
@@ -16,13 +22,16 @@ services:
       - postgres
       - mailhog     
     volumes:
-      - .:/app
+      - dokeza_vers_2:/app:nocopy
     env_file:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
+    command: /start
     ports:
       - "8000:8000"
-    command: /start
+    restart: always
+    networks:
+      - dokeza-network
 
   postgres:
     build:
@@ -35,57 +44,70 @@ services:
       - local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
-  
-  # onlyoffice-documentserver:
+    restart: always
+    networks:
+      - dokeza-network
+
+  redis:
+    image: redis:5.0
+    container_name: redis
+    restart: always
+    networks:
+      - dokeza-network
+
+  # documentserver:
   #   build:
-  #     context: ./compose/local/onlyoffice/Dockerfile
-  #   container_name: onlyoffice-documentserver
-  #   depends_on:
-  #     - onlyoffice-postgresql
-  #     - onlyoffice-rabbitmq
+  #     context: .
+  #     dockerfile: ./compose/local/onlyoffice/Dockerfile
+  #   container_name: documentserver
   #   env_file:
-  #     - ./envs/.local/.documentserver
+  #     - ./.envs/.local/.documentserver
+  #   depends_on:
+  #     - ds-postgresql
+  #     - ds-rabbitmq
   #   ports:
-  #     - '8082:8082'
-  #     # - '443:443'
+  #     - '8082:80'
+  #     - '443:443'
   #   stdin_open: true
   #   restart: always
   #   volumes:
-  #      - /var/www/onlyoffice/Data
-  #      - /var/log/onlyoffice
-  #      - /var/lib/onlyoffice/documentserver/App_Data/cache/files
-  #      - /var/www/onlyoffice/documentserver-example/public/files
-  #      - /usr/share/fonts
+  #     - /var/www/onlyoffice/Data
+  #     - /var/log/onlyoffice
+  #     - /var/lib/onlyoffice/documentserver/App_Data/cache/files
+  #     - /var/www/onlyoffice/documentserver-example/public/files
+  #     - /usr/share/fonts
+  #   networks:
+  #     - ds-network
        
-  # onlyoffice-rabbitmq:
-  #   container_name: onlyoffice-rabbitmq
+  # ds-rabbitmq:
+  #   container_name: ds-rabbitmq
   #   image: rabbitmq
   #   restart: always
   #   expose:
   #     - '5672'
+  #   networks:
+  #     - ds-network
 
-  # onlyoffice-postgresql:
-  #   container_name: onlyoffice-postgresql
-  #   image: postgres:12.3
-  #   environment:
-  #     - POSTGRES_DB=onlyoffice
-  #     - POSTGRES_USER=onlyoffice
-  #     - POSTGRES_HOST_AUTH_METHOD=trust
+  # ds-postgres:
+  #   container_name: ds-postgres
+  #   image: postgres:12.3-alpine
+  #   env_file:
+  #     - ./.envs/.local/.documentserver
   #   restart: always
   #   expose:
   #     - '5432'
   #   volumes:
-  #     - onlyoffice_postgresql_data:/var/lib/postgresql
+  #     - documentserver_postgresql_data:/var/lib/postgresql
+  #   networks:
+  #     - ds-network
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
     container_name: mailhog
     ports:
       - "8025:8025"
-
-  redis:
-    image: redis:5.0
-    container_name: redis
+    networks:
+      - dokeza-network
 
   celeryworker:
     <<: *django
@@ -97,6 +119,9 @@ services:
       - mailhog
     ports: []
     command: /start-celeryworker
+    restart: always
+    networks:
+      - dokeza-network
 
   celerybeat:
     <<: *django
@@ -108,6 +133,9 @@ services:
       - mailhog
     ports: []
     command: /start-celerybeat
+    restart: always
+    networks:
+      - dokeza-network
 
   flower:
     <<: *django
@@ -116,6 +144,9 @@ services:
     ports:
       - "5555:5555"
     command: /start-flower
+    restart: always
+    networks:
+      - dokeza-network
 
   # nginx-proxy:
   #   image: jwilder/nginx-proxy:alpine
@@ -126,6 +157,8 @@ services:
   #   volumes:
   #     - /var/run/docker.sock:/tmp/docker.sock:ro
   #     - ./certs:/etc/nginx/certs
-  #   restart: always
+    # restart: always
   #   depends_on:
   #     - django
+  #   networks:
+  #    - dokeza-network

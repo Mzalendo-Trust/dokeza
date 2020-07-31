@@ -1,6 +1,7 @@
 import pytest
 
 from dokeza_2_0.users.models import User
+from bills.models import Bill
 
 pytestmark = pytest.mark.django_db
 

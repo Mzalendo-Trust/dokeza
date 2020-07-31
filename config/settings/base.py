@@ -244,7 +244,7 @@ EMAIL_TIMEOUT = 5
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("""Jimmy Gitonga, Njuguna Gathere""", "jimmy@ra.co.ke, njuguna@ra.co.ke")]
+ADMINS = [("Jimmy Gitonga", "jimmy@ra.co.ke"), ("Njuguna Gathere", "njuguna@ra.co.ke")]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
@@ -396,3 +396,4 @@ CKEDITOR_CONFIGS = {
 }
 
 # ONLYOFFICE Document Server
+APPEND_SLASH=False

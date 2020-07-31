@@ -60,13 +60,13 @@ LANGUAGES = {
 }
 
 def isCanView(ext):
-    return ext in config.DOC_SERV_VIEWED
+    return ext in doc_config.DOC_SERV_VIEWED
 
 def isCanEdit(ext):
-    return ext in config.DOC_SERV_EDITED
+    return ext in doc_config.DOC_SERV_EDITED
 
 def isCanConvert(ext):
-    return ext in config.DOC_SERV_CONVERT
+    return ext in doc_config.DOC_SERV_CONVERT
 
 def isSupportedExt(ext):
     return isCanView(ext) | isCanEdit(ext) | isCanConvert(ext)
@@ -93,12 +93,12 @@ def getCorrectName(filename, req):
     return name
 
 def getFileUri(filename, req):
-    host = config.EXAMPLE_DOMAIN.rstrip('/')
+    host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
     curAdr = req.META['REMOTE_ADDR']
     return f'{host}{settings.STATIC_URL}{curAdr}/{filename}'
 
 def getCallbackUrl(filename, req):
-    host = config.EXAMPLE_DOMAIN
+    host = doc_config.EXAMPLE_DOMAIN
     curAdr = req.META['REMOTE_ADDR']
     return f'{host}track?filename={filename}&userAddress={curAdr}'
 
@@ -108,7 +108,7 @@ def getRootFolder(req):
     else:
         curAdr = req.META['REMOTE_ADDR']
 
-    directory = os.path.join(config.STORAGE_PATH, curAdr)
+    directory = os.path.join(doc_config.STORAGE_PATH, curAdr)
 
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -165,6 +165,7 @@ def createSample(fileType, sample, req):
 
     with io.open(os.path.join('samples', f'{sampleName}{ext}'), 'rb') as stream:
         createFile(stream, path, req, True)
+        print("At createSample-", path, req)
     return filename
 
 def removeFile(filename, req):

@@ -125,7 +125,6 @@ class Profile(models.Model):
             self.user.email
 
 
-
 class Visitor(AnonymousUser):
     """
     The Visitor can only view pages open to the public by default.
@@ -144,3 +143,23 @@ def create_user_profile(sender, instance, created, **kwargs):
 @receiver(post_save, sender=User)
 def save_user_profile(sender, instance, **kwargs):
     instance.profile.save()
+
+
+# class FileManager(models.Manager):
+#     def all(self):
+#         return self.order_by('-created')
+
+
+# class UserDocuments(models.Model):
+#     user = models.OneToOneField(User, on_delete=models.CASCADE)
+#     title = models.CharField(max_length=100, default='A bill')
+#     slug = models.SlugField(unique=True)
+#     file = models.FileField(upload_to='my_files/', blank=True, null=True, help_text='Upload your file here.')
+
+#     objects = fileManager()
+
+#     def get_absolute_url(self):
+#         return reverse('other_docs:detail', kwargs={'slug': self.slug})
+
+#     def __str__(self):
+#         return self.title

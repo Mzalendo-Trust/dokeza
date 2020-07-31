@@ -5451,172 +5451,12 @@
 		"oAP": "/annotator/__init__.py",
 		"oF": 0
 		},
-	"/annotator/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/serializers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/serializers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/__pycache__/views.cpython-36.pyc",
-		"oF": 0
-		},
 	"/annotator/admin.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/annotator/admin.py",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/permissions.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/permissions.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/permissions.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/permissions.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/serializers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/serializers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/api/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/annotator/api/permissions.py": {
@@ -5675,102 +5515,6 @@
 		"oAP": "/annotator/migrations/__init__.py",
 		"oF": 0
 		},
-	"/annotator/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0002_auto_20170329_1228.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0002_auto_20170329_1228.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0002_auto_20170329_1228.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0002_auto_20170329_1228.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0003_auto_20170329_2302.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0003_auto_20170329_2302.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0003_auto_20170329_2302.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0003_auto_20170329_2302.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0004_auto_20170404_0221.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0004_auto_20170404_0221.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0004_auto_20170404_0221.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0004_auto_20170404_0221.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0005_auto_20170426_1413.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0005_auto_20170426_1413.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/0005_auto_20170426_1413.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/__pycache__/0005_auto_20170426_1413.cpython-36.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/migrations/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
 	"/annotator/models.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5793,22 +5537,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/annotator/tests/__init__.py",
-		"oF": 0
-		},
-	"/annotator/tests/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/tests/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/annotator/tests/__pycache__/test_views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/tests/__pycache__/test_views.cpython-35.pyc",
 		"oF": 0
 		},
 	"/annotator/tests/test_views.py": {
@@ -6963,6 +6691,22 @@
 		"oAP": "/config/celery_app.py",
 		"oF": 0
 		},
+	"/config/doc_views/actions.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/doc_views/actions.py",
+		"oF": 0
+		},
+	"/config/doc_views/index.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/doc_views/index.py",
+		"oF": 0
+		},
 	"/config/settings/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -7017,6 +6761,54 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/config/urls.py",
+		"oF": 0
+		},
+	"/config/utils/docManager.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/utils/docManager.py",
+		"oF": 0
+		},
+	"/config/utils/fileUtils.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/utils/fileUtils.py",
+		"oF": 0
+		},
+	"/config/utils/historyManager.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/utils/historyManager.py",
+		"oF": 0
+		},
+	"/config/utils/jwtManager.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/utils/jwtManager.py",
+		"oF": 0
+		},
+	"/config/utils/serviceConverter.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/utils/serviceConverter.py",
+		"oF": 0
+		},
+	"/config/utils/users.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/utils/users.py",
 		"oF": 0
 		},
 	"/config/views.py": {
@@ -26282,22 +26074,6 @@
 		"oAP": "/dokeza_2_0/users/api/views.py",
 		"oF": 0
 		},
-	"/dokeza_2_0/users/api/views_.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/users/api/views_.py",
-		"oF": 0
-		},
-	"/dokeza_2_0/users/api/views_old.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/users/api/views_old.py",
-		"oF": 0
-		},
 	"/dokeza_2_0/users/apps.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -29371,70 +29147,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/setup.cfg",
-		"oF": 0
-		},
-	"/src/utils/docManager.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/utils/docManager.py",
-		"oF": 0
-		},
-	"/src/utils/fileUtils.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/utils/fileUtils.py",
-		"oF": 0
-		},
-	"/src/utils/historyManager.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/utils/historyManager.py",
-		"oF": 0
-		},
-	"/src/utils/jwtManager.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/utils/jwtManager.py",
-		"oF": 0
-		},
-	"/src/utils/serviceConverter.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/utils/serviceConverter.py",
-		"oF": 0
-		},
-	"/src/utils/users.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/utils/users.py",
-		"oF": 0
-		},
-	"/src/views/actions.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/views/actions.py",
-		"oF": 0
-		},
-	"/src/views/index.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/src/views/index.py",
 		"oF": 0
 		},
 	"/taggit/__init__.py": {

@@ -24,14 +24,15 @@
 
 """
 
-import config
+import doc_config
 import json
 import os
+import re
 
 from datetime import datetime
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
-from src.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
+from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 
 
 def upload(request):
@@ -93,7 +94,7 @@ def convert(request):
 
 def createNew(request):
     response = {}
-
+   
     try:
         fileType = request.GET['fileType']
         sample = request.GET.get('sample', False)
@@ -103,7 +104,7 @@ def createNew(request):
         return HttpResponseRedirect(f'edit?filename={filename}')
 
     except Exception as e:
-        response.setdefault('error', e.args[0])
+        response.setdefault('error',f'{request}')
 
     return HttpResponse(json.dumps(response), content_type='application/json')
 

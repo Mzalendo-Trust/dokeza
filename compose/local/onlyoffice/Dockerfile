@@ -59,7 +59,7 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     rm -rf /var/lib/apt/lists/*
 
 COPY config /app/ds/setup/config/
-COPY run-document-server.sh /app/ds/run-document-server.sh
+COPY ./compose/local/onlyoffice/run-document-server.sh /app/ds/run-document-server.sh
 
 EXPOSE 80 443
 

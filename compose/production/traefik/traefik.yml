@@ -17,7 +17,7 @@ certificatesResolvers:
   letsencrypt:
     # https://docs.traefik.io/master/https/acme/#lets-encrypt
     acme:
-      email: "jimmy@ra.co.ke, njuguna@ra.co.ke"
+      email: "jimmy@ra.co.ke"
       storage: /etc/traefik/acme/acme.json
       # https://docs.traefik.io/master/https/acme/#httpchallenge
       httpChallenge:

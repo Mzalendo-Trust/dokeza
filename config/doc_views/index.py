@@ -24,21 +24,24 @@
 
 """
 
-import config
+import doc_config
 import json
 
+from django.contrib.auth import get_user_model
 from django.shortcuts import render
 
-from src.utils import users
-from src.utils import docManager
+from dokeza_2_0.users.models import User
+from config.utils import docManager
+
+User = get_user_model()
 
 def default(request):
     context = {
-        'users': users.USERS,
         'languages': docManager.LANGUAGES,
-        'preloadurl': config.DOC_SERV_PRELOADER_URL,
-        'editExt': json.dumps(config.DOC_SERV_EDITED),
-        'convExt': json.dumps(config.DOC_SERV_CONVERT),
-        'files': docManager.getStoredFiles(request)
+        'preloadurl': doc_config.DOC_SERV_PRELOADER_URL,
+        'editExt': json.dumps(doc_config.DOC_SERV_EDITED),
+        'convExt': json.dumps(doc_config.DOC_SERV_CONVERT),
+        'files': docManager.getStoredFiles(request),
+        'stingo':'documents'
     }
-    return render(request, 'index.html', context)
+    return render(request, 'users/user_documents.html', context)
