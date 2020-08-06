@@ -2,6 +2,7 @@
 {% load i18n static %}
 {% load crispy_forms_tags %}
 {% block title %}{{ user.username }}{% endblock %}
+  
 {% block content %}
 <div class="container user__entry">
   <div class="user__page">
@@ -15,11 +16,13 @@
         <br />
         <div class="clearFix">
           <div class="upload-panel clearFix">
-            <a class="file-upload">Upload
-              <br />
-              File
-              <input type="file" id="fileupload" name="uploadedFile" data-url="upload" />
-            </a>
+            <form action="">{% csrf_token %}
+              <a class="file-upload">Upload
+                <br />
+                File
+                <input type="file" id="fileupload" name="uploadedFile" data-url="upload" />
+              </a>
+            </form>
           </div>
           <div class="create-panel clearFix">
             <ul class="try-editor-list clearFix">

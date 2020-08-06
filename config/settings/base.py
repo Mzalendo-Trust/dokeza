@@ -5,7 +5,6 @@ from pathlib import Path
 
 import environ
 import datetime
-import os
 import doc_config
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
@@ -162,7 +161,10 @@ STATIC_ROOT = str(ROOT_DIR / "staticfiles")
 # https://docs.djangoproject.com/en/dev/ref/settings/#static-url
 STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
-STATICFILES_DIRS = [str(APPS_DIR / "static")]
+STATICFILES_DIRS = [
+    str(APPS_DIR / "static"),
+    str(ROOT_DIR / "app_data")
+    ]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -394,6 +396,3 @@ CKEDITOR_CONFIGS = {
         'uiColor': '#fae8c3',
     },
 }
-
-# ONLYOFFICE Document Server
-APPEND_SLASH=False

@@ -17,6 +17,14 @@
 		"oAP": "/.coverage",
 		"oF": 0
 		},
+	"/.docker-sync/daemon.log": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.docker-sync/daemon.log",
+		"oF": 0
+		},
 	"/.dockerignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -63,6 +71,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/.envs/.production/.django",
+		"oF": 0
+		},
+	"/.envs/.production/.postgres": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.envs/.production/.postgres",
 		"oF": 0
 		},
 	"/.gitattributes": {
@@ -5563,6 +5579,118 @@
 		"oAP": "/annotator/views.py",
 		"oF": 0
 		},
+	"/app_data/172.20.0.1/new(1).docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.20.0.1/new(1).docx",
+		"oF": 0
+		},
+	"/app_data/172.20.0.1/new(1).docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.20.0.1/new(1).docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/app_data/172.20.0.1/new(2).docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.20.0.1/new(2).docx",
+		"oF": 0
+		},
+	"/app_data/172.20.0.1/new(2).docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.20.0.1/new(2).docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/app_data/172.20.0.1/new(3).docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.20.0.1/new(3).docx",
+		"oF": 0
+		},
+	"/app_data/172.20.0.1/new(3).docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.20.0.1/new(3).docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/app_data/172.20.0.1/new(4).docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.20.0.1/new(4).docx",
+		"oF": 0
+		},
+	"/app_data/172.20.0.1/new(4).docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.20.0.1/new(4).docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/app_data/172.20.0.1/new(5).docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.20.0.1/new(5).docx",
+		"oF": 0
+		},
+	"/app_data/172.20.0.1/new(5).docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.20.0.1/new(5).docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/app_data/172.20.0.1/new.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.20.0.1/new.docx",
+		"oF": 0
+		},
+	"/app_data/172.20.0.1/new.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.20.0.1/new.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/app_data/172.20.0.1/sample.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.20.0.1/sample.docx",
+		"oF": 0
+		},
+	"/app_data/172.20.0.1/sample.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.20.0.1/sample.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/azure-pipelines.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -6075,6 +6203,68 @@
 		"oAP": "/celerybeat.pid",
 		"oF": 0
 		},
+	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/meta.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/meta-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/private_key.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/private_key-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/regr.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/regr-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/certbot/certs/csr/0000_csr-certbot.pem": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/certbot/certs/csr/0000_csr-certbot.pem",
+		"oF": 0
+		},
+	"/certbot/certs/csr/0001_csr-certbot.pem": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/certbot/certs/csr/0001_csr-certbot.pem",
+		"oF": 0
+		},
+	"/certbot/certs/keys/0000_key-certbot.pem": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/certbot/certs/keys/0000_key-certbot.pem",
+		"oF": 0
+		},
+	"/certbot/certs/keys/0001_key-certbot.pem": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/certbot/certs/keys/0001_key-certbot.pem",
+		"oF": 0
+		},
+	"/certbot/logs": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/certbot/logs",
+		"oF": 0
+		},
 	"/certs/afropro.local.crt": {
 		"cB": 0,
 		"ft": 8192,
@@ -6491,28 +6681,44 @@
 		"oAP": "/compose/local/onlyoffice/run-document-server.sh",
 		"oF": 0
 		},
-	"/compose/production/aws/Dockerfile": {
+	"/compose/production.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/compose/production/aws/Dockerfile",
+		"oAP": "/compose/production.zip",
 		"oF": 0
 		},
-	"/compose/production/aws/maintenance/download": {
+	"/compose/production/awscli/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/compose/production/aws/maintenance/download",
+		"oAP": "/compose/production/awscli/Dockerfile",
 		"oF": 0
 		},
-	"/compose/production/aws/maintenance/upload": {
+	"/compose/production/awscli/maintenance/download": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/compose/production/aws/maintenance/upload",
+		"oAP": "/compose/production/awscli/maintenance/download",
+		"oF": 0
+		},
+	"/compose/production/awscli/maintenance/upload": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/awscli/maintenance/upload",
+		"oF": 0
+		},
+	"/compose/production/certbot/Dockerfile": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/certbot/Dockerfile",
 		"oF": 0
 		},
 	"/compose/production/django/celery/beat/start": {
@@ -6579,6 +6785,54 @@
 		"oAP": "/compose/production/django/start",
 		"oF": 0
 		},
+	"/compose/production/nginx/certbot_check.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/certbot_check.sh",
+		"oF": 0
+		},
+	"/compose/production/nginx/conf.d/default.conf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/conf.d/default.conf",
+		"oF": 0
+		},
+	"/compose/production/nginx/dhparams.pem": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/dhparams.pem",
+		"oF": 0
+		},
+	"/compose/production/nginx/Dockerfile": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/Dockerfile",
+		"oF": 0
+		},
+	"/compose/production/nginx/nginx.conf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/nginx.conf",
+		"oF": 0
+		},
+	"/compose/production/nginx/site/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/site/index.html",
+		"oF": 0
+		},
 	"/compose/production/postgres/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
@@ -6643,20 +6897,12 @@
 		"oAP": "/compose/production/postgres/maintenance/restore",
 		"oF": 0
 		},
-	"/compose/production/traefik/Dockerfile": {
+	"/compose/production/redis/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/compose/production/traefik/Dockerfile",
-		"oF": 0
-		},
-	"/compose/production/traefik/traefik.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/compose/production/traefik/traefik.yml",
+		"oAP": "/compose/production/redis/Dockerfile",
 		"oF": 0
 		},
 	"/config/__init__.py": {
@@ -6705,6 +6951,54 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/config/doc_views/index.py",
+		"oF": 0
+		},
+	"/config/samples/new.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/samples/new.docx",
+		"oF": 0
+		},
+	"/config/samples/new.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/samples/new.pptx",
+		"oF": 0
+		},
+	"/config/samples/new.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/samples/new.xlsx",
+		"oF": 0
+		},
+	"/config/samples/sample.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/samples/sample.docx",
+		"oF": 0
+		},
+	"/config/samples/sample.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/samples/sample.pptx",
+		"oF": 0
+		},
+	"/config/samples/sample.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/samples/sample.xlsx",
 		"oF": 0
 		},
 	"/config/settings/__init__.py": {
@@ -10037,6 +10331,14 @@
 		"oAP": "/doc_config.py",
 		"oF": 0
 		},
+	"/docker-sync.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docker-sync.yml",
+		"oF": 0
+		},
 	"/docs/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -10219,6 +10521,54 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/dokeza_2_0/contrib/sites/migrations/__init__.py",
+		"oF": 0
+		},
+	"/dokeza_2_0/samples/new.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/samples/new.docx",
+		"oF": 0
+		},
+	"/dokeza_2_0/samples/new.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/samples/new.pptx",
+		"oF": 0
+		},
+	"/dokeza_2_0/samples/new.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/samples/new.xlsx",
+		"oF": 0
+		},
+	"/dokeza_2_0/samples/sample.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/samples/sample.docx",
+		"oF": 0
+		},
+	"/dokeza_2_0/samples/sample.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/samples/sample.pptx",
+		"oF": 0
+		},
+	"/dokeza_2_0/samples/sample.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/samples/sample.xlsx",
 		"oF": 0
 		},
 	"/dokeza_2_0/static/admin/css/base-min.css": {
@@ -22980,6 +23330,16 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/css/editor.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/css/editor-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/dokeza_2_0/static/css/project.css": {
 		"aP": 1,
 		"bl": 0,
@@ -23982,6 +24342,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/dokeza_2_0/static/dist/css/jquery-ui.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/jquery-ui-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/dokeza_2_0/static/dist/css/mzalendo-min.css": {
 		"aP": 1,
 		"bl": 0,
@@ -23999,6 +24369,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/css/mzalendo-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/dist/css/onlyoffice.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/onlyoffice-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -24525,6 +24905,277 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/alert.png": {
+		"ft": 32768,
+		"iS": 3208,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/alert.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/block-content-24.png": {
+		"ft": 32768,
+		"iS": 452,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/block-content-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/close.png": {
+		"ft": 32768,
+		"iS": 197,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/close.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/comment-24.png": {
+		"ft": 32768,
+		"iS": 127,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/comment-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/delete-24.png": {
+		"ft": 32768,
+		"iS": 1133,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/delete-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/desktop-24.png": {
+		"ft": 32768,
+		"iS": 1068,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/desktop-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/done.png": {
+		"ft": 32768,
+		"iS": 631,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/done.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/download-24.png": {
+		"ft": 32768,
+		"iS": 1197,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/download-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/embeded-24.png": {
+		"ft": 32768,
+		"iS": 1232,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/embeded-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/favicon.ico",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/file_docx.png": {
+		"ft": 32768,
+		"iS": 682,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/file_docx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/file_pptx.png": {
+		"ft": 32768,
+		"iS": 728,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/file_pptx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/file_upload.png": {
+		"ft": 32768,
+		"iS": 1739,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/file_upload.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/file_xlsx.png": {
+		"ft": 32768,
+		"iS": 744,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/file_xlsx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/fill-forms-24.png": {
+		"ft": 32768,
+		"iS": 152,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/fill-forms-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/filter-24.png": {
+		"ft": 32768,
+		"iS": 118,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/filter-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/icon_docx.png": {
+		"ft": 32768,
+		"iS": 1219,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/icon_docx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/icon_pptx.png": {
+		"ft": 32768,
+		"iS": 1227,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/icon_pptx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/icon_xlsx.png": {
+		"ft": 32768,
+		"iS": 1240,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/icon_xlsx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/loader16.gif": {
+		"ft": 4194304,
+		"iS": 673,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/loader16.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/logo.png": {
+		"ft": 32768,
+		"iS": 5532,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/mobile-24.png": {
+		"ft": 32768,
+		"iS": 1110,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/mobile-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/presentation.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/presentation.ico",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/review-24.png": {
+		"ft": 32768,
+		"iS": 145,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/review-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/spreadsheet.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/spreadsheet.ico",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/dist/images/onlyoffice/text.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/onlyoffice/text.ico",
+		"oF": 0
+		},
 	"/dokeza_2_0/static/dist/images/public/annotations.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -24876,6 +25527,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/dist/js/vendor/jquery.blockUI_.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.blockUI_-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/dist/js/vendor/jquery.fileupload.js": {
 		"bF": 0,
 		"ft": 64,
@@ -24925,12 +25587,283 @@
 		"oAP": "/dokeza_2_0/static/fonts/.gitkeep",
 		"oF": 0
 		},
+	"/dokeza_2_0/static/images/alert.png": {
+		"ft": 32768,
+		"iS": 3208,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/alert.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/block-content-24.png": {
+		"ft": 32768,
+		"iS": 452,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/block-content-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/close.png": {
+		"ft": 32768,
+		"iS": 197,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/close.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/comment-24.png": {
+		"ft": 32768,
+		"iS": 127,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/comment-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/delete-24.png": {
+		"ft": 32768,
+		"iS": 1133,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/delete-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/desktop-24.png": {
+		"ft": 32768,
+		"iS": 1068,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/desktop-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/done.png": {
+		"ft": 32768,
+		"iS": 631,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/done.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/download-24.png": {
+		"ft": 32768,
+		"iS": 1197,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/download-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/embeded-24.png": {
+		"ft": 32768,
+		"iS": 1232,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/embeded-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/favicon.ico",
+		"oF": 0
+		},
 	"/dokeza_2_0/static/images/favicons/favicon.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/images/favicons/favicon.ico",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/images/file_docx.png": {
+		"ft": 32768,
+		"iS": 682,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/file_docx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/file_pptx.png": {
+		"ft": 32768,
+		"iS": 728,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/file_pptx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/file_upload.png": {
+		"ft": 32768,
+		"iS": 1739,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/file_upload.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/file_xlsx.png": {
+		"ft": 32768,
+		"iS": 744,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/file_xlsx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/fill-forms-24.png": {
+		"ft": 32768,
+		"iS": 152,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/fill-forms-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/filter-24.png": {
+		"ft": 32768,
+		"iS": 118,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/filter-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/icon_docx.png": {
+		"ft": 32768,
+		"iS": 1219,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/icon_docx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/icon_pptx.png": {
+		"ft": 32768,
+		"iS": 1227,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/icon_pptx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/icon_xlsx.png": {
+		"ft": 32768,
+		"iS": 1240,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/icon_xlsx.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/loader16.gif": {
+		"ft": 4194304,
+		"iS": 673,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/loader16.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"/dokeza_2_0/static/images/logo.png": {
+		"ft": 32768,
+		"iS": 5532,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/mobile-24.png": {
+		"ft": 32768,
+		"iS": 1110,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/mobile-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/presentation.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/presentation.ico",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/images/review-24.png": {
+		"ft": 32768,
+		"iS": 145,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/review-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/spreadsheet.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/spreadsheet.ico",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/images/text.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/text.ico",
 		"oF": 0
 		},
 	"/dokeza_2_0/static/js/project.js": {
@@ -25584,6 +26517,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/comments/confirm_delete.html",
+		"oF": 0
+		},
+	"/dokeza_2_0/templates/editor.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/editor.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/events/list.html": {
@@ -28216,6 +29157,22 @@
 		"oAP": "/production.yml",
 		"oF": 0
 		},
+	"/production_.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/production_.yml",
+		"oF": 0
+		},
+	"/production_orig.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/production_orig.yml",
+		"oF": 0
+		},
 	"/public_participation/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -28574,6 +29531,54 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/requirements/production.txt",
+		"oF": 0
+		},
+	"/samples/new.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/new.docx",
+		"oF": 0
+		},
+	"/samples/new.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/new.pptx",
+		"oF": 0
+		},
+	"/samples/new.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/new.xlsx",
+		"oF": 0
+		},
+	"/samples/sample.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/sample.docx",
+		"oF": 0
+		},
+	"/samples/sample.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/sample.pptx",
+		"oF": 0
+		},
+	"/samples/sample.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/sample.xlsx",
 		"oF": 0
 		},
 	"/schedule/__init__.py": {
@@ -29147,6 +30152,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/setup.cfg",
+		"oF": 0
+		},
+	"/start.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/start.sh",
 		"oF": 0
 		},
 	"/taggit/__init__.py": {

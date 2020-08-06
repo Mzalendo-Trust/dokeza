@@ -28,10 +28,10 @@ import doc_config
 import jwt
 
 def isEnabled():
-    return bool(config.DOC_SERV_JWT_SECRET)
+    return bool(doc_config.DOC_SERV_JWT_SECRET)
 
 def encode(payload):
-    return jwt.encode(payload, config.DOC_SERV_JWT_SECRET, algorithm='HS256').decode('utf-8')
+    return jwt.encode(payload, doc_config.DOC_SERV_JWT_SECRET, algorithm='HS256').decode('utf-8')
 
 def decode(string):
-    return jwt.decode(string, config.DOC_SERV_JWT_SECRET, algorithms=['HS256'])
+    return jwt.decode(string, doc_config.DOC_SERV_JWT_SECRET, algorithms=['HS256'])

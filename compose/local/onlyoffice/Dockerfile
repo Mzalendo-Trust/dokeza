@@ -58,7 +58,7 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     service nginx stop && \
     rm -rf /var/lib/apt/lists/*
 
-COPY config /app/ds/setup/config/
+COPY ./config/ds-config /app/ds/setup/config/
 COPY ./compose/local/onlyoffice/run-document-server.sh /app/ds/run-document-server.sh
 
 EXPOSE 80 443

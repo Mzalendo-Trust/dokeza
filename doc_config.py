@@ -13,12 +13,12 @@ DOC_SERV_CONVERT = [
     ".odp", ".fodp", ".otp", ".rtf", ".mht", ".html", ".htm", ".epub"
 ]
 
-DOC_SERV = 'http://192.168.64.10'
+DOC_SERV = 'http://192.168.100.82:8082'
 DOC_SERV_TIMEOUT = 120000
 
-DOC_SERV_CONVERTER_URL = 'http://192.168.64.10/ConvertService.ashx'
-DOC_SERV_API_URL = 'http://192.168.64.10/web-apps/apps/api/documents/api.js'
-DOC_SERV_PRELOADER_URL = 'http://192.168.64.10/web-apps/apps/api/documents/cache-scripts.html'
+DOC_SERV_CONVERTER_URL = 'http://192.168.100.82:8082/ConvertService.ashx'
+DOC_SERV_API_URL = 'http://192.168.100.82:8082/web-apps/apps/api/documents/api.js'
+DOC_SERV_PRELOADER_URL = 'http://192.168.100.82:8082/web-apps/apps/api/documents/cache-scripts.html'
 
 EXAMPLE_DOMAIN = 'http://192.168.100.82:8000/'
 

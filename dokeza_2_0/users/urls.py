@@ -4,6 +4,7 @@ from . import views
 from config.doc_views import index, actions
 
 app_name = "users"
+
 urlpatterns = [
     path("~documents/", index.default, name="documents"),
     path("~annotations/", views.UserAnnotationView.as_view(), name="annotations"),
@@ -23,10 +24,10 @@ urlpatterns = [
     path("~drafts/petition/<slug>/", views.UserPetitionUpdateView.as_view(), name="update_petition"),
     path("~drafts/bills/", views.UserBillListView.as_view(), name="bills"),
     path("~drafts/bill/<slug>/", views.UserBillUpdateView.as_view(), name='update_bill'),
-    path("~documents/upload/", actions.upload),
+    path("~documents/upload", actions.upload),
     path("~documents/convert/", actions.convert),
     path("~documents/create/", actions.createNew),
-    path("~documents/edit/", actions.edit),
-    path("~documents/track/", actions.track),
-    path("~documents/remove/", actions.remove)
+    path("~documents/edit", actions.edit, name="document-edit"),
+    path("~documents/track", actions.track),
+    path("~documents/remove", actions.remove)
 ]

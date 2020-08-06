@@ -87,7 +87,7 @@ def getCorrectName(filename, req):
 
     i = 1
     while os.path.exists(getStoragePath(name, req)):
-        name = f'{basename} ({i}){ext}'
+        name = f'{basename}({i}){ext}'
         i += 1
 
     return name
@@ -95,12 +95,12 @@ def getCorrectName(filename, req):
 def getFileUri(filename, req):
     host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
     curAdr = req.META['REMOTE_ADDR']
-    return f'{host}{settings.STATIC_URL}{curAdr}/{filename}'
+    return f'{host}{base.STATIC_URL}{curAdr}/{filename}'
 
 def getCallbackUrl(filename, req):
     host = doc_config.EXAMPLE_DOMAIN
     curAdr = req.META['REMOTE_ADDR']
-    return f'{host}track?filename={filename}&userAddress={curAdr}'
+    return f'{host}users/~documents/track?filename={filename}&userAddress={curAdr}'
 
 def getRootFolder(req):
     if isinstance(req, str):
@@ -154,7 +154,6 @@ def saveFileFromUri(uri, path, req = None, meta = False):
 
 def createSample(fileType, sample, req):
     ext = getInternalExtension(fileType)
-
     if not sample:
         sample = 'false'
 
@@ -162,12 +161,11 @@ def createSample(fileType, sample, req):
 
     filename = getCorrectName(f'{sampleName}{ext}', req)
     path = getStoragePath(filename, req)
-
+    
     with io.open(os.path.join('samples', f'{sampleName}{ext}'), 'rb') as stream:
         createFile(stream, path, req, True)
-        print("At createSample-", path, req)
     return filename
-
+    
 def removeFile(filename, req):
     path = getStoragePath(filename, req)
     if os.path.exists(path):

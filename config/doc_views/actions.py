@@ -32,16 +32,22 @@ import re
 from datetime import datetime
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
+from django.shortcuts import redirect
+from django.urls import reverse
 from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
+from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_cookie
+from config.doc_views import index, actions
 
 
+
+@csrf_protect
 def upload(request):
     response = {}
 
     try:
         fileInfo = request.FILES['uploadedFile']
 
-        if fileInfo.size > config.FILE_SIZE_MAX:
+        if fileInfo.size > doc_config.FILE_SIZE_MAX:
             raise Exception('File size is too big')
 
         curExt = fileUtils.getFileExt(fileInfo.name)
@@ -56,7 +62,7 @@ def upload(request):
         response.setdefault('filename', name)
 
     except Exception as e:
-        response.setdefault('error', e.args[0])
+        response.setdefault('error', f'{e}')
 
     return HttpResponse(json.dumps(response), content_type='application/json')
 
@@ -98,16 +104,16 @@ def createNew(request):
     try:
         fileType = request.GET['fileType']
         sample = request.GET.get('sample', False)
-
+        
         filename = docManager.createSample(fileType, sample, request)
-
-        return HttpResponseRedirect(f'edit?filename={filename}')
+        return HttpResponseRedirect(f'/users/~documents/edit?filename={filename}')
 
     except Exception as e:
-        response.setdefault('error',f'{request}')
+        response.setdefault('error', f'details - {e}')
 
     return HttpResponse(json.dumps(response), content_type='application/json')
 
+@csrf_exempt
 def edit(request):
     filename = request.GET['filename']
 
@@ -177,7 +183,7 @@ def edit(request):
                 'about': True,
                 'feedback': True,
                 'goback': {
-                    'url': config.EXAMPLE_DOMAIN
+                    'url': doc_config.EXAMPLE_DOMAIN
                 }
             }
         }
@@ -193,14 +199,15 @@ def edit(request):
         'history': json.dumps(hist['history']) if 'history' in hist else None,
         'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
         'fileType': fileType,
-        'apiUrl': config.DOC_SERV_API_URL
+        'apiUrl': doc_config.DOC_SERV_API_URL
     }
     return render(request, 'editor.html', context)
 
+@csrf_exempt
 def track(request):
     filename = request.GET['filename']
     usAddr = request.GET['userAddress']
-
+    print(f'track -', filename, usAddr)
     response = {}
 
     try:
