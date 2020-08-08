@@ -1,461 +1,480 @@
 ﻿.main-panel {
-    margin: 80px auto 16px;
-    width: 600px;
+  margin: 80px 50vw 16px 0;
+  width: 50vw;
+  h3 {
+    text-align: center;
+  }
 }
 
 .portal-name {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .portal-descr {
-    display: inline-block;
-    line-height: 20px;
-    margin-bottom: 20px;
-    width: 600px;
+  display: inline-block;
+  line-height: 20px;
+  margin-bottom: 20px;
+  width: 600px;
 }
 
 label .checkbox {
-    margin: 0 5px 3px 0;
-    vertical-align: middle;
+  margin: 0 5px 3px 0;
+  vertical-align: middle;
 }
 
 .try-descr {
-    font-size: 16px;
-    white-space: nowrap;
+  font-size: 16px;
+  white-space: nowrap;
 }
 
 .try-editor-list {
-    list-style: none;
-    margin: 0 0 16px;
-    padding: 0;
+  list-style: none;
+  display: flex;
+  padding: 0;
 }
 
 .try-editor-list li {
-    float: left;
-    margin: 0 15px;
-    width: 100px;
+  flex: 0 1 30%;
+  margin: 0 20px;
 }
 
 .try-editor {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  div {
+    height: 6em;
     background-color: transparent;
     background-position: center 0;
     background-repeat: no-repeat;
-    display: block;
-    font-size: 14px;
-    font-weight: bold;
-    height: 45px;
-    padding-top: 100px;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.try-editor.document {
-    background-image: url("/static/dist/images/onlyoffice/file_docx.png");
-}
-
-.try-editor.spreadsheet {
+  }
+  .document {
+    background-image: url("/static/dist/images/users/new_doc.svg");
+  }
+  .spreadsheet {
     background-image: url("/static/dist/images/onlyoffice/file_xlsx.png");
-}
-
-.try-editor.presentation {
+  }
+  .presentation {
     background-image: url("/static/dist/images/onlyoffice/file_pptx.png");
+  }
+  .petition {
+    background-image: url("/static/dist/images/users/new_petition.svg");
+  }
+  .bill {
+    background-image: url("/static/dist/images/users/new_bill.svg");
+  }
+  .memorandum {
+    background-image: url("/static/dist/images/users/new_memorandum.svg");
+  }
+  .editor-text {
+    padding-top: 2em;
+  }
 }
 
 .create-sample {
-    display: inline-block;
-    margin-left: 75px;
+  display: inline-block;
+  margin-left: 75px;
 }
 
 .button,
 .button:visited,
 .button:hover,
 .button:active {
-    display: inline-block;
-    font-weight: normal;
-    text-align: center;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: pointer;
-    border-radius: 6px;
-    -moz-border-radius: 6px;
-    -webkit-border-radius: 6px;
-    touch-callout: none;
-    -o-touch-callout: none;
-    -moz-touch-callout: none;
-    -webkit-touch-callout: none;
-    user-select: none;
-    -o-user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    font-size: 12px;
-    line-height: 16px;
-    margin-right: 3px;
-    padding: 4px 12px;
+  display: inline-block;
+  font-weight: normal;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: 6px;
+  -moz-border-radius: 6px;
+  -webkit-border-radius: 6px;
+  touch-callout: none;
+  -o-touch-callout: none;
+  -moz-touch-callout: none;
+  -webkit-touch-callout: none;
+  user-select: none;
+  -o-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  font-size: 12px;
+  line-height: 16px;
+  margin-right: 3px;
+  padding: 4px 12px;
 
-    color: #fff;
+  color: #fff;
 
-    background: #3D96C6;
+  background: #3d96c6;
 
-    border-width: 1px;
-    border-style: solid;
-    border-color: #3D96C6;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #3d96c6;
 }
 
 .button.disable {
-    cursor: default;
-    background: #BADDEF;
-    border: 1px solid #BADDEF;
+  cursor: default;
+  background: #baddef;
+  border: 1px solid #baddef;
 }
 
 .button.gray {
-    background: #ebebeb;
-    border: 1px solid #D0D0D0;
-    color: #333;
+  background: #ebebeb;
+  border: 1px solid #d0d0d0;
+  color: #333;
 }
 
 .upload-panel {
-    border-right: 1px solid #D1D1D1;
-    float: left;
-    margin-right: 25px;
+  border-right: 1px solid #d1d1d1;
+  float: left;
+  margin-right: 25px;
+  div {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+  }
 }
 
 .file-upload {
-    background: url("/static/dist/images/onlyoffice/file_upload.png") no-repeat center 0 transparent;
-    cursor: pointer;
-    display: inline-block;
-    font-size: 14px;
-    font-weight: bold;
-    height: 45px;
-    margin: 0 40px 16px;
-    overflow: hidden;
-    padding-top: 100px;
-    position: relative;
-    text-align: center;
-    width: 100px;
+  background: url("/static/dist/images/users/upload_doc.svg") no-repeat center 0 transparent;
+  cursor: pointer;
+  display: inline-block;
+  height: 45px;
+  margin: 0 40px 16px;
+  overflow: hidden;
+  padding-top: 100px;
+  position: relative;
+  width: 100px;
 }
 
 .file-upload input {
-    cursor: pointer;
-    opacity: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    transform: translate(555px, 60px) scale(8);
+  cursor: pointer;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: translate(555px, 60px) scale(8);
 }
 
 .create-panel {
-    float: left;
+  display: block;
 }
 
 .upload-panel,
 .create-panel {
-    padding: 10px 0;
+  padding-top: 2em;
 }
 
 #mainProgress {
-    color: #979b9f;
-    display: none;
-    margin: 15px;
+  color: #979b9f;
+  display: none;
+  margin: 15px;
 }
 
 #mainProgress #embeddedView {
-    display: none;
+  display: none;
 }
 
 #mainProgress.embedded #embeddedView {
-    display: block;
+  display: block;
 }
 
 #mainProgress.embedded #uploadSteps {
-    display: none;
+  display: none;
 }
 
 .error-message {
-    background: url("/static/dist/images/onlyoffice/alert.png") no-repeat scroll 4px 10px #FFECE3;
-    color: #666668 !important;
-    display: none;
-    font-size: 13px;
-    font-weight: normal;
-    margin: 5px 0;
-    padding: 10px 10px 10px 30px;
-    vertical-align: middle;
+  background: url("/static/dist/images/onlyoffice/alert.png") no-repeat scroll
+    4px 10px #ffece3;
+  color: #666668 !important;
+  display: none;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 5px 0;
+  padding: 10px 10px 10px 30px;
+  vertical-align: middle;
 }
 
 #mainProgress .error-message a {
-    color: #666668;
+  color: #666668;
 }
 
 .step {
-    background-repeat: no-repeat;
-    background-position: left center;
-    background-color: transparent;
-    color: #979B9F;
-    font-size: 14px;
-    line-height: 30px;
-    padding-left: 25px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-color: transparent;
+  color: #979b9f;
+  font-size: 14px;
+  line-height: 30px;
+  padding-left: 25px;
 }
 
 .current {
-    background-image: url("/static/dist/images/onlyoffice/loader16.gif");
-    color: #333;
+  background-image: url("/static/dist/images/onlyoffice/loader16.gif");
+  color: #333;
 }
 
 .done {
-    background-image: url("/static/dist/images/onlyoffice/done.png");
-    color: #333;
+  background-image: url("/static/dist/images/onlyoffice/done.png");
+  color: #333;
 }
 
 .error {
-    background-image: url("/static/dist/images/onlyoffice/alert.png");
+  background-image: url("/static/dist/images/onlyoffice/alert.png");
 }
 
 .step-descr {
-    display: block;
-    margin-left: 45px;
+  display: block;
+  margin-left: 45px;
 }
 
 #mainProgress .step-descr a {
-    color: #979B9F;
+  color: #979b9f;
 }
 
 .progress-descr {
-    color: #333;
+  color: #333;
 }
 
 #loadScripts {
-    display: none;
+  display: none;
 }
 
 #iframeScripts {
-    position: absolute;
-    visibility: hidden;
+  position: absolute;
+  visibility: hidden;
 }
 
-
-
 .help-block span {
-    font-size: 16px;
-    line-height: 26px;
+  font-size: 16px;
+  line-height: 26px;
 }
 
 .stored-list {
-    border-top: 1px solid #D1D1D1;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  border-top: 1px solid #d1d1d1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .stored-list li {
-    border-bottom: 1px solid #D1D1D1;
-    line-height: 28px;
-    padding: 0 8px;
+  border-bottom: 1px solid #d1d1d1;
+  line-height: 28px;
+  padding: 0 8px;
 }
 
 .stored-edit {
-    background-color: transparent;
-    background-position: left center;
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 24px;
-    max-width: 200px;
-    margin-bottom: -6px;
-    overflow: hidden;
-    padding: 8px 0 1px 34px;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+  background-color: transparent;
+  background-position: left center;
+  background-repeat: no-repeat;
+  display: inline-block;
+  height: 24px;
+  max-width: 200px;
+  margin-bottom: -6px;
+  overflow: hidden;
+  padding: 8px 0 1px 34px;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .stored-edit.text {
-    background-image: url("/static/dist/images/onlyoffice/icon_docx.png");
+  background-image: url("/static/dist/images/onlyoffice/icon_docx.png");
 }
 
 .stored-edit.spreadsheet {
-    background-image: url("/static/dist/images/onlyoffice/icon_xlsx.png");
+  background-image: url("/static/dist/images/onlyoffice/icon_xlsx.png");
 }
 
 .stored-edit.presentation {
-    background-image: url("/static/dist/images/onlyoffice/icon_pptx.png");
+  background-image: url("/static/dist/images/onlyoffice/icon_pptx.png");
 }
 
 .stored-edit span {
-    font-size: 18px;
-    line-height: 12px;
-    vertical-align: top;
+  font-size: 18px;
+  line-height: 12px;
+  padding-right: 1em;
+  vertical-align: top;
 }
 
 .stored-edit:hover span {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .stored-download {
-    color: #787878;
-    float: right;
-    text-decoration: none;
+  color: #787878;
+  float: right;
+  text-decoration: none;
 }
 
 .stored-download:hover {
-    color: #787878;
-    text-decoration: underline;
+  color: #787878;
+  text-decoration: underline;
 }
 
 .blockTitle {
-    background-color: #E2E2E2 !important;
-    border: none !important;
-    border-radius: 0 !important;
-    -moz-border-radius: 0 !important;
-    -webkit-border-radius: 0 !important;
-    color: #333 !important;
-    font-size: 16px !important;
-    font-weight: normal !important;
-    padding: 15px 25px !important;
+  background-color: #e2e2e2 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  -moz-border-radius: 0 !important;
+  -webkit-border-radius: 0 !important;
+  color: #333 !important;
+  font-size: 16px !important;
+  font-weight: normal !important;
+  padding: 15px 25px !important;
 }
 
 .dialog-close {
-    background: url("/static/dist/images/onlyoffice/close.png") no-repeat scroll left top #E2E2E2;
-    cursor: pointer;
-    float: right;
-    font-size: 1px;
-    height: 12px;
-    line-height: 1px;
-    margin-top: 4px;
-    width: 12px;
+  background: url("/static/dist/images/onlyoffice/close.png") no-repeat scroll
+    left top #e2e2e2;
+  cursor: pointer;
+  float: right;
+  font-size: 1px;
+  height: 12px;
+  line-height: 1px;
+  margin-top: 4px;
+  width: 12px;
 }
 
 .blockPage {
-    border: none !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    padding: 0 !important;
+  border: none !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  padding: 0 !important;
+  background-color: white;
 }
 
 .clearFix:after {
-    content: ".";
-    display: block;
-    height: 0;
-    clear: both;
-    visibility: hidden;
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
 }
 
 .td100 {
-    width: 100%;
+  width: 100%;
 }
 
 .block-lang {
-    padding-right: 10px;
-    padding-top: 9px;
+  padding-right: 10px;
+  padding-top: 9px;
 }
 
 /*Icon table*/
 #tableRow {
-    vertical-align: top;
+  vertical-align: top;
 }
 
 .tableRow {
-    background: transparent;
+  background: transparent;
 
-    -moz-transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
 .tableRow:hover {
-    background-color: #ebebeb;
+  background-color: #ebebeb;
 }
 
 .tableHeader {
-    background: transparent;
-    color: #333;
-    cursor: default;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    height: 40px;
-    -khtml-user-select: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+  background: transparent;
+  color: #333;
+  cursor: default;
+  font-size: 1.2em;
+  height: 40px;
+  -khtml-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
 .tableHeaderCell {
-    padding: 2px 1px 2px 5px;
-    text-align: center;
+  padding: 2px 1px 2px 5px;
+  text-align: center;
 }
 
 .tableHeaderCellFileName {
-    text-align: left;
+  text-align: left;
+  padding-left: 2em;
 }
 
 .contentCells {
-    padding: 4px 1px 4px 5px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    border-bottom: 1px solid #e5e5e5;
-    white-space: nowrap;
-    -khtml-user-select: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
+  padding: 4px 1px 4px 5px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  border-bottom: 1px solid #e5e5e5;
+  white-space: nowrap;
+  -khtml-user-select: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
 }
 
-.contentCells>a {
-    text-decoration: none;
+.contentCells > a {
+  text-decoration: none;
 }
 
 .contentCells-shift {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
 .contentCells-icon {
-    width: 6%;
+  width: 6%;
 }
 
 .contentCellsSmall {
-    padding: 5px 1px 5px 6px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 13px;
-    border-bottom: 1px solid #e5e5e5;
-    white-space: nowrap;
-    text-align: center;
+  padding: 5px 1px 5px 6px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 13px;
+  border-bottom: 1px solid #e5e5e5;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .primaryRow {
-    background-color: #e9e9e9;
+  background-color: #e9e9e9;
 }
 
 .secondaryRow {
-    background-color: #F9F9F9;
+  background-color: #f9f9f9;
 }
 
 .select-user {
-    margin-left: 15px;
+  margin-left: 15px;
 }
 
 .user-block-table {
-    height: 100%;
-    width: 100%;
+  height: 100%;
+  width: 100%;
 }
 
 .user-block-table td {
-    background-color: #F4F4F4;
-    border-bottom: 1px solid white;
-    padding: 12px 0;
+  background-color: #f4f4f4;
+  border-bottom: 1px solid white;
+  padding: 12px 0;
 }
 
 #user,
 #language {
-    width: 130px;
+  width: 130px;
 }
 
 .icon-download {
-    margin-bottom: -5px;
+  width: 36px;
+  margin-bottom: -5px;
 }
 
 .icon-delete {
-    cursor: pointer;
-    margin-bottom: -6px;
+  cursor: pointer;
+  width: 36px;
+  margin-bottom: -6px;
 }

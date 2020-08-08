@@ -100,7 +100,6 @@ def convert(request):
 
 def createNew(request):
     response = {}
-   
     try:
         fileType = request.GET['fileType']
         sample = request.GET.get('sample', False)
@@ -110,7 +109,6 @@ def createNew(request):
 
     except Exception as e:
         response.setdefault('error', f'details - {e}')
-
     return HttpResponse(json.dumps(response), content_type='application/json')
 
 @csrf_exempt
@@ -193,7 +191,7 @@ def edit(request):
         edConfig['token'] = jwtManager.encode(edConfig)
 
     hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
-
+    print(f'edConfig -', edConfig)
     context = {
         'cfg': json.dumps(edConfig),
         'history': json.dumps(hist['history']) if 'history' in hist else None,
@@ -207,7 +205,7 @@ def edit(request):
 def track(request):
     filename = request.GET['filename']
     usAddr = request.GET['userAddress']
-    print(f'track -', filename, usAddr)
+    print(f'track -',request, filename)
     response = {}
 
     try:

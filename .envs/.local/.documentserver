@@ -19,7 +19,7 @@ SSL_VERIFY_CLIENT=false
 
 # The database type. Supported values are postgres, mariadb or mysql.
 DB_TYPE=postgres
-DB_HOST=onlyoffice-postgresql
+DB_HOST=ds-postgresql
 DB_PORT=5432
 DB_NAME=onlyoffice
 DB_USER=onlyoffice
@@ -31,12 +31,12 @@ POSTGRES_USER=onlyoffice
 POSTGRES_HOST_AUTH_METHOD=trust
 
 #: The AMQP URI to connect to message broker server.
-AMQP_URI=amqp://guest:guest@onlyoffice-rabbitmq
+AMQP_URI=amqp://guest:guest@ds-rabbitmq
 AMQP_TYPE=rabbitmq
 
 # The IP address or the name of the host where the Redis server is running.
-# REDIS_SERVER_HOST=
-# REDIS_SERVER_PORT=
+REDIS_SERVER_HOST=ds-redis
+REDIS_SERVER_PORT=6379
 
 # Defines the number of nginx worker processes.
 # NGINX_WORKER_PROCESSES=

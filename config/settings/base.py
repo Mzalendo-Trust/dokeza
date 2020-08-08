@@ -10,6 +10,7 @@ import doc_config
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # dokeza_2_0/
 APPS_DIR = ROOT_DIR / "dokeza_2_0"
+
 env = environ.Env()
 
 READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
@@ -162,8 +163,7 @@ STATIC_ROOT = str(ROOT_DIR / "staticfiles")
 STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = [
-    str(APPS_DIR / "static"),
-    str(ROOT_DIR / "app_data")
+    str(APPS_DIR / "static")
     ]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
@@ -174,7 +174,7 @@ STATICFILES_FINDERS = [
 # MEDIA
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = str(APPS_DIR / "media")
+MEDIA_ROOT = ROOT_DIR / "app_data"
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = "/media/"
 

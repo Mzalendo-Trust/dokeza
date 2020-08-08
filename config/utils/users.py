@@ -23,30 +23,17 @@
  SOFTWARE.
 
 """
-
+from django.contrib.auth import get_user_model
+from django.contrib.auth.models import AnonymousUser
 from urllib.parse import unquote
 
-USERS = [
-    {
-        'uid': 'uid-1',
-        'uname': 'John Smith'
-    },
-    {
-        'uid': 'uid-2',
-        'uname': 'Mark Pottato'
-    },
-    {
-        'uid': 'uid-3',
-        'uname': 'Hamish Mitchell'
-    }
-]
-
-DEFAULT_USER = USERS[0]
+DEFAULT_USER = AnonymousUser()
 
 def getUserFromReq(req):
-    uid = req.COOKIES.get('uid')
-    uname = req.COOKIES.get('uname')
-
+    current_user = req.user
+    uid = f'{current_user.id}'
+    uname = f'{current_user.first_name} {current_user.last_name}'
+    
     if (not uid) | (not uname):
         return DEFAULT_USER
     else:

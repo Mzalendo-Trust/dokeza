@@ -1,57 +1,69 @@
 {% extends "_layouts/base_user.html" %}
 {% load i18n static %}
 {% load crispy_forms_tags %}
-{% block title %}{{ user.username }}{% endblock %}
+{% block title %} - {{ user.first_name }} {{ user.last_name }}'s documents {% endblock %}
   
 {% block content %}
 <div class="container user__entry">
   <div class="user__page">
     <div class="main-panel">
       <h3>{{ user.first_name }} {{ user.last_name }}'s Documents</h3>
-      <br />
-      <br />
       <div class="help-block">
-        <span>Upload your file or create new file</span>
-        <br />
-        <br />
         <div class="clearFix">
           <div class="upload-panel clearFix">
             <form action="">{% csrf_token %}
-              <a class="file-upload">Upload
-                <br />
-                File
-                <input type="file" id="fileupload" name="uploadedFile" data-url="upload" />
-              </a>
+               <input class="file-upload" type="file" id="fileupload" name="uploadedFile" data-url="upload" />
             </form>
+            <div>Upload a<br />
+              File
+            </div>
           </div>
           <div class="create-panel clearFix">
             <ul class="try-editor-list clearFix">
               <li>
-                <a class="try-editor document reload-page" target="_blank" data-type="text">Create
+                <a class="try-editor reload-page" target="_blank">
+                  <div class="document" data-type="text"></div>
+                  <div class="editor-text" >Create a text<br />
+                    document
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="try-editor reload-page" target="_blank" >
+                  <div class="memorandum" data-type="memorandum"></div>
+                  <div class="editor-text">Create a
+                                    <br />
+                                    Memorandum</div></a>
+              </li>
+              <li>
+                <a class="try-editor reload-page" target="_blank">
+                  <div class="petition" data-type="petition"></div>
+                  <div class="editor-text">Create a
+                                    <br />
+                                    Petition</div></a>
+              </li>
+              {% if request.user.profile.is_member_of_parliament  %}
+              <li>
+                <a class="try-editor reload-page" target="_blank">
+                  <div class="bill" data-type="bill">bill</div>
+                  Create a
                   <br />
                   Bill</a>
               </li>
               <li>
-                <a class="try-editor spreadsheet reload-page" target="_blank" data-type="spreadsheet">Create
+                <a class="try-editor reload-page" target="_blank" data-type="spreadsheet">
+                  <div class="spreadsheet"></div>
+                  Create a
                   <br />
-                  Memorundum</a>
+                  spreadsheet</a>
               </li>
-              <li>
-                <a class="try-editor presentation reload-page" target="_blank" data-type="presentation">Create
-                  <br />
-                  Petition</a>
-              </li>
+              {% endif %}
             </ul>
           </div>
         </div>
       </div>
-      <br />
-      <br />
       {% if files %}
       <div class="help-block">
-        <span>Your documents</span>
-        <br />
-        <br />
         <div class="stored-list">
           <table width="100%" cellspacing="0" cellpadding="0">
             <thead>

@@ -95,7 +95,7 @@ def getCorrectName(filename, req):
 def getFileUri(filename, req):
     host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
     curAdr = req.META['REMOTE_ADDR']
-    return f'{host}{base.STATIC_URL}{curAdr}/{filename}'
+    return f'{host}{base.MEDIA_URL}{curAdr}/{filename}'
 
 def getCallbackUrl(filename, req):
     host = doc_config.EXAMPLE_DOMAIN
@@ -156,8 +156,16 @@ def createSample(fileType, sample, req):
     ext = getInternalExtension(fileType)
     if not sample:
         sample = 'false'
-
-    sampleName = 'sample' if sample == 'true' else 'new'
+    
+    if sample == 'true':
+        sampleName = 'sample'
+    elif fileType == 'memorandum':
+        sampleName = 'memorandum'
+    elif fileType == 'petition':
+        sampleName = 'petition'
+    else:
+        sampleName = 'new'
+    
 
     filename = getCorrectName(f'{sampleName}{ext}', req)
     path = getStoragePath(filename, req)

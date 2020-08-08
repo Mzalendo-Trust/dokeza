@@ -105,12 +105,12 @@ def readFile(path):
 def getPrevUri(filename, ver, ext, req):
     host = config.EXAMPLE_DOMAIN.rstrip('/')
     curAdr = req.META['REMOTE_ADDR']
-    return f'{host}{settings.STATIC_URL}{curAdr}/{filename}-hist/{ver}/prev{ext}'
+    return f'{host}{base.MEDIA_URL}{curAdr}/{filename}-hist/{ver}/prev{ext}'
 
 def getZipUri(filename, ver, req):
     host = config.EXAMPLE_DOMAIN.rstrip('/')
     curAdr = req.META['REMOTE_ADDR']
-    return f'{host}{settings.STATIC_URL}{curAdr}/{filename}-hist/{ver}/diff.zip'
+    return f'{host}{base.MEDIA_URL}{curAdr}/{filename}-hist/{ver}/diff.zip'
 
 def getMeta(storagePath):
     histDir = getHistoryDir(storagePath)
