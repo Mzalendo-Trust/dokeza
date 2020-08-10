@@ -5579,6 +5579,38 @@
 		"oAP": "/annotator/views.py",
 		"oF": 0
 		},
+	"/app_data/172.19.0.1/memorandum.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.19.0.1/memorandum.docx",
+		"oF": 0
+		},
+	"/app_data/172.19.0.1/memorandum.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.19.0.1/memorandum.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/app_data/172.19.0.1/Mental Health (Amendment) Bill, 2018.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/app_data/172.19.0.1/Mental Health (Amendment) Bill, 2018.pdf",
+		"oF": 0
+		},
+	"/app_data/172.19.0.1/Mental Health (Amendment) Bill, 2018.pdf-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/app_data/172.19.0.1/Mental Health (Amendment) Bill, 2018.pdf-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/app_data/172.19.0.1/new.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -5627,50 +5659,18 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/app_data/172.19.0.1/sample-bill.docx": {
+	"/app_data/172.19.0.1/petition.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/sample-bill.docx",
+		"oAP": "/app_data/172.19.0.1/petition.docx",
 		"oF": 0
 		},
-	"/app_data/172.19.0.1/sample-bill.docx-hist/createdInfo.json": {
+	"/app_data/172.19.0.1/petition.docx-hist/createdInfo.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/sample-bill.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/app_data/172.19.0.1/sample-bill.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/sample-bill.pdf",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/sample-bill.pdf-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/sample-bill.pdf-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/app_data/172.19.0.1/sample.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/sample.docx",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/sample.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/sample.docx-hist/createdInfo-min.json",
+		"oAP": "/app_data/172.19.0.1/petition.docx-hist/createdInfo-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -25417,6 +25417,66 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/dokeza_2_0/static/dist/images/users/new_bill.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_bill.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_doc.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_doc.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_memorandum.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_memorandum.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_petition.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_petition.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_spreadsheet.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_spreadsheet.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/upload_doc.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/upload_doc.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/dokeza_2_0/static/dist/js/dokeza-annotator.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -29533,6 +29593,22 @@
 		"oAP": "/requirements/production.txt",
 		"oF": 0
 		},
+	"/samples/bill.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/bill.pdf",
+		"oF": 0
+		},
+	"/samples/memorandum.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/memorandum.docx",
+		"oF": 0
+		},
 	"/samples/new.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29557,20 +29633,20 @@
 		"oAP": "/samples/new.xlsx",
 		"oF": 0
 		},
+	"/samples/petition.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/petition.docx",
+		"oF": 0
+		},
 	"/samples/sample-bill.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/samples/sample-bill.docx",
-		"oF": 0
-		},
-	"/samples/sample-bill.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/sample-bill.pdf",
 		"oF": 0
 		},
 	"/samples/sample.docx": {
