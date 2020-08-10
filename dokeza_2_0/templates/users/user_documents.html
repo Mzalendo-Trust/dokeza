@@ -2,186 +2,182 @@
 {% load i18n static %}
 {% load crispy_forms_tags %}
 {% block title %} - {{ user.first_name }} {{ user.last_name }}'s documents {% endblock %}
+  
 {% block content %}
-  <div class="container user__entry">
-    <div class="user__page">
-      <div class="main-panel">
-        <h3>{{ user.first_name }} {{ user.last_name }}'s Documents</h3>
-        <div class="help-block">
-          <div class="clearFix">
-            <div class="upload-panel clearFix">
-              <form action="">{% csrf_token %}
-                <input class="file-upload" type="file" id="fileupload" name="uploadedFile" data-url="upload" />
-              </form>
-              <div>Upload a<br />
-                File
-              </div>
+<div class="container user__entry">
+  <div class="user__page">
+    <div class="main-panel">
+      <h3>{{ user.first_name }} {{ user.last_name }}'s Documents</h3>
+      <div class="help-block">
+        <div class="clearFix">
+          <div class="upload-panel clearFix">
+            <form action="">{% csrf_token %}
+               <input class="file-upload" type="file" id="fileupload" name="uploadedFile" data-url="upload" />
+            </form>
+            <div>Upload a<br />
+              File
             </div>
-            <div class="create-panel clearFix">
-              <ul class="try-editor-list clearFix">
-                <li>
-                  <a class="try-editor reload-page" target="_blank">
-                    <div class="document" data-type="text"></div>
-                    <div class="editor-text" >Create a text<br />
-                      document
-                    </div>
-                  </a>
-                </li>
-                <li>
-                  <a class="try-editor reload-page" target="_blank" >
-                    <div class="memorandum" data-type="memorandum"></div>
-                    <div class="editor-text">Create a
-                      <br />
-                    Memorandum</div></a>
-                  </li>
-                  <li>
-                    <a class="try-editor reload-page" target="_blank">
-                      <div class="petition" data-type="petition"></div>
-                      <div class="editor-text">
-                        Create a
-                        <br />
-                      Petition</div>
-                    </a>
-                  </li>
-                  {% if request.user.profile.is_member_of_parliament  %}
-                    <li>
-                      <a class="try-editor reload-page" target="_blank">
-                        <div class="bill" data-type="bill"></div>
-                        <div class="editor-text">
-                          Create a
-                          <br />
-                        Bill</div>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="try-editor reload-page" target="_blank">
-                        <div class="spreadsheet" data-type="spreadsheet"></div>
-                        <div class="editor-text">
-                          Create a
-                          <br />
-                        spreadsheet</div></a>
-                      </li>
-                    {% endif %}
-                  </ul>
-                </div>
-              </div>
-            </div>
-            {% if files %}
-              <div class="help-block">
-                <div class="stored-list">
-                  <table width="100%" cellspacing="0" cellpadding="0">
-                    <thead>
-                      <tr class="tableHeader">
-                        <td class="tableHeaderCell tableHeaderCellFileName">Filename</td>
-                        <td colspan="6" class="tableHeaderCell contentCells-shift">Editors</td>
-                        <td colspan="3" class="tableHeaderCell">Viewers</td>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {% for file in files %}
-                        <tr class="tableRow" title="{{ file.title }}">
-                          <td class="contentCells">
-                            <a class="stored-edit {{ file.type }}" href="edit?filename={{ file.title }}" target="_blank">
-                              <span title="{{ file.title }}">{{ file.title }}</span>
-                            </a>
-                            <a href="{{ file.url }}">
-                              <img class="icon-download" src="{% static 'images/download-24.png' %}" alt="Download" title="Download" />
-                            </a>
-                            <a class="delete-file" data-filename="{{ file.title }}">
-                              <img class="icon-delete" src="{% static 'images/delete-24.png' %}" alt="Delete" title="Delete" />
-                            </a>
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            <a href="edit?filename={{ file.title }}&type=desktop&mode=edit" target="_blank">
-                              <img src="{% static 'images/desktop-24.png' %}" alt="Open in editor for full size screens" title="Open in editor for full size screens" />
-                            </a>
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            <a href="edit?filename={{ file.title }}&type=mobile&mode=edit" target="_blank">
-                              <img src="{% static 'images/mobile-24.png' %}" alt="Open in editor for mobile devices" title="Open in editor for mobile devices" />
-                            </a>
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            {% if file.type == 'text' %}
-                              <a href="edit?filename={{ file.title }}&type=desktop&mode=review" target="_blank">
-                                <img src="{% static 'images/review-24.png' %}" alt="Open in editor for review" title="Open in editor for review" />
-                              </a>
-                              {% elif file.type == 'spreadsheet' %}
-                              <a href="edit?filename={{ file.title }}&type=desktop&mode=filter" target="_blank">
-                                <img src="{% static 'images/filter-24.png' %}" alt="Open in editor without access to change the filter" title="Open in editor without access to change the filter" />
-                              </a>
-                            {% endif %}
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            <a href="edit?filename={{ file.title }}&type=desktop&mode=comment" target="_blank">
-                              <img src="{% static 'images/comment-24.png' %}" alt="Open in editor for comment" title="Open in editor for comment" />
-                            </a>
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            {% if file.type == 'text' %}
-                              <a href="edit?filename={{ file.title }}&type=desktop&mode=fillForms" target="_blank">
-                                <img src="{% static 'images/fill-forms-24.png' %}" alt="Open in editor for filling in forms" title="Open in editor for filling in forms" />
-                              </a>
-                            {% endif %}
-                          </td>
-                          <td class="contentCells contentCells-shift contentCells-icon">
-                            {% if file.type == 'text' %}
-                              <a href="edit?filename={{ file.title }}&type=desktop&mode=blockcontent" target="_blank">
-                                <img src="{% static 'images/block-content-24.png' %}" alt="Open in editor without content control modification" title="Open in editor without content control modification" />
-                              </a>
-                            {% endif %}
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            <a href="edit?filename={{ file.title }}&type=desktop&mode=view" target="_blank">
-                              <img src="{% static 'images/desktop-24.png' %}" alt="Open in viewer for full size screens" title="Open in viewer for full size screens" />
-                            </a>
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            <a href="edit?filename={{ file.title }}&type=mobile&mode=view" target="_blank">
-                              <img src="{% static 'images/mobile-24.png' %}" alt="Open in viewer for mobile devices" title="Open in viewer for mobile devices" />
-                            </a>
-                          </td>
-                          <td class="contentCells contentCells-icon">
-                            <a href="edit?filename={{ file.title }}&type=embedded&mode=embedded" target="_blank">
-                              <img src="{% static 'images/embeded-24.png' %}" alt="Open in embedded mode" title="Open in embedded mode" />
-                            </a>
-                          </td>
-                        </tr>
-                      {% endfor %}
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            {% endif %}
           </div>
-          <div id="mainProgress">
-            <div id="uploadSteps">
-              <span id="step1" class="step">1. Loading the file</span>
-              <span class="step-descr">The file loading process will take some time depending on the file size, presence or absence of additional elements in it (macros, etc.) and the connection speed.</span>
-              <br />
-              <span id="step2" class="step">2. File conversion</span>
-              <span class="step-descr">The file is being converted into Office Open XML format for the document faster viewing and editing.</span>
-              <br />
-              <span id="step3" class="step">3. Loading editor scripts</span>
-              <span class="step-descr">The scripts for the editor are loaded only once and are will be cached on your computer in future. It might take some time depending on the connection speed.</span>
-              <input type="hidden" name="hiddenFileName" id="hiddenFileName" />
-              <br />
-              <br />
-              <span class="progress-descr">Please note, that the speed of all operations greatly depends on the server and the client locations. In case they differ or are located in differernt countries/continents, there might be lack of speed and greater wait time. The best results are achieved when the server and client computers are located in one and the same place (city).</span>
-              <br />
-              <br />
-              <div class="error-message">
-                <span></span>
-                <br />
-                Please select another file and try again. If you have questions please <a href="mailto:sales@onlyoffice.com">contact us.</a>
-              </div>
-            </div>
-            <br />
-            <div id="beginEmbedded" class="button disable">Embedded view</div>
-            <div id="beginView" class="button disable">View</div>
-            <div id="beginEdit" class="button disable">Edit</div>
-            <div id="cancelEdit" class="button gray">Cancel</div>
+          <div class="create-panel clearFix">
+            <ul class="try-editor-list clearFix">
+              <li>
+                <a class="try-editor reload-page" target="_blank">
+                  <div class="document" data-type="text"></div>
+                  <div class="editor-text" >Create a text<br />
+                    document
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="try-editor reload-page" target="_blank" >
+                  <div class="memorandum" data-type="memorandum"></div>
+                  <div class="editor-text">Create a
+                                    <br />
+                                    Memorandum</div></a>
+              </li>
+              <li>
+                <a class="try-editor reload-page" target="_blank">
+                  <div class="petition" data-type="petition"></div>
+                  <div class="editor-text">Create a
+                                    <br />
+                                    Petition</div></a>
+              </li>
+              {% if request.user.profile.is_member_of_parliament  %}
+              <li>
+                <a class="try-editor reload-page" target="_blank">
+                  <div class="bill" data-type="bill">bill</div>
+                  Create a
+                  <br />
+                  Bill</a>
+              </li>
+              <li>
+                <a class="try-editor reload-page" target="_blank" data-type="spreadsheet">
+                  <div class="spreadsheet"></div>
+                  Create a
+                  <br />
+                  spreadsheet</a>
+              </li>
+              {% endif %}
+            </ul>
           </div>
         </div>
       </div>
-    {% endblock %}
+      {% if files %}
+      <div class="help-block">
+        <div class="stored-list">
+          <table width="100%" cellspacing="0" cellpadding="0">
+            <thead>
+              <tr class="tableHeader">
+                <td class="tableHeaderCell tableHeaderCellFileName">Filename</td>
+                <td colspan="6" class="tableHeaderCell contentCells-shift">Editors</td>
+                <td colspan="3" class="tableHeaderCell">Viewers</td>
+              </tr>
+            </thead>
+            <tbody>
+              {% for file in files %}
+              <tr class="tableRow" title="{{ file.title }}">
+                <td class="contentCells">
+                  <a class="stored-edit {{ file.type }}" href="edit?filename={{ file.title }}" target="_blank">
+                    <span title="{{ file.title }}">{{ file.title }}</span>
+                  </a>
+                  <a href="{{ file.url }}">
+                    <img class="icon-download" src="{% static 'images/download-24.png' %}" alt="Download" title="Download" />
+                  </a>
+                  <a class="delete-file" data-filename="{{ file.title }}">
+                    <img class="icon-delete" src="{% static 'images/delete-24.png' %}" alt="Delete" title="Delete" />
+                  </a>
+                </td>
+                <td class="contentCells contentCells-icon">
+                  <a href="edit?filename={{ file.title }}&type=desktop&mode=edit" target="_blank">
+                    <img src="{% static 'images/desktop-24.png' %}" alt="Open in editor for full size screens" title="Open in editor for full size screens" />
+                  </a>
+                </td>
+                <td class="contentCells contentCells-icon">
+                  <a href="edit?filename={{ file.title }}&type=mobile&mode=edit" target="_blank">
+                    <img src="{% static 'images/mobile-24.png' %}" alt="Open in editor for mobile devices" title="Open in editor for mobile devices" />
+                  </a>
+                </td>
+                <td class="contentCells contentCells-icon">
+                  {% if file.type == 'text' %}
+                  <a href="edit?filename={{ file.title }}&type=desktop&mode=review" target="_blank">
+                    <img src="{% static 'images/review-24.png' %}" alt="Open in editor for review" title="Open in editor for review" />
+                  </a>
+                  {% elif file.type == 'spreadsheet' %}
+                  <a href="edit?filename={{ file.title }}&type=desktop&mode=filter" target="_blank">
+                    <img src="{% static 'images/filter-24.png' %}" alt="Open in editor without access to change the filter" title="Open in editor without access to change the filter" />
+                  </a>
+                  {% endif %}
+                </td>
+                <td class="contentCells contentCells-icon">
+                  <a href="edit?filename={{ file.title }}&type=desktop&mode=comment" target="_blank">
+                    <img src="{% static 'images/comment-24.png' %}" alt="Open in editor for comment" title="Open in editor for comment" />
+                  </a>
+                </td>
+                <td class="contentCells contentCells-icon">
+                  {% if file.type == 'text' %}
+                  <a href="edit?filename={{ file.title }}&type=desktop&mode=fillForms" target="_blank">
+                    <img src="{% static 'images/fill-forms-24.png' %}" alt="Open in editor for filling in forms" title="Open in editor for filling in forms" />
+                  </a>
+                  {% endif %}
+                </td>
+                <td class="contentCells contentCells-shift contentCells-icon">
+                  {% if file.type == 'text' %}
+                  <a href="edit?filename={{ file.title }}&type=desktop&mode=blockcontent" target="_blank">
+                    <img src="{% static 'images/block-content-24.png' %}" alt="Open in editor without content control modification" title="Open in editor without content control modification" />
+                  </a>
+                  {% endif %}
+                </td>
+                <td class="contentCells contentCells-icon">
+                  <a href="edit?filename={{ file.title }}&type=desktop&mode=view" target="_blank">
+                    <img src="{% static 'images/desktop-24.png' %}" alt="Open in viewer for full size screens" title="Open in viewer for full size screens" />
+                  </a>
+                </td>
+                <td class="contentCells contentCells-icon">
+                  <a href="edit?filename={{ file.title }}&type=mobile&mode=view" target="_blank">
+                    <img src="{% static 'images/mobile-24.png' %}" alt="Open in viewer for mobile devices" title="Open in viewer for mobile devices" />
+                  </a>
+                </td>
+                <td class="contentCells contentCells-icon">
+                  <a href="edit?filename={{ file.title }}&type=embedded&mode=embedded" target="_blank">
+                    <img src="{% static 'images/embeded-24.png' %}" alt="Open in embedded mode" title="Open in embedded mode" />
+                  </a>
+                </td>
+              </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+    <div id="mainProgress">
+      <div id="uploadSteps">
+        <span id="step1" class="step">1. Loading the file</span>
+        <span class="step-descr">The file loading process will take some time depending on the file size, presence or absence of additional elements in it (macros, etc.) and the connection speed.</span>
+        <br />
+        <span id="step2" class="step">2. File conversion</span>
+        <span class="step-descr">The file is being converted into Office Open XML format for the document faster viewing and editing.</span>
+        <br />
+        <span id="step3" class="step">3. Loading editor scripts</span>
+        <span class="step-descr">The scripts for the editor are loaded only once and are will be cached on your computer in future. It might take some time depending on the connection speed.</span>
+        <input type="hidden" name="hiddenFileName" id="hiddenFileName" />
+        <br />
+        <br />
+        <span class="progress-descr">Please note, that the speed of all operations greatly depends on the server and the client locations. In case they differ or are located in differernt countries/continents, there might be lack of speed and greater wait time. The best results are achieved when the server and client computers are located in one and the same place (city).</span>
+        <br />
+        <br />
+        <div class="error-message">
+          <span></span>
+          <br />
+          Please select another file and try again. If you have questions please <a href="mailto:sales@onlyoffice.com">contact us.</a>
+        </div>
+      </div>
+      <br />
+      <div id="beginEmbedded" class="button disable">Embedded view</div>
+      <div id="beginView" class="button disable">View</div>
+      <div id="beginEdit" class="button disable">Edit</div>
+      <div id="cancelEdit" class="button gray">Cancel</div>
+    </div>
+  </div>
+</div>
+{% endblock %}
