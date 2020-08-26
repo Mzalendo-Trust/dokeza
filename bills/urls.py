@@ -8,7 +8,8 @@ from .views import (
     OpenMemoBillListView,
     CommitteeBillListView,
     PlenaryBillListView,
-    RegulationListView
+    RegulationListView,
+    edit, track
 )
 
 app_name="bills"
@@ -21,5 +22,6 @@ urlpatterns = [
     path('committee/', CommitteeBillListView.as_view(), name='committee'),
     path('plenary/', PlenaryBillListView.as_view(), name='plenary'),
     path('regulations/', RegulationListView.as_view(), name='regulations'),
+    path("edit/", edit, name="bill-comment"),
     path('<slug>/', BillDisplayView.as_view(), name='detail'),
 ]

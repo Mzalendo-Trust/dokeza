@@ -1,25 +1,23 @@
 from django import forms
-# from django.urls import reverse
-# from crispy_forms.bootstrap import Field, InlineRadios, TabHolder, Tab
-# from crispy_forms.helper import FormHelper
-from ckeditor.widgets import CKEditorWidget
+from django.contrib.admin.widgets import AdminDateWidget
+
 
 from .models import Bill
 
 
 class BillForm(forms.ModelForm):
-    """
-    This form adds the CKEditor widget into the Admin form.
-    """
-
+   
     TARGET_HOUSE = (
         (1, 'National Assembly'),
         (2, 'Senate'),
     )
     title = forms.CharField()
+    slug = forms.CharField()
     bill_from = forms.ChoiceField(label='Target House', choices=TARGET_HOUSE)
-    body = forms.CharField(widget=CKEditorWidget(config_name='front_ckeditor'))
-    updated_date = forms.DateField(widget=forms.SelectDateWidget)
+    first_reading = forms.DateField(widget=AdminDateWidget())
+    second_reading = forms.DateField(widget=AdminDateWidget())
+    third_reading = forms.DateField(widget=AdminDateWidget())
+    assented_date = forms.DateField(widget=AdminDateWidget())
 
     class Meta:
         model = Bill
@@ -27,7 +25,6 @@ class BillForm(forms.ModelForm):
             "owner",
             "title",
             "bill_from",
-            "body",
             "private",
             "tags",
         ]

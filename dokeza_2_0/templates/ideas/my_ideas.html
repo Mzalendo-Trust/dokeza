@@ -6,7 +6,7 @@
 {% endblock header %}
   <!-- My Ideas -->
   {% block content %}
-  <section class="dz-mainbar">
+  <section class="dz-mainbar col-8">
     <div class="row">
       {% for idea in my_ideas %}
       <div class="dz-ideas__card">
@@ -38,7 +38,7 @@
         </div>
       </div>
       {% empty %}
-        <p>You have not submitted any ideas yet.</p>
+        <p class="no-ideas">You have not submitted any ideas yet.</p>
       {% endfor %}
     </div>
   </section>

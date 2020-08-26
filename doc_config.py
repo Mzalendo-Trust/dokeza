@@ -1,10 +1,10 @@
 import os
 
 FILE_SIZE_MAX = 5242880
-STORAGE_PATH = 'app_data'
+STORAGE_PATH = 'media'
 
-DOC_SERV_VIEWED = [".pdf", ".djvu", ".xps"]
-DOC_SERV_EDITED = [".docx", ".xlsx", ".csv", ".pptx", ".txt"]
+DOC_SERV_VIEWED = [".djvu", ".xps"]
+DOC_SERV_EDITED = [".docx", ".xlsx", ".csv", ".pptx", ".txt", ".pdf"]
 DOC_SERV_CONVERT = [
     ".docm", ".doc", ".dotx", ".dotm", ".dot", ".odt",
     ".fodt", ".ott", ".xlsm", ".xls", ".xltx", ".xltm",

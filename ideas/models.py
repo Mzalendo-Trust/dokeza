@@ -6,6 +6,7 @@ The SubmittedIdea is the informal document that comes from the public and can be
 even formally, by a member of Parliament and is developed into a legislative bill.
 """
 
+
 from ckeditor.fields import RichTextField
 from django.contrib.contenttypes.models import ContentType
 from django.conf import settings

@@ -1,16 +1,23 @@
+import doc_config
+import json
+import os
+import re
+
+from datetime import datetime
 from django.contrib.contenttypes.models import ContentType
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect, HttpResponseForbidden
+from django.shortcuts import render, redirect
 from django.views import View
+from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_cookie
 from django.views.generic import ListView, DetailView, FormView, TemplateView
 from django.views.generic.detail import SingleObjectMixin
 from bs4 import BeautifulSoup
 
+from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
+
 # from dokeza_2_0.users.models import User, Profile
 from .models import Bill
-from annotator.models import Annotation
-from comments.forms import CommentForm, AnnotCommentForm
-from comments.models import Comment
 
 
 class BillListView(ListView):
@@ -128,12 +135,6 @@ class BillDetailView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super(BillDetailView, self).get_context_data(
             *args, **kwargs)
-        comments = self.object.comments
-
-        initial_data = {
-            "content_type": self.object.get_content_type,
-            "object_id": self.object.id,
-        }
 
         if self.object.bill_from == 1:
             house = 'assembly'
@@ -141,81 +142,14 @@ class BillDetailView(DetailView):
             house = 'senate'
 
         bill_slug = self.object.slug
-        bill_annotations = Annotation.objects.filter(uri__contains=bill_slug)
-        if self.request.user.is_authenticated:
-            my_annotations = bill_annotations.filter(user=self.request.user)
-        else:
-            my_annotations = []
-
-        initial_annot_data = {
-            # We should get the Annotation model. And from that
-            # we need to get the instance id for the annotation.
-            "content_type": ContentType.objects.get(app_label="annotator", model="annotation"),
-        }
-
-        content = self.object.body
-        soup = BeautifulSoup(content, 'html.parser')
-        anchors = soup.find_all(lambda tag: tag.name == "a" and len(tag.attrs) == 2)
-        toc = []
-        for anchor in anchors:
-            href = '<a href="#' + anchor.attrs['id'] + '">' + anchor.attrs['name'] + '</a>'
-            toc.append('<li>' + href + '</li>')
-
+        
+        # # content = self.object.body
+    
         context["page"] = 'bills'
         context["stingo"] = house
-        context["bill_annotations"] = bill_annotations
-        context['my_annotations'] = my_annotations
-        context["toc"] = toc
-        context["comment_form"] = CommentForm(initial=initial_data)
-        context["comment_annot_form"] = AnnotCommentForm(initial=initial_annot_data)
-        context["comments"] = comments
-
+        print(context)
         return context
-
-
-class BillCommentView(SingleObjectMixin, FormView):
-    """
-    This view embedes the Comment form below the bill details.
-    """
-    model = Bill
-    form_class = CommentForm
-    template_name = 'bills/bill_detail.html'
-
-    def post(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            return HttpResponseForbidden()
-        self.object = self.get_object()
-
-        form = CommentForm(request.POST or None)
-        if form.is_valid():
-            c_type = form.cleaned_data.get("content_type")
-            content_type = ContentType.objects.get(model=c_type)
-            obj_id = form.cleaned_data.get('object_id')
-            content_data = form.cleaned_data.get("content")
-            parent_obj = None
-            try:
-                parent_id = int(request.POST.get("parent_id"))
-            except TypeError:
-                parent_id = 0
-
-            if parent_id:
-                parent_qs = Comment.objects.filter(id=parent_id)
-                if parent_qs.exists() and parent_qs.count() == 1:
-                    parent_obj = parent_qs.first()
-
-            new_comment, created = Comment.objects.get_or_create(
-                user=request.user,
-                content_type=content_type,
-                object_id=obj_id,
-                content=content_data,
-                parent=parent_obj,
-            )
-            return HttpResponseRedirect(
-                new_comment.content_object.get_absolute_url()
-            )
-        else:
-            return self.form_invalid(form)
-
+    
 
 class BillDisplayView(View):
     """
@@ -230,4 +164,158 @@ class BillDisplayView(View):
         return view(request, *args, **kwargs)
 
 
-# BillDraftView() is located in dokeza_2_0.users.views.
+@csrf_exempt
+def edit(request):
+    filename = request.GET['filename']
+    print(f'Bill request', request)
+    ext = fileUtils.getFileExt(filename)
+
+    fileUri = docManager.getFileUri(filename, request)
+    docKey = docManager.generateFileKey(filename, request)
+    fileType = fileUtils.getFileType(filename)
+    user = users.getUserFromReq(request)
+    house = 'assembly'
+
+    edMode = 'review'
+    canEdit = docManager.isCanEdit(ext)
+    mode = 'edit'
+
+    edType = 'desktop'
+    lang = request.COOKIES.get('ulang') if request.COOKIES.get('ulang') else 'en'
+
+    storagePath = docManager.getStoragePath(filename, request)
+    meta = historyManager.getMeta(storagePath)
+    infObj = None
+
+    if (meta):
+        infObj = {
+            'owner': meta['uname'],
+            'created': meta['created']
+        }
+    else:
+        infObj = {
+            'owner': 'Me',
+            'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S')
+        }
+
+    edConfig = {
+        'type': edType,
+        'documentType': fileType,
+        'document': {
+            'title': filename,
+            'url': fileUri,
+            'fileType': ext[1:],
+            'key': docKey,
+            'info': infObj,
+            'permissions': {
+                'comment': True,
+                'download': False,
+                'edit': False,
+                'fillForms': False,
+                'modifyFilter': edMode != 'filter',
+                'modifyContentControl': False,
+                'review': False
+            }
+        },
+        'editorConfig': {
+            'mode': mode,
+            'lang': lang,
+            'callbackUrl': docManager.getCallbackUrl(filename, request),
+            'user': {
+                'id': user['uid'],
+                'name': user['uname']
+            },
+            'embedded': {
+                'saveUrl': fileUri,
+                'embedUrl': fileUri,
+                'shareUrl': fileUri,
+                'toolbarDocked': 'top'
+            },
+            'customization': {
+                'about': True,
+                'customer': {
+                    'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
+                    'logo': doc_config.EXAMPLE_DOMAIN + 'static/images/dokeza-logo-banner.png',
+                    'email':'mzalendo.devops@gmail.com'
+                },
+                'compactHeader': False,
+                'comments': True,
+                'commentAuthorOnly': True,
+                'goback': {
+                    'url': doc_config.EXAMPLE_DOMAIN + 'bills/'
+                }
+            }
+        }
+    }
+
+    if jwtManager.isEnabled():
+        edConfig['token'] = jwtManager.encode(edConfig)
+
+    hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
+    print(f'edConfig -', edConfig)
+    context = {
+        'page': 'bills',
+        'stingo': house,
+        'cfg': json.dumps(edConfig),
+        'history': json.dumps(hist['history']) if 'history' in hist else None,
+        'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
+        'fileType': fileType,
+        'apiUrl': doc_config.DOC_SERV_API_URL
+    }
+    return render(request, 'bills/bill_detail.html', context)
+
+
+@csrf_exempt
+def track(request):
+    filename = request.GET['filename']
+    usAddr = request.GET['userAddress']
+    print(f'track -',request, filename)
+    response = {}
+
+    try:
+        body = json.loads(request.body)
+
+        if jwtManager.isEnabled():
+            token = body.get('token')
+
+            if (not token):
+                token = request.headers.get('Authorization')
+                if token:
+                    token = token[len('Bearer '):]
+
+            if (not token):
+                raise Exception('Expected JWT')
+
+            body = jwtManager.decode(token)
+            if (body.get('payload')):
+                body = body['payload']
+
+        status = body['status']
+        download = body.get('url')
+
+        if (status == 2) | (status == 3): # mustsave, corrupted
+            path = docManager.getStoragePath(filename, usAddr)
+            histDir = historyManager.getHistoryDir(path)
+            versionDir = historyManager.getNextVersionDir(histDir)
+            changesUri = body.get('changesurl')
+
+            os.rename(path, historyManager.getPrevFilePath(versionDir, fileUtils.getFileExt(filename)))
+            docManager.saveFileFromUri(download, path)
+            docManager.saveFileFromUri(changesUri, historyManager.getChangesZipPath(versionDir))
+
+            hist = None
+            hist = body.get('changeshistory')
+            if (not hist) & ('history' in body):
+                hist = json.dumps(body.get('history'))
+            if hist:
+                historyManager.writeFile(historyManager.getChangesHistoryPath(versionDir), hist)
+
+            historyManager.writeFile(historyManager.getKeyPath(versionDir), body.get('key'))
+
+    except Exception as e:
+        response.setdefault('error', 1)
+        response.setdefault('message', e.args[0])
+
+    response.setdefault('error', 0)
+    return HttpResponse(json.dumps(response), content_type='application/json', status=200 if response['error'] == 0 else 500)
+

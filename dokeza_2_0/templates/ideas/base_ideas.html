@@ -1,6 +1,13 @@
 {% extends "bills/base_bill.html" %}
-
+{% load static %}
+<head>
+	<script src="{% url 'js-catlog' %}"></script>
+  <script src="{% static 'admin/js/core.js' %}"></script>
+  <link rel="stylesheet" type="text/css" href="{% block stylesheet %}{% static 'admin/css/base.css' %}{% endblock %}" />
+  <link rel="stylesheet" href="{% static 'admin/css/widgets.css' %}">
+</head>
 <div class="dz-main__content">
+	{{ form.media }}
 	{% block sidebar%}
 		{% include '_partials/sub-navigation/ideas.html' %}
 	{% endblock sidebar%}

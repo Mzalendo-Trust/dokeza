@@ -10,41 +10,42 @@
       <div class="dz-bills__list">
         <!--Bills-->
         {% for bill in object_list %}
-        <div class="dz-bills__card">
-          <div class="card p-1">
-            <a href="{{ bill.get_absolute_url }}">
-              <div class="dz-home__bills-{{ bill.get_bill_from_display|slugify|lower }} ">
-                <h5 class="dz-home__bill-heading">{{ bill.title|capfirst }}</h5>
-                <div class="bill-state stage">
-                  {% if bill.bill_stage == 1 %}
-                  Open for Memoranda <div class="reading-dates">{{ bill.first_reading|date:"d M Y" }}</div>
-                  {% elif bill.bill_stage == 2 %}
-                  In Committee <div class="reading-dates">{{ bill.second_reading|date:"d M Y" }}</div>
-                  {% elif bill.bill_stage == 3 %}
-                  Plenary Session <div class="reading-dates">{{ bill.third_reading|date:"d M Y" }}</div>
-                  {% elif bill.bill_stage == 4 %}
-                  Commentray Closed <div class="reading-dates">{{ bill.assented_date|date:"d M Y" }}</div>
-                  {% endif %}
+          <div class="dz-bills__card">
+            <div class="card p-1">
+              <a class="stored-edit text" href="edit?filename={{ bill.pdf }}">
+                <div class="dz-home__bills-{{ bill.get_bill_from_display|slugify|lower }}">
+                  <h5 class="dz-home__bill-heading">{{ bill.title|capfirst }}</h5>
+                  <div class="bill-state stage">
+                    {% if bill.bill_stage == 1 %}
+                      Open for Memoranda
+                      <div class="reading-dates">{{ bill.first_reading|date:"d M Y" }}</div>
+                      {% elif bill.bill_stage == 2 %}
+                      In Committee <div class="reading-dates">{{ bill.second_reading|date:"d M Y" }}</div>
+                      {% elif bill.bill_stage == 3 %}
+                      Plenary Session <div class="reading-dates">{{ bill.third_reading|date:"d M Y" }}</div>
+                      {% elif bill.bill_stage == 4 %}
+                      Commentray Closed <div class="reading-dates">{{ bill.assented_date|date:"d M Y" }}</div>
+                    {% endif %}
+                  </div>
                 </div>
+              </a>
+              <div class="card-block">
+                <div class="bill-details">
+                  <div class="bill-sponsor">SPONSOR: {{ bill.sponsor }}<br>
+                    <em>{{ bill.get_sponsor_title_display }}</em>
+                  </div>
+                  <div class="bill-dates"><strong>{{ bill.annotations|length }}</strong> Annotations | <strong>{{ bill.comments.count }}</strong> Comments
+                  </div>
+                </div>
+                <p class="card-text">{{ bill.purpose|truncatewords:25 }}
+                </p>
+                <a href="edit?filename={{ bill.pdf }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
               </div>
-            </a>
-            <div class="card-block">
-              <div class="bill-details">
-                <div class="bill-sponsor">SPONSOR: {{ bill.sponsor }}<br>
-                  <em>{{ bill.get_sponsor_title_display }}</em>
-                </div>
-                <div class="bill-dates"><strong>{{ bill.annotations|length }}</strong> Annotations | <strong>{{ bill.comments.count }}</strong> Comments
-                </div>
-              </div>
-              <p class="card-text">{{ bill.purpose|truncatewords:25 }}
-              </p>
-              <a href="{{ bill.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
             </div>
           </div>
-        </div>
         {% endfor %}
         {% if is_paginated %}
-        {% include '_partials/pagination.html' %}
+          {% include '_partials/pagination.html' %}
         {% endif %}
         <!--END Bills Cards-->
       </div>

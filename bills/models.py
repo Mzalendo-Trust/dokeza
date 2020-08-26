@@ -95,9 +95,6 @@ class Bill(HitCountMixin, models.Model):
     purpose = models.TextField(max_length=500, blank=True, null=True)
     sponsor = models.CharField(max_length=500, blank=True, null=True)
     sponsor_title = models.PositiveSmallIntegerField(_('Sponsor Title'), choices=SPONSOR_TITLE, default=1, blank=True, null=True)
-    body = RichTextField(
-        blank=True,
-        help_text="Copy the Bill and paste with all its styling. If necessary use the editing tools to style it sufficiently.")
     created = models.DateTimeField(auto_now_add=True, db_index=True)
     pdf = models.FileField(upload_to='bills/', blank=True, null=True, help_text='Upload the actual bill here.')
     bill_pic = models.ImageField(upload_to='bill_pics/', blank=True, null=True,

@@ -496,11 +496,10 @@ p.user-action {
 .container-fluid {
   padding: 0 !important;
   position: relative;
-  min-height: 100vh;
+  min-height: 90vh;
 
   .container {
     position: relative;
-    padding: 1rem;
     padding-bottom: 13em;
     display: flex;
     flex-wrap: wrap;
@@ -956,9 +955,13 @@ p.user-action {
   }
 
   &__detail {
-    padding: 0.5rem 0.75rem 0rem;
+    padding: 0.5rem 0.75rem;
     margin: 2px 0.25rem;
   }
+}
+.no-ideas {
+  height: 10em;
+  text-align: center;
 }
 
 .idea-type,
@@ -966,15 +969,15 @@ p.user-action {
 .idea-private,
 .idea-draft,
 .idea-edit {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   font-weight: 100;
   padding: 1px 8px;
   border-radius: 3px;
-  flex: 0 1 50%;
+  flex: 0 1 60%;
 }
 
 .idea-house {
-  flex: 1 1 50%;
+  flex: 1 1 62%;
   text-align: right;
 
   &__detail {
@@ -1013,10 +1016,12 @@ p.user-action {
   color: white;
 }
 
-.idea-details,
-.idea-edit {
+.idea-details {
   flex: 1 1 50%;
+}
 
+.idea-edit {
+  flex: 1 1 30%;
   &__detail {
     display: flex;
   }
@@ -1551,7 +1556,7 @@ p.user-action {
 
 .dz-bill {
   display: flex;
-  flex-wrap: wrap;
+  flex: 0 1 100%;
 
   aside {
     @media screen and (max-width: $tablet-port - 1) {
@@ -1605,6 +1610,7 @@ p.user-action {
 
   .card {
     display: flex;
+    margin: 1em;
     width: 100%;
 
     @media screen and (min-width: $tablet-port + 1) and (max-width: $desktop-small - 1) {
@@ -1998,15 +2004,6 @@ p.user-action {
     font-size: 1.4rem;
     line-height: 1.6rem;
     margin: 1rem 0 1.5rem;
-  }
-
-  @media screen and (min-width: $tablet-port) and (max-width: $desktop-small - 1) {
-    width: calc(100% - 312px);
-  }
-
-  @media screen and (min-width: $desktop-small) {
-    width: calc(100% - 600px);
-    padding: 0 1rem;
   }
 }
 
@@ -2468,10 +2465,6 @@ p.user-action {
   }
 }
 
-.bill-details {
-  display: flex;
-}
-
 .card-img-top {
   margin: 1.5rem auto;
   max-width: 200px;
@@ -2866,5 +2859,18 @@ input.form-control.form-control-sm.form-search::placeholder {
 
   .dz-katiba {
     background-color: $dz-clr--blue;
+  }
+}
+
+.dz-mainbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 0.5em;
+  .no-ideas {
+    padding: 1em;
+    font-weight: 500;
+    font-size: 2em;
+    color: $dz-clr--darkgreen;
   }
 }

@@ -5,6 +5,7 @@ from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import include, path
 from django.views import defaults as default_views
+from django.views.i18n import JavaScriptCatalog
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
@@ -33,6 +34,7 @@ urlpatterns = [
     path('google6b1213ccd54381fc\.html', TemplateView.as_view(template_name="google6b1213ccd54381fc.html")),
     
     # Django Admin, use {% url 'admin:index' %}
+    path('jsi18n', JavaScriptCatalog.as_view(), name='js-catlog'),
     path(settings.ADMIN_URL, admin.site.urls),
     
     # User management

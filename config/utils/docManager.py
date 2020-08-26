@@ -63,6 +63,7 @@ def isCanView(ext):
     return ext in doc_config.DOC_SERV_VIEWED
 
 def isCanEdit(ext):
+    print(ext)
     return ext in doc_config.DOC_SERV_EDITED
 
 def isCanConvert(ext):
@@ -94,8 +95,15 @@ def getCorrectName(filename, req):
 
 def getFileUri(filename, req):
     host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
-    curAdr = req.META['REMOTE_ADDR']
-    return f'{host}{base.MEDIA_URL}{curAdr}/{filename}'
+    # If the filename has 'bills' then use the path to bills
+    if re.search('bills', filename):
+        print(f'From bills - ', filename)
+        return f'{host}{base.MEDIA_URL}/{filename}'
+    else:
+        curAdr = req.META['REMOTE_ADDR']
+        print(f'From from User - ', filename)
+        return f'{host}{base.MEDIA_URL}{curAdr}/{filename}'
+    
 
 def getCallbackUrl(filename, req):
     host = doc_config.EXAMPLE_DOMAIN
@@ -103,12 +111,16 @@ def getCallbackUrl(filename, req):
     return f'{host}users/~documents/track?filename={filename}&userAddress={curAdr}'
 
 def getRootFolder(req):
-    if isinstance(req, str):
-        curAdr = req
-    else:
-        curAdr = req.META['REMOTE_ADDR']
+    if re.search('bills', str(req)):
+        directory = os.path.join(doc_config.STORAGE_PATH)
 
-    directory = os.path.join(doc_config.STORAGE_PATH, curAdr)
+    else:
+        if isinstance(req, str):
+            curAdr = req
+        else:
+            curAdr = req.META['REMOTE_ADDR']
+
+        directory = os.path.join(doc_config.STORAGE_PATH, curAdr)
 
     if not os.path.exists(directory):
         os.makedirs(directory)
@@ -116,6 +128,7 @@ def getRootFolder(req):
     return directory
 
 def getStoragePath(filename, req):
+    print(f'storage path req -', req)
     directory = getRootFolder(req)
 
     return os.path.join(directory, filename)

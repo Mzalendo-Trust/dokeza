@@ -5579,102 +5579,6 @@
 		"oAP": "/annotator/views.py",
 		"oF": 0
 		},
-	"/app_data/172.19.0.1/new.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/new.docx",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/new.docx-hist/1/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/new.docx-hist/1/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/app_data/172.19.0.1/new.docx-hist/1/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/new.docx-hist/1/diff.zip",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/new.docx-hist/1/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/new.docx-hist/1/key.txt",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/new.docx-hist/1/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/new.docx-hist/1/prev.docx",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/new.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/new.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/app_data/172.19.0.1/sample-bill.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/sample-bill.docx",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/sample-bill.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/sample-bill.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/app_data/172.19.0.1/sample-bill.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/sample-bill.pdf",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/sample-bill.pdf-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/sample-bill.pdf-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/app_data/172.19.0.1/sample.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/app_data/172.19.0.1/sample.docx",
-		"oF": 0
-		},
-	"/app_data/172.19.0.1/sample.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/app_data/172.19.0.1/sample.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"/azure-pipelines.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -5827,6 +5731,14 @@
 		"oAP": "/bills/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
+	"/bills/actions.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/bills/actions.py",
+		"oF": 0
+		},
 	"/bills/admin.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5971,6 +5883,14 @@
 		"oAP": "/bills/forms.py",
 		"oF": 0
 		},
+	"/bills/index.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/bills/index.py",
+		"oF": 0
+		},
 	"/bills/managers.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5985,6 +5905,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/bills/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/bills/migrations/0002_remove_bill_body.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/bills/migrations/0002_remove_bill_body.py",
 		"oF": 0
 		},
 	"/bills/migrations/__init__.py": {
@@ -24247,6 +24175,16 @@
 		"oS": 0,
 		"sct": 0
 		},
+	"/dokeza_2_0/static/dev/scss/onlyoffice.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dev/scss/onlyoffice-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/dokeza_2_0/static/dev/scss/onlyoffice.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -24369,6 +24307,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/css/mzalendo-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/dist/css/onlyoffice-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/onlyoffice-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -25417,6 +25365,77 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/dokeza_2_0/static/dist/images/users/new_bill.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_bill.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_doc.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_doc.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_memorandum.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_memorandum.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_petition.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_petition.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/new_spreadsheet.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_spreadsheet.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/upload_doc.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/upload_doc.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/js/dokeza-annotator.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/dokeza-annotator.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/dist/js/dokeza-annotator.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -25424,6 +25443,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/dokeza-annotator.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -25439,6 +25469,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -25446,6 +25487,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/dokeza.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/dokeza.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -25461,6 +25513,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/dist/js/vendor/annotator.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/annotator.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/dist/js/vendor/annotator.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -25472,6 +25535,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/dist/js/vendor/bootstrap.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -25479,6 +25553,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/js/vendor/fullcalendar.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/vendor/fullcalendar.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -25647,6 +25732,28 @@
 		"iS": 1068,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/images/desktop-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/dokeza-logo-banner.png": {
+		"ft": 32768,
+		"iS": 9508,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/dokeza-logo-banner.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/dokeza-logo-small.png": {
+		"ft": 32768,
+		"iS": 4297,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/dokeza-logo-small.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -25873,6 +25980,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/js/project-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/sdk-all.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/sdk-all-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -28135,6 +28253,134 @@
 		"oAP": "/manage.py",
 		"oF": 0
 		},
+	"/media/172.19.0.1/memorandum.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/172.19.0.1/memorandum.docx",
+		"oF": 0
+		},
+	"/media/172.19.0.1/memorandum.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/172.19.0.1/memorandum.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/172.19.0.1/sample-bill.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/172.19.0.1/sample-bill.docx",
+		"oF": 0
+		},
+	"/media/172.19.0.1/sample-bill.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/172.19.0.1/sample-bill.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/CountyWards_EquitableDevelopment_Bill_2018.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/CountyWards_EquitableDevelopment_Bill_2018.docx",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx",
+		"oF": 0
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx",
+		"oF": 0
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx-hist/2/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf",
+		"oF": 0
+		},
 	"/merge_production_dotenvs_in_dotenv.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -29533,6 +29779,22 @@
 		"oAP": "/requirements/production.txt",
 		"oF": 0
 		},
+	"/samples/bill.pdf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/bill.pdf",
+		"oF": 0
+		},
+	"/samples/memorandum.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/memorandum.docx",
+		"oF": 0
+		},
 	"/samples/new.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29555,6 +29817,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/samples/new.xlsx",
+		"oF": 0
+		},
+	"/samples/petition.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/samples/petition.docx",
 		"oF": 0
 		},
 	"/samples/sample-bill.docx": {
