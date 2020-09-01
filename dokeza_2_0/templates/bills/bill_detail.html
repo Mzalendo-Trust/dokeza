@@ -2,12 +2,13 @@
 {% load static %} {% load urlify %} {% load crispy_forms_tags %}
 {% load social_share %}
 {% block title %}Bill: {{ object.title }}{% endblock title %}
+{% block extra_js %}
+  <script type="text/javascript" src=" {% static 'dist/js/vendor/js.cookie.min.js' %} "></script>
+{% endblock extra_js %}
 {% block extra_css %}
-  <link rel="icon"
-        href="{% static 'images/'|add:fileType|add:'.ico' %}"
-        type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/editor.css' %}" />
-  {% endblock extra_css %}
+  <link rel="icon" href="{% static 'images/'|add:fileType|add:'.ico' %}" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="{% static 'css/editor.css' %}" />
+{% endblock extra_css %}
 {% block breadcrumbs %} {{ block.super }} »
 {% if bill.get_bill_from_display|slugify|lower == 'senate' %}
   <a href="{% url 'bills:senate' %}">Senate</a>
@@ -60,26 +61,26 @@
         <p class="card-text">
           <h6 class="dz--aside_title">Clause</h6>
           <ol class="ul">
-          {% for list in toc %} {{ list|safe|capfirst }} {% endfor %}
-        </ol>
-      </p>
-    </div>
-  </div>
-  <!--END Card-->
-</aside>
-<!-- END Bill content sidebar -->
-<!-- Bill Content -->
-<div class="bill-content">
-  <div class="bill-details">
-    <div class="form">
-      <div id="iframeEditor">
+            {% for list in toc %} {{ list|safe|capfirst }} {% endfor %}
+          </ol>
+        </p>
       </div>
     </div>
-  </div>
-  <script type="text/javascript" src="{{ apiUrl }}"></script>
-  <script type="text/javascript" language="javascript">
-    var docEditor;
-
+    <!--END Card-->
+  </aside>
+<!-- END Bill content sidebar -->
+<!-- Bill Content -->
+  <div class="bill-content">
+    <div class="bill-details">
+      <div class="form">{% csrf_token %}
+        <div id="iframeEditor">
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="{{ apiUrl }}"></script>
+    <script type="text/javascript" language="javascript">
+      var docEditor;
+     
       var innerAlert = function (message) {
           if (console && console.log)
               console.log(message);
@@ -157,53 +158,10 @@
           window.attachEvent("onload", connectEditor);
           window.attachEvent("onresize", fixSize);
       }
-  </script>
-</div>
+    </script>
+  </div>
 </div>
 <!-- END Bill Content -->
 </div>
-<!-- Comments on the Bill -->
-<div class="dz-comments row">
-<div class="comment-section">
-<h6 id="comments" class='lead comments-head'>Comments</h6>
-{% if request.user.is_authenticated %}
-  <form method="POST" action="."> {% csrf_token %}
-    {{ comment_form|crispy }}
-    <input type='submit' value='Post comment' class='btn btn-dokeza'>
-  </form>
-{% else %}
-  <p>You must <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to comment </p>
-{% endif %}
-<hr/>
-{% for comment in comments %}
-  <blockquote class="blockquote comment-bg">
-    <p class="dz-comment">{{ comment.content }}</p>
-    <footer class="comment-details">
-      <strong>{{ comment.user }} </strong>| {{ comment.timestamp|timesince }} ago | {% if comment.children.count > 0 %}{{ comment.children.count }} Comment{% if comment.children.count > 1 %}s{% endif %} |
-    {% endif %}
-    <a class='' href='{{ comment.get_absolute_url }}'>Comment Thread</a></footer>
-    <h4 class="header-replies">Replies to this comment</h4>
-    <div class='comment-reply'>
-      {% for child_comment in comment.children %}
-        <blockquote class="blockquote comment-replies">
-          <p class="dz-comment__child">{{ child_comment.content }}</p>
-        <footer class="comment-details"><strong>{{ child_comment.user }}</strong> | {{ child_comment.timestamp|timesince }} ago</footer>
-      </blockquote>
-    {% endfor %}
-    {% if request.user.is_authenticated %}
-      <form method="POST" action="."> {% csrf_token %} {{ comment_form|crispy }}
-        <input type='hidden' name='parent_id' value='{{ comment.id }}'>
-        <input type='submit' value='Reply' class='btn btn-dokeza'>
-      </form>
-    {% else %}
-      <p>You must <a href="{% url 'account_login' %}">login</a> or <a href="{% url 'account_signup' %}">register</a> to comment </p>
-    {% endif %}
-  </div>
-</blockquote>
-<hr/>
-{% endfor %}
-</div>
-</div>
-<!-- END Comments -->
 <!--END Main-->
 {% endblock content %}

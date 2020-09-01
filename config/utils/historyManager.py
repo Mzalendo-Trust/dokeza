@@ -34,9 +34,11 @@ from datetime import datetime
 from config.settings import base
     
 def getHistoryDir(storagePath):
+    print(f'{storagePath}-hist')
     return f'{storagePath}-hist'
 
 def getVersionDir(histDir, version):
+    print(os.path.join(histDir, str(version)))
     return os.path.join(histDir, str(version))
 
 def getFileVersion(histDir):
@@ -81,12 +83,16 @@ def createMeta(storagePath, req):
     if not os.path.exists(histDir):
         os.makedirs(histDir)
 
-    user = users.getUserFromReq(req)
+    user = req.user
+    if not user.first_name:
+        user.first_name = 'Mgeni'
+        if not user.username:
+            user.username = f'{user.first_name}_{user.last_name}'
 
     obj = {
         'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S'),
-        'uid': user['uid'],
-        'uname': user['uname']
+        'uid': f'{user.id}',
+        'uname': f'{user.username}'
     }
 
     writeFile(path, json.dumps(obj))
@@ -104,13 +110,27 @@ def readFile(path):
 
 def getPrevUri(filename, ver, ext, req):
     host = config.EXAMPLE_DOMAIN.rstrip('/')
-    curAdr = req.META['REMOTE_ADDR']
-    return f'{host}{base.MEDIA_URL}{curAdr}/{filename}-hist/{ver}/prev{ext}'
+    if re.search('bills', filename):
+        return f'{host}{base.MEDIA_URL}{filename}'
+    else:
+        user = req.user
+        if not user.first_name:
+            user.first_name = 'Mgeni'
+        if not user.username:
+            user.username = f'{user.first_name}_{user.last_name}'
+        return f'{host}{base.MEDIA_URL}{user.username}/{filename}-hist/{ver}/prev{ext}'
 
 def getZipUri(filename, ver, req):
     host = config.EXAMPLE_DOMAIN.rstrip('/')
-    curAdr = req.META['REMOTE_ADDR']
-    return f'{host}{base.MEDIA_URL}{curAdr}/{filename}-hist/{ver}/diff.zip'
+    if re.search('bills', filename):
+        return f'{host}{base.MEDIA_URL}{filename}'
+    else:
+        user = req.user
+        if not user.first_name:
+            user.first_name = 'Mgeni'
+        if not user.username:
+            user.username = f'{user.first_name}_{user.last_name}'
+        return f'{host}{base.MEDIA_URL}{user.username}/{filename}-hist/{ver}/diff.zip'
 
 def getMeta(storagePath):
     histDir = getHistoryDir(storagePath)
@@ -125,6 +145,7 @@ def getMeta(storagePath):
 def getHistoryObject(storagePath, filename, docKey, docUrl, req):
     histDir = getHistoryDir(storagePath)
     version = getFileVersion(histDir)
+    user = req.user
     if version > 0:
         hist = []
         histData = {}
@@ -148,8 +169,8 @@ def getHistoryObject(storagePath, filename, docKey, docUrl, req):
                     if meta:
                         obj['created'] = meta['created']
                         obj['user'] = {
-                            'id': meta['uid'],
-                            'name': meta['uname']
+                            'id': meta[f'{user.id}'],
+                            'name': meta[f'{user.username}']
                         }
                     
                 dataObj['url'] = docUrl if i == version else getPrevUri(filename, i + 1, fileUtils.getFileExt(filename), req)

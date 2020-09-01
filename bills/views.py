@@ -4,6 +4,7 @@ import os
 import re
 
 from datetime import datetime
+from django.contrib.auth.models import AnonymousUser
 from django.contrib.contenttypes.models import ContentType
 from django.core.paginator import Paginator
 from django.http import HttpResponseRedirect, HttpResponseForbidden
@@ -129,25 +130,114 @@ class BillDetailView(DetailView):
     This is the view shows the details related to a particular bill.
     It is on this page that annotations are made to the bill. This view has two comment forms, for the Bill and the Annotations.
     """
-
+    template_name = 'bills/bill_detail.html'
     model = Bill
 
     def get_context_data(self, *args, **kwargs):
-        context = super(BillDetailView, self).get_context_data(
-            *args, **kwargs)
-
+        context = super(BillDetailView, self).get_context_data(*args, **kwargs)
+        print('bill context', context)
         if self.object.bill_from == 1:
             house = 'assembly'
         else:
             house = 'senate'
-
-        bill_slug = self.object.slug
         
-        # # content = self.object.body
-    
-        context["page"] = 'bills'
-        context["stingo"] = house
-        print(context)
+        filename = request.GET['filename']
+        print(f'Bill request', request)
+        ext = fileUtils.getFileExt(filename)
+
+        fileUri = docManager.getFileUri(filename, request)
+        docKey = docManager.generateFileKey(filename, request)
+        fileType = fileUtils.getFileType(filename)
+        user = request.user
+        if user.is_anonymous:
+            edMode = 'review'
+            mode = 'view'
+        else:
+            edMode = 'review'
+            mode = 'edit'
+
+        canEdit = docManager.isCanEdit(ext)
+        edType = 'desktop'
+        lang = request.COOKIES.get('ulang') if request.COOKIES.get('ulang') else 'en'
+
+        storagePath = docManager.getStoragePath(filename, request)
+        meta = historyManager.getMeta(storagePath)
+        infObj = None
+
+        if (meta):
+            infObj = {
+                'owner': meta['uname'],
+                'created': meta['created']
+            }
+        else:
+            infObj = {
+                'owner': 'Me',
+                'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S')
+            }
+
+        edConfig = {
+            'type': edType,
+            'documentType': fileType,
+            'document': {
+                'title': filename,
+                'url': fileUri,
+                'fileType': ext[1:],
+                'key': docKey,
+                'info': infObj,
+                'permissions': {
+                    'comment': True,
+                    'download': False,
+                    'edit': False,
+                    'fillForms': False,
+                    'modifyFilter': edMode != 'filter',
+                    'modifyContentControl': False,
+                    'review': False
+                }
+            },
+            'editorConfig': {
+                'mode': mode,
+                'lang': lang,
+                'callbackUrl': docManager.getCallbackUrl(filename, request),
+                'user': {
+                    'id': '1',
+                    'name': 'Dokeza'
+                },
+                'embedded': {
+                    'saveUrl': fileUri,
+                    'embedUrl': fileUri,
+                    'shareUrl': fileUri,
+                    'toolbarDocked': 'top'
+                },
+                'customization': {
+                    'about': True,
+                    'customer': {
+                        'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
+                        'logo': doc_config.EXAMPLE_DOMAIN + 'static/images/dokeza-logo-banner.png',
+                        'email':'mzalendo.devops@gmail.com'
+                    },
+                    'compactHeader': False,
+                    'comments': True,
+                    'commentAuthorOnly': True,
+                    'goback': {
+                        'url': doc_config.EXAMPLE_DOMAIN + 'bills/'
+                    }
+                }
+            }
+        }
+
+        if jwtManager.isEnabled():
+            edConfig['token'] = jwtManager.encode(edConfig)
+
+        hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
+        context = {
+            'page': 'bills',
+            'stingo': house,
+            'cfg': json.dumps(edConfig),
+            'history': json.dumps(hist['history']) if 'history' in hist else None,
+            'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
+            'fileType': fileType,
+            'apiUrl': doc_config.DOC_SERV_API_URL
+        }
         return context
     
 
@@ -163,28 +253,38 @@ class BillDisplayView(View):
         view = BillCommentView.as_view()
         return view(request, *args, **kwargs)
 
-
 @csrf_exempt
 def edit(request):
+
     filename = request.GET['filename']
-    print(f'Bill request', request)
     ext = fileUtils.getFileExt(filename)
 
     fileUri = docManager.getFileUri(filename, request)
     docKey = docManager.generateFileKey(filename, request)
     fileType = fileUtils.getFileType(filename)
-    user = users.getUserFromReq(request)
+    user = request.user
+    if user.is_anonymous:
+        user.username = 'Mgeni_mzalendo'
+        edMode = 'review'
+        mode = 'view'
+    else:
+        if not user.first_name:
+            user.first_name = 'Mgeni'
+        if not user.username:
+            user.username = f'{user.first_name}_{user.last_name}'
+        edMode = 'review'
+        mode = 'edit'
+
     house = 'assembly'
 
-    edMode = 'review'
     canEdit = docManager.isCanEdit(ext)
-    mode = 'edit'
 
     edType = 'desktop'
     lang = request.COOKIES.get('ulang') if request.COOKIES.get('ulang') else 'en'
-
+    
     storagePath = docManager.getStoragePath(filename, request)
     meta = historyManager.getMeta(storagePath)
+
     infObj = None
 
     if (meta):
@@ -194,7 +294,7 @@ def edit(request):
         }
     else:
         infObj = {
-            'owner': 'Me',
+            'owner': user.username,
             'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S')
         }
 
@@ -222,8 +322,8 @@ def edit(request):
             'lang': lang,
             'callbackUrl': docManager.getCallbackUrl(filename, request),
             'user': {
-                'id': user['uid'],
-                'name': user['uname']
+                'id': f'{user.id}',
+                'name': f'{user.username}'
             },
             'embedded': {
                 'saveUrl': fileUri,
@@ -252,20 +352,21 @@ def edit(request):
         edConfig['token'] = jwtManager.encode(edConfig)
 
     hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
-    print(f'edConfig -', edConfig)
-    context = {
+    params = {
         'page': 'bills',
         'stingo': house,
         'cfg': json.dumps(edConfig),
         'history': json.dumps(hist['history']) if 'history' in hist else None,
         'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
         'fileType': fileType,
-        'apiUrl': doc_config.DOC_SERV_API_URL
+        'apiUrl': doc_config.DOC_SERV_API_URL,
+        'csrftoken': request.COOKIES['csrftoken']
     }
-    return render(request, 'bills/bill_detail.html', context)
+    print('return - params to bill_detail')
+
+    return render(request, 'bills/bill_detail.html', params)
 
 
-@csrf_exempt
 def track(request):
     filename = request.GET['filename']
     usAddr = request.GET['userAddress']

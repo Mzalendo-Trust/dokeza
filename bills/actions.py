@@ -191,7 +191,6 @@ def edit(request):
         edConfig['token'] = jwtManager.encode(edConfig)
 
     hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
-    print(f'edConfig -', edConfig)
     context = {
         'cfg': json.dumps(edConfig),
         'history': json.dumps(hist['history']) if 'history' in hist else None,

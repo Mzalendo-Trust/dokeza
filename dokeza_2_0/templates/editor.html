@@ -41,7 +41,7 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/editor.css' %}" />
 </head>
 <body>
-  <div class="form">
+  <div class="form">{% csrf_token %}
       <div id="iframeEditor">
       </div>
   </div>

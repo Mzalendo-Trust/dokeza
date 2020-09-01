@@ -100,7 +100,11 @@ def edit(request):
     fileUri = docManager.getFileUri(filename, request)
     docKey = docManager.generateFileKey(filename, request)
     fileType = fileUtils.getFileType(filename)
-    user = users.getUserFromReq(request)
+    user = request.user
+    if not user.first_name:
+        user.first_name = 'Mgeni'
+    if not user.username:
+        user.username = f'{user.first_name}_{user.last_name}'
 
     edMode = request.GET.get('mode') if request.GET.get('mode') else 'edit'
     canEdit = docManager.isCanEdit(ext)
@@ -115,12 +119,12 @@ def edit(request):
 
     if (meta):
         infObj = {
-            'author': meta['uname'],
+            'author': meta[f'{user.username}'],
             'created': meta['created']
         }
     else:
         infObj = {
-            'author': 'Me',
+            'author': meta[f'{user.username}'],
             'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S')
         }
 
@@ -160,8 +164,9 @@ def edit(request):
             'customization': {
                 'about': True,
                 'feedback': True,
+
                 'goback': {
-                    'url': doc_config.EXAMPLE_DOMAIN
+                    'url': doc_config.EXAMPLE_DOMAIN + 'users/~documents/'
                 }
             }
         }
@@ -171,7 +176,6 @@ def edit(request):
         edConfig['token'] = jwtManager.encode(edConfig)
 
     hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
-    print(f'edConfig -', edConfig)
     context = {
         'cfg': json.dumps(edConfig),
         'history': json.dumps(hist['history']) if 'history' in hist else None,
@@ -181,11 +185,11 @@ def edit(request):
     }
     return render(request, 'editor.html', context)
 
+
 @csrf_exempt
 def track(request):
     filename = request.GET['filename']
     usAddr = request.GET['userAddress']
-    print(f'track -',request, filename)
     response = {}
 
     try:

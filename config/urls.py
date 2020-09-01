@@ -70,11 +70,11 @@ urlpatterns += [
     path('api/users/', include('dokeza_2_0.users.api.urls', namespace='users-api')),
 
     # Access APIs
-    path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
-    path('api/bills/', include('bills.api.urls', namespace='bills-api')),
-    path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
-    path('api/comments/', include('comments.api.urls', namespace='comments-api')),
-    path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))
+    # path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
+    # path('api/bills/', include('bills.api.urls', namespace='bills-api')),
+    # path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
+    # path('api/comments/', include('comments.api.urls', namespace='comments-api')),
+    # path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))
 ]
 
 if settings.DEBUG:
