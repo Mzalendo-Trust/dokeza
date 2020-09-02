@@ -263,6 +263,7 @@ def edit(request):
     docKey = docManager.generateFileKey(filename, request)
     fileType = fileUtils.getFileType(filename)
     user = request.user
+    print('edit -', filename)
     if user.is_anonymous:
         user.username = 'Mgeni_mzalendo'
         edMode = 'review'
@@ -352,7 +353,7 @@ def edit(request):
         edConfig['token'] = jwtManager.encode(edConfig)
 
     hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
-    params = {
+    context = {
         'page': 'bills',
         'stingo': house,
         'cfg': json.dumps(edConfig),
@@ -360,13 +361,13 @@ def edit(request):
         'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
         'fileType': fileType,
         'apiUrl': doc_config.DOC_SERV_API_URL,
-        'csrftoken': request.COOKIES['csrftoken']
     }
-    print('return - params to bill_detail')
+    print('return - context to bill_detail')
 
-    return render(request, 'bills/bill_detail.html', params)
+    return render(request, 'editor.html', context)
 
 
+@csrf_exempt
 def track(request):
     filename = request.GET['filename']
     usAddr = request.GET['userAddress']

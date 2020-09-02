@@ -32,8 +32,6 @@ import io
 import re
 import requests
 
-from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_cookie
-
 from config.settings import base
 from . import fileUtils, historyManager
 
@@ -94,7 +92,6 @@ def getCorrectName(filename, req):
 
     return name
 
-@csrf_exempt
 def getFileUri(filename, req):
     host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
     # If the filename has 'bills' then use the path to bills
@@ -108,7 +105,7 @@ def getFileUri(filename, req):
             user.username = f'{user.first_name}_{user.last_name}'
         return f'{host}{base.MEDIA_URL}{user.username}/{filename}'
     
-@csrf_exempt
+
 def getCallbackUrl(filename, req):
     host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
@@ -118,31 +115,25 @@ def getCallbackUrl(filename, req):
         user.first_name = 'Mgeni'
     if not user.username:
         user.username = f'{user.first_name}_{user.last_name}'
-    print('get callback', f'{host}/users/~documents/track?filename={filename}&userAddress={user.username}')
     return f'{host}/users/~documents/track?filename={filename}&userAddress={user.username}'
-
 
 def getRootFolder(req):
     if re.search('bills', str(req)):
         directory = os.path.join(doc_config.STORAGE_PATH)
     else:
-        user = req.user
-        if not user.first_name:
-            user.first_name = 'Mgeni'
-        if not user.username:
-            user.username = f'{user.first_name}_{user.last_name}'
-        dirname = user.username
+        if isinstance(req, str):
+            dirname = req
+        else:
+            dirname = req.user.username
         directory = os.path.join(doc_config.STORAGE_PATH, dirname)
 
     if not os.path.exists(directory):
         os.makedirs(directory)
     return directory
 
-@csrf_exempt
 def getStoragePath(filename, req):
     directory = getRootFolder(req)
     return os.path.join(directory, filename)
-
 
 def getStoredFiles(req):
     directory = getRootFolder(req)
@@ -157,7 +148,6 @@ def getStoredFiles(req):
             fileInfos.append({ 'type': fileUtils.getFileType(f), 'title': f, 'url': getFileUri(f, req) })
     return fileInfos
 
-@csrf_exempt
 def createFile(stream, path, req = None, meta = False):
     bufSize = 8196
     with io.open(path, 'wb') as out:
@@ -171,14 +161,11 @@ def createFile(stream, path, req = None, meta = False):
         historyManager.createMeta(path, req)
     return
 
-@csrf_exempt
 def saveFileFromUri(uri, path, req = None, meta = False):
     resp = requests.get(uri, stream=True)
-    print('save file from uri -', uri )
     createFile(resp.raw, path, req, meta)
     return
 
-@csrf_exempt
 def createSample(fileType, sample, req):
     ext = getInternalExtension(fileType)
     if not sample:

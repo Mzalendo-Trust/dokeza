@@ -34,99 +34,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <title>DOKEZA</title>
+    <title>ONLYOFFICE</title>
     <link rel="icon"
         href="{% static 'images/'|add:fileType|add:'.ico' %}"
         type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/editor.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/editor.css" %}" />
 </head>
 <body>
-  <div class="form">{% csrf_token %}
-      <div id="iframeEditor">
-      </div>
-  </div>
-  <script type="text/javascript" src="{{ apiUrl }}"></script>
-  <script type="text/javascript" language="javascript">
+    <div class="form">
+        <div id="iframeEditor">
+        </div>
+    </div>
+    <script type="text/javascript" src="{{ apiUrl }}"></script>
+    <script type="text/javascript" language="javascript">
 
-    var docEditor;
+        var docEditor;
 
-    var innerAlert = function (message) {
-      if (console && console.log)
-          console.log(message);
-    };
-
-    var onAppReady = function () {
-      innerAlert("Document editor ready");
-    };
-
-    var onDocumentStateChange = function (event) {
-      var title = document.title.replace(/\*$/g, "");
-      document.title = title + (event.data ? "*" : "");
-    };
-
-    var onRequestEditRights = function () {
-      location.href = location.href.replace(RegExp("mode=view\&?", "i"), "");
-    };
-
-    var onError = function (event) {
-      if (event)
-        innerAlert(event.data);
-    };
-
-    var onOutdatedVersion = function (event) {
-      location.reload(true);
-    };
-
-    var connectEditor = function () {
-      config = {{ cfg | safe }}
-      config.width = "100%";
-      config.height = "100%";
-      config.events = {
-        'onAppReady': onAppReady,
-        'onDocumentStateChange': onDocumentStateChange,
-        'onRequestEditRights': onRequestEditRights,
-        'onError': onError,
-        'onOutdatedVersion': onOutdatedVersion,
-      };
-
-      {% if history and historyData %}
-
-        config.events['onRequestHistory'] = function () {
-          docEditor.refreshHistory({{ history | safe }});
-        };
-        config.events['onRequestHistoryData'] = function (event) {
-          var ver = event.data;
-          var histData = {{ historyData | safe }};
-          docEditor.setHistoryData(histData[ver]);
-        };
-        config.events['onRequestHistoryClose'] = function () {
-          document.location.reload();
+        var innerAlert = function (message) {
+            if (console && console.log)
+                console.log(message);
         };
 
-      {% endif %}
+        var onAppReady = function () {
+            innerAlert("Document editor ready");
+        };
 
-      docEditor = new DocsAPI.DocEditor("iframeEditor", config);
+        var onDocumentStateChange = function (event) {
+            var title = document.title.replace(/\*$/g, "");
+            document.title = title + (event.data ? "*" : "");
+        };
 
-      fixSize();
-    };
+        var onRequestEditRights = function () {
+            location.href = location.href.replace(RegExp("mode=view\&?", "i"), "");
+        };
 
-    var fixSize = function () {
-        var wrapEl = document.getElementsByClassName("form");
-        if (wrapEl.length) {
-            wrapEl[0].style.height = screen.availHeight + "px";
-            window.scrollTo(0, -1);
-            wrapEl[0].style.height = window.innerHeight + "px";
+        var onError = function (event) {
+            if (event)
+                innerAlert(event.data);
+        };
+
+        var onOutdatedVersion = function (event) {
+            location.reload(true);
+        };
+
+        var connectEditor = function () {
+
+            config = {{ cfg | safe }}
+            config.width = "100%";
+            config.height = "100%";
+            config.events = {
+                'onAppReady': onAppReady,
+                'onDocumentStateChange': onDocumentStateChange,
+                'onRequestEditRights': onRequestEditRights,
+                'onError': onError,
+                'onOutdatedVersion': onOutdatedVersion,
+            };
+
+            {% if history and historyData %}
+
+                config.events['onRequestHistory'] = function () {
+                    docEditor.refreshHistory({{ history | safe }});
+                };
+                config.events['onRequestHistoryData'] = function (event) {
+                    var ver = event.data;
+                    var histData = {{ historyData | safe }};
+                    docEditor.setHistoryData(histData[ver]);
+                };
+                config.events['onRequestHistoryClose'] = function () {
+                    document.location.reload();
+                };
+
+            {% endif %}
+
+            docEditor = new DocsAPI.DocEditor("iframeEditor", config);
+
+            fixSize();
+        };
+
+        var fixSize = function () {
+            var wrapEl = document.getElementsByClassName("form");
+            if (wrapEl.length) {
+                wrapEl[0].style.height = screen.availHeight + "px";
+                window.scrollTo(0, -1);
+                wrapEl[0].style.height = window.innerHeight + "px";
+            }
+        };
+
+        if (window.addEventListener) {
+            window.addEventListener("load", connectEditor);
+            window.addEventListener("resize", fixSize);
+        } else if (window.attachEvent) {
+            window.attachEvent("onload", connectEditor);
+            window.attachEvent("onresize", fixSize);
         }
-    };
 
-    if (window.addEventListener) {
-        window.addEventListener("load", connectEditor);
-        window.addEventListener("resize", fixSize);
-    } else if (window.attachEvent) {
-      window.attachEvent("onload", connectEditor);
-      window.attachEvent("onresize", fixSize);
-    }
-
-  </script>
+    </script>
 </body>
 </html>

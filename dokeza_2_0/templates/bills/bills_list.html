@@ -12,7 +12,7 @@
         {% for bill in object_list %}
           <div class="dz-bills__card">
             <div class="card p-1">
-              <a class="stored-edit text" href="edit?filename={{ bill.pdf }}">
+              <a class="stored-edit text" href="edit?filename={{ bill.pdf }}" target="_blank">
                 <div class="dz-home__bills-{{ bill.get_bill_from_display|slugify|lower }}">
                   <h5 class="dz-home__bill-heading">{{ bill.title|capfirst }}</h5>
                   <div class="bill-state stage">

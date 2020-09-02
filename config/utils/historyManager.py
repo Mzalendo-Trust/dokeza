@@ -34,7 +34,6 @@ from datetime import datetime
 from config.settings import base
     
 def getHistoryDir(storagePath):
-    print(f'{storagePath}-hist')
     return f'{storagePath}-hist'
 
 def getVersionDir(histDir, version):

@@ -13,10 +13,10 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.urls import reverse
-from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_cookie
-from config.doc_views import index, actions
 
+from config.doc_views import index, actions
+from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 
 @csrf_protect
 def upload(request):
@@ -43,7 +43,6 @@ def upload(request):
 
     except Exception as e:
         response.setdefault('error', f'{e}')
-    print(response)
     return HttpResponse(json.dumps(response), content_type='application/json')
 
 def convert(request):
@@ -100,11 +99,7 @@ def edit(request):
     fileUri = docManager.getFileUri(filename, request)
     docKey = docManager.generateFileKey(filename, request)
     fileType = fileUtils.getFileType(filename)
-    user = request.user
-    if not user.first_name:
-        user.first_name = 'Mgeni'
-    if not user.username:
-        user.username = f'{user.first_name}_{user.last_name}'
+    user = users.getUserFromReq(request)
 
     edMode = request.GET.get('mode') if request.GET.get('mode') else 'edit'
     canEdit = docManager.isCanEdit(ext)
@@ -119,12 +114,12 @@ def edit(request):
 
     if (meta):
         infObj = {
-            'author': meta[f'{user.username}'],
+            'author': meta['uname'],
             'created': meta['created']
         }
     else:
         infObj = {
-            'author': meta[f'{user.username}'],
+            'author': 'Me',
             'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S')
         }
 
@@ -185,16 +180,14 @@ def edit(request):
     }
     return render(request, 'editor.html', context)
 
-
 @csrf_exempt
 def track(request):
     filename = request.GET['filename']
     usAddr = request.GET['userAddress']
     response = {}
-
+    
     try:
         body = json.loads(request.body)
-
         if jwtManager.isEnabled():
             token = body.get('token')
 
@@ -212,7 +205,6 @@ def track(request):
 
         status = body['status']
         download = body.get('url')
-
         if (status == 2) | (status == 3): # mustsave, corrupted
             path = docManager.getStoragePath(filename, usAddr)
             histDir = historyManager.getHistoryDir(path)
