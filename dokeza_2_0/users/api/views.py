@@ -7,7 +7,10 @@ from rest_framework.decorators import action
 from rest_framework.generics import (
     CreateAPIView
 )
-from rest_framework.mixins import ListModelMixin, RetrieveModelMixin, UpdateModelMixin
+from rest_framework.mixins import (
+    ListModelMixin, RetrieveModelMixin, 
+    UpdateModelMixin
+)
 from rest_framework.permissions import (
     AllowAny,
     IsAuthenticated
@@ -32,6 +35,17 @@ CONSUMER_SECRET = settings.SECRET_KEY
 CONSUMER_TTL = 86400
 
 User = get_user_model()
+
+
+class UserDetailAPIView(APIView):
+    pass
+
+class UserRedirectAPIView(APIView):
+    pass
+
+
+class UserUpdateAPIView(APIView):
+    pass
 
 
 class UserViewSet(RetrieveModelMixin, ListModelMixin, UpdateModelMixin, GenericViewSet):

@@ -135,7 +135,8 @@ label .checkbox {
 }
 
 .file-upload {
-  background: url("/static/dist/images/users/upload_doc.svg") no-repeat center 0 transparent;
+  background: url("/static/dist/images/users/upload_doc.svg") no-repeat center 0
+    transparent;
   cursor: pointer;
   display: inline-block;
   height: 45px;
@@ -184,7 +185,8 @@ label .checkbox {
 }
 
 .error-message {
-  background: url("/static/dist/images/onlyoffice/alert.png") no-repeat scroll 4px 10px #ffece3;
+  background: url("/static/dist/images/onlyoffice/alert.png") no-repeat scroll
+    4px 10px #ffece3;
   color: #666668 !important;
   display: none;
   font-size: 13px;
@@ -324,7 +326,8 @@ label .checkbox {
 }
 
 .dialog-close {
-  background: url("/static/dist/images/onlyoffice/close.png") no-repeat scroll left top #e2e2e2;
+  background: url("/static/dist/images/onlyoffice/close.png") no-repeat scroll
+    left top #e2e2e2;
   cursor: pointer;
   float: right;
   font-size: 1px;
@@ -471,4 +474,79 @@ label .checkbox {
   cursor: pointer;
   width: 36px;
   margin-bottom: -6px;
+}
+
+/* mzalendo overides */
+body,
+.btn,
+.form-control,
+#file-menu-panel .panel-menu li > a,
+.dropdown-menu > li > a {
+  color: #006c3b !important;
+}
+#file-menu-panel .panel-menu li.active > a,
+.dropdown-menu > li.active > a {
+  color: #fff !important;
+}
+
+.loadmask > .brendpanel,
+#box-document-title,
+.toolbar .box-tabs .extra,
+.toolbar .tabs,
+.toolbar .tabs .scroll.left,
+.toolbar .tabs .scroll.right,
+.style-off-tabs .toolbar.editor-native-color .tabs li:after,
+.calendar-box,
+.calendar-box .calendar-header,
+.btn-options.active,
+.btn-options:active,
+/* .dlg-btn.primary, */
+.dropdown-menu li .no-checkmark.checked .menu-item-icon,
+.combobox li.selected,
+.combobox li.selected a.focus,
+.combobox li.selected a.hover,
+.combobox li.selected a:focus,
+.combobox li.selected a:hover,
+.listview:not(.disabled) > .item.selected,
+.switcher .sw-left,
+#history-list .item.selected,
+#plugins-box #plugins-list .item.selected,
+.style-off-tabs .toolbar .btn-header.active:not(.disabled),
+.style-off-tabs .toolbar .btn-header:active:not(.disabled),
+.style-off-tabs .toolbar .btn-users.active:not(.disabled),
+.style-off-tabs .toolbar .btn-users:active:not(.disabled),
+.dropdown-menu.lang-menu > li a.checked,
+.calendar-box .calendar-content .item.selected .name-month,
+.calendar-box .calendar-content .item.selected .name-year,
+.calendar-box .calendar-content .item.selected .number-day,
+.color-schemas-menu.checked,
+.color-schemas-menu.checked:focus,
+.color-schemas-menu.checked:hover,
+#file-menu-panel .panel-menu li.fm-btn.active:not(.disabled),
+#panel-help .dataview > .item:not(.header-name).selected,
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:focus,
+.dropdown-menu > .active > a:hover,
+.btn-toolbar.active:not(.disabled),
+.btn-toolbar:active:not(.disabled),
+.btn-group.split.over:not(.disabled) button:active,
+.btn-group.split.over:not(.disabled) button:active:hover,
+.btn-group.split.open > button:not(.active):last-of-type,
+.btn-group.split button.active:not(.disabled),
+.btn-category.active:not(.disabled),
+.btn-category:active:not(.disabled) {
+  background-color: #006c3b !important;
+}
+
+.extra #header-logo i,
+.loadmask > .brendpanel .loading-logo {
+  visibility: hidden;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 2dppx),
+  only screen and (min-resolution: 192dpi) {
+  .extra #header-logo i {
+    visibility: hidden !important;
+  }
 }

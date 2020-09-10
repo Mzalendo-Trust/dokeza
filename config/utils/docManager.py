@@ -109,7 +109,7 @@ def getFileUri(filename, req):
 def getCallbackUrl(filename, req):
     host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
-        return f'{host}{base.MEDIA_URL}{filename}'
+        return f'{host}/bills/track?filename={filename}&userAddress="bills"'
     user = req.user
     if not user.first_name:
         user.first_name = 'Mgeni'
@@ -184,7 +184,7 @@ def createSample(fileType, sample, req):
     filename = getCorrectName(f'{sampleName}{ext}', req)
     path = getStoragePath(filename, req)
     
-    with io.open(os.path.join('samples', f'{sampleName}{ext}'), 'rb') as stream:
+    with io.open(os.path.join('dokeza_2_0/static/samples/office', f'{sampleName}{ext}'), 'rb') as stream:
         createFile(stream, path, req, True)
     return filename
     

@@ -497,11 +497,15 @@ a.button {
     cursor: pointer;
 }
 
-input[type="reset"] {
-    background-color: #7b6a90;
+a.memo {
+     background:  #EDE9FF;
+     padding: 6px 7px;
+     border-radius: 4px;
+     color:  black;
 }
-a.button {
-    padding: 4px 5px;
+a.memo:hover {
+    background: #6900df;
+    color: white;
 }
 
 .button:active,
@@ -514,6 +518,7 @@ input[type="button"]:focus,
 input[type="submit"]:hover,
 input[type="button"]:hover {
     background: #6900df;
+    color: white;
 }
 
 .button[disabled],
@@ -529,6 +534,24 @@ input[type="submit"].default,
     border: none;
     font-weight: 400;
     background: #00522d;
+}
+
+.generate-row {
+    display: flex;
+    justify-content: flex-end;
+}
+
+a.highlight {
+    width: 13em;
+    padding: 12px 14px;
+    margin: 0 0 20px;
+    background-color: #42898A;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+}
+a.highlight:hover {
+    background: #6900df;
 }
 
 .button.default:active,

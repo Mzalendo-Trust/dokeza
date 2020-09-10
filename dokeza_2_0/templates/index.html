@@ -29,15 +29,15 @@
               <div class="dz-home__bills-{{ bill.get_bill_from_display|slugify|lower }} ">
                 <a href="{{ bill.get_absolute_url }}">
                   <h5 class="dz-home__bill-heading">{{ bill.title|capfirst }}</h5>
+                  <div class="bill-state {% if bill.bill_stage == 1 %}stage{% endif %}">Open for Memoranda <div class="reading-dates">{{ bill.first_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                  </div>
+                  <div class="bill-state {% if bill.bill_stage == 2 %}stage{% endif %}">In Committee <div class="reading-dates">{{ bill.second_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                  </div>
+                  <div class="bill-state {% if bill.bill_stage == 3 %}stage{% endif %}">Plenary Session <div class="reading-dates">{{ bill.third_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                  </div>
+                  <div class="bill-state {% if bill.bill_stage == 4 %}stage{% endif %}">Commentray Closed <div class="reading-dates">{{ bill.assented_date|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                  </div>
                 </a>
-                <div class="bill-state {% if bill.bill_stage == 1 %} stage {% endif %} ">Open for Memoranda <div class="reading-dates">{{ bill.first_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
-                </div>
-                <div class="bill-state {% if bill.bill_stage == 2 %} stage {% endif %}">In Committee <div class="reading-dates">{{ bill.second_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
-                </div>
-                <div class="bill-state {% if bill.bill_stage == 3 %} stage {% endif %}">Plenary Session <div class="reading-dates">{{ bill.third_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
-                </div>
-                <div class="bill-state {% if bill.bill_stage == 4 %} stage {% endif %}">Commentray Closed <div class="reading-dates">{{ bill.assented_date|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
-                </div>
                 <div class="dz-house">
                   <span class="dz-house__name dz-{{ bill.get_bill_from_display|slugify|lower }}">
                     {% if bill.get_bill_from_display == none %}

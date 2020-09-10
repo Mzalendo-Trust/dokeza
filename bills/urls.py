@@ -1,16 +1,17 @@
 from django.urls import path
 
 from .views import (
-    BillListView,
     AssemblyBillListView,
     SenateBillListView,
-    BillDisplayView,
+    BillListView,
     OpenMemoBillListView,
     CommitteeBillListView,
     PlenaryBillListView,
     RegulationListView,
-    edit, track
+    BillDetailView
 )
+
+from config.doc_views import actions
 
 app_name="bills"
 
@@ -22,6 +23,6 @@ urlpatterns = [
     path('committee/', CommitteeBillListView.as_view(), name='committee'),
     path('plenary/', PlenaryBillListView.as_view(), name='plenary'),
     path('regulations/', RegulationListView.as_view(), name='regulations'),
-    path("edit/", edit, name="bill-comment"),
-    path('<slug>/', BillDisplayView.as_view(), name='detail'),
+    path("<slug>/", BillDetailView.as_view(), name="detail"),
+    path("track", actions.track)
 ]

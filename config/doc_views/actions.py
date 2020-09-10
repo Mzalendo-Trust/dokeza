@@ -93,7 +93,7 @@ def createNew(request):
 @csrf_exempt
 def edit(request):
     filename = request.GET['filename']
-
+    print("edit - ", request)
     ext = fileUtils.getFileExt(filename)
 
     fileUri = docManager.getFileUri(filename, request)
@@ -183,6 +183,7 @@ def edit(request):
 @csrf_exempt
 def track(request):
     filename = request.GET['filename']
+    print("track - ", request)
     usAddr = request.GET['userAddress']
     response = {}
     

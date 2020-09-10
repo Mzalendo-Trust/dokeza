@@ -1,0 +1,64 @@
+// This opens the .docx that has comments
+builder.OpenFile("${InputDocument}");
+var oDocument = Api.GetDocument();
+GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport();
+builder.CloseFile();
+
+// Create the Comments Report
+builder.CreateFile("docx");
+var oCommentsReport = GlobalVariable["CommentsReport"];
+var oDocument = Api.GetDocument();
+var oParagraph = oDocument.GetElement(0);
+oParagraph.AddText("Annotations and Comments report for ${InputDocument}.");
+var nRows = 1;
+for (var sUserName in oCommentsReport) {
+  nRows += oCommentsReport[sUserName].length;
+}
+var nCols = 5;
+var oTable = Api.CreateTable(nCols, nRows);
+oDocument.Push(oTable);
+
+function privateFillCell(nCurRow, nCurCol, sText) {
+  var oRow = oTable.GetRow(nCurRow);
+  var oCell = oRow.GetCell(nCurCol);
+  var oCellContent = oCell.GetContent();
+  var oRun = oCellContent.GetElement(0).AddText(sText);
+  return {
+    Cell: oCell,
+    Run: oRun
+  };
+}
+privateFillCell(0, 0, "Date");
+privateFillCell(0, 1, "");
+privateFillCell(0, 2, "Annotated text");
+privateFillCell(0, 3, "Comment");
+privateFillCell(0, 4, "From");
+var nCurRow = 1;
+for (var sUserName in oCommentsReport) {
+  var arrUserComments = oCommentsReport[sUserName];
+  var arrCells = [];
+  for (var nIndex = 0, nCount = arrUserComments.length; nIndex < nCount; ++nIndex, ++nCurRow) {
+    var oCommentInfo = oCommentsReport[sUserName][nIndex];
+    arrCells.push(privateFillCell(nCurRow, 4, "").Cell);
+    privateFillCell(nCurRow, 0, (new Date(oCommentInfo["Date"])).toString());
+    privateFillCell(nCurRow, 1, oCommentInfo["IsAnswer"] === true ? "reply" : "comment");
+    privateFillCell(nCurRow, 2, oCommentInfo["QuoteText"] ? oCommentInfo["QuoteText"] : "");
+    privateFillCell(nCurRow, 3, oCommentInfo["CommentMessage"] ? oCommentInfo["CommentMessage"] : "");
+  }
+  var oMergedCell = oTable.MergeCells(arrCells);
+  if (oMergedCell) {
+    var oCellContent = oMergedCell.GetContent();
+    oCellContent.GetElement(0).AddText(sUserName);
+  } else if (arrCells.length > 0) {
+    var oCellContent = arrCells[0].GetContent();
+    oCellContent.GetElement(0).AddText(sUserName);
+  }
+}
+oTable.SetStyle(oDocument.GetStyle("Bordered"));
+oParagraph = Api.CreateParagraph();
+oParagraph.AddText("References");
+oDocument.Push(oParagraph);
+
+// Save the Comments report to a choice location
+builder.SaveFile("docx", "${OutputFilePath}");
+builder.CloseFile();

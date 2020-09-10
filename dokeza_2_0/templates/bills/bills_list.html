@@ -12,13 +12,12 @@
         {% for bill in object_list %}
           <div class="dz-bills__card">
             <div class="card p-1">
-              <a class="stored-edit text" href="edit?filename={{ bill.pdf }}" target="_blank">
+              <a href="{{ bill.get_absolute_url }}">
                 <div class="dz-home__bills-{{ bill.get_bill_from_display|slugify|lower }}">
                   <h5 class="dz-home__bill-heading">{{ bill.title|capfirst }}</h5>
                   <div class="bill-state stage">
                     {% if bill.bill_stage == 1 %}
-                      Open for Memoranda
-                      <div class="reading-dates">{{ bill.first_reading|date:"d M Y" }}</div>
+                      Open for Memoranda <div class="reading-dates">{{ bill.first_reading|date:"d M Y" }}</div>
                       {% elif bill.bill_stage == 2 %}
                       In Committee <div class="reading-dates">{{ bill.second_reading|date:"d M Y" }}</div>
                       {% elif bill.bill_stage == 3 %}
@@ -39,7 +38,7 @@
                 </div>
                 <p class="card-text">{{ bill.purpose|truncatewords:25 }}
                 </p>
-                <a href="edit?filename={{ bill.pdf }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+                <a href="{{ bill.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
               </div>
             </div>
           </div>

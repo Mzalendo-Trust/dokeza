@@ -58,7 +58,7 @@ services:
   documentserver:
     build:
       context: .
-      dockerfile: ./compose/local/onlyoffice/Dockerfile
+      dockerfile: ./compose/local/documentserver/Dockerfile
     container_name: documentserver
     env_file:
       - ./.envs/.local/.documentserver

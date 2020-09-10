@@ -27,7 +27,7 @@ class BillListView(ListView):
     """
     template_name = 'bills/bills_list.html'
     paginate_by = 12
-    queryset = Bill.objects.all()
+    queryset = Bill.objects.have_pdfs()
 
     def get_context_data(self, **kwargs):
         context = super(BillListView, self).get_context_data(**kwargs)
@@ -128,27 +128,28 @@ class RegulationListView(ListView):
 class BillDetailView(DetailView):
     """
     This is the view shows the details related to a particular bill.
-    It is on this page that annotations are made to the bill. This view has two comment forms, for the Bill and the Annotations.
+    On this page, there is an embedded MS Word engine that displays a Bill.
+    Annotations on comments and the comments on them can be made as it happens in a
+    Word document. Document level comments can also be done.
     """
     template_name = 'bills/bill_detail.html'
     model = Bill
 
     def get_context_data(self, *args, **kwargs):
         context = super(BillDetailView, self).get_context_data(*args, **kwargs)
-        print('bill context', context)
         if self.object.bill_from == 1:
             house = 'assembly'
         else:
             house = 'senate'
         
-        filename = request.GET['filename']
-        print(f'Bill request', request)
+        filename = str(self.object.pdf)
         ext = fileUtils.getFileExt(filename)
 
-        fileUri = docManager.getFileUri(filename, request)
-        docKey = docManager.generateFileKey(filename, request)
+        fileUri = docManager.getFileUri(filename, self.request)
+        docKey = docManager.generateFileKey(filename, self.request)
         fileType = fileUtils.getFileType(filename)
-        user = request.user
+        
+        user = self.request.user
         if user.is_anonymous:
             edMode = 'review'
             mode = 'view'
@@ -158,22 +159,11 @@ class BillDetailView(DetailView):
 
         canEdit = docManager.isCanEdit(ext)
         edType = 'desktop'
-        lang = request.COOKIES.get('ulang') if request.COOKIES.get('ulang') else 'en'
+        lang = self.request.COOKIES.get('ulang') if self.request.COOKIES.get('ulang') else 'en'
 
-        storagePath = docManager.getStoragePath(filename, request)
+        storagePath = docManager.getStoragePath(filename, self.request)
         meta = historyManager.getMeta(storagePath)
         infObj = None
-
-        if (meta):
-            infObj = {
-                'owner': meta['uname'],
-                'created': meta['created']
-            }
-        else:
-            infObj = {
-                'owner': 'Me',
-                'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S')
-            }
 
         edConfig = {
             'type': edType,
@@ -197,7 +187,7 @@ class BillDetailView(DetailView):
             'editorConfig': {
                 'mode': mode,
                 'lang': lang,
-                'callbackUrl': docManager.getCallbackUrl(filename, request),
+                'callbackUrl': docManager.getCallbackUrl(filename, self.request),
                 'user': {
                     'id': '1',
                     'name': 'Dokeza'
@@ -228,196 +218,15 @@ class BillDetailView(DetailView):
         if jwtManager.isEnabled():
             edConfig['token'] = jwtManager.encode(edConfig)
 
-        hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
-        context = {
-            'page': 'bills',
-            'stingo': house,
-            'cfg': json.dumps(edConfig),
-            'history': json.dumps(hist['history']) if 'history' in hist else None,
-            'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
-            'fileType': fileType,
-            'apiUrl': doc_config.DOC_SERV_API_URL
-        }
+        hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, self.request)
+
+        context['page'] = 'bills'
+        context['stingo'] = house
+        context['cfg'] = json.dumps(edConfig)
+        context['history'] = json.dumps(hist['history']) if 'history' in hist else None
+        context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
+        context['fileType'] = fileType
+        context['apiUrl'] = doc_config.DOC_SERV_API_URL
+        print('user', self.request.user)
         return context
     
-
-class BillDisplayView(View):
-    """
-    This view combines the Detail "GET" view and the Comment "POST" view.
-    """
-    def get(self, request, *args, **kwargs):
-        view = BillDetailView.as_view()
-        return view(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        view = BillCommentView.as_view()
-        return view(request, *args, **kwargs)
-
-@csrf_exempt
-def edit(request):
-
-    filename = request.GET['filename']
-    ext = fileUtils.getFileExt(filename)
-
-    fileUri = docManager.getFileUri(filename, request)
-    docKey = docManager.generateFileKey(filename, request)
-    fileType = fileUtils.getFileType(filename)
-    user = request.user
-    print('edit -', filename)
-    if user.is_anonymous:
-        user.username = 'Mgeni_mzalendo'
-        edMode = 'review'
-        mode = 'view'
-    else:
-        if not user.first_name:
-            user.first_name = 'Mgeni'
-        if not user.username:
-            user.username = f'{user.first_name}_{user.last_name}'
-        edMode = 'review'
-        mode = 'edit'
-
-    house = 'assembly'
-
-    canEdit = docManager.isCanEdit(ext)
-
-    edType = 'desktop'
-    lang = request.COOKIES.get('ulang') if request.COOKIES.get('ulang') else 'en'
-    
-    storagePath = docManager.getStoragePath(filename, request)
-    meta = historyManager.getMeta(storagePath)
-
-    infObj = None
-
-    if (meta):
-        infObj = {
-            'owner': meta['uname'],
-            'created': meta['created']
-        }
-    else:
-        infObj = {
-            'owner': user.username,
-            'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S')
-        }
-
-    edConfig = {
-        'type': edType,
-        'documentType': fileType,
-        'document': {
-            'title': filename,
-            'url': fileUri,
-            'fileType': ext[1:],
-            'key': docKey,
-            'info': infObj,
-            'permissions': {
-                'comment': True,
-                'download': False,
-                'edit': False,
-                'fillForms': False,
-                'modifyFilter': edMode != 'filter',
-                'modifyContentControl': False,
-                'review': False
-            }
-        },
-        'editorConfig': {
-            'mode': mode,
-            'lang': lang,
-            'callbackUrl': docManager.getCallbackUrl(filename, request),
-            'user': {
-                'id': f'{user.id}',
-                'name': f'{user.username}'
-            },
-            'embedded': {
-                'saveUrl': fileUri,
-                'embedUrl': fileUri,
-                'shareUrl': fileUri,
-                'toolbarDocked': 'top'
-            },
-            'customization': {
-                'about': True,
-                'customer': {
-                    'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
-                    'logo': doc_config.EXAMPLE_DOMAIN + 'static/images/dokeza-logo-banner.png',
-                    'email':'mzalendo.devops@gmail.com'
-                },
-                'compactHeader': False,
-                'comments': True,
-                'commentAuthorOnly': True,
-                'goback': {
-                    'url': doc_config.EXAMPLE_DOMAIN + 'bills/'
-                }
-            }
-        }
-    }
-
-    if jwtManager.isEnabled():
-        edConfig['token'] = jwtManager.encode(edConfig)
-
-    hist = historyManager.getHistoryObject(storagePath, filename, docKey, fileUri, request)
-    context = {
-        'page': 'bills',
-        'stingo': house,
-        'cfg': json.dumps(edConfig),
-        'history': json.dumps(hist['history']) if 'history' in hist else None,
-        'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
-        'fileType': fileType,
-        'apiUrl': doc_config.DOC_SERV_API_URL,
-    }
-    print('return - context to bill_detail')
-
-    return render(request, 'editor.html', context)
-
-
-@csrf_exempt
-def track(request):
-    filename = request.GET['filename']
-    usAddr = request.GET['userAddress']
-    print(f'track -',request, filename)
-    response = {}
-
-    try:
-        body = json.loads(request.body)
-
-        if jwtManager.isEnabled():
-            token = body.get('token')
-
-            if (not token):
-                token = request.headers.get('Authorization')
-                if token:
-                    token = token[len('Bearer '):]
-
-            if (not token):
-                raise Exception('Expected JWT')
-
-            body = jwtManager.decode(token)
-            if (body.get('payload')):
-                body = body['payload']
-
-        status = body['status']
-        download = body.get('url')
-
-        if (status == 2) | (status == 3): # mustsave, corrupted
-            path = docManager.getStoragePath(filename, usAddr)
-            histDir = historyManager.getHistoryDir(path)
-            versionDir = historyManager.getNextVersionDir(histDir)
-            changesUri = body.get('changesurl')
-
-            os.rename(path, historyManager.getPrevFilePath(versionDir, fileUtils.getFileExt(filename)))
-            docManager.saveFileFromUri(download, path)
-            docManager.saveFileFromUri(changesUri, historyManager.getChangesZipPath(versionDir))
-
-            hist = None
-            hist = body.get('changeshistory')
-            if (not hist) & ('history' in body):
-                hist = json.dumps(body.get('history'))
-            if hist:
-                historyManager.writeFile(historyManager.getChangesHistoryPath(versionDir), hist)
-
-            historyManager.writeFile(historyManager.getKeyPath(versionDir), body.get('key'))
-
-    except Exception as e:
-        response.setdefault('error', 1)
-        response.setdefault('message', e.args[0])
-
-    response.setdefault('error', 0)
-    return HttpResponse(json.dumps(response), content_type='application/json', status=200 if response['error'] == 0 else 500)
-

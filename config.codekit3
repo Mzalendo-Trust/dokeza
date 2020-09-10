@@ -5587,14 +5587,6 @@
 		"oAP": "/azure-pipelines.yml",
 		"oF": 0
 		},
-	"/backup_2020_07_07T09_49_38.sql.gz": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/backup_2020_07_07T09_49_38.sql.gz",
-		"oF": 0
-		},
 	"/bills/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -6577,20 +6569,28 @@
 		"oAP": "/compose/local/django/start",
 		"oF": 0
 		},
-	"/compose/local/onlyoffice/Dockerfile": {
+	"/compose/local/docbuilder/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/compose/local/onlyoffice/Dockerfile",
+		"oAP": "/compose/local/docbuilder/Dockerfile",
 		"oF": 0
 		},
-	"/compose/local/onlyoffice/run-document-server.sh": {
+	"/compose/local/documentserver/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/compose/local/onlyoffice/run-document-server.sh",
+		"oAP": "/compose/local/documentserver/Dockerfile",
+		"oF": 0
+		},
+	"/compose/local/documentserver/run-document-server.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/run-document-server.sh",
 		"oF": 0
 		},
 	"/compose/production.zip": {
@@ -6983,6 +6983,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/config/urls.py",
+		"oF": 0
+		},
+	"/config/utils/docbuilderHelper.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/utils/docbuilderHelper.py",
 		"oF": 0
 		},
 	"/config/utils/docManager.py": {
@@ -10259,6 +10267,14 @@
 		"oAP": "/doc_config.py",
 		"oF": 0
 		},
+	"/docbuilder/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docbuilder/__init__.py",
+		"oF": 0
+		},
 	"/docbuilder/__pycache__/__init__.cpython-38.pyc": {
 		"cB": 0,
 		"ft": 8192,
@@ -10307,12 +10323,68 @@
 		"oAP": "/docbuilder/__pycache__/views.cpython-38.pyc",
 		"oF": 0
 		},
+	"/docbuilder/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docbuilder/admin.py",
+		"oF": 0
+		},
+	"/docbuilder/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docbuilder/apps.py",
+		"oF": 0
+		},
+	"/docbuilder/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docbuilder/migrations/__init__.py",
+		"oF": 0
+		},
 	"/docbuilder/migrations/__pycache__/__init__.cpython-38.pyc": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/docbuilder/migrations/__pycache__/__init__.cpython-38.pyc",
+		"oF": 0
+		},
+	"/docbuilder/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docbuilder/models.py",
+		"oF": 0
+		},
+	"/docbuilder/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docbuilder/tests.py",
+		"oF": 0
+		},
+	"/docbuilder/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docbuilder/urls.py",
+		"oF": 0
+		},
+	"/docbuilder/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docbuilder/views.py",
 		"oF": 0
 		},
 	"/docker-sync.yml": {
@@ -10371,20 +10443,31 @@
 		"oAP": "/docs/development.rst",
 		"oF": 0
 		},
+	"/docs/docbuilder-install.md": {
+		"cB": 0,
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/docbuilder-install.html",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
 	"/docs/docker.rst": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/docs/docker.rst",
-		"oF": 0
-		},
-	"/docs/errors.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/docs/errors.txt",
 		"oF": 0
 		},
 	"/docs/index.rst": {
@@ -10513,54 +10596,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/dokeza_2_0/contrib/sites/migrations/__init__.py",
-		"oF": 0
-		},
-	"/dokeza_2_0/samples/new.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/samples/new.docx",
-		"oF": 0
-		},
-	"/dokeza_2_0/samples/new.pptx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/samples/new.pptx",
-		"oF": 0
-		},
-	"/dokeza_2_0/samples/new.xlsx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/samples/new.xlsx",
-		"oF": 0
-		},
-	"/dokeza_2_0/samples/sample.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/samples/sample.docx",
-		"oF": 0
-		},
-	"/dokeza_2_0/samples/sample.pptx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/samples/sample.pptx",
-		"oF": 0
-		},
-	"/dokeza_2_0/samples/sample.xlsx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/samples/sample.xlsx",
 		"oF": 0
 		},
 	"/dokeza_2_0/static/admin/css/base-min.css": {
@@ -23342,6 +23377,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/dokeza_2_0/static/css/stylesheet.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/css/stylesheet-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/dokeza_2_0/static/dev/fonts/fontawesome-webfont.eot": {
 		"cB": 0,
 		"ft": 8192,
@@ -26048,6 +26093,17 @@
 		"oAP": "/dokeza_2_0/static/images/text.ico",
 		"oF": 0
 		},
+	"/dokeza_2_0/static/js/jscript.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/jscript-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/js/project.js": {
 		"bF": 0,
 		"ft": 64,
@@ -26069,6 +26125,110 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/dokeza_2_0/static/samples/builder/commentReport.docbuilder": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/builder/commentReport.docbuilder",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/builder/docx.docbuilder": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/builder/docx.docbuilder",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/builder/pdf.docbuilder": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/builder/pdf.docbuilder",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/builder/sample.docbuilder": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/builder/sample.docbuilder",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/builder/xlsx.docbuilder": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/builder/xlsx.docbuilder",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/memorandum.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/memorandum.docx",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/new.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/new.docx",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/new.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/new.pptx",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/new.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/new.xlsx",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/petition.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/petition.docx",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/sample.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/sample.docx",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/sample.pptx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/sample.pptx",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/office/sample.xlsx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/office/sample.xlsx",
+		"oF": 0
 		},
 	"/dokeza_2_0/static/sass/custom_bootstrap_vars.scss": {
 		"aP": 0,
@@ -26710,6 +26870,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/comments/confirm_delete.html",
+		"oF": 0
+		},
+	"/dokeza_2_0/templates/docbuilder/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/docbuilder/index.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/editor.html": {
@@ -28344,6 +28512,110 @@
 		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx",
 		"oF": 0
 		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/key.txt",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/2/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/key.txt",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/National_Youth_Council_Amendment_Bill_2019_compressed.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/National_Youth_Council_Amendment_Bill_2019_compressed.docx",
+		"oF": 0
+		},
 	"/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -28358,6 +28630,38 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf",
+		"oF": 0
+		},
+	"/media/ElectionLaws_Amendment__No.2_Bill_2018.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018.docx",
+		"oF": 0
+		},
+	"/media/ElectionLaws_Amendment__No.2_Bill_2018_fqZI55M.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018_fqZI55M.docx",
+		"oF": 0
+		},
+	"/media/ElectionLaws_Amendment__No.2_Bill_2018_jWGaPwz.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018_jWGaPwz.docx",
+		"oF": 0
+		},
+	"/media/ElectionLaws_Amendment__No.2_Bill_2018_ZvjDX6h.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018_ZvjDX6h.docx",
 		"oF": 0
 		},
 	"/merge_production_dotenvs_in_dotenv.py": {
@@ -29758,94 +30062,6 @@
 		"oAP": "/requirements/production.txt",
 		"oF": 0
 		},
-	"/samples/bill.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/bill.pdf",
-		"oF": 0
-		},
-	"/samples/memorandum.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/memorandum.docx",
-		"oF": 0
-		},
-	"/samples/new.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/new.docx",
-		"oF": 0
-		},
-	"/samples/new.pptx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/new.pptx",
-		"oF": 0
-		},
-	"/samples/new.xlsx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/new.xlsx",
-		"oF": 0
-		},
-	"/samples/petition.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/petition.docx",
-		"oF": 0
-		},
-	"/samples/sample-bill.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/sample-bill.docx",
-		"oF": 0
-		},
-	"/samples/sample-bill.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/sample-bill.pdf",
-		"oF": 0
-		},
-	"/samples/sample.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/sample.docx",
-		"oF": 0
-		},
-	"/samples/sample.pptx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/sample.pptx",
-		"oF": 0
-		},
-	"/samples/sample.xlsx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/samples/sample.xlsx",
-		"oF": 0
-		},
 	"/schedule/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -30821,7 +31037,7 @@
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"allowInjectionReloads": 1,
-	"alwaysUseExternalServer": 1,
+	"alwaysUseExternalServer": 0,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
@@ -32330,7 +32546,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://localhost:8000",
+	"externalServerAddress": "http://localhost:8888",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

@@ -1,10 +1,7 @@
 {% extends "bills/base_bill.html" %}
 {% load static %} {% load urlify %} {% load crispy_forms_tags %}
 {% load social_share %}
-{% block title %}Bill: {{ object.title }}{% endblock title %}
-{% block extra_js %}
-  <script type="text/javascript" src=" {% static 'dist/js/vendor/js.cookie.min.js' %} "></script>
-{% endblock extra_js %}
+{% block title %}Bill: {{ bill.title }}{% endblock title %}
 {% block extra_css %}
   <link rel="icon" href="{% static 'images/'|add:fileType|add:'.ico' %}" type="image/x-icon" />
   <link rel="stylesheet" type="text/css" href="{% static 'css/editor.css' %}" />
@@ -14,7 +11,7 @@
   <a href="{% url 'bills:senate' %}">Senate</a>
 {% else %}
   <a href="{% url 'bills:assembly' %}">National Assembly</a>
-{% endif %} » {{ object.title }}
+{% endif %} » {{ bill.title }}
 {% endblock breadcrumbs %}
 {% block content %}
 <!--Main-->
@@ -24,32 +21,34 @@
     <!--Card-->
     <div class="card">
       <h3 class="dz--card_{{ bill.get_bill_from_display|slugify|lower }}-bill card-header">
-      {{ object.title }}
+      {{ bill.title }}
       <br><br>
       {% if bill.get_bill_from_display|slugify|lower == 'senate' %}
-        <span class="dz--card_bill-desc">Senate Bill</span>
+        <span class="dz--card_bill-desc">A Senate Bill</span>
       {% else %}
-        <span class="dz--card_bill-desc">National Assembly Bill</span>
+        <span class="dz--card_bill-desc">A National Assembly Bill</span>
       {% endif %}
       </h3>
       <div class="card-block">
         <div class="dz-bill_details">
           <h4 class="card-title">SPONSOR: {{ bill.sponsor }}</h4>
           <div class="bill-specs">
-            <p class="bill-dates"><strong> {{ bill.annotations|length }}</strong> Annotations | <strong>{{ bill.comments.count }}</strong> Comments<br />
+            <p class="bill-dates">
+              <strong> {{ bill.annotations|length }}</strong> Annotations | <strong>{{ bill.comments.count }}</strong> Comments<br />
             <strong>Last updated:</strong> {{bill.updated_date|date:"d M Y"|default:"--"}}</p>
             <p class="bill-actions">
-              Highlight text to <span class="dz--btn_annotate btn btn-primary btn-sm">Annotate</span></p>
-              <p class="bill-actions">Click to leave a <a href="#comments" class="dz--btn_comment btn btn-primary btn-sm">Comment</a>
+             The bill has been presented using a <strong>Microsoft Word</strong> document format. 
+             <br><br> Please right-click to highlight text and add a comment on the text.
+             <br><br> You can also add a comment to the document at the bottom of the reader.
             </p>
           </div>
           <div class="bill-pic">
-            {% if object.bill_pic %}
-              <img class="bill-cover" src="{{ object.bill_pic.url }}" alt="">
+            {% if bill.bill_pic %}
+              <img class="bill-cover" src="{{ bill.bill_pic.url }}" alt="">
             {% else %}
-              {% if object.bill_from == 1 %}
+              {% if bill.bill_from == 1 %}
                 <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="">
-                {% elif object.bill_from == 2 %}
+                {% elif bill.bill_from == 2 %}
                 <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_senate.svg' %}" alt="">
               {% else %}
                 <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft.svg' %}" alt="">
@@ -57,13 +56,6 @@
             {% endif %}
           </div>
         </div>
-        <hr>
-        <p class="card-text">
-          <h6 class="dz--aside_title">Clause</h6>
-          <ol class="ul">
-            {% for list in toc %} {{ list|safe|capfirst }} {% endfor %}
-          </ol>
-        </p>
       </div>
     </div>
     <!--END Card-->

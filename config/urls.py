@@ -46,7 +46,7 @@ urlpatterns = [
     path("ideas/", include("ideas.urls", namespace="ideas")),
     path("other_docs/", include("other_docs.urls", namespace="other_docs")),
     path("comments/", include("comments.urls", namespace="comments")),
-    path("ckeditor/", include("ckeditor_uploader.urls")),
+    path('docbuilder/', include('docbuilder.urls', namespace="docbuilder")),
     path('analysis/', include('posts.urls', namespace='posts')),
     path('events/', include('public_participation.urls', namespace='public_participation')),
     path('sitemap/', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
@@ -71,10 +71,10 @@ urlpatterns += [
 
     # Access APIs
     # path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
-    # path('api/bills/', include('bills.api.urls', namespace='bills-api')),
+    path('api/bills/', include('bills.api.urls', namespace='bills-api')),
     # path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
     # path('api/comments/', include('comments.api.urls', namespace='comments-api')),
-    # path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))
+    path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))
 ]
 
 if settings.DEBUG:

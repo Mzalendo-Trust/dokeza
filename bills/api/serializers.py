@@ -80,24 +80,3 @@ class BillListSerializer(ModelSerializer):
             'created',
         ]
 
-
-"""
-from bills.models import Bill
-from bills.api.serializers import BillDetailSerializer
-
-data = {
-    "title": "A serious Bill",
-    "slug": "a-serious-Bill",
-    "content": "Distinctively strategize viral imperatives without vertical technology. Assertively promote top-line models whereas tactical action items. Appropriately benchmark B2C.",
-    "publish": "2016-12-27",
-}
-
-obj = Bill.objects.get(pk=2)
-new_item = BillDetailSerializer(obj, data=data)
-if new_item.is_valid():
-    new_item.save()
-else:
-    print(new_item.errors)
-
-
-"""
