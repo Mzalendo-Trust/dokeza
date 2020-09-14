@@ -607,6 +607,9 @@ p.user-action {
   color: $white;
   width: 100%;
   z-index: 100;
+  @media screen and (max-width: $mobile-land) {
+   bottom: auto;
+  }
 
   .container {
     padding: 1rem;
@@ -615,7 +618,7 @@ p.user-action {
     min-height: 11em;
     max-width: 1140px;
     justify-content: center;
-
+    
     @media screen and (min-width: $tablet-land + 1) {
       max-width: 1440px;
     }
@@ -1557,11 +1560,12 @@ p.user-action {
 
 .dz-bill {
   display: flex;
+  flex-wrap: wrap;
   flex: 0 1 100%;
-
   aside {
-    @media screen and (max-width: $tablet-port - 1) {
-      width: 100%;
+    flex: 0 1 25%;
+    @media screen and (max-width: $mobile-land - 1) {
+      flex: 0 1 100%;
     }
 
     @media screen and (min-width: $tablet-port) and (max-width: $desktop-small - 1) {
@@ -2000,7 +2004,12 @@ p.user-action {
 
 .bill-content {
   width: 100%;
-
+  @media screen and (max-width: $tablet-port - 1) {
+    width: 100%;
+  }
+  @media screen and (min-width: $tablet-port) {
+    flex: 0 1 75%;
+  }
   h2 {
     font-size: 1.4rem;
     line-height: 1.6rem;

@@ -14,11 +14,12 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
         adduser \
         apt-utils \
         bomstrip \
+        curl \
         htop \
         libasound2 \
         libboost-regex-dev \
         libcairo2 \
-        libcurl3 \
+        libcurl4 \
         libcurl3-gnutls \
         libgconf2-4 \
         libgtk-3-0 \
@@ -59,6 +60,9 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     rm -rf /var/lib/apt/lists/*
 
 COPY ./config/ds-config /app/ds/setup/config/
+COPY ./compose/local/documentserver/img /opt/img
+COPY ./compose/local/documentserver/overides.css /opt/overides.css
+
 COPY ./compose/local/documentserver/run-document-server.sh /app/ds/run-document-server.sh
 
 EXPOSE 80 443
@@ -79,6 +83,10 @@ RUN echo "$REPO_URL" | tee /etc/apt/sources.list.d/ds.list && \
     rm -rf /var/log/$COMPANY_NAME && \
     rm -rf /var/lib/apt/lists/*    
 
+RUN cp -rf /opt/img /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/img  && \
+    cat /opt/overides.css >> /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/css/app.css
+
 VOLUME /var/log/$COMPANY_NAME /var/lib/$COMPANY_NAME /var/www/$COMPANY_NAME/Data /var/lib/postgresql /var/lib/rabbitmq /var/lib/redis /usr/share/fonts/truetype/custom
+
 
 ENTRYPOINT /app/ds/run-document-server.sh

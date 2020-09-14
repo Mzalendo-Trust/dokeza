@@ -1,7 +1,7 @@
 {% extends 'admin/change_form.html' %}
 {% load i18n %}
 {% block after_related_objects %}
-   {% if object_id %}
+  {% if object_id %}
   <div class="generate-row">
     <a href="{% url 'docbuilder:generate-report' object_id 'comments' %}" class="button highlight" />{% trans 'Generate Comments Report' %}</a>
   </div>

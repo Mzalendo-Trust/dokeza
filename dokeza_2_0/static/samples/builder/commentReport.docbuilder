@@ -4,9 +4,11 @@ var oDocument = Api.GetDocument();
 GlobalVariable["CommentsReport"] = oDocument.GetCommentsReport();
 builder.CloseFile();
 
-// Create the Comments Report
+// Get the Comments Report
 builder.CreateFile("docx");
 var oCommentsReport = GlobalVariable["CommentsReport"];
+
+// Create a new document with the name oDocument and put a title
 var oDocument = Api.GetDocument();
 var oParagraph = oDocument.GetElement(0);
 oParagraph.AddText("Annotations and Comments report for ${InputDocument}.");
@@ -14,10 +16,30 @@ var nRows = 1;
 for (var sUserName in oCommentsReport) {
   nRows += oCommentsReport[sUserName].length;
 }
+
+// Count the columns that the table needs and create the table
 var nCols = 5;
 var oTable = Api.CreateTable(nCols, nRows);
+oTable.SetWidth("percent", 100);
+oTable.SetTableBorderTop("single", 5, 0, 0, 0, 0);
+oTable.SetTableBorderBottom("single", 5, 0, 0, 0, 0);
+oTable.SetTableBorderLeft("single", 5, 0, 0, 0, 0);
+oTable.SetTableBorderRight("single", 5, 0, 0, 0, 0);
+oTable.SetTableBorderInsideV("single", 5, 0, 0, 0, 0);
+oTable.SetTableBorderInsideH("single", 5, 0, 0, 0, 0);
+oCell = oTable.GetRow(0).GetCell(0);
+oCell.SetWidth("percent", 25);
+oCell = oTable.GetRow(0).GetCell(1);
+oCell.SetWidth("percent", 25);
+oCell = oTable.GetRow(0).GetCell(2);
+oCell.SetWidth("percent", 15);
+oCell = oTable.GetRow(0).GetCell(3);
+oCell.SetWidth("percent", 25);
+oCell = oTable.GetRow(0).GetCell(4);
+oCell.SetWidth("percent", 10);
 oDocument.Push(oTable);
 
+// Create a function to go through the table cells and style
 function privateFillCell(nCurRow, nCurCol, sText) {
   var oRow = oTable.GetRow(nCurRow);
   var oCell = oRow.GetCell(nCurCol);
@@ -28,11 +50,13 @@ function privateFillCell(nCurRow, nCurCol, sText) {
     Run: oRun
   };
 }
-privateFillCell(0, 0, "Date");
-privateFillCell(0, 1, "");
-privateFillCell(0, 2, "Annotated text");
-privateFillCell(0, 3, "Comment");
-privateFillCell(0, 4, "From");
+privateFillCell(0,0, "Date", "bold");
+privateFillCell(0,1, "Annotated text ", "bold");
+privateFillCell(0,2, "Type of Comment");
+privateFillCell(0,3, "Comment", "bold");
+privateFillCell(0,4, "From", "bold");
+
+// Create a function to go through the table cells and insert content
 var nCurRow = 1;
 for (var sUserName in oCommentsReport) {
   var arrUserComments = oCommentsReport[sUserName];
@@ -41,8 +65,8 @@ for (var sUserName in oCommentsReport) {
     var oCommentInfo = oCommentsReport[sUserName][nIndex];
     arrCells.push(privateFillCell(nCurRow, 4, "").Cell);
     privateFillCell(nCurRow, 0, (new Date(oCommentInfo["Date"])).toString());
-    privateFillCell(nCurRow, 1, oCommentInfo["IsAnswer"] === true ? "reply" : "comment");
-    privateFillCell(nCurRow, 2, oCommentInfo["QuoteText"] ? oCommentInfo["QuoteText"] : "");
+    privateFillCell(nCurRow, 1, oCommentInfo["QuoteText"] ? oCommentInfo["QuoteText"] : "");
+    privateFillCell(nCurRow, 2, oCommentInfo["IsAnswer"] === true ? "reply" : "comment");
     privateFillCell(nCurRow, 3, oCommentInfo["CommentMessage"] ? oCommentInfo["CommentMessage"] : "");
   }
   var oMergedCell = oTable.MergeCells(arrCells);
@@ -54,9 +78,15 @@ for (var sUserName in oCommentsReport) {
     oCellContent.GetElement(0).AddText(sUserName);
   }
 }
-oTable.SetStyle(oDocument.GetStyle("Bordered"));
+
 oParagraph = Api.CreateParagraph();
-oParagraph.AddText("References");
+oRun = Api.CreateRun();
+oRun.SetColor(58,132,71);
+oRun.SetBold(true);
+oRun.SetFontSize(28);
+oRun.SetFontFamily("Tahoma");
+oRun.AddText("References");
+oParagraph.AddElement(oRun);
 oDocument.Push(oParagraph);
 
 // Save the Comments report to a choice location

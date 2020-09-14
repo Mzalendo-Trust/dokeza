@@ -40,12 +40,15 @@ def generate_report(doc_with_comments_path, builder_script):
     print('report generation start')
     # Make sure that this is a `docbuilder` script
     builder_script = cut_builder_script(builder_script)
+    print(builder_script)
 
     # Get the temp builderScript we are building
     temp_file_path = tempfile.mkstemp(suffix='.docbuilder')[1]
+    print('temp_file', temp_file_path)
     
     # Get the temp name of the report to be saved
     output_file_path = doc_with_comments_path.split("/")[-1].replace(".docx", "-comment-report.docx")
+    print('output_file_path', output_file_path)
 
     # Add the bill name and the sample name into the builder script   
     builder_script = builder_script.replace('${InputDocument}', doc_with_comments_path)
@@ -65,17 +68,17 @@ def cut_builder_script(builder_script):
     createFunction = "builder.CreateFile"
     saveFunction = "builder.SaveFile"
     
-    if re.search(openFunction, builder_script) == None:
-        print(builder_script)
-        raise Exception("OpenFile is not available. Is this file in the .docbuilder format?")
+    # if re.search(openFunction, builder_script) == None:
+    #     print(builder_script)
+    #     raise Exception("OpenFile is not available. Is this file in the .docbuilder format?")
 
-    if re.search(createFunction, builder_script) == None:
-        print(builder_script)
-        raise Exception("CreateFile is not available. Is this file in the .docbuilder format?")
+    # if re.search(createFunction, builder_script) == None:
+    #     print(builder_script)
+    #     raise Exception("CreateFile is not available. Is this file in the .docbuilder format?")
     
-    if re.search(saveFunction, builder_script) == None:
-        print(builder_script)
-        raise Exception("SaveFile is not available. Is this file in the .docbuilder format?")
+    # if re.search(saveFunction, builder_script) == None:
+    #     print(builder_script)
+    #     raise Exception("SaveFile is not available. Is this file in the .docbuilder format?")
 
     return builder_script
     
