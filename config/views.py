@@ -11,8 +11,8 @@ from posts.models import Post, Memorandum
 
 mnames = "January February March April May June July August September October November December"
 mnames = mnames.split()
-
 class JSONResponse(HttpResponse):
+
     """
     An HttpResponse that renders its content into JSON.
     """
@@ -35,30 +35,28 @@ class HomeView(TemplateView):
         context['bills'] = Bill.objects.filter(private=False).order_by('-updated_date')
         context['other_docs'] = Doc.objects.order_by('-created')
         context['news'] = Post.objects.all().filter(draft=False).order_by('-publish')
-        # context['events'] = PublicEvent.objects.all()
         context['memoranda'] = Memorandum.objects.all().order_by('-deadline')
         context['page'] = 'home'
-        # context['stingo'] = 'latest'
+        context['stingo'] = 'latest'
         return context
 
 
-class AboutView(TemplateView):
-    template_name = 'pages/about.html'
+class HowToView(TemplateView):
+    template_name = 'pages/how_to.html'
 
     def get_context_data(self, **kwargs):
-        context = super(AboutView, self).get_context_data(**kwargs)
-        context['page'] = 'home'
-        context['stingo'] = 'about'
+        context = super(HowToView, self).get_context_data(**kwargs)
+        context['page'] = 'how_to'
+        context['stingo'] = 'use_dokeza'
         return context
 
-
-class HelpView(TemplateView):
-    template_name = 'pages/help.html'
+class FaqView(TemplateView):
+    template_name = 'pages/faqs.html'
 
     def get_context_data(self, **kwargs):
-        context = super(HelpView, self).get_context_data(**kwargs)
-        context['page'] = 'help'
-        context['stingo'] = 'help'
+        context = super(FaqView, self).get_context_data(**kwargs)
+        context['page'] = 'how_to'
+        context['stingo'] = 'faqs'
         return context
 
 
@@ -67,18 +65,8 @@ class PrivacyView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(PrivacyView, self).get_context_data(**kwargs)
-        context['page'] = 'help'
+        context['page'] = 'how_to'
         context['stingo'] = 'privacy'
-        return context
-
-
-class ContactView(TemplateView):
-    template_name = 'pages/contacts.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(ContactView, self).get_context_data(**kwargs)
-        context['page'] = 'home'
-        context['stingo'] = 'contacts'
         return context
 
 
@@ -89,10 +77,39 @@ class SearchView(TemplateView):
         context = super(SearchView, self).get_context_data(**kwargs)
         search_items = []
         context['search_items'] = search_items
-        context['page'] = 'help'
+        context['page'] = 'how_to'
         context['stingo'] = 'search'
         return context
 
+
+class ContactView(TemplateView):
+    template_name = 'pages/contacts.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ContactView, self).get_context_data(**kwargs)
+        context['page'] = 'contacts'
+        context['stingo'] = 'contact_us'
+        return context
+
+
+class ResourcesView(TemplateView):
+    template_name = 'public_participation/memoranda_list.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(ResourcesView, self).get_context_data(**kwargs)
+        context['page'] = 'resources'
+        context['stingo'] = 'memoranda'
+        return context
+
+
+class AboutView(TemplateView):
+    template_name = 'pages/about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutView, self).get_context_data(**kwargs)
+        context['page'] = 'contacts'
+        context['stingo'] = 'about'
+        return context
 
 
 class CalendarView(TemplateView):

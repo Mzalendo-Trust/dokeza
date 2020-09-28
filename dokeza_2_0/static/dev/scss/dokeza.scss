@@ -34,8 +34,8 @@
  */
 
 // 1. CONFIGURATION AND HELPERS
-@import './variables';
-@import './overides-fullcalender';
+@import "./variables";
+@import "./overides-fullcalender";
 
 .dz-bg-orange {
   background-color: $dz-clr--orange;
@@ -43,11 +43,11 @@
 
 // 2. VENDORS
 //    Bootstrap
-@import '~bootstrap/scss/bootstrap.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 //    Font-awesome
-@import '~font-awesome/scss/font-awesome';
+@import "~font-awesome/scss/font-awesome";
 //    Fullcalendar
-@import '~fullcalendar/main.min.css';
+@import "~fullcalendar/main.min.css";
 
 // 3. BASE
 body {
@@ -181,14 +181,14 @@ p.user-action {
 //    Header
 .dz-header {
   background-color: $brand-primary;
-  background-image: linear-gradient(to right, $black 15%, $brand-primary 15%);
+  background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
 
   @include media-breakpoint-up(lg) {
-    background-image: linear-gradient(to right, $black 15%, $brand-primary 15%);
+    background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
   }
 
   @media (min-width: 2000px) {
-    background-image: linear-gradient(to right, $black 15%, $brand-primary 15%);
+    background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
   }
 }
 
@@ -317,7 +317,7 @@ p.user-action {
   .navbar-toggler-icon {
     width: 30px;
     height: 30px;
-    background-image: url('data:image/svg+xml;charset=utf8, %3Csvg viewBox=\'0 0 30 30\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath stroke=\'rgba(255, 255, 255, 1)\' stroke-width=\'3\' stroke-linecap=\'butt\' stroke-miterlimit=\'10\' d=\'M4 8h24M4 16h24M4 24h24\'/%3E%3C/svg%3E');
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='3' stroke-linecap='butt' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 
   .nav-buttons {
@@ -337,6 +337,10 @@ p.user-action {
 
     &.active {
       background-color: darken($brand-primary, 10%);
+    }
+    &.sub-active {
+      background-color:white;
+      color:darken($brand-primary, 10%);
     }
   }
 
@@ -521,8 +525,10 @@ p.user-action {
   }
 
   &__submenu {
-    position: sticky;
-    top: 0;
+    // position: fixed;
+    // top: 7em;
+    // left: 3em;
+    // width: 20em;
     z-index: 1020;
     display: flex;
     flex-direction: column;
@@ -549,7 +555,7 @@ p.user-action {
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-
+    padding-top: 1em;
     &-heading {
       font-weight: 500;
       font-size: 1.8rem;
@@ -608,7 +614,7 @@ p.user-action {
   width: 100%;
   z-index: 100;
   @media screen and (max-width: $mobile-land) {
-   bottom: auto;
+    bottom: auto;
   }
 
   .container {
@@ -618,7 +624,7 @@ p.user-action {
     min-height: 11em;
     max-width: 1140px;
     justify-content: center;
-    
+
     @media screen and (min-width: $tablet-land + 1) {
       max-width: 1440px;
     }
@@ -631,6 +637,15 @@ p.user-action {
   ul {
     font-size: 0.9rem;
     font-weight: 300;
+    li {
+      width: 100%;
+      padding: 0.5em 0;
+      img.cipesa-logo {
+        width: 100%;
+        max-width:280px;
+        height:100%;
+      }
+    }
   }
 
   @extend .dz-main;
@@ -646,13 +661,13 @@ p.user-action {
 //    page__home
 .dz-home {
   flex: 1 1 100%;
-
   @media screen and (min-width: $desktop-small) and (max-width: $desktop) {
     flex: 1 1 100%;
   }
 
   @media screen and (min-width: $desktop) {
     flex: 1 1 66%;
+    padding: 0 0.5em;
   }
 
   //    page__home--bills
@@ -689,9 +704,89 @@ p.user-action {
 
     &-none {
       padding: 1rem;
-      background-color: $dz-clr--lightgreen;
+      background-color: $brand-primary;
     }
-
+    .image-content {
+      position: relative;
+      display: flex;
+      flex: 1 0 100%;
+      flex-wrap: nowrap;
+      min-height: 15em;
+      height: auto;
+      overflow: hidden;
+      margin: 1em 0;
+      .prev-img,
+      .next-img {
+        flex: 0 1 5%;
+        padding: 0.5em;
+        display: flex;
+        align-items: center;
+        height: 20em;
+        z-index: 1600;
+        background-color: $brand-primary;
+        .left-arrow,
+        .right-arrow {
+          img {
+            width: 100%;
+          }
+        }
+      }
+      .slider-holder {
+        flex: 0 1 100%;
+        .images-container {
+          position: relative;
+          display: flex;
+          justify-content: space-around;
+          flex: 1 0 100%;
+          overflow: hidden;
+          height: 28em;
+          border-top-left-radius: 0.5em;
+          border-top-right-radius: 0.5em;
+          .image-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 25em;
+            padding: 0 0.5em;
+            .image-wrapper {
+              width: 100%;
+              height: 20em;
+              overflow: visible;
+              
+              img {
+                width: 100%;
+              }
+            }
+            .pic-text {
+              position: absolute;
+              top: 20em;
+              width: 98%;
+              background-color: rgba(white, 0.8);
+              z-index: 500;
+              height: 8em;
+              padding: 1em;
+              // border: 1px solid rgba(0, 0, 0, 0.125);
+              // border-radius: 0.5em;
+              // border-top: 0;
+              // border-top-left-radius: 0;
+              // border-top-right-radius: 0;
+              h2, p {
+                color: darken($brand-primary, 20%);
+              }
+              p {
+                font-size: 1.1em;
+                line-height: 1.1em;
+                font-weight: 300;
+              }
+            }
+          }
+        }
+      }
+    }
     .p-1 {
       padding: 0 !important;
     }
@@ -736,11 +831,13 @@ p.user-action {
 
     &-caucus {
       padding: 0.75rem;
-      background-color: linear-gradient(108deg,
+      background-color: linear-gradient(
+        108deg,
         $dz-clr--lightbrown 0%,
         $dz-clr--lightbrown 50%,
         $dz-clr--lightpurple 50%,
-        $dz-clr--lightpurple 100%);
+        $dz-clr--lightpurple 100%
+      );
     }
   }
 
@@ -864,7 +961,7 @@ p.user-action {
 }
 
 .dz-home__events {
-  margin-bottom: 0;
+  margin: 1em 0 0;
   padding: 0 0.5rem;
   flex: 1 1 100%;
 
@@ -875,7 +972,7 @@ p.user-action {
 
   @media screen and (min-width: $desktop) {
     flex: 1 1 33%;
-    padding: 0 0 0.5rem 0.5rem;
+    padding: 0 0.5em 1em;
   }
 
   &-heading {
@@ -900,13 +997,6 @@ p.user-action {
   font-size: 0.8rem;
   line-height: 1.2rem;
   flex: 1 0 50%;
-}
-
-.dz-faqs {
-  flex: 1 1 100%;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 960px;
 }
 
 .dz-house {
@@ -1052,17 +1142,45 @@ p.user-action {
 }
 
 //      page_about
+.dz-howto {
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 80%;
+  max-width: 960px;
+}
+.how-images {
+  display: flex;
+  padding: 1em;
+  width: 640px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  img {
+    width: 100%;
+  }
+}
+
+.dz-faqs {
+  flex: 1 1 auto;
+  padding-top: 1em;
+  margin: 0 auto;
+  max-width: 960px;
+}
 .dz-about,
-.dz-help {
-  flex: 1 1 100%;
+{
+  flex: 1 1 auto;
 
   @media screen and (min-width: $mobile-land + 1) {
     flex: 0 1 50%;
-    padding: 0.5rem 0.5rem 0 0;
+    padding: 1em 0.5em 0 0;
   }
 
   &__submenu {
-    padding: 0.5rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    left: 3em;
+    width: 18em;
 
     &--list {
       position: relative;
@@ -1090,6 +1208,7 @@ p.user-action {
 
 //      page_news
 .dz-news {
+  padding-top: 1em;
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 100%;
@@ -1142,7 +1261,8 @@ p.user-action {
 
   p {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0.3em auto;
+
   }
 
   &__excerpt {
@@ -1171,7 +1291,6 @@ p.user-action {
     }
 
     @include media-breakpoint-up(md) {
-
       h3,
       h4 {
         margin: 0;
@@ -1248,7 +1367,7 @@ p.user-action {
 
       @include media-breakpoint-up(sm) {
         &:before {
-          content: ' | ';
+          content: " | ";
         }
 
         flex: 1 0 40%;
@@ -1311,7 +1430,6 @@ p.user-action {
 
 //      page_contacts
 .dz-contacts {
-
   p,
   ul {
     font-weight: 300;
@@ -1379,7 +1497,7 @@ p.user-action {
   }
 
   &__content {
-    padding: 0;
+    padding-top: 1em;
   }
 
   .p-1 {
@@ -1623,7 +1741,7 @@ p.user-action {
     }
 
     @media screen and (min-width: $desktop-small) {
-      width: 300px;
+      width: 310px;
     }
 
     .card-block {
@@ -2100,12 +2218,7 @@ p.user-action {
 }
 
 .dz-events__home {
-  .dz-events__calender {
-    margin: 0;
-  }
-}
-
-.dz-events__home {
+  padding: 1em 0.5em 0;
   border: 0;
   margin: 0;
 
@@ -2152,8 +2265,7 @@ p.user-action {
 
 .dz-memoranda,
 .dz-petitions {
-  min-height: 10rem;
-
+ 
   &__content {
     padding-top: 1rem;
   }
@@ -2346,88 +2458,46 @@ p.user-action {
 
 .class__share {
   display: flex;
-  width: 100%;
-  max-width: 960px;
-  margin: 0.5rem 0 0.75rem;
-  font-size: 1.2rem;
-  padding-left: 1rem;
-  justify-content: flex-start;
-  order: 4;
+  padding: 0 1em;
+  justify-content: flex-end;
   align-items: center;
-
-  .tweet-this,
-  .gplus-this,
-  .facebook-this,
-  .mail-this,
-  .linkedin-this {
-    flex: inline;
-    margin: 0 3px;
-    width: 24px;
-    height: 24px;
-
-    a {
-      text-decoration: none;
-      font-size: large;
+  overflow: visible;
+  order:3;
+  a {
+    text-decoration: none;
+    font-size: normal;
+    margin: 0 1em;
+    .twitter-this,
+    .facebook-this,
+    .mzalendo-this {
+      width: 2.5em;
+      height: 2.5em;
     }
-  }
+    .twitter-this {
+      background-color: transparent;
+      padding: 0.25em;
+      width: 3em;
+      height: 2.5em;
+      img {
+        width: 3em;
+        height: 2.5em;
+      }
+    }
 
-  .tweet-this {
-    background: url('/static/dist/images/share/twitter_def.png') no-repeat center;
-    background-size: 100%;
-  }
+    .facebook-this {
+      background: url("/static/dist/images/share/facebook_def.svg") no-repeat
+        center;
+      background-size: 100%;
+      border-radius: 2em;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5)
+    }
 
-  .tweet-this:hover {
-    background: url('/static/dist/images/share/twitter_act.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .facebook-this {
-    background: url('/static/dist/images/share/facebook_def.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .facebook-this:hover {
-    background: url('/static/dist/images/share/facebook_act.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .gplus-this {
-    background: url('/static/dist/images/share/G_plus_def.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .gplus-this:hover {
-    background: url('/static/dist/images/share/G_plus_act.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .linkedin-this {
-    background: url('/static/dist/images/share/linked_in_def.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .linkedin-this:hover {
-    background: url('/static/dist/images/share/linked_in_act.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .mail-this {
-    background: url('/static/dist/images/share/email_def.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .mail-this:hover {
-    background: url('/static/dist/images/share/email_act.png') no-repeat center;
-    background-size: 100%;
-  }
-
-  .text-share {
-    flex: inline;
-    width: 3.5rem;
-    color: darken($dz-clr--red, 5%);
-    font-weight: 500;
-    font-style: italic;
-    font-size: 0.9rem;
+    .mzalendo-this {
+      background: url("/static/dist/images/share/mzalendo_def.svg") no-repeat center;
+      background-size: 100%;
+      border-radius: 0.5em;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5)
+    }
   }
 }
 
@@ -2464,7 +2534,6 @@ p.user-action {
 }
 
 .card-details {
-
   h2,
   h3,
   h4 {
@@ -2503,7 +2572,7 @@ p.user-action {
   }
 
   &__standard {
-    background-color: darken($dz-clr--green, 15%);
+    background-color: darken($dz-clr--green, 10%);
   }
 
   &__mp {
@@ -2830,7 +2899,8 @@ input.form-control.form-control-sm.form-search::placeholder {
     color: black;
   }
 
-  .dz-events__list {}
+  .dz-events__list {
+  }
 
   .dz-events__fullcalender {
     grid-column: 2/-1;

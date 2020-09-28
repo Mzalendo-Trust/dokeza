@@ -17,6 +17,14 @@
 		"oAP": "/.coverage",
 		"oF": 0
 		},
+	"/.docker-sync/daemon (conflict on 2020-09-24).log": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.docker-sync/daemon (conflict on 2020-09-24).log",
+		"oF": 0
+		},
 	"/.docker-sync/daemon.log": {
 		"cB": 0,
 		"ft": 8192,
@@ -174,6 +182,22 @@
 		"ft": 65536,
 		"oA": 1,
 		"oAP": "/build/.pytest_cache/v/cache",
+		"oF": 0
+		},
+	"/.vscode/settings.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/.vscode/settings-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/AddElement.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/AddElement.docx",
 		"oF": 0
 		},
 	"/allauth/__init__.py": {
@@ -6067,14 +6091,6 @@
 		"oAP": "/bills/models.py",
 		"oF": 0
 		},
-	"/bills/sitemap.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/sitemap.py",
-		"oF": 0
-		},
 	"/bills/tests.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -6569,14 +6585,6 @@
 		"oAP": "/compose/local/django/start",
 		"oF": 0
 		},
-	"/compose/local/docbuilder/Dockerfile": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/compose/local/docbuilder/Dockerfile",
-		"oF": 0
-		},
 	"/compose/local/documentserver/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
@@ -6585,20 +6593,775 @@
 		"oAP": "/compose/local/documentserver/Dockerfile",
 		"oF": 0
 		},
+	"/compose/local/documentserver/img/about/logo.png": {
+		"ft": 32768,
+		"iS": 3625,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/about/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/about/logo@2x.png": {
+		"ft": 32768,
+		"iS": 7516,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/about/logo@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/combo-border-size/BorderSize.png": {
+		"ft": 32768,
+		"iS": 216,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/combo-border-size/BorderSize.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/common-controls.png": {
+		"ft": 32768,
+		"iS": 8074,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/common-controls.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/common-controls@1.5x.png": {
+		"ft": 32768,
+		"iS": 8339,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/common-controls@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/common-controls@2x.png": {
+		"ft": 32768,
+		"iS": 9700,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/common-controls@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/flags.png": {
+		"ft": 32768,
+		"iS": 4992,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/flags.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/flags@1.5x.png": {
+		"ft": 32768,
+		"iS": 6052,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/flags@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/flags@2x.png": {
+		"ft": 32768,
+		"iS": 12690,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/flags@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/Scroll_center.png": {
+		"ft": 32768,
+		"iS": 89,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/Scroll_center.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/controls/Scroll_center@2x.png": {
+		"ft": 32768,
+		"iS": 102,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/controls/Scroll_center@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/dimension-picker/dimension-highlighted.png": {
+		"ft": 32768,
+		"iS": 96,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/dimension-picker/dimension-highlighted.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/dimension-picker/dimension-highlighted@1.5x.png": {
+		"ft": 32768,
+		"iS": 124,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/dimension-picker/dimension-highlighted@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/dimension-picker/dimension-highlighted@2x.png": {
+		"ft": 32768,
+		"iS": 104,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/dimension-picker/dimension-highlighted@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/dimension-picker/dimension-unhighlighted.png": {
+		"ft": 32768,
+		"iS": 96,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/dimension-picker/dimension-unhighlighted.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/dimension-picker/dimension-unhighlighted@1.5x.png": {
+		"ft": 32768,
+		"iS": 124,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/dimension-picker/dimension-unhighlighted@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/dimension-picker/dimension-unhighlighted@2x.png": {
+		"ft": 32768,
+		"iS": 104,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/dimension-picker/dimension-unhighlighted@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/favicon.ico",
+		"oF": 0
+		},
+	"/compose/local/documentserver/img/file-recent.png": {
+		"ft": 32768,
+		"iS": 895,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/file-recent.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/file-recent@2x.png": {
+		"ft": 32768,
+		"iS": 1762,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/file-recent@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/header/dark-logo.png": {
+		"ft": 32768,
+		"iS": 727,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/header/dark-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/header/dark-logo@2x.png": {
+		"ft": 32768,
+		"iS": 1517,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/header/dark-logo@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/header/header-logo.png": {
+		"ft": 32768,
+		"iS": 1013,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/header/header-logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/header/header-logo@2x.png": {
+		"ft": 32768,
+		"iS": 2300,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/header/header-logo@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/hsbcolorpicker/hsb-colorpicker.png": {
+		"ft": 32768,
+		"iS": 11433,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/hsbcolorpicker/hsb-colorpicker.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/hsbcolorpicker/hsb-colorpicker@1.5x.png": {
+		"ft": 32768,
+		"iS": 27556,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/hsbcolorpicker/hsb-colorpicker@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/hsbcolorpicker/hsb-colorpicker@2x.png": {
+		"ft": 32768,
+		"iS": 26189,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/hsbcolorpicker/hsb-colorpicker@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/iconsbig.png": {
+		"ft": 32768,
+		"iS": 16201,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/iconsbig.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/iconsbig@1.5x.png": {
+		"ft": 32768,
+		"iS": 24664,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/iconsbig@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/iconsbig@2x.png": {
+		"ft": 32768,
+		"iS": 35455,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/iconsbig@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/iconssmall.png": {
+		"ft": 32768,
+		"iS": 23045,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/iconssmall.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/iconssmall@1.5x.png": {
+		"ft": 32768,
+		"iS": 33212,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/iconssmall@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/iconssmall@2x.png": {
+		"ft": 32768,
+		"iS": 50508,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/iconssmall@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/load-mask/loading.gif": {
+		"ft": 4194304,
+		"iS": 3455,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/load-mask/loading.gif",
+		"oF": 0,
+		"opt": 0
+		},
+	"/compose/local/documentserver/img/logo.png": {
+		"ft": 32768,
+		"iS": 2573,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/logo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/plugin/icon_add_on_default.png": {
+		"ft": 32768,
+		"iS": 441,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/plugin/icon_add_on_default.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/plugin/icon_add_on_default@2x.png": {
+		"ft": 32768,
+		"iS": 1217,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/plugin/icon_add_on_default@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/Begin-EndStyle.png": {
+		"ft": 32768,
+		"iS": 6814,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/Begin-EndStyle.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/Begin-EndStyle@1.5x.png": {
+		"ft": 32768,
+		"iS": 8894,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/Begin-EndStyle@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/Begin-EndStyle@2x.png": {
+		"ft": 32768,
+		"iS": 13896,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/Begin-EndStyle@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/gradients.png": {
+		"ft": 32768,
+		"iS": 8830,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/gradients.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/gradients@1.5x.png": {
+		"ft": 32768,
+		"iS": 4211,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/gradients@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/gradients@2x.png": {
+		"ft": 32768,
+		"iS": 13249,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/gradients@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/LargeBorders.png": {
+		"ft": 32768,
+		"iS": 513,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/LargeBorders.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/LargeBorders@2x.png": {
+		"ft": 32768,
+		"iS": 693,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/LargeBorders@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/patterns.png": {
+		"ft": 32768,
+		"iS": 848,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/patterns.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/patterns@1.5x.png": {
+		"ft": 32768,
+		"iS": 3008,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/patterns@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/patterns@2x.png": {
+		"ft": 32768,
+		"iS": 1158,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/patterns@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/right_panel_wrap_btns.png": {
+		"ft": 32768,
+		"iS": 1826,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/right_panel_wrap_btns.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/right_panel_wrap_btns@2x.png": {
+		"ft": 32768,
+		"iS": 3777,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/right_panel_wrap_btns@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/right_panel_wrap_icons.png": {
+		"ft": 32768,
+		"iS": 1070,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/right_panel_wrap_icons.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/right_panel_wrap_icons@2x.png": {
+		"ft": 32768,
+		"iS": 2202,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/right_panel_wrap_icons@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/RightPanelBigBtns.png": {
+		"ft": 32768,
+		"iS": 382,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/RightPanelBigBtns.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/RightPanelBigBtns@2x.png": {
+		"ft": 32768,
+		"iS": 611,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/RightPanelBigBtns@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/rowscols_icon.png": {
+		"ft": 32768,
+		"iS": 213,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/rowscols_icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/rowscols_icon@1.5x.png": {
+		"ft": 32768,
+		"iS": 387,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/rowscols_icon@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/right-panels/rowscols_icon@2x.png": {
+		"ft": 32768,
+		"iS": 513,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/right-panels/rowscols_icon@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/bullets-and-numbering.png": {
+		"ft": 32768,
+		"iS": 4082,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/bullets-and-numbering.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/bullets-and-numbering@2x.png": {
+		"ft": 32768,
+		"iS": 8037,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/bullets-and-numbering@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/charttypes.png": {
+		"ft": 32768,
+		"iS": 13592,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/charttypes.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/charttypes@1.5x.png": {
+		"ft": 32768,
+		"iS": 18236,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/charttypes@1.5x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/charttypes@2x.png": {
+		"ft": 32768,
+		"iS": 26226,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/charttypes@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/colontitules.png": {
+		"ft": 32768,
+		"iS": 2005,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/colontitules.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/colontitules@2x.png": {
+		"ft": 32768,
+		"iS": 2494,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/colontitules@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/contents.png": {
+		"ft": 32768,
+		"iS": 8082,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/contents.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/contents@2x.png": {
+		"ft": 32768,
+		"iS": 27853,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/contents@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/math.png": {
+		"ft": 32768,
+		"iS": 93005,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/math.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/math@2x.png": {
+		"ft": 32768,
+		"iS": 222417,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/math@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/img/toolbar/text_styles.png": {
+		"ft": 32768,
+		"iS": 13254,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/img/toolbar/text_styles.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/compose/local/documentserver/overides.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/compose/local/documentserver/overides-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/compose/local/documentserver/run-document-server.sh": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/local/documentserver/run-document-server.sh",
-		"oF": 0
-		},
-	"/compose/production.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/compose/production.zip",
 		"oF": 0
 		},
 	"/compose/production/awscli/Dockerfile": {
@@ -10588,6 +11351,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/contrib/sites/migrations/0003_set_site_domain_and_name.py",
+		"oF": 0
+		},
+	"/dokeza_2_0/contrib/sites/migrations/0004_auto_20200926_1346.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/contrib/sites/migrations/0004_auto_20200926_1346.py",
 		"oF": 0
 		},
 	"/dokeza_2_0/contrib/sites/migrations/__init__.py": {
@@ -24151,17 +24922,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/dokeza_2_0/static/dev/js/dokeza-annotator.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/js/dokeza-annotator-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dev/js/dokeza-eventscalendar.js": {
 		"bF": 0,
 		"ft": 64,
@@ -24169,7 +24929,7 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dev/js/dokeza-eventscalendar-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},
@@ -24180,7 +24940,7 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dev/js/dokeza-fullcalendar-min.js",
-		"oF": 0,
+		"oF": 1,
 		"sC": 3,
 		"tS": 0
 		},
@@ -24191,17 +24951,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dev/js/dokeza-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dev/js/jquery-3.3.1.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/js/jquery-3.3.1-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -24328,16 +25077,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/css/annotator-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/css/annotator-min-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/dokeza_2_0/static/dist/css/annotator.css": {
 		"aP": 1,
@@ -25368,6 +26107,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/dokeza_2_0/static/dist/images/share/facebook_def.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/share/facebook_def.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/dokeza_2_0/static/dist/images/share/G_plus_act.png": {
 		"ft": 32768,
 		"iS": 1263,
@@ -25406,6 +26155,38 @@
 		"iS": 1002,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/images/share/linked_in_def.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/share/mzalendo_def.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/share/mzalendo_def.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/share/twitter-button.png": {
+		"ft": 32768,
+		"iS": 1749,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/share/twitter-button.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/dist/images/share/twitter-icon.png": {
+		"ft": 32768,
+		"iS": 1781,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/images/share/twitter-icon.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -25514,11 +26295,41 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/dokeza_2_0/static/dist/images/users/new_presentation.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/new_presentation.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/dokeza_2_0/static/dist/images/users/new_spreadsheet.svg": {
 		"ft": 2097152,
 		"miP": 0,
 		"oA": 2,
 		"oAP": "/dokeza_2_0/static/dist/images/users/new_spreadsheet.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/send-memo-green.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/send-memo-green.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/dist/images/users/send-memo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dist/images/users/send-memo.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 52780316221407,
@@ -25533,28 +26344,6 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
-		},
-	"/dokeza_2_0/static/dist/js/dokeza-annotator.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-annotator.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/dokeza-annotator.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-annotator.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
 		},
 	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min.js": {
 		"bF": 0,
@@ -25618,160 +26407,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/dokeza.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/annotator.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/annotator.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/annotator.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/annotator.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/bootstrap.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/bootstrap.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/fullcalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/fullcalendar.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/fullcalendar.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/fullcalendar.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/jquery-3.5.1.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery-3.5.1.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/jquery-ui.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery-ui-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/jquery.blockUI.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.blockUI-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/jquery.blockUI_.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.blockUI_-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/jquery.fileupload.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.fileupload-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/jquery.iframe-transport.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/jquery.iframe-transport-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/js.cookie.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/js.cookie.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/vendor/jscript.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/vendor/jscript-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -25858,6 +26493,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/dokeza_2_0/static/images/dockeza-web-banner-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/images/dockeza-web-banner-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/dokeza_2_0/static/images/dokeza-logo-banner.png": {
 		"ft": 32768,
 		"iS": 9508,
@@ -25869,6 +26514,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/dokeza_2_0/static/images/dokeza-logo-banner.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/images/dokeza-logo-banner.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/dokeza_2_0/static/images/dokeza-logo-small.png": {
 		"ft": 32768,
 		"iS": 4297,
@@ -25879,6 +26534,36 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/dokeza_2_0/static/images/dokeza-web-banner-logo.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/images/dokeza-web-banner-logo.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/images/dokeza-web-logo-laptop.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/images/dokeza-web-logo-laptop.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/dokeza_2_0/static/images/Dokeza-web-logo-mobile.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/images/Dokeza-web-logo-mobile.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/dokeza_2_0/static/images/done.png": {
 		"ft": 32768,
@@ -25995,6 +26680,193 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/dokeza_2_0/static/images/howto/img1-home.png": {
+		"ft": 32768,
+		"iS": 153587,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img1-home.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img10-send-memo.png": {
+		"ft": 32768,
+		"iS": 46523,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img10-send-memo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img11-edit-memo.png": {
+		"ft": 32768,
+		"iS": 102560,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img11-edit-memo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img12-save-memo.png": {
+		"ft": 32768,
+		"iS": 33722,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img12-save-memo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img13-create-doc.png": {
+		"ft": 32768,
+		"iS": 60776,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img13-create-doc.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img14-new-doc.png": {
+		"ft": 32768,
+		"iS": 34387,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img14-new-doc.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img15-other-docs.png": {
+		"ft": 32768,
+		"iS": 47007,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img15-other-docs.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img16-save-doc.png": {
+		"ft": 32768,
+		"iS": 42686,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img16-save-doc.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img2-bills.png": {
+		"ft": 32768,
+		"iS": 185117,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img2-bills.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img3-highlight-bill.png": {
+		"ft": 32768,
+		"iS": 83902,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img3-highlight-bill.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img4-commet-on-text.png": {
+		"ft": 32768,
+		"iS": 75014,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img4-commet-on-text.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img5-reply-comment.png": {
+		"ft": 32768,
+		"iS": 77382,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img5-reply-comment.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img6-reply-complete.png": {
+		"ft": 32768,
+		"iS": 88922,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img6-reply-complete.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img6.1-reply-complete.png": {
+		"ft": 32768,
+		"iS": 81118,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img6.1-reply-complete.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img7-reply-with-link.png": {
+		"ft": 32768,
+		"iS": 90028,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img7-reply-with-link.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img8-comment-on-bill.png": {
+		"ft": 32768,
+		"iS": 67818,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img8-comment-on-bill.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/howto/img9-create-memo.png": {
+		"ft": 32768,
+		"iS": 60042,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/howto/img9-create-memo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"/dokeza_2_0/static/images/icon_docx.png": {
 		"ft": 32768,
 		"iS": 1219,
@@ -26058,6 +26930,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/dokeza_2_0/static/images/next-img.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/images/next-img.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/dokeza_2_0/static/images/presentation.ico": {
 		"cB": 0,
 		"ft": 8192,
@@ -26065,6 +26947,16 @@
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/images/presentation.ico",
 		"oF": 0
+		},
+	"/dokeza_2_0/static/images/prev-img.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/images/prev-img.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/dokeza_2_0/static/images/review-24.png": {
 		"ft": 32768,
@@ -26091,6 +26983,424 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/images/text.ico",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CSSRulePlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CSSRulePlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CSSRulePlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CSSRulePlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CustomBounce.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CustomBounce.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CustomBounce.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CustomBounce.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CustomEase.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CustomEase.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CustomEase.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CustomEase.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CustomWiggle.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CustomWiggle.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/CustomWiggle.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/CustomWiggle.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/Draggable.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/Draggable.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/Draggable.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/Draggable.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/DrawSVGPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/DrawSVGPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/DrawSVGPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/DrawSVGPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/EaselPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/EaselPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/EaselPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/EaselPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/EasePack.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/EasePack.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/EasePack.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/EasePack.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/gsap.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/gsap.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/gsap.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/gsap.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/GSDevTools.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/GSDevTools.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/GSDevTools.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/GSDevTools.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/InertiaPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/InertiaPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/InertiaPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/InertiaPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/MorphSVGPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/MorphSVGPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/MorphSVGPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/MorphSVGPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/MotionPathHelper.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/MotionPathHelper.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/MotionPathHelper.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/MotionPathHelper.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/MotionPathPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/MotionPathPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/MotionPathPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/MotionPathPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/Physics2DPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/Physics2DPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/Physics2DPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/Physics2DPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/PhysicsPropsPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/PhysicsPropsPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/PhysicsPropsPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/PhysicsPropsPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/PixiPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/PixiPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/PixiPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/PixiPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/ScrambleTextPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/ScrambleTextPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/ScrambleTextPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/ScrambleTextPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/ScrollToPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/ScrollToPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/ScrollToPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/ScrollToPlugin.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/ScrollTrigger.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/ScrollTrigger.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/ScrollTrigger.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/ScrollTrigger.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/SplitText.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/SplitText.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/SplitText.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/SplitText.min.js.map",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/js/gsap/TextPlugin.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/TextPlugin.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/gsap/TextPlugin.min.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/gsap/TextPlugin.min.js.map",
 		"oF": 0
 		},
 	"/dokeza_2_0/static/js/jscript.js": {
@@ -26126,6 +27436,127 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/js/vendor/bootstrap.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/bootstrap.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/bootstrap.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/bootstrap.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/fullcalendar.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/fullcalendar.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/fullcalendar.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/fullcalendar.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/jquery-3.5.1.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/jquery-3.5.1.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/jquery-ui.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/jquery-ui-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/jquery.blockUI.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/jquery.blockUI-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/jquery.blockUI_.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/jquery.blockUI_-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/jquery.fileupload.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/jquery.fileupload-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/jquery.iframe-transport.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/jquery.iframe-transport-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/jscript.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/jscript-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/samples/builder/commentReport.docbuilder": {
 		"cB": 0,
 		"ft": 8192,
@@ -26140,6 +27571,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/samples/builder/docx.docbuilder",
+		"oF": 0
+		},
+	"/dokeza_2_0/static/samples/builder/memorandumReport.docbuilder": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/samples/builder/memorandumReport.docbuilder",
 		"oF": 0
 		},
 	"/dokeza_2_0/static/samples/builder/pdf.docbuilder": {
@@ -26360,20 +27799,20 @@
 		"oAP": "/dokeza_2_0/templates/_partials/pagination.html",
 		"oF": 0
 		},
-	"/dokeza_2_0/templates/_partials/social_share.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/_partials/social_share.html",
-		"oF": 0
-		},
 	"/dokeza_2_0/templates/_partials/sub-navigation/bills.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/bills.html",
+		"oF": 0
+		},
+	"/dokeza_2_0/templates/_partials/sub-navigation/contact_us.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/contact_us.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/_partials/sub-navigation/help.html": {
@@ -26400,20 +27839,20 @@
 		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/ideas.html",
 		"oF": 0
 		},
-	"/dokeza_2_0/templates/_partials/sub-navigation/memos.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/memos.html",
-		"oF": 0
-		},
 	"/dokeza_2_0/templates/_partials/sub-navigation/public-participation.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/public-participation.html",
+		"oF": 0
+		},
+	"/dokeza_2_0/templates/_partials/sub-navigation/resources.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/resources.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/_partials/sub-navigation/user_standard.html": {
@@ -26696,6 +28135,14 @@
 		"oAP": "/dokeza_2_0/templates/admin/base_site.html",
 		"oF": 0
 		},
+	"/dokeza_2_0/templates/admin/bills/comment_button.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/admin/bills/comment_button.html",
+		"oF": 0
+		},
 	"/dokeza_2_0/templates/admin/submit_line.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -26726,14 +28173,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/analysis/archive_list.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/annotations/demo.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/annotations/demo.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/annotations/user_annotations.html": {
@@ -27016,12 +28455,20 @@
 		"oAP": "/dokeza_2_0/templates/pages/contacts.html",
 		"oF": 0
 		},
-	"/dokeza_2_0/templates/pages/help.html": {
+	"/dokeza_2_0/templates/pages/faqs.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/pages/help.html",
+		"oAP": "/dokeza_2_0/templates/pages/faqs.html",
+		"oF": 0
+		},
+	"/dokeza_2_0/templates/pages/how_to.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/pages/how_to.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/pages/privacypolicy.html": {
@@ -27192,14 +28639,6 @@
 		"oAP": "/dokeza_2_0/templates/users/user_annotations_list.html",
 		"oF": 0
 		},
-	"/dokeza_2_0/templates/users/user_bill_list.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/users/user_bill_list.html",
-		"oF": 0
-		},
 	"/dokeza_2_0/templates/users/user_comments.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -27232,52 +28671,12 @@
 		"oAP": "/dokeza_2_0/templates/users/user_documents.html",
 		"oF": 0
 		},
-	"/dokeza_2_0/templates/users/user_draftabill.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/users/user_draftabill.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/users/user_draftabill_orig.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/users/user_draftabill_orig.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/users/user_draftapetition.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/users/user_draftapetition.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/users/user_draftapetition_orig.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/users/user_draftapetition_orig.html",
-		"oF": 0
-		},
 	"/dokeza_2_0/templates/users/user_form.html": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/users/user_form.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/users/user_list.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/users/user_list.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/users/user_petition_list.html": {
@@ -28496,6 +29895,30 @@
 		"oAP": "/manage.py",
 		"oF": 0
 		},
+	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/Constitution_of_Kenya_Amendment_Bill_2019.docx",
+		"oF": 0
+		},
+	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_bPRpOTs.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_bPRpOTs.docx",
+		"oF": 0
+		},
+	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_nrrZ767.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_nrrZ767.docx",
+		"oF": 0
+		},
 	"/media/bills/CountyWards_EquitableDevelopment_Bill_2018.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -28608,6 +30031,38 @@
 		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/3/prev.docx",
 		"oF": 0
 		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/key.txt",
+		"oF": 0
+		},
+	"/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/ElectionLaws_Amendment__No.2_Bill_2018.docx-hist/4/prev.docx",
+		"oF": 0
+		},
 	"/media/bills/National_Youth_Council_Amendment_Bill_2019_compressed.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -28624,6 +30079,206 @@
 		"oAP": "/media/bills/NationalCohesionand_PeaceBuildingBill_2018.docx",
 		"oF": 0
 		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/key.txt",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/prev.docx",
+		"oF": 0
+		},
 	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf": {
 		"cB": 0,
 		"ft": 8192,
@@ -28632,37 +30287,29 @@
 		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf",
 		"oF": 0
 		},
-	"/media/ElectionLaws_Amendment__No.2_Bill_2018.docx": {
+	"/media/bills/TeaBill_2018.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018.docx",
+		"oAP": "/media/bills/TeaBill_2018.docx",
 		"oF": 0
 		},
-	"/media/ElectionLaws_Amendment__No.2_Bill_2018_fqZI55M.docx": {
+	"/media/dokezamasta/new.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018_fqZI55M.docx",
+		"oAP": "/media/dokezamasta/new.docx",
 		"oF": 0
 		},
-	"/media/ElectionLaws_Amendment__No.2_Bill_2018_jWGaPwz.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018_jWGaPwz.docx",
-		"oF": 0
-		},
-	"/media/ElectionLaws_Amendment__No.2_Bill_2018_ZvjDX6h.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/ElectionLaws_Amendment__No.2_Bill_2018_ZvjDX6h.docx",
-		"oF": 0
+	"/media/dokezamasta/new.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/dokezamasta/new.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/merge_production_dotenvs_in_dotenv.py": {
 		"cB": 0,
@@ -28868,6 +30515,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/other_docs/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/other_docs/migrations/0002_doc_regulation.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/other_docs/migrations/0002_doc_regulation.py",
 		"oF": 0
 		},
 	"/other_docs/migrations/__init__.py": {
@@ -29564,14 +31219,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/posts/models.py",
-		"oF": 0
-		},
-	"/posts/sitemap.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/sitemap.py",
 		"oF": 0
 		},
 	"/posts/templatetags/__init__.py": {
@@ -31037,7 +32684,7 @@
 "projectSettings": {
 	"abortBuildOnError": 1,
 	"allowInjectionReloads": 1,
-	"alwaysUseExternalServer": 0,
+	"alwaysUseExternalServer": 1,
 	"animateCSSInjections": 1,
 	"autoBuildNewItems": 1,
 	"autoprefixerEnableIEGrid": 0,
@@ -32546,7 +34193,7 @@
 			}
 		},
 	"esLintSourceType": 0,
-	"externalServerAddress": "http://localhost:8888",
+	"externalServerAddress": "http://192.168.100.82:8000",
 	"gitIgnoreBuildFolder": 1,
 	"hideConfigFile": 0,
 	"jsCheckerReservedNamesString": "",

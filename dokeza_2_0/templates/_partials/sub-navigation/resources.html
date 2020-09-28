@@ -1,0 +1,5 @@
+{% block sub-navigation %}
+<a class="subnav-link {% if stingo == 'memoranda' %} active {% endif %}" href="{% url 'posts:memoranda' %}">Call for Memoranda</a>
+<a class="subnav-link {% if stingo == 'petitions' %} active {% endif %}" href="{% url 'posts:petitions' %}">Petitions</a>
+<a class="subnav-link {% if stingo == 'events' %} active {% endif %}" href="{% url 'public_participation:events' %}">Public Events</a>
+{% endblock sub-navigation %}

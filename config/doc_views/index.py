@@ -42,6 +42,7 @@ def default(request):
         'editExt': json.dumps(doc_config.DOC_SERV_EDITED),
         'convExt': json.dumps(doc_config.DOC_SERV_CONVERT),
         'files': docManager.getStoredFiles(request),
+        'page':'users',
         'stingo':'documents'
     }
     return render(request, 'users/user_documents.html', context)

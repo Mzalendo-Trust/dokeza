@@ -6,7 +6,7 @@
   <div class="container user__entry">
     <div class="user__page">
       <div class="main-panel">
-        <h3>{{ user.first_name }} {{ user.last_name }}'s Documents</h3>
+        <h3>Start on a document</h3>
         <div class="help-block">
           <div class="clearFix">
             <div class="upload-panel clearFix">
@@ -51,6 +51,8 @@
                           </div>
                         </a>
                       </li>
+                      {% endif %}
+                      {% if request.user.is_staff %}    
                       <li>
                         <a class="try-editor reload-page" target="_blank">
                           <div class="spreadsheet" data-type="spreadsheet"></div>
@@ -60,11 +62,21 @@
                           </div>
                           </a>
                       </li>
-                    {% endif %}
+                      <li>
+                        <a class="try-editor reload-page" target="_blank">
+                          <div class="presentation" data-type="presentation"></div>
+                          <div class="editor-text">
+                            Create a<br />
+                        presentation
+                          </div>
+                          </a>
+                      </li>
+                      {% endif %}                   
                   </ul>
                 </div>
               </div>
             </div>
+            <h3>My Files</h3>
             {% if files %}
               <div class="help-block">
                 <div class="stored-list">
@@ -74,6 +86,7 @@
                         <td class="tableHeaderCell tableHeaderCellFileName">Filename</td>
                         <td colspan="6" class="tableHeaderCell contentCells-shift">Editors</td>
                         <td colspan="3" class="tableHeaderCell">Viewers</td>
+                        <td colspan="6" class="tableHeaderCell">Send memorandum</td>
                       </tr>
                     </thead>
                     <tbody>
@@ -140,17 +153,23 @@
                               <img src="{% static 'images/mobile-24.png' %}" alt="Open in viewer for mobile devices" title="Open in viewer for mobile devices" />
                             </a>
                           </td>
+                          {% if "memorandum" in file.title  %}
+                          <td class="contentCells contentCells-icon"></td>
+                          <td class="contentCells contentCells-icon"></td>
                           <td class="contentCells contentCells-icon">
-                            <a href="edit?filename={{ file.title }}&type=embedded&mode=embedded" target="_blank">
-                              <img src="{% static 'images/embeded-24.png' %}" alt="Open in embedded mode" title="Open in embedded mode" />
-                            </a>
+                            <form action="POST" method="{% url 'users:send-memorandum' file.title %}">{% csrf_token %}
+                              <input class="send-memo" type="button" name="sendMemo" data-url="send" value="" />
+                            </form>
                           </td>
                         </tr>
+                        {% endif %}
                       {% endfor %}
                     </tbody>
                   </table>
                 </div>
               </div>
+            {% else %}
+              <p>You have not created or uploaded any files.</p>
             {% endif %}
           </div>
           <div id="mainProgress">

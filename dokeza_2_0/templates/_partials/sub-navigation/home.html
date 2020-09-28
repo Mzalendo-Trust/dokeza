@@ -1,5 +1,4 @@
 {% block sub-navigation %}
-<a class="subnav-link {% if stingo == 'latest' %} active {% endif %}" href="{% url 'home' %}">Latest</a>
+<span class="subnav-link">HOME &nbsp;&nbsp; >></span><a class="subnav-link {% if stingo == 'latest' %} active {% endif %}" href="{% url 'home' %}">Latest</a>
 <a class="subnav-link {% if stingo == 'news' %} active {% endif %}" href="{% url 'posts:list' %}">Analysis</a>
-<a class="subnav-link {% if stingo == 'about' %} active {% endif %}" href="{% url 'about' %}">About</a>
-<a class="subnav-link {% if stingo == 'contacts' %} active {% endif %}" href="{% url 'contacts' %}">Get in Touch</a> {% endblock sub-navigation %}
+ {% endblock sub-navigation %}

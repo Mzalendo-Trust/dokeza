@@ -4,7 +4,7 @@ body,
 .form-control,
 #file-menu-panel .panel-menu li > a,
 .dropdown-menu > li > a {
-  color: #006c3b !important;
+  color: #025729 !important;
 }
 #file-menu-panel .panel-menu li.active > a,
 .dropdown-menu > li.active > a {
@@ -57,7 +57,7 @@ body,
 .btn-group.split button.active:not(.disabled),
 .btn-category.active:not(.disabled),
 .btn-category:active:not(.disabled) {
-  background-color: #006c3b !important;
+  background-color: #025729 !important;
 }
 
 .extra #header-logo i,

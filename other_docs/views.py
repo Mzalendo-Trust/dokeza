@@ -23,7 +23,7 @@ class DocsListView(ListView):
 
     def get_context_data(self, **kwargs):
         context = super(DocsListView, self).get_context_data(**kwargs)
-        context['page'] = 'other_docs'
+        context['page'] = 'regulations'
         context['stingo'] = 'all'
         return context
 

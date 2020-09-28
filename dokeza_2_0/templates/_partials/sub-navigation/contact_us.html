@@ -1,0 +1,4 @@
+{% block sub-navigation %}
+<a class="subnav-link {% if stingo == 'contact_us' %} active {% endif %}" href="{% url 'contacts' %}">Contacts</a>
+<a class="subnav-link {% if stingo == 'about' %} active {% endif %}" href="{% url 'about' %}">About</a>
+{% endblock sub-navigation %}

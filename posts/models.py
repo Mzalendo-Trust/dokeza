@@ -56,10 +56,10 @@ class Memorandum(models.Model):
     timestamp = models.DateTimeField(auto_now=False, auto_now_add=True)
 
     def get_absolute_url(self):
-        return reverse("public_participation:memorandum", kwargs={"slug": self.slug})
+        return reverse("posts:memorandum", kwargs={"slug": self.slug})
 
     def get_api_url(self):
-        return reverse("public_participation_api:memo_api-detail", kwargs={"slug": self.slug})
+        return reverse("posts_api:memo_api-detail", kwargs={"slug": self.slug})
 
     @property
     def comments(self):
@@ -98,10 +98,10 @@ class Petition(models.Model):
         return self.title
 
     def get_absolute_url(self):
-        return reverse("public_participation:petition-detail", kwargs={"slug": self.slug})
+        return reverse("posts:petition-detail", kwargs={"slug": self.slug})
 
     def get_api_url(self):
-        return reverse("public_participation_api:petition_api-detail", kwargs={"slug": self.slug})
+        return reverse("posts_api:petition_api-detail", kwargs={"slug": self.slug})
 
     @property
     def comments(self):

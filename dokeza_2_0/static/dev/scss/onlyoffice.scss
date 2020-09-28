@@ -1,8 +1,13 @@
-﻿.main-panel {
+﻿@import "./variables";
+@import "./overides-fullcalender";
+
+.main-panel {
   margin: 80px 50vw 16px 0;
   width: 50vw;
   h3 {
-    text-align: center;
+    text-align: left;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid $brand-primary; 
   }
 }
 
@@ -45,6 +50,7 @@ label .checkbox {
   text-align: center;
   text-decoration: none;
   cursor: pointer;
+  width: 5em;
   div {
     height: 6em;
     background-color: transparent;
@@ -68,6 +74,9 @@ label .checkbox {
   }
   .memorandum {
     background-image: url("/static/dist/images/users/new_memorandum.svg");
+  }
+  .presentation {
+    background-image: url("/static/dist/images/users/new_presentation.svg");
   }
   .editor-text {
     padding-top: 2em;
@@ -156,7 +165,21 @@ label .checkbox {
   position: absolute;
   right: 0;
   top: 0;
-  transform: translate(555px, 60px) scale(8);
+
+}
+
+.send-memo {
+  background: url("/static/dist/images/users/send-memo.svg") no-repeat center 0 transparent;
+  cursor: pointer;
+  width: 4em;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  border: 0;
+  &:active {
+    background: url("/static/dist/images/users/send-memo-green.svg") no-repeat center 0 transparent;
+    border: 0;
+  }
 }
 
 .create-panel {
@@ -254,7 +277,6 @@ label .checkbox {
 }
 
 .stored-list {
-  border-top: 1px solid #d1d1d1;
   list-style: none;
   margin: 0;
   padding: 0;

@@ -83,48 +83,6 @@ class SenateBillListView(ListView):
         return context
 
 
-class OpenMemoBillListView(ListView):
-    template_name = 'bills/open_memo.html'
-    paginate_by = 12
-    paginate_orphans = 3
-    queryset = Bill.objects.filter(bill_stage=1)
-
-    def get_context_data(self, **kwargs):
-        context = super(OpenMemoBillListView, self).get_context_data(**kwargs)
-        context['page'] = 'open_memo'
-        context['stingo'] = 'memos'
-        return context
-
-
-class CommitteeBillListView(ListView):
-    template_name = 'bills/committee.html'
-    paginate_by = 12
-    paginate_orphans = 3
-    queryset = Bill.objects.filter(bill_stage=2)
-
-    def get_context_data(self, **kwargs):
-        context = super(CommitteeBillListView, self).get_context_data(**kwargs)
-        context['page'] = 'committee'
-        context['stingo'] = 'meetings'
-        return context
-
-
-class PlenaryBillListView(ListView):
-    template_name = 'bills/plenary.html'
-    paginate_by = 12
-    paginate_orphans = 3
-    queryset = Bill.objects.filter(bill_stage=3)
-
-    def get_context_data(self, **kwargs):
-        context = super(PlenaryBillListView, self).get_context_data(**kwargs)
-        context['page'] = 'plenary'
-        context['stingo'] = 'sessions'
-        return context
-
-
-class RegulationListView(ListView):
-    pass
-
 class BillDetailView(DetailView):
     """
     This is the view shows the details related to a particular bill.

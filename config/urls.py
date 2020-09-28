@@ -1,7 +1,6 @@
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
-from django.contrib.sitemaps.views import sitemap
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import include, path
 from django.views import defaults as default_views
@@ -10,26 +9,22 @@ from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
 
 from dokeza_2_0.users.api.views import get_jwt_token
-from .views import HomeView, SearchView, HomeView, AboutView, HelpView, ContactView, PrivacyView
+from .views import (
+    HomeView,  HowToView, FaqView, PrivacyView, SearchView,
+    ResourcesView, AboutView, ContactView
+)
 from posts.views import TagIndexView
-from posts.sitemap import PostSitemap, PetitionSitemap, MemorandumSitemap
-from bills.sitemap import BillSitemap
 
-
-sitemaps = {
-    'analysis': PostSitemap(),
-    'bills': BillSitemap(),
-    'memoranda': MemorandumSitemap(),
-    'petitions': PetitionSitemap(),
-}
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
+    path('how-to/', HowToView.as_view(), name='how_to'),
+    path('faqs/', FaqView.as_view(), name='faqs'),
     path('about/', AboutView.as_view(), name='about'),
-    path('help/', HelpView.as_view(), name='help'),
     path('privacy-policy/', PrivacyView.as_view(), name='privacy'),
-    path('contacts/', ContactView.as_view(), name='contacts'),
     path('search/', SearchView.as_view(), name='search'),
+    path('resources/', ResourcesView.as_view(), name='resources'),
+    path('contacts/', ContactView.as_view(), name='contacts'),
     path('tag/<slug>/', TagIndexView.as_view(), name='tagged'),
     path('google6b1213ccd54381fc\.html', TemplateView.as_view(template_name="google6b1213ccd54381fc.html")),
     
@@ -43,16 +38,10 @@ urlpatterns = [
    
     # These are the App urls.
     path("bills/", include("bills.urls", namespace="bills")),
-    path("ideas/", include("ideas.urls", namespace="ideas")),
-    path("other_docs/", include("other_docs.urls", namespace="other_docs")),
-    path("comments/", include("comments.urls", namespace="comments")),
+    path("regulations/", include("other_docs.urls", namespace="regulations")),
     path('docbuilder/', include('docbuilder.urls', namespace="docbuilder")),
-    path('analysis/', include('posts.urls', namespace='posts')),
+    path('posts/', include('posts.urls', namespace='posts')),
     path('events/', include('public_participation.urls', namespace='public_participation')),
-    path('sitemap/', sitemap, {'sitemaps': sitemaps}, name='sitemap'),
-
-    # Annotation
-    path('annotations/', include('annotator.urls', namespace='annotations')),
    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:

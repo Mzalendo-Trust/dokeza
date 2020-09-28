@@ -1,41 +1,118 @@
 /* Place your project specific JS here. */
 
-const annotTabs = $("#annot_tabs");
-const allAnnots = $("#all__annots");
-const myAnnots = $("#my__annots");
-const allAnnotsList = $("#annots-all");
-const myAnnotsList = $("#annots-my");
-const annotationControl = $(".annotation-control");
+var $slider = $(".images-container");
+var $slides = $slider.find(".image-holder");
+var $navPrev = $(".prev-img");
+var $navNext = $(".next-img");
+var $startAutoplay = $(".start-autoplay");
+var $stopAutoplay = $(".stop-autoplay");
+var slidesNum = $slides.length;
+var prevSlideID = null;
+var currentSlideID = 0;
+var isAnimating = false;
+var isAutoPlay = false;
 
-allAnnots.click(() => {
-  annotTabs.addClass("annotation__tabs--all");
-  annotTabs.removeClass("annotation__tabs--my");
-  allAnnots.addClass("annots__header--active");
-  myAnnots.removeClass("annots__header--mine");
-  allAnnotsList.show();
-  myAnnotsList.hide();
-});
+function init() {
+  gsap.set($slides, {
+    left: "-100%"
+  });
+  $navPrev.on("click", gotoPrevSlide);
+  $navNext.on("click", gotoNextSlide);
+  $startAutoplay.on("click", startAutoPlay);
+  $stopAutoplay.on("click", stopAutoPlay);
+  gotoSlide(0, 0);
+}
 
-myAnnots.click(() => {
-  annotTabs.removeClass("annotation__tabs--all");
-  annotTabs.addClass("annotation__tabs--my");
-  myAnnots.addClass("annots__header--mine");
-  allAnnots.removeClass("annots__header--active");
-  myAnnotsList.show();
-  allAnnotsList.hide();
-});
+function gotoPrevSlide() {
+  var slideToGo = currentSlideID - 1;
+  if (slideToGo <= -1) {
+    slideToGo = slidesNum - 1;
+  } 
+  stopAutoPlay();
+  gotoSlide(slideToGo, 0.5, "prev");
+}
 
-const anIcon = $("#an_icon");
-const annotPanel = $(".dz-annotations");
+function gotoNextSlide() {
+  var slideToGo = currentSlideID + 1;
+  if (slideToGo >= slidesNum) {
+    slideToGo = 0;
+  }
+  stopAutoPlay();
+  gotoSlide(slideToGo, 0.5, "next");
+}
 
-anIcon.click(() => {
-  anIcon.toggleClass("annot_icon-active");
-  annotPanel.toggleClass("annot_panel-active");
-  annotationControl.toggleClass("annotation-control_active");
-});
+function gotoSlide(slideID, _time, _direction) {
+  if (!isAnimating) {
+    isAnimating = true;
+    prevSlideID = currentSlideID;
+    currentSlideID = slideID;
+    var $prevSlide = $slides.eq(prevSlideID);
+    var $currentSlide = $slides.eq(currentSlideID);
+    var time = 1;
+    if (_time !== null) {
+      time = _time;
+    }
+    var direction = "next";
+    if (_direction != null) {
+      direction = _direction;
+    }
+    if (direction == "next") {
+      gsap.to($prevSlide, time, {
+        left: "-100%",
+        ease: Power2.easeOut
+      });
+      gsap.fromTo(
+        $currentSlide,
+        time, {
+          left: "100%",
+          ease: Power2.easeOut
+        }, {
+          left: "0",
+          ease: Power2.easeOut
+        }
+      );
+    } else {
+      gsap.to($prevSlide, time, {
+        left: "100%",
+        ease: Power2.easeOut
+      });
+      gsap.fromTo(
+        $currentSlide,
+        time, {
+          left: "-100%",
+          ease: Power2.easeOut
+        }, {
+          left: "0",
+          ease: Power2.easeOut
+        }
+      );
+    }
+    gsap.delayedCall(time, function() {
+      isAnimating = false;
+    });
+  }
+}
 
-const navToggle = $(".navbar-toggler");
-const navDropdown = $("#navbarSupportedContent");
-navToggle.click(() => {
-  navDropdown.slideToggle(300);
-});
+function play() {
+  gotoNextSlide();
+  gsap.delayedCall(4, play);
+}
+
+function startAutoPlay(immediate) {
+  if (immediate != null) {
+    immediate = false;
+  }
+
+  if (immediate) {
+    gotoNextSlide();
+  }
+  gsap.delayedCall(4, play);
+}
+
+function stopAutoPlay() {
+  isAutoPlay = false;
+  gsap.killTweensOf(play);
+}
+init();
+
+// ---------------------------------------------

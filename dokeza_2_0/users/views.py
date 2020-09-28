@@ -191,141 +191,16 @@ class UserDocumentsView(LoginRequiredMixin, TemplateView):
     template_name = 'users/user_documents.html'
     
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        # context['user_documents'] = user_documents
-        context['page'] = 'users'
+        context = super(UserDocumentsView, self).get_context_data(**kwargs)
+        print('document context',context)
         context['languages'] = docManager.LANGUAGES,
         context['preloadurl'] = doc_config.DOC_SERV_PRELOADER_URL,
         context['editExt'] = json.dumps(doc_config.DOC_SERV_EDITED),
         context['convExt'] = json.dumps(doc_config.DOC_SERV_CONVERT),
-        # context['files'] = docManager.getStoredFiles(request),
+        context['page'] = 'users'
         context['stingo'] = 'documents'
-        print(context)
         return context
 
 
-class UserBillListView(LoginRequiredMixin, ListView):
-    """
-    This View lists the bills that are the user's only.
-    """
-
-    model = Bill
-    template_name = 'users/user_bill_list.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(UserBillListView, self).get_context_data(**kwargs)
-        my_bills = Bill.objects.filter(owner=self.request.user)
-        context['my_bills'] = my_bills
-        context['page'] = 'users'
-        context['stingo'] = 'my_bills'
-        return context
-
-
-class UserBillDraftView(LoginRequiredMixin, CreateView):
-    """
-    This View is for the initial development of bills. Once the bill is saved, it will appear in the UserBillUpdateView.
-    """
-
-    model = Bill
-    template_name = 'users/user_draftabill.html'
-    form_class = BillForm
-
-    def get_context_data(self, **kwargs):
-        context = super(UserBillDraftView, self).get_context_data(**kwargs)
-        context['page'] = 'users'
-        context['stingo'] = 'draft_bill'
-        return context
-
-    def post(self, request, *args, **kwargs):
-        print(dir(self))
-        form = BillForm(request.POST or None)
-        if form.is_valid():
-            form.save()
-            return redirect('users:bills')
-        else:
-            return self.form_invalid(form)
-
-
-class UserBillUpdateView(LoginRequiredMixin, UpdateView):
-    """
-    This View is for the updating of bills. It only accesses the draft bills in development that belong to the user.
-    """
-
-    model = Bill
-    template_name = 'users/user_draftabill.html'
-    form_class = BillForm
-
-    def get_context_data(self, **kwargs):
-        context = super(UserBillUpdateView, self).get_context_data(**kwargs)
-        context['page'] = 'users'
-        context['stingo'] = 'draft_bill'
-        return context
-
-    def get_object(self, queryset=None):
-        try:
-            return super(UserBillUpdateView, self).get_object(queryset)
-        except AttributeError:
-            return None
-
-
-class UserPetitionListView(LoginRequiredMixin, ListView):
-    """
-    This View lists the user's petitions only.
-    """
-
-    model = Petition
-    template_name = 'users/user_petition_list.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(UserPetitionListView, self).get_context_data(**kwargs)
-        context['my_petitions'] = Petition.objects.filter(author=self.request.user)
-        context['page'] = 'users'
-        context['stingo'] = 'my_petitions'
-        return context
-
-
-class UserPetitionDraftView(LoginRequiredMixin, CreateView):
-    """
-    This view reveals the Petition Drafting form.
-    """
-
-    model = Petition
-    template_name = 'users/user_draftapetition.html'
-    form_class = PetitionForm
-
-    def get_context_data(self, **kwargs):
-        context = super(UserPetitionDraftView, self).get_context_data(**kwargs)
-        context['page'] = 'users'
-        context['stingo'] = 'draft_petition'
-        return context
-
-    def post(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        form = PetitionForm(request.POST or None)
-        if form.is_valid():
-            form.save()
-            return redirect('users:update_petition', kwargs={'slug': self.object.slug})
-        else:
-            return self.form_invalid(form)
-
-
-class UserPetitionUpdateView(LoginRequiredMixin, UpdateView):
-    """
-    This View is for the updating of petitions. It only accesses the petitions that belong to the user.
-    """
-
-    model = Petition
-    template_name = 'users/user_updateapetition.html'
-    form_class = PetitionForm
-
-    def get_context_data(self, **kwargs):
-        context = super(UserPetitionUpdateView, self).get_context_data(**kwargs)
-        context['page'] = 'users'
-        context['stingo'] = 'draft_petition'
-        return context
-
-    def get_object(self, queryset=None):
-        try:
-            return super(UserPetitionUpdateView, self).get_object(queryset)
-        except AttributeError:
-            return None
+class UserSendMemorandum(View):
+    pass

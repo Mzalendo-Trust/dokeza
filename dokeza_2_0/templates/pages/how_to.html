@@ -1,0 +1,120 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+<!-- Sub-Navigation Block -->
+{% block title %}- How To Use Dokeza{% endblock title %}
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/help.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+<!-- END Sub-Navigation Block -->
+<!-- Main Content -->
+{% block content %}
+<div class="dz-main__submenu col-sm-4 col-md-4 col-lg-3 ">
+  <div class="dz-about__submenu list-group">
+    <a href="#comment__bill" class="dz-about__submenu--list">Comment on a Bill</a>
+    <a href="#Create__memorandum" class="dz-about__submenu--list">How to create a Memorandum</a>
+    <a href="#Create__documents" class="dz-about__submenu--list">How to create Other Documents</a>
+  </div>
+</div>
+<div class="dz-main__content col-sm-8 col-md-8 col-lg-9">
+  <div class="dz-howto">
+    <section id="Bill_comment">
+      <h1>How to Use Dokeza</h1>
+      <p>Now that you have clicked on the How to Use Dokeza, Dokeza is a platform by Mzalendo Trust where members of the public can give their opinion on a legislative bill that has been opened to public for particiaption by the two houses of the Parliament of Kenya, the National Assembly and the Senate.</p>
+      <p>Members of the public can do this by annotating (highlighting text in this case) and comment on the annotation directly on a legislative bill. They can also add links in the replies to aid their explaination.  They can also add comments to the entire document if they choose to.</p>
+      <h2 id="comment__bill">Comment on a Bill</h2>
+      <p>
+        1. If you are on the Home page or on the Bills page, click on the bill of choice.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img1-home.png' %}" alt="home page">
+      </div>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img2-bills.png' %}" alt="">
+      </div>
+      <p>
+        2. Once you are on the page with the bill, go onto the bill text and hightlight the text you want and comment on it.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img3-highlight-bill.png' %}" alt="">
+      </div>
+      <p>3. Comment on the text and while it is still highlighted.</p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img4-commet-on-text.png' %}" alt="">
+      </div>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img5-reply-comment.png' %}" alt="">
+      </div>
+      <p>
+       4. You may also reply to someone else's comment and post a link in it.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img6-reply-complete.png' %}" alt="">
+      </div>
+      <p>
+        5. You may also make an overall comment on the bill. Scroll to the bottom of the bill and make the comment there.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img8-comment-on-bill.png' %}" alt="">
+      </div>
+    </section>
+    <section id="Create__memorandum">
+      <h1>Create a Memorandum</h1>
+      <p>
+        1. Click on the "submit your Memoranda" button and you will be directed to your profile page with the "My Documents" page open. <br>
+        Click on the "Create a Memorandum".
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img9-create-memo.png' %}" alt="">
+      </div>
+      <p>
+        2. A separate browser tab will open with the template containing the required layout for a memorandum that is received by Parliament.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img11-edit-memo.png' %}" alt="">
+      </div>
+      <p>
+        3. After you finish writing out your memorandum, it is automatically saved on the platform. You may download the document and keep a copy or send it the Parlaiment by clicking on the Arrow button under Send at the end of the file listing.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img10-send-memo.png' %}" alt="">
+      </div>
+        <p>
+          4. You may also download the document from a choice of document formats.
+        </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img16-save-doc.png' %}" alt="">
+      </div>
+    </section>
+    <section id="Create__documents">
+      <h1>Create other Documents</h1>
+      <p>
+        1. If you want to create a blank document, click on <strong>"Create a text docucment"</strong>.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img13-create-doc.png' %}" alt="">
+      </div>
+      <p>
+        2. A new tab will appear with an open document editor with a blank document.  
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img14-new-doc.png' %}" alt="">
+      </div>
+      <p>
+        2. If you are <strong>an MP</strong> or the <strong>authorised PA of an MP</strong>, you will see <strong>"Create a Bill"</strong> as an added option among the document choices. <br>
+        3. If you are staff, you will see the additional options, <strong>"Create a Spreadsheet"</strong> and <strong>"Create a Presentation"</strong>.
+      </p>
+      <div class="how-images">
+        <img src="{% static 'images/howto/img15-other-docs.png' %}" alt="">
+      </div>
+      <p>
+        Follow the same process as explained above for the creation and editing of the new document of choice.
+      </p>
+    </section>
+  </div>
+</div>
+{% endblock content%}
+<!-- END Main Content -->

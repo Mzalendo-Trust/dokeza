@@ -9,11 +9,11 @@
 {% endblock sub-navigation %}
 <!-- END Sub-Navigation Block -->
 {% block docserverjs %}
-  <script type="text/javascript" src="{% static 'dist/js/vendor/jquery-ui.js' %}"></script>
-  <script type="text/javascript" src="{% static 'dist/js/vendor/jquery.blockUI.js' %}" ></script>
-  <script type="text/javascript" src="{% static 'dist/js/vendor/jquery.iframe-transport.js' %}"></script>
-  <script type="text/javascript" src="{% static 'dist/js/vendor/jquery.fileupload.js' %}" ></script>
-  <script type="text/javascript" src="{% static 'dist/js/vendor/jscript.js' %}" ></script>
+  <script type="text/javascript" src="{% static 'js/vendor/jquery-ui.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/vendor/jquery.blockUI.js' %}" ></script>
+  <script type="text/javascript" src="{% static 'js/vendor/jquery.iframe-transport.js' %}"></script>
+  <script type="text/javascript" src="{% static 'js/vendor/jquery.fileupload.js' %}" ></script>
+  <script type="text/javascript" src="{% static 'js/vendor/jscript.js' %}" ></script>
   <script type="text/javascript">
     var ConverExtList = {{ convExt | safe }};
     var EditedExtList = {{ editExt | safe }};
