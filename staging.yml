@@ -1,10 +1,10 @@
 version: '3'
 
 volumes:
-  production_postgres_data:
-  production_postgres_backups:
-  production_certbot_var:
-  production_certbot_etc:
+  staging_postgres_data:
+  staging_postgres_backups:
+  staging_certbot_var:
+  staging_certbot_etc:
   # documentserver_postgresql_data:
 
 networks:
@@ -16,11 +16,11 @@ services:
     container_name: nginx
     build:
       context: ./compose/production/nginx
-      dockerfile: Dockerfile
+      dockerfile: Dockerfile-staging
     restart: always
     volumes:
-      - production_certbot_var:/var/www/certbot
-      - production_certbot_etc:/etc/letsencrypt
+      - staging_certbot_var:/var/www/certbot
+      - staging_certbot_etc:/etc/letsencrypt
     ports:
       - '80:80'
       - '443:443'
@@ -33,9 +33,9 @@ services:
       context: ./compose/production/certbot
       dockerfile: Dockerfile
     volumes:
-      - production_certbot_var:/var/www/certbot
-      - production_certbot_etc:/etc/letsencrypt
-    command: certonly --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --force-renewal --test-cert --dry-run
+      - staging_certbot_var:/var/www/certbot
+      - staging_certbot_etc:/etc/letsencrypt
+    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --force-renewal
     networks:  
       - dokeza-network
 
@@ -56,8 +56,8 @@ services:
     env_file:
       - ./.envs/.production/.postgres
     volumes:
-      - production_postgres_data:/var/lib/postgresql/data
-      - production_postgres_backups:/backups
+      - staging_postgres_data:/var/lib/postgresql/data
+      - staging_postgres_backups:/backups
     networks:
       - dokeza-network
 
@@ -69,12 +69,12 @@ services:
     env_file:
       - ./.envs/.production/.django
     volumes:
-      - production_postgres_backups:/backups
+      - staging_postgres_backups:/backups
     networks:
       - dokeza-network
 
-  django_staging: &django_staging
-    container_name: django_staging
+  django: &django
+    container_name: django
     build:
       context: .
       dockerfile: ./compose/production/django-staging/Dockerfile
@@ -143,22 +143,22 @@ services:
   #     - ds-network
 
   celeryworker:
-    <<: *django_staging
-    image: dokeza_2_0_production_celeryworker
+    <<: *django
+    image: dokeza_2_0_staging_celeryworker
     command: /start-celeryworker
     networks:
       - dokeza-network
 
   celerybeat:
-    <<: *django_staging
-    image: dokeza_2_0_production_celerybeat
+    <<: *django
+    image: dokeza_2_0_staging_celerybeat
     command: /start-celerybeat
     networks:
       - dokeza-network
 
   flower:
-    <<: *django_staging
-    image: dokeza_2_0_production_flower
+    <<: *django
+    image: dokeza_2_0_staging_flower
     command: /start-flower
     networks:
       - dokeza-network
