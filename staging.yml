@@ -5,11 +5,11 @@ volumes:
   staging_postgres_backups:
   staging_certbot_var:
   staging_certbot_etc:
-  # documentserver_postgresql_data:
+  documentserver_postgresql_data:
 
 networks:
   dokeza-network:
-  # ds-network:
+  ds-network:
 
 services:
   nginx:
@@ -35,7 +35,7 @@ services:
     volumes:
       - staging_certbot_var:/var/www/certbot
       - staging_certbot_etc:/etc/letsencrypt
-    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --force-renewal
+    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
     networks:  
       - dokeza-network
 
@@ -89,58 +89,61 @@ services:
     networks:
       - dokeza-network
 
-  # documentserver:
-  #   build:
-  #     context: .
-  #     dockerfile: ./compose/local/documentserver/Dockerfile
-  #   container_name: documentserver
-  #   env_file:
-  #     - ./.envs/.local/.documentserver
-  #   depends_on:
-  #     - ds-postgresql
-  #     - ds-rabbitmq
-  #   ports:
-  #     - '8082:80'
-  #     - '443:443'
-  #   stdin_open: true
-  #   restart: always
-  #   volumes:
-  #     - /var/www/onlyoffice/Data
-  #     - /var/log/onlyoffice
-  #     - /var/lib/onlyoffice/documentserver/App_Data/cache/files
-  #     - /var/www/onlyoffice/documentserver-example/public/files
-  #     - /usr/share/fonts
-  #   networks:
-  #     - ds-network
+  documentserver:
+    build:
+      context: .
+      dockerfile: ./compose/production/documentserver/Dockerfile
+    container_name: documentserver
+    env_file:
+      - ./.envs/.documentserver
+    depends_on:
+      - ds-postgresql
+      - ds-rabbitmq
+      - ds-redis
+      - certbot
+    ports:
+      - '8082:80'
+      - '8443:443'
+    stdin_open: true
+    restart: always
+    volumes:
+      - /var/www/onlyoffice/Data
+      - /var/log/onlyoffice
+      - /var/lib/onlyoffice/documentserver/App_Data/cache/files
+      - /var/www/onlyoffice/documentserver-example/public/files
+      - /usr/share/fonts
+      - staging_certbot_etc:/etc/letsencrypt
+    networks:
+      - ds-network
 
-  # ds-rabbitmq:
-  #   container_name: ds-rabbitmq
-  #   image: rabbitmq
-  #   restart: always
-  #   expose:
-  #     - '5672'
-  #   networks:
-  #     - ds-network
+  ds-rabbitmq:
+    container_name: ds-rabbitmq
+    image: rabbitmq
+    restart: always
+    expose:
+      - '5672'
+    networks:
+      - ds-network
 
-  # ds-postgresql:
-  #   container_name: ds-postgresql
-  #   image: postgres:12.3-alpine
-  #   env_file:
-  #     - ./.envs/.local/.documentserver
-  #   restart: always
-  #   expose:
-  #     - '5432'
-  #   volumes:
-  #     - documentserver_postgresql_data:/var/lib/postgresql
-  #   networks:
-  #     - ds-network
+  ds-postgresql:
+    container_name: ds-postgresql
+    image: postgres:12.3-alpine
+    env_file:
+      - ./.envs/.documentserver
+    restart: always
+    expose:
+      - '5432'
+    volumes:
+      - documentserver_postgresql_data:/var/lib/postgresql
+    networks:
+      - ds-network
 
-  # ds-redis:
-  #   image: redis:5.0
-  #   container_name: ds-redis
-  #   restart: always
-  #   networks:
-  #     - ds-network
+  ds-redis:
+    image: redis:5.0
+    container_name: ds-redis
+    restart: always
+    networks:
+      - ds-network
 
   celeryworker:
     <<: *django

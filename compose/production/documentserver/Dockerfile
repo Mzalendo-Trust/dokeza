@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ubuntu:18.04
 LABEL maintainer Ascensio System SIA <support@onlyoffice.com>
 
 ENV LANG=en_US.UTF-8 LANGUAGE=en_US:en LC_ALL=en_US.UTF-8 DEBIAN_FRONTEND=noninteractive
@@ -51,7 +51,7 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     service postgresql restart && \
     sudo -u postgres psql -c "CREATE DATABASE $ONLYOFFICE_VALUE;" && \
     sudo -u postgres psql -c "CREATE USER $ONLYOFFICE_VALUE WITH password '$ONLYOFFICE_VALUE';" && \
-    sudo -u postgres psql -c "GRANT ALL privileges ON DATABASE $ONLYOFFICE_VALUE TO $ONLYOFFICE_VALUE;" && \ 
+    sudo -u postgres psql -c "GRANT ALL privileges ON DATABASE $ONLYOFFICE_VALUE TO $ONLYOFFICE_VALUE;" && \
     service postgresql stop && \
     service redis-server stop && \
     service rabbitmq-server stop && \
@@ -60,10 +60,10 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     rm -rf /var/lib/apt/lists/*
 
 COPY ./config/ds-config /app/ds/setup/config/
-COPY ./compose/local/documentserver/img /opt/img
-COPY ./compose/local/documentserver/overides.css /opt/overides.css
-
-COPY ./compose/local/documentserver/run-document-server.sh /app/ds/run-document-server.sh
+COPY ./compose/production/documentserver/img /opt/img
+COPY ./compose/production/documentserver/overides.css /opt/overides.css
+COPY ./compose/production/nginx/dhparams.pem /var/www/onlyoffice/Data/certs/dhparam.pem
+COPY ./compose/production/documentserver/run-document-server.sh /app/ds/run-document-server.sh
 
 EXPOSE 80 443
 
@@ -81,12 +81,14 @@ RUN echo "$REPO_URL" | tee /etc/apt/sources.list.d/ds.list && \
     service supervisor stop && \
     chmod 755 /app/ds/*.sh && \
     rm -rf /var/log/$COMPANY_NAME && \
-    rm -rf /var/lib/apt/lists/*    
+    rm -rf /var/lib/apt/lists/*
 
-RUN cp -rf /opt/img /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/img  && \
-    cat /opt/overides.css >> /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/css/app.css
+RUN cp -rf /opt/img /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/img && \
+    cat /opt/overides.css >> /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/css/app.css && \
+    ln -sf /etc/letsencrypt/live/staging-dokeza.mzalendo.com/fullchain.pem /var/www/onlyoffice/Data/certs/onlyoffice.crt && \
+    ln -sf /etc/letsencrypt/live/staging-dokeza.mzalendo.com/privkey.pem /var/www/onlyoffice/Data/certs/onlyoffice.key && \
+    ln -sf /etc/letsencrypt/live/staging-dokeza.mzalendo.com/chain.pem /var/www/onlyoffice/Data/certs/ca-certificates.pem
 
-VOLUME /var/log/$COMPANY_NAME /var/lib/$COMPANY_NAME /var/www/$COMPANY_NAME/Data /var/lib/postgresql /var/lib/rabbitmq /var/lib/redis /usr/share/fonts/truetype/custom
-
+VOLUME /var/log/$COMPANY_NAME /var/lib/$COMPANY_NAME /var/www/$COMPANY_NAME/Data /var/lib/postgresql /var/lib/rabbitmq /var/lib/redis /usr/share/fonts/truetype/custom /etc/letsencrypt
 
 ENTRYPOINT /app/ds/run-document-server.sh

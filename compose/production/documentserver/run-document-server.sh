@@ -358,7 +358,7 @@ update_nginx_settings(){
       sed '/ssl_dhparam/d' -i ${NGINX_ONLYOFFICE_CONF}
     fi
 
-    sed 's,\(ssl_verify_client \).*\(;\)$,'"\1${SSL_VERIFY_CLIENT}\2"',' -i ${NGINX_ONLYOFFICE_CONF}
+    # sed 's,\(ssl_verify_client \).*\(;\)$,'"\1${SSL_VERIFY_CLIENT}\2"',' -i ${NGINX_ONLYOFFICE_CONF}
 
     if [ -f "${CA_CERTIFICATES_PATH}" ]; then
       sed '/ssl_verify_client/a '"ssl_client_certificate ${CA_CERTIFICATES_PATH}"';' -i ${NGINX_ONLYOFFICE_CONF}

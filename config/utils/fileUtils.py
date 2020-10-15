@@ -24,7 +24,7 @@
 
 """
 
-import doc_config
+from config.settings import base
 
 def getFileName(str):
     ind = str.rfind('/')
@@ -42,11 +42,11 @@ def getFileExt(str):
 
 def getFileType(str):
     ext = getFileExt(str)
-    if ext in doc_config.EXT_DOCUMENT:
+    if ext in base.EXT_DOCUMENT:
         return 'text'
-    if ext in doc_config.EXT_SPREADSHEET:
+    if ext in base.EXT_SPREADSHEET:
         return 'spreadsheet'
-    if ext in doc_config.EXT_PRESENTATION:
+    if ext in base.EXT_PRESENTATION:
         return 'presentation'
 
     return 'text'

@@ -24,7 +24,6 @@
 
 """
 
-import doc_config
 import json
 import os
 import re
@@ -34,9 +33,11 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.shortcuts import redirect
 from django.urls import reverse
-from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_cookie
+
+from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 from config.doc_views import index, actions
+from config.settings import base
 
 
 
@@ -47,7 +48,7 @@ def upload(request):
     try:
         fileInfo = request.FILES['uploadedFile']
 
-        if fileInfo.size > doc_config.FILE_SIZE_MAX:
+        if fileInfo.size > base.FILE_SIZE_MAX:
             raise Exception('File size is too big')
 
         curExt = fileUtils.getFileExt(fileInfo.name)
@@ -181,7 +182,7 @@ def edit(request):
                 'about': True,
                 'feedback': True,
                 'goback': {
-                    'url': doc_config.EXAMPLE_DOMAIN
+                    'url': base.SITE_DOMAIN
                 }
             }
         }
@@ -196,7 +197,7 @@ def edit(request):
         'history': json.dumps(hist['history']) if 'history' in hist else None,
         'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
         'fileType': fileType,
-        'apiUrl': doc_config.DOC_SERV_API_URL
+        'apiUrl': base.DOC_SERV_API_URL
     }
     return render(request, 'editor.html', context)
 

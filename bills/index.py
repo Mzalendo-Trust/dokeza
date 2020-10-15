@@ -24,13 +24,13 @@
 
 """
 
-import doc_config
 import json
 
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
 
 from dokeza_2_0.users.models import User
+from config.settings import base
 from config.utils import docManager
 
 User = get_user_model()
@@ -38,9 +38,9 @@ User = get_user_model()
 def default(request):
     context = {
         'languages': docManager.LANGUAGES,
-        'preloadurl': doc_config.DOC_SERV_PRELOADER_URL,
-        'editExt': json.dumps(doc_config.DOC_SERV_EDITED),
-        'convExt': json.dumps(doc_config.DOC_SERV_CONVERT),
+        'preloadurl': base.DOC_SERV_PRELOADER_URL,
+        'editExt': json.dumps(base.DOC_SERV_EDITED),
+        'convExt': json.dumps(base.DOC_SERV_CONVERT),
         'files': docManager.getStoredFiles(request),
         'stingo':'documents'
     }

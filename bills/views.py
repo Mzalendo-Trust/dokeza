@@ -1,4 +1,3 @@
-import doc_config
 import json
 import os
 import re
@@ -16,6 +15,7 @@ from django.views.generic.detail import SingleObjectMixin
 from bs4 import BeautifulSoup
 
 from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
+from config.settings import base
 
 # from dokeza_2_0.users.models import User, Profile
 from .models import Bill
@@ -160,14 +160,14 @@ class BillDetailView(DetailView):
                     'about': True,
                     'customer': {
                         'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
-                        'logo': doc_config.EXAMPLE_DOMAIN + 'static/images/dokeza-logo-banner.png',
+                        'logo': base.SITE_DOMAIN + 'static/images/dokeza-logo-banner.png',
                         'email':'mzalendo.devops@gmail.com'
                     },
                     'compactHeader': False,
                     'comments': True,
                     'commentAuthorOnly': True,
                     'goback': {
-                        'url': doc_config.EXAMPLE_DOMAIN + 'bills/'
+                        'url': base.SITE_DOMAIN + 'bills/'
                     }
                 }
             }
@@ -184,7 +184,7 @@ class BillDetailView(DetailView):
         context['history'] = json.dumps(hist['history']) if 'history' in hist else None
         context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
         context['fileType'] = fileType
-        context['apiUrl'] = doc_config.DOC_SERV_API_URL
-        print('user', self.request.user)
+        context['apiUrl'] = base.DOC_SERV_API_URL
+        print('apiUrl', base.DOC_SERV_API_URL)
         return context
     

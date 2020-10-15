@@ -24,13 +24,12 @@
 
 """
 
-
-import doc_config
 import os
 import shutil
 import io
 import re
 import requests
+from django.conf import settings
 
 from config.settings import base
 from . import fileUtils, historyManager
@@ -60,13 +59,13 @@ LANGUAGES = {
 }
 
 def isCanView(ext):
-    return ext in doc_config.DOC_SERV_VIEWED
+    return ext in settings.DOC_SERV_VIEWED
 
 def isCanEdit(ext):
-    return ext in doc_config.DOC_SERV_EDITED
+    return ext in settings.DOC_SERV_EDITED
 
 def isCanConvert(ext):
-    return ext in doc_config.DOC_SERV_CONVERT
+    return ext in settings.DOC_SERV_CONVERT
 
 def isSupportedExt(ext):
     return isCanView(ext) | isCanEdit(ext) | isCanConvert(ext)
@@ -93,23 +92,23 @@ def getCorrectName(filename, req):
     return name
 
 def getFileUri(filename, req):
-    host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
+    host = settings.SITE_DOMAIN.rstrip('/')
     # If the filename has 'bills' then use the path to bills
     if re.search('bills', filename):
-        return f'{host}{base.MEDIA_URL}{filename}'
+        return f'{host}{settings.MEDIA_URL}{filename}'
     else:
         user = req.user
         if not user.first_name:
             user.first_name = 'Mgeni'
         if not user.username:
             user.username = f'{user.first_name}_{user.last_name}'
-        return f'{host}{base.MEDIA_URL}{user.username}/{filename}'
+        return f'{host}{settings.MEDIA_URL}{user.username}/{filename}'
     
 
 def getCallbackUrl(filename, req):
-    host = doc_config.EXAMPLE_DOMAIN.rstrip('/')
+    host = settings.SITE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
-        return f'{host}/bills/track?filename={filename}&userAddress="bills"'
+        return f'{host}/bills/track?filename={filename}&userAddress=bills'
     user = req.user
     if not user.first_name:
         user.first_name = 'Mgeni'
@@ -119,13 +118,13 @@ def getCallbackUrl(filename, req):
 
 def getRootFolder(req):
     if re.search('bills', str(req)):
-        directory = os.path.join(doc_config.STORAGE_PATH)
+        directory = os.path.join(settings.STORAGE_PATH)
     else:
         if isinstance(req, str):
             dirname = req
         else:
             dirname = req.user.username
-        directory = os.path.join(doc_config.STORAGE_PATH, dirname)
+        directory = os.path.join(settings.STORAGE_PATH, dirname)
 
     if not os.path.exists(directory):
         os.makedirs(directory)

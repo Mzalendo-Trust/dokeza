@@ -6,16 +6,18 @@ ONLYOFFICE_HTTPS_HSTS_ENABLED=true
 ONLYOFFICE_HTTPS_HSTS_MAXAGE=31536000
 
 # The path to the SSL certificate to use
-# SSL_CERTIFICATE_PATH=/var/www/onlyoffice/Data/certs/tls.crt
+SSL_CERTIFICATE_PATH=/var/www/onlyoffice/Data/certs/onlyoffice.crt
 
 # The path to the SSL certificate's private key.
-# SSL_KEY_PATH=/var/www/onlyoffice/Data/certs/tls.key
+SSL_KEY_PATH=/var/www/onlyoffice/Data/certs/onlyoffice.key
 
 # The path to the Diffie-Hellman parameter.
-# SSL_DHPARAM_PATH=/var/www/onlyoffice/Data/certs/dhparam.pem
+SSL_DHPARAM_PATH=/var/www/onlyoffice/Data/certs/dhparam.pem
 
 # Enable verification of client certificates using the CA_CERTIFICATES_PATH file. 
-SSL_VERIFY_CLIENT=false
+# SSL_VERIFY_CLIENT=true
+
+# CA_CERTIFICATES_PATH=/var/www/onlyoffice/Data/certs/ca-certificates.pem;
 
 # The database type. Supported values are postgres, mariadb or mysql.
 DB_TYPE=postgres

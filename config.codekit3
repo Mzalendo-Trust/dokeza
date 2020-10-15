@@ -25,6 +25,14 @@
 		"oAP": "/.docker-sync/daemon.log",
 		"oF": 0
 		},
+	"/.docker-sync/daemon.pid": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.docker-sync/daemon.pid",
+		"oF": 0
+		},
 	"/.dockerignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -39,6 +47,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/.editorconfig",
+		"oF": 0
+		},
+	"/.envs/.documentserver": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.envs/.documentserver",
 		"oF": 0
 		},
 	"/.envs/.local/.django": {
@@ -5611,134 +5627,6 @@
 		"oAP": "/bills/__init__.py",
 		"oF": 0
 		},
-	"/bills/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/bills/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/bills/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/forms.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/forms.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/forms.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/forms.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/managers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/managers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/sitemap.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/sitemap.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/sitemap.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/sitemap.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/tests.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/tests.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/__pycache__/views.cpython-36.pyc",
-		"oF": 0
-		},
 	"/bills/actions.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5761,86 +5649,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/bills/api/__init__.py",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/bills/api/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/bills/api/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/permissions.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/permissions.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/permissions.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/permissions.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/serializers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/serializers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/api/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/api/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/bills/api/permissions.py": {
@@ -5929,150 +5737,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/bills/migrations/__init__.py",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0002_auto_20170308_2140.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0002_auto_20170308_2140.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0003_auto_20170315_1435.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0003_auto_20170315_1435.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0003_auto_20170315_1435.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0003_auto_20170315_1435.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0004_bill_bill_pic.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0004_bill_bill_pic.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0004_bill_bill_pic.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0004_bill_bill_pic.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0005_auto_20170324_2040.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0005_auto_20170324_2040.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0005_auto_20170324_2040.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0005_auto_20170324_2040.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0006_auto_20170423_2231.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0006_auto_20170423_2231.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0006_auto_20170423_2231.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0006_auto_20170423_2231.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0007_auto_20170602_1957.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0007_auto_20170602_1957.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0007_auto_20170602_1957.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0007_auto_20170602_1957.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0008_bill_bill_stage.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0008_bill_bill_stage.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/0008_bill_bill_stage.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/migrations/__pycache__/0008_bill_bill_stage.cpython-36.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/bills/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/bills/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/bills/migrations/__pycache__/__init__.cpython-36.pyc",
 		"oF": 0
 		},
 	"/bills/models.py": {
@@ -6171,12 +5835,6 @@
 		"oAP": "/certbot/certs/keys/0001_key-certbot.pem",
 		"oF": 0
 		},
-	"/certbot/logs": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/certbot/logs",
-		"oF": 0
-		},
 	"/certs/afropro.local.crt": {
 		"cB": 0,
 		"ft": 8192,
@@ -6193,116 +5851,28 @@
 		"oAP": "/certs/afropro.local.key",
 		"oF": 0
 		},
+	"/certs/dhparam.pem": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/certs/dhparam.pem",
+		"oF": 0
+		},
+	"/certs/rootCA.pem": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/certs/rootCA.pem",
+		"oF": 0
+		},
 	"/comments/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/comments/__init__.py",
-		"oF": 0
-		},
-	"/comments/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/forms.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/forms.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/forms.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/forms.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/tests.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/tests.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/comments/admin.py": {
@@ -6319,70 +5889,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/comments/api/__init__.py",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/api/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/api/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/serializers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/__pycache__/serializers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/api/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/comments/api/serializers.py": {
@@ -6439,70 +5945,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/comments/migrations/__init__.py",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/0002_auto_20170604_2309.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/__pycache__/0002_auto_20170604_2309.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/0002_auto_20170604_2309.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/__pycache__/0002_auto_20170604_2309.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/0003_auto_20180112_1243.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/__pycache__/0003_auto_20180112_1243.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/0003_auto_20180112_1243.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/__pycache__/0003_auto_20180112_1243.cpython-36.pyc",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/comments/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/migrations/__pycache__/__init__.cpython-36.pyc",
 		"oF": 0
 		},
 	"/comments/models.py": {
@@ -7354,6 +6796,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/local/documentserver/run-document-server.sh",
+		"oF": 0
+		},
+	"/compose/local/nginx/conf.d/local.conf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/local/nginx/conf.d/local.conf",
 		"oF": 0
 		},
 	"/compose/production/awscli/Dockerfile": {
@@ -8335,6 +7785,22 @@
 		"oAP": "/compose/production/nginx/Dockerfile",
 		"oF": 0
 		},
+	"/compose/production/nginx/Dockerfile-staging": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/Dockerfile-staging",
+		"oF": 0
+		},
+	"/compose/production/nginx/nginx-staging.conf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/nginx-staging.conf",
+		"oF": 0
+		},
 	"/compose/production/nginx/nginx.conf": {
 		"cB": 0,
 		"ft": 8192,
@@ -8735,28 +8201,12 @@
 		"oAP": "/django_countries/ioc_data.py",
 		"oF": 0
 		},
-	"/django_countries/locale/af/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/af/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/af/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/af/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ar/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ar/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/ar/LC_MESSAGES/django.po": {
@@ -8767,28 +8217,12 @@
 		"oAP": "/django_countries/locale/ar/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/bg/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/bg/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/bg/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/bg/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ca/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ca/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/ca/LC_MESSAGES/django.po": {
@@ -8799,28 +8233,12 @@
 		"oAP": "/django_countries/locale/ca/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/cs/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/cs/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/cs/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/cs/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/da/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/da/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/da/LC_MESSAGES/django.po": {
@@ -8831,28 +8249,12 @@
 		"oAP": "/django_countries/locale/da/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/de/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/de/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/de/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/de/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/el/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/el/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/el/LC_MESSAGES/django.po": {
@@ -8863,28 +8265,12 @@
 		"oAP": "/django_countries/locale/el/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/en/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/en/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/en/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/en/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/eo/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/eo/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/eo/LC_MESSAGES/django.po": {
@@ -8895,28 +8281,12 @@
 		"oAP": "/django_countries/locale/eo/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/es/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/es/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/es/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/es/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/et/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/et/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/et/LC_MESSAGES/django.po": {
@@ -8927,28 +8297,12 @@
 		"oAP": "/django_countries/locale/et/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/eu/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/eu/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/eu/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/eu/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/eu_ES/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/eu_ES/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/eu_ES/LC_MESSAGES/django.po": {
@@ -8959,28 +8313,12 @@
 		"oAP": "/django_countries/locale/eu_ES/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/fa/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/fa/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/fa/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/fa/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/fi/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/fi/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/fi/LC_MESSAGES/django.po": {
@@ -8991,28 +8329,12 @@
 		"oAP": "/django_countries/locale/fi/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/fr/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/fr/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/fr/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/fr/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/he/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/he/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/he/LC_MESSAGES/django.po": {
@@ -9023,28 +8345,12 @@
 		"oAP": "/django_countries/locale/he/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/he_IL/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/he_IL/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/he_IL/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/he_IL/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/hr/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/hr/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/hr/LC_MESSAGES/django.po": {
@@ -9055,28 +8361,12 @@
 		"oAP": "/django_countries/locale/hr/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/hu/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/hu/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/hu/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/hu/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/hy/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/hy/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/hy/LC_MESSAGES/django.po": {
@@ -9087,28 +8377,12 @@
 		"oAP": "/django_countries/locale/hy/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/it/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/it/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/it/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/it/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ja/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ja/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/ja/LC_MESSAGES/django.po": {
@@ -9119,28 +8393,12 @@
 		"oAP": "/django_countries/locale/ja/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/ko_KR/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ko_KR/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/ko_KR/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/ko_KR/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/lt/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/lt/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/lt/LC_MESSAGES/django.po": {
@@ -9151,28 +8409,12 @@
 		"oAP": "/django_countries/locale/lt/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/lv/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/lv/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/lv/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/lv/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/mn/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/mn/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/mn/LC_MESSAGES/django.po": {
@@ -9183,28 +8425,12 @@
 		"oAP": "/django_countries/locale/mn/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/nb/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/nb/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/nb/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/nb/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/nl/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/nl/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/nl/LC_MESSAGES/django.po": {
@@ -9215,28 +8441,12 @@
 		"oAP": "/django_countries/locale/nl/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/pl/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/pl/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/pl/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/pl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/pt_BR/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/pt_BR/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/pt_BR/LC_MESSAGES/django.po": {
@@ -9247,28 +8457,12 @@
 		"oAP": "/django_countries/locale/pt_BR/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/pt_PT/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/pt_PT/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/pt_PT/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/pt_PT/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ro/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ro/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/ro/LC_MESSAGES/django.po": {
@@ -9279,28 +8473,12 @@
 		"oAP": "/django_countries/locale/ro/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/ru/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ru/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/ru/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/ru/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/sk/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sk/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/sk/LC_MESSAGES/django.po": {
@@ -9311,28 +8489,12 @@
 		"oAP": "/django_countries/locale/sk/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/sl/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sl/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/sl/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/sl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.po": {
@@ -9343,28 +8505,12 @@
 		"oAP": "/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/sv/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sv/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/sv/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/sv/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/tr_TR/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/tr_TR/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/tr_TR/LC_MESSAGES/django.po": {
@@ -9375,14 +8521,6 @@
 		"oAP": "/django_countries/locale/tr_TR/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/uk/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/uk/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/uk/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
@@ -9391,28 +8529,12 @@
 		"oAP": "/django_countries/locale/uk/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/django_countries/locale/zh_CN/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/zh_CN/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/django_countries/locale/zh_CN/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/django_countries/locale/zh_CN/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/zh_Hans/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/zh_Hans/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/django_countries/locale/zh_Hans/LC_MESSAGES/django.po": {
@@ -11681,38 +10803,6 @@
 		"oAP": "/django_social_share/__init__.py",
 		"oF": 0
 		},
-	"/django_social_share/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_social_share/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/django_social_share/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_social_share/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/django_social_share/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_social_share/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/django_social_share/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_social_share/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
 	"/django_social_share/apps.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -11777,38 +10867,6 @@
 		"oAP": "/django_social_share/templatetags/__init__.py",
 		"oF": 0
 		},
-	"/django_social_share/templatetags/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_social_share/templatetags/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/django_social_share/templatetags/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_social_share/templatetags/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/django_social_share/templatetags/__pycache__/social_share.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_social_share/templatetags/__pycache__/social_share.cpython-35.pyc",
-		"oF": 0
-		},
-	"/django_social_share/templatetags/__pycache__/social_share.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_social_share/templatetags/__pycache__/social_share.cpython-36.pyc",
-		"oF": 0
-		},
 	"/django_social_share/templatetags/social_share.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -11823,22 +10881,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/django_social_share/tests/__init__.py",
-		"oF": 0
-		},
-	"/django_social_share/tests/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_social_share/tests/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/django_social_share/tests/__pycache__/tests.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_social_share/tests/__pycache__/tests.cpython-35.pyc",
 		"oF": 0
 		},
 	"/django_social_share/tests/runtests.py": {
@@ -11865,68 +10907,12 @@
 		"oAP": "/django_social_share/views.py",
 		"oF": 0
 		},
-	"/doc_config.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/doc_config.py",
-		"oF": 0
-		},
 	"/docbuilder/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/docbuilder/__init__.py",
-		"oF": 0
-		},
-	"/docbuilder/__pycache__/__init__.cpython-38.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/docbuilder/__pycache__/__init__.cpython-38.pyc",
-		"oF": 0
-		},
-	"/docbuilder/__pycache__/admin.cpython-38.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/docbuilder/__pycache__/admin.cpython-38.pyc",
-		"oF": 0
-		},
-	"/docbuilder/__pycache__/apps.cpython-38.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/docbuilder/__pycache__/apps.cpython-38.pyc",
-		"oF": 0
-		},
-	"/docbuilder/__pycache__/models.cpython-38.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/docbuilder/__pycache__/models.cpython-38.pyc",
-		"oF": 0
-		},
-	"/docbuilder/__pycache__/urls.cpython-38.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/docbuilder/__pycache__/urls.cpython-38.pyc",
-		"oF": 0
-		},
-	"/docbuilder/__pycache__/views.cpython-38.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/docbuilder/__pycache__/views.cpython-38.pyc",
 		"oF": 0
 		},
 	"/docbuilder/admin.py": {
@@ -11951,14 +10937,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/docbuilder/migrations/__init__.py",
-		"oF": 0
-		},
-	"/docbuilder/migrations/__pycache__/__init__.cpython-38.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/docbuilder/migrations/__pycache__/__init__.cpython-38.pyc",
 		"oF": 0
 		},
 	"/docbuilder/models.py": {
@@ -15159,536 +14137,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/CHANGES.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/CHANGES.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/highlight.pack-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/LICENSE": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/LICENSE",
-		"oF": 0
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/README.ru.md": {
-		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/README.ru.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/arta.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/arta-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/ascetic.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/ascetic-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.light.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-dune.light-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.light.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-forest.light-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.light.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-heath.light-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.light.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-lakeside.light-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.light.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/atelier-seaside.light-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_paper.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_paper-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_papersq.png": {
-		"ft": 32768,
-		"iS": 18198,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/brown_papersq.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/default.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/default-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/docco.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/docco-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/far.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/far-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/foundation.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/foundation-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/github.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/github-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/googlecode.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/googlecode-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/idea.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/idea-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/ir_black.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/ir_black-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/magula.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/magula-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/mono-blue.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/mono-blue-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/monokai_sublime-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/obsidian.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/obsidian-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.light.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/paraiso.light-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque.jpg": {
-		"ft": 16384,
-		"iS": 1186,
-		"jF": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/pojoaque.jpg",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"q": 100
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/railscasts.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/railscasts-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/rainbow.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/rainbow-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book.png": {
-		"ft": 32768,
-		"iS": 486,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/school_book.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_dark.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_dark-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_light.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/solarized_light-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/sunburst.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/sunburst-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-blue.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-blue-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-bright.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-bright-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-eighties.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-eighties-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-night-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/tomorrow-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/vs.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/vs-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/xcode.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/xcode-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/ckeditor/plugins/codesnippet/lib/highlight/styles/zenburn-min.css",
-		"oF": 0,
-		"oS": 3
 		},
 	"/dokeza_2_0/static/ckeditor/plugins/codesnippet/plugin.js": {
 		"bF": 0,
@@ -25659,6 +24107,16 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/dokeza_2_0/static/dev/images/share/facebook_def.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dev/images/share/facebook_def.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
 	"/dokeza_2_0/static/dev/images/share/G_plus_act.png": {
 		"ft": 32768,
 		"iS": 1263,
@@ -25702,6 +24160,16 @@
 		"opt": 0,
 		"oT": 1,
 		"q": 100
+		},
+	"/dokeza_2_0/static/dev/images/share/mzalendo_def.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/dokeza_2_0/static/dev/images/share/mzalendo_def.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
 		},
 	"/dokeza_2_0/static/dev/images/share/twitter_act.png": {
 		"ft": 32768,
@@ -25931,16 +24399,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/dokeza_2_0/static/dist/css/calendar-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/css/calendar-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/dokeza_2_0/static/dist/css/calendar.css": {
 		"aP": 1,
 		"bl": 0,
@@ -25948,16 +24406,6 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/css/calendar-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/dist/css/dokeza-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/css/dokeza-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -25981,16 +24429,6 @@
 		"oF": 0,
 		"oS": 3
 		},
-	"/dokeza_2_0/static/dist/css/mzalendo-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/css/mzalendo-min-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/dokeza_2_0/static/dist/css/mzalendo.css": {
 		"aP": 1,
 		"bl": 0,
@@ -25998,16 +24436,6 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/css/mzalendo-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/dokeza_2_0/static/dist/css/onlyoffice-min.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/css/onlyoffice-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -26020,6 +24448,14 @@
 		"oAP": "/dokeza_2_0/static/dist/css/onlyoffice-min.css",
 		"oF": 0,
 		"oS": 3
+		},
+	"/dokeza_2_0/static/dist/fonts/.unison.FontAwesome.otf.37ce0a478fa6b333247d88adfdbd2157.unison.tmp": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/fonts/.unison.FontAwesome.otf.37ce0a478fa6b333247d88adfdbd2157.unison.tmp",
+		"oF": 0
 		},
 	"/dokeza_2_0/static/dist/fonts/fontawesome-webfont.eot": {
 		"cB": 0,
@@ -27188,17 +25624,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -27210,17 +25635,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -27228,17 +25642,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/js/dokeza-fullcalendar.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/dist/js/dokeza.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -27286,6 +25689,17 @@
 		"iS": 452,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/images/block-content-24.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/dokeza_2_0/static/images/calendar-holder.png": {
+		"ft": 32768,
+		"iS": 14547,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/calendar-holder.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
@@ -28290,17 +26704,6 @@
 		"sC": 3,
 		"tS": 0
 		},
-	"/dokeza_2_0/static/js/vendor/bootstrap.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/js/vendor/bootstrap.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/js/vendor/bootstrap.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -28308,17 +26711,6 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/js/vendor/bootstrap.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/dokeza_2_0/static/js/vendor/fullcalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/js/vendor/fullcalendar.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -29797,118 +28189,6 @@
 		"oAP": "/hitcount/__init__.py",
 		"oF": 0
 		},
-	"/hitcount/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/managers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/managers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/managers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/managers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/signals.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/signals.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/signals.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/signals.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/utils.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/utils.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/utils.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/utils.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/__pycache__/views.cpython-36.pyc",
-		"oF": 0
-		},
 	"/hitcount/admin.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -29933,36 +28213,12 @@
 		"oAP": "/hitcount/management/__init__.py",
 		"oF": 0
 		},
-	"/hitcount/management/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/management/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/management/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/management/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
 	"/hitcount/management/commands/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/hitcount/management/commands/__init__.py",
-		"oF": 0
-		},
-	"/hitcount/management/commands/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/management/commands/__pycache__/__init__.cpython-35.pyc",
 		"oF": 0
 		},
 	"/hitcount/management/commands/hitcount_cleanup.py": {
@@ -29995,54 +28251,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/hitcount/migrations/__init__.py",
-		"oF": 0
-		},
-	"/hitcount/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/migrations/__pycache__/0002_auto_20170308_2140.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/migrations/__pycache__/0002_auto_20170308_2140.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/migrations/__pycache__/__init__.cpython-36.pyc",
 		"oF": 0
 		},
 	"/hitcount/models.py": {
@@ -30091,38 +28299,6 @@
 		"oAP": "/hitcount/templatetags/__init__.py",
 		"oF": 0
 		},
-	"/hitcount/templatetags/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/templatetags/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/templatetags/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/hitcount/templatetags/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/hitcount/templatetags/__pycache__/hitcount_tags.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/templatetags/__pycache__/hitcount_tags.cpython-35.pyc",
-		"oF": 0
-		},
-	"/hitcount/templatetags/__pycache__/hitcount_tags.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/hitcount/templatetags/__pycache__/hitcount_tags.cpython-36.pyc",
-		"oF": 0
-		},
 	"/hitcount/templatetags/hitcount_tags.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -30155,350 +28331,12 @@
 		"oAP": "/hitcount/views.py",
 		"oF": 0
 		},
-	"/htmlcov/coverage_html.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/htmlcov/coverage_html-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/htmlcov/dokeza_2_0___init___py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0___init___py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_conftest_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_conftest_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_contrib___init___py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_contrib___init___py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_contrib_sites___init___py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_contrib_sites___init___py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users___init___py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users___init___py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_admin_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_admin_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_api_serializers_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_api_serializers_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_api_views_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_api_views_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_apps_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_apps_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_forms_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_forms_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_models_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_models_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_tasks_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_tasks_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_urls_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_urls_py.html",
-		"oF": 0
-		},
-	"/htmlcov/dokeza_2_0_users_views_py.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/dokeza_2_0_users_views_py.html",
-		"oF": 0
-		},
-	"/htmlcov/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/index.html",
-		"oF": 0
-		},
-	"/htmlcov/jquery.ba-throttle-debounce.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/htmlcov/jquery.ba-throttle-debounce.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/htmlcov/jquery.hotkeys.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/htmlcov/jquery.hotkeys-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/htmlcov/jquery.isonscreen.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/htmlcov/jquery.isonscreen-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/htmlcov/jquery.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/htmlcov/jquery.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/htmlcov/jquery.tablesorter.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/htmlcov/jquery.tablesorter.min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
-	"/htmlcov/keybd_closed.png": {
-		"ft": 32768,
-		"iS": 112,
-		"oA": 0,
-		"oAP": "/htmlcov/keybd_closed.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/htmlcov/keybd_open.png": {
-		"ft": 32768,
-		"iS": 112,
-		"oA": 0,
-		"oAP": "/htmlcov/keybd_open.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/htmlcov/status.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/htmlcov/status-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/htmlcov/style.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/htmlcov/style-min.css",
-		"oF": 0,
-		"oS": 3
-		},
 	"/ideas/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/ideas/__init__.py",
-		"oF": 0
-		},
-	"/ideas/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/ideas/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/ideas/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/apps.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/apps.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/apps.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/apps.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/forms.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/forms.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/forms.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/forms.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/ideas/admin.py": {
@@ -30515,46 +28353,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/ideas/api/__init__.py",
-		"oF": 0
-		},
-	"/ideas/api/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/ideas/api/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/api/__pycache__/permissions.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/api/__pycache__/permissions.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/api/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/api/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/api/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/api/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/api/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/api/__pycache__/views.cpython-35.pyc",
 		"oF": 0
 		},
 	"/ideas/api/permissions.py": {
@@ -30621,70 +28419,6 @@
 		"oAP": "/ideas/migrations/__init__.py",
 		"oF": 0
 		},
-	"/ideas/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/migrations/__pycache__/0002_auto_20190222_2032.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/__pycache__/0002_auto_20190222_2032.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/migrations/__pycache__/0002_auto_20190222_2032.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/__pycache__/0002_auto_20190222_2032.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/migrations/__pycache__/0003_submittedidea_private.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/__pycache__/0003_submittedidea_private.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/migrations/__pycache__/0003_submittedidea_private.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/ideas/migrations/__pycache__/0003_submittedidea_private.cpython-36.pyc",
-		"oF": 0
-		},
-	"/ideas/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/ideas/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/ideas/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/ideas/migrations/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
 	"/ideas/models.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -30715,6 +28449,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/ideas/views.py",
+		"oF": 0
+		},
+	"/local-start.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/local-start.sh",
 		"oF": 0
 		},
 	"/local.yml": {
@@ -31133,6 +28875,14 @@
 		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf",
 		"oF": 0
 		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018_8Fk4M5z.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_8Fk4M5z.docx",
+		"oF": 0
+		},
 	"/media/bills/TeaBill_2018.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -31140,22 +28890,6 @@
 		"oA": 0,
 		"oAP": "/media/bills/TeaBill_2018.docx",
 		"oF": 0
-		},
-	"/media/dokezamasta/new.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/dokezamasta/new.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		},
 	"/merge_production_dotenvs_in_dotenv.py": {
 		"cB": 0,
@@ -31179,110 +28913,6 @@
 		"oAP": "/other_docs/__init__.py",
 		"oF": 0
 		},
-	"/other_docs/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/other_docs/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/other_docs/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/apps.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/apps.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/apps.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/apps.cpython-36.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/forms.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/forms.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/__pycache__/views.cpython-36.pyc",
-		"oF": 0
-		},
 	"/other_docs/admin.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -31297,46 +28927,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/other_docs/api/__init__.py",
-		"oF": 0
-		},
-	"/other_docs/api/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/other_docs/api/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/api/__pycache__/permissions.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/api/__pycache__/permissions.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/api/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/api/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/api/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/api/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/api/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/api/__pycache__/views.cpython-35.pyc",
 		"oF": 0
 		},
 	"/other_docs/apps.py": {
@@ -31377,102 +28967,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/other_docs/migrations/__init__.py",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0002_doc_institution.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0002_doc_institution.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0002_doc_institution.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0002_doc_institution.cpython-36.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0003_auto_20170315_1435.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0003_auto_20170315_1435.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0004_bill_bill_pic.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0004_bill_bill_pic.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0005_auto_20170324_2040.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0005_auto_20170324_2040.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0006_auto_20170423_2231.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0006_auto_20170423_2231.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/0007_auto_20170602_1957.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/__pycache__/0007_auto_20170602_1957.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/other_docs/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/other_docs/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/other_docs/migrations/__pycache__/__init__.cpython-36.pyc",
 		"oF": 0
 		},
 	"/other_docs/models.py": {
@@ -31523,134 +29017,6 @@
 		"oAP": "/posts/__init__.py",
 		"oF": 0
 		},
-	"/posts/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/forms.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/forms.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/forms.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/forms.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/sitemap.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/sitemap.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/sitemap.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/sitemap.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/tests.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/tests.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/utils.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/utils.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/__pycache__/views.cpython-36.pyc",
-		"oF": 0
-		},
 	"/posts/admin.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -31665,102 +29031,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/posts/api/__init__.py",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/api/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/api/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/pagination.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/pagination.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/pagination.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/pagination.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/permissions.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/permissions.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/permissions.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/permissions.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/serializers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/serializers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/api/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/api/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/posts/api/pagination.py": {
@@ -31843,222 +29113,6 @@
 		"oAP": "/posts/migrations/__init__.py",
 		"oF": 0
 		},
-	"/posts/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0002_auto_20170308_2140.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0002_auto_20170308_2140.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0002_auto_20170308_2140.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0003_memorandum_image.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0003_memorandum_image.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0003_memorandum_image.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0003_memorandum_image.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0004_auto_20170405_1704.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0004_auto_20170405_1704.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0004_auto_20170405_1704.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0004_auto_20170405_1704.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0005_auto_20170409_1802.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0005_auto_20170409_1802.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0005_auto_20170409_1802.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0005_auto_20170409_1802.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0006_auto_20170411_2351.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0006_auto_20170411_2351.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0006_auto_20170411_2351.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0006_auto_20170411_2351.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0007_petition_tags.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0007_petition_tags.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0007_petition_tags.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0007_petition_tags.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0008_petition_draft.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0008_petition_draft.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0008_petition_draft.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0008_petition_draft.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0009_auto_20170423_2231.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0009_auto_20170423_2231.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0009_auto_20170423_2231.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0009_auto_20170423_2231.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0010_auto_20180112_1243.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0010_auto_20180112_1243.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0010_auto_20180112_1243.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0010_auto_20180112_1243.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0011_auto_20181010_1834.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0011_auto_20181010_1834.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0011_auto_20181015_1304.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0011_auto_20181015_1304.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0011_auto_20181015_1304.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0011_auto_20181015_1304.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0012_auto_20181122_2152.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0012_auto_20181122_2152.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/0012_auto_20181122_2152.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/migrations/__pycache__/0012_auto_20181122_2152.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/migrations/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
 	"/posts/models.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -32073,54 +29127,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/posts/templatetags/__init__.py",
-		"oF": 0
-		},
-	"/posts/templatetags/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/templatetags/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/templatetags/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/posts/templatetags/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/templatetags/__pycache__/post_lists.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/templatetags/__pycache__/post_lists.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/templatetags/__pycache__/post_lists.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/templatetags/__pycache__/post_lists.cpython-36.pyc",
-		"oF": 0
-		},
-	"/posts/templatetags/__pycache__/urlify.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/templatetags/__pycache__/urlify.cpython-35.pyc",
-		"oF": 0
-		},
-	"/posts/templatetags/__pycache__/urlify.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/posts/templatetags/__pycache__/urlify.cpython-36.pyc",
 		"oF": 0
 		},
 	"/posts/templatetags/post_lists.py": {
@@ -32179,132 +29185,12 @@
 		"oAP": "/production.yml",
 		"oF": 0
 		},
-	"/production_.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/production_.yml",
-		"oF": 0
-		},
-	"/production_orig.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/production_orig.yml",
-		"oF": 0
-		},
 	"/public_participation/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/public_participation/__init__.py",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/public_participation/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/public_participation/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/admin.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/admin.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/admin.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/admin.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/apps.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/apps.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/apps.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/apps.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/models.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/models.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/models.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/models.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/tests.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/tests.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/public_participation/admin.py": {
@@ -32321,70 +29207,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/public_participation/api/__init__.py",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/public_participation/api/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/public_participation/api/__pycache__/__init__.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/serializers.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/api/__pycache__/serializers.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/serializers.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/api/__pycache__/serializers.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/urls.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/api/__pycache__/urls.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/urls.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/api/__pycache__/urls.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/views.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/api/__pycache__/views.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/api/__pycache__/views.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/api/__pycache__/views.cpython-36.pyc",
 		"oF": 0
 		},
 	"/public_participation/api/serializers.py": {
@@ -32433,54 +29255,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/public_participation/migrations/__init__.py",
-		"oF": 0
-		},
-	"/public_participation/migrations/__pycache__/0001_initial.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/migrations/__pycache__/0001_initial.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/migrations/__pycache__/0001_initial.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/migrations/__pycache__/0001_initial.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/migrations/__pycache__/0002_publicevent.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/migrations/__pycache__/0002_publicevent.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/migrations/__pycache__/0002_publicevent.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/migrations/__pycache__/0002_publicevent.cpython-36.pyc",
-		"oF": 0
-		},
-	"/public_participation/migrations/__pycache__/__init__.cpython-35.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/public_participation/migrations/__pycache__/__init__.cpython-35.pyc",
-		"oF": 0
-		},
-	"/public_participation/migrations/__pycache__/__init__.cpython-36.pyc": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/public_participation/migrations/__pycache__/__init__.cpython-36.pyc",
 		"oF": 0
 		},
 	"/public_participation/models.py": {
@@ -32603,28 +29377,12 @@
 		"oAP": "/schedule/forms.py",
 		"oF": 0
 		},
-	"/schedule/locale/de/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/de/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/schedule/locale/de/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/schedule/locale/de/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/schedule/locale/en/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/en/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/schedule/locale/en/LC_MESSAGES/django.po": {
@@ -32635,28 +29393,12 @@
 		"oAP": "/schedule/locale/en/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/schedule/locale/es/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/es/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/schedule/locale/es/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/schedule/locale/es/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/schedule/locale/fi/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/fi/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/schedule/locale/fi/LC_MESSAGES/django.po": {
@@ -32667,28 +29409,12 @@
 		"oAP": "/schedule/locale/fi/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/schedule/locale/fr/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/fr/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/schedule/locale/fr/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/schedule/locale/fr/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/schedule/locale/it/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/it/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/schedule/locale/it/LC_MESSAGES/django.po": {
@@ -32699,14 +29425,6 @@
 		"oAP": "/schedule/locale/it/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/schedule/locale/pt_BR/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/pt_BR/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/schedule/locale/pt_BR/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
@@ -32715,28 +29433,12 @@
 		"oAP": "/schedule/locale/pt_BR/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/schedule/locale/ru/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/ru/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/schedule/locale/ru/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/schedule/locale/ru/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/schedule/locale/zh/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/schedule/locale/zh/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/schedule/locale/zh/LC_MESSAGES/django.po": {
@@ -33184,28 +29886,12 @@
 		"oAP": "/taggit/forms.py",
 		"oF": 0
 		},
-	"/taggit/locale/cs/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/cs/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/cs/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/cs/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/de/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/de/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/de/LC_MESSAGES/django.po": {
@@ -33216,28 +29902,12 @@
 		"oAP": "/taggit/locale/de/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/el/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/el/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/el/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/el/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/en/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/en/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/en/LC_MESSAGES/django.po": {
@@ -33248,28 +29918,12 @@
 		"oAP": "/taggit/locale/en/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/eo/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/eo/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/eo/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/eo/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/es/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/es/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/es/LC_MESSAGES/django.po": {
@@ -33280,28 +29934,12 @@
 		"oAP": "/taggit/locale/es/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/fi/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/fi/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/fi/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/fi/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/fr/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/fr/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/fr/LC_MESSAGES/django.po": {
@@ -33312,28 +29950,12 @@
 		"oAP": "/taggit/locale/fr/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/he/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/he/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/he/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/he/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/it/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/it/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/it/LC_MESSAGES/django.po": {
@@ -33344,28 +29966,12 @@
 		"oAP": "/taggit/locale/it/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/ja/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/ja/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/ja/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/ja/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/nb/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/nb/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/nb/LC_MESSAGES/django.po": {
@@ -33376,28 +29982,12 @@
 		"oAP": "/taggit/locale/nb/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/nl/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/nl/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/nl/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/nl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/pt_BR/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/pt_BR/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/pt_BR/LC_MESSAGES/django.po": {
@@ -33408,14 +29998,6 @@
 		"oAP": "/taggit/locale/pt_BR/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/ru/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/ru/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/ru/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
@@ -33424,28 +30006,12 @@
 		"oAP": "/taggit/locale/ru/LC_MESSAGES/django.po",
 		"oF": 0
 		},
-	"/taggit/locale/tr/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/tr/LC_MESSAGES/django.mo",
-		"oF": 0
-		},
 	"/taggit/locale/tr/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/taggit/locale/tr/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/taggit/locale/zh_Hans/LC_MESSAGES/django.mo": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/taggit/locale/zh_Hans/LC_MESSAGES/django.mo",
 		"oF": 0
 		},
 	"/taggit/locale/zh_Hans/LC_MESSAGES/django.po": {
@@ -33514,14 +30080,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/yarn-error.log": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/yarn-error.log",
-		"oF": 0
 		},
 	"/yarn.lock": {
 		"cB": 0,

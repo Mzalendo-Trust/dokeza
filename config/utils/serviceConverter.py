@@ -26,7 +26,8 @@
 
 import json
 import requests
-import doc_config
+
+from config.settings import base
 
 from . import fileUtils, jwtManager
 
@@ -54,7 +55,7 @@ def getConverterUri(docUri, fromExt, toExt, docKey, isAsync):
         payload['token'] = jwtManager.encode(payload)
         headers['Authorization'] = f'Bearer {headerToken}'
 
-    response = requests.post(config.DOC_SERV_CONVERTER_URL, json=payload, headers=headers )
+    response = requests.post(base.DOC_SERV_CONVERTER_URL, json=payload, headers=headers )
     json = response.json()
 
     return getResponseUri(json)

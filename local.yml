@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 volumes:
   local_postgres_data: {}
@@ -20,7 +20,7 @@ services:
     container_name: django
     depends_on:
       - postgres
-      - mailhog     
+      - mailhog
     volumes:
       - dokeza_vers_2:/app:nocopy
     env_file:
@@ -65,9 +65,10 @@ services:
     depends_on:
       - ds-postgresql
       - ds-rabbitmq
+      - ds-redis
     ports:
-      - '8082:80'
-      - '443:443'
+      - "8082:80"
+      - "8443:443"
     stdin_open: true
     restart: always
     volumes:
@@ -78,13 +79,13 @@ services:
       - /usr/share/fonts
     networks:
       - ds-network
-       
+
   ds-rabbitmq:
     container_name: ds-rabbitmq
     image: rabbitmq
     restart: always
     expose:
-      - '5672'
+      - "5672"
     networks:
       - ds-network
 
@@ -92,10 +93,10 @@ services:
     container_name: ds-postgresql
     image: postgres:12.3-alpine
     env_file:
-      - ./.envs/.local/.documentserver
+      - ./.envs/.documentserver
     restart: always
     expose:
-      - '5432'
+      - "5432"
     volumes:
       - documentserver_postgresql_data:/var/lib/postgresql
     networks:
@@ -107,7 +108,6 @@ services:
     restart: always
     networks:
       - ds-network
-
 
   mailhog:
     image: mailhog/mailhog:v1.0.0
@@ -155,7 +155,6 @@ services:
     restart: always
     networks:
       - dokeza-network
-
   # nginx-proxy:
   #   image: jwilder/nginx-proxy:alpine
   #   container_name: nginx-proxy
@@ -165,7 +164,7 @@ services:
   #   volumes:
   #     - /var/run/docker.sock:/tmp/docker.sock:ro
   #     - ./certs:/etc/nginx/certs
-    # restart: always
+  #   restart: always
   #   depends_on:
   #     - django
   #   networks:

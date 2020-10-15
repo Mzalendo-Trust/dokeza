@@ -27,7 +27,6 @@
 import os
 import io
 import json
-import doc_config
 
 from . import users, fileUtils
 from datetime import datetime
@@ -108,7 +107,7 @@ def readFile(path):
         return stream.read()
 
 def getPrevUri(filename, ver, ext, req):
-    host = config.EXAMPLE_DOMAIN.rstrip('/')
+    host = base.SITE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
         return f'{host}{base.MEDIA_URL}{filename}'
     else:
@@ -120,7 +119,7 @@ def getPrevUri(filename, ver, ext, req):
         return f'{host}{base.MEDIA_URL}{user.username}/{filename}-hist/{ver}/prev{ext}'
 
 def getZipUri(filename, ver, req):
-    host = config.EXAMPLE_DOMAIN.rstrip('/')
+    host = base.SITE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
         return f'{host}{base.MEDIA_URL}{filename}'
     else:

@@ -3,7 +3,6 @@ These 'actions' process the calls made on the page links.
 
 """
 
-import doc_config
 import json
 import os
 import re
@@ -16,6 +15,7 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_cookie
 
 from config.doc_views import index, actions
+from config.settings import base
 from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 
 @csrf_protect
@@ -25,7 +25,7 @@ def upload(request):
     try:
         fileInfo = request.FILES['uploadedFile']
 
-        if fileInfo.size > doc_config.FILE_SIZE_MAX:
+        if fileInfo.size > base.FILE_SIZE_MAX:
             raise Exception('File size is too big')
 
         curExt = fileUtils.getFileExt(fileInfo.name)
@@ -83,7 +83,11 @@ def createNew(request):
         fileType = request.GET['fileType']
         sample = request.GET.get('sample', False)
         
+        # new.docx = docManager.createSample(document, none, GET '/users/~documents/create/?fileType=text')
         filename = docManager.createSample(fileType, sample, request)
+
+        # url = '/users/~documents/edit?filename=new.docx' on the new windo with
+        # editor.html =>  path("~documents/edit", actions.edit, name="document-edit"),
         return HttpResponseRedirect(f'/users/~documents/edit?filename={filename}')
 
     except Exception as e:
@@ -161,7 +165,7 @@ def edit(request):
                 'feedback': True,
 
                 'goback': {
-                    'url': doc_config.EXAMPLE_DOMAIN + 'users/~documents/'
+                    'url': base.SITE_DOMAIN + '/users/~documents/'
                 }
             }
         }
@@ -176,7 +180,7 @@ def edit(request):
         'history': json.dumps(hist['history']) if 'history' in hist else None,
         'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
         'fileType': fileType,
-        'apiUrl': doc_config.DOC_SERV_API_URL
+        'apiUrl': base.DOC_SERV_API_URL
     }
     return render(request, 'editor.html', context)
 

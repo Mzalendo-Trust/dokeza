@@ -504,7 +504,7 @@ p.user-action {
 
   .container {
     position: relative;
-    padding-bottom: 13em;
+    padding-bottom: 15em;
     display: flex;
     flex-wrap: wrap;
     max-width: 1140px;
@@ -2485,15 +2485,14 @@ p.user-action {
     }
 
     .facebook-this {
-      background: url("/static/dist/images/share/facebook_def.svg") no-repeat
-        center;
+      background-color: transparent;
       background-size: 100%;
       border-radius: 2em;
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5)
     }
 
     .mzalendo-this {
-      background: url("/static/dist/images/share/mzalendo_def.svg") no-repeat center;
+     background-color: transparent;
       background-size: 100%;
       border-radius: 0.5em;
       box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5)

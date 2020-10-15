@@ -9,12 +9,12 @@ var $stopAutoplay = $(".stop-autoplay");
 var slidesNum = $slides.length;
 var prevSlideID = null;
 var currentSlideID = 0;
-var isAnimating = false;
-var isAutoPlay = false;
+var isAnimating = true;
+var isAutoPlay = true;
 
 function init() {
   gsap.set($slides, {
-    left: "-100%"
+    left: "-100%",
   });
   $navPrev.on("click", gotoPrevSlide);
   $navNext.on("click", gotoNextSlide);
@@ -27,7 +27,7 @@ function gotoPrevSlide() {
   var slideToGo = currentSlideID - 1;
   if (slideToGo <= -1) {
     slideToGo = slidesNum - 1;
-  } 
+  }
   stopAutoPlay();
   gotoSlide(slideToGo, 0.5, "prev");
 }
@@ -59,31 +59,35 @@ function gotoSlide(slideID, _time, _direction) {
     if (direction == "next") {
       gsap.to($prevSlide, time, {
         left: "-100%",
-        ease: Power2.easeOut
+        ease: Power2.easeOut,
       });
       gsap.fromTo(
         $currentSlide,
-        time, {
+        time,
+        {
           left: "100%",
-          ease: Power2.easeOut
-        }, {
+          ease: Power2.easeOut,
+        },
+        {
           left: "0",
-          ease: Power2.easeOut
+          ease: Power2.easeOut,
         }
       );
     } else {
       gsap.to($prevSlide, time, {
         left: "100%",
-        ease: Power2.easeOut
+        ease: Power2.easeOut,
       });
       gsap.fromTo(
         $currentSlide,
-        time, {
+        time,
+        {
           left: "-100%",
-          ease: Power2.easeOut
-        }, {
+          ease: Power2.easeOut,
+        },
+        {
           left: "0",
-          ease: Power2.easeOut
+          ease: Power2.easeOut,
         }
       );
     }

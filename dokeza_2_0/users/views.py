@@ -1,4 +1,3 @@
-import doc_config
 import json
 
 from django.contrib import messages
@@ -25,6 +24,7 @@ from .models import User, Profile
 
 from bills.forms import BillForm
 from posts.forms import PetitionForm
+from config.settings import base
 from config.utils import docManager
 
 User = get_user_model()
@@ -194,9 +194,9 @@ class UserDocumentsView(LoginRequiredMixin, TemplateView):
         context = super(UserDocumentsView, self).get_context_data(**kwargs)
         print('document context',context)
         context['languages'] = docManager.LANGUAGES,
-        context['preloadurl'] = doc_config.DOC_SERV_PRELOADER_URL,
-        context['editExt'] = json.dumps(doc_config.DOC_SERV_EDITED),
-        context['convExt'] = json.dumps(doc_config.DOC_SERV_CONVERT),
+        context['preloadurl'] = base.DOC_SERV_PRELOADER_URL,
+        context['editExt'] = json.dumps(base.DOC_SERV_EDITED),
+        context['convExt'] = json.dumps(base.DOC_SERV_CONVERT),
         context['page'] = 'users'
         context['stingo'] = 'documents'
         return context
