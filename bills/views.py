@@ -167,7 +167,7 @@ class BillDetailView(DetailView):
                     'comments': True,
                     'commentAuthorOnly': True,
                     'goback': {
-                        'url': base.SITE_DOMAIN + 'bills/'
+                        'url': base.SITE_DOMAIN + '/bills/'
                     }
                 }
             }

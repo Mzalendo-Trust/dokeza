@@ -209,7 +209,6 @@ header a {
     position: relative;
     text-align: center;
     width: 90px;
-    background: url(../images/file_download.png) no-repeat center 0 transparent;
     white-space: inherit;
 }
 .file-upload {

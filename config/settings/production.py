@@ -84,6 +84,7 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 # AWS_DEFAULT_ACL = None
 # # https://django-storages.readthedocs.io/en/latest/backends/amazon-S3.html#settings
 # AWS_S3_REGION_NAME = env("DJANGO_AWS_S3_REGION_NAME", default=None)
+
 # # STATIC
 # # ------------------------
 # STATICFILES_STORAGE = "dokeza_2_0.utils.storages.StaticRootS3Boto3Storage"
@@ -93,6 +94,14 @@ SECURE_CONTENT_TYPE_NOSNIFF = env.bool(
 # # ------------------------------------------------------------------------------
 # DEFAULT_FILE_STORAGE = "dokeza_2_0.utils.storages.MediaRootS3Boto3Storage"
 # MEDIA_URL = f"https://s3.amazonaws.com/{AWS_STORAGE_BUCKET_NAME}/media/"
+
+
+# STATIC
+# ------------------------
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+# MEDIA
+# ------------------------------------------------------------------------------
+
 
 # TEMPLATES
 # ------------------------------------------------------------------------------
@@ -140,10 +149,10 @@ ANYMAIL = {
     "SENDGRID_API_URL": env("SENDGRID_API_URL", default="https://api.sendgrid.com/v3/"),
 }
 
-# Collectfast
-# ------------------------------------------------------------------------------
-# https://github.com/antonagestam/collectfast#installation
-INSTALLED_APPS = ["collectfast"] + INSTALLED_APPS  # noqa F405
+# # Collectfast
+# # ------------------------------------------------------------------------------
+# # https://github.com/antonagestam/collectfast#installation
+# INSTALLED_APPS = ["collectfast"] + INSTALLED_APPS  # noqa F405
 
 # LOGGING
 # ------------------------------------------------------------------------------
@@ -201,4 +210,5 @@ sentry_sdk.init(
 # Your stuff...
 # ------------------------------------------------------------------------------
 
-STORAGE_PATH = 'app/dokeza_2_0/media'
+STORAGE_PATH = MEDIA_ROOT
+SITE_MODE = 'production'

@@ -8,6 +8,7 @@ import os
 import re
 
 from datetime import datetime
+from django.conf import settings
 from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 from django.shortcuts import redirect
@@ -15,7 +16,6 @@ from django.urls import reverse
 from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_cookie
 
 from config.doc_views import index, actions
-from config.settings import base
 from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 
 @csrf_protect
@@ -25,7 +25,7 @@ def upload(request):
     try:
         fileInfo = request.FILES['uploadedFile']
 
-        if fileInfo.size > base.FILE_SIZE_MAX:
+        if fileInfo.size > settings.FILE_SIZE_MAX:
             raise Exception('File size is too big')
 
         curExt = fileUtils.getFileExt(fileInfo.name)
@@ -165,7 +165,7 @@ def edit(request):
                 'feedback': True,
 
                 'goback': {
-                    'url': base.SITE_DOMAIN + '/users/~documents/'
+                    'url': settings.SITE_DOMAIN + '/users/~documents/'
                 }
             }
         }
@@ -180,7 +180,7 @@ def edit(request):
         'history': json.dumps(hist['history']) if 'history' in hist else None,
         'historyData': json.dumps(hist['historyData']) if 'historyData' in hist else None,
         'fileType': fileType,
-        'apiUrl': base.DOC_SERV_API_URL
+        'apiUrl': settings.DOC_SERV_API_URL
     }
     return render(request, 'editor.html', context)
 

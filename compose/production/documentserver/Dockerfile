@@ -30,7 +30,7 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
         libxss1 \
         libxtst6 \
         mysql-client \
-        nano \
+        vim \
         net-tools \
         netcat \
         nginx-extras \

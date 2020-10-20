@@ -59,17 +59,17 @@ services:
     networks:
       - dokeza
 
-  awscli:
-    container_name: awscli
-    build:
-      context: ./compose/production
-      dockerfile: awscli/Dockerfile
-    env_file:
-      - ./.envs/.production/.django
-    volumes:
-      - production_postgres_backups:/backups
-    networks:
-      - dokeza
+  # awscli:
+  #   container_name: awscli
+  #   build:
+  #     context: ./compose/production
+  #     dockerfile: awscli/Dockerfile
+  #   env_file:
+  #     - ./.envs/.production/.django
+  #   volumes:
+  #     - production_postgres_backups:/backups
+  #   networks:
+  #     - dokeza
 
   django: &django
     container_name: django
