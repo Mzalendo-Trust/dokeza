@@ -35,7 +35,7 @@
   </li>
   {% else %}
   <li class="user-profile">
-    <a class="nav-link {% if page == 'users' %}active {% endif %}" href="{% url 'account_login' %}">Log in/Sign up</a>
+    <a class="nav-link {% if page == 'users' %} active {% elif page == 'login' %} active {% endif %}" href="{% url 'account_login' %}">Log in/Sign up</a>
   </li>
   {% endif %}
   <form class="dz-search form-inline pt-2 pb-2 pt-lg-0 pb-lg-0" method="GET" action="{% url 'search' %}">{% csrf_token %}
@@ -62,7 +62,7 @@
     <a class="nav-link long-navs {% if page == 'how_to' %}active{% endif %}" href="{% url 'how_to' %}">How to Use Dokeza</a>
     <a class="nav-link {% if page == 'bills' %}active{% endif %}" href="{% url 'bills:list' %}">Bills</a>
     <a class="nav-link long-navs {% if page == 'regulations' %}sub-active{% endif %}" href="{% url 'other_docs:list' %}">Regulations</a>
-    <a class="nav-link long-navs {% if page == 'users' %}active{% endif %}" href="{% url 'users:documents' %}">Submit Your Memoranda</a>
+    <a class="nav-link long-navs  {% if page == 'users' %}active{% endif %}" {% if request.user.is_authenticated %}  href="{% url 'users:documents' %}" {% else %} href="{% url 'account_login' %}" {% endif %}>Submit Your Memoranda</a>
     <a class="nav-link long-navs {% if page == 'resources' %}active{% endif %}" href="{% url 'resources' %}">Resources</a>
     <a class="nav-link long-navs {% if page == 'contacts' %}active{% endif %}" href="{% url 'contacts' %}">Contact Us</a>
   </div>

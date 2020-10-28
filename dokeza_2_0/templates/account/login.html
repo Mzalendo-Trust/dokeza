@@ -5,6 +5,13 @@
 {% load crispy_forms_tags %}
 
 {% block title %}{% trans "Sign In" %}{% endblock %}
+{% block sub-navigation %}
+  <div class="dz-sub-navigation">
+    <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+      {% include '_partials/sub-navigation/login.html' %}
+    </nav>
+  </div>
+{% endblock sub-navigation %}
 <!-- Main Content -->
 {% block content %}
   <h5 class="p-3">Login to annotate or comment on bills</h5>
