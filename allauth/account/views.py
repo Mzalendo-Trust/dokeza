@@ -170,6 +170,8 @@ class LoginView(RedirectAuthenticatedUserMixin,
 
         ret.update({"signup_url": signup_url,
                     "site": site,
+                    "page": "login",
+                    "stingo":"submit",
                     "redirect_field_name": self.redirect_field_name,
                     "redirect_field_value": redirect_field_value})
         return ret
