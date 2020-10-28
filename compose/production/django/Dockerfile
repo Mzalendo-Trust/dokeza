@@ -47,7 +47,7 @@ RUN sed -i 's/\r$//g' /start-flower && \
     chmod +x /start-flower
     
 COPY --chown=django:django . /app
-RUN chown -r django:django /tmp
+RUN chown django:django /tmp
 
 
 USER django

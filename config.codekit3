@@ -25,14 +25,6 @@
 		"oAP": "/.docker-sync/daemon.log",
 		"oF": 0
 		},
-	"/.docker-sync/daemon.pid": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.docker-sync/daemon.pid",
-		"oF": 0
-		},
 	"/.dockerignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -63,6 +55,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/.envs/.local/.django",
+		"oF": 0
+		},
+	"/.envs/.local/.docs": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.envs/.local/.docs",
 		"oF": 0
 		},
 	"/.envs/.local/.documentserver": {
@@ -6019,6 +6019,14 @@
 		"oAP": "/compose/local/django/start",
 		"oF": 0
 		},
+	"/compose/local/docs/Dockerfile": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/local/docs/Dockerfile",
+		"oF": 0
+		},
 	"/compose/local/documentserver/Dockerfile": {
 		"cB": 0,
 		"ft": 8192,
@@ -6796,14 +6804,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/local/documentserver/run-document-server.sh",
-		"oF": 0
-		},
-	"/compose/local/nginx/conf.d/local.conf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/compose/local/nginx/conf.d/local.conf",
 		"oF": 0
 		},
 	"/compose/production/awscli/Dockerfile": {
@@ -10985,6 +10985,446 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/docs/__init__.py",
+		"oF": 0
+		},
+	"/docs/_build/html/.buildinfo": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/.buildinfo",
+		"oF": 0
+		},
+	"/docs/_build/html/.doctrees/environment.pickle": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/.doctrees/environment.pickle",
+		"oF": 0
+		},
+	"/docs/_build/html/.doctrees/howto.doctree": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/.doctrees/howto.doctree",
+		"oF": 0
+		},
+	"/docs/_build/html/.doctrees/index.doctree": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/.doctrees/index.doctree",
+		"oF": 0
+		},
+	"/docs/_build/html/.doctrees/pycharm/configuration.doctree": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/.doctrees/pycharm/configuration.doctree",
+		"oF": 0
+		},
+	"/docs/_build/html/.doctrees/users.doctree": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/.doctrees/users.doctree",
+		"oF": 0
+		},
+	"/docs/_build/html/_images/1.png": {
+		"ft": 32768,
+		"iS": 67153,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/2.png": {
+		"ft": 32768,
+		"iS": 15163,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/3.png": {
+		"ft": 32768,
+		"iS": 181106,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/4.png": {
+		"ft": 32768,
+		"iS": 113084,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/4.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/7.png": {
+		"ft": 32768,
+		"iS": 6284,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/7.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/8.png": {
+		"ft": 32768,
+		"iS": 19800,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/8.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/f1.png": {
+		"ft": 32768,
+		"iS": 254645,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/f1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/f2.png": {
+		"ft": 32768,
+		"iS": 234376,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/f2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/f3.png": {
+		"ft": 32768,
+		"iS": 235846,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/f3.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/f4.png": {
+		"ft": 32768,
+		"iS": 226939,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/f4.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/issue1.png": {
+		"ft": 32768,
+		"iS": 43350,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/issue1.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_images/issue2.png": {
+		"ft": 32768,
+		"iS": 11625,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_images/issue2.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_sources/howto.rst.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_sources/howto.rst.txt",
+		"oF": 0
+		},
+	"/docs/_build/html/_sources/index.rst.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_sources/index.rst.txt",
+		"oF": 0
+		},
+	"/docs/_build/html/_sources/pycharm/configuration.rst.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_sources/pycharm/configuration.rst.txt",
+		"oF": 0
+		},
+	"/docs/_build/html/_sources/users.rst.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_sources/users.rst.txt",
+		"oF": 0
+		},
+	"/docs/_build/html/_static/alabaster.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/alabaster-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/docs/_build/html/_static/basic.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/basic-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/docs/_build/html/_static/custom.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/custom-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/docs/_build/html/_static/doctools.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/doctools-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/_static/documentation_options.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/documentation_options-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/_static/file.png": {
+		"ft": 32768,
+		"iS": 286,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/file.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_static/jquery-3.5.1.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/jquery-3.5.1-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/_static/jquery.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/jquery-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/_static/language_data.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/language_data-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/_static/minus.png": {
+		"ft": 32768,
+		"iS": 90,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/minus.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_static/plus.png": {
+		"ft": 32768,
+		"iS": 90,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/plus.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"/docs/_build/html/_static/pygments.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/pygments-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/docs/_build/html/_static/searchtools.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/searchtools-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/_static/underscore-1.3.1.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/underscore-1.3.1-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/_static/underscore.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/_static/underscore-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/genindex.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/genindex.html",
+		"oF": 0
+		},
+	"/docs/_build/html/howto.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/howto.html",
+		"oF": 0
+		},
+	"/docs/_build/html/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/index.html",
+		"oF": 0
+		},
+	"/docs/_build/html/objects.inv": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/objects.inv",
+		"oF": 0
+		},
+	"/docs/_build/html/pycharm/configuration.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/pycharm/configuration.html",
+		"oF": 0
+		},
+	"/docs/_build/html/search.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/search.html",
+		"oF": 0
+		},
+	"/docs/_build/html/searchindex.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/docs/_build/html/searchindex-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/docs/_build/html/users.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/_build/html/users.html",
 		"oF": 0
 		},
 	"/docs/apps.rst": {
@@ -27085,6 +27525,14 @@
 		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/ideas.html",
 		"oF": 0
 		},
+	"/dokeza_2_0/templates/_partials/sub-navigation/login.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/login.html",
+		"oF": 0
+		},
 	"/dokeza_2_0/templates/_partials/sub-navigation/public-participation.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -28173,14 +28621,6 @@
 		"oAP": "/dokeza_2_0/utils/context_processors.py",
 		"oF": 0
 		},
-	"/dokeza_2_0/utils/storages.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/utils/storages.py",
-		"oF": 0
-		},
 	"/hitcount/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -28675,212 +29115,44 @@
 		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx",
 		"oF": 0
 		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/changes.json": {
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx",
+		"oF": 0
+		},
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/changes.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/changes-min.json",
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/changes-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
 		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/diff.zip": {
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/diff.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/diff.zip",
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/diff.zip",
 		"oF": 0
 		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/key.txt": {
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/key.txt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/key.txt",
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/key.txt",
 		"oF": 0
 		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/prev.docx": {
+	"/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/prev.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/1/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/diff.zip",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/key.txt",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/2/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/diff.zip",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/key.txt",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/3/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/diff.zip",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/key.txt",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/4/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/diff.zip",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/key.txt",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/5/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/diff.zip",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/key.txt",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.docx-hist/6/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018.pdf",
-		"oF": 0
-		},
-	"/media/bills/NaturalResources_BenefitSharing_Bill_2018_8Fk4M5z.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_8Fk4M5z.docx",
+		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/prev.docx",
 		"oF": 0
 		},
 	"/media/bills/TeaBill_2018.docx": {
@@ -28890,6 +29162,54 @@
 		"oA": 0,
 		"oAP": "/media/bills/TeaBill_2018.docx",
 		"oF": 0
+		},
+	"/media/dokezamasta/new.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/dokezamasta/new.docx",
+		"oF": 0
+		},
+	"/media/dokezamasta/new.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/dokezamasta/new.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/dokezamasta/new.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/dokezamasta/new.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/dokezamasta/new.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/dokezamasta/new.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/dokezamasta/new.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/dokezamasta/new.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/dokezamasta/new.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/dokezamasta/new.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
 		},
 	"/merge_production_dotenvs_in_dotenv.py": {
 		"cB": 0,
