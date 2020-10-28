@@ -85,9 +85,6 @@ RUN echo "$REPO_URL" | tee /etc/apt/sources.list.d/ds.list && \
 
 RUN cp -rf /opt/img /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/img  && \
     cat /opt/overides.css >> /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/css/app.css
-    # ln -sf /etc/nginx/certs/afropro.local.crt /var/www/onlyoffice/Data/certs/onlyoffice.crt && \
-    # ln -sf /etc/nginx/certs/afropro.local.key /var/www/onlyoffice/Data/certs/onlyoffice.key && \
-    # ln -sf /etc/nginx/certs/rootCA.pem /var/www/onlyoffice/Data/certs/ca-certificates.pem
 
 VOLUME /var/log/$COMPANY_NAME /var/lib/$COMPANY_NAME /var/www/$COMPANY_NAME/Data /var/lib/postgresql /var/lib/rabbitmq /var/lib/redis /usr/share/fonts/truetype/custom
 

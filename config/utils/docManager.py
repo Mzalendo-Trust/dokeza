@@ -31,7 +31,6 @@ import re
 import requests
 from django.conf import settings
 
-from config.settings import base
 from . import fileUtils, historyManager
 
 LANGUAGES = {

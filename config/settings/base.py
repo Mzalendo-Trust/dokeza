@@ -175,8 +175,7 @@ STATICFILES_FINDERS = [
 
 # MEDIA
 # ------------------------------------------------------------------------------
-# https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = str(APPS_DIR / "media")
+
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-url
 MEDIA_URL = "/media/"
 
@@ -451,5 +450,3 @@ DOC_SERV_API_URL = env('DOC_SERV_API_URL')
 DOC_SERV_PRELOADER_URL = env('DOC_SERV_PRELOADER_URL')
 
 SITE_DOMAIN = env('SITE_DOMAIN')
-
-STORAGE_PATH = MEDIA_ROOT

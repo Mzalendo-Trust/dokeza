@@ -3,6 +3,7 @@ import os
 import re
 
 from datetime import datetime
+from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
 from django.contrib.contenttypes.models import ContentType
 from django.core.paginator import Paginator
@@ -15,9 +16,6 @@ from django.views.generic.detail import SingleObjectMixin
 from bs4 import BeautifulSoup
 
 from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
-from config.settings import base
-
-# from dokeza_2_0.users.models import User, Profile
 from .models import Bill
 
 
@@ -160,14 +158,14 @@ class BillDetailView(DetailView):
                     'about': True,
                     'customer': {
                         'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
-                        'logo': base.SITE_DOMAIN + 'static/images/dokeza-logo-banner.png',
+                        'logo': settings.SITE_DOMAIN + 'static/images/dokeza-logo-banner.png',
                         'email':'mzalendo.devops@gmail.com'
                     },
                     'compactHeader': False,
                     'comments': True,
                     'commentAuthorOnly': True,
                     'goback': {
-                        'url': base.SITE_DOMAIN + '/bills/'
+                        'url': settings.SITE_DOMAIN + '/bills/'
                     }
                 }
             }
@@ -184,7 +182,7 @@ class BillDetailView(DetailView):
         context['history'] = json.dumps(hist['history']) if 'history' in hist else None
         context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
         context['fileType'] = fileType
-        context['apiUrl'] = base.DOC_SERV_API_URL
-        print('apiUrl', base.DOC_SERV_API_URL)
+        context['apiUrl'] = settings.DOC_SERV_API_URL
+        print('bill apiUrl', settings.DOC_SERV_API_URL)
         return context
     

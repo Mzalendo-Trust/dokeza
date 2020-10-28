@@ -6,12 +6,27 @@ volumes:
   staging_certbot_var:
   staging_certbot_etc:
   documentserver_postgresql_data:
+  media:
 
 networks:
   dokeza-network:
   ds-network:
 
 services:
+  postgres:
+    container_name: postgres
+    build:
+      context: ./compose/production/postgres
+      dockerfile: Dockerfile
+    image: dokeza_2_0_staging_postgres
+    env_file:
+      - ./.envs/.production/.postgres
+    volumes:
+      - staging_postgres_data:/var/lib/postgresql/data
+      - staging_postgres_backups:/backups
+    networks:
+      - dokeza-network
+
   nginx:
     container_name: nginx
     build:
@@ -21,6 +36,7 @@ services:
     volumes:
       - staging_certbot_var:/var/www/certbot
       - staging_certbot_etc:/etc/letsencrypt
+      - media:/app/media/
     ports:
       - '80:80'
       - '443:443'
@@ -47,20 +63,6 @@ services:
     networks:
       - dokeza-network
 
-  postgres:
-    container_name: postgres
-    build:
-      context: ./compose/production/postgres
-      dockerfile: Dockerfile
-    image: dokeza_2_0_staging_postgres
-    env_file:
-      - ./.envs/.production/.postgres
-    volumes:
-      - staging_postgres_data:/var/lib/postgresql/data
-      - staging_postgres_backups:/backups
-    networks:
-      - dokeza-network
-
   awscli:
     container_name: awscli
     build:
@@ -79,6 +81,8 @@ services:
       context: .
       dockerfile: ./compose/production/django-staging/Dockerfile
     image: dokeza_2_0_staging_django
+    volumes:
+      - media:/app/media/
     depends_on:
       - postgres
       - redis

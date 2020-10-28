@@ -22,7 +22,7 @@ import sys
 # -- Project information -----------------------------------------------------
 
 project = "Dokeza 2.0"
-copyright = """2020, Jimmy Gitonga, Njuguna Gathere"""
+copyright = "2020, Jimmy Gitonga, Njuguna Gathere"
 author = "Jimmy Gitonga, Njuguna Gathere"
 
 

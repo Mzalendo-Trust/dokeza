@@ -27,10 +27,10 @@
 import os
 import io
 import json
+from django.conf import settings
 
 from . import users, fileUtils
 from datetime import datetime
-from config.settings import base
     
 def getHistoryDir(storagePath):
     return f'{storagePath}-hist'
@@ -107,28 +107,28 @@ def readFile(path):
         return stream.read()
 
 def getPrevUri(filename, ver, ext, req):
-    host = base.SITE_DOMAIN.rstrip('/')
+    host = settings.SITE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
-        return f'{host}{base.MEDIA_URL}{filename}'
+        return f'{host}{settings.MEDIA_URL}{filename}'
     else:
         user = req.user
         if not user.first_name:
             user.first_name = 'Mgeni'
         if not user.username:
             user.username = f'{user.first_name}_{user.last_name}'
-        return f'{host}{base.MEDIA_URL}{user.username}/{filename}-hist/{ver}/prev{ext}'
+        return f'{host}{settings.MEDIA_URL}{user.username}/{filename}-hist/{ver}/prev{ext}'
 
 def getZipUri(filename, ver, req):
-    host = base.SITE_DOMAIN.rstrip('/')
+    host = settings.SITE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
-        return f'{host}{base.MEDIA_URL}{filename}'
+        return f'{host}{settings.MEDIA_URL}{filename}'
     else:
         user = req.user
         if not user.first_name:
             user.first_name = 'Mgeni'
         if not user.username:
             user.username = f'{user.first_name}_{user.last_name}'
-        return f'{host}{base.MEDIA_URL}{user.username}/{filename}-hist/{ver}/diff.zip'
+        return f'{host}{settings.MEDIA_URL}{user.username}/{filename}-hist/{ver}/diff.zip'
 
 def getMeta(storagePath):
     histDir = getHistoryDir(storagePath)

@@ -24,7 +24,7 @@
 
 """
 
-from config.settings import base
+from django.conf import settings
 
 def getFileName(str):
     ind = str.rfind('/')
@@ -42,11 +42,11 @@ def getFileExt(str):
 
 def getFileType(str):
     ext = getFileExt(str)
-    if ext in base.EXT_DOCUMENT:
+    if ext in settings.EXT_DOCUMENT:
         return 'text'
-    if ext in base.EXT_SPREADSHEET:
+    if ext in settings.EXT_SPREADSHEET:
         return 'spreadsheet'
-    if ext in base.EXT_PRESENTATION:
+    if ext in settings.EXT_PRESENTATION:
         return 'presentation'
 
     return 'text'
