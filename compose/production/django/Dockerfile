@@ -10,6 +10,11 @@ RUN apt-get update \
   && apt-get install -y libpq-dev \
   # Translations dependencies
   && apt-get install -y gettext \
+  # Integrating OnlyOffice Document Builder here so that it works directly with Django
+  && apt-get install -y libstdc++6 libcurl3-gnutls libc6 libxml2 libcurl4 fonts-dejavu fonts-opensymbol \
+  && apt-get install -y fonts-liberation fonts-crosextra-carlito \
+  && curl -o onlyoffice-documentbuilder_amd64.deb https://download.onlyoffice.com/install/desktop/docbuilder/linux/onlyoffice-documentbuilder_amd64.deb \
+  && apt-get install -y ./onlyoffice-documentbuilder_amd64.deb \
   # cleaning up unused files
   && apt-get purge -y --auto-remove -o APT::AutoRemove::RecommendsImportant=false \
   && rm -rf /var/lib/apt/lists/*
@@ -50,7 +55,7 @@ COPY --chown=django:django . /app
 RUN chown django:django /tmp
 
 
-USER django
+USER root
 
 WORKDIR /app
 
