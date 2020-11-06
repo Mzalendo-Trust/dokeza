@@ -28,9 +28,9 @@ import json
 
 from django.contrib.auth import get_user_model
 from django.shortcuts import render
+from django.conf import settings
 
 from dokeza_2_0.users.models import User
-from config.settings import base
 from config.utils import docManager
 
 User = get_user_model()
@@ -38,9 +38,9 @@ User = get_user_model()
 def default(request):
     context = {
         'languages': docManager.LANGUAGES,
-        'preloadurl': base.DOC_SERV_PRELOADER_URL,
-        'editExt': json.dumps(base.DOC_SERV_EDITED),
-        'convExt': json.dumps(base.DOC_SERV_CONVERT),
+        'preloadurl': settings.DOC_SERV_PRELOADER_URL,
+        'editExt': json.dumps(settings.DOC_SERV_EDITED),
+        'convExt': json.dumps(settings.DOC_SERV_CONVERT),
         'files': docManager.getStoredFiles(request),
         'page':'users',
         'stingo':'documents'

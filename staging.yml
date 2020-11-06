@@ -87,7 +87,7 @@ services:
       - postgres
       - redis
     env_file:
-      - ./.envs/.production/.django
+      - ./.envs/.production/.django-staging
       - ./.envs/.production/.postgres
     command: /start
     networks:
