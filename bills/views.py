@@ -146,7 +146,7 @@ class BillDetailView(DetailView):
                 'callbackUrl': docManager.getCallbackUrl(filename, self.request),
                 'user': {
                     'id': '1',
-                    'name': 'Dokeza'
+                    'name': users.getNameFromReq(self.request)
                 },
                 'embedded': {
                     'saveUrl': fileUri,

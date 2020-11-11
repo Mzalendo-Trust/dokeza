@@ -38,3 +38,11 @@ def getUserFromReq(req):
         return DEFAULT_USER
     else:
         return { 'uid': unquote(uid), 'uname': unquote(uname) }
+
+def getNameFromReq(req):
+    current_user = req.user
+    if current_user.first_name:
+        return f'{current_user.first_name}{current_user.last_name}'
+    else:
+        email_name = re.search(re.search(r'([a-z0-9._%+-]+)', current_user.email))
+        return email_name[0]
