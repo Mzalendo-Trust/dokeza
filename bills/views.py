@@ -158,7 +158,7 @@ class BillDetailView(DetailView):
                     'about': True,
                     'customer': {
                         'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
-                        'logo': settings.SITE_DOMAIN + 'static/images/dokeza-logo-banner.png',
+                        'logo': settings.SITE_DOMAIN + '/static/images/dokeza-logo-banner.png',
                         'email':'mzalendo.devops@gmail.com'
                     },
                     'compactHeader': False,
@@ -183,6 +183,6 @@ class BillDetailView(DetailView):
         context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
         context['fileType'] = fileType
         context['apiUrl'] = settings.DOC_SERV_API_URL
-        print('bill apiUrl', settings.DOC_SERV_API_URL)
+        print('context -', context)
         return context
     

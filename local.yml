@@ -156,17 +156,17 @@ services:
     networks:
       - dokeza-network
   
-  docs:
-    image: dokeza_2_0_local_docs
-    container_name: docs
-    build:
-      context: .
-      dockerfile: ./compose/local/docs/Dockerfile
-    env_file:
-      - ./.envs/.local/.docs
-    volumes:
-      - ./docs:/docs:z
-      - ./config:/app/config:z
-      - ./dokeza_2_0:/app/dokeza_2_0:z
-    ports:
-      - "7000:7000"
+  # docs:
+  #   image: dokeza_2_0_local_docs
+  #   container_name: docs
+  #   build:
+  #     context: .
+  #     dockerfile: ./compose/local/docs/Dockerfile
+  #   env_file:
+  #     - ./.envs/.local/.docs
+  #   volumes:
+  #     - ./docs:/docs:z
+  #     - ./config:/app/config:z
+  #     - ./dokeza_2_0:/app/dokeza_2_0:z
+  #   ports:
+  #     - "7000:7000"
