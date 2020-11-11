@@ -93,7 +93,7 @@ services:
     container_name: ds-postgresql
     image: postgres:12.3-alpine
     env_file:
-      - ./.envs/.documentserver
+      - ./.envs/.local/.documentserver
     restart: always
     expose:
       - "5432"

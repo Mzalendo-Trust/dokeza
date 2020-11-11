@@ -31,7 +31,7 @@ import re
 import requests
 from django.conf import settings
 
-from . import fileUtils, historyManager
+from . import fileUtils, historyManager, users
 
 LANGUAGES = {
     'en': 'English',
@@ -91,6 +91,7 @@ def getCorrectName(filename, req):
     return name
 
 def getFileUri(filename, req):
+    uname = users.getNameFromReq(req)
     host = settings.SITE_DOMAIN.rstrip('/')
     # If the filename has 'bills' then use the path to bills
     if re.search('bills', filename):
@@ -101,28 +102,25 @@ def getFileUri(filename, req):
             user.first_name = 'Mgeni'
         if not user.username:
             user.username = f'{user.first_name}_{user.last_name}'
-        return f'{host}{settings.MEDIA_URL}{user.username}/{filename}'
+        return f'{host}{settings.MEDIA_URL}{uname}/{filename}'
     
-
 def getCallbackUrl(filename, req):
     host = settings.SITE_DOMAIN.rstrip('/')
     if re.search('bills', filename):
         return f'{host}/bills/track?filename={filename}&userAddress=bills'
-    user = req.user
-    if not user.first_name:
-        user.first_name = 'Mgeni'
-    if not user.username:
-        user.username = f'{user.first_name}_{user.last_name}'
-    return f'{host}/users/~documents/track?filename={filename}&userAddress={user.username}'
+    uname = users.getNameFromReq(req)
+    return f'{host}/users/~documents/track?filename={filename}&userAddress={uname}'
 
 def getRootFolder(req):
+    uname = users.getNameFromReq(req)
     if re.search('bills', str(req)):
         directory = os.path.join(settings.STORAGE_PATH)
     else:
         if isinstance(req, str):
             dirname = req
         else:
-            dirname = req.user.username
+            dirname = uname
+        print('dirname', dirname)
         directory = os.path.join(settings.STORAGE_PATH, dirname)
 
     if not os.path.exists(directory):
