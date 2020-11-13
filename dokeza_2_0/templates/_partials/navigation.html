@@ -64,6 +64,7 @@
     <a class="nav-link long-navs {% if page == 'regulations' %}sub-active{% endif %}" href="{% url 'other_docs:list' %}">Regulations</a>
     <a class="nav-link long-navs  {% if page == 'users' %}active{% endif %}" {% if request.user.is_authenticated %}  href="{% url 'users:documents' %}" {% else %} href="{% url 'account_login' %}" {% endif %}>Submit Your Memoranda</a>
     <a class="nav-link long-navs {% if page == 'resources' %}active{% endif %}" href="{% url 'resources' %}">Resources</a>
+    <a class="nav-link long-navs {% if page == 'events' %}active{% endif %}" href="{% url 'public_participation:events' %}">Events</a>
     <a class="nav-link long-navs {% if page == 'contacts' %}active{% endif %}" href="{% url 'contacts' %}">Contact Us</a>
   </div>
 </div>

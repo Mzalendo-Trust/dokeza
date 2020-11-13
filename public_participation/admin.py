@@ -25,6 +25,7 @@ class PublicEventAdmin(admin.ModelAdmin):
                 ('title', 'slug'),
                 ('event_description'),
                 ('expected_outcomes'),
+                ('house', 'status'),
                 ('start', 'end'),
                 ('event_location'),
             ]

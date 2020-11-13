@@ -53,6 +53,7 @@
       </div>
     </article>
     {% empty %}
+<hr>
     <p>
       "There is no published analysis."
     </p>
@@ -73,6 +74,7 @@
       {% for tag in tags %}
       <li><a href="{% url 'tagged' tag.slug %}">{{ tag.name|capfirst }}</a></li>
       {% empty %}
+<hr>
       <li>No Categories</li>
       {% endfor %}
     </ol>
@@ -91,6 +93,7 @@
         {% endfor %}
       </li>
       {% empty %}
+<hr>
       <li>No posted analysis yet.</li>
       {% endfor %}
     </ol>

@@ -19,6 +19,13 @@ HOUSE_RELATED = (
     (3, 'County')
 )
 
+EVENT_STATUS = (
+    (1, 'Bill: Open for Memoranda'),
+    (2, 'Bill: In Committee'),
+    (3, 'Bill: Plenary Session'),
+    (4, 'Public Participation Meeting')
+  )
+
 
 class EventLocation(models.Model):
 
@@ -41,6 +48,8 @@ class PublicEvent(Event):
     expected_outcomes = RichTextField(_('Expected Outcomes'), max_length=1000, blank=True)
     house = models.PositiveSmallIntegerField(
         _('Assembly related to'), choices=HOUSE_RELATED, default=1, blank=True, null=True)
+    status = models.PositiveSmallIntegerField(
+        _('Event Agenda'), choices=EVENT_STATUS, default=1, blank=True, null=True)
     event_location = models.ForeignKey(
         EventLocation,
         on_delete=models.CASCADE,
@@ -56,10 +65,6 @@ class PublicEvent(Event):
     def title(self):
         self.title = self.title + self.pk
         return self.title
-
-    def description(self):
-        return self.description
-    description.short_description = "Overview"
 
     def start_date(self):
         return self.start.date()
