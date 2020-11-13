@@ -45,7 +45,7 @@ class Doc(HitCountMixin, models.Model):
         help_text="Copy the document and paste with all its styling. If necessary use the editing tools to style it sufficiently.")
     created = models.DateTimeField(auto_now_add=True, db_index=True)
     regulation = models.BooleanField(default=True, help_text='Uncheck if the document is not a regulation')
-    pdf = models.FileField(upload_to='Documents/', blank=True, null=True, help_text='Upload the actual document here if necessary.')
+    word_doc = models.FileField(upload_to='Documents/', blank=True, null=True, help_text='Upload the actual document here if necessary.')
     doc_pic = models.ImageField(upload_to='doc_pics/', blank=True, null=True,
                                 help_text='Upload an image of the top page of the document.')
     tags = TaggableManager(blank=True)

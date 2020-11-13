@@ -36,6 +36,7 @@ class PublicEventsList(ListView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(PublicEventsList, self).get_context_data(**kwargs)
+
         context["page"] = "events"
         context["stingo"] = "public"
         return context
@@ -43,20 +44,13 @@ class PublicEventsList(ListView):
 
 class PublicEventView(DetailView):
     model = PublicEvent
-    template_name = 'public_participation/public_event_detail.html'
+    template_name = 'events/public_event_detail.html'
 
     def get_context_data(self, *args, **kwargs):
         context = super(PublicEventView, self).get_context_data(**kwargs)
 
-        if self.object.house == 1:
-            house = 'assembly'
-        elif self.object.house == 2:
-            house = 'senate'
-        else:
-            house = 'county'
-
         context["page"] = "events"
-        context["stingo"] = "details"
-        context['house'] = house
+        context["stingo"] = "public"
+        context['house'] = self.object.house
         return context
 

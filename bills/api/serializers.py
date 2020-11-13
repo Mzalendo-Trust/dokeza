@@ -25,13 +25,13 @@ class BillCreateUpdateSerializer(ModelSerializer):
         fields = [
             'title',
             'body',
-            'pdf',
+            'word_doc',
         ]
 
 
 class BillDetailSerializer(ModelSerializer):
     # owner = UserDetailSerializer(read_only=True)
-    pdf = SerializerMethodField()
+    word_doc = SerializerMethodField()
     comments = SerializerMethodField()
     # delete_url = bill_delete_url
 
@@ -41,7 +41,7 @@ class BillDetailSerializer(ModelSerializer):
             'owner',
             'title',
             'slug',
-            'pdf',
+            'word_doc',
             'body',
             'created',
             'comments',
@@ -52,12 +52,12 @@ class BillDetailSerializer(ModelSerializer):
     def get_html(self, obj):
         return obj.get_markdown()
 
-    def get_pdf(self, obj):
+    def get_word_doc(self, obj):
         try:
-            pdf = obj.pdf.url
+            word_doc = obj.word_doc.url
         except:
-            pdf = None
-        return pdf
+            word_doc = None
+        return word_doc
 
     def get_comments(self, obj):
         c_qs = Comment.objects.filter_by_instance(obj)

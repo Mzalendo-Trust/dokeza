@@ -15,6 +15,7 @@
             {% for date in date_list %}
               <li class="dz-annotation__item">{{ date|date:"F Y" }}</li>
             {% empty %}
+<hr>
             <div class="no-content">
               <p>There are no archives</p>
             </div>  
@@ -57,6 +58,7 @@
       </div>
       <hr>
       {% empty %}
+<hr>
       <div class="card">
         <h5 class="card-header user-annotations__header">Bill Annotations</h5>
         <div class="no-content">

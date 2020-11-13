@@ -96,7 +96,7 @@ class Bill(HitCountMixin, models.Model):
     sponsor = models.CharField(max_length=500, blank=True, null=True)
     sponsor_title = models.PositiveSmallIntegerField(_('Sponsor Title'), choices=SPONSOR_TITLE, default=1, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True, db_index=True)
-    pdf = models.FileField(upload_to='bills/', blank=True, null=True, help_text='Upload the actual bill here.')
+    word_doc = models.FileField(upload_to='bills/', blank=True, null=True, help_text='Upload the actual bill here.')
     bill_pic = models.ImageField(upload_to='bill_pics/', blank=True, null=True,
                                  help_text='Upload an image of the top stamped page of the bill.')
     private = models.BooleanField(default=True, help_text='Please click to to make it public.')

@@ -17,7 +17,8 @@
   {{ object.expected_outcomes|safe }}
   <div class="dz-events__calendar">
     <div class="dz-events__details">
-      <p><strong>Dates:</strong> {{ object.dates_summary }}<br>
+      <p><strong>Agenda:</strong> {{ object.get_status_display }} <br>
+        <strong>Date:</strong> {{ object.start_date|date:"d M Y" }}<br>
         <strong>Time:</strong> {{ object.start_time }} - {{ object.end_time }}</p>
     </div>
     <div class="dz-events__details">
