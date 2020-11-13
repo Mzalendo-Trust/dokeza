@@ -29316,6 +29316,22 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/media/MtuNguyas/memorandum.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/MtuNguyas/memorandum.docx",
+		"oF": 0
+		},
+	"/media/MtuNguyas/memorandum.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/MtuNguyas/memorandum.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/merge_production_dotenvs_in_dotenv.py": {
 		"cB": 0,
 		"ft": 8192,
