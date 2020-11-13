@@ -13,16 +13,6 @@ from bills.models import Bill
 
 
 default_script = 'If you see this, you do not have the "buildScript"'
-with open('dokeza_2_0/static/samples/builder/sample.docbuilder', 'r') as read_file:
-    default_script = read_file.read()
-
-
-def index(request):
-    context = {
-        'predefined_script': default_script,
-        'error_messagee': ''
-    }
-    return render(request, 'docbuilder/index.html', context)
 
 
 def generate(request):
@@ -57,18 +47,18 @@ def report(request, object_id, mode):
     # Get the report builder_script
     
     bill = Bill.objects.get(id=object_id)
-    print('path', bill.pdf)
+    print('path', bill.word_doc)
 
     print('request contents', object_id, mode)
 
     if mode == 'comments': 
         with open('dokeza_2_0/static/samples/builder/commentReport.docbuilder', 'r') as read_file:
             builder_script = read_file.read()
-            doc_with_comments_path = os.path.join('media', f'{bill.pdf}')
+            doc_with_comments_path = os.path.join('media', f'{bill.word_doc}')
     elif mode == 'memorandum':
         with open('dokeza_2_0/static/samples/builder/memorandumReport.docbuilder', 'r') as read_file:
             builder_script = read_file.read()
-            doc_with_comments_path = os.path.join('media', f'{bill.pdf}')
+            doc_with_comments_path = os.path.join('media', f'{bill.word_doc}')
 
     response = {}
     

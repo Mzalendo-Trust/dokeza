@@ -32,7 +32,7 @@
             <img class="memo-icon" src="{% static 'dist/images/public/memo-icon.svg' %}" alt="">
             {% endif %}
           </div>
-          <p class="card-text">{{ memo.content|truncatewords:20}}
+          <p class="card-text">{{ memo.content|safe|truncatewords:20}}
           </p>
           <div class="dz-memo">
             <div class="dz-memo__read">
@@ -46,6 +46,7 @@
       </div>
     </div>
     {% empty %}
+<hr>
     There is currently no request for memoranda.
     {% endfor %}
     <!--END Memoranda Cards-->

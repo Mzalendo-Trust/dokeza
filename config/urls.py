@@ -42,6 +42,7 @@ urlpatterns = [
     path('docbuilder/', include('docbuilder.urls', namespace="docbuilder")),
     path('posts/', include('posts.urls', namespace='posts')),
     path('events/', include('public_participation.urls', namespace='public_participation')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
    
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:

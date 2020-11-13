@@ -1,8 +1,5 @@
-{% extends "_layouts/base.html" %}
-{% load static %}
-
-{% block title %}Public Events - List{% endblock title %}
-{% block sub-navigation %}
+{% extends "_layouts/base.html" %} {% load static %} {% block title %}Public
+Events - List{% endblock title %} {% block sub-navigation %}
 <div class="dz-sub-navigation pr-0">
   <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
     {% include '_partials/sub-navigation/resources.html' %}
@@ -10,106 +7,48 @@
 </div>
 {% endblock sub-navigation %}
 <!-- Fullcalendar Styles -->
-{% block fullcalendarstyles %}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.1/fullcalendar.print.css" media="print"> {% endblock fullcalendarstyles %}
+{% block fullcalendarstyles %} {% endblock fullcalendarstyles %}
 <!-- END Fullcalendar Styles -->
-
 <!-- Main Content -->
 {% block content %}
-  <div class="dz-main__content">
-    <!-- Events Section -->
-    <section class="dz-events__list">
-      <h1 class="dz-main__heading">Events open to the Public</h1>
-      <!-- Events Cards -->
-
-      <!-- END Senate Card -->
-      <div class="dz-bills__card">
+<div class="dz-main__content">
+<!-- Events Section -->
+<section class="dz-events__list">
+  <h1 class="dz-main__heading">Events open to the Public</h1>
+  <!-- Event Cards -->
+  {% for event in object_list|slice:'6' %}
+    <div class="dz-bills__card">
+      <a href="{{ event.get_absolute_url }}">
         <div class="card">
-          <div class="dz-home__bills-senate rounded">
-            <h5 class="dz-home__bill-heading">The County Governments' Retirement Scheme Bill, 2018</h5>
-            <p class="card-text">AN ACT of Parliament to establish the County Governments' Retirement</p>
-            <div class="bills-footer">
+          <div class="dz-home__bills-{{ event.get_house_display|slugify|lower }} rounded">
+            <h5 class="dz-events__heading">
+            {{ event.title|capfirst }}
+            </h5>
+            {{ event.event_description|safe|truncatewords:15 }}
+            <div class="events-footer">
               <span>
-                <span class="dz-house__name dz-senate">Senate</span>
-                <span class="dz-house__name dz-stage-event">Second reading</span>
+                <span class="dz-house__name dz-senate">{{event.get_house_display|slugify|lower}}</span>
+                <span class="dz-house__name dz-stage-event">
+                  {{ event.get_status_display }}
+                </span>
               </span>
-              <div class="bill-date">11 Jul 2018</div>
+              <div class="event-date">Date: {{ event.start_date|date:"d M Y" }} - {{ event.start_time }}</div>
             </div>
           </div>
-        </div>
+        </div></a>
       </div>
-      <!-- END Senate Card -->
-
-      <!-- END National Assembly Card -->
-      <div class="dz-bills__card">
-        <div class="card">
-          <div class="dz-home__bills-national-assembly rounded">
-            <h5 class="dz-home__bill-heading">The County Governments' Retirement Scheme Bill, 2018</h5>
-            <p class="card-text">AN ACT of Parliament to establish the County Governments' Retirement</p>
-            <div class="bills-footer">
-              <span>
-                <span class="dz-house__name dz-national-assembly">National Assembly</span>
-                <span class="dz-house__name dz-stage-event">First reading</span>
-              </span>
-              <div class="bill-date">11 Jul 2018</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END National Assembly Card -->
-
-      <!-- END Mzalendo Trust Card -->
-      <div class="dz-bills__card">
-        <div class="card">
-          <div class="dz-home__bills-mzalendo rounded">
-            <h5 class="dz-home__bill-heading">The County Governments' Retirement Scheme Bill, 2018</h5>
-            <p class="card-text">AN ACT of Parliament to establish the County Governments' Retirement</p>
-            <div class="bills-footer">
-              <span>
-                <span class="dz-house__name dz-mzalendo">Mzalendo Trust</span>
-                <span class="dz-house__name dz-stage-event">First reading</span>
-              </span>
-              <div class="bill-date">11 Jul 2018</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END Mzalendo Trust Card -->
-
-      <!-- END National Assembly Card -->
-      <div class="dz-bills__card">
-        <div class="card">
-          <div class="dz-home__bills-katiba rounded">
-            <h5 class="dz-home__bill-heading">The County Governments' Retirement Scheme Bill, 2018</h5>
-            <p class="card-text">AN ACT of Parliament to establish the County Governments' Retirement</p>
-            <div class="bills-footer">
-              <span>
-                <span class="dz-house__name dz-katiba">Katiba Institute</span>
-                <span class="dz-house__name dz-stage-event">First reading</span>
-              </span>
-              <div class="bill-date">11 Jul 2018</div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- END National Assembly Card -->
-
-      <!--END Events Cards-->
-    </section>
-    <!-- END Events Section -->
-
-    <section class="dz-events__fullcalender">
-      <!-- Calender -->
-      <div class="dz-events__loading">loading&hellip;</div>
-      <div class="dz-events__calender"></div>
-      <!-- END calender -->
-    </section>
-  </div>
-
+    {% endfor %}
+    <!-- END Cards -->
+  </section>
+  <section class="dz-events__fullcalender">
+    <!-- Calender -->
+    <div id="dz-events-calender" class="dz-events__calender"></div>
+    <!-- END calender -->
+  </section>
+</div>
 {% endblock content%}
 <!-- END Main Content -->
-
 {% block fullcalendar %}
-<script src="{% static 'dist/js/vendor/fullcalendar.min.js' %}"></script>
+<script src="{% static 'js/vendor/fullcalendar.min.js' %}"></script>
 <script src="{% static 'dist/js/dokeza-eventscalendar.min.js' %}"></script>
 {% endblock fullcalendar %}

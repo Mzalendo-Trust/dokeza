@@ -21,6 +21,7 @@
             {% for date in date_list %}
               <li>{{ date|date:"F Y" }}</li>
             {% empty %}
+<hr>
               <p>There are no archives</p>
             {% endfor %}
           </ol>
@@ -58,6 +59,7 @@
       </div>
       <hr>
     {% empty %}
+<hr>
     <div class="card">
         <h5 class="card-header dz-comment__header">Comments</h5>
         <div class="card-block no-content">

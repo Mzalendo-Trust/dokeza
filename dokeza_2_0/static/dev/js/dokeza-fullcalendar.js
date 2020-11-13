@@ -1,18 +1,40 @@
-(function() {
-  $(".dz-events__calender").fullCalendar({
-    header: {
-      left: "prev,next today",
-      center: "title",
-      right: "month,listWeek"
-    },
-    editable: false,
-    navLinks: true,
-    eventLimit: true,
-    events: {
-      url: "/api/public-participation/events"
-    },
-    loading(bool) {
-      $(".dz-events__loading").toggle(bool);
-    }
+// (function() {
+//   $(".dz-events__calender").fullCalendar({
+//     header: {
+//       left: "prev,next today",
+//       center: "title",
+//       right: "month,listWeek"
+//     },
+//     editable: false,
+//     navLinks: true,
+//     eventLimit: true,
+//     events: {
+//       url: "/api/public-participation/events"
+//     },
+//     loading(bool) {
+//       $(".dz-events__loading").toggle(bool);
+//     }
+//   });
+// })();
+
+document.addEventListener("DOMContentLoaded", function() {
+  let eventsUrl;
+  if (window.location.hostname == "localhost") {
+    eventsUrl = "http://localhost:8800/api/public-participation/events";
+  } else if (window.location.hostname == "192.168.100.82") {
+    eventsUrl = "http://192.168.100.82:8000/api/public-participation/events"; 
+  } else if (window.location.hostname == "staging-dokeza.mzalendo.com") {
+    eventsUrl = "https://staging-dokeza.mzalendo.com/api/public-participation/events";
+  } else if (window.location.hostname == "dokeza.mzalendo.com") {
+    eventsUrl = "https://dokeza.mzalendo.com/api/public-participation/events";
+    console.log(eventsUrl);
+  }
+  let calendarEl = document.getElementById("dz-home-events");
+  let calendar = new FullCalendar.Calendar(calendarEl, {
+    initialView: "dayGridMonth",
+    events: eventsUrl,
+    titleFormat: { year: "numeric", month: "short" },
+    height: "auto"
   });
-})();
+  calendar.render();
+});
