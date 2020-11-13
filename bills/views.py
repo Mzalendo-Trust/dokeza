@@ -145,7 +145,7 @@ class BillDetailView(DetailView):
                 'lang': lang,
                 'callbackUrl': docManager.getCallbackUrl(filename, self.request),
                 'user': {
-                    'id': '1',
+                    'id': users.getIdFromReq(self.request),
                     'name': users.getNameFromReq(self.request)
                 },
                 'embedded': {
