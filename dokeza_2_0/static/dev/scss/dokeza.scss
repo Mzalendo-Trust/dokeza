@@ -102,6 +102,9 @@ label {
 a {
   color: $link-color;
   text-decoration: $link-decoration;
+  p {
+    color: $dz-clr--maroon;
+  }
 
   @include hover-focus {
     color: $link-hover-color;
@@ -123,6 +126,10 @@ p.user-action {
   font-style: italic;
 }
 
+hr {
+  width: 100%;
+  border-top: 2px solid $dz-clr--darkgreen;
+}
 .pagination-container {
   width: 100%;
 }
@@ -132,7 +139,7 @@ p.user-action {
   flex: 0 1 100%;
   justify-content: center;
   font-family: "Open sans", sans-serif;
-  font-weigh: 600;
+  font-weight: 600;
   font-size: 1.4rem;
 
   li.active,
@@ -184,11 +191,19 @@ p.user-action {
   background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
 
   @include media-breakpoint-up(lg) {
-    background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
+    background-image: linear-gradient(
+      to right,
+      #c22710 15%,
+      $brand-primary 15%
+    );
   }
 
   @media (min-width: 2000px) {
-    background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
+    background-image: linear-gradient(
+      to right,
+      #c22710 15%,
+      $brand-primary 15%
+    );
   }
 }
 
@@ -339,8 +354,8 @@ p.user-action {
       background-color: darken($brand-primary, 10%);
     }
     &.sub-active {
-      background-color:white;
-      color:darken($brand-primary, 10%);
+      background-color: white;
+      color: darken($brand-primary, 10%);
     }
   }
 
@@ -576,6 +591,7 @@ p.user-action {
 
   .card-text {
     margin: 0.5rem 0 1rem;
+    height: 6em;
   }
 
   .verified,
@@ -642,8 +658,8 @@ p.user-action {
       padding: 0.5em 0;
       img.cipesa-logo {
         width: 100%;
-        max-width:280px;
-        height:100%;
+        max-width: 280px;
+        height: 100%;
       }
     }
   }
@@ -683,7 +699,7 @@ p.user-action {
     }
 
     &-senate {
-      padding: 1rem;
+      padding: 0.75rem;
       background-color: $dz-clr--lightpurple;
 
       .stage {
@@ -724,6 +740,7 @@ p.user-action {
         height: 20em;
         z-index: 1600;
         background-color: $brand-primary;
+        cursor: pointer;
         .left-arrow,
         .right-arrow {
           img {
@@ -756,7 +773,7 @@ p.user-action {
               width: 100%;
               height: 20em;
               overflow: visible;
-              
+
               img {
                 width: 100%;
               }
@@ -769,12 +786,8 @@ p.user-action {
               z-index: 500;
               height: 8em;
               padding: 1em;
-              // border: 1px solid rgba(0, 0, 0, 0.125);
-              // border-radius: 0.5em;
-              // border-top: 0;
-              // border-top-left-radius: 0;
-              // border-top-right-radius: 0;
-              h2, p {
+              h2,
+              p {
                 color: darken($brand-primary, 20%);
               }
               p {
@@ -803,6 +816,7 @@ p.user-action {
   .public-heading {
     color: #2b0800;
     margin-bottom: 0.2rem;
+    height: 2.5em;
   }
 
   // page__home--other_docs
@@ -1166,8 +1180,7 @@ p.user-action {
   margin: 0 auto;
   max-width: 960px;
 }
-.dz-about,
-{
+.dz-about {
   flex: 1 1 auto;
 
   @media screen and (min-width: $mobile-land + 1) {
@@ -1262,7 +1275,6 @@ p.user-action {
   p {
     max-width: 960px;
     margin: 0.3em auto;
-
   }
 
   &__excerpt {
@@ -2215,10 +2227,13 @@ p.user-action {
     border-radius: 0;
     flex: 1 1 100%;
   }
+  &__heading {
+    color: #2b0800;
+  }
 }
 
 .dz-events__home {
-  padding: 1em 0.5em 0;
+  padding: 1rem 0.5rem 0;
   border: 0;
   margin: 0;
 
@@ -2228,6 +2243,7 @@ p.user-action {
 
   @media screen and (min-width: $desktop) {
     padding: 0 0.5rem;
+    padding-bottom: 1.5rem;
     margin-bottom: 1rem;
   }
 
@@ -2238,10 +2254,11 @@ p.user-action {
 }
 
 .dz-events__calender {
-  padding: 0.5rem 0.5rem 0;
+  padding: 0.5rem 0 0;
+  min-height: 30vh;
 
   @include media-breakpoint-up(md) {
-    padding: 0 1rem;
+    padding: 0 0.5em;
   }
 }
 
@@ -2265,7 +2282,6 @@ p.user-action {
 
 .dz-memoranda,
 .dz-petitions {
- 
   &__content {
     padding-top: 1rem;
   }
@@ -2281,6 +2297,7 @@ p.user-action {
 
   &__read {
     width: 50%;
+    margin: 0.75em 0 0;
   }
 
   &__house {
@@ -2462,7 +2479,7 @@ p.user-action {
   justify-content: flex-end;
   align-items: center;
   overflow: visible;
-  order:3;
+  order: 3;
   a {
     text-decoration: none;
     font-size: normal;
@@ -2488,14 +2505,14 @@ p.user-action {
       background-color: transparent;
       background-size: 100%;
       border-radius: 2em;
-      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5)
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
     }
 
     .mzalendo-this {
-     background-color: transparent;
+      background-color: transparent;
       background-size: 100%;
       border-radius: 0.5em;
-      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5)
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
     }
   }
 }
@@ -2898,23 +2915,26 @@ input.form-control.form-control-sm.form-search::placeholder {
     color: black;
   }
 
-  .dz-events__list {
-  }
-
   .dz-events__fullcalender {
     grid-column: 2/-1;
   }
 
-  .bills-footer {
+  .events-footer {
     display: grid;
-    grid-template-columns: repeat(2, auto);
-    align-items: center;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
     line-height: 1rem;
+    .event-description {
+      p {      
+        color: $dz-clr--text-color;
+      }
+    }
 
-    .bill-date {
-      text-align: right;
-      font-size: 0.75rem;
-      padding: 0.25rem 0.5rem;
+    .event-date {
+      text-align:left;
+      font-size: 0.9em;
+      padding: 0.75em 0 0;
+      color: $dz-clr--text-color;
     }
   }
 

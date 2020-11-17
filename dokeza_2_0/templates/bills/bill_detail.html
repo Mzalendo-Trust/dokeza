@@ -34,7 +34,6 @@
           <h4 class="card-title">SPONSOR: {{ bill.sponsor }}</h4>
           <div class="bill-specs">
             <p class="bill-dates">
-              <strong> {{ bill.annotations|length }}</strong> Annotations | <strong>{{ bill.comments.count }}</strong> Comments<br />
             <strong>Last updated:</strong> {{bill.updated_date|date:"d M Y"|default:"--"}}</p>
             <p class="bill-actions">
              The bill has been presented using a <strong>Microsoft Word</strong> document format. 
@@ -128,7 +127,7 @@
               };
 
           {% endif %}
-
+          console.log('config - ', config)
           docEditor = new DocsAPI.DocEditor("iframeEditor", config);
 
           fixSize();

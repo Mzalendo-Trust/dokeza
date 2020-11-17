@@ -32,9 +32,28 @@ DEFAULT_USER = AnonymousUser()
 def getUserFromReq(req):
     current_user = req.user
     uid = f'{current_user.id}'
-    uname = f'{current_user.first_name} {current_user.last_name}'
+    uname = f'{current_user.first_name}{current_user.last_name}'
     
     if (not uid) | (not uname):
-        return DEFAULT_USER
+        return { 'uid': None, 'uname': unquote('mgeni') }
     else:
         return { 'uid': unquote(uid), 'uname': unquote(uname) }
+
+def getNameFromReq(req):
+    current_user = req.user
+
+    if current_user == DEFAULT_USER:
+        return 'mgeni'
+    elif current_user.first_name:
+        return f'{current_user.first_name}{current_user.last_name}'
+    else:
+        email_name = re.search(re.search(r'([a-z0-9._%+-]+)', current_user.email))
+        return email_name[0]        
+
+def getIdFromReq(req):
+    current_user = req.user
+
+    if current_user.id:
+        return f'{current_user.id}'
+    else:
+        return None

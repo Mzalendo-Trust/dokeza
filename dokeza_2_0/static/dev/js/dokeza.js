@@ -7,9 +7,9 @@ var $navNext = $(".next-img");
 var $startAutoplay = $(".start-autoplay");
 var $stopAutoplay = $(".stop-autoplay");
 var slidesNum = $slides.length;
-var prevSlideID = null;
+var prevSlideID = slidesNum - 1;
 var currentSlideID = 0;
-var isAnimating = true;
+var isAnimating = false;
 var isAutoPlay = true;
 
 function init() {
@@ -104,7 +104,7 @@ function play() {
 
 function startAutoPlay(immediate) {
   if (immediate != null) {
-    immediate = false;
+    immediate = true;
   }
 
   if (immediate) {

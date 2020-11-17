@@ -17,8 +17,8 @@ class BillQuerySet(models.QuerySet):
     def senate_bills(self):
         return self.filter(bill_from=2)
 
-    def have_pdfs(self):
-        return self.exclude(pdf="")
+    def have_word_docs(self):
+        return self.exclude(word_doc="")
 
 
 class BillManager(models.Manager):
@@ -37,5 +37,5 @@ class BillManager(models.Manager):
     def senate_bills(self):
         return self.get_queryset().senate_bills().public_bills().by_date()
 
-    def have_pdfs(self):
-        return self.get_queryset().have_pdfs().public_bills().by_date()
+    def have_word_docs(self):
+        return self.get_queryset().have_word_docs().public_bills().by_date()

@@ -63,18 +63,6 @@ services:
     networks:
       - dokeza-network
 
-  awscli:
-    container_name: awscli
-    build:
-      context: ./compose/production
-      dockerfile: awscli/Dockerfile
-    env_file:
-      - ./.envs/.production/.django
-    volumes:
-      - staging_postgres_backups:/backups
-    networks:
-      - dokeza-network
-
   django: &django
     container_name: django
     build:
@@ -87,7 +75,7 @@ services:
       - postgres
       - redis
     env_file:
-      - ./.envs/.production/.django
+      - ./.envs/.production/.django-staging
       - ./.envs/.production/.postgres
     command: /start
     networks:
@@ -96,7 +84,7 @@ services:
   documentserver:
     build:
       context: .
-      dockerfile: ./compose/production/documentserver/Dockerfile
+      dockerfile: ./compose/production/documentserver/Dockerfile-staging
     container_name: documentserver
     env_file:
       - ./.envs/.documentserver

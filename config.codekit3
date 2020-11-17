@@ -89,6 +89,14 @@
 		"oAP": "/.envs/.production/.django",
 		"oF": 0
 		},
+	"/.envs/.production/.django-staging": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/.envs/.production/.django-staging",
+		"oF": 0
+		},
 	"/.envs/.production/.postgres": {
 		"cB": 0,
 		"ft": 8192,
@@ -6974,6 +6982,14 @@
 		"oAP": "/compose/production/documentserver/Dockerfile",
 		"oF": 0
 		},
+	"/compose/production/documentserver/Dockerfile-staging": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/documentserver/Dockerfile-staging",
+		"oF": 0
+		},
 	"/compose/production/documentserver/img/about/logo.png": {
 		"ft": 32768,
 		"iS": 3625,
@@ -7895,6 +7911,22 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/config/__init__.py",
+		"oF": 0
+		},
+	"/config/__pycache__/__init__.cpython-38.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/config/__pycache__/__init__.cpython-38.pyc",
+		"oF": 0
+		},
+	"/config/__pycache__/celery_app.cpython-38.pyc": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/config/__pycache__/celery_app.cpython-38.pyc",
 		"oF": 0
 		},
 	"/config/api_router.py": {
@@ -24680,7 +24712,7 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dev/js/dokeza-eventscalendar-min.js",
-		"oF": 1,
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -24691,7 +24723,7 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dev/js/dokeza-fullcalendar-min.js",
-		"oF": 1,
+		"oF": 0,
 		"sC": 3,
 		"tS": 0
 		},
@@ -24839,6 +24871,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/dokeza_2_0/static/dist/css/calendar-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/calendar-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/dokeza_2_0/static/dist/css/calendar.css": {
 		"aP": 1,
 		"bl": 0,
@@ -24846,6 +24888,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/css/calendar-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/dist/css/dokeza-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/dokeza-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -24869,6 +24921,16 @@
 		"oF": 0,
 		"oS": 3
 		},
+	"/dokeza_2_0/static/dist/css/mzalendo-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/mzalendo-min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
 	"/dokeza_2_0/static/dist/css/mzalendo.css": {
 		"aP": 1,
 		"bl": 0,
@@ -24876,6 +24938,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/css/mzalendo-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/dist/css/onlyoffice-min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/onlyoffice-min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -26064,6 +26136,17 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
+	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -27144,6 +27227,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/js/vendor/bootstrap.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/bootstrap.min-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/js/vendor/bootstrap.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -27151,6 +27245,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/js/vendor/bootstrap.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/dokeza_2_0/static/js/vendor/fullcalendar.min-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/fullcalendar.min-min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
@@ -29207,6 +29312,22 @@
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "/media/dokezamasta/new.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/MtuNguyas/memorandum.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/MtuNguyas/memorandum.docx",
+		"oF": 0
+		},
+	"/media/MtuNguyas/memorandum.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/MtuNguyas/memorandum.docx-hist/createdInfo-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1

@@ -25,7 +25,7 @@ class BillListView(ListView):
     """
     template_name = 'bills/bills_list.html'
     paginate_by = 12
-    queryset = Bill.objects.have_pdfs()
+    queryset = Bill.objects.have_word_docs()
 
     def get_context_data(self, **kwargs):
         context = super(BillListView, self).get_context_data(**kwargs)
@@ -98,7 +98,7 @@ class BillDetailView(DetailView):
         else:
             house = 'senate'
         
-        filename = str(self.object.pdf)
+        filename = str(self.object.word_doc)
         ext = fileUtils.getFileExt(filename)
 
         fileUri = docManager.getFileUri(filename, self.request)
@@ -145,8 +145,8 @@ class BillDetailView(DetailView):
                 'lang': lang,
                 'callbackUrl': docManager.getCallbackUrl(filename, self.request),
                 'user': {
-                    'id': '1',
-                    'name': 'Dokeza'
+                    'id': users.getIdFromReq(self.request),
+                    'name': users.getNameFromReq(self.request)
                 },
                 'embedded': {
                     'saveUrl': fileUri,
@@ -158,7 +158,7 @@ class BillDetailView(DetailView):
                     'about': True,
                     'customer': {
                         'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
-                        'logo': settings.SITE_DOMAIN + 'static/images/dokeza-logo-banner.png',
+                        'logo': settings.SITE_DOMAIN + '/static/images/dokeza-logo-banner.png',
                         'email':'mzalendo.devops@gmail.com'
                     },
                     'compactHeader': False,
@@ -183,6 +183,5 @@ class BillDetailView(DetailView):
         context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
         context['fileType'] = fileType
         context['apiUrl'] = settings.DOC_SERV_API_URL
-        print('bill apiUrl', settings.DOC_SERV_API_URL)
         return context
     

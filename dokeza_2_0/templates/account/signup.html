@@ -28,9 +28,7 @@
   <h5 class="p-3">Register to annotate or comment on bills</h5>
   <div class="row container">
     <div class="col-11 col-md-5">
-      <hr>
       <h6 class="p-1">Register</h6>
-      <hr>
       <form class="dz-form__email-signup" id="signup_form" method="post" action="{% url 'account_signup' %}">
         {% csrf_token %}
         {{ form|crispy }}
@@ -40,7 +38,6 @@
         <button class="btn btn-primary btn-block mb-3 p-3" type="submit">{% trans "Sign Up" %}</button>
       </form>
       <div>
-        <hr>
         <div class="dz-form__email-register">Already Registered?
           <a class="btn btn-outline-success" role="button" href="{{ login_url }}">Login</a>
         </div>
@@ -48,9 +45,7 @@
     </div>
     <div class="login-or">{% trans 'or' %}</div>
     <div class="col-11 col-md-5">
-      <hr>
       <h6 class="p-1">Login/Register via social media</h6>
-      <hr>
       {% get_providers as socialaccount_providers %}
       {% if socialaccount_providers %}
         <div class="socialaccount_ballot">

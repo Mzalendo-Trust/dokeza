@@ -15,7 +15,7 @@ class BillAdmin(admin.ModelAdmin):
     change_form_template = 'admin/bills/comment_button.html'
 
     fieldsets = (
-        (None, {'fields': ('owner', 'pdf', 'bill_pic', 'law_reference')}),
+        (None, {'fields': ('owner', 'word_doc', 'bill_pic', 'law_reference')}),
         (_('Bill info'), {'fields': ('bill_from', 'title', 'slug')}),
         (_('Content'), {'fields': ('purpose', 'sponsor',
                         'sponsor_title', 'private')}),

@@ -65,6 +65,10 @@ As with any shell command that we wish to run in our container, this is done usi
 
 Here, ``django`` is the target service we are executing the commands against.
 
+NOTE:In the occasion that one gets this error response, ``python: can't open file 'manage.py': [Errno 2] No such file or directory``, append ``/app`` and run the following commands: ::
+
+    $ docker-compose -f local.yml run --rm django python /app/manage.py migrate
+    $ docker-compose -f local.yml run --rm django python /app/manage.py createsuperuser
 
 (Optionally) Designate your Docker Development Server IP
 --------------------------------------------------------
@@ -97,8 +101,8 @@ The most important thing for us here now is ``env_file`` section enlisting ``./.
 
     .envs
     ├── .local
-    │   ├── .django
-    │   └── .postgres
+        ├── .django
+    │   └── .postgres
     └── .production
         ├── .django
         └── .postgres

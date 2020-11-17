@@ -9,7 +9,7 @@ done
 docker-compose -f production.yml up -d nginx
 
 docker-compose -f production.yml up certbot
-docker exec nginx sed -i -r 's/#?;#//g' /etc/nginx/conf.d/staging.conf
+docker exec nginx sed -i -r 's/#?;#//g' /etc/nginx/conf.d/default.conf
 docker exec nginx service nginx restart
 docker-compose -f production.yml up -d documentserver
 

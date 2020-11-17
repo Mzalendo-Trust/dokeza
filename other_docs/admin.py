@@ -10,7 +10,7 @@ class DocAdmin(admin.ModelAdmin):
     ordering = ('title',)
 
     fieldsets = (
-        (None, {'fields': ('owner', 'pdf',)}),
+        (None, {'fields': ('owner', 'word_doc',)}),
         (_('Document info'), {'fields': ('title', 'slug', 'purpose', 'institution', 'body',)}),
         (_('Other info'), {'fields': ('tags',)}),
     )

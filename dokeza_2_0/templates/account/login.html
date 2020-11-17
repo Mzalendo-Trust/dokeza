@@ -17,9 +17,7 @@
   <h5 class="p-3">Login to annotate or comment on bills</h5>
   <div class="row container">
     <div class="col-11 col-md-5">
-      <hr>
       <h6 class="p-1">Email Login</h6>
-      <hr>
       <form class="dz-form__email-signup form-signin" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
         {{ form|crispy }}
@@ -31,16 +29,13 @@
       <div class="dz-form__email-reset">Forgot your password?
         <a class="btn btn-outline btn-outline-reset" href="{% url 'account_reset_password' %}">Reset</a>
       </div>
-      <hr>
       <div class="dz-form__email-register">You don't have an account?
           <a class="btn btn-outline-primary" role="button" href="{{ signup_url }}">Register</a>
       </div>
     </div>
     <div class="login-or">{% trans 'or' %}</div>
     <div class="col-11 col-md-5">
-      <hr>
       <h6 class="p-1">Login via social media</h6>
-      <hr>
       {% get_providers as socialaccount_providers %}
       {% if socialaccount_providers %}
         <div class="socialaccount_ballot">

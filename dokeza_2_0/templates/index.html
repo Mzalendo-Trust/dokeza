@@ -3,7 +3,7 @@
 {% block title %}- Welcome{% endblock title %}
 <!-- Fullcalendar Styles -->
 {% block fullcalendarstyles %}
-<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.3.1/fullcalendar.print.css" media="print"> {% endblock fullcalendarstyles %}
+{% endblock fullcalendarstyles %}
 <!-- END Fullcalendar Styles -->
 <!-- Sub-Navigation Block -->
 {% block sub-navigation %}
@@ -127,6 +127,7 @@
           </div>
         </div>
         {% empty %}
+<hr>
         <div class="dz-home__bills-card col-12 col-sm-6 p-2">
           <p><strong>There are no outstanding legislative bills.</strong></p>
         </div>
@@ -194,10 +195,8 @@
   <section class="dz-events__home">
     <h1 class="dz-main__heading">Events</h1>
     <!-- Calender -->
-    <div class="dz-events__loading">loading&hellip; <br>
-          <img src="{% static 'images/calendar-holder.png' %}">
-        </div>
-    <div class="dz-events__calender"></div>
+    <div class="dz-events__loading"></div>
+    <div id="dz-home-events" class="dz-events__calender" style="height:100px"></div>
     <!-- END calender -->
     <div class="dz-home__content dz-home__events--content">
       {% for event in events|slice:"8" %}
@@ -225,9 +224,10 @@
 {% endblock content%}
 <!-- END Main Content -->
 {% block fullcalendar %}
-  <!-- Place fullclaendar js files here -->
+<script src="{% static 'js/vendor/fullcalendar.min.js' %}"></script>
+<script src="{% static 'dist/js/dokeza-fullcalendar.min.js' %}"></script>
 {% endblock fullcalendar %}
-{% block cookieconsent %} 
+{% block cookieconsent %}
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>
 <script>
 window.cookieconsent.initialise({
