@@ -28,8 +28,7 @@ djangorestframework-jwt==1.11.0
 
 # --- Manual istallation allows us to create new migrations that are in sync with everyone.
 
-# django-allauth==0.42.0 => Manual installation
-# django-annotator==2.1.0 => Manual installation
+# django-allauth==0.44.0 => Manual installation
 django-ckeditor==5.9.0
 # django-scheduler==0.9.3 => Manual installation
 # django-taggit >= 1.3.0 => Manual installation

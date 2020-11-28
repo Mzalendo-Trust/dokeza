@@ -5627,6 +5627,14 @@
 		"oAP": "/azure-pipelines.yml",
 		"oF": 0
 		},
+	"/bills-upload.tar.gz": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/bills-upload.tar.gz",
+		"oF": 0
+		},
 	"/bills/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5739,6 +5747,14 @@
 		"oAP": "/bills/migrations/0002_remove_bill_body.py",
 		"oF": 0
 		},
+	"/bills/migrations/0003_auto_20201111_1849.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/bills/migrations/0003_auto_20201111_1849.py",
+		"oF": 0
+		},
 	"/bills/migrations/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5785,94 +5801,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/celerybeat.pid",
-		"oF": 0
-		},
-	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/meta.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/meta-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/private_key.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/private_key-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/regr.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/regr-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/certbot/certs/csr/0000_csr-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/csr/0000_csr-certbot.pem",
-		"oF": 0
-		},
-	"/certbot/certs/csr/0001_csr-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/csr/0001_csr-certbot.pem",
-		"oF": 0
-		},
-	"/certbot/certs/keys/0000_key-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/keys/0000_key-certbot.pem",
-		"oF": 0
-		},
-	"/certbot/certs/keys/0001_key-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/keys/0001_key-certbot.pem",
-		"oF": 0
-		},
-	"/certs/afropro.local.crt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/afropro.local.crt",
-		"oF": 0
-		},
-	"/certs/afropro.local.key": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/afropro.local.key",
-		"oF": 0
-		},
-	"/certs/dhparam.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/dhparam.pem",
-		"oF": 0
-		},
-	"/certs/rootCA.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/rootCA.pem",
 		"oF": 0
 		},
 	"/comments/__init__.py": {
@@ -26136,17 +26064,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -27380,14 +27297,6 @@
 		"oAP": "/dokeza_2_0/static/samples/builder/pdf.docbuilder",
 		"oF": 0
 		},
-	"/dokeza_2_0/static/samples/builder/sample.docbuilder": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/samples/builder/sample.docbuilder",
-		"oF": 0
-		},
 	"/dokeza_2_0/static/samples/builder/xlsx.docbuilder": {
 		"cB": 0,
 		"ft": 8192,
@@ -28108,14 +28017,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/comments/confirm_delete.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/docbuilder/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/docbuilder/index.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/editor.html": {
@@ -29028,6 +28929,14 @@
 		"oAP": "/manage.py",
 		"oF": 0
 		},
+	"/media/bills-upload.tar.gz": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills-upload.tar.gz",
+		"oF": 0
+		},
 	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29268,6 +29177,110 @@
 		"oAP": "/media/bills/TeaBill_2018.docx",
 		"oF": 0
 		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Universities_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Universities_Amendment_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted.docx",
+		"oF": 0
+		},
+	"/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx",
+		"oF": 0
+		},
 	"/media/dokezamasta/new.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29316,28 +29329,20 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/media/MtuNguyas/memorandum.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/MtuNguyas/memorandum.docx",
-		"oF": 0
-		},
-	"/media/MtuNguyas/memorandum.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/MtuNguyas/memorandum.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
 	"/merge_production_dotenvs_in_dotenv.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/merge_production_dotenvs_in_dotenv.py",
+		"oF": 0
+		},
+	"/NaturalResources_BenefitSharing_Bill_2018-comment-report.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/NaturalResources_BenefitSharing_Bill_2018-comment-report.docx",
 		"oF": 0
 		},
 	"/node_modules": {
@@ -29400,6 +29405,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/other_docs/migrations/0002_doc_regulation.py",
+		"oF": 0
+		},
+	"/other_docs/migrations/0003_auto_20201113_0144.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/other_docs/migrations/0003_auto_20201113_0144.py",
 		"oF": 0
 		},
 	"/other_docs/migrations/__init__.py": {
@@ -29688,6 +29701,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/public_participation/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/public_participation/migrations/0002_publicevent_status.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public_participation/migrations/0002_publicevent_status.py",
 		"oF": 0
 		},
 	"/public_participation/migrations/__init__.py": {

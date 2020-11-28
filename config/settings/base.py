@@ -3,6 +3,7 @@ Base settings to build other settings files upon.
 """
 from pathlib import Path
 
+import re
 import os
 import environ
 import datetime
@@ -247,7 +248,7 @@ EMAIL_TIMEOUT = 5
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("Jimmy Gitonga", "jimmy@ra.co.ke"), ("Njuguna Gathere", "njuguna@ra.co.ke")]
+ADMINS = [("Jimmy Gitonga", "jimmy@ra.co.ke"), ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
@@ -274,6 +275,18 @@ LOGGING = {
     },
     "root": {"level": "INFO", "handlers": ["console"]},
 }
+
+
+# Broken link settings.
+IGNORABLE_404_URLS = [
+    re.compile(r'\.(php|cgi)$'),
+    re.compile(r'^/phpmyadmin/'),
+    re.compile(r'^/apple-touch-icon.*\.png$'),
+    re.compile(r'^/favicon\.ico$'),
+    re.compile(r'^/robots\.txt$'),
+]
+# SEND_BROKEN_LINK_EMAILS = False
+
 
 # Celery
 # ------------------------------------------------------------------------------
