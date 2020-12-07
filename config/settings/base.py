@@ -4,7 +4,6 @@ Base settings to build other settings files upon.
 from pathlib import Path
 
 import re
-import os
 import environ
 import datetime
 
@@ -284,6 +283,13 @@ IGNORABLE_404_URLS = [
     re.compile(r'^/apple-touch-icon.*\.png$'),
     re.compile(r'^/favicon\.ico$'),
     re.compile(r'^/robots\.txt$'),
+    re.compile(r'^/console/'),
+    re.compile(r'^/wp-content/'),
+    re.compile(r'^/api/*'),
+    re.compile(r'\.api$'),
+    re.compile(r'^/jars'),
+    re.compile(r'^/wp-admin/'),
+    re.compile(r'^/Autodiscover/'),
 ]
 # SEND_BROKEN_LINK_EMAILS = False
 
@@ -392,8 +398,7 @@ CKEDITOR_CONFIGS = {
             ['Styles', 'Format'],
         ],
         'uiColor': '#a8d0b4',
-        'extraPlugins': 'scayt',
-        'extraPlugins': 'codesnippet',
+        'extraPlugins': ['scayt', 'codesnippet'],
         'extraAllowedContent': 'div[*]',
     },
     'front_ckeditor': {
