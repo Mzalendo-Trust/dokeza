@@ -208,14 +208,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/AddElement.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/AddElement.docx",
-		"oF": 0
-		},
 	"/allauth/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -584,20 +576,20 @@
 		"oAP": "/allauth/locale/lv/LC_MESSAGES/django.po",
 		"oF": 0
 		},
+	"/allauth/locale/nb/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/nb/LC_MESSAGES/django.po",
+		"oF": 0
+		},
 	"/allauth/locale/nl/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/locale/nl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/allauth/locale/no/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/locale/no/LC_MESSAGES/django.po",
 		"oF": 0
 		},
 	"/allauth/locale/pl/LC_MESSAGES/django.po": {
@@ -638,6 +630,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/locale/sk/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/sl/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/sl/LC_MESSAGES/django.po",
 		"oF": 0
 		},
 	"/allauth/locale/sr/LC_MESSAGES/django.po": {
@@ -1006,6 +1006,62 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/socialaccount/providers/angellist/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/apple/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/apple_session.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/apple_session.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/client.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/client.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/views.py",
 		"oF": 0
 		},
 	"/allauth/socialaccount/providers/asana/__init__.py": {
@@ -2355,6 +2411,46 @@
 		"oAP": "/allauth/socialaccount/providers/feedly/views.py",
 		"oF": 0
 		},
+	"/allauth/socialaccount/providers/figma/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/figma/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/views.py",
+		"oF": 0
+		},
 	"/allauth/socialaccount/providers/fivehundredpx/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -3203,46 +3299,6 @@
 		"oAP": "/allauth/socialaccount/providers/microsoft/views.py",
 		"oF": 0
 		},
-	"/allauth/socialaccount/providers/mixer/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/allauth/socialaccount/providers/mixer/__init__.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/provider.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/provider.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/tests.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/tests.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/urls.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/urls.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/views.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/views.py",
-		"oF": 0
-		},
 	"/allauth/socialaccount/providers/naver/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -3449,6 +3505,46 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/socialaccount/providers/odnoklassniki/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/okta/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/views.py",
 		"oF": 0
 		},
 	"/allauth/socialaccount/providers/openid/__init__.py": {
@@ -4259,6 +4355,46 @@
 		"oAP": "/allauth/socialaccount/providers/steam/views.py",
 		"oF": 0
 		},
+	"/allauth/socialaccount/providers/stocktwits/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/views.py",
+		"oF": 0
+		},
 	"/allauth/socialaccount/providers/strava/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5043,6 +5179,86 @@
 		"oAP": "/allauth/socialaccount/providers/ynab/views.py",
 		"oF": 0
 		},
+	"/allauth/socialaccount/providers/zoho/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/zoho/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/zoom/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/views.py",
+		"oF": 0
+		},
 	"/allauth/socialaccount/signals.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5113,6 +5329,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/templates/account/email.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/base_message.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/base_message.txt",
 		"oF": 0
 		},
 	"/allauth/templates/account/email/email_confirmation_message.txt": {
@@ -5353,14 +5577,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/templates/account/verified_email_required.html",
-		"oF": 0
-		},
-	"/allauth/templates/base.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/templates/base.html",
 		"oF": 0
 		},
 	"/allauth/templates/openid/base.html": {
@@ -5625,14 +5841,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/azure-pipelines.yml",
-		"oF": 0
-		},
-	"/bills-upload.tar.gz": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills-upload.tar.gz",
 		"oF": 0
 		},
 	"/bills/__init__.py": {
@@ -29335,14 +29543,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/merge_production_dotenvs_in_dotenv.py",
-		"oF": 0
-		},
-	"/NaturalResources_BenefitSharing_Bill_2018-comment-report.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/NaturalResources_BenefitSharing_Bill_2018-comment-report.docx",
 		"oF": 0
 		},
 	"/node_modules": {

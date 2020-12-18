@@ -4,8 +4,8 @@ volumes:
   local_postgres_data: {}
   local_postgres_data_backups: {}
   documentserver_postgresql_data: {}
-  dokeza_vers_2:
-    external: true
+  # dokeza_vers_2:
+  #   external: true
 
 networks:
   dokeza-network:
@@ -22,7 +22,7 @@ services:
       - postgres
       - mailhog
     volumes:
-      - dokeza_vers_2:/app:nocopy
+      -  .:/app:z
     env_file:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
