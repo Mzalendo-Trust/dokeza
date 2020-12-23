@@ -38,6 +38,7 @@ urlpatterns = [
    
     # These are the App urls.
     path("bills/", include("bills.urls", namespace="bills")),
+    path('tracker/', include("tracker.urls", namespace="tracker")),
     path("regulations/", include("other_docs.urls", namespace="regulations")),
     path('docbuilder/', include('docbuilder.urls', namespace="docbuilder")),
     path('posts/', include('posts.urls', namespace='posts')),
@@ -62,6 +63,7 @@ urlpatterns += [
     # Access APIs
     # path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
     path('api/bills/', include('bills.api.urls', namespace='bills-api')),
+    path('api/tracker/', include('tracker.api.urls', namespace='tracker-api')),
     # path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
     # path('api/comments/', include('comments.api.urls', namespace='comments-api')),
     path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))

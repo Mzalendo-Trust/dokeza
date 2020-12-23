@@ -44,6 +44,8 @@ services:
       - local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
+    ports:
+      - "5434:5432"
     restart: always
     networks:
       - dokeza-network
