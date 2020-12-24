@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from rest_framework import viewsets, generics
+from django.utils.timezone import datetime
+
 from .serializers import BillTrackerSerializer, BillSerializer
 from tracker.models import MyBill, BillTracker
 
@@ -19,6 +21,7 @@ from rest_framework.generics import (
     DestroyAPIView,
 )
 
+
 class BillsListAPIView(ListAPIView):
     serializer_class = BillSerializer
     queryset = MyBill.objects.all()
@@ -37,10 +40,10 @@ class BillTrackerListAPIView(ListAPIView):
 class BillTrackerCreateAPIView(CreateAPIView):
     queryset = BillTracker.objects.all()
     serializer_class = BillTrackerSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
-    # def perform_create(self, serializer):
-    #     serializer.save(owner=self.request.user)
+    def perform_create(self, serializer):
+        serializer.save(createdby=self.request.user, createdon=datetime.today())
 
 
 # class BillTrackerView(viewsets.ModelViewSet):

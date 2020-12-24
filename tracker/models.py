@@ -1,5 +1,6 @@
 from django.db import models
-
+from django.conf import settings
+from django.utils.timezone import datetime
 
 class MyBill(models.Model):
     title = models.CharField(max_length=100)
@@ -16,7 +17,9 @@ class MyBill(models.Model):
 
 class BillTracker(models.Model):
     bill = models.ForeignKey(MyBill, on_delete=models.CASCADE)
-    # bill_id = models.IntegerField()
+    createdby = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
+    createdon = models.DateTimeField(default=datetime.today())
+    ## bill_id = models.IntegerField()
     details = models.TextField(null=True)
     stage = models.TextField()
     stage_date = models.DateField('date published')
