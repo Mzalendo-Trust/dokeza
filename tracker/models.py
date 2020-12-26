@@ -6,7 +6,7 @@ class MyBill(models.Model):
     title = models.CharField(max_length=100)
     purpose = models.TextField()
     slug = models.TextField()
-    
+    sponsor = models.TextField()
     class Meta:
         db_table = 'bills_bill'
         managed = False
