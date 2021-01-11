@@ -66,8 +66,8 @@ class BillDetailSerializer(ModelSerializer):
 
 
 class BillListSerializer(ModelSerializer):
-    authentication_classes = [BasicAuthentication, SessionAuthentication]
-    permission_classes = [permissions.IsAuthenticated, ]
+    # authentication_classes = [BasicAuthentication, SessionAuthentication]
+    # permission_classes = [permissions.AllowAny, ]
     url = bill_detail_url
     # user = UserDetailSerializer(read_only=True)
 

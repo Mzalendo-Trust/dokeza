@@ -44,6 +44,8 @@ services:
       - local_postgres_data_backups:/backups
     env_file:
       - ./.envs/.local/.postgres
+    ports:
+      - "5434:5432"
     restart: always
     networks:
       - dokeza-network
@@ -114,6 +116,7 @@ services:
     container_name: mailhog
     ports:
       - "8025:8025"
+      - "1025:1025"
     networks:
       - dokeza-network
 
