@@ -290,7 +290,12 @@ IGNORABLE_404_URLS = [
     re.compile(r'\.api$'),
     re.compile(r'^/jars'),
     re.compile(r'.*/wp-admin/'),
+    re.compile(r'.*/web-apps/.*'),
+    re.compile(r'.*/phpunit.*'),
     re.compile(r'.*/Autodiscover/'),
+    re.compile(r'.*/web-console/'),
+    re.compile(r'.*/jmx-console/'),
+    re.compile(r'.*/HNAP1/'),
 ]
 # SEND_BROKEN_LINK_EMAILS = False
 
