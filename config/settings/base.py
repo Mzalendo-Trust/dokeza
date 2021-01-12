@@ -285,12 +285,17 @@ IGNORABLE_404_URLS = [
     re.compile(r'^/favicon\.ico$'),
     re.compile(r'^/robots\.txt$'),
     re.compile(r'^/console/'),
-    re.compile(r'^/wp-content/'),
+    re.compile(r'.*/wp-content/'),
     re.compile(r'^/api/*'),
     re.compile(r'\.api$'),
     re.compile(r'^/jars'),
-    re.compile(r'^/wp-admin/'),
-    re.compile(r'^/Autodiscover/'),
+    re.compile(r'.*/wp-admin/'),
+    re.compile(r'.*/web-apps/.*'),
+    re.compile(r'.*/phpunit.*'),
+    re.compile(r'.*/Autodiscover/'),
+    re.compile(r'.*/web-console/'),
+    re.compile(r'.*/jmx-console/'),
+    re.compile(r'.*/HNAP1/'),
 ]
 # SEND_BROKEN_LINK_EMAILS = False
 
