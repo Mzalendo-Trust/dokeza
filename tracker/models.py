@@ -1,12 +1,14 @@
 from django.db import models
 from django.conf import settings
 from django.utils.timezone import datetime
+import uuid
 
 class MyBill(models.Model):
     title = models.CharField(max_length=100)
     purpose = models.TextField()
     slug = models.TextField()
     sponsor = models.TextField()
+
     class Meta:
         db_table = 'bills_bill'
         managed = False
@@ -16,10 +18,11 @@ class MyBill(models.Model):
 
 
 class BillTracker(models.Model):
+    uuid = models.UUIDField(unique=True, default=uuid.uuid4)
     bill = models.ForeignKey(MyBill, on_delete=models.CASCADE)
     createdby = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     createdon = models.DateTimeField(default=datetime.today())
-    ## bill_id = models.IntegerField()
+    # bill_id = models.IntegerField()
     details = models.TextField(null=True)
     stage = models.TextField()
     stage_date = models.DateField('date published')

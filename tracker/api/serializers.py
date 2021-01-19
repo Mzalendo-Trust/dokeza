@@ -22,6 +22,6 @@ class BillTrackerSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = BillTracker
-        fields = ('id', 'bill', 'details', 'stage_date', 'stage',
+        fields = ('uuid', 'bill', 'details', 'stage_date', 'stage',
                   'bill_name', 'bill_slug', 'bill_sponsor', 'bill_purpose')
         # fields='__all__'
