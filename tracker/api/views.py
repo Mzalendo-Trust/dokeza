@@ -4,12 +4,13 @@ from django.utils.timezone import datetime
 
 from .serializers import BillTrackerSerializer, BillSerializer
 from tracker.models import MyBill, BillTracker
+from .permissions import IsOwnerOrReadOnly
 
 from rest_framework.permissions import (
     AllowAny,
     IsAuthenticated,
     IsAdminUser,
-    IsAuthenticatedOrReadOnly,
+    IsAuthenticatedOrReadOnly
 )
 
 from rest_framework.generics import (
@@ -45,6 +46,12 @@ class BillTrackerCreateAPIView(CreateAPIView):
     def perform_create(self, serializer):
         serializer.save(createdby=self.request.user, createdon=datetime.today())
 
+
+class BillTrackerDeleteAPIView(DestroyAPIView):
+    queryset = BillTracker.objects.all()
+    serializer_class = BillTrackerSerializer
+    lookup_field = 'uuid'
+    permission_classes = [IsAuthenticated]
 
 # class BillTrackerView(viewsets.ModelViewSet):
 #     serializer_class = BillTrackerSerializer
