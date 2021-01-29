@@ -47,10 +47,11 @@ var task = CronJob.schedule('*/3 * * * *', function () {
 
     var mailOptions = {
       from: '"kimana" <dakn2005@gmail.com>',
-      to: 'nyendebirungi@gmail.com, dakn2005@yahoo.com, dakn2005@live.com',
-      subject: 'Nice Nodemailer test',
+      to: 'dakn2005@live.com',
+      bcc: [..._.map(res?.rows, 'email')].join(', '),
+      subject: `Monthly Report on Bill Stages in ${dayjs().format('MMMM')}`,
       // text: 'Hey there, Nodemailer msg ',
-      html: JSON.stringify(_.map(res?.rows, 'email')), //'<b>Hey there! </b><br> Mimi ni boo wa sue<br />',
+      html: "Greetings from Mzalendo! Here is this month's update on the Bills in the House", //JSON.stringify(_.map(res?.rows, 'email')), //'<b>Hey there! </b><br> Mimi ni boo wa sue<br />',
       attachments: [
         {
           // filename: 'allbills.pdf',
