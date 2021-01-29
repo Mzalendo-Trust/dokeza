@@ -56,7 +56,7 @@ user_detail_view = UserDetailView.as_view()
 class UserUpdateView(LoginRequiredMixin, UpdateView):
 
     model = User
-    fields = ['first_name', 'last_name', 'email']
+    fields = ['first_name', 'last_name', 'email', 'is_subscribed_tracker']
 
     def get_context_data(self, **kwargs):
         context = super(UserUpdateView, self).get_context_data(**kwargs)
