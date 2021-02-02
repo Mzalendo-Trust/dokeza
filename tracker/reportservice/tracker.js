@@ -42,12 +42,12 @@ let printReport = async () => {
     // console.log("Done.");
     var height = await page.evaluate(() => {
         $('.show-more').click()
-        $('#filters, .timeline-controls, .fa-external-link-alt, .dz-footer, .dz-header').hide()
+        $('#filters, .timeline-controls, .fa-external-link-alt, .dz-footer, .dz-header, .tracker-btns').hide()
         return document.body.clientHeight;
     });
 
     //TODO: update to current month
-    let rptname = `report_${dayjs().subtract(1, 'month').format('MMMYYYY')}.pdf` //_${dayjs().unix()}
+    let rptname = `Dokeza Tracking Report_${dayjs().subtract(1, 'month').format('MMMYYYY')}.pdf` //_${dayjs().unix()}
 
     await page.pdf({ path: `./reports/${rptname}`, width: "1280px", height: height + "px", printBackground: true });
     browser.close();
@@ -55,10 +55,9 @@ let printReport = async () => {
 }
 // )();
 
-var task = CronJob.schedule('1 12,15,18 2 * *', function () {
+var task = CronJob.schedule('45 14,13 2,3,4,5 * *', function () {
     console.log('Reporting service started', dayjs().format('YYYY-MM-DD hh:mm:ss A'));
     printReport();
-
 });
 
 

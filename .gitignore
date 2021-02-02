@@ -278,3 +278,4 @@ certs/*
 .env
 .envs/*
 !.envs/.local/
+tracker/reportservice/reports/report_Jan2021.pdf

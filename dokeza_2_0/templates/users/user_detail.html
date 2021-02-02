@@ -37,8 +37,6 @@
       <div href="#" class="dz-profile__activity">
         Activity
       </div>
-      
-     
      
       {% if request.user.is_member_of_parliament or request.user.is_editor or request.user.is_staff %}
       <a href="#" class="list-group-item list-group-item-action justify-content-between">
@@ -52,6 +50,7 @@
           {{ request.user.is_subscribed_tracker|yesno:"Subscribed,Not Subscribed" }}
         </span>
       </a>
+     
       <a href="#" class="list-group-item list-group-item-action justify-content-between">
         <strong>Annotations</strong>
         <span class="dz-profile-info profile-annotations">{{ my_annotations.count|default:"No Annotations yet" }}</span>

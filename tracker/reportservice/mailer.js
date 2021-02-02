@@ -16,6 +16,7 @@ const client = new Client({
 })
 client.connect();
 
+
 // const transport = nodemailer.createTransport({
 //   host: 'mailhog',
 //   port: '1025',
@@ -29,7 +30,7 @@ const transport = nodemailer.createTransport({
   host: 'smtp.gmail.com',
   port: 465,
   auth: {
-    user:'dokeza.mzalendo@gmail.com',
+    user: 'dokeza.mzalendo@gmail.com',
     pass: 'dokezamasta!'
   },
   // tls: {
@@ -37,14 +38,13 @@ const transport = nodemailer.createTransport({
   // }
 });
 
-
-  var task2 = CronJob2.schedule('5 12,15,18 2 * *', function () {
+var task2 = CronJob2.schedule('0 15,18 2,3,4,5 * *', function () {
 
   // select email, trackersubscribed from users_user
   client.query('select email from users_user where is_subscribed_tracker=true', (err, res) => {
 
     //TODO: update to current month
-    let rptname = `report_${dayjs().subtract(1, 'month').format('MMMYYYY')}.pdf`;
+    let rptname = `Dokeza Tracking Report_${dayjs().subtract(1, 'month').format('MMMYYYY')}.pdf`;
 
     var mailOptions = {
       from: '"Dokeza" <dokeza.mzalendo@gmail.com>',
@@ -72,7 +72,7 @@ const transport = nodemailer.createTransport({
 
   });
 
-}, () => null, { scheduled: true });
+}, () => null);
 
 
 try {
