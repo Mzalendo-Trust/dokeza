@@ -1,0 +1,25 @@
+{
+  "name": "mztservice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bills_pdf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.9.7",
+    "lodash": "^4.17.20",
+    "node-cron": "^2.0.3",
+    "nodemailer": "^6.4.17",
+    "pg": "^8.5.1",
+    "puppeteer": "^5.5.0"
+  },
+  "pkg": {
+    "scripts": [],
+    "assets": [
+      "/reports/*.pdf"
+    ]
+  }
+}
