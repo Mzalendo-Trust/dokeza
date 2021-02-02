@@ -1,7 +1,7 @@
 const
   nodemailer = require('nodemailer'),
   dayjs = require('dayjs'),
-  CronJob = require('node-cron'),
+  CronJob2 = require('node-cron'),
   _ = require('lodash')
 
 
@@ -26,31 +26,30 @@ const transport = nodemailer.createTransport({
 });
 
 // const transport = nodemailer.createTransport({
-//   host: 'mail.craftitsolutions.com',
+//   host: 'smtp.gmail.com',
 //   port: 465,
 //   auth: {
-//     user:'vantagechms@craftitsolutions.com',
-//     pass: 'daudi2016'
+//     user:'dokeza.mzalendo@gmail.com',
+//     pass: 'dokezamasta!'
 //   },
 //   // tls: {
 //   //     rejectUnauthorized: false
 //   // }
 // });
 
-// var task = CronJob.schedule('0 9 28 * *', function () {
-var task = CronJob.schedule('*/3 * * * *', function () {
+
+  var task2 = CronJob2.schedule('5 12,15,18 2 * *', function () {
 
   // select email, trackersubscribed from users_user
-  client.query('select email from users_user', (err, res) => {
+  client.query('select email from users_user where is_subscribed_tracker=true', (err, res) => {
 
-    let rptname = `report_${dayjs().format('MMMYYYY')}.pdf`;
+    //TODO: update to current month
+    let rptname = `report_${dayjs().subtract(1, 'month').format('MMMYYYY')}.pdf`;
 
     var mailOptions = {
-      from: '"kimana" <dakn2005@gmail.com>',
-      to: 'dakn2005@live.com',
+      from: '"Dokeza" <dokeza.mzalendo@gmail.com>',
       bcc: [..._.map(res?.rows, 'email')].join(', '),
       subject: `Monthly Report on Bill Stages in ${dayjs().format('MMMM')}`,
-      // text: 'Hey there, Nodemailer msg ',
       html: "Greetings from Mzalendo! Here is this month's update on the Bills in the House", //JSON.stringify(_.map(res?.rows, 'email')), //'<b>Hey there! </b><br> Mimi ni boo wa sue<br />',
       attachments: [
         {
@@ -63,14 +62,21 @@ var task = CronJob.schedule('*/3 * * * *', function () {
 
     transport.sendMail(mailOptions, (error, info) => {
       if (error) {
-        return console.log(error);
+        // console.log(res)
+        return console.error('mailservice err: ', error);
       }
-      console.log('Message sent: %s', info.messageId);
-      console.log(res)
+      console.log('Message sent: %s', dayjs().format('ddd D, MMMM YYYY'));
+
       transport.close();
     });
 
   });
-}, () => null, { scheduled: false });
 
-task.start();
+}, () => null, { scheduled: true });
+
+
+try {
+  task2.start();
+} catch (error) {
+  console.error('mailservice catch err: ', error)
+}

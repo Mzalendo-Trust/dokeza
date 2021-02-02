@@ -15,5 +15,11 @@
     "nodemailer": "^6.4.17",
     "pg": "^8.5.1",
     "puppeteer": "^5.5.0"
+  },
+  "pkg": {
+    "scripts": [],
+    "assets": [
+      "/reports/*.pdf"
+    ]
   }
 }

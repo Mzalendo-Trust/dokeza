@@ -17,7 +17,8 @@ let printReport = async () => {
     const page = await browser.newPage();
 
     await page.setViewport({ width: 1024, height: 768, deviceScaleFactor: 1 });
-    await page.goto('http://django:8000/tracker/rifoti/' + dayjs().format('YYYY-MM'), {waitUntil: "load"});
+    //TODO: update to current month
+    await page.goto('http://django:8000/tracker/rifoti/' + dayjs().subtract(1, 'month').format('YYYY-MM'), { waitUntil: "load" });
     // await page.waitForNavigation({waitUntil: "load", timeout: 600000});
 
     var innerHeight = await page.evaluate(_ => { return window.innerHeight }),
@@ -45,19 +46,24 @@ let printReport = async () => {
         return document.body.clientHeight;
     });
 
-    // console.log(height);
-    let rptname = `report_${dayjs().format('MMMYYYY')}.pdf` //_${dayjs().unix()}
-    
+    //TODO: update to current month
+    let rptname = `report_${dayjs().subtract(1, 'month').format('MMMYYYY')}.pdf` //_${dayjs().unix()}
+
     await page.pdf({ path: `./reports/${rptname}`, width: "1280px", height: height + "px", printBackground: true });
     browser.close();
     console.log('Reporting service finished', dayjs().format('YYYY-MM-DD hh:mm:ss A'));
 }
 // )();
 
-var task = CronJob.schedule('*/2 * * * *', function () {
+var task = CronJob.schedule('1 12,15,18 2 * *', function () {
     console.log('Reporting service started', dayjs().format('YYYY-MM-DD hh:mm:ss A'));
     printReport();
-    
-}, () => null, { scheduled: false });
 
-task.start();
+});
+
+
+try {
+    task.start();
+} catch (error) {
+    console.error('tracker service catch err: ', error);
+}
