@@ -50,23 +50,6 @@ services:
     networks:
       - dokeza-network
 
-  trackerservice:
-    build:
-      context: ./tracker/reportservice
-      dockerfile: Dockerfile
-    image: dokeza_2_0_tracker_service
-    container_name: trackerservice
-    depends_on:
-      - postgres
-      - django
-      - mailhog
-    # volumes:
-    #   - tracker_reports:/app/reports
-    restart: always
-    networks:
-      - dokeza-network
-
-
   postgres:
     build:
       context: ./compose/production/postgres
