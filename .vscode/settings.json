@@ -4,6 +4,5 @@
     "python.linting.enabled": true,
     "terminal.integrated.fontSize": 11,
     // "terminal.integrated.fontFamily": "'inconsolata for powerline'",
-    "editor.fontSize": 11,
-    "python.pythonPath": "/Users/daudi/.virtualenvs/python3env-ZDAzBVqC/bin/python"
+    "editor.fontSize": 11
 }
