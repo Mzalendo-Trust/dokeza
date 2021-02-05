@@ -18,7 +18,7 @@ let printReport = async () => {
 
     await page.setViewport({ width: 1024, height: 768, deviceScaleFactor: 1 });
     //TODO: update to current month
-    await page.goto('http://django:8000/tracker/rifoti/' + dayjs().subtract(1, 'month').format('YYYY-MM'), { waitUntil: "load" });
+    await page.goto('http://django:8000/tracker/rifoti/' + dayjs().subtract(2, 'month').format('YYYY-MM'), { waitUntil: "load" });
     // await page.waitForNavigation({waitUntil: "load", timeout: 600000});
 
     var innerHeight = await page.evaluate(_ => { return window.innerHeight }),
@@ -47,7 +47,7 @@ let printReport = async () => {
     });
 
     //TODO: update to current month
-    let rptname = `Dokeza Tracking Report_${dayjs().subtract(1, 'month').format('MMMYYYY')}.pdf` //_${dayjs().unix()}
+    let rptname = `Dokeza Tracking Report_${dayjs().subtract(2, 'month').format('MMMYYYY')}.pdf` //_${dayjs().unix()}
 
     await page.pdf({ path: `./reports/${rptname}`, width: "1280px", height: height + "px", printBackground: true });
     browser.close();
