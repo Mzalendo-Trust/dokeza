@@ -38,7 +38,7 @@ const transport = nodemailer.createTransport({
   // }
 });
 
-var task2 = CronJob2.schedule('5 18,9 2,3,4,5,6 * *', function () {
+var task2 = CronJob2.schedule('5 18,9 * * *', function () {
 
   // select email, trackersubscribed from users_user
   client.query('select email from users_user where is_subscribed_tracker=true', (err, res) => {

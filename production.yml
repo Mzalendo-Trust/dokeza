@@ -90,9 +90,6 @@ services:
     depends_on:
       - postgres
       - django
-      - mailhog
-    # volumes:
-    #   - tracker_reports:/app/reports
     restart: always
     networks:
       - dokeza-network

@@ -23,7 +23,7 @@ services:
       - postgres
       - mailhog
     volumes:
-      -  .:/app:z
+      - .:/app:z
     env_file:
       - ./.envs/.local/.django
       - ./.envs/.local/.postgres
@@ -33,7 +33,7 @@ services:
     restart: always
     networks:
       - dokeza-network
-  
+
   trackerservice:
     build:
       context: ./tracker/reportservice
@@ -175,7 +175,6 @@ services:
     restart: always
     networks:
       - dokeza-network
-  
   # docs:
   #   image: dokeza_2_0_local_docs
   #   container_name: docs
