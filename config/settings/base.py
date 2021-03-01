@@ -91,7 +91,6 @@ LOCAL_APPS = [
     # Your stuff: custom apps go here
     'annotator',
     'bills',
-    'highlights',
     'tracker',
     'comments',
     'ideas.apps.IdeasConfig',
@@ -281,7 +280,7 @@ LOGGING = {
 # Broken link settings.
 IGNORABLE_404_URLS = [
     re.compile(r'\.(php|cgi)$'),
-    re.compile(r'^/phpmyadmin/'),
+    re.compile(r'^.*phpmyadmin.*'),
     re.compile(r'^/apple-touch-icon.*\.png$'),
     re.compile(r'^/favicon\.ico$'),
     re.compile(r'^/robots\.txt$'),
@@ -297,6 +296,17 @@ IGNORABLE_404_URLS = [
     re.compile(r'.*/web-console/'),
     re.compile(r'.*/jmx-console/'),
     re.compile(r'.*/HNAP1/'),
+    re.compile(r'.*_ignition.*'),
+    re.compile(r'.*txt.*'),
+    re.compile(r'.*users.*'),
+    re.compile(r'.*config.json.*'),
+    re.compile(r'.*sql.*'),
+    re.compile(r'.*manager.*'),
+    re.compile(r'.*jenkins.*'),
+    re.compile(r'.*MySQL.*'),
+    re.compile(r'.*dump.*'),
+    re.compile(r'.*manager.*'),
+    re.compile(r'.*public-participation.*'),
 ]
 # SEND_BROKEN_LINK_EMAILS = False
 
