@@ -37,7 +37,8 @@ class HomeView(TemplateView):
         context['news'] = Post.objects.all().filter(draft=False).order_by('-publish')
         context['memoranda'] = Memorandum.objects.all().order_by('-deadline')
         context['page'] = 'home'
-        context['stingo'] = 'latest'
+        context['stingo'] = 'latest'  
+
         return context
 
 

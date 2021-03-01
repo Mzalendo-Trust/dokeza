@@ -2,7 +2,7 @@
 # ------------------------------------------------------------------------------
 USE_DOCKER=yes
 
-DJANGO_ALLOWED_HOSTS=[.localhost,0.0.0.0,127.0.0.1,192.168.100.82,.django
+DJANGO_ALLOWED_HOSTS=localhost,0.0.0.0,127.0.0.1,192.168.100.82,django
 
 IPYTHONDIR=/app/.ipython
 # Redis

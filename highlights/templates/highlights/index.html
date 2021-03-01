@@ -1,0 +1,21 @@
+{% extends "_layouts/base.html" %}
+{% load static %}
+
+{% block sub-navigation %}
+<div class="dz-sub-navigation">
+    <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+        {% include '_partials/sub-navigation/home.html' %}
+    </nav>
+</div>
+{% endblock sub-navigation %}
+
+{% block content %}
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="hRoot" style='width: 100%'></div>
+{% endblock content%}
+
+{% block docserverjs %}
+<link title="timeline-styles" rel="stylesheet" href="{% static 'highlights/assets/css/timeline.css' %}" />
+<script src="{% static 'highlights/assets/js/timeline.js' %}"></script>
+<script src="{% static 'highlights/build/bundle.js' %}"></script>
+{% endblock docserverjs %}

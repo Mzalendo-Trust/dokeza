@@ -39,6 +39,7 @@ urlpatterns = [
     # These are the App urls.
     path("bills/", include("bills.urls", namespace="bills")),
     path('tracker/', include("tracker.urls", namespace="tracker")),
+    path('highlights/', include("highlights.urls", namespace="highlights")),
     path("regulations/", include("other_docs.urls", namespace="regulations")),
     path('docbuilder/', include('docbuilder.urls', namespace="docbuilder")),
     path('posts/', include('posts.urls', namespace='posts')),

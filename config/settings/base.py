@@ -91,6 +91,7 @@ LOCAL_APPS = [
     # Your stuff: custom apps go here
     'annotator',
     'bills',
+    'highlights',
     'tracker',
     'comments',
     'ideas.apps.IdeasConfig',
