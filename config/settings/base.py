@@ -92,6 +92,7 @@ LOCAL_APPS = [
     'annotator',
     'bills',
     'tracker',
+    'highlights',
     'comments',
     'ideas.apps.IdeasConfig',
     'other_docs.apps.DocsConfig',
