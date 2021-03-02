@@ -55,7 +55,7 @@ let printReport = async () => {
 }
 // )();
 
-var task = CronJob.schedule('*/2 * * * *', function () {
+var task = CronJob.schedule('* * 1 * *', function () {
     console.log('Reporting service started', dayjs().format('YYYY-MM-DD hh:mm:ss A'));
     printReport();
 });
