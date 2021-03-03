@@ -270,6 +270,8 @@ tags
 
 dokeza_2_0/media/
 
+media/timeline
+
 .pytest_cache/
 
 app_data/*

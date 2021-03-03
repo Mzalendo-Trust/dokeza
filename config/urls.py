@@ -65,6 +65,7 @@ urlpatterns += [
     # path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
     path('api/bills/', include('bills.api.urls', namespace='bills-api')),
     path('api/tracker/', include('tracker.api.urls', namespace='tracker-api')),
+    path('api/highlights/', include('highlights.api.urls', namespace='highlights-api')),
     # path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
     # path('api/comments/', include('comments.api.urls', namespace='comments-api')),
     path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))

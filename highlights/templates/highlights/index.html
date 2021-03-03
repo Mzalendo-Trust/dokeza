@@ -1,6 +1,15 @@
 {% extends "_layouts/base.html" %}
 {% load static %}
 
+{% block extra_js %}
+<meta name="csrf-token" content="{{ csrf_token }}">
+<script>
+    let usr = '{{ request.user }}';
+    if (usr == 'AnonymousUser') sessionStorage['uemail'] = '';
+    else sessionStorage['uemail'] = '{{ request.user.email }}';
+</script>
+{% endblock extra_js %}
+
 {% block sub-navigation %}
 <div class="dz-sub-navigation">
     <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
