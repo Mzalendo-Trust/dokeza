@@ -9,12 +9,10 @@ import six
 import uuid
 import imghdr
 
-class TimelineSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Timeline
-        fields = ('title', 'uuid', 'data')
-        # fields='__all__'
-
+# class TimelineImagesViewSerializer(serializers.ModelSerializer):
+#     class Meta:
+#         model = TimelineImage
+#         fields = ('name', 'image')
 
 class Base64ImageField(serializers.ImageField):
     def to_internal_value(self, data):
@@ -58,4 +56,12 @@ class TimelineImageSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = TimelineImage
-        fields = ('image','name')
+        fields = ('image', 'name')
+
+
+class TimelineSerializer(serializers.ModelSerializer):
+    timelineimages = TimelineImageSerializer(many=True, read_only=True)
+    class Meta:
+        model = Timeline
+        fields = ('title', 'uuid', 'data', 'timelineimages')
+        # fields='__all__'

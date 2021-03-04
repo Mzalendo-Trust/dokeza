@@ -13,7 +13,10 @@
 {% block sub-navigation %}
 <div class="dz-sub-navigation">
     <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
-        {% include '_partials/sub-navigation/home.html' %}
+        {% if user.is_staff %}
+        <a id="bill_list" class="subnav-link {% if upath == 'add' %} active {% endif %}" href="/tracker/add">Add</a>
+        {% endif %}
+        <a id="assembly_list" class="subnav-link {% if upath == 'view' %} active {% endif %}" href="/tracker/">View</a>
     </nav>
 </div>
 {% endblock sub-navigation %}

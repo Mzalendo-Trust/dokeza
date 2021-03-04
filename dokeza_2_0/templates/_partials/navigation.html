@@ -60,6 +60,9 @@
 <div class="dz-navbar collapse navbar-collapse" id="navbarSupportedContent">
   <div class="nav-buttons">
     <a class="nav-link long-navs {% if page == 'how_to' %}active{% endif %}" href="{% url 'how_to' %}">How to Use Dokeza</a>
+    {% if user.is_staff %}
+    <a class="nav-link long-navs {% if page == 'highlights' %}active{% endif %}" href="/highlights/form">Highlights</a>
+    {% endif %}
     <a class="nav-link {% if page == 'bills' %}active{% endif %}" href="{% url 'bills:list' %}">Bills</a>
     <a class="nav-link {% if page == 'tracker' %}active{% endif %}" href="{% url 'tracker:index' %}">Tracker</a>
     <a class="nav-link long-navs {% if page == 'regulations' %}sub-active{% endif %}" href="{% url 'other_docs:list' %}">Regulations</a>
