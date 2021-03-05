@@ -1,7 +1,6 @@
 {% block sub-navigation %}
 <span class="subnav-link">HOME &nbsp;&nbsp; >></span>
-{{stingo}}
-<a class="nav-link {% if stingo == 'highlights' %}active{% endif %}" href="{% url 'highlights:index' %}">Highlights</a>
+<a class="nav-link {% if stingo == 'highlights' %}active{% endif %}" href="/highlights/timeline">Highlights</a>
 <a class="subnav-link {% if stingo == 'latest' %} active {% endif %}" href="{% url 'home' %}">Latest</a>
 <a class="subnav-link {% if stingo == 'news' %} active {% endif %}" href="{% url 'posts:list' %}">Analysis</a>
 {% endblock sub-navigation %}

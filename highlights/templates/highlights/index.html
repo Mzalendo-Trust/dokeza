@@ -14,9 +14,16 @@
 <div class="dz-sub-navigation">
     <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
         {% if user.is_staff %}
-        <a id="bill_list" class="subnav-link {% if upath == 'add' %} active {% endif %}" href="/tracker/add">Add</a>
+        <a id="bill_list" class="subnav-link" href="/highlights/form">Add</a>
+        <a id="assembly_list" class="subnav-link" href="#">View</a>
+        <a id="bill_list" class="subnav-link" href="/highlights/timeline">Timeline</a>
+        {% else %}
+        <span class="subnav-link">HOME &nbsp;&nbsp; >></span>
+        <a class="subnav-link {% if stingo == 'timeline' %} active {% endif %}"
+            href="/highlights/timeline">Highlights</a>
+        <a class="subnav-link {% if stingo == 'latest' %} active {% endif %}" href="{% url 'home' %}">Latest</a>
+        <a class="subnav-link {% if stingo == 'news' %} active {% endif %}" href="{% url 'posts:list' %}">Analysis</a>
         {% endif %}
-        <a id="assembly_list" class="subnav-link {% if upath == 'view' %} active {% endif %}" href="/tracker/">View</a>
     </nav>
 </div>
 {% endblock sub-navigation %}
@@ -27,7 +34,15 @@
 {% endblock content%}
 
 {% block docserverjs %}
+<link rel='stylesheet' href="{% static 'highlights/build/bundle.css' %}">
 <link title="timeline-styles" rel="stylesheet" href="{% static 'highlights/assets/css/timeline.css' %}" />
+
 <script src="{% static 'highlights/assets/js/timeline.js' %}"></script>
 <script src="{% static 'highlights/build/bundle.js' %}"></script>
+
+<style>
+    .tl-attribution{
+        display:none;
+    }
+</style>
 {% endblock docserverjs %}
