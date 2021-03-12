@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils.timezone import datetime
+from django.conf import settings
 import uuid
 
 
@@ -7,7 +8,8 @@ class Timeline(models.Model):
     title = models.CharField(max_length=100)
     uuid = models.UUIDField(unique=True, default=uuid.uuid4)
     data = models.JSONField()
-    # createdby = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
+    is_highlighted = models.BooleanField(default=False);
+    createdby = models.ForeignKey(settings.AUTH_USER_MODEL, default=1, on_delete=models.CASCADE)
     createdon = models.DateTimeField(default=datetime.today())
 
     def __str__(self):

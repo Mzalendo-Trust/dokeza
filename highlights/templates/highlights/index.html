@@ -14,8 +14,9 @@
 <div class="dz-sub-navigation">
     <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
         {% if user.is_staff %}
+        <!-- {{stingo}} -->
         <a id="bill_list" class="subnav-link" href="/highlights/form">Add</a>
-        <a id="assembly_list" class="subnav-link" href="#">View</a>
+        <a id="assembly_list" class="subnav-link" href="/highlights/view">View</a>
         <a id="bill_list" class="subnav-link" href="/highlights/timeline">Timeline</a>
         {% else %}
         <span class="subnav-link">HOME &nbsp;&nbsp; >></span>
