@@ -63,5 +63,5 @@ class TimelineSerializer(serializers.ModelSerializer):
     timelineimages = TimelineImageSerializer(many=True, read_only=True)
     class Meta:
         model = Timeline
-        fields = ('title', 'uuid', 'data', 'timelineimages')
+        fields = ('title', 'uuid', 'data', 'timelineimages', 'is_highlighted')
         # fields='__all__'

@@ -44,10 +44,12 @@ class TimelineUpdateVIew(APIView):
             raise Http404
 
     def put(self, request, uuid, format=None):
+        images = request.data.pop('files')
+
         timeline = self.get_object(uuid)
         serializer = TimelineSerializer(timeline, data=request.data)
         serializer.is_valid(raise_exception=True)
-
+        
         # if serializer.is_valid():
         #     serializer.save()
 
@@ -133,4 +135,4 @@ class TimelineDeleteAPIView(DestroyAPIView):
     queryset = Timeline.objects.all()
     serializer_class = TimelineSerializer
     lookup_field = 'uuid'
-    permission_classes = [IsAuthenticated]
+    permission_classes = [AllowAny]
