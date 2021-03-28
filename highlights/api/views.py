@@ -35,7 +35,7 @@ class TimelineListAPIView(ListAPIView):
 
 
 class TimelineUpdateVIew(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def get_object(self, uuid):
         try:
@@ -67,7 +67,7 @@ class TimelineUpdateVIew(APIView):
 
 
 class HighlightedUpdateVIew(APIView):
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def put(self, request, uuid, format=None):
         Timeline.objects.update(is_highlighted=False)
@@ -75,9 +75,10 @@ class HighlightedUpdateVIew(APIView):
 
         return Response(request.data, status=status.HTTP_200_OK)
 
+
 class TimelineListOneAPIView(ListAPIView):
     serializer_class = TimelineSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
     lookup_url_kwarg = 'uuid'
 
     def get_queryset(self, *args, **kwargs):
@@ -103,7 +104,7 @@ class TimelineListOneAPIView(ListAPIView):
 class TimelineCreateAPIView(CreateAPIView):
     queryset = Timeline.objects.all()
     serializer_class = TimelineSerializer
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
 
     def create(self, request, *args, **kwargs):
         images = request.data.pop('files')
@@ -135,4 +136,4 @@ class TimelineDeleteAPIView(DestroyAPIView):
     queryset = Timeline.objects.all()
     serializer_class = TimelineSerializer
     lookup_field = 'uuid'
-    permission_classes = [AllowAny]
+    permission_classes = [IsAuthenticated]
