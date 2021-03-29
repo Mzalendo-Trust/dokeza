@@ -296,7 +296,7 @@ IGNORABLE_404_URLS = [
     re.compile(r'.*/Autodiscover/'),
     re.compile(r'.*/web-console/'),
     re.compile(r'.*/jmx-console/'),
-    re.compile(r'.*/HNAP1/'),
+    re.compile(r'.*HNAP1.*'),
     re.compile(r'.*_ignition.*'),
     re.compile(r'.*txt.*'),
     re.compile(r'.*users.*'),
@@ -308,6 +308,12 @@ IGNORABLE_404_URLS = [
     re.compile(r'.*dump.*'),
     re.compile(r'.*manager.*'),
     re.compile(r'.*public-participation.*'),
+    re.compile(r'.*solr.*'),
+    re.compile(r'.*webfig.*'),
+    re.compile(r'.*console.*'),
+    re.compile(r'^/login$'),
+    re.compile(r'.*currentsetting.*'),
+
 ]
 # SEND_BROKEN_LINK_EMAILS = False
 
