@@ -2,7 +2,8 @@ const
   nodemailer = require('nodemailer'),
   dayjs = require('dayjs'),
   CronJob2 = require('node-cron'),
-  _ = require('lodash')
+  _ = require('lodash'),
+  sgTransport = require('nodemailer-sendgrid-transport')
 
 
 //// db connect
@@ -26,28 +27,41 @@ client.connect();
 //   }
 // });
 
-const transport = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 465,
-  auth: {
-    user: 'dokeza.mzalendo@gmail.com',
-    pass: 'dokezamasta!'
-  },
-  // tls: {
-  //     rejectUnauthorized: false
-  // }
-});
+// const transport = nodemailer.createTransport({
+//   host: 'smtp.gmail.com',
+//   port: 465,
+//   auth: {
+//     user: 'dokeza.mzalendo@gmail.com',
+//     pass: 'dokezamasta!'
+//   },
+//   // tls: {
+//   //     rejectUnauthorized: false
+//   // }
+// });
 
-var task2 = CronJob2.schedule('* * 1 * *', function () {
+var options = {
+  auth: {
+      api_key: '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'
+  }
+}
+var transport = nodemailer.createTransport(sgTransport(options));
+
+var task2 = CronJob2.schedule('30 7 1 * *', function () {
 
   // select email, trackersubscribed from users_user
   client.query('select email from users_user where is_subscribed_tracker=true', (err, res) => {
+    
+    let dateObj = dayjs().subtract(1, 'month')
+    let rptdate = dateObj.format('MMMM YYYY')
 
     //TODO: update to current month
-    let rptname = `Dokeza Tracking Report_${dayjs().subtract(2, 'month').format('MMMYYYY')}.pdf`;
+    let rptname = `Dokeza Tracking Report-${rptdate}.pdf`;
+
+    console.log(res?.rows)
 
     var mailOptions = {
       from: '"Dokeza" <dokeza.mzalendo@gmail.com>',
+      to: 'dokeza.mzalendo@gmail.com',
       bcc: [..._.map(res?.rows, 'email')].join(', '),
       subject: `Monthly Report on Bill Stages in ${dayjs().format('MMMM')}`,
       html: "Greetings from Mzalendo! Here is this month's update on the Bills in the House", //JSON.stringify(_.map(res?.rows, 'email')), //'<b>Hey there! </b><br> Mimi ni boo wa sue<br />',

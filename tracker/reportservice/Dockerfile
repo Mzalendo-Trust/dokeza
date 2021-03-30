@@ -11,7 +11,9 @@ RUN apk add --no-cache \
     freetype-dev \
     harfbuzz \
     ca-certificates \
-    ttf-freefont
+    ttf-freefont \
+    nano \
+    fish
 
 WORKDIR /app
 
