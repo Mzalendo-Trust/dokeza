@@ -148,7 +148,7 @@ class MemorandumListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(MemorandumListView, self).get_context_data(**kwargs)
         memoranda = Memorandum.objects.all()
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "memoranda"
         context["memoranda"] = memoranda
         return context
@@ -169,7 +169,7 @@ class MemorandumDisplayView(HitCountDetailView):
         }
         context["comment_form"] = CommentForm(initial=initial_data)
         context["comments"] = comments
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "memoranda"
         return context
 
@@ -235,7 +235,7 @@ class PetitionListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(PetitionListView, self).get_context_data(**kwargs)
         petitions = Petition.objects.filter(draft=False)
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "petitions"
         context["petitions"] = petitions
         return context
@@ -256,7 +256,7 @@ class PetitionDisplayView(HitCountDetailView):
         }
         context["comment_form"] = CommentForm(initial=initial_data)
         context["comments"] = comments
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "petitions"
         return context
 

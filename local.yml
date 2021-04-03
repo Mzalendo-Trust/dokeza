@@ -4,9 +4,6 @@ volumes:
   local_postgres_data: {}
   local_postgres_data_backups: {}
   documentserver_postgresql_data: {}
-  # tracker_reports:
-  # dokeza_vers_2:
-  #   external: true
 
 networks:
   dokeza-network:
@@ -44,8 +41,6 @@ services:
       - postgres
       - django
       - mailhog
-    # volumes:
-    #   - tracker_reports:/app/reports
     restart: always
     networks:
       - dokeza-network
@@ -177,7 +172,7 @@ services:
       - dokeza-network
   # docs:
   #   image: dokeza_2_0_local_docs
-  #   container_name: docs
+  #   container_name: dokeza_docs
   #   build:
   #     context: .
   #     dockerfile: ./compose/local/docs/Dockerfile
@@ -189,3 +184,4 @@ services:
   #     - ./dokeza_2_0:/app/dokeza_2_0:z
   #   ports:
   #     - "7000:7000"
+  #   command: /start-docs

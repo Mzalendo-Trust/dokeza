@@ -94,12 +94,12 @@ class ContactView(TemplateView):
 
 
 class ResourcesView(TemplateView):
-    template_name = 'public_participation/memoranda_list.html'
+    template_name = 'other_docs/resources_list.html'
 
     def get_context_data(self, **kwargs):
         context = super(ResourcesView, self).get_context_data(**kwargs)
         context['page'] = 'resources'
-        context['stingo'] = 'memoranda'
+        context['stingo'] = 'all'
         return context
 
 
@@ -114,7 +114,7 @@ class AboutView(TemplateView):
 
 
 class CalendarView(TemplateView):
-    template_name = 'public_participation/public_list.html'
+    template_name = 'events/list.html'
 
     def get_context_data(self, *args, **kwargs):
         """Listing of days in `month`."""

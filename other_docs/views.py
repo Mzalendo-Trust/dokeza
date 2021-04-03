@@ -67,10 +67,8 @@ class DocDetailView(DetailView):
             href = '<a href="#' + anchor.attrs['id'] + '">' + anchor.attrs['name'] + '</a>'
             toc.append('<li>' + href + '</li>')
 
-        context["page"] = 'other_docs'
+        context["page"] = 'regulations'
         context["stingo"] = 'all'
-        context["doc_annotations"] = doc_annotations
-        context['my_annotations'] = my_annotations
         context["toc"] = toc
         context["comment_form"] = CommentForm(initial=initial_data)
         context["comment_annot_form"] = AnnotCommentForm(initial=initial_annot_data)
