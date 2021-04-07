@@ -142,6 +142,7 @@ def getStoredFiles(req):
     for f in files:
         if os.path.isfile(os.path.join(directory, f)):
             fileInfos.append({ 'type': fileUtils.getFileType(f), 'title': f, 'url': getFileUri(f, req) })
+    print('fileInfos -', fileInfos)
     return fileInfos
 
 def createFile(stream, path, req = None, meta = False):
