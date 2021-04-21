@@ -315,7 +315,7 @@ IGNORABLE_404_URLS = [
     re.compile(r'.*currentsetting.*'),
 
 ]
-# SEND_BROKEN_LINK_EMAILS = False
+SEND_BROKEN_LINK_EMAILS = False
 
 
 # Celery
@@ -350,6 +350,9 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
+ACCOUNT_USER_DISPLAY = 'email'
+ACCOUNT_USER_MODEL_USERNAME_FIELD = 'email'
+ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Hello from Dokeza '
 ACCOUNT_ADAPTER = "dokeza_2_0.users.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "dokeza_2_0.users.adapters.SocialAccountAdapter"
 
