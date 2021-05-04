@@ -107,6 +107,7 @@ class BillDetailView(DetailView):
         
         user = self.request.user
         if user.is_anonymous:
+            user.first_name = 'Mgeni'
             edMode = 'review'
             mode = 'view'
         else:

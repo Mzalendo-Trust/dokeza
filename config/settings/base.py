@@ -376,6 +376,9 @@ CORS_URLS_REGEX = r"^/api/.*$"
 # Your stuff...
 # ------------------------------------------------------------------------------
 
+# Added with Django 3.2 LTS
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
+
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
         'dokeza_2_0.token_handler.jwt_response_payload_handler',
@@ -444,7 +447,6 @@ CKEDITOR_CONFIGS = {
 
 
 # Document Server Settings
-
 FILE_SIZE_MAX = 5242880
 
 DOC_SERV_VIEWED = [".djvu", ".xps"]
