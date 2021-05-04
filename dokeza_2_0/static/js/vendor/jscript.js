@@ -35,10 +35,7 @@ if (typeof jQuery !== "undefined") {
                 jq(".done").removeClass("done");
                 jq(".current").removeClass("current");
                 jq("#step1").addClass("current");
-                jq("#mainProgress .error-message")
-                    .hide()
-                    .find("span")
-                    .text("");
+                jq("#mainProgress .error-message").hide().find("span").text("");
                 jq("#mainProgress").removeClass("embedded");
 
                 jq.blockUI({
@@ -79,9 +76,7 @@ if (typeof jQuery !== "undefined") {
 
                 jq("#hiddenFileName").val(response.filename);
 
-                jq("#step1")
-                    .addClass("done")
-                    .removeClass("current");
+                jq("#step1").addClass("done").removeClass("current");
                 jq("#step2").addClass("current");
 
                 checkConvert();
@@ -104,12 +99,7 @@ if (typeof jQuery !== "undefined") {
         var fileName = jq("#hiddenFileName").val();
         var posExt = fileName.lastIndexOf(".");
         posExt =
-            0 <= posExt
-                ? fileName
-                      .substring(posExt)
-                      .trim()
-                      .toLowerCase()
-                : "";
+            0 <= posExt ? fileName.substring(posExt).trim().toLowerCase() : "";
 
         if (ConverExtList.indexOf(posExt) === -1) {
             loadScripts();
@@ -157,9 +147,7 @@ if (typeof jQuery !== "undefined") {
         if (!jq("#mainProgress").is(":visible")) {
             return;
         }
-        jq("#step2")
-            .addClass("done")
-            .removeClass("current");
+        jq("#step2").addClass("done").removeClass("current");
         jq("#step3").addClass("current");
 
         if (jq("#loadScripts").is(":empty")) {
@@ -178,20 +166,13 @@ if (typeof jQuery !== "undefined") {
         if (!jq("#mainProgress").is(":visible")) {
             return;
         }
-        jq("#step3")
-            .addClass("done")
-            .removeClass("current");
+        jq("#step3").addClass("done").removeClass("current");
         jq("#beginView, #beginEmbedded").removeClass("disable");
 
         var fileName = jq("#hiddenFileName").val();
         var posExt = fileName.lastIndexOf(".");
         posExt =
-            0 <= posExt
-                ? fileName
-                      .substring(posExt)
-                      .trim()
-                      .toLowerCase()
-                : "";
+            0 <= posExt ? fileName.substring(posExt).trim().toLowerCase() : "";
 
         if (EditedExtList.indexOf(posExt) !== -1) {
             jq("#beginEdit").removeClass("disable");

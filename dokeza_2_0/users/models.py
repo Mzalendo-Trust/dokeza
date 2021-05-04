@@ -17,6 +17,7 @@ class User(AbstractUser):
     first_name = models.CharField(_('first name'), max_length=30)
     last_name = models.CharField(_('last name'), max_length=30)
     email = models.EmailField(_('email address'), unique=True)
+    is_subscribed_tracker = models.BooleanField(_('Subscribe to monthly Bill Tracking?'), default=False)
 
     def __str__(self):
         if self.get_full_name():
@@ -81,7 +82,8 @@ class Profile(models.Model):
     county_residence = models.PositiveSmallIntegerField(
         _('County of Residence'), choices=KENYAN_COUNTIES, default=5)
     country = CountryField(default='KE', help_text=_('If you are in the Diaspora, what country are you in?'))
-    county_interest = models.PositiveSmallIntegerField(_('County of Interest'), choices=KENYAN_COUNTIES, blank=True, null=True, help_text=_('Many Kenyans live in one county and are interested in another.'))
+    county_interest = models.PositiveSmallIntegerField(_('County of Interest'), choices=KENYAN_COUNTIES, blank=True, null=True, help_text=_(
+        'Many Kenyans live in one county and are interested in another.'))
     # These setting will appear in the Admin, not in the Signup page
     institution = models.ForeignKey(Institution, blank=True, null=True, on_delete=models.CASCADE)
     is_editor = models.BooleanField(
@@ -109,7 +111,8 @@ class Profile(models.Model):
     twitter = models.URLField(blank=True, null=True)
     # User Mobile Contacts
     mobile = models.PositiveIntegerField(blank=True, null=True, help_text=_('Your local mobile number'))
-    view_contacts = models.BooleanField(_('Mobile contacts'), default=False, help_text=_('Set this to allow others to see your contacts.'))
+    view_contacts = models.BooleanField(_('Mobile contacts'), default=False,
+                                        help_text=_('Set this to allow others to see your contacts.'))
 
     objects = ProfileManager()
 

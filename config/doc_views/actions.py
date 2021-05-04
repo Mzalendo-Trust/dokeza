@@ -187,7 +187,7 @@ def edit(request):
 @csrf_exempt
 def track(request):
     filename = request.GET['filename']
-    print("track - ", request)
+    print("uDoc track - ", request)
     usAddr = request.GET['userAddress']
     response = {}
     

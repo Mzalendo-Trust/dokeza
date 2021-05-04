@@ -3,7 +3,7 @@ Base settings to build other settings files upon.
 """
 from pathlib import Path
 
-import os
+import re
 import environ
 import datetime
 
@@ -89,9 +89,9 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "dokeza_2_0.users.apps.UsersConfig",
     # Your stuff: custom apps go here
-    'annotator',
     'bills',
-    'comments',
+    'tracker',
+    'highlights',
     'ideas.apps.IdeasConfig',
     'other_docs.apps.DocsConfig',
     'posts',
@@ -145,8 +145,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -247,7 +247,7 @@ EMAIL_TIMEOUT = 5
 # Django Admin URL.
 ADMIN_URL = "admin/"
 # https://docs.djangoproject.com/en/dev/ref/settings/#admins
-ADMINS = [("Jimmy Gitonga", "jimmy@ra.co.ke"), ("Njuguna Gathere", "njuguna@ra.co.ke")]
+ADMINS = [("Jimmy Gitonga", "jimmy@ra.co.ke"), ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#managers
 MANAGERS = ADMINS
 
@@ -274,6 +274,47 @@ LOGGING = {
     },
     "root": {"level": "INFO", "handlers": ["console"]},
 }
+
+
+# Broken link settings.
+IGNORABLE_404_URLS = [
+    re.compile(r'\.(php|cgi)$'),
+    re.compile(r'^.*phpmyadmin.*'),
+    re.compile(r'^/apple-touch-icon.*\.png$'),
+    re.compile(r'^/favicon\.ico$'),
+    re.compile(r'^/robots\.txt$'),
+    re.compile(r'^/console/'),
+    re.compile(r'.*/wp-content/'),
+    re.compile(r'^/api/*'),
+    re.compile(r'\.api$'),
+    re.compile(r'^/jars'),
+    re.compile(r'.*/wp-admin/'),
+    re.compile(r'.*/web-apps/.*'),
+    re.compile(r'.*/phpunit.*'),
+    re.compile(r'.*/Autodiscover/'),
+    re.compile(r'.*/web-console/'),
+    re.compile(r'.*/jmx-console/'),
+    re.compile(r'.*HNAP1.*'),
+    re.compile(r'.*_ignition.*'),
+    re.compile(r'.*txt.*'),
+    re.compile(r'.*users.*'),
+    re.compile(r'.*config.json.*'),
+    re.compile(r'.*sql.*'),
+    re.compile(r'.*manager.*'),
+    re.compile(r'.*jenkins.*'),
+    re.compile(r'.*MySQL.*'),
+    re.compile(r'.*dump.*'),
+    re.compile(r'.*manager.*'),
+    re.compile(r'.*public-participation.*'),
+    re.compile(r'.*solr.*'),
+    re.compile(r'.*webfig.*'),
+    re.compile(r'.*console.*'),
+    re.compile(r'^/login$'),
+    re.compile(r'.*currentsetting.*'),
+    re.compile(r'.*nodestatus.*'),
+]
+SEND_BROKEN_LINK_EMAILS = False
+
 
 # Celery
 # ------------------------------------------------------------------------------
@@ -379,8 +420,7 @@ CKEDITOR_CONFIGS = {
             ['Styles', 'Format'],
         ],
         'uiColor': '#a8d0b4',
-        'extraPlugins': 'scayt',
-        'extraPlugins': 'codesnippet',
+        'extraPlugins': ['scayt', 'codesnippet'],
         'extraAllowedContent': 'div[*]',
     },
     'front_ckeditor': {

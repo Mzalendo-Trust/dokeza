@@ -4,8 +4,6 @@ from rest_framework.serializers import ModelSerializer, HyperlinkedIdentityField
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 # from dokeza_2_0.users.api.serializers import UserDetailSerializer
-from comments.api.serializers import CommentSerializer
-from comments.models import Comment
 
 from bills.models import Bill
 
@@ -32,8 +30,6 @@ class BillCreateUpdateSerializer(ModelSerializer):
 class BillDetailSerializer(ModelSerializer):
     # owner = UserDetailSerializer(read_only=True)
     word_doc = SerializerMethodField()
-    comments = SerializerMethodField()
-    # delete_url = bill_delete_url
 
     class Meta:
         model = Bill
@@ -44,7 +40,6 @@ class BillDetailSerializer(ModelSerializer):
             'word_doc',
             'body',
             'created',
-            'comments',
             # 'timestamp',
             # 'delete_url',
         ]
@@ -59,15 +54,10 @@ class BillDetailSerializer(ModelSerializer):
             word_doc = None
         return word_doc
 
-    def get_comments(self, obj):
-        c_qs = Comment.objects.filter_by_instance(obj)
-        comments = CommentSerializer(c_qs, many=True).data
-        return comments
-
 
 class BillListSerializer(ModelSerializer):
-    authentication_classes = [BasicAuthentication, SessionAuthentication]
-    permission_classes = [permissions.IsAuthenticated, ]
+    # authentication_classes = [BasicAuthentication, SessionAuthentication]
+    # permission_classes = [permissions.AllowAny, ]
     url = bill_detail_url
     # user = UserDetailSerializer(read_only=True)
 

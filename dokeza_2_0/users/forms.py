@@ -8,6 +8,13 @@ User = get_user_model()
 class UserChangeForm(forms.UserChangeForm):
     class Meta(forms.UserChangeForm.Meta):
         model = User
+        fields = ['first_name', 'last_name', 'email', 'is_subscribed_tracker']
+        labels={
+            'first_name': 'First Name',
+            'last_name': 'last_name',
+            'email': 'Email Address',
+            'is_subscribed_tracker': 'Subscribe to monthly Bill Tracking?'
+        }
 
 
 class UserCreationForm(forms.UserCreationForm):
@@ -18,6 +25,13 @@ class UserCreationForm(forms.UserCreationForm):
 
     class Meta(forms.UserCreationForm.Meta):
         model = User
+        fields = ['first_name', 'last_name', 'email', 'is_subscribed_tracker']
+        labels={
+            'first_name': 'First Name',
+            'last_name': 'last_name',
+            'email': 'Email Address',
+            'is_subscribed_tracker': 'Subscribe to monthly Bill Tracking?'
+        }
 
     def clean_username(self):
         username = self.cleaned_data["username"]

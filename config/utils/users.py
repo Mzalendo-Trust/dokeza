@@ -43,7 +43,8 @@ def getNameFromReq(req):
     current_user = req.user
 
     if current_user == DEFAULT_USER:
-        return 'mgeni'
+        current_user.first_name == 'mgeni'
+        return current_user.first_name
     elif current_user.first_name:
         return f'{current_user.first_name}{current_user.last_name}'
     else:

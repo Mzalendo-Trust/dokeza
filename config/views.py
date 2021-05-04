@@ -21,10 +21,6 @@ class JSONResponse(HttpResponse):
         content = JSONRenderer().render(data)
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
-
-
-def Root(request):
-    return JSONResponse({"name": "The Dokeza Annotation Store.", "version": "0.1.0"})
     
 
 class HomeView(TemplateView):
@@ -37,7 +33,8 @@ class HomeView(TemplateView):
         context['news'] = Post.objects.all().filter(draft=False).order_by('-publish')
         context['memoranda'] = Memorandum.objects.all().order_by('-deadline')
         context['page'] = 'home'
-        context['stingo'] = 'latest'
+        context['stingo'] = 'latest'  
+
         return context
 
 
@@ -93,12 +90,12 @@ class ContactView(TemplateView):
 
 
 class ResourcesView(TemplateView):
-    template_name = 'public_participation/memoranda_list.html'
+    template_name = 'other_docs/resources_list.html'
 
     def get_context_data(self, **kwargs):
         context = super(ResourcesView, self).get_context_data(**kwargs)
         context['page'] = 'resources'
-        context['stingo'] = 'memoranda'
+        context['stingo'] = 'all'
         return context
 
 
@@ -113,7 +110,7 @@ class AboutView(TemplateView):
 
 
 class CalendarView(TemplateView):
-    template_name = 'public_participation/public_list.html'
+    template_name = 'events/list.html'
 
     def get_context_data(self, *args, **kwargs):
         """Listing of days in `month`."""
