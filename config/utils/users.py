@@ -24,30 +24,29 @@
 
 """
 from django.contrib.auth import get_user_model
-from django.contrib.auth.models import AnonymousUser
+# from django.contrib.auth.models import AnonymousUser
+# from dokeza_2_0.users.models import Visitor
 from urllib.parse import unquote
 
-DEFAULT_USER = AnonymousUser()
+USERS = [
+    {
+        'uid': 'uid-1',
+        'uname': 'Mgeni Mzalendo'
+    },
+]
 
-def getUserFromReq(req):
-    current_user = req.user
-    uid = f'{current_user.id}'
-    uname = f'{current_user.first_name}{current_user.last_name}'
-    
-    if (not uid) | (not uname):
-        return { 'uid': None, 'uname': unquote('mgeni') }
-    else:
-        return { 'uid': unquote(uid), 'uname': unquote(uname) }
+DEFAULT_USER = USERS[0]
 
 def getNameFromReq(req):
-    current_user = req.user
 
-    if current_user == DEFAULT_USER:
-        current_user.first_name == 'mgeni'
-        return current_user.first_name
+    uid = req.COOKIES.get('uid')
+    uname = req.COOKIES.get('uname')
+
+    if (not uid) | (not uname):
+        return DEFAULT_USER
     elif current_user.first_name:
         return f'{current_user.first_name}{current_user.last_name}'
-    else:
+    elif current_user.email:
         email_name = re.search(re.search(r'([a-z0-9._%+-]+)', current_user.email))
         return email_name[0]        
 

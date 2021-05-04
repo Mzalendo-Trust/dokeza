@@ -134,7 +134,10 @@ class Visitor(AnonymousUser):
     """
 
     def __str__(self):
-        return 'Visitor'
+        self.first_name = 'Mgeni'
+        self.last_name = 'Mzalendo'
+
+        return f'{first_name}{last_name}'
 
 
 @receiver(post_save, sender=User)

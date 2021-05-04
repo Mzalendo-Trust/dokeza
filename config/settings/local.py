@@ -38,7 +38,7 @@ EMAIL_PORT = 1025
 INSTALLED_APPS = ["whitenoise.runserver_nostatic"] + INSTALLED_APPS  # noqa F405
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = str(ROOT_DIR / "media")
+MEDIA_ROOT = "media"
 
 # django-debug-toolbar
 # ------------------------------------------------------------------------------
