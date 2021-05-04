@@ -1,0 +1,12 @@
+{
+  "apps": [
+    {
+      "name": "tracker",
+      "script": "./tracker.js"  
+    },
+    {
+      "name": "mailer",
+      "script": "./mailer.js"
+    }
+  ]
+}

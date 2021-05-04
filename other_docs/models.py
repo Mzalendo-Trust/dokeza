@@ -7,8 +7,6 @@ from django.urls import reverse
 from django.db import models
 from django.db.models.signals import pre_save
 
-from annotator.models import Annotation
-from comments.models import Comment
 from slugify import slugify
 
 from dokeza_2_0.users.models import Institution
@@ -55,16 +53,6 @@ class Doc(HitCountMixin, models.Model):
 
     objects = DocManager()
 
-    @property
-    def comments(self):
-        instance = self
-        qs = Comment.objects.filter_by_instance(instance)
-        return qs
-
-    def annotations(self):
-        slug = self.slug
-        annotations = [annot for annot in Annotation.objects.all() if annot.get_bill_slug() == slug]
-        return annotations
 
     @property
     def get_content_type(self):

@@ -53,9 +53,7 @@ RUN sed -i 's/\r$//g' /start-flower && \
 COPY --chown=django:django . /app
 RUN chown django:django /tmp
 
-
+# This user is the only one who can write to django 'app/meida'
 USER root
-
-WORKDIR /app
 
 ENTRYPOINT ["/entrypoint"]

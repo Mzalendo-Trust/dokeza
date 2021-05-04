@@ -83,8 +83,8 @@ RUN echo "$REPO_URL" | tee /etc/apt/sources.list.d/ds.list && \
     rm -rf /var/log/$COMPANY_NAME && \
     rm -rf /var/lib/apt/lists/*    
 
-RUN cp -rf /opt/img /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/img  && \
-    cat /opt/overides.css >> /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/css/app.css
+RUN cp -rf /opt/img /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/img && \
+    cat /opt/overides.css >> /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/css/app.css 
 
 VOLUME /var/log/$COMPANY_NAME /var/lib/$COMPANY_NAME /var/www/$COMPANY_NAME/Data /var/lib/postgresql /var/lib/rabbitmq /var/lib/redis /usr/share/fonts/truetype/custom
 

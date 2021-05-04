@@ -25,7 +25,8 @@ def generate(request):
     output_file_path = docbuilderHelper.generate_document(builder_script)
     
     # Use the SampleText name in the temporary name
-    temp_name = os.path.abspath(output_file_path) or 'output..docx'
+    temp_name = os.path.abspath(output_file_path) or 'output.docx'
+    print('temp_name - ',temp_name)
     filename = re.search(r'SampleText\.\w+', temp_name)
     
     return FileResponse(open(output_file_path, 'rb'), as_attachment=True, filename=filename.group())
@@ -47,9 +48,7 @@ def report(request, object_id, mode):
     # Get the report builder_script
     
     bill = Bill.objects.get(id=object_id)
-    print('path', bill.word_doc)
-
-    print('request contents', object_id, mode)
+    print('path =>', bill.word_doc)
 
     if mode == 'comments': 
         with open('dokeza_2_0/static/samples/builder/commentReport.docbuilder', 'r') as read_file:
@@ -69,7 +68,7 @@ def report(request, object_id, mode):
     output_file_path = docbuilderHelper.generate_report(doc_with_comments_path, builder_script)
     
     # Use the SampleText name in the temporary name
-    filename = os.path.abspath(output_file_path) or 'report..docx'
+    filename = os.path.abspath(output_file_path) or 'report.docx'
         
     return FileResponse(open(output_file_path, 'rb'), as_attachment=True, filename=filename)
 

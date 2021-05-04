@@ -11,7 +11,6 @@ from slugify import slugify
 from django.utils.translation import ugettext_lazy as _
 
 from ckeditor.fields import RichTextField
-from comments.models import Comment
 from taggit.managers import TaggableManager
 from hitcount.models import HitCount, HitCountMixin
 
@@ -61,11 +60,6 @@ class Memorandum(models.Model):
     def get_api_url(self):
         return reverse("posts_api:memo_api-detail", kwargs={"slug": self.slug})
 
-    @property
-    def comments(self):
-        instance = self
-        qs = Comment.objects.filter_by_instance(instance)
-        return qs
 
     @property
     def get_content_type(self):
@@ -103,11 +97,6 @@ class Petition(models.Model):
     def get_api_url(self):
         return reverse("posts_api:petition_api-detail", kwargs={"slug": self.slug})
 
-    @property
-    def comments(self):
-        instance = self
-        qs = Comment.objects.filter_by_instance(instance)
-        return qs
 
     @property
     def get_content_type(self):
@@ -155,11 +144,6 @@ class Post(HitCountMixin, models.Model):
     class Meta:
         ordering = ["-timestamp", "-updated"]
 
-    @property
-    def comments(self):
-        instance = self
-        qs = Comment.objects.filter_by_instance(instance)
-        return qs
 
     @property
     def get_content_type(self):

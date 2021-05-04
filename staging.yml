@@ -81,6 +81,19 @@ services:
     networks:
       - dokeza-network
 
+  trackerservice:
+    build:
+      context: ./tracker/reportservice
+      dockerfile: Dockerfile
+    image: dokeza_2_0_tracker_service
+    container_name: trackerservice
+    depends_on:
+      - postgres
+      - django
+    restart: always
+    networks:
+      - dokeza-network
+
   documentserver:
     build:
       context: .
@@ -90,7 +103,7 @@ services:
       - ./.envs/.documentserver
     depends_on:
       - ds-postgresql
-      - ds-rabbitmq
+      - onlyoffice-rabbitmq
       - ds-redis
       - certbot
     ports:
@@ -108,8 +121,8 @@ services:
     networks:
       - ds-network
 
-  ds-rabbitmq:
-    container_name: ds-rabbitmq
+  onlyoffice-rabbitmq:
+    container_name: onlyoffice-rabbitmq
     image: rabbitmq
     restart: always
     expose:

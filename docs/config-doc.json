@@ -1,0 +1,83 @@
+// Local Dokeza
+
+django            | cfg - {'type': 'desktop', 'documentType': 'word', 'document': {
+'title': 'bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx', 
+'url': 'http://192.168.100.82:8000/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx', 'fileType': 'docx', 'key': '1703310134102424213', 'info': None, 'permissions': {'comment': True, 'download': False, 'edit': False, 'fillForms': False, 'modifyFilter': True, 'modifyContentControl': False, 'review': False}}, 'editorConfig': {'mode': 'edit', 'lang': 'en', 'callbackUrl': 'http://192.168.100.82:8000/bills/track?filename=bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx&userAddress=bills', 'user': {'id': '1', 'name': 'DokezaMasta'}, 'embedded': {'saveUrl': 'http://192.168.100.82:8000/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx', 'embedUrl': 'http://192.168.100.82:8000/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx', 'shareUrl': 'http://192.168.100.82:8000/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx', 'toolbarDocked': 'top'}, 'customization': {'about': True, 'customer': {'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya', 'logo': 'http://192.168.100.82:8000/static/images/dokeza-logo-banner.png', 'email': 'mzalendo.devops@gmail.com'}, 'compactHeader': False, 'goback': {'url': 'http://192.168.100.82:8000/bills/'}}}} hist - {}
+
+django            | uDoc track -  <ASGIRequest: POST '/bills/track?filename=bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx&userAddress=bills'>
+django            | INFO:     172.18.0.1:56318 - "POST /bills/track?filename=bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx&userAddress=bills HTTP/1.1" 200 OK
+django            | INFO:     172.18.0.1:56334 - "GET /media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx HTTP/1.1" 200 OK
+
+// Staging Dokeza
+
+django                 | dirname DokezaMasta
+django                 | dirname DokezaMasta
+django                 | edit -  <ASGIRequest: GET '/users/~documents/edit?filename=new.docx'>
+django                 | dirname DokezaMasta
+django                 | dirname DokezaMasta
+django                 | dirname DokezaMasta
+django                 | fileInfos - [{'type': 'word', 'title': 'new.docx', 'url': 'https://staging-dokeza.mzalendo.com/media/DokezaMasta/new.docx'}]
+django                 | uDoc track -  <ASGIRequest: POST '/users/~documents/track?filename=new.docx&userAddress=DokezaMasta'>
+django                 | uDoc track -  <ASGIRequest: POST '/users/~documents/track?filename=new.docx&userAddress=DokezaMasta'>
+documentserver         |
+documentserver         | ==> /var/log/onlyoffice/documentserver/docservice/out.log <==
+documentserver         | [2021-04-26T21:04:52.471] [ERROR] nodeJS - sendServerRequest error: docId = -8097617016873929970;url = https://staging-dokeza.mzalendo.com/users/~documents/track?filename=new.docx&userAddress=DokezaMasta;data = {"key":"-8097617016873929970","status":2,"url":"https://staging-dokeza.mzalendo.com:8443/cache/files/-8097617016873929970_7866/output.docx/output.docx?md5=fXZ_u83sz7kdyH3BFPteag&expires=1619471993&disposition=attachment&filename=output.docx","changesurl":"https://staging-dokeza.mzalendo.com:8443/cache/files/-8097617016873929970_7866/changes.zip/changes.zip?md5=hmYrYQXsVoaSq_8F1afwvQ&expires=1619471993&disposition=attachment&filename=changes.zip","history":{"serverVersion":"6.2.2","changes":[{"created":"2021-04-26 21:04:43","user":{"id":"1","name":"DokezaMasta"}}]},"users":["1"],"actions":[{"type":0,"userid":"1"}],"lastsave":"2021-04-26T21:04:43.000Z","notmodified":false}
+documentserver         | Error: Error response: statusCode:500; headers:{"server":"nginx","date":"Mon, 26 Apr 2021 21:04:52 GMT","content-type":"application/json","content-length":"63","connection":"keep-alive","x-frame-options":"DENY, SAMEORIGIN","vary":"Accept-Language","content-language":"en","strict-transport-security":"max-age=60; includeSubDomains; preload, max-age=31536000; includeSubDomains; preload","x-content-type-options":"nosniff, nosniff","x-xss-protection":"1; mode=block, 1; mode=block","referrer-policy":"same-origin, no-referrer-when-downgrade","content-security-policy":"default-src 'self' http: https: data: blob: 'unsafe-inline'"}; body:
+documentserver         | {"error": 1, "message": "'str' object has no attribute 'user'"}
+documentserver         |     at Request._callback (/snapshot/server/build/server/Common/sources/utils.js:0:0)
+documentserver         |     at Request.init.self.callback (/snapshot/server/build/server/Common/node_modules/request/request.js:185:22)
+documentserver         |     at Request.emit (events.js:198:13)
+documentserver         |     at Request.<anonymous> (/snapshot/server/build/server/Common/node_modules/request/request.js:1154:10)
+documentserver         |     at Request.emit (events.js:198:13)
+documentserver         |     at IncomingMessage.<anonymous> (/snapshot/server/build/server/Common/node_modules/request/request.js:1076:12)
+documentserver         |     at Object.onceWrapper (events.js:286:20)
+documentserver         |     at IncomingMessage.emit (events.js:203:15)
+documentserver         |     at endReadableNT (_stream_readable.js:1143:12)
+documentserver         |     at process._tickCallback (internal/process/next_tick.js:63:19)
+documentserver         | [2021-04-26T21:04:52.474] [WARN] nodeJS - commandSfcCallback backoff limit exceeded: docId = -8097617016873929970
+documentserver         | [2021-04-26T21:04:52.475] [WARN] nodeJS - storeForgotten: docId = -8097617016873929970
+
+django                 | uDoc track -  <ASGIRequest: POST '/bills/track?filename=bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx&userAddress=bills'>
+django                 | cfg - {'type': 'desktop', 'documentType': 'word', 'document': {
+'title': 'bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 
+'url': 'https://staging-dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'fileType': 'docx', 'key': '371367352449244080', 'info': None, 'permissions': {'comment': True, 'download': False, 'edit': False, 'fillForms': False, 'modifyFilter': True, 'modifyContentControl': False, 'review': False}}, 'editorConfig': {'mode': 'edit', 'lang': 'en', 'callbackUrl': 'https://staging-dokeza.mzalendo.com/bills/track?filename=bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx&userAddress=bills', 'user': {'id': '1', 'name': 'DokezaMasta'}, 'embedded': {'saveUrl': 'https://staging-dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'embedUrl': 'https://staging-dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'shareUrl': 'https://staging-dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'toolbarDocked': 'top'}, 'customization': {'about': True, 'customer': {'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya', 'logo': 'https://staging-dokeza.mzalendo.com/static/images/dokeza-logo-banner.png', 'email': 'mzalendo.devops@gmail.com'}, 'compactHeader': False, 'goback': {'url': 'https://staging-dokeza.mzalendo.com/bills/'}}}} hist - {}
+django                 | uDoc track -  <ASGIRequest: POST '/bills/track?filename=bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx&userAddress=bills'>
+
+// Production Dokeza
+
+django                 | dirname DokezaMasta
+django                 | dirname DokezaMasta
+django                 | edit -  <ASGIRequest: GET '/users/~documents/edit?filename=new.docx'>
+django                 | dirname DokezaMasta
+django                 | dirname DokezaMasta
+django                 | dirname DokezaMasta
+django                 | fileInfos - [{'type': 'word', 'title': 'new.docx', 'url': 'https://dokeza.mzalendo.com/media/DokezaMasta/new.docx'}]
+
+django                 | cfg - {'type': 'desktop', 'documentType': 'word', 'document': {
+'title': 'bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 
+'url': 'https://dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'fileType': 'docx', 'key': '2501502128125603260', 'info': None, 'permissions': {'comment': True, 'download': False, 'edit': False, 'fillForms': False, 'modifyFilter': True, 'modifyContentControl': False, 'review': False}}, 'editorConfig': {'mode': 'edit', 'lang': 'en', 'callbackUrl': 'https://dokeza.mzalendo.com/bills/track?filename=bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx&userAddress=bills', 'user': {'id': '1', 'name': 'DokezaMasta'}, 'embedded': {'saveUrl': 'https://dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'embedUrl': 'https://dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'shareUrl': 'https://dokeza.mzalendo.com/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx', 'toolbarDocked': 'top'}, 'customization': {'about': True, 'customer': {'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya', 'logo': 'https://dokeza.mzalendo.com/static/images/dokeza-logo-banner.png', 'email': 'mzalendo.devops@gmail.com'}, 'compactHeader': False, 'goback': {'url': 'https://dokeza.mzalendo.com/bills/'}}}} hist - {}
+
+documentserver         | ==> /var/log/onlyoffice/documentserver/docservice/out.log <==
+documentserver         | [2021-04-27T08:32:02.911] [ERROR] nodeJS - postData error: docId = 2501502128125603260;url = https://dokeza.mzalendo.com/bills/track?filename=bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx&userAddress=bills;data = {"key":"2501502128125603260","status":1,"users":["1"],"actions":[{"type":1,"userid":"1"}]}
+documentserver         | Error: Error whole request cycle timeout
+documentserver         |     at raiseError (/snapshot/server/build/server/Common/sources/utils.js:0:0)
+documentserver         |     at Timeout._onTimeout (/snapshot/server/build/server/Common/sources/utils.js:0:0)
+documentserver         |     at ontimeout (timers.js:436:11)
+documentserver         |     at tryOnTimeout (timers.js:300:5)
+documentserver         |     at listOnTimeout (timers.js:263:5)
+documentserver         |     at Timer.processTimers (timers.js:223:10)
+documentserver         |
+
+FileNotFoundError: [Errno 2] No such file or directory: ''
+(6 additional frame(s) were not displayed)
+...
+  File "asgiref/sync.py", line 334, in thread_handler
+    return func(*args, **kwargs)
+  File "contextlib.py", line 75, in inner
+    return func(*args, **kwds)
+  File "docbuilder/views.py", line 69, in report
+    output_file_path = docbuilderHelper.generate_report(doc_with_comments_path, builder_script)
+  File "config/utils/docbuilderHelper.py", line 61, in generate_report
+    build_file(temp_file_path, output_file_path)
+  File "config/utils/docbuilderHelper.py", line 133, in build_file
+    with open(output_file_path, 'wb') as write_file:

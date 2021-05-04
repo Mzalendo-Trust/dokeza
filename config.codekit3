@@ -208,14 +208,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-	"/AddElement.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/AddElement.docx",
-		"oF": 0
-		},
 	"/allauth/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -584,20 +576,20 @@
 		"oAP": "/allauth/locale/lv/LC_MESSAGES/django.po",
 		"oF": 0
 		},
+	"/allauth/locale/nb/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/nb/LC_MESSAGES/django.po",
+		"oF": 0
+		},
 	"/allauth/locale/nl/LC_MESSAGES/django.po": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/locale/nl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/allauth/locale/no/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/locale/no/LC_MESSAGES/django.po",
 		"oF": 0
 		},
 	"/allauth/locale/pl/LC_MESSAGES/django.po": {
@@ -638,6 +630,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/locale/sk/LC_MESSAGES/django.po",
+		"oF": 0
+		},
+	"/allauth/locale/sl/LC_MESSAGES/django.po": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/locale/sl/LC_MESSAGES/django.po",
 		"oF": 0
 		},
 	"/allauth/locale/sr/LC_MESSAGES/django.po": {
@@ -1006,6 +1006,62 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/socialaccount/providers/angellist/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/apple/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/apple_session.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/apple_session.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/client.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/client.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/apple/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/apple/views.py",
 		"oF": 0
 		},
 	"/allauth/socialaccount/providers/asana/__init__.py": {
@@ -2355,6 +2411,46 @@
 		"oAP": "/allauth/socialaccount/providers/feedly/views.py",
 		"oF": 0
 		},
+	"/allauth/socialaccount/providers/figma/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/figma/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/figma/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/figma/views.py",
+		"oF": 0
+		},
 	"/allauth/socialaccount/providers/fivehundredpx/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -3203,46 +3299,6 @@
 		"oAP": "/allauth/socialaccount/providers/microsoft/views.py",
 		"oF": 0
 		},
-	"/allauth/socialaccount/providers/mixer/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/allauth/socialaccount/providers/mixer/__init__.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/provider.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/provider.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/tests.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/tests.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/urls.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/urls.py",
-		"oF": 0
-		},
-	"/allauth/socialaccount/providers/mixer/views.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/socialaccount/providers/mixer/views.py",
-		"oF": 0
-		},
 	"/allauth/socialaccount/providers/naver/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -3449,6 +3505,46 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/socialaccount/providers/odnoklassniki/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/okta/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/okta/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/okta/views.py",
 		"oF": 0
 		},
 	"/allauth/socialaccount/providers/openid/__init__.py": {
@@ -4259,6 +4355,46 @@
 		"oAP": "/allauth/socialaccount/providers/steam/views.py",
 		"oF": 0
 		},
+	"/allauth/socialaccount/providers/stocktwits/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/stocktwits/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/stocktwits/views.py",
+		"oF": 0
+		},
 	"/allauth/socialaccount/providers/strava/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5043,6 +5179,86 @@
 		"oAP": "/allauth/socialaccount/providers/ynab/views.py",
 		"oF": 0
 		},
+	"/allauth/socialaccount/providers/zoho/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/zoho/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoho/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoho/views.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/allauth/socialaccount/providers/zoom/__init__.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/provider.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/provider.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/tests.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/urls.py",
+		"oF": 0
+		},
+	"/allauth/socialaccount/providers/zoom/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/socialaccount/providers/zoom/views.py",
+		"oF": 0
+		},
 	"/allauth/socialaccount/signals.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5113,6 +5329,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/templates/account/email.html",
+		"oF": 0
+		},
+	"/allauth/templates/account/email/base_message.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/allauth/templates/account/email/base_message.txt",
 		"oF": 0
 		},
 	"/allauth/templates/account/email/email_confirmation_message.txt": {
@@ -5353,14 +5577,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/allauth/templates/account/verified_email_required.html",
-		"oF": 0
-		},
-	"/allauth/templates/base.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/allauth/templates/base.html",
 		"oF": 0
 		},
 	"/allauth/templates/openid/base.html": {
@@ -5739,6 +5955,14 @@
 		"oAP": "/bills/migrations/0002_remove_bill_body.py",
 		"oF": 0
 		},
+	"/bills/migrations/0003_auto_20201111_1849.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/bills/migrations/0003_auto_20201111_1849.py",
+		"oF": 0
+		},
 	"/bills/migrations/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5785,94 +6009,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/celerybeat.pid",
-		"oF": 0
-		},
-	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/meta.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/meta-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/private_key.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/private_key-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/regr.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/certbot/certs/accounts/acme-v02.api.letsencrypt.org/directory/0741fc4fd0ee6c06563fde192e676113/regr-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/certbot/certs/csr/0000_csr-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/csr/0000_csr-certbot.pem",
-		"oF": 0
-		},
-	"/certbot/certs/csr/0001_csr-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/csr/0001_csr-certbot.pem",
-		"oF": 0
-		},
-	"/certbot/certs/keys/0000_key-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/keys/0000_key-certbot.pem",
-		"oF": 0
-		},
-	"/certbot/certs/keys/0001_key-certbot.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certbot/certs/keys/0001_key-certbot.pem",
-		"oF": 0
-		},
-	"/certs/afropro.local.crt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/afropro.local.crt",
-		"oF": 0
-		},
-	"/certs/afropro.local.key": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/afropro.local.key",
-		"oF": 0
-		},
-	"/certs/dhparam.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/dhparam.pem",
-		"oF": 0
-		},
-	"/certs/rootCA.pem": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/rootCA.pem",
 		"oF": 0
 		},
 	"/comments/__init__.py": {
@@ -26136,17 +26272,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min-min-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
-		},
 	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -27380,14 +27505,6 @@
 		"oAP": "/dokeza_2_0/static/samples/builder/pdf.docbuilder",
 		"oF": 0
 		},
-	"/dokeza_2_0/static/samples/builder/sample.docbuilder": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/samples/builder/sample.docbuilder",
-		"oF": 0
-		},
 	"/dokeza_2_0/static/samples/builder/xlsx.docbuilder": {
 		"cB": 0,
 		"ft": 8192,
@@ -28108,14 +28225,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/comments/confirm_delete.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/docbuilder/index.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/docbuilder/index.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/editor.html": {
@@ -29028,6 +29137,14 @@
 		"oAP": "/manage.py",
 		"oF": 0
 		},
+	"/media/bills-upload.tar.gz": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills-upload.tar.gz",
+		"oF": 0
+		},
 	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29268,6 +29385,110 @@
 		"oAP": "/media/bills/TeaBill_2018.docx",
 		"oF": 0
 		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/changes.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/changes-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/diff.zip": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/diff.zip",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/key.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/key.txt",
+		"oF": 0
+		},
+	"/media/bills/The_Startup_Bill_2020.docx-hist/1/prev.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Universities_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Universities_Amendment_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted.docx",
+		"oF": 0
+		},
+	"/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx",
+		"oF": 0
+		},
 	"/media/dokezamasta/new.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29312,22 +29533,6 @@
 		"ft": 524288,
 		"oA": 1,
 		"oAP": "/media/dokezamasta/new.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/MtuNguyas/memorandum.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/MtuNguyas/memorandum.docx",
-		"oF": 0
-		},
-	"/media/MtuNguyas/memorandum.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/MtuNguyas/memorandum.docx-hist/createdInfo-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
@@ -29400,6 +29605,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/other_docs/migrations/0002_doc_regulation.py",
+		"oF": 0
+		},
+	"/other_docs/migrations/0003_auto_20201113_0144.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/other_docs/migrations/0003_auto_20201113_0144.py",
 		"oF": 0
 		},
 	"/other_docs/migrations/__init__.py": {
@@ -29688,6 +29901,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/public_participation/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/public_participation/migrations/0002_publicevent_status.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/public_participation/migrations/0002_publicevent_status.py",
 		"oF": 0
 		},
 	"/public_participation/migrations/__init__.py": {

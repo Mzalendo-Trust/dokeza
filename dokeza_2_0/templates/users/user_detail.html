@@ -37,12 +37,20 @@
       <div href="#" class="dz-profile__activity">
         Activity
       </div>
+     
       {% if request.user.is_member_of_parliament or request.user.is_editor or request.user.is_staff %}
       <a href="#" class="list-group-item list-group-item-action justify-content-between">
         <strong>Bills</strong>
         <span class="dz-profile-info profile-bills">{{ my_bills.count|default:"No bills yet" }}</span>
       </a>
       {% endif %}
+      <a href="/tracker" class="list-group-item list-group-item-action justify-content-between">
+        <strong>Tracker</strong>
+        <span class="dz-profile-info profile-bills">
+          {{ request.user.is_subscribed_tracker|yesno:"Subscribed,Not Subscribed" }}
+        </span>
+      </a>
+     
       <a href="#" class="list-group-item list-group-item-action justify-content-between">
         <strong>Annotations</strong>
         <span class="dz-profile-info profile-annotations">{{ my_annotations.count|default:"No Annotations yet" }}</span>
@@ -81,7 +89,7 @@
         <h6 class="card-subtitle mb-2 text-muted">{{ object.job_description }}</h6>
       </div>
       {% endif %}
-      <h4 class="card-title text-muted card-title__bio">Short Bio</h4>
+      <h4 class="card-title text-muted card-title__bio">  </h4>
       <p class="">
         {% if object.profile.bio %}
         {{ object.profile.bio }}
