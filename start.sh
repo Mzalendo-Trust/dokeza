@@ -1,4 +1,4 @@
-# docker compose -f production.yml build --compress --rm --pull --parallel
+docker compose -f production.yml build --compress --force-rm --pull --parallel
 docker compose -f production.yml up -d django
  
 while [ ! "curl $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' django):5000 | grep doctype" ]; do

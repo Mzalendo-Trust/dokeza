@@ -31,6 +31,7 @@ urlpatterns = [
     # Django Admin, use {% url 'admin:index' %}
     path('jsi18n', JavaScriptCatalog.as_view(), name='js-catlog'),
     path(settings.ADMIN_URL, admin.site.urls),
+    path('maintenance-mode/', include('maintenance_mode.urls')),
     
     # User management
     path("users/", include("dokeza_2_0.users.urls", namespace="users")),
