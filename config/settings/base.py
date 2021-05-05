@@ -80,10 +80,11 @@ THIRD_PARTY_APPS = [
     "django_celery_beat",
     'django_social_share',
     'hitcount',
-    'taggit',
+    'maintenance_mode',
     "rest_framework",
     "rest_framework.authtoken",
     'schedule',
+    'taggit',
 ]
 
 LOCAL_APPS = [
@@ -155,6 +156,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'maintenance_mode.middleware.MaintenanceModeMiddleware',
 ]
 
 # STATIC
@@ -206,6 +208,7 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "dokeza_2_0.utils.context_processors.settings_context",
+                'maintenance_mode.context_processors.maintenance_mode',
             ],
         },
     }

@@ -91,8 +91,12 @@ def getCorrectName(filename, req):
     return name
 
 def getFileUri(filename, req):
+    path = getStoragePath(filename, req)
     uname = users.getNameFromReq(req)
     host = settings.SITE_DOMAIN.rstrip('/')
+    # If the file does not exist return default file
+    if not os.path.isfile(path):
+        return f'{host}{settings.MEDIA_URL}missing-bill.docx'
     # If the filename has 'bills' then use the path to bills
     if re.search('bills', filename):
         return f'{host}{settings.MEDIA_URL}{filename}'
@@ -105,10 +109,13 @@ def getFileUri(filename, req):
         return f'{host}{settings.MEDIA_URL}{uname}/{filename}'
     
 def getCallbackUrl(filename, req):
+    path = getStoragePath(filename, req)
     host = settings.SITE_DOMAIN.rstrip('/')
+    uname = users.getNameFromReq(req)
+    if not os.path.isfile(path):
+        return f'{host}/bills/track?filename=missing-bill.docx&userAddress=bills'
     if re.search('bills', filename):
         return f'{host}/bills/track?filename={filename}&userAddress=bills'
-    uname = users.getNameFromReq(req)
     return f'{host}/users/~documents/track?filename={filename}&userAddress={uname}'
 
 def getRootFolder(req):
@@ -194,10 +201,18 @@ def removeFile(filename, req):
         shutil.rmtree(histDir)
 
 def generateFileKey(filename, req):
+    host = settings.SITE_DOMAIN.rstrip('/')
     path = getStoragePath(filename, req)
-    uri = getFileUri(filename, req)
-    stat = os.stat(path)
-
+    uri = ''
+    stat = ''
+    try:
+        uri = getFileUri(filename, req)
+        stat = os.stat(path)
+    except FileNotFoundError:
+        path_missing = 'media/missing-bill.docx'
+        uri = f'{host}{settings.MEDIA_URL}media/missing-bill.docx'
+        stat = os.stat(path_missing)
+    
     h = str(hash(f'{uri}_{stat.st_mtime_ns}'))
     replaced = re.sub(r'[^0-9-.a-zA-Z_=]', '_', h)
     return replaced[:20]
