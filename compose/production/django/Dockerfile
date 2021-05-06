@@ -50,6 +50,8 @@ COPY ./compose/production/django/celery/flower/start /start-flower
 RUN sed -i 's/\r$//g' /start-flower && \
     chmod +x /start-flower
     
+COPY ./media/missing-bill.docx ./app/media/missing-bill.docx
+
 COPY --chown=django:django . /app
 RUN chown django:django /tmp
 
