@@ -34,7 +34,7 @@
  */
 
 // 1. CONFIGURATION AND HELPERS
-@import "./variables";
+@import "./_variables";
 @import "./overides-fullcalender";
 
 .dz-bg-orange {
@@ -43,9 +43,9 @@
 
 // 2. VENDORS
 //    Bootstrap
-@import "~bootstrap/scss/bootstrap.scss";
+// @import "~bootstrap/scss/bootstrap.scss";
 //    Font-awesome
-@import "~font-awesome/scss/font-awesome";
+// @import "~font-awesome/scss/font-awesome";
 //    Fullcalendar
 @import "~fullcalendar/main.min.css";
 
@@ -2282,6 +2282,9 @@ hr {
   &__pic {
     margin: 1rem;
     width: 12rem;
+    img {
+      width: 100%
+    }
   }
 }
 

@@ -382,6 +382,16 @@ CORS_URLS_REGEX = r"^/api/.*$"
 # Added with Django 3.2 LTS
 DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
+# https://github.com/fabiocaccamo/django-maintenance-mode
+# ------------------------------------------------------------------------------
+
+MAINTENANCE_MODE_IGNORE_ADMIN_SITE = True
+# if True the staff will not see the maintenance-mode page
+MAINTENANCE_MODE_IGNORE_STAFF = True
+# if True the superuser will not see the maintenance-mode page
+MAINTENANCE_MODE_IGNORE_SUPERUSER = True
+
+
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
         'dokeza_2_0.token_handler.jwt_response_payload_handler',

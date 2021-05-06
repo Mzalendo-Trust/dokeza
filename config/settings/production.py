@@ -116,10 +116,6 @@ ANYMAIL = {
     "SENDGRID_API_URL": env("SENDGRID_API_URL", default="https://api.sendgrid.com/v3/"),
 }
 
-# # Collectfast
-# # ------------------------------------------------------------------------------
-# # https://github.com/antonagestam/collectfast#installation
-# INSTALLED_APPS = ["collectfast"] + INSTALLED_APPS  # noqa F405
 
 # LOGGING
 # ------------------------------------------------------------------------------
@@ -181,6 +177,12 @@ sentry_sdk.init(
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# https://github.com/fabiocaccamo/django-maintenance-mode
+# ------------------------------------------------------------------------------
+
+MAINTENANCE_MODE = None
+
 MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 
 STORAGE_PATH = MEDIA_ROOT
