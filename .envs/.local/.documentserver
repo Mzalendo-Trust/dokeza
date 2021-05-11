@@ -1,5 +1,7 @@
 # Advanced configuration option for turning off the HSTS configuration. Applicable only when SSL is in use. Defaults to true.
 ONLYOFFICE_HTTPS_HSTS_ENABLED=true
+LETS_ENCRYPT_DOMAIN=
+LETS_ENCRYPT_MAIL=
 
 # Advanced configuration option for setting the HSTS max-age in the onlyoffice nginx vHost configuration.
 # Applicable only when SSL is in use.
@@ -33,7 +35,7 @@ POSTGRES_USER=onlyoffice
 POSTGRES_HOST_AUTH_METHOD=trust
 
 #: The AMQP URI to connect to message broker server.
-AMQP_URI=amqp://guest:guest@ds-rabbitmq
+AMQP_URI=amqp://guest:guest@onlyoffice-rabbitmq
 AMQP_TYPE=rabbitmq
 
 # The IP address or the name of the host where the Redis server is running.
