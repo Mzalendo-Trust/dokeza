@@ -28753,6 +28753,14 @@
 		"oAP": "/setup.cfg",
 		"oF": 0
 		},
+	"/sql.log": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/sql.log",
+		"oF": 0
+		},
 	"/staging.yml": {
 		"cB": 0,
 		"ft": 8192,
