@@ -1,5 +1,7 @@
 # Advanced configuration option for turning off the HSTS configuration. Applicable only when SSL is in use. Defaults to true.
 ONLYOFFICE_HTTPS_HSTS_ENABLED=true
+LETS_ENCRYPT_DOMAIN=
+LETS_ENCRYPT_MAIL=
 
 # Advanced configuration option for setting the HSTS max-age in the onlyoffice nginx vHost configuration.
 # Applicable only when SSL is in use.
