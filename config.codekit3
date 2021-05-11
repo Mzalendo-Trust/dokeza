@@ -17,14 +17,6 @@
 		"oAP": "/.coverage",
 		"oF": 0
 		},
-	"/.docker-sync/daemon.log": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/.docker-sync/daemon.log",
-		"oF": 0
-		},
 	"/.dockerignore": {
 		"cB": 0,
 		"ft": 8192,
@@ -199,14 +191,6 @@
 		"oA": 1,
 		"oAP": "/build/.pytest_cache/v/cache",
 		"oF": 0
-		},
-	"/.vscode/settings.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/.vscode/settings-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		},
 	"/allauth/__init__.py": {
 		"cB": 0,
@@ -5715,126 +5699,6 @@
 		"oAP": "/allauth/utils.py",
 		"oF": 0
 		},
-	"/annotator/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/__init__.py",
-		"oF": 0
-		},
-	"/annotator/admin.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/admin.py",
-		"oF": 0
-		},
-	"/annotator/api/permissions.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/permissions.py",
-		"oF": 0
-		},
-	"/annotator/api/serializers.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/serializers.py",
-		"oF": 0
-		},
-	"/annotator/api/urls.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/urls.py",
-		"oF": 0
-		},
-	"/annotator/api/views.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/api/views.py",
-		"oF": 0
-		},
-	"/annotator/apps.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/apps.py",
-		"oF": 0
-		},
-	"/annotator/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/annotator/migrations/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/migrations/__init__.py",
-		"oF": 0
-		},
-	"/annotator/models.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/models.py",
-		"oF": 0
-		},
-	"/annotator/serializers.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/serializers.py",
-		"oF": 0
-		},
-	"/annotator/tests/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/annotator/tests/__init__.py",
-		"oF": 0
-		},
-	"/annotator/tests/test_views.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/tests/test_views.py",
-		"oF": 0
-		},
-	"/annotator/urls.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/urls.py",
-		"oF": 0
-		},
-	"/annotator/views.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/annotator/views.py",
-		"oF": 0
-		},
 	"/azure-pipelines.yml": {
 		"cB": 0,
 		"ft": 8192,
@@ -5849,14 +5713,6 @@
 		"hM": 0,
 		"oA": 1,
 		"oAP": "/bills/__init__.py",
-		"oF": 0
-		},
-	"/bills/actions.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/bills/actions.py",
 		"oF": 0
 		},
 	"/bills/admin.py": {
@@ -6011,116 +5867,20 @@
 		"oAP": "/celerybeat.pid",
 		"oF": 0
 		},
-	"/comments/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/__init__.py",
-		"oF": 0
-		},
-	"/comments/admin.py": {
+	"/certs/afropro.local.crt": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/comments/admin.py",
+		"oAP": "/certs/afropro.local.crt",
 		"oF": 0
 		},
-	"/comments/api/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/api/__init__.py",
-		"oF": 0
-		},
-	"/comments/api/serializers.py": {
+	"/certs/afropro.local.key": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/comments/api/serializers.py",
-		"oF": 0
-		},
-	"/comments/api/urls.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/urls.py",
-		"oF": 0
-		},
-	"/comments/api/views.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/api/views.py",
-		"oF": 0
-		},
-	"/comments/apps.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/apps.py",
-		"oF": 0
-		},
-	"/comments/forms.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/forms.py",
-		"oF": 0
-		},
-	"/comments/migrations/0001_initial.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/migrations/0001_initial.py",
-		"oF": 0
-		},
-	"/comments/migrations/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/migrations/__init__.py",
-		"oF": 0
-		},
-	"/comments/models.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/models.py",
-		"oF": 0
-		},
-	"/comments/tests.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/tests.py",
-		"oF": 0
-		},
-	"/comments/urls.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/urls.py",
-		"oF": 0
-		},
-	"/comments/views.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/comments/views.py",
+		"oAP": "/certs/afropro.local.key",
 		"oF": 0
 		},
 	"/compose/local/django/celery/beat/start": {
@@ -6169,6 +5929,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/local/docs/Dockerfile",
+		"oF": 0
+		},
+	"/compose/local/docs/start": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/local/docs/start",
 		"oF": 0
 		},
 	"/compose/local/documentserver/Dockerfile": {
@@ -8193,6 +7961,14 @@
 		"oAP": "/config/settings/local.py",
 		"oF": 0
 		},
+	"/config/settings/maintenance_mode_state.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/config/settings/maintenance_mode_state.txt",
+		"oF": 1
+		},
 	"/config/settings/production.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -8303,2664 +8079,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/config/wsgi.py",
-		"oF": 0
-		},
-	"/django_countries/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_countries/__init__.py",
-		"oF": 0
-		},
-	"/django_countries/base.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/base.py",
-		"oF": 0
-		},
-	"/django_countries/conf.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/conf.py",
-		"oF": 0
-		},
-	"/django_countries/data.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/data.py",
-		"oF": 0
-		},
-	"/django_countries/fields.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/fields.py",
-		"oF": 0
-		},
-	"/django_countries/filters.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/filters.py",
-		"oF": 0
-		},
-	"/django_countries/graphql/types.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/graphql/types.py",
-		"oF": 0
-		},
-	"/django_countries/ioc_data.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/ioc_data.py",
-		"oF": 0
-		},
-	"/django_countries/locale/af/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/af/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ar/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ar/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/bg/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/bg/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ca/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ca/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/cs/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/cs/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/da/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/da/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/de/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/de/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/el/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/el/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/en/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/en/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/eo/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/eo/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/es/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/es/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/et/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/et/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/eu/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/eu/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/eu_ES/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/eu_ES/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/fa/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/fa/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/fi/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/fi/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/fr/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/fr/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/he/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/he/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/he_IL/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/he_IL/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/hr/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/hr/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/hu/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/hu/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/hy/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/hy/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/it/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/it/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ja/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ja/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ko_KR/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ko_KR/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/lt/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/lt/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/lv/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/lv/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/mn/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/mn/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/nb/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/nb/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/nl/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/nl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/pl/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/pl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/pt_BR/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/pt_BR/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/pt_PT/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/pt_PT/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ro/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ro/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/ru/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/ru/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/sk/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sk/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/sl/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sl/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sr_BA@latin/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/sv/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/sv/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/tr_TR/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/tr_TR/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/uk/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/uk/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/zh_CN/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/zh_CN/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/locale/zh_Hans/LC_MESSAGES/django.po": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/locale/zh_Hans/LC_MESSAGES/django.po",
-		"oF": 0
-		},
-	"/django_countries/makesprite.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/makesprite.py",
-		"oF": 0
-		},
-	"/django_countries/models.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/models.py",
-		"oF": 0
-		},
-	"/django_countries/release.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/release.py",
-		"oF": 0
-		},
-	"/django_countries/serializer_fields.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/serializer_fields.py",
-		"oF": 0
-		},
-	"/django_countries/serializers.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/serializers.py",
-		"oF": 0
-		},
-	"/django_countries/static/flags/__.gif": {
-		"ft": 4194304,
-		"iS": 3231,
-		"oA": 1,
-		"oAP": "/django_countries/static/flags/__.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ad.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ad.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ae.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ae.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/af.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/af.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ag.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ag.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ai.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ai.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/al.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/al.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/am.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/am.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ao.gif": {
-		"ft": 4194304,
-		"iS": 236,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ao.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/aq.gif": {
-		"ft": 4194304,
-		"iS": 331,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/aq.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ar.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ar.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/as.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/as.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/at.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/at.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/au.gif": {
-		"ft": 4194304,
-		"iS": 370,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/au.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/aw.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/aw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ax.gif": {
-		"ft": 4194304,
-		"iS": 368,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ax.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/az.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/az.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ba.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ba.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bb.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bb.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bd.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bd.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/be.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/be.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bf.gif": {
-		"ft": 4194304,
-		"iS": 350,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bg.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bh.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bh.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bi.gif": {
-		"ft": 4194304,
-		"iS": 366,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bi.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bj.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bj.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bl.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bl.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bm.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bn.gif": {
-		"ft": 4194304,
-		"iS": 365,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bo.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bo.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bq.gif": {
-		"ft": 4194304,
-		"iS": 546,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bq.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/br.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/br.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bs.gif": {
-		"ft": 4194304,
-		"iS": 343,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bs.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bt.gif": {
-		"ft": 4194304,
-		"iS": 369,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bt.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bv.gif": {
-		"ft": 4194304,
-		"iS": 368,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bv.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bw.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/by.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/by.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/bz.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/bz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ca.gif": {
-		"ft": 4194304,
-		"iS": 368,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ca.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cc.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cc.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cd.gif": {
-		"ft": 4194304,
-		"iS": 235,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cd.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cf.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cg.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ch.gif": {
-		"ft": 4194304,
-		"iS": 324,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ch.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ci.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ci.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ck.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ck.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cl.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cl.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cm.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cn.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/co.gif": {
-		"ft": 4194304,
-		"iS": 345,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/co.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cr.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cu.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cv.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cv.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cw.gif": {
-		"ft": 4194304,
-		"iS": 308,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cx.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cx.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cy.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cy.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/cz.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/cz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/de.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/de.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/dj.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/dj.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/dk.gif": {
-		"ft": 4194304,
-		"iS": 366,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/dk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/dm.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/dm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/do.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/do.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/dz.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/dz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ec.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ec.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ee.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ee.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/eg.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/eg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/eh.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/eh.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/er.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/er.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/es.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/es.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/et.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/et.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/eu.gif": {
-		"ft": 4194304,
-		"iS": 163,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/eu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/fi.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/fi.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/fj.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/fj.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/fk.gif": {
-		"ft": 4194304,
-		"iS": 364,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/fk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/fm.gif": {
-		"ft": 4194304,
-		"iS": 369,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/fm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/fo.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/fo.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/fr.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/fr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ga.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ga.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gb.gif": {
-		"ft": 4194304,
-		"iS": 252,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gb.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gd.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gd.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ge.gif": {
-		"ft": 4194304,
-		"iS": 371,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ge.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gf.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gg.gif": {
-		"ft": 4194304,
-		"iS": 546,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gh.gif": {
-		"ft": 4194304,
-		"iS": 350,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gh.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gi.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gi.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gl.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gl.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gm.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gn.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gp.gif": {
-		"ft": 4194304,
-		"iS": 349,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gp.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gq.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gq.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gr.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gs.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gs.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gt.gif": {
-		"ft": 4194304,
-		"iS": 366,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gt.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gu.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gw.gif": {
-		"ft": 4194304,
-		"iS": 350,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/gy.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/gy.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/hk.gif": {
-		"ft": 4194304,
-		"iS": 365,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/hk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/hm.gif": {
-		"ft": 4194304,
-		"iS": 370,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/hm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/hn.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/hn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/hr.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/hr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ht.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ht.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/hu.gif": {
-		"ft": 4194304,
-		"iS": 349,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/hu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/id.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/id.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ie.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ie.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/il.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/il.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/im.gif": {
-		"ft": 4194304,
-		"iS": 544,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/im.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/in.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/in.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/io.gif": {
-		"ft": 4194304,
-		"iS": 365,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/io.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/iq.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/iq.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ir.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ir.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/is.gif": {
-		"ft": 4194304,
-		"iS": 365,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/is.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/it.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/it.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/je.gif": {
-		"ft": 4194304,
-		"iS": 579,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/je.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/jm.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/jm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/jo.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/jo.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/jp.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/jp.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ke.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ke.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/kg.gif": {
-		"ft": 4194304,
-		"iS": 365,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/kg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/kh.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/kh.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ki.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ki.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/km.gif": {
-		"ft": 4194304,
-		"iS": 350,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/km.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/kn.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/kn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/kp.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/kp.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/kr.gif": {
-		"ft": 4194304,
-		"iS": 377,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/kr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/kw.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/kw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ky.gif": {
-		"ft": 4194304,
-		"iS": 365,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ky.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/kz.gif": {
-		"ft": 4194304,
-		"iS": 366,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/kz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/la.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/la.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/lb.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/lb.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/lc.gif": {
-		"ft": 4194304,
-		"iS": 251,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/lc.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/li.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/li.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/lk.gif": {
-		"ft": 4194304,
-		"iS": 369,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/lk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/lr.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/lr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ls.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ls.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/lt.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/lt.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/lu.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/lu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/lv.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/lv.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ly.gif": {
-		"ft": 4194304,
-		"iS": 202,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ly.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ma.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ma.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mc.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mc.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/md.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/md.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/me.gif": {
-		"ft": 4194304,
-		"iS": 330,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/me.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mf.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mg.gif": {
-		"ft": 4194304,
-		"iS": 364,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mh.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mh.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mk.gif": {
-		"ft": 4194304,
-		"iS": 374,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ml.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ml.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mm.gif": {
-		"ft": 4194304,
-		"iS": 335,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mn.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mo.gif": {
-		"ft": 4194304,
-		"iS": 370,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mo.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mp.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mp.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mq.gif": {
-		"ft": 4194304,
-		"iS": 371,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mq.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mr.gif": {
-		"ft": 4194304,
-		"iS": 369,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ms.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ms.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mt.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mt.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mu.gif": {
-		"ft": 4194304,
-		"iS": 350,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mv.gif": {
-		"ft": 4194304,
-		"iS": 364,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mv.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mw.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mx.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mx.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/my.gif": {
-		"ft": 4194304,
-		"iS": 367,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/my.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/mz.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/mz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/na.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/na.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/nc.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/nc.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ne.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ne.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/nf.gif": {
-		"ft": 4194304,
-		"iS": 367,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/nf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ng.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ng.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ni.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ni.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/nl.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/nl.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/no.gif": {
-		"ft": 4194304,
-		"iS": 368,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/no.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/np.gif": {
-		"ft": 4194304,
-		"iS": 302,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/np.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/nr.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/nr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/nu.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/nu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/nz.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/nz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/om.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/om.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pa.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pa.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pe.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pe.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pf.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pg.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ph.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ph.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pk.gif": {
-		"ft": 4194304,
-		"iS": 369,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pl.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pl.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pm.gif": {
-		"ft": 4194304,
-		"iS": 366,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pn.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pr.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ps.gif": {
-		"ft": 4194304,
-		"iS": 350,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ps.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pt.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pt.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/pw.gif": {
-		"ft": 4194304,
-		"iS": 366,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/pw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/py.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/py.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/qa.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/qa.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/re.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/re.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ro.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ro.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/rs.gif": {
-		"ft": 4194304,
-		"iS": 230,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/rs.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ru.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ru.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/rw.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/rw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sa.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sa.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sb.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sb.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sc.gif": {
-		"ft": 4194304,
-		"iS": 349,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sc.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sd.gif": {
-		"ft": 4194304,
-		"iS": 347,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sd.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/se.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/se.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sg.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sh.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sh.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/si.gif": {
-		"ft": 4194304,
-		"iS": 354,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/si.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sj.gif": {
-		"ft": 4194304,
-		"iS": 368,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sj.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sk.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sl.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sl.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sm.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sn.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/so.gif": {
-		"ft": 4194304,
-		"iS": 368,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/so.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sprite-hq.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sprite-hq-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/django_countries/static/flags/sprite-hq.png": {
-		"ft": 32768,
-		"iS": 86493,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sprite-hq.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/django_countries/static/flags/sprite.css": {
-		"aP": 1,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sprite-min.css",
-		"oF": 0,
-		"oS": 3
-		},
-	"/django_countries/static/flags/sprite.png": {
-		"ft": 32768,
-		"iS": 27622,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sprite.png",
-		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
-		"oT": 1,
-		"q": 100
-		},
-	"/django_countries/static/flags/sr.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ss.gif": {
-		"ft": 4194304,
-		"iS": 554,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ss.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/st.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/st.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sv.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sv.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sx.gif": {
-		"ft": 4194304,
-		"iS": 551,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sx.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sy.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sy.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/sz.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/sz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tc.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tc.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/td.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/td.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tf.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tg.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/th.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/th.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tj.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tj.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tk.gif": {
-		"ft": 4194304,
-		"iS": 364,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tk.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tl.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tl.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tm.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tn.gif": {
-		"ft": 4194304,
-		"iS": 367,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/to.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/to.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tr.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tr.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tt.gif": {
-		"ft": 4194304,
-		"iS": 369,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tt.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tv.gif": {
-		"ft": 4194304,
-		"iS": 353,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tv.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tw.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/tz.gif": {
-		"ft": 4194304,
-		"iS": 358,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/tz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ua.gif": {
-		"ft": 4194304,
-		"iS": 352,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ua.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ug.gif": {
-		"ft": 4194304,
-		"iS": 351,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ug.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/um.gif": {
-		"ft": 4194304,
-		"iS": 363,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/um.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/us.gif": {
-		"ft": 4194304,
-		"iS": 359,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/us.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/uy.gif": {
-		"ft": 4194304,
-		"iS": 365,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/uy.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/uz.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/uz.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/va.gif": {
-		"ft": 4194304,
-		"iS": 361,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/va.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/vc.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/vc.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ve.gif": {
-		"ft": 4194304,
-		"iS": 356,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ve.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/vg.gif": {
-		"ft": 4194304,
-		"iS": 360,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/vg.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/vi.gif": {
-		"ft": 4194304,
-		"iS": 368,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/vi.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/vn.gif": {
-		"ft": 4194304,
-		"iS": 362,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/vn.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/vu.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/vu.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/wf.gif": {
-		"ft": 4194304,
-		"iS": 369,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/wf.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ws.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ws.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/ye.gif": {
-		"ft": 4194304,
-		"iS": 348,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/ye.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/yt.gif": {
-		"ft": 4194304,
-		"iS": 374,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/yt.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/za.gif": {
-		"ft": 4194304,
-		"iS": 355,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/za.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/zm.gif": {
-		"ft": 4194304,
-		"iS": 350,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/zm.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/static/flags/zw.gif": {
-		"ft": 4194304,
-		"iS": 357,
-		"oA": 0,
-		"oAP": "/django_countries/static/flags/zw.gif",
-		"oF": 0,
-		"opt": 0
-		},
-	"/django_countries/templatetags/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_countries/templatetags/__init__.py",
-		"oF": 0
-		},
-	"/django_countries/templatetags/countries.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/templatetags/countries.py",
-		"oF": 0
-		},
-	"/django_countries/tests/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_countries/tests/__init__.py",
-		"oF": 0
-		},
-	"/django_countries/tests/apps.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/apps.py",
-		"oF": 0
-		},
-	"/django_countries/tests/custom_countries.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/custom_countries.py",
-		"oF": 0
-		},
-	"/django_countries/tests/forms.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/forms.py",
-		"oF": 0
-		},
-	"/django_countries/tests/graphql/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/django_countries/tests/graphql/__init__.py",
-		"oF": 0
-		},
-	"/django_countries/tests/graphql/schema.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/graphql/schema.py",
-		"oF": 0
-		},
-	"/django_countries/tests/graphql/test_country_type.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/graphql/test_country_type.py",
-		"oF": 0
-		},
-	"/django_countries/tests/graphql/test_model.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/graphql/test_model.py",
-		"oF": 0
-		},
-	"/django_countries/tests/models.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/models.py",
-		"oF": 0
-		},
-	"/django_countries/tests/settings.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/settings.py",
-		"oF": 0
-		},
-	"/django_countries/tests/test_admin_filters.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/test_admin_filters.py",
-		"oF": 0
-		},
-	"/django_countries/tests/test_countries.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/test_countries.py",
-		"oF": 0
-		},
-	"/django_countries/tests/test_drf.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/test_drf.py",
-		"oF": 0
-		},
-	"/django_countries/tests/test_fields.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/test_fields.py",
-		"oF": 0
-		},
-	"/django_countries/tests/test_settings.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/test_settings.py",
-		"oF": 0
-		},
-	"/django_countries/tests/test_tags.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/test_tags.py",
-		"oF": 0
-		},
-	"/django_countries/tests/test_widgets.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/tests/test_widgets.py",
-		"oF": 0
-		},
-	"/django_countries/widgets.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/django_countries/widgets.py",
 		"oF": 0
 		},
 	"/django_social_share/__init__.py": {
@@ -11137,14 +8255,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/docbuilder/views.py",
-		"oF": 0
-		},
-	"/docker-sync.yml": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/docker-sync.yml",
 		"oF": 0
 		},
 	"/docs/__init__.py": {
@@ -11611,6 +8721,14 @@
 		"oAP": "/docs/conf.py",
 		"oF": 0
 		},
+	"/docs/config-doc.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/docs/config-doc-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
 	"/docs/deploy.rst": {
 		"cB": 0,
 		"ft": 8192,
@@ -11635,24 +8753,13 @@
 		"oAP": "/docs/development.rst",
 		"oF": 0
 		},
-	"/docs/docbuilder-install.md": {
+	"/docs/docbuilder-install.rst": {
 		"cB": 0,
-		"cS": 0,
-		"eF": 1,
-		"eL": 1,
-		"ema": 1,
-		"eSQ": 1,
-		"ft": 4096,
+		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/docs/docbuilder-install.html",
-		"oF": 0,
-		"oFM": 0,
-		"oS": 0,
-		"pHT": 0,
-		"pME": 1,
-		"rFN": 0,
-		"uCM": 0
+		"oAP": "/docs/docbuilder-install.rst",
+		"oF": 0
 		},
 	"/docs/docker.rst": {
 		"cB": 0,
@@ -11660,6 +8767,22 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/docs/docker.rst",
+		"oF": 0
+		},
+	"/docs/docserver-install.rst": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/docserver-install.rst",
+		"oF": 0
+		},
+	"/docs/docserver-install_210424111225.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/docserver-install_210424111225.html",
 		"oF": 0
 		},
 	"/docs/index.rst": {
@@ -11684,6 +8807,12 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/docs/Kenya County Names.txt",
+		"oF": 0
+		},
+	"/docs/logs": {
+		"ft": 65536,
+		"oA": 1,
+		"oAP": "/build/docs/logs",
 		"oF": 0
 		},
 	"/docs/make.bat": {
@@ -24900,19 +22029,6 @@
 		"oS": 0,
 		"sct": 0
 		},
-	"/dokeza_2_0/static/dev/scss/annotator.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"ec": 1,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/scss/annotator.css",
-		"oF": 0,
-		"oS": 0,
-		"sct": 0
-		},
 	"/dokeza_2_0/static/dev/scss/calendar.scss": {
 		"aP": 0,
 		"bl": 0,
@@ -24974,17 +22090,6 @@
 		"oF": 0,
 		"oS": 0,
 		"sct": 0
-		},
-	"/dokeza_2_0/static/dev/vendor/annotator-1.2.10-full.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/vendor/annotator-1.2.10-full-min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 0
 		},
 	"/dokeza_2_0/static/dev/vendor/jquery-3.5.1.min.js": {
 		"bF": 0,
@@ -26354,6 +23459,14 @@
 		"oT": 1,
 		"q": 100
 		},
+	"/dokeza_2_0/static/images/cell.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/cell.ico",
+		"oF": 0
+		},
 	"/dokeza_2_0/static/images/CIPESA.png": {
 		"ft": 32768,
 		"iS": 16602,
@@ -26418,6 +23531,17 @@
 		"opt": 0,
 		"plM": 52780316221407,
 		"prP": 0
+		},
+	"/dokeza_2_0/static/images/dokeza-construction-site.png": {
+		"ft": 32768,
+		"iS": 49807,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/images/dokeza-construction-site.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"/dokeza_2_0/static/images/dokeza-logo-banner.png": {
 		"ft": 32768,
@@ -26856,14 +23980,6 @@
 		"plM": 52780316221407,
 		"prP": 0
 		},
-	"/dokeza_2_0/static/images/presentation.ico": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/images/presentation.ico",
-		"oF": 0
-		},
 	"/dokeza_2_0/static/images/prev-img.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -26885,20 +24001,20 @@
 		"oT": 1,
 		"q": 100
 		},
-	"/dokeza_2_0/static/images/spreadsheet.ico": {
+	"/dokeza_2_0/static/images/slide.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/images/spreadsheet.ico",
+		"oAP": "/dokeza_2_0/static/images/slide.ico",
 		"oF": 0
 		},
-	"/dokeza_2_0/static/images/text.ico": {
+	"/dokeza_2_0/static/images/word.ico": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/images/text.ico",
+		"oAP": "/dokeza_2_0/static/images/word.ico",
 		"oF": 0
 		},
 	"/dokeza_2_0/static/js/gsap/CSSRulePlugin.min.js": {
@@ -27352,6 +24468,17 @@
 		"sC": 3,
 		"tS": 0
 		},
+	"/dokeza_2_0/static/js/vendor/api.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/js/vendor/api-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/dokeza_2_0/static/js/vendor/bootstrap.min-min.js": {
 		"bF": 0,
 		"ft": 64,
@@ -27723,6 +24850,22 @@
 		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/contact_us.html",
 		"oF": 0
 		},
+	"/dokeza_2_0/templates/_partials/sub-navigation/docs.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/docs.html",
+		"oF": 0
+		},
+	"/dokeza_2_0/templates/_partials/sub-navigation/events.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/events.html",
+		"oF": 0
+		},
 	"/dokeza_2_0/templates/_partials/sub-navigation/help.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -27737,14 +24880,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/home.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/_partials/sub-navigation/ideas.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/_partials/sub-navigation/ideas.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/_partials/sub-navigation/login.html": {
@@ -28355,6 +25490,14 @@
 		"oAP": "/dokeza_2_0/templates/other_docs/docs_list.html",
 		"oF": 0
 		},
+	"/dokeza_2_0/templates/other_docs/resources_list.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/templates/other_docs/resources_list.html",
+		"oF": 0
+		},
 	"/dokeza_2_0/templates/pages/about.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -28513,14 +25656,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/socialaccount/snippets/provider_list.html",
-		"oF": 0
-		},
-	"/dokeza_2_0/templates/users/annotations_list.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/users/annotations_list.html",
 		"oF": 0
 		},
 	"/dokeza_2_0/templates/users/profile_form.html": {
@@ -28707,6 +25842,22 @@
 		"oAP": "/dokeza_2_0/users/migrations/0001_initial.py",
 		"oF": 0
 		},
+	"/dokeza_2_0/users/migrations/0002_user_is_subscribed_tracker.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/migrations/0002_user_is_subscribed_tracker.py",
+		"oF": 0
+		},
+	"/dokeza_2_0/users/migrations/0003_auto_20210305_1401.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/users/migrations/0003_auto_20210305_1401.py",
+		"oF": 0
+		},
 	"/dokeza_2_0/users/migrations/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -28833,6 +25984,1058 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/utils/context_processors.py",
+		"oF": 0
+		},
+	"/highlights/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/highlights/__init__.py",
+		"oF": 0
+		},
+	"/highlights/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/admin.py",
+		"oF": 0
+		},
+	"/highlights/api/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/highlights/api/__init__.py",
+		"oF": 0
+		},
+	"/highlights/api/permissions.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/api/permissions.py",
+		"oF": 0
+		},
+	"/highlights/api/serializers.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/api/serializers.py",
+		"oF": 0
+		},
+	"/highlights/api/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/api/urls.py",
+		"oF": 0
+		},
+	"/highlights/api/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/api/views.py",
+		"oF": 0
+		},
+	"/highlights/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/apps.py",
+		"oF": 0
+		},
+	"/highlights/migrations/0001_initial.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/highlights/migrations/0002_auto_20210305_1401.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/migrations/0002_auto_20210305_1401.py",
+		"oF": 0
+		},
+	"/highlights/migrations/0002_auto_20210312_0900.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/migrations/0002_auto_20210312_0900.py",
+		"oF": 0
+		},
+	"/highlights/migrations/0003_auto_20210315_1429.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/migrations/0003_auto_20210315_1429.py",
+		"oF": 0
+		},
+	"/highlights/migrations/0004_merge_20210329_1141.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/migrations/0004_merge_20210329_1141.py",
+		"oF": 0
+		},
+	"/highlights/migrations/0005_auto_20210426_1601.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/migrations/0005_auto_20210426_1601.py",
+		"oF": 0
+		},
+	"/highlights/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/highlights/migrations/__init__.py",
+		"oF": 0
+		},
+	"/highlights/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/models.py",
+		"oF": 0
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.abril-droidsans.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.abril-droidsans-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.amatic-andika.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.amatic-andika-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.bevan-pontanosans.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.bevan-pontanosans-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.bitter-raleway.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.bitter-raleway-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.clicker-garamond.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.clicker-garamond-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.dancing-ledger.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.dancing-ledger-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.default.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.default-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.fjalla-average.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.fjalla-average-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.georgia-helvetica.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.georgia-helvetica-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.knightlab.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.knightlab-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.lustria-lato.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.lustria-lato-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.medula-lato.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.medula-lato-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.oldstandard.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.oldstandard-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.opensans-gentiumbook.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.opensans-gentiumbook-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.playfair-faunaone.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.playfair-faunaone-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.playfair.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.playfair-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.pt.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.pt-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.roboto-megrim.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.roboto-megrim-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.rufina-sintony.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.rufina-sintony-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.ubuntu.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.ubuntu-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/fonts/font.unicaone-vollkorn.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/fonts/font.unicaone-vollkorn-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/icons/tl-icons.eot": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/icons/tl-icons.eot",
+		"oF": 0
+		},
+	"/highlights/static/highlights/assets/css/icons/tl-icons.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "/highlights/static/highlights/assets/css/icons/tl-icons.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 52780316221407,
+		"prP": 0
+		},
+	"/highlights/static/highlights/assets/css/icons/tl-icons.ttf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/icons/tl-icons.ttf",
+		"oF": 0
+		},
+	"/highlights/static/highlights/assets/css/icons/tl-icons.woff": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/icons/tl-icons.woff",
+		"oF": 0
+		},
+	"/highlights/static/highlights/assets/css/icons/tl-icons.woff2": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/icons/tl-icons.woff2",
+		"oF": 0
+		},
+	"/highlights/static/highlights/assets/css/themes/timeline.theme.dark.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/themes/timeline.theme.dark-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/timeline.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/timeline-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/assets/css/timeline.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/css/timeline.css.map",
+		"oF": 0
+		},
+	"/highlights/static/highlights/assets/img/bbi-bomas.jpg": {
+		"ft": 16384,
+		"iS": 58943,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/img/bbi-bomas.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/highlights/static/highlights/assets/img/uoh.jpg": {
+		"ft": 16384,
+		"iS": 40846,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/img/uoh.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/highlights/static/highlights/assets/img/uohbbi.jpg": {
+		"ft": 16384,
+		"iS": 28828,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/img/uohbbi.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/highlights/static/highlights/assets/js/locale/af.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/af-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ar.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ar-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/be.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/be-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/bg.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/bg-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ca.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ca-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/cz.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/cz-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/da.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/da-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/de.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/de-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/el.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/el-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/en-24hr.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/en-24hr-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/en-week.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/en-week-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/en.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/en-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/eo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/eo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/es.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/es-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/et.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/et-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/eu.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/eu-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/fa.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/fa-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/fi.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/fi-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/fo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/fo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/fr.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/fr-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/fy.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/fy-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ga.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ga-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/gl.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/gl-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/he.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/he-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/hi.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/hi-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/hr.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/hr-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/hu.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/hu-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/hy.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/hy-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/id.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/id-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/is.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/is-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/it.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/it-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/iw.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/iw-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ja.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ja-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ka.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ka-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ko.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ko-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/lb.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/lb-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/lt.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/lt-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/lv.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/lv-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ms.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ms-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/my.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/my-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ne.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ne-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/nl.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/nl-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/no.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/no-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/pl.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/pl-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/pt-br.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/pt-br-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/pt.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/pt-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/rm.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/rm-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ro.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ro-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ru.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ru-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/si.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/si-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/sk.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/sk-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/sl.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/sl-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/sr-cy.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/sr-cy-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/sr.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/sr-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/sv.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/sv-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ta.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ta-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/te.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/te-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/th.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/th-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/tl.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/tl-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/tr.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/tr-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/uk.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/uk-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/ur.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/ur-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/vi.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/vi-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/zh-cn.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/zh-cn-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/locale/zh-tw.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/highlights/static/highlights/assets/js/locale/zh-tw-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/highlights/static/highlights/assets/js/timeline-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/js/timeline-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/highlights/static/highlights/assets/js/timeline.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/js/timeline-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/highlights/static/highlights/assets/js/timeline.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/assets/js/timeline.js.map",
+		"oF": 0
+		},
+	"/highlights/static/highlights/build/bundle.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/build/bundle-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/highlights/static/highlights/build/bundle.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/build/bundle-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/highlights/static/highlights/build/bundle.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/static/highlights/build/bundle.js.map",
+		"oF": 0
+		},
+	"/highlights/templates/highlights/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/templates/highlights/index.html",
+		"oF": 0
+		},
+	"/highlights/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/tests.py",
+		"oF": 0
+		},
+	"/highlights/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/urls.py",
+		"oF": 0
+		},
+	"/highlights/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/highlights/views.py",
 		"oF": 0
 		},
 	"/hitcount/__init__.py": {
@@ -29137,12 +27340,20 @@
 		"oAP": "/manage.py",
 		"oF": 0
 		},
-	"/media/bills-upload.tar.gz": {
+	"/media/bills/Alcoholic_Drinks_and_Control_Amendment_Bill_2020-comment-report.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/bills-upload.tar.gz",
+		"oAP": "/media/bills/Alcoholic_Drinks_and_Control_Amendment_Bill_2020-comment-report.docx",
+		"oF": 0
+		},
+	"/media/bills/Alcoholic_Drinks_and_Control_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/Alcoholic_Drinks_and_Control_Amendment_Bill_2020.docx",
 		"oF": 0
 		},
 	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019.docx": {
@@ -29153,20 +27364,12 @@
 		"oAP": "/media/bills/Constitution_of_Kenya_Amendment_Bill_2019.docx",
 		"oF": 0
 		},
-	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_bPRpOTs.docx": {
+	"/media/bills/Constitutional_Amendment_Bill_2020_BBI_Bill.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_bPRpOTs.docx",
-		"oF": 0
-		},
-	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_nrrZ767.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/Constitution_of_Kenya_Amendment_Bill_2019_nrrZ767.docx",
+		"oAP": "/media/bills/Constitutional_Amendment_Bill_2020_BBI_Bill.docx",
 		"oF": 0
 		},
 	"/media/bills/CountyWards_EquitableDevelopment_Bill_2018.docx": {
@@ -29377,6 +27580,22 @@
 		"oAP": "/media/bills/NaturalResources_BenefitSharing_Bill_2018_KjjzPk0.docx-hist/1/prev.docx",
 		"oF": 0
 		},
+	"/media/bills/Political_Parties_Primaries_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/Political_Parties_Primaries_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/Public_Order_Amendment_Bill_2019.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/Public_Order_Amendment_Bill_2019.docx",
+		"oF": 0
+		},
 	"/media/bills/TeaBill_2018.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29423,6 +27642,54 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/prev.docx",
+		"oF": 0
+		},
+	"/media/bills/THE_INFORMATION_COMMUNICATINO_TECHNOLOGY_PRACTITIONERS_BILL_1-comment-report.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/THE_INFORMATION_COMMUNICATINO_TECHNOLOGY_PRACTITIONERS_BILL_1-comment-report.docx",
+		"oF": 0
+		},
+	"/media/bills/THE_INFORMATION_COMMUNICATINO_TECHNOLOGY_PRACTITIONERS_BILL_1.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/THE_INFORMATION_COMMUNICATINO_TECHNOLOGY_PRACTITIONERS_BILL_1.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020-comment-report.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020-comment-report.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Narcotics_Drugs_and_Psychotropic_Substances_Control_Amendment_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Referendum_No._2_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Referendum_No._2_Bill_2020.docx",
+		"oF": 0
+		},
+	"/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Salaries_and_Remuneration_Commission_Amendment_Bill_2020.docx",
 		"oF": 0
 		},
 	"/media/bills/The_Startup_Bill_2020.docx": {
@@ -29473,6 +27740,14 @@
 		"oAP": "/media/bills/The_Universities_Amendment_Bill_2020.docx",
 		"oF": 0
 		},
+	"/media/bills/The_Wildlife_Conservation_and_Management_Amendment_Bill_2020.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/bills/The_Wildlife_Conservation_and_Management_Amendment_Bill_2020.docx",
+		"oF": 0
+		},
 	"/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -29497,38 +27772,6 @@
 		"oAP": "/media/dokezamasta/new.docx",
 		"oF": 0
 		},
-	"/media/dokezamasta/new.docx-hist/1/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/dokezamasta/new.docx-hist/1/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/dokezamasta/new.docx-hist/1/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx-hist/1/diff.zip",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx-hist/1/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx-hist/1/key.txt",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx-hist/1/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx-hist/1/prev.docx",
-		"oF": 0
-		},
 	"/media/dokezamasta/new.docx-hist/createdInfo.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -29537,18 +27780,36 @@
 		"oO": 0,
 		"oS": 1
 		},
+	"/media/Mgeni Mzalendo/new.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/Mgeni Mzalendo/new.docx",
+		"oF": 0
+		},
+	"/media/Mgeni Mzalendo/new.docx-hist/createdInfo.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/media/Mgeni Mzalendo/new.docx-hist/createdInfo-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/media/missing-bill.docx": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/media/missing-bill.docx",
+		"oF": 0
+		},
 	"/merge_production_dotenvs_in_dotenv.py": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/merge_production_dotenvs_in_dotenv.py",
-		"oF": 0
-		},
-	"/node_modules": {
-		"ft": 65536,
-		"oA": 2,
-		"oAP": "/build/node_modules",
 		"oF": 0
 		},
 	"/other_docs/__init__.py": {
@@ -30732,6 +28993,394 @@
 		"oAP": "/taggit/views.py",
 		"oF": 0
 		},
+	"/tracker/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/tracker/__init__.py",
+		"oF": 0
+		},
+	"/tracker/admin.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/admin.py",
+		"oF": 0
+		},
+	"/tracker/api/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/tracker/api/__init__.py",
+		"oF": 0
+		},
+	"/tracker/api/permissions.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/api/permissions.py",
+		"oF": 0
+		},
+	"/tracker/api/serializers.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/api/serializers.py",
+		"oF": 0
+		},
+	"/tracker/api/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/api/urls.py",
+		"oF": 0
+		},
+	"/tracker/api/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/api/views.py",
+		"oF": 0
+		},
+	"/tracker/apps.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/apps.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0001_initial.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0001_initial.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0002_billtracker_description.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0002_billtracker_description.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0003_auto_20201204_1904.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0003_auto_20201204_1904.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0004_auto_20201214_1621.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0004_auto_20201214_1621.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0005_auto_20201214_1628.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0005_auto_20201214_1628.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0006_auto_20201222_1407.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0006_auto_20201222_1407.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0007_auto_20201224_1113.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0007_auto_20201224_1113.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0008_auto_20210111_0531.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0008_auto_20210111_0531.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0008_auto_20210119_1430.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0008_auto_20210119_1430.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0009_auto_20210113_0958.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0009_auto_20210113_0958.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0010_merge_20210120_2254.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0010_merge_20210120_2254.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0011_auto_20210305_1401.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0011_auto_20210305_1401.py",
+		"oF": 0
+		},
+	"/tracker/migrations/0012_auto_20210426_1601.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/migrations/0012_auto_20210426_1601.py",
+		"oF": 0
+		},
+	"/tracker/migrations/__init__.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/tracker/migrations/__init__.py",
+		"oF": 0
+		},
+	"/tracker/models.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/models.py",
+		"oF": 0
+		},
+	"/tracker/reportservice/.dockerignore": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/reportservice/.dockerignore",
+		"oF": 0
+		},
+	"/tracker/reportservice/Dockerfile": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/reportservice/Dockerfile",
+		"oF": 0
+		},
+	"/tracker/reportservice/mailer.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/tracker/reportservice/mailer-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/tracker/reportservice/package.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/tracker/reportservice/package-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/tracker/reportservice/pm2.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/tracker/reportservice/pm2-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/tracker/reportservice/reports/report.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/reportservice/reports/report.txt",
+		"oF": 0
+		},
+	"/tracker/reportservice/tracker.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/tracker/reportservice/tracker-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/tracker/reportservice/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/reportservice/yarn.lock",
+		"oF": 0
+		},
+	"/tracker/static/tracker/css/main.ea9883f0.chunk.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/css/main.ea9883f0.chunk-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/tracker/static/tracker/css/main.ea9883f0.chunk.css.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/css/main.ea9883f0.chunk.css.map",
+		"oF": 0
+		},
+	"/tracker/static/tracker/js/2.c3241bff.chunk.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/2.c3241bff.chunk-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/tracker/static/tracker/js/2.c3241bff.chunk.js.LICENSE.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/2.c3241bff.chunk.js.LICENSE.txt",
+		"oF": 0
+		},
+	"/tracker/static/tracker/js/2.c3241bff.chunk.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/2.c3241bff.chunk.js.map",
+		"oF": 0
+		},
+	"/tracker/static/tracker/js/3.be16cc35.chunk.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/3.be16cc35.chunk-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/tracker/static/tracker/js/3.be16cc35.chunk.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/3.be16cc35.chunk.js.map",
+		"oF": 0
+		},
+	"/tracker/static/tracker/js/main.5747056f.chunk.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/main.5747056f.chunk-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/tracker/static/tracker/js/main.5747056f.chunk.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/main.5747056f.chunk.js.map",
+		"oF": 0
+		},
+	"/tracker/static/tracker/js/runtime-main.df4aed7e.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/runtime-main.df4aed7e-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/tracker/static/tracker/js/runtime-main.df4aed7e.js.map": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/static/tracker/js/runtime-main.df4aed7e.js.map",
+		"oF": 0
+		},
+	"/tracker/templates/tracker/index.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/templates/tracker/index.html",
+		"oF": 0
+		},
+	"/tracker/tests.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/tests.py",
+		"oF": 0
+		},
+	"/tracker/urls.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/urls.py",
+		"oF": 0
+		},
+	"/tracker/views.py": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/tracker/views.py",
+		"oF": 0
+		},
 	"/webpack.mix.js": {
 		"bF": 0,
 		"ft": 64,
@@ -30742,14 +29391,6 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
-		},
-	"/yarn.lock": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/yarn.lock",
-		"oF": 0
 		}
 	},
 "hooks": [
