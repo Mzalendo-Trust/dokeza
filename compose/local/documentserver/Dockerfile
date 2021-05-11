@@ -64,10 +64,6 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     service nginx stop && \
     rm -rf /var/lib/apt/lists/*
 
-COPY ./config/ds-config /app/ds/setup/config/
-COPY ./compose/local/documentserver/img /opt/img
-COPY ./compose/local/documentserver/overides.css /opt/overides.css
-
 EXPOSE 80 443
 
 ARG REPO_URL="deb http://download.onlyoffice.com/repo/debian squeeze main"
@@ -77,6 +73,9 @@ ARG PRODUCT_NAME=documentserver
 ENV COMPANY_NAME=$COMPANY_NAME \
     PRODUCT_NAME=$PRODUCT_NAME
 
+COPY ./config/ds-config /app/ds/setup/config/
+COPY ./compose/local/documentserver/img /opt/img
+COPY ./compose/local/documentserver/overides.css /opt/overides.css
 
 COPY ./compose/local/documentserver/run-document-server.sh /app/ds/run-document-server.sh
 
