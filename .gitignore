@@ -161,7 +161,7 @@ typings/
 
 # Codekit 
 config.codekit3
-
+*.codekit3
 
 ### Windows template
 # Windows thumbnail cache files

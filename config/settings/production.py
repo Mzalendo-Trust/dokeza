@@ -139,7 +139,7 @@ LOGGING = {
     },
     "handlers": {
         "console": {
-            "level": "DEBUG",
+            "level": "INFO",
             "class": "logging.StreamHandler",
             "formatter": "verbose",
         }
@@ -177,12 +177,6 @@ sentry_sdk.init(
 
 # Your stuff...
 # ------------------------------------------------------------------------------
-
-# https://github.com/fabiocaccamo/django-maintenance-mode
-# ------------------------------------------------------------------------------
-
-MAINTENANCE_MODE = None
-
 MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 
 STORAGE_PATH = MEDIA_ROOT
