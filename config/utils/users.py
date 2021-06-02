@@ -44,8 +44,8 @@ def getNameFromReq(req):
         return DEFAULT_USER['uname']
     elif current_user.first_name:
         return f'{current_user.first_name} {current_user.last_name}'
-    elif (not uid) | (not uname):
-        return DEFAULT_USER['uname']
+    elif not current_user.first_name:
+        return f'{current_user.email}'
 
 def getIdFromReq(req):
     current_user = req.user
@@ -53,4 +53,4 @@ def getIdFromReq(req):
     if current_user.id:
         return f'{current_user.id}'
     else:
-        return None
+        return DEFAULT_USER['uid']

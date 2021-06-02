@@ -53,8 +53,7 @@ LANGUAGES = {
     'sl': 'Slovenian',
     'es': 'Spanish',
     'tr': 'Turkish',
-    'uk': 'Ukrainian',
-    'vi': 'Vietnamese'
+    
 }
 
 def isCanView(ext):
@@ -120,6 +119,7 @@ def getCallbackUrl(filename, req):
 
 def getRootFolder(req):
     uname = users.getNameFromReq(req)
+    print('uname -', uname)
     if re.search('bills', str(req)):
         directory = os.path.join(settings.STORAGE_PATH)
     else:
@@ -127,7 +127,6 @@ def getRootFolder(req):
             dirname = req
         else:
             dirname = uname
-        print('dirname', dirname)
         directory = os.path.join(settings.STORAGE_PATH, dirname)
 
     if not os.path.exists(directory):

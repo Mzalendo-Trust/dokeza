@@ -315,6 +315,8 @@ IGNORABLE_404_URLS = [
     re.compile(r'^/login$'),
     re.compile(r'.*currentsetting.*'),
     re.compile(r'.*nodestatus.*'),
+    re.compile(r'.*get_absolute_url.*'),
+    re.compile(r'.*treasurable.*'),
 ]
 SEND_BROKEN_LINK_EMAILS = False
 

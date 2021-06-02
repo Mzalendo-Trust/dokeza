@@ -5707,6 +5707,14 @@
 		"oAP": "/azure-pipelines.yml",
 		"oF": 0
 		},
+	"/backup_2021_06_02T20_51_37.sql.gz": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/backup_2021_06_02T20_51_37.sql.gz",
+		"oF": 0
+		},
 	"/bills/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -8839,12 +8847,36 @@
 		"oAP": "/docs/overview.rst",
 		"oF": 0
 		},
+	"/docs/production-browser.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/production-browser.txt",
+		"oF": 0
+		},
 	"/docs/settings.rst": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/docs/settings.rst",
+		"oF": 0
+		},
+	"/docs/staging-browser.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "/docs/staging-browser-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"/docs/staging-browser.txt": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/staging-browser.txt",
 		"oF": 0
 		},
 	"/docs/testing.rst": {
@@ -27764,34 +27796,18 @@
 		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx",
 		"oF": 0
 		},
-	"/media/dokezamasta/new.docx": {
+	"/media/mdu@witu.com/new.docx": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx",
+		"oAP": "/media/mdu@witu.com/new.docx",
 		"oF": 0
 		},
-	"/media/dokezamasta/new.docx-hist/createdInfo.json": {
+	"/media/mdu@witu.com/new.docx-hist/createdInfo.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/media/dokezamasta/new.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/Mgeni Mzalendo/new.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/Mgeni Mzalendo/new.docx",
-		"oF": 0
-		},
-	"/media/Mgeni Mzalendo/new.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/Mgeni Mzalendo/new.docx-hist/createdInfo-min.json",
+		"oAP": "/media/mdu@witu.com/new.docx-hist/createdInfo-min.json",
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
