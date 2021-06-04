@@ -5707,14 +5707,6 @@
 		"oAP": "/azure-pipelines.yml",
 		"oF": 0
 		},
-	"/backup_2021_06_02T20_51_37.sql.gz": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/backup_2021_06_02T20_51_37.sql.gz",
-		"oF": 0
-		},
 	"/bills/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -27795,22 +27787,6 @@
 		"oA": 0,
 		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx",
 		"oF": 0
-		},
-	"/media/mdu@witu.com/new.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/mdu@witu.com/new.docx",
-		"oF": 0
-		},
-	"/media/mdu@witu.com/new.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/mdu@witu.com/new.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		},
 	"/media/missing-bill.docx": {
 		"cB": 0,
