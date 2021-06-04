@@ -281,8 +281,8 @@ LOGGING = {
 
 # Broken link settings.
 IGNORABLE_404_URLS = [
-    re.compile(r'\.(php|cgi)$'),
-    re.compile(r'^.*phpmyadmin.*'),
+    re.compile(r'.*php.*'),
+    re.compile(r'.*config.*'),
     re.compile(r'^/apple-touch-icon.*\.png$'),
     re.compile(r'^/favicon\.ico$'),
     re.compile(r'^/robots\.txt$'),
@@ -293,7 +293,7 @@ IGNORABLE_404_URLS = [
     re.compile(r'^/jars'),
     re.compile(r'.*/wp-admin/'),
     re.compile(r'.*/web-apps/.*'),
-    re.compile(r'.*/phpunit.*'),
+    re.compile(r'.*config.*'),
     re.compile(r'.*/Autodiscover/'),
     re.compile(r'.*/web-console/'),
     re.compile(r'.*/jmx-console/'),

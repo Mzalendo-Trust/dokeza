@@ -51,7 +51,7 @@ services:
     volumes:
       - production_certbot_var:/var/www/certbot
       - production_certbot_etc:/etc/letsencrypt
-    command: certonly --cert-name dokeza.mzalendo.com --webroot -w /var/www/certbot -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
+    command: certonly --cert-name dokeza.mzalendo.com --webroot -w /var/www/certbot -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --dry-run
     networks:  
       - dokeza-network
 
@@ -101,6 +101,8 @@ services:
     container_name: documentserver
     env_file:
       - ./.envs/.documentserver
+    environment:
+      - USE_UNAUTHORIZED_STORAGE=true
     depends_on:
       - ds-postgresql
       - onlyoffice-rabbitmq
