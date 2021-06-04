@@ -17,9 +17,10 @@ KENYAN_COUNTIES = (
     (31, 'Nairobi County'), (32, 'Nakuru County'), (33, 'Nandi County'),
     (34, 'Narok County'), (35, 'Nyamira County'), (36, 'Nyandarua County'),
     (37, 'Nyeri County'), (38, 'Samburu County'), (39, 'Siaya County'),
-    (40, 'Taita Taveta County'), (41, 'Tana River County'), (42, 'Tharaka Nithi County'),
-    (43, 'Trans Nzoia County'), (44, 'Turkana County'), (45, 'Uasin Gishu County'),
-    (46, 'Vihiga County'), (47, 'Wajir County'), (48, 'West Pokot County'),
+    (40, 'Taita Taveta County'), (41, 'Tana River County'), (42,
+                                                             'Tharaka Nithi County'), (43, 'Trans Nzoia County'), (44, 'Turkana County'),
+    (45, 'Uasin Gishu County'), (46, 'Vihiga County'), (47, 'Wajir County'),
+    (48, 'West Pokot County'),
 )
 
 KENYAN_CONSTITUENCIES = (
