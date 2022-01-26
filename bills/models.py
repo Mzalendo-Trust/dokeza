@@ -111,8 +111,7 @@ class Bill(HitCountMixin, models.Model):
     updated_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     law_reference = models.URLField(blank=True, null=True, help_text="This should be a link to the Kenya Law Review repository of the bill.")
     tags = TaggableManager(blank=True)
-    hit_count_generic = GenericRelation(
-        HitCount, object_id_field='object_pk',
+    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
         related_query_name='hit_count_generic_relation')
     
     objects = BillManager()

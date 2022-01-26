@@ -43,11 +43,11 @@
 
 // 2. VENDORS
 //    Bootstrap
-// @import "~bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 //    Font-awesome
-// @import "~font-awesome/scss/font-awesome";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 //    Fullcalendar
-@import "~fullcalendar/main.min.css";
+// @import "../../node_modules/fullcalendar/main.min.css";
 
 // 3. BASE
 body {
@@ -2635,7 +2635,7 @@ input.form-control.form-control-sm.form-search::placeholder {
     justify-content: center;
     line-height: 1rem;
     .event-description {
-      p {      
+      p {
         color: $dz-clr--text-color;
       }
     }

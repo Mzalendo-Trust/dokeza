@@ -128,7 +128,6 @@ class MemorandumDetailView(View):
         return view(request, *args, **kwargs)
 
 
-
 class PetitionListView(ListView):
     model = Petition
     template_name = "public_participation/petitions_list.html"
