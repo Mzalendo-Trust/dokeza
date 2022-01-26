@@ -124,7 +124,7 @@
 	"/.ipython/profile_default/log": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/.ipython/profile_default/log",
+		"oAP": "/.ipython/profile_default/log",
 		"oF": 0
 		},
 	"/.ipython/profile_default/startup/README": {
@@ -189,7 +189,7 @@
 	"/.pytest_cache/v/cache": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/.pytest_cache/v/cache",
+		"oAP": "/.pytest_cache/v/cache",
 		"oF": 0
 		},
 	"/allauth/__init__.py": {
@@ -5867,22 +5867,6 @@
 		"oAP": "/celerybeat.pid",
 		"oF": 0
 		},
-	"/certs/afropro.local.crt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/afropro.local.crt",
-		"oF": 0
-		},
-	"/certs/afropro.local.key": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/certs/afropro.local.key",
-		"oF": 0
-		},
 	"/compose/local/django/celery/beat/start": {
 		"cB": 0,
 		"ft": 8192,
@@ -6758,6 +6742,70 @@
 		"oAP": "/compose/production/default.conf",
 		"oF": 0
 		},
+	"/compose/production/django-master/celery/beat/start": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/celery/beat/start",
+		"oF": 0
+		},
+	"/compose/production/django-master/celery/flower/start": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/celery/flower/start",
+		"oF": 0
+		},
+	"/compose/production/django-master/celery/wait-for-it.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/celery/wait-for-it.sh",
+		"oF": 0
+		},
+	"/compose/production/django-master/celery/worker/start": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/celery/worker/start",
+		"oF": 0
+		},
+	"/compose/production/django-master/Dockerfile": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/Dockerfile",
+		"oF": 0
+		},
+	"/compose/production/django-master/entrypoint": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/entrypoint",
+		"oF": 0
+		},
+	"/compose/production/django-master/run_celery.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/run_celery.sh",
+		"oF": 0
+		},
+	"/compose/production/django-master/start": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/django-master/start",
+		"oF": 0
+		},
 	"/compose/production/django-staging/celery/beat/start": {
 		"cB": 0,
 		"ft": 8192,
@@ -6892,6 +6940,14 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/production/documentserver/Dockerfile",
+		"oF": 0
+		},
+	"/compose/production/documentserver/Dockerfile-master": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/documentserver/Dockerfile-master",
 		"oF": 0
 		},
 	"/compose/production/documentserver/Dockerfile-staging": {
@@ -7681,6 +7737,14 @@
 		"oAP": "/compose/production/nginx/certbot_check.sh",
 		"oF": 0
 		},
+	"/compose/production/nginx/conf.d/master.conf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/conf.d/master.conf",
+		"oF": 0
+		},
 	"/compose/production/nginx/conf.d/staging.conf": {
 		"cB": 0,
 		"ft": 8192,
@@ -7705,12 +7769,28 @@
 		"oAP": "/compose/production/nginx/Dockerfile",
 		"oF": 0
 		},
+	"/compose/production/nginx/Dockerfile-master": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/Dockerfile-master",
+		"oF": 0
+		},
 	"/compose/production/nginx/Dockerfile-staging": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/production/nginx/Dockerfile-staging",
+		"oF": 0
+		},
+	"/compose/production/nginx/nginx-master.conf": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/compose/production/nginx/nginx-master.conf",
 		"oF": 0
 		},
 	"/compose/production/nginx/nginx-staging.conf": {
@@ -8812,7 +8892,7 @@
 	"/docs/logs": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/docs/logs",
+		"oAP": "/docs/logs",
 		"oF": 0
 		},
 	"/docs/make.bat": {
@@ -22028,69 +22108,69 @@
 		"tS": 0
 		},
 	"/dokeza_2_0/static/dev/scss/_overides-fullcalender.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/dokeza_2_0/static/dev/scss/_overides-fullcalender.css",
+		"oAP": "/dokeza_2_0/static/dist/css/_overides-fullcalender.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/static/dev/scss/_variables.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "/dokeza_2_0/static/dev/scss/_variables.css",
+		"oAP": "/dokeza_2_0/static/dist/css/_variables.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/static/dev/scss/calendar.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/scss/calendar.css",
+		"oAP": "/dokeza_2_0/static/dist/css/calendar.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/static/dev/scss/dokeza.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/scss/dokeza.css",
+		"oAP": "/dokeza_2_0/static/dist/css/dokeza.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/static/dev/scss/mzalendo.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/scss/mzalendo.css",
+		"oAP": "/dokeza_2_0/static/dist/css/mzalendo.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/static/dev/scss/onlyoffice.css": {
 		"aP": 1,
@@ -22103,17 +22183,17 @@
 		"oS": 3
 		},
 	"/dokeza_2_0/static/dev/scss/onlyoffice.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/dev/scss/onlyoffice.css",
+		"oAP": "/dokeza_2_0/static/dist/css/onlyoffice.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/static/dev/vendor/jquery-3.5.1.min.js": {
 		"bF": 0,
@@ -22125,6 +22205,16 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/dokeza_2_0/static/dist/css/_dokeza.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/dokeza-min.css",
+		"oF": 0,
+		"oS": 3
 		},
 	"/dokeza_2_0/static/dist/css/annotator.css": {
 		"aP": 1,
@@ -22173,6 +22263,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/dokeza_2_0/static/dist/css/dokeza-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/dokeza_2_0/static/dist/css/fullcalendar.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/dokeza_2_0/static/dist/css/fullcalendar.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -24729,30 +24829,30 @@
 		"oF": 0
 		},
 	"/dokeza_2_0/static/sass/custom_bootstrap_vars.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/sass/custom_bootstrap_vars.css",
+		"oAP": "/dokeza_2_0/dist/css/custom_bootstrap_vars.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/static/sass/project.scss": {
-		"aP": 0,
+		"aP": 1,
 		"bl": 0,
 		"dP": 10,
 		"ec": 1,
 		"ft": 4,
 		"ma": 0,
 		"oA": 0,
-		"oAP": "/dokeza_2_0/static/sass/project.css",
+		"oAP": "/dokeza_2_0/dist/css/project.css",
 		"oF": 0,
 		"oS": 0,
-		"sct": 0
+		"sct": 1
 		},
 	"/dokeza_2_0/templates/403.html": {
 		"cB": 0,
@@ -27364,6 +27464,14 @@
 		"oAP": "/manage.py",
 		"oF": 0
 		},
+	"/master.yml": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/master.yml",
+		"oF": 0
+		},
 	"/media/bills/Alcoholic_Drinks_and_Control_Amendment_Bill_2020-comment-report.docx": {
 		"cB": 0,
 		"ft": 8192,
@@ -27804,6 +27912,12 @@
 		"oAP": "/merge_production_dotenvs_in_dotenv.py",
 		"oF": 0
 		},
+	"/node_modules": {
+		"ft": 65536,
+		"oA": 2,
+		"oAP": "/build/node_modules",
+		"oF": 0
+		},
 	"/other_docs/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -27899,14 +28013,6 @@
 		"oA": 0,
 		"oAP": "/other_docs/views.py",
 		"oF": 0
-		},
-	"/package-lock.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/package-lock-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
 		},
 	"/package.json": {
 		"ft": 524288,
@@ -28761,6 +28867,14 @@
 		"oAP": "/staging.yml",
 		"oF": 0
 		},
+	"/start-master.sh": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/start-master.sh",
+		"oF": 0
+		},
 	"/start-staging.sh": {
 		"cB": 0,
 		"ft": 8192,
@@ -29381,6 +29495,17 @@
 		"oAP": "/tracker/views.py",
 		"oF": 0
 		},
+	"/webpack.mix-min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/webpack.mix-min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
 	"/webpack.mix.js": {
 		"bF": 0,
 		"ft": 64,
@@ -29391,6 +29516,14 @@
 		"oF": 0,
 		"sC": 3,
 		"tS": 0
+		},
+	"/yarn.lock": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/yarn.lock",
+		"oF": 0
 		}
 	},
 "hooks": [
@@ -29400,7 +29533,7 @@
 "projectAttributes": {
 	"creationDate": 613887147.31748998,
 	"displayValue": "dokeza.mzalendo.com",
-	"displayValueWasSetByUser": 0,
+	"displayValueWasSetByUser": 1,
 	"iconImageName": "brackets-cafe",
 	"iconImageWasSetByUser": 0
 	},
@@ -31434,16 +31567,16 @@
 	"languageDefaultsSASS": {
 		"autoOutputAction": 0,
 		"autoOutputPathFilenamePattern": "*.css",
-		"autoOutputPathRelativePath": "../css",
+		"autoOutputPathRelativePath": "../../dist/css",
 		"autoOutputPathReplace1": "sass",
 		"autoOutputPathReplace2": "css",
-		"autoOutputPathStyle": 0,
-		"compilerType": 0,
+		"autoOutputPathStyle": 2,
+		"compilerType": 1,
 		"createSourceMap": 0,
 		"decimalPrecision": 10,
 		"emitCharset": 1,
 		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
+		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0
 		},
 	"languageDefaultsSLIM": {

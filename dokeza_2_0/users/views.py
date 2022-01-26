@@ -135,43 +135,6 @@ class ProfileUpdateView(ProfileObjectMixin, UpdateView):
         return reverse("users:detail",
                        kwargs={"email": self.request.user.email})
 
-# ---------------------------------------------------------
-# User Panels Views
-# ---------------------------------------------------------
-
-# class UserAnnotationView(TemplateView):
-#     template_name = 'users/user_annotations_list.html'
-
-#     def get_context_data(self, **kwargs):
-#         context = super(UserAnnotationView, self).get_context_data(**kwargs)
-#         user_annotations = [annot for annot in Annotation.objects.filter(user=self.request.user)]
-#         context['user_annotations'] = user_annotations
-#         context['page'] = 'users'
-#         context['stingo'] = 'annotations'
-#         return context
-
-
-# class UserAnnotationArchiveView(YearArchiveView):
-#     template_name = 'users/annotations_list.html'
-#     queryset = Annotation.objects.all()
-#     date_field = "created"
-#     make_object_list = True
-#     allow_future = True
-#     page = 'users'
-#     stingo = 'annotations'
-
-
-# class UserCommentsView(TemplateView):
-#     template_name = 'users/user_comments.html'
-
-#     def get_context_data(self, **kwargs):
-#         context = super(UserCommentsView, self).get_context_data(**kwargs)
-#         # user_comments = [comms for comms in Comment.objects.filter(user=self.request.user)]
-#         # context['user_comments'] = user_comments
-#         context['page'] = 'users'
-#         context['stingo'] = 'comments'
-#         return context
-
 
 class UserDocumentsView(LoginRequiredMixin, TemplateView):
     template_name = 'users/user_documents.html'
