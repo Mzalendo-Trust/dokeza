@@ -9,39 +9,18 @@ const
 //// db connect
 const { Client } = require('pg')
 const client = new Client({
-  host: 'postgres',
-  user: 'dokezamasta',
-  database: 'dokeza',
-  password: 'dawn-rope-humdrum-topical-habitude',
+  host: 'POSTGRES_HOST',
+  user: 'POSTGRES_USER',
+  database: 'POSTGRES_db',
+  password: 'POSTGRES_PASSWORD',
   port: 5432,
 })
 client.connect();
 
 
-// const transport = nodemailer.createTransport({
-//   host: 'mailhog',
-//   port: '1025',
-//   auth: {
-//     user: 'user',
-//     pass: 'password',
-//   }
-// });
-
-// const transport = nodemailer.createTransport({
-//   host: 'smtp.gmail.com',
-//   port: 465,
-//   auth: {
-//     user: 'dokeza.mzalendo@gmail.com',
-//     pass: 'dokezamasta!'
-//   },
-//   // tls: {
-//   //     rejectUnauthorized: false
-//   // }
-// });
-
 var options = {
   auth: {
-      api_key: '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'
+      api_key: 'SENDGRID_API_KEY'
   }
 }
 var transport = nodemailer.createTransport(sgTransport(options));
