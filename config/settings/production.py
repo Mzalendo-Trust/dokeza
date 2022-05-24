@@ -68,7 +68,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # MEDIA
 # ------------------------------------------------------------------------------
-MEDIA_ROOT = '/app/media'
+# MEDIA_ROOT = '/app/media'
 
 # TEMPLATES
 # ------------------------------------------------------------------------------
