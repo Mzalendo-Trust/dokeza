@@ -389,6 +389,9 @@ update_nginx_settings(){
       sed '/ssl_verify_client/a '"ssl_client_certificate ${CA_CERTIFICATES_PATH}"';' -i ${NGINX_ONLYOFFICE_CONF}
     fi
 
+    sed 's/ssl on;/#ssl on;/g' -i ${NGINX_ONLYOFFICE_CONF}
+    sed 's/ssl_verify_client true;/#ssl_verify_client true;/g' -i ${NGINX_ONLYOFFICE_CONF}
+
     if [ "${ONLYOFFICE_HTTPS_HSTS_ENABLED}" == "true" ]; then
       sed 's,\(max-age=\).*\(;\)$,'"\1${ONLYOFFICE_HTTPS_HSTS_MAXAGE}\2"',' -i ${NGINX_ONLYOFFICE_CONF}
     else
