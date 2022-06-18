@@ -33,7 +33,7 @@
                   <div class="image-holder">
                     <div class="image-wrapper">
                       {% if bill.bill_pic %}
-                        <img src="{{ bill.bill_pic }}" alt="">
+                        <img src="/media/{{ bill.bill_pic }}" alt="">
                         {% elif bill.bill_from == 1 %}
                         <img src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="">
                         {% elif bill.bill_from == 2 %}
