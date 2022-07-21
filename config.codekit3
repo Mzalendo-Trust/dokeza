@@ -189,23 +189,9 @@
 	"/.pytest_cache/v/cache": {
 		"ft": 65536,
 		"oA": 1,
-<<<<<<< HEAD
-		"oAP": "/build/.pytest_cache/v/cache",
-		"oF": 0
-		},
-	"/.vscode/settings.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/.vscode/settings-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-=======
 		"oAP": "/.pytest_cache/v/cache",
 		"oF": 0
 		},
->>>>>>> develop
 	"/allauth/__init__.py": {
 		"cB": 0,
 		"ft": 8192,
@@ -5881,14 +5867,6 @@
 		"oAP": "/celerybeat.pid",
 		"oF": 0
 		},
-<<<<<<< HEAD
-	"/comments/__init__.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 1,
-		"oAP": "/comments/__init__.py",
-=======
 	"/compose/local/django/celery/beat/start": {
 		"cB": 0,
 		"ft": 8192,
@@ -5951,7 +5929,6 @@
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/compose/local/documentserver/Dockerfile",
->>>>>>> develop
 		"oF": 0
 		},
 	"/compose/local/documentserver/img/about/logo.png": {
@@ -25797,13 +25774,6 @@
 		"oAP": "/dokeza_2_0/templates/socialaccount/snippets/login_extra.html",
 		"oF": 0
 		},
-<<<<<<< HEAD
-	"/dokeza_2_0/static/dist/js/dokeza-eventscalendar.min.js": {
-		"bF": 0,
-		"ft": 64,
-		"ma": 0,
-		"mi": 1,
-=======
 	"/dokeza_2_0/templates/socialaccount/snippets/provider_list.html": {
 		"cB": 0,
 		"ft": 8192,
@@ -25816,7 +25786,6 @@
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
->>>>>>> develop
 		"oA": 0,
 		"oAP": "/dokeza_2_0/templates/users/profile_form.html",
 		"oF": 0
@@ -26678,15 +26647,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-<<<<<<< HEAD
-	"/dokeza_2_0/static/samples/builder/xlsx.docbuilder": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/static/samples/builder/xlsx.docbuilder",
-		"oF": 0
-=======
 	"/highlights/static/highlights/assets/js/locale/eo.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -26702,7 +26662,6 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
->>>>>>> develop
 		},
 	"/highlights/static/highlights/assets/js/locale/et.json": {
 		"ft": 524288,
@@ -27056,15 +27015,6 @@
 		"oO": 0,
 		"oS": 1
 		},
-<<<<<<< HEAD
-	"/dokeza_2_0/templates/editor.html": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/dokeza_2_0/templates/editor.html",
-		"oF": 0
-=======
 	"/highlights/static/highlights/assets/js/locale/tl.json": {
 		"ft": 524288,
 		"oA": 1,
@@ -27080,7 +27030,6 @@
 		"oF": 0,
 		"oO": 0,
 		"oS": 1
->>>>>>> develop
 		},
 	"/highlights/static/highlights/assets/js/locale/uk.json": {
 		"ft": 524288,
@@ -28041,19 +27990,7 @@
 		"oAP": "/other_docs/migrations/__init__.py",
 		"oF": 0
 		},
-<<<<<<< HEAD
-	"/media/bills-upload.tar.gz": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills-upload.tar.gz",
-		"oF": 0
-		},
-	"/media/bills/Constitution_of_Kenya_Amendment_Bill_2019.docx": {
-=======
 	"/other_docs/models.py": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
@@ -28269,37 +28206,11 @@
 		"oAP": "/public_participation/__init__.py",
 		"oF": 0
 		},
-<<<<<<< HEAD
-	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx": {
-=======
 	"/public_participation/admin.py": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-<<<<<<< HEAD
-		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx",
-		"oF": 0
-		},
-	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/diff.zip",
-		"oF": 0
-		},
-	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/key.txt": {
-=======
 		"oAP": "/public_participation/admin.py",
 		"oF": 0
 		},
@@ -28312,156 +28223,30 @@
 		"oF": 0
 		},
 	"/public_participation/api/serializers.py": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-<<<<<<< HEAD
-		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/key.txt",
-		"oF": 0
-		},
-	"/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/prev.docx": {
-=======
 		"oAP": "/public_participation/api/serializers.py",
 		"oF": 0
 		},
 	"/public_participation/api/urls.py": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-<<<<<<< HEAD
-		"oAP": "/media/bills/The_Higher_Education_Loans_Board_Amendment_Bill_2020.docx-hist/1/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/The_Startup_Bill_2020.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/The_Startup_Bill_2020.docx",
-		"oF": 0
-		},
-	"/media/bills/The_Startup_Bill_2020.docx-hist/1/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/bills/The_Startup_Bill_2020.docx-hist/1/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/diff.zip",
-		"oF": 0
-		},
-	"/media/bills/The_Startup_Bill_2020.docx-hist/1/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/key.txt",
-		"oF": 0
-		},
-	"/media/bills/The_Startup_Bill_2020.docx-hist/1/prev.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/The_Startup_Bill_2020.docx-hist/1/prev.docx",
-		"oF": 0
-		},
-	"/media/bills/The_Universities_Amendment_Bill_2020.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/The_Universities_Amendment_Bill_2020.docx",
-		"oF": 0
-		},
-	"/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted.docx",
-		"oF": 0
-		},
-	"/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/bills/TheHigherEducationLoansBoard_Amendment_Bill_2020-converted_uYWFFTb.docx",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx-hist/1/changes.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/dokezamasta/new.docx-hist/1/changes-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/media/dokezamasta/new.docx-hist/1/diff.zip": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx-hist/1/diff.zip",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx-hist/1/key.txt": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/media/dokezamasta/new.docx-hist/1/key.txt",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx-hist/1/prev.docx": {
-=======
 		"oAP": "/public_participation/api/urls.py",
 		"oF": 0
 		},
 	"/public_participation/api/views.py": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 0,
-<<<<<<< HEAD
-		"oAP": "/media/dokezamasta/new.docx-hist/1/prev.docx",
-		"oF": 0
-		},
-	"/media/dokezamasta/new.docx-hist/createdInfo.json": {
-		"ft": 524288,
-		"oA": 1,
-		"oAP": "/media/dokezamasta/new.docx-hist/createdInfo-min.json",
-		"oF": 0,
-		"oO": 0,
-		"oS": 1
-		},
-	"/merge_production_dotenvs_in_dotenv.py": {
-=======
 		"oAP": "/public_participation/api/views.py",
 		"oF": 0
 		},
 	"/public_participation/apps.py": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
@@ -28525,19 +28310,7 @@
 		"oAP": "/public_participation/views.py",
 		"oF": 0
 		},
-<<<<<<< HEAD
-	"/other_docs/migrations/0003_auto_20201113_0144.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/other_docs/migrations/0003_auto_20201113_0144.py",
-		"oF": 0
-		},
-	"/other_docs/migrations/__init__.py": {
-=======
 	"/pytest.ini": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
@@ -28830,19 +28603,7 @@
 		"oAP": "/schedule/templates/profiles/schedule.html",
 		"oF": 0
 		},
-<<<<<<< HEAD
-	"/public_participation/migrations/0002_publicevent_status.py": {
-		"cB": 0,
-		"ft": 8192,
-		"hM": 0,
-		"oA": 0,
-		"oAP": "/public_participation/migrations/0002_publicevent_status.py",
-		"oF": 0
-		},
-	"/public_participation/migrations/__init__.py": {
-=======
 	"/schedule/templates/schedule/_create_event_options.html": {
->>>>>>> develop
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
