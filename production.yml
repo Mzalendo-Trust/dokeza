@@ -51,8 +51,8 @@ services:
     volumes:
       - production_certbot_var:/var/www/certbot
       - production_certbot_etc:/etc/letsencrypt
-    command: certonly --cert-name dokeza.mzalendo.com --webroot -w /var/www/certbot -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
-    networks:  
+    command: certonly --cert-name dokeza.mzalendo.com --webroot -w /var/www/certbot -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --dry-run
+    networks:
       - dokeza-network
 
   redis:
@@ -78,6 +78,19 @@ services:
       - ./.envs/.production/.django
       - ./.envs/.production/.postgres
     command: /start
+    networks:
+      - dokeza-network
+
+  trackerservice:
+    build:
+      context: ./tracker/reportservice
+      dockerfile: Dockerfile
+    image: dokeza_2_0_tracker_service
+    container_name: trackerservice
+    depends_on:
+      - postgres
+      - django
+    restart: always
     networks:
       - dokeza-network
 

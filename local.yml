@@ -4,8 +4,6 @@ volumes:
   local_postgres_data: {}
   local_postgres_data_backups: {}
   documentserver_postgresql_data: {}
-  # dokeza_vers_2:
-  #   external: true
 
 networks:
   dokeza-network:
@@ -22,13 +20,27 @@ services:
       - postgres
       - mailhog
     volumes:
-      -  .:/app:z
+      - .:/app:z
     env_file:
       - ./.envs/.local/.django
-      - ./.envs/.local/.postgres
+      - ./.envs/.production/.postgres
     command: /start
     ports:
       - "8000:8000"
+    restart: always
+    networks:
+      - dokeza-network
+
+  trackerservice:
+    build:
+      context: ./tracker/reportservice
+      dockerfile: Dockerfile
+    image: dokeza_2_0_tracker_service
+    container_name: trackerservice
+    depends_on:
+      - postgres
+      - django
+      - mailhog
     restart: always
     networks:
       - dokeza-network
@@ -43,7 +55,7 @@ services:
       - local_postgres_data:/var/lib/postgresql/data
       - local_postgres_data_backups:/backups
     env_file:
-      - ./.envs/.local/.postgres
+      - ./.envs/.production/.postgres
     ports:
       - "5434:5432"
     restart: always
@@ -66,13 +78,14 @@ services:
       - ./.envs/.local/.documentserver
     depends_on:
       - ds-postgresql
-      - ds-rabbitmq
+      - onlyoffice-rabbitmq
       - ds-redis
     ports:
       - "8082:80"
       - "8443:443"
     stdin_open: true
     restart: always
+    stop_grace_period: 60s
     volumes:
       - /var/www/onlyoffice/Data
       - /var/log/onlyoffice
@@ -82,8 +95,8 @@ services:
     networks:
       - ds-network
 
-  ds-rabbitmq:
-    container_name: ds-rabbitmq
+  onlyoffice-rabbitmq:
+    container_name: onlyoffice-rabbitmq
     image: rabbitmq
     restart: always
     expose:
@@ -158,10 +171,9 @@ services:
     restart: always
     networks:
       - dokeza-network
-  
   # docs:
   #   image: dokeza_2_0_local_docs
-  #   container_name: docs
+  #   container_name: dokeza_docs
   #   build:
   #     context: .
   #     dockerfile: ./compose/local/docs/Dockerfile
@@ -173,3 +185,4 @@ services:
   #     - ./dokeza_2_0:/app/dokeza_2_0:z
   #   ports:
   #     - "7000:7000"
+  #   command: /start-docs

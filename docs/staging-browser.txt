@@ -1,0 +1,66 @@
+Bill config -  
+{type: "desktop", documentType: "word", document: {…}, editorConfig: {…}, width: "100%", …}
+document:
+fileType: "docx"
+info: null
+key: "15231541155338769"
+permissions: {comment: true, download: false, edit: false, fillForms: false, modifyFilter: true, …}
+title: "bills/The_Referendum_No._2_Bill_2020.docx"
+token: undefined
+url: "https://staging-dokeza.mzalendo.com/media/bills/The_Referendum_No._2_Bill_2020.docx"
+__proto__: Object
+documentType: "word"
+editorConfig:
+callbackUrl: "https://staging-dokeza.mzalendo.com/bills/track?filename=bills/The_Referendum_No._2_Bill_2020.docx&userAddress=bills"
+canCoAuthoring: true
+canHistoryClose: false
+canHistoryRestore: false
+canMakeActionLink: true
+canRename: false
+canRequestClose: false
+canRequestCompareFile: false
+canRequestCreateNew: false
+canRequestEditRights: true
+canRequestInsertImage: false
+canRequestMailMergeRecipients: false
+canRequestSaveAs: false
+canRequestSendNotify: false
+canRequestSharingSettings: false
+canRequestUsers: false
+canSendEmailAddresses: false
+canUseHistory: false
+customization:
+about: true
+compactHeader: false
+customer: {address: "P.O. Box 21765 — 00505 Nairobi, Kenya", logo: "https://staging-dokeza.mzalendo.com/static/images/dokeza-logo-banner.png", email: "mzalendo.devops@gmail.com"}
+feedback: false
+goback: {url: "https://staging-dokeza.mzalendo.com/bills/"}
+__proto__: Object
+embedded:
+embedUrl: "https://staging-dokeza.mzalendo.com/media/bills/The_Referendum_No._2_Bill_2020.docx"
+saveUrl: "https://staging-dokeza.mzalendo.com/media/bills/The_Referendum_No._2_Bill_2020.docx"
+shareUrl: "https://staging-dokeza.mzalendo.com/media/bills/The_Referendum_No._2_Bill_2020.docx"
+toolbarDocked: "top"
+__proto__: Object
+lang: "en"
+mergeFolderUrl: undefined
+mode: "view"
+user:
+id: null
+name: "mgeni"
+__proto__: Object
+__proto__: Object
+events:
+onAppReady: ƒ ()
+onDocumentStateChange: ƒ (event)
+onError: ƒ (event)
+onMakeActionLink: ƒ (event)
+onOutdatedVersion: ƒ (event)
+onRequestEditRights: ƒ ()
+__proto__: Object
+frameEditorId: "iframeEditor"
+height: "100%"
+parentOrigin: "https://staging-dokeza.mzalendo.com"
+type: "desktop"
+width: "100%"
+__proto__: Object

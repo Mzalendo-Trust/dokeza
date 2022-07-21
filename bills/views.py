@@ -85,8 +85,8 @@ class BillDetailView(DetailView):
     """
     This is the view shows the details related to a particular bill.
     On this page, there is an embedded MS Word engine that displays a Bill.
-    Annotations on comments and the comments on them can be made as it happens in a
-    Word document. Document level comments can also be done.
+    Comments on annotated text  and the comments on the full bills can be made in
+    the bill using MS Word highlights and comments.
     """
     template_name = 'bills/bill_detail.html'
     model = Bill
@@ -107,6 +107,7 @@ class BillDetailView(DetailView):
         
         user = self.request.user
         if user.is_anonymous:
+            user.first_name = 'Mgeni'
             edMode = 'review'
             mode = 'view'
         else:
@@ -162,8 +163,6 @@ class BillDetailView(DetailView):
                         'email':'mzalendo.devops@gmail.com'
                     },
                     'compactHeader': False,
-                    'comments': True,
-                    'commentAuthorOnly': True,
                     'goback': {
                         'url': settings.SITE_DOMAIN + '/bills/'
                     }
@@ -183,5 +182,6 @@ class BillDetailView(DetailView):
         context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
         context['fileType'] = fileType
         context['apiUrl'] = settings.DOC_SERV_API_URL
+        print('edConfig -', edConfig)
         return context
     

@@ -103,7 +103,6 @@ def edit(request):
     fileUri = docManager.getFileUri(filename, request)
     docKey = docManager.generateFileKey(filename, request)
     fileType = fileUtils.getFileType(filename)
-    user = users.getUserFromReq(request)
 
     edMode = request.GET.get('mode') if request.GET.get('mode') else 'edit'
     canEdit = docManager.isCanEdit(ext)
@@ -151,8 +150,8 @@ def edit(request):
             'lang': lang,
             'callbackUrl': docManager.getCallbackUrl(filename, request),
             'user': {
-                'id': user['uid'],
-                'name': user['uname']
+                'id': users.getIdFromReq(request),
+                'name': users.getNameFromReq(request)
             },
             'embedded': {
                 'saveUrl': fileUri,
@@ -187,7 +186,7 @@ def edit(request):
 @csrf_exempt
 def track(request):
     filename = request.GET['filename']
-    print("track - ", request)
+    print("uDoc track - ", request)
     usAddr = request.GET['userAddress']
     response = {}
     

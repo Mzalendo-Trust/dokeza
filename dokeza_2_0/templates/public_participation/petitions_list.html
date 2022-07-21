@@ -5,14 +5,14 @@
 {% block sub-navigation %}
 <div class="dz-sub-navigation pr-0">
   <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
-    {% include '_partials/sub-navigation/resources.html' %}
+    {% include '_partials/sub-navigation/events.html' %}
   </nav>
 </div>
 {% endblock sub-navigation %}
 <!-- END Sub-Navigation Block -->
 <!-- Main Content -->
 {% block content %}
-<div class="dz-main__content">
+<div class="dz-main__content events-list">
   <!-- Petitions Section -->
   <section class="dz-petitions">
     <h1 class="dz-main__heading">Petitions</h1>
@@ -39,9 +39,9 @@
       </div>
     </div>
     {% empty %}
-<hr>
     <hr>
     There are currently no petitions.
+    <hr>
     {% endfor %}
     <!--END Petitions Cards-->
   </section>

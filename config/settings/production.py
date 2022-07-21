@@ -116,10 +116,6 @@ ANYMAIL = {
     "SENDGRID_API_URL": env("SENDGRID_API_URL", default="https://api.sendgrid.com/v3/"),
 }
 
-# # Collectfast
-# # ------------------------------------------------------------------------------
-# # https://github.com/antonagestam/collectfast#installation
-# INSTALLED_APPS = ["collectfast"] + INSTALLED_APPS  # noqa F405
 
 # LOGGING
 # ------------------------------------------------------------------------------
@@ -136,9 +132,14 @@ LOGGING = {
             "%(process)d %(thread)d %(message)s"
         }
     },
+    'filters': {
+        'require_not_maintenance_mode_503': {
+            '()': 'maintenance_mode.logging.RequireNotMaintenanceMode503',
+        },
+    },
     "handlers": {
         "console": {
-            "level": "DEBUG",
+            "level": "INFO",
             "class": "logging.StreamHandler",
             "formatter": "verbose",
         }
@@ -176,6 +177,7 @@ sentry_sdk.init(
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 
 STORAGE_PATH = MEDIA_ROOT
 SITE_MODE = 'production'

@@ -22,9 +22,12 @@ if READ_DOT_ENV_FILE:
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
 DEBUG = env.bool("DJANGO_DEBUG", False)
+# DEBUG = True
+
 # Local time zone. Choices are
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # though not all of them may be available with every OS.
+
 # In Windows, this must be set to your system time zone.
 TIME_ZONE = "Africa/Nairobi"
 # https://docs.djangoproject.com/en/dev/ref/settings/#language-code
@@ -80,19 +83,19 @@ THIRD_PARTY_APPS = [
     "django_celery_beat",
     'django_social_share',
     'hitcount',
-    'taggit',
+    'maintenance_mode',
     "rest_framework",
     "rest_framework.authtoken",
     'schedule',
+    'taggit',
 ]
 
 LOCAL_APPS = [
     "dokeza_2_0.users.apps.UsersConfig",
     # Your stuff: custom apps go here
-    'annotator',
     'bills',
     'tracker',
-    'comments',
+    'highlights',
     'ideas.apps.IdeasConfig',
     'other_docs.apps.DocsConfig',
     'posts',
@@ -146,8 +149,8 @@ AUTH_PASSWORD_VALIDATORS = [
 # https://docs.djangoproject.com/en/dev/ref/settings/#middleware
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
-    "corsheaders.middleware.CorsMiddleware",
     "whitenoise.middleware.WhiteNoiseMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django.middleware.common.CommonMiddleware",
@@ -156,6 +159,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'maintenance_mode.middleware.MaintenanceModeMiddleware',
 ]
 
 # STATIC
@@ -207,6 +211,7 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "dokeza_2_0.utils.context_processors.settings_context",
+                'maintenance_mode.context_processors.maintenance_mode',
             ],
         },
     }
@@ -279,8 +284,8 @@ LOGGING = {
 
 # Broken link settings.
 IGNORABLE_404_URLS = [
-    re.compile(r'\.(php|cgi)$'),
-    re.compile(r'^/phpmyadmin/'),
+    re.compile(r'.*php.*'),
+    re.compile(r'.*config.*'),
     re.compile(r'^/apple-touch-icon.*\.png$'),
     re.compile(r'^/favicon\.ico$'),
     re.compile(r'^/robots\.txt$'),
@@ -291,13 +296,32 @@ IGNORABLE_404_URLS = [
     re.compile(r'^/jars'),
     re.compile(r'.*/wp-admin/'),
     re.compile(r'.*/web-apps/.*'),
-    re.compile(r'.*/phpunit.*'),
+    re.compile(r'.*config.*'),
     re.compile(r'.*/Autodiscover/'),
     re.compile(r'.*/web-console/'),
     re.compile(r'.*/jmx-console/'),
-    re.compile(r'.*/HNAP1/'),
+    re.compile(r'.*HNAP1.*'),
+    re.compile(r'.*_ignition.*'),
+    re.compile(r'.*txt.*'),
+    re.compile(r'.*users.*'),
+    re.compile(r'.*config.json.*'),
+    re.compile(r'.*sql.*'),
+    re.compile(r'.*manager.*'),
+    re.compile(r'.*jenkins.*'),
+    re.compile(r'.*MySQL.*'),
+    re.compile(r'.*dump.*'),
+    re.compile(r'.*manager.*'),
+    re.compile(r'.*public-participation.*'),
+    re.compile(r'.*solr.*'),
+    re.compile(r'.*webfig.*'),
+    re.compile(r'.*console.*'),
+    re.compile(r'^/login$'),
+    re.compile(r'.*currentsetting.*'),
+    re.compile(r'.*nodestatus.*'),
+    re.compile(r'.*get_absolute_url.*'),
+    re.compile(r'.*treasurable.*'),
 ]
-# SEND_BROKEN_LINK_EMAILS = False
+SEND_BROKEN_LINK_EMAILS = False
 
 
 # Celery
@@ -359,6 +383,9 @@ CORS_URLS_REGEX = r"^/api/.*$"
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# Added with Django 3.2 LTS
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
@@ -428,7 +455,6 @@ CKEDITOR_CONFIGS = {
 
 
 # Document Server Settings
-
 FILE_SIZE_MAX = 5242880
 
 DOC_SERV_VIEWED = [".djvu", ".xps"]

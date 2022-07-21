@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 ENV PYTHONUNBUFFERED 1
 
@@ -50,12 +50,12 @@ COPY ./compose/production/django/celery/flower/start /start-flower
 RUN sed -i 's/\r$//g' /start-flower && \
     chmod +x /start-flower
     
+COPY ./media/missing-bill.docx /app/media/missing-bill.docx
+
 COPY --chown=django:django . /app
 RUN chown django:django /tmp
 
-
+# This user is the only one who can write to django 'app/media'
 USER root
-
-WORKDIR /app
 
 ENTRYPOINT ["/entrypoint"]

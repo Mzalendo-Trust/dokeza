@@ -15,9 +15,7 @@ from django.views.generic.detail import SingleObjectMixin
 from django.views.generic.edit import ModelFormMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 
-from annotator.models import Annotation
 from bills.models import Bill
-from comments.models import Comment
 from posts.models import Petition
 
 from .models import User, Profile
@@ -38,13 +36,13 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(UserDetailView, self).get_context_data(**kwargs)
-        my_annotations = Annotation.objects.filter(user=self.request.user)
+        # my_annotations = 
         my_bills = Bill.objects.filter(owner=self.request.user)
-        my_comments = Comment.objects.filter(user=self.request.user)
+        # my_comments = 
 
-        context['my_annotations'] = my_annotations
         context['my_bills'] = my_bills
-        context['my_comments'] = my_comments
+        # context['my_annotations'] = my_annotations
+        # context['my_comments'] = my_comments
         context['page'] = 'users'
         context['stingo'] = 'profile'
         return context
@@ -56,7 +54,7 @@ user_detail_view = UserDetailView.as_view()
 class UserUpdateView(LoginRequiredMixin, UpdateView):
 
     model = User
-    fields = ['first_name', 'last_name', 'email']
+    fields = ['first_name', 'last_name', 'email', 'is_subscribed_tracker']
 
     def get_context_data(self, **kwargs):
         context = super(UserUpdateView, self).get_context_data(**kwargs)
@@ -136,55 +134,6 @@ class ProfileUpdateView(ProfileObjectMixin, UpdateView):
     def get_success_url(self):
         return reverse("users:detail",
                        kwargs={"email": self.request.user.email})
-
-# ---------------------------------------------------------
-# User Panels Views
-# ---------------------------------------------------------
-
-class UserAnnotationView(TemplateView):
-    template_name = 'users/user_annotations_list.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(UserAnnotationView, self).get_context_data(**kwargs)
-        user_annotations = [annot for annot in Annotation.objects.filter(user=self.request.user)]
-        context['user_annotations'] = user_annotations
-        context['page'] = 'users'
-        context['stingo'] = 'annotations'
-        return context
-
-
-class UserAnnotationArchiveView(YearArchiveView):
-    template_name = 'users/annotations_list.html'
-    queryset = Annotation.objects.all()
-    date_field = "created"
-    make_object_list = True
-    allow_future = True
-    page = 'users'
-    stingo = 'annotations'
-
-
-class UserCommentsView(TemplateView):
-    template_name = 'users/user_comments.html'
-
-    def get_context_data(self, **kwargs):
-        context = super(UserCommentsView, self).get_context_data(**kwargs)
-        user_comments = [comms for comms in Comment.objects.filter(user=self.request.user)]
-        context['user_comments'] = user_comments
-        context['page'] = 'users'
-        context['stingo'] = 'comments'
-        return context
-
-
-class UserCommentsArchiveView(YearArchiveView):
-    template_name = 'users/user_comments_year.html'
-    date_field = "timestamp"
-    make_object_list = True
-    allow_future = False
-    page = 'users'
-    stingo = 'comments'
-
-    def get_queryset(self):
-        return Comment.objects.filter(user=self.request.user)
 
 
 class UserDocumentsView(LoginRequiredMixin, TemplateView):

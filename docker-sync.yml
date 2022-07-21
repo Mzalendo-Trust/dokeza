@@ -1,6 +1,0 @@
-version: "2"
-syncs:
-  dokeza_vers_2:
-    notify_terminal: true
-    src: './'
-    sync_excludes: ['.git/**/*', '.idea', 'node_modules', 'tmp/cache/**/*',]

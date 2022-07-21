@@ -33,7 +33,7 @@
                   <div class="image-holder">
                     <div class="image-wrapper">
                       {% if bill.bill_pic %}
-                        <img src="{{ bill.bill_pic }}" alt="">
+                        <img src="/media/{{ bill.bill_pic }}" alt="">
                         {% elif bill.bill_from == 1 %}
                         <img src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="">
                         {% elif bill.bill_from == 2 %}
@@ -49,6 +49,7 @@
                   </div>
                 </a>
               {% endfor %}
+
               {% for doc in other_docs|slice:'4' %}
                 <a href="{{ doc.get_absolute_url }}"></a>
                 <div class="image-holder">
@@ -65,6 +66,7 @@
                   </div>
                 </a>
               {% endfor %}
+
               {% for article in news|slice:'4' %}
                 <a href="{{ article.get_absolute_url">
                   <div class="image-holder">
@@ -79,16 +81,16 @@
                         <p>{{ article.content|truncatewords:15|striptags }}</p>
                       </div>
                     </div>
-                  </a>
-                {% endfor %}
-              </div>
-            </div>
-            <div class="next-img">
-              <div class="right-arrow">
-                <img src="{% static 'images/next-img.svg' %}" alt="" />
-              </div>
+                </a>
+              {% endfor %}
             </div>
           </div>
+          <div class="next-img">
+            <div class="right-arrow">
+              <img src="{% static 'images/next-img.svg' %}" alt="" />
+            </div>
+          </div>
+        </div>
           <h1 class="dz-main__heading">Bills</h1>
           <div class="dz-home__content col-12">
             <div class="row">
@@ -99,42 +101,43 @@
                       <a href="{{ bill.get_absolute_url }}">
                         <h5 class="dz-home__bill-heading">{{ bill.title|capfirst }}</h5>
                         <div class="bill-state {% if bill.bill_stage == 1 %}stage{% endif %}">Open for Memoranda
-                        <div class="reading-dates">{{ bill.first_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                          <div class="reading-dates">{{ bill.first_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                        </div>
+                        <div class="bill-state {% if bill.bill_stage == 2 %}stage{% endif %}">In Committee
+                          <div class="reading-dates">{{ bill.second_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                        </div>
+                        <div class="bill-state {% if bill.bill_stage == 3 %}stage{% endif %}">Plenary Session
+                          <div class="reading-dates">{{ bill.third_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                        </div>
+                        <div class="bill-state {% if bill.bill_stage == 4 %}stage{% endif %}">Commentray Closed
+                          <div class="reading-dates">{{ bill.assented_date|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                        </div>
+                      </a>
+                      <div class="dz-house">
+                        <span class="dz-house__name dz-{{ bill.get_bill_from_display|slugify|lower }}">
+                          {% if bill.get_bill_from_display == none %}
+                            Discussion Draft
+                          {% else %}
+                            {{ bill.get_bill_from_display }}
+                          {% endif %}
+                        </span>
                       </div>
-                      <div class="bill-state {% if bill.bill_stage == 2 %}stage{% endif %}">In Committee
-                      <div class="reading-dates">{{ bill.second_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
                     </div>
-                    <div class="bill-state {% if bill.bill_stage == 3 %}stage{% endif %}">Plenary Session
-                    <div class="reading-dates">{{ bill.third_reading|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
+                    <div class="card-block dates-layout">
+                      <p class="card-text">{{ bill.purpose|truncatewords:25 }}</p>
+                      <a href="{{ bill.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+                    </div>
                   </div>
-                  <div class="bill-state {% if bill.bill_stage == 4 %}stage{% endif %}">Commentray Closed <div class="reading-dates">{{ bill.assented_date|date:"d M Y"|default:"<span style='padding-right: 2rem;'>--</span>" }}</div>
                 </div>
-              </a>
-              <div class="dz-house">
-                <span class="dz-house__name dz-{{ bill.get_bill_from_display|slugify|lower }}">
-                  {% if bill.get_bill_from_display == none %}
-                    Discussion Draft
-                  {% else %}
-                    {{ bill.get_bill_from_display }}
-                  {% endif %}
-                </span>
-              </div>
-            </div>
-            <div class="card-block dates-layout">
-              <p class="card-text">{{ bill.purpose|truncatewords:25 }}</p>
-              <a href="{{ bill.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+                {% empty %}
+                <hr>
+                <div class="dz-home__bills-card col-12 col-sm-6 p-2">
+                  <p><strong>There are no outstanding legislative bills.</strong></p>
+                </div>
+              {% endfor %}
             </div>
           </div>
-        </div>
-        {% empty %}
-<hr>
-        <div class="dz-home__bills-card col-12 col-sm-6 p-2">
-          <p><strong>There are no outstanding legislative bills.</strong></p>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
-  </section>
+        </section>
   <!-- END Bills -->
   <!-- Other Documents-->
   <section class="dz-home__bills">
@@ -146,50 +149,37 @@
         <div class="dz-home__docs-card p-2">
           <div class="card p-1">
             <a href="{{ doc.get_absolute_url }}">
-              {% if doc.institution.name == "Mzalendo Trust" %}
-                <div class="dz-home__docs-mzalendo">
-                {% else %}
-                  <div class="dz-home__docs-civic">
-                  {% endif %}
-                  <h5 class="dz-home__bill-heading">{{ doc.title|capfirst }}</h5>
-                  <h6 class="bill-sponsor text-muted"><strong>Institution</strong>:
-                  {% if doc.institution %}
-                    {{ doc.institution }}
-                  {% else %}
-                    --
-                  {% endif %}
-                  </h6>
-                  <div class="dz-house">
-                    {% if doc.institution.name == "Mzalendo Trust" %}
-                      <span class="dz-house__name dz-mzalendo">
-                      {% else %}
-                        <span class="dz-house__name dz-civic">
-                        {% endif %}
-                        Document for Discussion
-                      </span>
-                    </div>
-                  </div>
-                </a>
-                <div class="card-block">
-                  <p class="card-text">{{ doc.purpose|truncatewords:25 }}
-                  </p>
-                  <a href="{{ doc.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
+              {% if doc.institution.name == "Mzalendo Trust" %}<div class="dz-home__docs-mzalendo">{% else %}<div class="dz-home__docs-civic">{% endif %}
+                <h5 class="dz-home__bill-heading">{{ doc.title|capfirst }}</h5>
+                <h6 class="bill-sponsor text-muted">
+                  <strong>Institution</strong>:{% if doc.institution %}{{ doc.institution }}{% else %}--{% endif %}
+                </h6>
+                <div class="dz-house">
+                  {% if doc.institution.name == "Mzalendo Trust" %}<span class="dz-house__name dz-mzalendo">{% else %}<span class="dz-house__name dz-civic">{% endif %}
+                    Document for Discussion
+                  </span>
                 </div>
               </div>
+            </a>
+            <div class="card-block">
+              <p class="card-text">{{ doc.purpose|truncatewords:25 }}
+              </p>
+              <a href="{{ doc.get_absolute_url }}" class="btn btn-dokeza btn-sm">Read more &hellip;</a>
             </div>
-          {% endfor %}
+          </div>
         </div>
+      {% endfor %}
       </div>
-    </section>
+    </div>
+  </section>
     <!-- END Other Documents -->
     
 </div>
 <div class="dz-home__events">
   <!-- Events -->
   <div class="dz-home__about--content">
-    <p><strong>Dokeza</strong> - Swahili for <em>‘Share your Idea’</em> is an initiative by Mzalendo Trust, a non-partisan organization that keeps
-      an eye on Kenyan Parliament with a mission to facilitate public participation in Parliamentary processes through
-    Information Sharing, Research and Networking.</p>
+    <p><strong>Dokeza</strong> - Swahili for <em>‘Share your Idea’</em> is an initiative by Mzalendo Trust, a Kenyan non-partisan Parliamentary monitoring organization (PMO) whose mission is to “promote the realization of open, inclusive, and accountable Parliaments across Kenya and Africa”.
+</p>
     <a href="/about/" class="btn btn-dokeza btn-sm mt-0 mb-3">Read more &hellip;</a>
   </div>
   <section class="dz-events__home">

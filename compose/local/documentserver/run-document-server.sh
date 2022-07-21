@@ -1,5 +1,11 @@
 #!/bin/bash
 
+function clean_exit {
+  /usr/bin/documentserver-prepare4shutdown.sh
+}
+
+trap clean_exit SIGTERM
+
 # Define '**' behavior explicitly
 shopt -s globstar
 
@@ -49,6 +55,14 @@ JWT_SECRET=${JWT_SECRET:-secret}
 JWT_HEADER=${JWT_HEADER:-Authorization}
 JWT_IN_BODY=${JWT_IN_BODY:-false}
 
+GENERATE_FONTS=${GENERATE_FONTS:-true}
+
+if [[ ${PRODUCT_NAME} == "documentserver" ]]; then
+  REDIS_ENABLED=false
+else
+  REDIS_ENABLED=true
+fi
+
 ONLYOFFICE_DEFAULT_CONFIG=${CONF_DIR}/local.json
 ONLYOFFICE_LOG4JS_CONFIG=${CONF_DIR}/log4js/production.json
 ONLYOFFICE_EXAMPLE_CONFIG=${CONF_DIR}-example/local.json
@@ -61,12 +75,17 @@ JSON_EXAMPLE="${JSON_BIN} -q -f ${ONLYOFFICE_EXAMPLE_CONFIG}"
 LOCAL_SERVICES=()
 
 PG_ROOT=/var/lib/postgresql
-PG_VERSION=10
 PG_NAME=main
 PGDATA=${PG_ROOT}/${PG_VERSION}/${PG_NAME}
 PG_NEW_CLUSTER=false
 RABBITMQ_DATA=/var/lib/rabbitmq
 REDIS_DATA=/var/lib/redis
+
+if [ "${LETS_ENCRYPT_DOMAIN}" != "" -a "${LETS_ENCRYPT_MAIL}" != "" ]; then
+  LETSENCRYPT_ROOT_DIR="/etc/letsencrypt/live"
+  SSL_CERTIFICATE_PATH=${LETSENCRYPT_ROOT_DIR}/${LETS_ENCRYPT_DOMAIN}/fullchain.pem
+  SSL_KEY_PATH=${LETSENCRYPT_ROOT_DIR}/${LETS_ENCRYPT_DOMAIN}/privkey.pem
+fi
 
 read_setting(){
   deprecated_var POSTGRESQL_SERVER_HOST DB_HOST
@@ -77,6 +96,11 @@ read_setting(){
   deprecated_var RABBITMQ_SERVER_URL AMQP_URI
   deprecated_var AMQP_SERVER_URL AMQP_URI
   deprecated_var AMQP_SERVER_TYPE AMQP_TYPE
+
+  METRICS_ENABLED="${METRICS_ENABLED:-false}"
+  METRICS_HOST="${METRICS_HOST:-localhost}"
+  METRICS_PORT="${METRICS_PORT:-8125}"
+  METRICS_PREFIX="${METRICS_PREFIX:-.ds}"
 
   DB_HOST=${DB_HOST:-${POSTGRESQL_SERVER_HOST:-$(${JSON} services.CoAuthoring.sql.dbHost)}}
   case $DB_TYPE in
@@ -179,6 +203,15 @@ waiting_for_redis(){
 waiting_for_datacontainer(){
   waiting_for_connection ${ONLYOFFICE_DATA_CONTAINER_HOST} ${ONLYOFFICE_DATA_CONTAINER_PORT}
 }
+
+update_statsd_settings(){
+  ${JSON} -I -e "if(this.statsd===undefined)this.statsd={};"
+  ${JSON} -I -e "this.statsd.useMetrics = '${METRICS_ENABLED}'"
+  ${JSON} -I -e "this.statsd.host = '${METRICS_HOST}'"
+  ${JSON} -I -e "this.statsd.port = '${METRICS_PORT}'"
+  ${JSON} -I -e "this.statsd.prefix = '${METRICS_PREFIX}'"
+}
+
 update_db_settings(){
   ${JSON} -I -e "this.services.CoAuthoring.sql.type = '${DB_TYPE}'"
   ${JSON} -I -e "this.services.CoAuthoring.sql.dbHost = '${DB_HOST}'"
@@ -295,20 +328,12 @@ create_db_tbl() {
 }
 
 create_postgresql_tbl() {
-  CONNECTION_PARAMS="-h$DB_HOST -p$DB_PORT -U$DB_USER -w"
   if [ -n "$DB_PWD" ]; then
     export PGPASSWORD=$DB_PWD
   fi
 
-  PSQL="psql -q $CONNECTION_PARAMS"
-  CREATEDB="createdb $CONNECTION_PARAMS"
-
-  # Create db on remote server
-  if $PSQL -lt | cut -d\| -f 1 | grep -qw $DB_NAME | grep 0; then
-    $CREATEDB $DB_NAME
-  fi
-
-  $PSQL -d "$DB_NAME" -f "$APP_DIR/server/schema/postgresql/createdb.sql"
+  PSQL="psql -q -h$DB_HOST -p$DB_PORT -d$DB_NAME -U$DB_USER -w"
+  $PSQL -f "$APP_DIR/server/schema/postgresql/createdb.sql"
 }
 
 create_mysql_tbl() {
@@ -420,6 +445,10 @@ if [ ${ONLYOFFICE_DATA_CONTAINER_HOST} = "localhost" ]; then
 
   read_setting
 
+  if [ $METRICS_ENABLED = "true" ]; then
+    update_statsd_settings
+  fi
+
   update_welcome_page
 
   update_log_settings
@@ -459,14 +488,16 @@ if [ ${ONLYOFFICE_DATA_CONTAINER_HOST} = "localhost" ]; then
     rm -rf /var/run/rabbitmq
   fi
 
-  if [ ${REDIS_SERVER_HOST} != "localhost" ]; then
-    update_redis_settings
-  else
-    # change rights for redis directory
-    chown -R redis:redis ${REDIS_DATA}
-    chmod -R 750 ${REDIS_DATA}
+  if [ ${REDIS_ENABLED} = "true" ]; then
+    if [ ${REDIS_SERVER_HOST} != "localhost" ]; then
+      update_redis_settings
+    else
+      # change rights for redis directory
+      chown -R redis:redis ${REDIS_DATA}
+      chmod -R 750 ${REDIS_DATA}
 
-    LOCAL_SERVICES+=("redis-server")
+      LOCAL_SERVICES+=("redis-server")
+    fi
   fi
 else
   # no need to update settings just wait for remote data
@@ -492,7 +523,9 @@ fi
 if [ ${ONLYOFFICE_DATA_CONTAINER} != "true" ]; then
   waiting_for_db
   waiting_for_amqp
-  waiting_for_redis
+  if [ ${REDIS_ENABLED} = "true" ]; then
+    waiting_for_redis
+  fi
 
   update_nginx_settings
 
@@ -508,8 +541,17 @@ fi
 # it run in all cases.
 service nginx start
 
+if [ "${LETS_ENCRYPT_DOMAIN}" != "" -a "${LETS_ENCRYPT_MAIL}" != "" ]; then
+  if [ ! -f "${SSL_CERTIFICATE_PATH}" -a ! -f "${SSL_KEY_PATH}" ]; then
+    documentserver-letsencrypt.sh ${LETS_ENCRYPT_MAIL} ${LETS_ENCRYPT_DOMAIN}
+  fi
+fi
+
 # Regenerate the fonts list and the fonts thumbnails
-documentserver-generate-allfonts.sh ${ONLYOFFICE_DATA_CONTAINER}
+if [ "${GENERATE_FONTS}" == "true" ]; then
+  documentserver-generate-allfonts.sh ${ONLYOFFICE_DATA_CONTAINER}
+fi
 documentserver-static-gzip.sh ${ONLYOFFICE_DATA_CONTAINER}
 
-tail -f /var/log/${COMPANY_NAME}/**/*.log
+tail -f /var/log/${COMPANY_NAME}/**/*.log &
+wait $!

@@ -1,8 +1,10 @@
-{% extends "_layouts/base.html" %} {% load static %} {% block title %}Public
-Events - List{% endblock title %} {% block sub-navigation %}
+{% extends "_layouts/base.html" %} {% load static %}
+{% block title %}Public Events - List{% endblock title %}
+
+{% block sub-navigation %}
 <div class="dz-sub-navigation pr-0">
   <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
-    {% include '_partials/sub-navigation/resources.html' %}
+    {% include '_partials/sub-navigation/events.html' %}
   </nav>
 </div>
 {% endblock sub-navigation %}

@@ -9,7 +9,8 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
+# build/
+build copy/
 develop-eggs/
 dist/
 downloads/
@@ -160,7 +161,7 @@ typings/
 
 # Codekit 
 config.codekit3
-
+*.codekit3
 
 ### Windows template
 # Windows thumbnail cache files
@@ -270,6 +271,8 @@ tags
 
 dokeza_2_0/media/
 
+media/timeline
+
 .pytest_cache/
 
 app_data/*
@@ -278,3 +281,4 @@ certs/*
 .env
 .envs/*
 !.envs/.local/
+tracker/reportservice/reports/report_Jan2021.pdf

@@ -63,15 +63,12 @@
 <!-- Bill Content -->
   <div class="bill-content">
     <div class="bill-details">
-      <div class="form">{% csrf_token %}
-        <div id="iframeEditor">
-        </div>
+      <div id="iframeEditor">
       </div>
     </div>
     <script type="text/javascript" src="{{ apiUrl }}"></script>
     <script type="text/javascript" language="javascript">
       var docEditor;
-     
       var innerAlert = function (message) {
           if (console && console.log)
               console.log(message);
@@ -99,6 +96,28 @@
           location.reload(true);
       };
 
+      var replaceActionLink = function(href, linkParam) {
+          var link;
+          var actionIndex = href.indexOf("&actionLink=");
+          if (actionIndex != -1) {
+              var endIndex = href.indexOf("&", actionIndex + "&actionLink=".length);
+              if (endIndex != -1) {
+                  link = href.substring(0, actionIndex) + href.substring(endIndex) + "&actionLink=" + encodeURIComponent(linkParam);
+              } else {
+                  link = href.substring(0, actionIndex) + "&actionLink=" + encodeURIComponent(linkParam);
+              }
+          } else {
+              link = href + "&actionLink=" + encodeURIComponent(linkParam);
+          }
+          return link;
+      }
+
+      var onMakeActionLink = function (event) {
+          var actionData = event.data;
+          var linkParam = JSON.stringify(actionData);
+          docEditor.setActionLink(replaceActionLink(location.href, linkParam));
+      };
+
       var connectEditor = function () {
 
           config = {{ cfg | safe }}
@@ -110,6 +129,7 @@
               'onRequestEditRights': onRequestEditRights,
               'onError': onError,
               'onOutdatedVersion': onOutdatedVersion,
+              'onMakeActionLink': onMakeActionLink,
           };
 
           {% if history and historyData %}
@@ -127,7 +147,7 @@
               };
 
           {% endif %}
-          console.log('config - ', config)
+          console.log('Bill config - ', config)
           docEditor = new DocsAPI.DocEditor("iframeEditor", config);
 
           fixSize();

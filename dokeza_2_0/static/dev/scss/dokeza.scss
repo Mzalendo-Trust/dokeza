@@ -34,7 +34,7 @@
  */
 
 // 1. CONFIGURATION AND HELPERS
-@import "./variables";
+@import "./_variables";
 @import "./overides-fullcalender";
 
 .dz-bg-orange {
@@ -43,11 +43,11 @@
 
 // 2. VENDORS
 //    Bootstrap
-@import "~bootstrap/scss/bootstrap.scss";
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
 //    Font-awesome
-@import "~font-awesome/scss/font-awesome";
+@import "../../node_modules/font-awesome/scss/font-awesome";
 //    Fullcalendar
-@import "~fullcalendar/main.min.css";
+// @import "../../node_modules/fullcalendar/main.min.css";
 
 // 3. BASE
 body {
@@ -1686,7 +1686,7 @@ hr {
   color: #95835a;
 }
 
-/* Bill annotation page */
+/* Bill  page */
 
 .dz-bill {
   display: flex;
@@ -1789,303 +1789,6 @@ hr {
   color: darken($dz-clr--maroon, 10%);
 }
 
-.annotation-control {
-  width: 300px;
-  height: auto;
-  transition: all 0.25s ease;
-
-  &_active {
-    width: 325px;
-
-    @media screen and (max-width: $mobile-port) {
-      width: 300px;
-    }
-  }
-
-  @media screen and (min-width: $mobile-port) and (max-width: $tablet-port - 1) {
-    z-index: 500;
-    position: fixed;
-    top: 60px;
-    right: -300px;
-  }
-
-  @media screen and (min-width: $tablet-port) and (max-width: $desktop-small - 1) {
-    position: absolute;
-    right: 1rem;
-  }
-}
-
-.scrolled {
-  position: fixed;
-  top: 10px;
-  transition: 0.25s ease;
-}
-
-.annot_icon {
-  width: 3rem;
-  position: absolute;
-  top: 0;
-  margin-left: -3rem;
-  z-index: 100;
-  transition: all 0.25s ease;
-
-  @media screen and (min-width: 320px) and (max-width: $tablet-port - 1) {
-    &-active {
-      transform: translateX(-300px);
-    }
-  }
-
-  @media screen and (min-width: $tablet-port) {
-    display: none;
-  }
-}
-
-.dz-annotations {
-  position: sticky;
-  top: 1rem;
-  width: 100%;
-  padding: 1rem;
-  background-color: #c2e7d5;
-  overflow: scroll;
-  height: 91vh;
-  transition: all 0.25s ease;
-
-  @media screen and (min-width: $mobile-port) and (max-width: $tablet-port - 1) {
-    right: -300px;
-  }
-
-  @media screen and (min-width: $tablet-port) and (max-width: $desktop-small - 1) {
-    height: auto;
-  }
-
-  &__all {
-    background-color: #dbf3e6;
-    padding: 0.25rem 0.75rem;
-
-    .annots-display {
-      &__name {
-        color: $dz-clr--green;
-      }
-
-      &__time {
-        color: $dz-clr--green;
-      }
-
-      &__comment {
-        color: $dz-clr--darkgreen;
-        border-top: 1px solid #8dd6b5;
-        border-bottom: 1px solid #8dd6b5;
-      }
-    }
-
-    &--empty {
-      padding: 0.5rem 1rem;
-    }
-
-    &--my {
-      background-color: #f2e3e2;
-      margin: 0.25rem -0.5rem;
-      padding: 0.25rem 0.75rem;
-
-      .annots-display {
-        &__name {
-          color: $dz-clr--red;
-        }
-
-        &__time {
-          color: $dz-clr--grey-red;
-        }
-
-        &__comment {
-          color: $dz-clr--maroon;
-          border-top: 1px solid lightgrey;
-          border-bottom: 1px solid lightgrey;
-        }
-      }
-    }
-  }
-
-  &__my {
-    background-color: #f2e3e2;
-    padding: 0.25rem 0.75rem;
-    display: none;
-
-    &--empty {
-      padding: 0.5rem;
-    }
-  }
-}
-
-.annot_panel-active {
-  @media screen and (max-width: 580px) {
-    height: 92vh;
-    transform: translateX(-300px);
-  }
-
-  @media screen and (min-width: 581px) and (max-width: $tablet-port - 1) {
-    transform: translateX(-300px);
-    height: 84vh;
-  }
-}
-
-.annotation-years,
-.comment-years {
-  ol {
-    margin-bottom: 0;
-  }
-}
-
-#all__annots {
-  z-index: 10;
-}
-
-#my__annots {
-  z-index: 5;
-}
-
-.annotation__tabs {
-  display: flex;
-  flex-wrap: nowrap;
-  font-size: 0.9rem;
-  margin: 1rem 0 0;
-
-  &--all {
-    border-bottom: 2px solid $dz-clr--green;
-  }
-
-  &--my {
-    border-bottom: 2px solid #602c27;
-  }
-}
-
-#annots-all {
-  display: block;
-}
-
-#annots-my {
-  display: none;
-}
-
-.dz-annot__comment {
-  textarea {
-    margin: 0.5rem 0;
-    height: 2em;
-  }
-
-  .btn-annotation {
-    margin-bottom: 0.5rem;
-    padding: 0.3rem;
-    height: 2rem;
-    font-size: small;
-    background-color: #f7c09c;
-  }
-
-  .form-group {
-    margin-bottom: 0.2rem;
-  }
-}
-
-.annots {
-  flex: 50%;
-  text-align: center;
-  margin: 0 2px;
-  padding: 0.5rem 0;
-  font-size: 1rem;
-
-  @include media-breakpoint-down(sm) {
-    font-size: 0.9rem;
-  }
-
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-
-  &__header {
-    background-color: #58bb88;
-
-    &--active {
-      background-color: $dz-clr--green;
-      color: white;
-    }
-
-    &--mine {
-      background-color: #602c27;
-      color: white;
-      border-bottom: 2px solid #602c27;
-    }
-  }
-
-  &__signin {
-    background-color: #f0d2d0;
-    color: $dz-clr--darkgreen;
-    font-size: 1.1rem;
-
-    a {
-      color: #3f0a01;
-      text-decoration: underline;
-    }
-  }
-
-  &__comments {
-    font-size: 0.9rem;
-    font-weight: normal;
-    font-style: italic;
-    width: 60%;
-    margin-left: 1rem;
-    border-bottom: 1px solid $dz-clr--darkgreen;
-
-    &--form {
-      margin: 0 1rem;
-    }
-  }
-
-  &-display {
-    display: flex;
-    flex-wrap: wrap;
-    padding-bottom: 0.25rem;
-
-    &__name {
-      flex: 1 1 100%;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    &__time {
-      flex: 1 1 100%;
-      font-size: 0.7rem;
-      font-style: italic;
-    }
-
-    &__comment {
-      font-size: 0.9rem;
-      padding: 0.5rem 0;
-      font-family: Merriweather, serif;
-      margin-bottom: 0;
-    }
-  }
-
-  &-space {
-    margin: 0.25rem 0;
-    border: 0;
-    border-top: 1px solid #009f57;
-  }
-}
-
-.annotation {
-  &-heading {
-    font-size: 1.4rem;
-    color: #7ba58b;
-  }
-
-  &-subheading {
-    font-size: 1rem;
-    font-style: italic;
-    color: #a8d0b4;
-  }
-}
-
-.annotation-bg {
-  background-color: #c2e7d5;
-}
 
 // Annotation style ends
 
@@ -2177,6 +1880,10 @@ hr {
   }
 }
 
+.resource-page {
+  flex: 1 0 100%;
+  margin: 1rem 0 3rem;
+}
 .dz-events,
 .dz-petitions,
 .dz-memoranda {
@@ -2575,6 +2282,9 @@ hr {
   &__pic {
     margin: 1rem;
     width: 12rem;
+    img {
+      width: 100%
+    }
   }
 }
 
@@ -2925,7 +2635,7 @@ input.form-control.form-control-sm.form-search::placeholder {
     justify-content: center;
     line-height: 1rem;
     .event-description {
-      p {      
+      p {
         color: $dz-clr--text-color;
       }
     }

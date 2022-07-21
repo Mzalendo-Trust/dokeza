@@ -11,7 +11,9 @@ SECRET_KEY = env(
     default="InKf7zdCjOPkJ2O4E0ypTiscGr3VSr5x1FBmAETUk7I7N4JZiKrgxwVwl9z6jd3C",
 )
 # https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1", "192.168.100.82", "1ec44c86f3d9.ngrok.io"]
+# ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS", default=["localhost"])
+ALLOWED_HOSTS = ["localhost", "0.0.0.0", "127.0.0.1", "192.168.100.82", "django"]
+
 
 # CACHES
 # ------------------------------------------------------------------------------
@@ -36,7 +38,7 @@ EMAIL_PORT = 1025
 INSTALLED_APPS = ["whitenoise.runserver_nostatic"] + INSTALLED_APPS  # noqa F405
 
 # https://docs.djangoproject.com/en/dev/ref/settings/#media-root
-MEDIA_ROOT = str(ROOT_DIR / "media")
+MEDIA_ROOT = "media"
 
 # django-debug-toolbar
 # ------------------------------------------------------------------------------

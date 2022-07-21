@@ -1,5 +1,6 @@
 {% extends "_layouts/base.html" %}
 {% load static %}
+
 <!-- Sub-Navigation Block -->
 {% block sub-navigation %}
 <div class="dz-sub-navigation">
@@ -12,8 +13,12 @@
 {% block content %}
 <div class="dz-error col-8">
   <h1>Dokeza Maintenance Mode</h1>
-  <img class="dz-error__pic" src=" {% static 'dist/images/dokeza.png' %} " alt="">
-  <p>We are currently updating the website and adding some exciting features. This will not last more than one hour.</p>
-  <p>Please check again at some other time.</p>
+  <div class="dz-error__pic">
+    <img src="{% static 'images/dokeza-construction-site.png' %}" alt="">
+  </div>
+  <p style="font-size: 1em;">We are currently updating the website and adding some exciting features. This will be not long.</p>
+  <p style="font-size: 1em;">As we undertake maintenance of the platform, we provide a mirror site that is fully functional - <br>
+  <a href="https://staging-dokeza.mzalendo.com" style="color: white; text-decoration: underline; font-weight: bold">Dokeza Platform Two</a></p>
+  <p style="font-size: 1em;">Please check again later.</p>
 </div>
 {% endblock content %}

@@ -7,8 +7,6 @@ from django.views.generic.dates import MonthArchiveView
 from taggit.models import Tag
 
 from .models import Post, Memorandum, Petition
-from comments.forms import CommentForm
-from comments.models import Comment
 
 from hitcount.views import HitCountDetailView
 
@@ -76,68 +74,20 @@ class PostDisplayView(HitCountDetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(PostDisplayView, self).get_context_data(**kwargs)
-        comments = self.object.comments
 
         initial_data = {
             "content_type": self.object.get_content_type,
             "object_id": self.object.id,
         }
-        context["comment_form"] = CommentForm(initial=initial_data)
-        context["comments"] = comments
         context["page"] = "home"
         context["stingo"] = "news"
         return context
-
-
-class PostCommentView(SingleObjectMixin, FormView):
-    model = Post
-    form_class = CommentForm
-    template_name = 'posts/post_detail.html'
-
-    def post(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            return HttpResponseForbidden()
-        self.object = self.get_object()
-
-        form = CommentForm(request.POST or None)
-        if form.is_valid():
-            c_type = form.cleaned_data.get("content_type")
-            content_type = ContentType.objects.get(model=c_type)
-            obj_id = form.cleaned_data.get('object_id')
-            content_data = form.cleaned_data.get("content")
-            parent_obj = None
-            try:
-                parent_id = int(request.POST.get("parent_id"))
-            except:
-                parent_id = None
-
-            if parent_id:
-                parent_qs = Comment.objects.filter(id=parent_id)
-                if parent_qs.exists() and parent_qs.count() == 1:
-                    parent_obj = parent_qs.first()
-
-            new_comment, created = Comment.objects.get_or_create(
-                user=request.user,
-                content_type=content_type,
-                object_id=obj_id,
-                content=content_data,
-                parent=parent_obj,
-            )
-            return HttpResponseRedirect(
-                new_comment.content_object.get_absolute_url()
-            )
-        else:
-            return self.form_invalid(form)
 
 
 class PostDetailView(View):
 
     def get(self, request, *args, **kwargs):
         view = PostDisplayView.as_view()
-        return view(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        view = PostCommentView.as_view()
         return view(request, *args, **kwargs)
 
 
@@ -148,7 +98,7 @@ class MemorandumListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(MemorandumListView, self).get_context_data(**kwargs)
         memoranda = Memorandum.objects.all()
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "memoranda"
         context["memoranda"] = memoranda
         return context
@@ -161,59 +111,14 @@ class MemorandumDisplayView(HitCountDetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(MemorandumDisplayView, self).get_context_data(**kwargs)
-        comments = self.object.comments
 
         initial_data = {
             "content_type": self.object.get_content_type,
             "object_id": self.object.id,
         }
-        context["comment_form"] = CommentForm(initial=initial_data)
-        context["comments"] = comments
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "memoranda"
         return context
-
-
-class MemorandumCommentView(SingleObjectMixin, FormView):
-    """docstring for MemorandumCommentView"""
-    model = Memorandum
-    form_class = CommentForm
-    template_name = "public_participation/memorandum_detail.html"
-
-    def post(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            return HttpResponseForbidden()
-        self.object = self.get_object()
-
-        form = CommentForm(request.POST or None)
-        if form.is_valid():
-            c_type = form.cleaned_data.get("content_type")
-            content_type = ContentType.objects.get(model=c_type)
-            obj_id = form.cleaned_data.get('object_id')
-            content_data = form.cleaned_data.get("content")
-            parent_obj = None
-            try:
-                parent_id = int(request.POST.get("parent_id"))
-            except:
-                parent_id = None
-
-            if parent_id:
-                parent_qs = Comment.objects.filter(id=parent_id)
-                if parent_qs.exists() and parent_qs.count() == 1:
-                    parent_obj = parent_qs.first()
-
-            new_comment, created = Comment.objects.get_or_create(
-                user=request.user,
-                content_type=content_type,
-                object_id=obj_id,
-                content=content_data,
-                parent=parent_obj,
-            )
-            return HttpResponseRedirect(
-                new_comment.content_object.get_absolute_url()
-            )
-        else:
-            return self.form_invalid(form)
 
 
 class MemorandumDetailView(View):
@@ -221,11 +126,6 @@ class MemorandumDetailView(View):
     def get(self, request, *args, **kwargs):
         view = MemorandumDisplayView.as_view()
         return view(request, *args, **kwargs)
-
-    def post(self, request, *args, **kwargs):
-        view = MemorandumCommentView.as_view()
-        return view(request, *args, **kwargs)
-
 
 
 class PetitionListView(ListView):
@@ -235,7 +135,7 @@ class PetitionListView(ListView):
     def get_context_data(self, **kwargs):
         context = super(PetitionListView, self).get_context_data(**kwargs)
         petitions = Petition.objects.filter(draft=False)
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "petitions"
         context["petitions"] = petitions
         return context
@@ -248,58 +148,14 @@ class PetitionDisplayView(HitCountDetailView):
 
     def get_context_data(self, *args, **kwargs):
         context = super(PetitionDisplayView, self).get_context_data(**kwargs)
-        comments = self.object.comments
 
         initial_data = {
             "content_type": self.object.get_content_type,
             "object_id": self.object.id,
         }
-        context["comment_form"] = CommentForm(initial=initial_data)
-        context["comments"] = comments
-        context["page"] = "resources"
+        context["page"] = "events"
         context["stingo"] = "petitions"
         return context
-
-
-class PetitionCommentView(SingleObjectMixin, FormView):
-    model = Petition
-    form_class = CommentForm
-    template_name = "public_participation/petition_detail.html"
-
-    def post(self, request, *args, **kwargs):
-        if not request.user.is_authenticated:
-            return HttpResponseForbidden()
-        self.object = self.get_object()
-
-        form = CommentForm(request.POST or None)
-        if form.is_valid():
-            c_type = form.cleaned_data.get("content_type")
-            content_type = ContentType.objects.get(model=c_type)
-            obj_id = form.cleaned_data.get('object_id')
-            content_data = form.cleaned_data.get("content")
-            parent_obj = None
-            try:
-                parent_id = int(request.POST.get("parent_id"))
-            except ValueError:
-                parent_id = None
-
-            if parent_id:
-                parent_qs = Comment.objects.filter(id=parent_id)
-                if parent_qs.exists() and parent_qs.count() == 1:
-                    parent_obj = parent_qs.first()
-
-            new_comment, created = Comment.objects.get_or_create(
-                user=request.user,
-                content_type=content_type,
-                object_id=obj_id,
-                content=content_data,
-                parent=parent_obj,
-            )
-            return HttpResponseRedirect(
-                new_comment.content_object.get_absolute_url()
-            )
-        else:
-            return self.form_invalid(form)
 
 
 class PetitionDetailView(View):
@@ -308,6 +164,3 @@ class PetitionDetailView(View):
         view = PetitionDisplayView.as_view()
         return view(request, *args, **kwargs)
 
-    def post(self, request, *args, **kwargs):
-        view = PetitionCommentView.as_view()
-        return view(request, *args, **kwargs)

@@ -1,6 +1,15 @@
 {% extends "other_docs/base_doc.html" %}
 <!-- Main Content -->
 {% block title %}Documents - List{% endblock title %}
+
+{% block sub-navigation %}
+<div class="dz-sub-navigation pr-0">
+  <nav class="dz-sub-navigation__navbar nav d-flex flex-nowrap">
+    {% include '_partials/sub-navigation/docs.html' %}
+  </nav>
+</div>
+{% endblock sub-navigation %}
+
 {% block content %}
 <div class="dz-main__content">
   <div class="dz-bills__content">

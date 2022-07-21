@@ -13,7 +13,7 @@
 
  The above copyright notice and this permission notice shall be included in all
  copies or substantial portions of the Software.
-
+k
  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -53,8 +53,7 @@ LANGUAGES = {
     'sl': 'Slovenian',
     'es': 'Spanish',
     'tr': 'Turkish',
-    'uk': 'Ukrainian',
-    'vi': 'Vietnamese'
+    
 }
 
 def isCanView(ext):
@@ -71,9 +70,9 @@ def isSupportedExt(ext):
 
 def getInternalExtension(fileType):
     mapping = {
-        'text': '.docx',
-        'spreadsheet': '.xlsx',
-        'presentation': '.pptx'
+        'word': '.docx',
+        'cell': '.xlsx',
+        'slide': '.pptx'
     }
 
     return mapping.get(fileType, '.docx')
@@ -91,8 +90,12 @@ def getCorrectName(filename, req):
     return name
 
 def getFileUri(filename, req):
+    path = getStoragePath(filename, req)
     uname = users.getNameFromReq(req)
     host = settings.SITE_DOMAIN.rstrip('/')
+    # If the file does not exist return default file
+    if not os.path.isfile(path):
+        return f'{host}{settings.MEDIA_URL}missing-bill.docx'
     # If the filename has 'bills' then use the path to bills
     if re.search('bills', filename):
         return f'{host}{settings.MEDIA_URL}{filename}'
@@ -105,14 +108,18 @@ def getFileUri(filename, req):
         return f'{host}{settings.MEDIA_URL}{uname}/{filename}'
     
 def getCallbackUrl(filename, req):
+    path = getStoragePath(filename, req)
     host = settings.SITE_DOMAIN.rstrip('/')
+    uname = users.getNameFromReq(req)
+    if not os.path.isfile(path):
+        return f'{host}/bills/track?filename=missing-bill.docx&userAddress=bills'
     if re.search('bills', filename):
         return f'{host}/bills/track?filename={filename}&userAddress=bills'
-    uname = users.getNameFromReq(req)
     return f'{host}/users/~documents/track?filename={filename}&userAddress={uname}'
 
 def getRootFolder(req):
     uname = users.getNameFromReq(req)
+    print('uname -', uname)
     if re.search('bills', str(req)):
         directory = os.path.join(settings.STORAGE_PATH)
     else:
@@ -120,7 +127,6 @@ def getRootFolder(req):
             dirname = req
         else:
             dirname = uname
-        print('dirname', dirname)
         directory = os.path.join(settings.STORAGE_PATH, dirname)
 
     if not os.path.exists(directory):
@@ -142,6 +148,7 @@ def getStoredFiles(req):
     for f in files:
         if os.path.isfile(os.path.join(directory, f)):
             fileInfos.append({ 'type': fileUtils.getFileType(f), 'title': f, 'url': getFileUri(f, req) })
+    print('fileInfos -', fileInfos)
     return fileInfos
 
 def createFile(stream, path, req = None, meta = False):
@@ -193,10 +200,18 @@ def removeFile(filename, req):
         shutil.rmtree(histDir)
 
 def generateFileKey(filename, req):
+    host = settings.SITE_DOMAIN.rstrip('/')
     path = getStoragePath(filename, req)
-    uri = getFileUri(filename, req)
-    stat = os.stat(path)
-
+    uri = ''
+    stat = ''
+    try:
+        uri = getFileUri(filename, req)
+        stat = os.stat(path)
+    except FileNotFoundError:
+        path_missing = 'media/missing-bill.docx'
+        uri = f'{host}{settings.MEDIA_URL}media/missing-bill.docx'
+        stat = os.stat(path_missing)
+    
     h = str(hash(f'{uri}_{stat.st_mtime_ns}'))
     replaced = re.sub(r'[^0-9-.a-zA-Z_=]', '_', h)
     return replaced[:20]
