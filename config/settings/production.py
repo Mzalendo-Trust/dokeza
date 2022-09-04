@@ -68,7 +68,7 @@ STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # MEDIA
 # ------------------------------------------------------------------------------
-# MEDIA_ROOT = '/app/media'
+MEDIA_ROOT = '/app/media'
 
 # TEMPLATES
 # ------------------------------------------------------------------------------
@@ -179,5 +179,5 @@ sentry_sdk.init(
 # ------------------------------------------------------------------------------
 MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 
-STORAGE_PATH = MEDIA_ROOT
+# STORAGE_PATH = MEDIA_ROOT
 SITE_MODE = 'production'

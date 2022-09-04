@@ -45,11 +45,11 @@ services:
 
   certbot:
     container_name: certbot
-    image: certbot:latest
+    image: certbot/certbot
     volumes:
       - staging_certbot_var:/var/www/certbot
       - staging_certbot_etc:/etc/letsencrypt
-    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com,dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
+    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com,dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --dry-run
     networks:  
       - dokeza-network
 
