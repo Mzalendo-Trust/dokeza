@@ -8,7 +8,9 @@ ARG ONLYOFFICE_VALUE=onlyoffice
 RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     apt-get -y update && \
     apt-get -yq install wget apt-transport-https gnupg locales && \
-    apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 0x8320ca65cb2de8e5 && \
+    mkdir -p $HOME/.gnupg && \
+    gpg --no-default-keyring --keyring gnupg-ring:/etc/apt/trusted.gpg.d/onlyoffice.gpg --keyserver keyserver.ubuntu.com --recv-keys 0x8320ca65cb2de8e5 && \
+    chmod 644 /etc/apt/trusted.gpg.d/onlyoffice.gpg && \
     locale-gen en_US.UTF-8 && \
     echo ttf-mscorefonts-installer msttcorefonts/accepted-mscorefonts-eula select true | debconf-set-selections && \
     apt-get -yq install \
@@ -64,11 +66,14 @@ RUN echo "#!/bin/sh\nexit 0" > /usr/sbin/policy-rc.d && \
     service nginx stop && \
     rm -rf /var/lib/apt/lists/*
 
+COPY ./config/ds-config /app/ds/setup/config/
+COPY ./compose/local/documentserver/run-document-server.sh /app/ds/run-document-server.sh
+
 EXPOSE 80 443
 
-ARG REPO_URL="deb http://download.onlyoffice.com/repo/debian squeeze main"
 ARG COMPANY_NAME=onlyoffice
 ARG PRODUCT_NAME=documentserver
+ARG PACKAGE_URL="http://download.onlyoffice.com/install/documentserver/linux/${COMPANY_NAME}-${PRODUCT_NAME}_amd64.deb"
 
 ENV COMPANY_NAME=$COMPANY_NAME \
     PRODUCT_NAME=$PRODUCT_NAME
@@ -79,21 +84,17 @@ COPY ./compose/local/documentserver/overides.css /opt/overides.css
 
 COPY ./compose/local/documentserver/run-document-server.sh /app/ds/run-document-server.sh
 
-RUN echo "$REPO_URL" | tee /etc/apt/sources.list.d/ds.list && \
+RUN wget -q -P /tmp "$PACKAGE_URL" && \
     apt-get -y update && \
     service postgresql start && \
-    apt-get -yq install $COMPANY_NAME-$PRODUCT_NAME && \
+    apt-get -yq install /tmp/$(basename "$PACKAGE_URL") && \
     service postgresql stop && \
     service supervisor stop && \
     chmod 755 /app/ds/*.sh && \
+    rm -f /tmp/$(basename "$PACKAGE_URL") && \
     rm -rf /var/log/$COMPANY_NAME && \
     rm -rf /var/lib/apt/lists/*
-
-
-RUN cp -rf /opt/img /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/img && \
-    cat /opt/overides.css >> /var/www/onlyoffice/documentserver/web-apps/apps/documenteditor/main/resources/css/app.css 
 
 VOLUME /var/log/$COMPANY_NAME /var/lib/$COMPANY_NAME /var/www/$COMPANY_NAME/Data /var/lib/postgresql /var/lib/rabbitmq /var/lib/redis /usr/share/fonts/truetype/custom
 
 ENTRYPOINT ["/app/ds/run-document-server.sh"]
-

@@ -7,8 +7,6 @@ from django.views import defaults as default_views
 from django.views.i18n import JavaScriptCatalog
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
-
-from dokeza_2_0.users.api.views import get_jwt_token
 from .views import (
     HomeView,  HowToView, FaqView, PrivacyView, SearchView,
     ResourcesView, AboutView, ContactView
@@ -59,7 +57,6 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
     path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/auth/token/', get_jwt_token),
     path('api/users/', include('dokeza_2_0.users.api.urls', namespace='users-api')),
 
     # Access APIs

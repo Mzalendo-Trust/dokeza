@@ -45,9 +45,7 @@ services:
 
   certbot:
     container_name: certbot
-    build:
-      context: ./compose/production/certbot
-      dockerfile: Dockerfile
+    image: certbot:latest
     volumes:
       - staging_certbot_var:/var/www/certbot
       - staging_certbot_etc:/etc/letsencrypt
