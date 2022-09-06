@@ -9,8 +9,6 @@ from django.views.generic.detail import SingleObjectMixin
 # from dokeza_2_0.users.models import User, Profile
 from .models import SubmittedIdea
 from .forms import SubmitIdeaForm
-from comments.forms import CommentForm
-from comments.models import Comment
 
 
 class IdeasListView(ListView):
@@ -86,7 +84,6 @@ class IdeaDetailView(DetailView):
     def get_context_data(self, *args, **kwargs):
         context = super(IdeaDetailView, self).get_context_data(
             *args, **kwargs)
-        comments = self.object.comments
 
         initial_data = {
             "content_type": self.object.get_content_type,
@@ -98,8 +95,6 @@ class IdeaDetailView(DetailView):
         context["page"] = 'bills'
         context["stingo"] = 'idea'
         context['mpango'] = 'my_ideas'
-        context["comment_form"] = CommentForm(initial=initial_data)
-        context["comments"] = comments
 
         return context
 

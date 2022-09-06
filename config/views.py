@@ -21,10 +21,6 @@ class JSONResponse(HttpResponse):
         content = JSONRenderer().render(data)
         kwargs['content_type'] = 'application/json'
         super(JSONResponse, self).__init__(content, **kwargs)
-
-
-def Root(request):
-    return JSONResponse({"name": "The Dokeza Annotation Store.", "version": "0.1.0"})
     
 
 class HomeView(TemplateView):

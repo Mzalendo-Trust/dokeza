@@ -22,9 +22,12 @@ if READ_DOT_ENV_FILE:
 # ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/dev/ref/settings/#debug
 DEBUG = env.bool("DJANGO_DEBUG", False)
+# DEBUG = True
+
 # Local time zone. Choices are
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # though not all of them may be available with every OS.
+
 # In Windows, this must be set to your system time zone.
 TIME_ZONE = "Africa/Nairobi"
 # https://docs.djangoproject.com/en/dev/ref/settings/#language-code
@@ -80,20 +83,19 @@ THIRD_PARTY_APPS = [
     "django_celery_beat",
     'django_social_share',
     'hitcount',
-    'taggit',
+    'maintenance_mode',
     "rest_framework",
     "rest_framework.authtoken",
     'schedule',
+    'taggit',
 ]
 
 LOCAL_APPS = [
     "dokeza_2_0.users.apps.UsersConfig",
     # Your stuff: custom apps go here
-    'annotator',
     'bills',
     'tracker',
     'highlights',
-    'comments',
     'ideas.apps.IdeasConfig',
     'other_docs.apps.DocsConfig',
     'posts',
@@ -157,6 +159,7 @@ MIDDLEWARE = [
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.common.BrokenLinkEmailsMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    'maintenance_mode.middleware.MaintenanceModeMiddleware',
 ]
 
 # STATIC
@@ -168,7 +171,7 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = [
     str(APPS_DIR / "static")
-    ]
+]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -208,6 +211,7 @@ TEMPLATES = [
                 "django.template.context_processors.tz",
                 "django.contrib.messages.context_processors.messages",
                 "dokeza_2_0.utils.context_processors.settings_context",
+                'maintenance_mode.context_processors.maintenance_mode',
             ],
         },
     }
@@ -280,8 +284,8 @@ LOGGING = {
 
 # Broken link settings.
 IGNORABLE_404_URLS = [
-    re.compile(r'\.(php|cgi)$'),
-    re.compile(r'^.*phpmyadmin.*'),
+    re.compile(r'.*php.*'),
+    re.compile(r'.*config.*'),
     re.compile(r'^/apple-touch-icon.*\.png$'),
     re.compile(r'^/favicon\.ico$'),
     re.compile(r'^/robots\.txt$'),
@@ -292,7 +296,7 @@ IGNORABLE_404_URLS = [
     re.compile(r'^/jars'),
     re.compile(r'.*/wp-admin/'),
     re.compile(r'.*/web-apps/.*'),
-    re.compile(r'.*/phpunit.*'),
+    re.compile(r'.*config.*'),
     re.compile(r'.*/Autodiscover/'),
     re.compile(r'.*/web-console/'),
     re.compile(r'.*/jmx-console/'),
@@ -313,7 +317,9 @@ IGNORABLE_404_URLS = [
     re.compile(r'.*console.*'),
     re.compile(r'^/login$'),
     re.compile(r'.*currentsetting.*'),
-
+    re.compile(r'.*nodestatus.*'),
+    re.compile(r'.*get_absolute_url.*'),
+    re.compile(r'.*treasurable.*'),
 ]
 SEND_BROKEN_LINK_EMAILS = False
 
@@ -350,9 +356,6 @@ ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USER_MODEL_EMAIL_FIELD = 'email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = "mandatory"
-ACCOUNT_USER_DISPLAY = 'email'
-ACCOUNT_USER_MODEL_USERNAME_FIELD = 'email'
-ACCOUNT_EMAIL_SUBJECT_PREFIX = 'Hello from Dokeza '
 ACCOUNT_ADAPTER = "dokeza_2_0.users.adapters.AccountAdapter"
 SOCIALACCOUNT_ADAPTER = "dokeza_2_0.users.adapters.SocialAccountAdapter"
 
@@ -380,6 +383,9 @@ CORS_URLS_REGEX = r"^/api/.*$"
 
 # Your stuff...
 # ------------------------------------------------------------------------------
+
+# Added with Django 3.2 LTS
+DEFAULT_AUTO_FIELD = 'django.db.models.AutoField'
 
 JWT_AUTH = {
     'JWT_RESPONSE_PAYLOAD_HANDLER':
@@ -449,7 +455,6 @@ CKEDITOR_CONFIGS = {
 
 
 # Document Server Settings
-
 FILE_SIZE_MAX = 5242880
 
 DOC_SERV_VIEWED = [".djvu", ".xps"]

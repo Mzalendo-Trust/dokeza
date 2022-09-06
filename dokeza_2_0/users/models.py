@@ -6,7 +6,7 @@ from django.urls import reverse
 from django.db import models
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from .boundaries import KENYAN_CONSTITUENCIES, KENYAN_COUNTIES
 
@@ -134,7 +134,10 @@ class Visitor(AnonymousUser):
     """
 
     def __str__(self):
-        return 'Visitor'
+        self.first_name = 'Mgeni'
+        self.last_name = 'Mzalendo'
+
+        return f'{first_name}{last_name}'
 
 
 @receiver(post_save, sender=User)

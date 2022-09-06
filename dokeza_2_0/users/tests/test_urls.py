@@ -30,11 +30,6 @@ def test_documents():
     assert resolve("/users/~documents/").view_name == "users:documents"
 
 
-def test_annotations():
-    assert reverse("users:annotations") == "/users/~annotations/"
-    assert resolve("/users/~annotations/").view_name == "users:annotations"
-
-
 def test_comments():
     assert reverse("users:comments") == "/users/~comments/"
     assert resolve("/users/~comments/").view_name == "users:comments"

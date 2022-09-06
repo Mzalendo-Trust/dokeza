@@ -85,6 +85,8 @@
         <h4 class="card-title bio-name">{{ object.full_name }}</h4>
         {% else %}
         <h4 class="card-title bio-name">{{ object.email }}</h4>
+        <br>
+        <p>Please click on the <em><strong>Change Profile</strong></em> button and fill in your profile details, especially your First Name and Last Name. The names help to filter bills, annotations and comments that match your selections.</p>
         {% endif %}
         <h6 class="card-subtitle mb-2 text-muted">{{ object.job_description }}</h6>
       </div>
@@ -95,6 +97,7 @@
         {{ object.profile.bio }}
         {% else %}
         <h4 class="card-title">{{ object.email }}</h4>
+
         <em>Please add a short biography.</em>
         {% endif %}
       </p>
@@ -121,7 +124,7 @@
       </p>
       <!-- Settings buttons -->
       {% if not object.profile %}
-      <p>Please fill in your profile details. It will help to filter bills, annotations and comments that match your selections.</p>
+      <p>Please make sure that you fill in your profile details, especially your First Name and Last Name. The names help to filter bills, annotations and comments that match your selections.</p>
       {% endif %}
       <!-- End Action buttons -->
     </div>

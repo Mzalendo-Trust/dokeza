@@ -4,8 +4,6 @@ from rest_framework.serializers import ModelSerializer, HyperlinkedIdentityField
 from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 # from dokeza_2_0.users.api.serializers import UserDetailSerializer
-from comments.api.serializers import CommentSerializer
-from comments.models import Comment
 
 from bills.models import Bill
 
@@ -31,8 +29,7 @@ class BillCreateUpdateSerializer(ModelSerializer):
 
 class BillDetailSerializer(ModelSerializer):
     # owner = UserDetailSerializer(read_only=True)
-    word_doc = SerializerMethodField()
-    comments = SerializerMethodField()
+    word_doc = SerializerMethodField(
     # delete_url = bill_delete_url
 
     class Meta:
