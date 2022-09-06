@@ -97,14 +97,14 @@ class BillDetailView(DetailView):
             house = 'assembly'
         else:
             house = 'senate'
-        
+
         filename = str(self.object.word_doc)
         ext = fileUtils.getFileExt(filename)
 
         fileUri = docManager.getFileUri(filename, self.request)
         docKey = docManager.generateFileKey(filename, self.request)
         fileType = fileUtils.getFileType(filename)
-        
+
         user = self.request.user
         if user.is_anonymous:
             user.first_name = 'Mgeni'
@@ -160,7 +160,7 @@ class BillDetailView(DetailView):
                     'customer': {
                         'address': 'P.O. Box 21765 — 00505 Nairobi, Kenya',
                         'logo': settings.SITE_DOMAIN + '/static/images/dokeza-logo-banner.png',
-                        'email':'mzalendo.devops@gmail.com'
+                        'email': 'mzalendo.devops@gmail.com'
                     },
                     'compactHeader': False,
                     'goback': {
@@ -182,6 +182,4 @@ class BillDetailView(DetailView):
         context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
         context['fileType'] = fileType
         context['apiUrl'] = settings.DOC_SERV_API_URL
-        print('edConfig -', edConfig)
         return context
-    

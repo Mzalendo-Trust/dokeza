@@ -179,5 +179,5 @@ sentry_sdk.init(
 # ------------------------------------------------------------------------------
 MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 
-# STORAGE_PATH = MEDIA_ROOT
+STORAGE_PATH = MEDIA_ROOT
 SITE_MODE = 'production'

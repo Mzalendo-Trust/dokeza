@@ -253,7 +253,7 @@ update_rabbitmq_setting(){
     ${JSON} -I -e "this.queue.type = 'rabbitmq'"
     ${JSON} -I -e "this.rabbitmq.url = '${AMQP_URI}'"
   fi
-  
+
   if [ "${AMQP_TYPE}" == "activemq" ]; then
     ${JSON} -I -e "if(this.queue===undefined)this.queue={};"
     ${JSON} -I -e "this.queue.type = 'activemq'"
@@ -287,7 +287,7 @@ update_rabbitmq_setting(){
       *)
         ${JSON} -I -e "delete this.activemq.connectOptions.transport"
         ;;
-    esac 
+    esac
   fi
 }
 
@@ -317,7 +317,7 @@ update_ds_settings(){
     ${JSON_EXAMPLE} -I -e "this.server.token.secret = '${JWT_SECRET}'"
     ${JSON_EXAMPLE} -I -e "this.server.token.authorizationHeader = '${JWT_HEADER}'"
   fi
- 
+
   if [ "${USE_UNAUTHORIZED_STORAGE}" == "true" ]; then
     ${JSON} -I -e "if(this.services.CoAuthoring.requestDefaults===undefined)this.services.CoAuthoring.requestDefaults={}"
     ${JSON} -I -e "if(this.services.CoAuthoring.requestDefaults.rejectUnauthorized===undefined)this.services.CoAuthoring.requestDefaults.rejectUnauthorized=false"
@@ -468,7 +468,15 @@ update_nginx_settings(){
   if [ -f "${NGINX_ONLYOFFICE_EXAMPLE_CONF}" ]; then
     sed 's/linux/docker/' -i ${NGINX_ONLYOFFICE_EXAMPLE_CONF}
   fi
+
+  # RA-Overide
+  # Comment out the 'ssl on;'
+  sed 's/ssl on;/#ssl on;/g' -i ${NGINX_ONLYOFFICE_CONF}
+  # Comment out 'ssl_verify_client true;'
+  sed 's/ssl_verify_client true;/#ssl_verify_client true;/g' -i ${NGINX_ONLYOFFICE_CONF}
 }
+
+
 
 update_supervisor_settings(){
   # Copy modified supervisor start script
@@ -573,7 +581,7 @@ else
   # read settings after the data container in ready state
   # to prevent get unconfigureted data
   read_setting
-  
+
   update_welcome_page
 fi
 
@@ -603,7 +611,7 @@ if [ ${ONLYOFFICE_DATA_CONTAINER} != "true" ]; then
 
   update_supervisor_settings
   service supervisor start
-  
+
   # start cron to enable log rotating
   update_logrotate_settings
   service cron start

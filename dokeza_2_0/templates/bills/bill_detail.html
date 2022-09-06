@@ -43,7 +43,7 @@
           </div>
           <div class="bill-pic">
             {% if bill.bill_pic %}
-              <img class="bill-cover" src="{{ bill.bill_pic.url }}" alt="">
+              <img class="bill-cover" src="{{ MEDIA_URL }}{{ bill.bill_pic.url }}" alt="">
             {% else %}
               {% if bill.bill_from == 1 %}
                 <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="">
