@@ -45,13 +45,11 @@ services:
 
   certbot:
     container_name: certbot
-    build:
-      context: ./compose/production/certbot
-      dockerfile: Dockerfile
+    image: certbot/certbot
     volumes:
       - staging_certbot_var:/var/www/certbot
       - staging_certbot_etc:/etc/letsencrypt
-    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
+    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com,dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --dry-run
     networks:  
       - dokeza-network
 
@@ -78,6 +76,19 @@ services:
       - ./.envs/.production/.django-staging
       - ./.envs/.production/.postgres
     command: /start
+    networks:
+      - dokeza-network
+
+  trackerservice:
+    build:
+      context: ./tracker/reportservice
+      dockerfile: Dockerfile
+    image: dokeza_2_0_tracker_service
+    container_name: trackerservice
+    depends_on:
+      - postgres
+      - django
+    restart: always
     networks:
       - dokeza-network
 

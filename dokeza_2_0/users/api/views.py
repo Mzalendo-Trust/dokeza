@@ -1,7 +1,6 @@
 import datetime
 from django.conf import settings
 from django.contrib.auth import get_user_model
-import jwt
 from rest_framework import status
 from rest_framework.decorators import action
 from rest_framework.generics import (
@@ -19,16 +18,11 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_200_OK, HTTP_400_BAD_REQUEST
 from rest_framework.views import APIView
 from rest_framework.viewsets import GenericViewSet
-from rest_framework_jwt.settings import api_settings
-from rest_framework_jwt.utils import jwt_payload_handler
-from .serializers import UserCreateSerializer, UserLoginSerializer
 
+from .serializers import UserCreateSerializer, UserLoginSerializer
 from .serializers import UserSerializer
 from .permissions import IsOwnerOrReadOnly
 
-jwt_payload_handler = api_settings.JWT_PAYLOAD_HANDLER
-jwt_encode_handler = api_settings.JWT_ENCODE_HANDLER
-jwt_response_payload_handler = api_settings.JWT_RESPONSE_PAYLOAD_HANDLER
 
 CONSUMER_KEY = 'i-want-to-quote-7TfWi4aJ3KkfZg2tNsMEDhqd'
 CONSUMER_SECRET = settings.SECRET_KEY
@@ -81,30 +75,8 @@ class UserLoginAPIView(APIView):
         return Response(serializer.errors, status=HTTP_400_BAD_REQUEST)
 
 
-class GetJSONWebToken(APIView):
-    """
-    GetJSONWebToken is called and accepts the request.user, validates the user login credentials and sends back a JSON with the 'token'. If the user is Anonymous, the message is given to login or register.
-    """
-    permission_classes = [IsOwnerOrReadOnly, IsAuthenticated]
-
-    def get(self, request, *args, **kwargs):
-        user_obj = request.user
-        if user_obj.is_authenticated():
-            qs = User.objects.filter(email=user_obj.email)
-            user_id = qs.first().pk
-            token = jwt.encode({
-                'consumerKey': CONSUMER_KEY,
-                'userId': user_id,
-                'issuedAt': _now().isoformat() + 'Z',
-                'ttl': CONSUMER_TTL
-            }, CONSUMER_SECRET)
-            return Response(token)
-        else:
-            return Response('Please login if you have registered and register if you have not registered.')
-
-
 def _now():
     return datetime.datetime.utcnow().replace(microsecond=0)
 
 
-get_jwt_token = GetJSONWebToken.as_view()
+

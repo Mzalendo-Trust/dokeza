@@ -1,28 +1,50 @@
 #!/bin/bash
 
+function clean_exit {
+  /usr/bin/documentserver-prepare4shutdown.sh
+}
+
+trap clean_exit SIGTERM
+
 # Define '**' behavior explicitly
 shopt -s globstar
 
 APP_DIR="/var/www/${COMPANY_NAME}/documentserver"
 DATA_DIR="/var/www/${COMPANY_NAME}/Data"
+PRIVATE_DATA_DIR="${DATA_DIR}/.private"
+DS_RELEASE_DATE="${PRIVATE_DATA_DIR}/ds_release_date"
 LOG_DIR="/var/log/${COMPANY_NAME}"
 DS_LOG_DIR="${LOG_DIR}/documentserver"
 LIB_DIR="/var/lib/${COMPANY_NAME}"
 DS_LIB_DIR="${LIB_DIR}/documentserver"
 CONF_DIR="/etc/${COMPANY_NAME}/documentserver"
+IS_UPGRADE="false"
 
 ONLYOFFICE_DATA_CONTAINER=${ONLYOFFICE_DATA_CONTAINER:-false}
 ONLYOFFICE_DATA_CONTAINER_HOST=${ONLYOFFICE_DATA_CONTAINER_HOST:-localhost}
 ONLYOFFICE_DATA_CONTAINER_PORT=80
 
+RELEASE_DATE="$(stat -c="%y" ${APP_DIR}/server/DocService/docservice | sed -r 's/=([0-9]+)-([0-9]+)-([0-9]+) ([0-9:.+ ]+)/\1-\2-\3/')";
+if [ -f ${DS_RELEASE_DATE} ]; then
+  PREV_RELEASE_DATE=$(head -n 1 ${DS_RELEASE_DATE})
+else
+  PREV_RELEASE_DATE="0"
+fi
+
+if [ "${RELEASE_DATE}" != "${PREV_RELEASE_DATE}" ]; then
+  if [ ${ONLYOFFICE_DATA_CONTAINER} != "true" ]; then
+    IS_UPGRADE="true";
+  fi
+fi
+
 SSL_CERTIFICATES_DIR="${DATA_DIR}/certs"
-if [[ -z $SSL_CERTIFICATE_PATH ]] && [[ -f ${SSL_CERTIFICATES_DIR}/onlyoffice.crt ]]; then
-  SSL_CERTIFICATE_PATH=${SSL_CERTIFICATES_DIR}/onlyoffice.crt
+if [[ -z $SSL_CERTIFICATE_PATH ]] && [[ -f ${SSL_CERTIFICATES_DIR}/${COMPANY_NAME}.crt ]]; then
+  SSL_CERTIFICATE_PATH=${SSL_CERTIFICATES_DIR}/${COMPANY_NAME}.crt
 else
   SSL_CERTIFICATE_PATH=${SSL_CERTIFICATE_PATH:-${SSL_CERTIFICATES_DIR}/tls.crt}
 fi
-if [[ -z $SSL_KEY_PATH ]] && [[ -f ${SSL_CERTIFICATES_DIR}/onlyoffice.key ]]; then
-  SSL_KEY_PATH=${SSL_CERTIFICATES_DIR}/onlyoffice.key
+if [[ -z $SSL_KEY_PATH ]] && [[ -f ${SSL_CERTIFICATES_DIR}/${COMPANY_NAME}.key ]]; then
+  SSL_KEY_PATH=${SSL_CERTIFICATES_DIR}/${COMPANY_NAME}.key
 else
   SSL_KEY_PATH=${SSL_KEY_PATH:-${SSL_CERTIFICATES_DIR}/tls.key}
 fi
@@ -45,9 +67,27 @@ NGINX_WORKER_PROCESSES=${NGINX_WORKER_PROCESSES:-1}
 NGINX_WORKER_CONNECTIONS=${NGINX_WORKER_CONNECTIONS:-$(ulimit -n)}
 
 JWT_ENABLED=${JWT_ENABLED:-false}
+
+# validate user's vars before usinig in json
+if [ "${JWT_ENABLED}" == "true" ]; then
+  JWT_ENABLED="true"
+else
+  JWT_ENABLED="false"
+fi
+
 JWT_SECRET=${JWT_SECRET:-secret}
 JWT_HEADER=${JWT_HEADER:-Authorization}
 JWT_IN_BODY=${JWT_IN_BODY:-false}
+
+WOPI_ENABLED=${WOPI_ENABLED:-false}
+
+GENERATE_FONTS=${GENERATE_FONTS:-true}
+
+if [[ ${PRODUCT_NAME} == "documentserver" ]]; then
+  REDIS_ENABLED=false
+else
+  REDIS_ENABLED=true
+fi
 
 ONLYOFFICE_DEFAULT_CONFIG=${CONF_DIR}/local.json
 ONLYOFFICE_LOG4JS_CONFIG=${CONF_DIR}/log4js/production.json
@@ -61,12 +101,17 @@ JSON_EXAMPLE="${JSON_BIN} -q -f ${ONLYOFFICE_EXAMPLE_CONFIG}"
 LOCAL_SERVICES=()
 
 PG_ROOT=/var/lib/postgresql
-PG_VERSION=10
 PG_NAME=main
 PGDATA=${PG_ROOT}/${PG_VERSION}/${PG_NAME}
 PG_NEW_CLUSTER=false
 RABBITMQ_DATA=/var/lib/rabbitmq
 REDIS_DATA=/var/lib/redis
+
+if [ "${LETS_ENCRYPT_DOMAIN}" != "" -a "${LETS_ENCRYPT_MAIL}" != "" ]; then
+  LETSENCRYPT_ROOT_DIR="/etc/letsencrypt/live"
+  SSL_CERTIFICATE_PATH=${LETSENCRYPT_ROOT_DIR}/${LETS_ENCRYPT_DOMAIN}/fullchain.pem
+  SSL_KEY_PATH=${LETSENCRYPT_ROOT_DIR}/${LETS_ENCRYPT_DOMAIN}/privkey.pem
+fi
 
 read_setting(){
   deprecated_var POSTGRESQL_SERVER_HOST DB_HOST
@@ -78,7 +123,13 @@ read_setting(){
   deprecated_var AMQP_SERVER_URL AMQP_URI
   deprecated_var AMQP_SERVER_TYPE AMQP_TYPE
 
+  METRICS_ENABLED="${METRICS_ENABLED:-false}"
+  METRICS_HOST="${METRICS_HOST:-localhost}"
+  METRICS_PORT="${METRICS_PORT:-8125}"
+  METRICS_PREFIX="${METRICS_PREFIX:-.ds}"
+
   DB_HOST=${DB_HOST:-${POSTGRESQL_SERVER_HOST:-$(${JSON} services.CoAuthoring.sql.dbHost)}}
+  DB_TYPE=${DB_TYPE:-$(${JSON} services.CoAuthoring.sql.type)}
   case $DB_TYPE in
     "postgres")
       DB_PORT=${DB_PORT:-"5432"}
@@ -97,7 +148,6 @@ read_setting(){
   DB_NAME=${DB_NAME:-${POSTGRESQL_SERVER_DB_NAME:-$(${JSON} services.CoAuthoring.sql.dbName)}}
   DB_USER=${DB_USER:-${POSTGRESQL_SERVER_USER:-$(${JSON} services.CoAuthoring.sql.dbUser)}}
   DB_PWD=${DB_PWD:-${POSTGRESQL_SERVER_PASS:-$(${JSON} services.CoAuthoring.sql.dbPass)}}
-  DB_TYPE=${DB_TYPE:-$(${JSON} services.CoAuthoring.sql.type)}
 
   RABBITMQ_SERVER_URL=${RABBITMQ_SERVER_URL:-$(${JSON} rabbitmq.url)}
   AMQP_URI=${AMQP_URI:-${AMQP_SERVER_URL:-${RABBITMQ_SERVER_URL}}}
@@ -179,6 +229,15 @@ waiting_for_redis(){
 waiting_for_datacontainer(){
   waiting_for_connection ${ONLYOFFICE_DATA_CONTAINER_HOST} ${ONLYOFFICE_DATA_CONTAINER_PORT}
 }
+
+update_statsd_settings(){
+  ${JSON} -I -e "if(this.statsd===undefined)this.statsd={};"
+  ${JSON} -I -e "this.statsd.useMetrics = '${METRICS_ENABLED}'"
+  ${JSON} -I -e "this.statsd.host = '${METRICS_HOST}'"
+  ${JSON} -I -e "this.statsd.port = '${METRICS_PORT}'"
+  ${JSON} -I -e "this.statsd.prefix = '${METRICS_PREFIX}'"
+}
+
 update_db_settings(){
   ${JSON} -I -e "this.services.CoAuthoring.sql.type = '${DB_TYPE}'"
   ${JSON} -I -e "this.services.CoAuthoring.sql.dbHost = '${DB_HOST}'"
@@ -233,36 +292,40 @@ update_rabbitmq_setting(){
 }
 
 update_redis_settings(){
+  ${JSON} -I -e "if(this.services.CoAuthoring.redis===undefined)this.services.CoAuthoring.redis={};"
   ${JSON} -I -e "this.services.CoAuthoring.redis.host = '${REDIS_SERVER_HOST}'"
   ${JSON} -I -e "this.services.CoAuthoring.redis.port = '${REDIS_SERVER_PORT}'"
 }
 
 update_ds_settings(){
-  if [ "${JWT_ENABLED}" == "true" ]; then
-    ${JSON} -I -e "this.services.CoAuthoring.token.enable.browser = ${JWT_ENABLED}"
-    ${JSON} -I -e "this.services.CoAuthoring.token.enable.request.inbox = ${JWT_ENABLED}"
-    ${JSON} -I -e "this.services.CoAuthoring.token.enable.request.outbox = ${JWT_ENABLED}"
+  ${JSON} -I -e "this.services.CoAuthoring.token.enable.browser = ${JWT_ENABLED}"
+  ${JSON} -I -e "this.services.CoAuthoring.token.enable.request.inbox = ${JWT_ENABLED}"
+  ${JSON} -I -e "this.services.CoAuthoring.token.enable.request.outbox = ${JWT_ENABLED}"
 
-    ${JSON} -I -e "this.services.CoAuthoring.secret.inbox.string = '${JWT_SECRET}'"
-    ${JSON} -I -e "this.services.CoAuthoring.secret.outbox.string = '${JWT_SECRET}'"
-    ${JSON} -I -e "this.services.CoAuthoring.secret.session.string = '${JWT_SECRET}'"
+  ${JSON} -I -e "this.services.CoAuthoring.secret.inbox.string = '${JWT_SECRET}'"
+  ${JSON} -I -e "this.services.CoAuthoring.secret.outbox.string = '${JWT_SECRET}'"
+  ${JSON} -I -e "this.services.CoAuthoring.secret.session.string = '${JWT_SECRET}'"
 
-    ${JSON} -I -e "this.services.CoAuthoring.token.inbox.header = '${JWT_HEADER}'"
-    ${JSON} -I -e "this.services.CoAuthoring.token.outbox.header = '${JWT_HEADER}'"
+  ${JSON} -I -e "this.services.CoAuthoring.token.inbox.header = '${JWT_HEADER}'"
+  ${JSON} -I -e "this.services.CoAuthoring.token.outbox.header = '${JWT_HEADER}'"
 
-    ${JSON} -I -e "this.services.CoAuthoring.token.inbox.inBody = ${JWT_IN_BODY}"
-    ${JSON} -I -e "this.services.CoAuthoring.token.outbox.inBody = ${JWT_IN_BODY}"
+  ${JSON} -I -e "this.services.CoAuthoring.token.inbox.inBody = ${JWT_IN_BODY}"
+  ${JSON} -I -e "this.services.CoAuthoring.token.outbox.inBody = ${JWT_IN_BODY}"
 
-    if [ -f "${ONLYOFFICE_EXAMPLE_CONFIG}" ] && [ "${JWT_ENABLED}" == "true" ]; then
-      ${JSON_EXAMPLE} -I -e "this.server.token.enable = ${JWT_ENABLED}"
-      ${JSON_EXAMPLE} -I -e "this.server.token.secret = '${JWT_SECRET}'"
-      ${JSON_EXAMPLE} -I -e "this.server.token.authorizationHeader = '${JWT_HEADER}'"
-    fi
+  if [ -f "${ONLYOFFICE_EXAMPLE_CONFIG}" ]; then
+    ${JSON_EXAMPLE} -I -e "this.server.token.enable = ${JWT_ENABLED}"
+    ${JSON_EXAMPLE} -I -e "this.server.token.secret = '${JWT_SECRET}'"
+    ${JSON_EXAMPLE} -I -e "this.server.token.authorizationHeader = '${JWT_HEADER}'"
   fi
-
+ 
   if [ "${USE_UNAUTHORIZED_STORAGE}" == "true" ]; then
     ${JSON} -I -e "if(this.services.CoAuthoring.requestDefaults===undefined)this.services.CoAuthoring.requestDefaults={}"
     ${JSON} -I -e "if(this.services.CoAuthoring.requestDefaults.rejectUnauthorized===undefined)this.services.CoAuthoring.requestDefaults.rejectUnauthorized=false"
+  fi
+
+  if [ "${WOPI_ENABLED}" == "true" ]; then
+    ${JSON} -I -e "if(this.wopi===undefined)this.wopi={}"
+    ${JSON} -I -e "this.wopi.enable = true"
   fi
 }
 
@@ -294,21 +357,43 @@ create_db_tbl() {
   esac
 }
 
-create_postgresql_tbl() {
-  CONNECTION_PARAMS="-h$DB_HOST -p$DB_PORT -U$DB_USER -w"
+upgrade_db_tbl() {
+  case $DB_TYPE in
+    "postgres")
+      upgrade_postgresql_tbl
+    ;;
+    "mariadb"|"mysql")
+      upgrade_mysql_tbl
+    ;;
+  esac
+}
+
+upgrade_postgresql_tbl() {
   if [ -n "$DB_PWD" ]; then
     export PGPASSWORD=$DB_PWD
   fi
 
-  PSQL="psql -q $CONNECTION_PARAMS"
-  CREATEDB="createdb $CONNECTION_PARAMS"
+  PSQL="psql -q -h$DB_HOST -p$DB_PORT -d$DB_NAME -U$DB_USER -w"
 
-  # Create db on remote server
-  if $PSQL -lt | cut -d\| -f 1 | grep -qw $DB_NAME | grep 0; then
-    $CREATEDB $DB_NAME
+  $PSQL -f "$APP_DIR/server/schema/postgresql/removetbl.sql"
+  $PSQL -f "$APP_DIR/server/schema/postgresql/createdb.sql"
+}
+
+upgrade_mysql_tbl() {
+  CONNECTION_PARAMS="-h$DB_HOST -P$DB_PORT -u$DB_USER -p$DB_PWD -w"
+  MYSQL="mysql -q $CONNECTION_PARAMS"
+
+  $MYSQL $DB_NAME < "$APP_DIR/server/schema/mysql/removetbl.sql" >/dev/null 2>&1
+  $MYSQL $DB_NAME < "$APP_DIR/server/schema/mysql/createdb.sql" >/dev/null 2>&1
+}
+
+create_postgresql_tbl() {
+  if [ -n "$DB_PWD" ]; then
+    export PGPASSWORD=$DB_PWD
   fi
 
-  $PSQL -d "$DB_NAME" -f "$APP_DIR/server/schema/postgresql/createdb.sql"
+  PSQL="psql -q -h$DB_HOST -p$DB_PORT -d$DB_NAME -U$DB_USER -w"
+  $PSQL -f "$APP_DIR/server/schema/postgresql/createdb.sql"
 }
 
 create_mysql_tbl() {
@@ -325,11 +410,13 @@ update_welcome_page() {
   WELCOME_PAGE="${APP_DIR}-example/welcome/docker.html"
   if [[ -e $WELCOME_PAGE ]]; then
     DOCKER_CONTAINER_ID=$(basename $(cat /proc/1/cpuset))
-    if [[ -x $(command -v docker) ]]; then
-      DOCKER_CONTAINER_NAME=$(docker inspect --format="{{.Name}}" $DOCKER_CONTAINER_ID)
-      sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_NAME#/}"'/' -i $WELCOME_PAGE
-    else
-      sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_ID::12}"'/' -i $WELCOME_PAGE
+    if (( ${#DOCKER_CONTAINER_ID} >= 12 )); then
+      if [[ -x $(command -v docker) ]]; then
+        DOCKER_CONTAINER_NAME=$(docker inspect --format="{{.Name}}" $DOCKER_CONTAINER_ID)
+        sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_NAME#/}"'/' -i $WELCOME_PAGE
+      else
+        sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_ID::12}"'/' -i $WELCOME_PAGE
+      fi
     fi
   fi
 }
@@ -398,8 +485,13 @@ update_logrotate_settings(){
   sed 's|\(^su\b\).*|\1 root root|' -i /etc/logrotate.conf
 }
 
+update_release_date(){
+  mkdir -p ${PRIVATE_DATA_DIR}
+  echo ${RELEASE_DATE} > ${DS_RELEASE_DATE}
+}
+
 # create base folders
-for i in converter docservice spellchecker metrics; do
+for i in converter docservice metrics; do
   mkdir -p "${DS_LOG_DIR}/$i"
 done
 
@@ -419,6 +511,10 @@ done
 if [ ${ONLYOFFICE_DATA_CONTAINER_HOST} = "localhost" ]; then
 
   read_setting
+
+  if [ $METRICS_ENABLED = "true" ]; then
+    update_statsd_settings
+  fi
 
   update_welcome_page
 
@@ -459,14 +555,16 @@ if [ ${ONLYOFFICE_DATA_CONTAINER_HOST} = "localhost" ]; then
     rm -rf /var/run/rabbitmq
   fi
 
-  if [ ${REDIS_SERVER_HOST} != "localhost" ]; then
-    update_redis_settings
-  else
-    # change rights for redis directory
-    chown -R redis:redis ${REDIS_DATA}
-    chmod -R 750 ${REDIS_DATA}
+  if [ ${REDIS_ENABLED} = "true" ]; then
+    if [ ${REDIS_SERVER_HOST} != "localhost" ]; then
+      update_redis_settings
+    else
+      # change rights for redis directory
+      chown -R redis:redis ${REDIS_DATA}
+      chmod -R 750 ${REDIS_DATA}
 
-    LOCAL_SERVICES+=("redis-server")
+      LOCAL_SERVICES+=("redis-server")
+    fi
   fi
 else
   # no need to update settings just wait for remote data
@@ -492,7 +590,14 @@ fi
 if [ ${ONLYOFFICE_DATA_CONTAINER} != "true" ]; then
   waiting_for_db
   waiting_for_amqp
-  waiting_for_redis
+  if [ ${REDIS_ENABLED} = "true" ]; then
+    waiting_for_redis
+  fi
+
+  if [ "${IS_UPGRADE}" = "true" ]; then
+    upgrade_db_tbl
+    update_release_date
+  fi
 
   update_nginx_settings
 
@@ -508,8 +613,17 @@ fi
 # it run in all cases.
 service nginx start
 
+if [ "${LETS_ENCRYPT_DOMAIN}" != "" -a "${LETS_ENCRYPT_MAIL}" != "" ]; then
+  if [ ! -f "${SSL_CERTIFICATE_PATH}" -a ! -f "${SSL_KEY_PATH}" ]; then
+    documentserver-letsencrypt.sh ${LETS_ENCRYPT_MAIL} ${LETS_ENCRYPT_DOMAIN}
+  fi
+fi
+
 # Regenerate the fonts list and the fonts thumbnails
-documentserver-generate-allfonts.sh ${ONLYOFFICE_DATA_CONTAINER}
+if [ "${GENERATE_FONTS}" == "true" ]; then
+  documentserver-generate-allfonts.sh ${ONLYOFFICE_DATA_CONTAINER}
+fi
 documentserver-static-gzip.sh ${ONLYOFFICE_DATA_CONTAINER}
 
-tail -f /var/log/${COMPANY_NAME}/**/*.log
+tail -f /var/log/${COMPANY_NAME}/**/*.log &
+wait $!

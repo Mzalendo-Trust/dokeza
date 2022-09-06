@@ -1,11 +1,10 @@
 # FROM node:14
 # FROM keymetrics/pm2:latest-alpine
 
-FROM node:14.15.4-alpine3.12
+FROM node:16.15-alpine3.14
 
 # Installs latest Chromium (85) package.
 RUN apk add --no-cache \
-    chromium \
     nss \
     freetype \
     freetype-dev \
@@ -33,6 +32,6 @@ RUN yarn global add pm2
 # Expose ports needed to use Keymetrics.io
 # EXPOSE 80 443 43554
 
-COPY . .
+COPY . /app
 
 CMD [ "pm2-runtime", "start", "pm2.json" ]

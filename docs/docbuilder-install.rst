@@ -12,7 +12,7 @@ Then install it: ::
 	
 *Install the Nodejs example*
 
-[Download](https://api.onlyoffice.com/app_data/docbuilder/Node.js%20Example.zip) the nodejs example and unzip it.
+`Download <https://api.onlyoffice.com/app_data/docbuilder/Node.js%20Example.zip>`_ the nodejs example and unzip it.
 We install the environment.
 
 	`sudo apt install nodejs`
@@ -41,5 +41,4 @@ We go into our Django project and launch the server: ::
 	python3 manage.py runserver 0.0.0.0:3300
 
 
-	
 

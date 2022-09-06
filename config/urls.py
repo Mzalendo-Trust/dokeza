@@ -7,8 +7,6 @@ from django.views import defaults as default_views
 from django.views.i18n import JavaScriptCatalog
 from django.views.generic import TemplateView
 from rest_framework.authtoken.views import obtain_auth_token
-
-from dokeza_2_0.users.api.views import get_jwt_token
 from .views import (
     HomeView,  HowToView, FaqView, PrivacyView, SearchView,
     ResourcesView, AboutView, ContactView
@@ -26,16 +24,17 @@ urlpatterns = [
     path('resources/', ResourcesView.as_view(), name='resources'),
     path('contacts/', ContactView.as_view(), name='contacts'),
     path('tag/<slug>/', TagIndexView.as_view(), name='tagged'),
-    path('google6b1213ccd54381fc\.html', TemplateView.as_view(template_name="google6b1213ccd54381fc.html")),
-    
+    path('google6b1213ccd54381fc.html', TemplateView.as_view(template_name="google6b1213ccd54381fc.html")),
+
     # Django Admin, use {% url 'admin:index' %}
     path('jsi18n', JavaScriptCatalog.as_view(), name='js-catlog'),
     path(settings.ADMIN_URL, admin.site.urls),
-    
+    path('maintenance-mode/', include('maintenance_mode.urls')),
+
     # User management
     path("users/", include("dokeza_2_0.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
-   
+
     # These are the App urls.
     path("bills/", include("bills.urls", namespace="bills")),
     path('tracker/', include("tracker.urls", namespace="tracker")),
@@ -45,7 +44,7 @@ urlpatterns = [
     path('posts/', include('posts.urls', namespace='posts')),
     path('events/', include('public_participation.urls', namespace='public_participation')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
-   
+
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 if settings.DEBUG:
     # Static file serving when using Gunicorn + Uvicorn for local web socket development
@@ -58,11 +57,9 @@ urlpatterns += [
     # DRF auth token
     path("auth-token/", obtain_auth_token),
     path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/auth/token/', get_jwt_token),
     path('api/users/', include('dokeza_2_0.users.api.urls', namespace='users-api')),
 
     # Access APIs
-    # path('api/annotations/', include('annotator.api.urls', namespace='annotations-api')),
     path('api/bills/', include('bills.api.urls', namespace='bills-api')),
     path('api/tracker/', include('tracker.api.urls', namespace='tracker-api')),
     path('api/highlights/', include('highlights.api.urls', namespace='highlights-api')),

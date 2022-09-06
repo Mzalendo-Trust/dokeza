@@ -23,7 +23,7 @@ services:
       - .:/app:z
     env_file:
       - ./.envs/.local/.django
-      - ./.envs/.local/.postgres
+      - ./.envs/.production/.postgres
     command: /start
     ports:
       - "8000:8000"
@@ -55,7 +55,7 @@ services:
       - local_postgres_data:/var/lib/postgresql/data
       - local_postgres_data_backups:/backups
     env_file:
-      - ./.envs/.local/.postgres
+      - ./.envs/.production/.postgres
     ports:
       - "5434:5432"
     restart: always
@@ -78,13 +78,14 @@ services:
       - ./.envs/.local/.documentserver
     depends_on:
       - ds-postgresql
-      - ds-rabbitmq
+      - onlyoffice-rabbitmq
       - ds-redis
     ports:
       - "8082:80"
       - "8443:443"
     stdin_open: true
     restart: always
+    stop_grace_period: 60s
     volumes:
       - /var/www/onlyoffice/Data
       - /var/log/onlyoffice
@@ -94,8 +95,8 @@ services:
     networks:
       - ds-network
 
-  ds-rabbitmq:
-    container_name: ds-rabbitmq
+  onlyoffice-rabbitmq:
+    container_name: onlyoffice-rabbitmq
     image: rabbitmq
     restart: always
     expose:

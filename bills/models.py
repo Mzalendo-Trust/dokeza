@@ -16,8 +16,6 @@ from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
 from django.utils.translation import ugettext_lazy as _
 
-from annotator.models import Annotation
-from comments.models import Comment
 from slugify import slugify
 
 from .managers import BillManager
@@ -113,22 +111,10 @@ class Bill(HitCountMixin, models.Model):
     updated_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     law_reference = models.URLField(blank=True, null=True, help_text="This should be a link to the Kenya Law Review repository of the bill.")
     tags = TaggableManager(blank=True)
-    hit_count_generic = GenericRelation(
-        HitCount, object_id_field='object_pk',
+    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
         related_query_name='hit_count_generic_relation')
     
     objects = BillManager()
-
-    @property
-    def comments(self):
-        instance = self
-        qs = Comment.objects.filter_by_instance(instance)
-        return qs
-
-    def annotations(self):
-        slug = self.slug
-        annotations = [annot for annot in Annotation.objects.all() if annot.get_bill_slug() == slug]
-        return annotations
 
     @property
     def get_content_type(self):

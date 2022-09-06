@@ -15,7 +15,6 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.utils.translation import ugettext_lazy as _
 
-from comments.models import Comment
 from slugify import slugify
 from taggit.managers import TaggableManager
 
@@ -55,11 +54,6 @@ class SubmittedIdea(models.Model):
     def get_absolute_url(self):
         return reverse('ideas:detail', kwargs={'slug': self.slug})
 
-    @property
-    def comments(self):
-        instance = self
-        qs = Comment.objects.filter_by_instance(instance)
-        return qs
 
     @property
     def get_content_type(self):

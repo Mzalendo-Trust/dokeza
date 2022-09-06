@@ -1,0 +1,172 @@
+version: '3'
+
+volumes:
+  master_postgres_data:
+  master_postgres_backups:
+  master_certbot_var:
+  master_certbot_etc:
+  documentserver_postgresql_data:
+  media:
+
+networks:
+  dokeza-network:
+  ds-network:
+
+services:
+  postgres:
+    container_name: postgres
+    build:
+      context: ./compose/production/postgres
+      dockerfile: Dockerfile
+    image: dokeza_2_0_master_postgres
+    env_file:
+      - ./.envs/.production/.postgres
+    volumes:
+      - master_postgres_data:/var/lib/postgresql/data
+      - master_postgres_backups:/backups
+    networks:
+      - dokeza-network
+
+  nginx:
+    container_name: nginx
+    build:
+      context: ./compose/production/nginx
+      dockerfile: Dockerfile-master
+    restart: always
+    volumes:
+      - master_certbot_var:/var/www/certbot
+      - master_certbot_etc:/etc/letsencrypt
+      - media:/app/media/
+    ports:
+      - '80:80'
+      - '443:443'
+    networks:
+      - dokeza-network
+
+  certbot:
+    container_name: certbot
+    build:
+      context: ./compose/production/certbot
+      dockerfile: Dockerfile
+    volumes:
+      - master_certbot_var:/var/www/certbot
+      - master_certbot_etc:/etc/letsencrypt
+    command: certonly --cert-name master.mzalendo.com --webroot -w /var/www/certbot -d master.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
+    networks:
+      - dokeza-network
+
+  redis:
+    container_name: redis
+    build:
+      context: ./compose/production/redis
+      dockerfile: Dockerfile
+    networks:
+      - dokeza-network
+
+  django: &django
+    container_name: django
+    build:
+      context: .
+      dockerfile: ./compose/production/django-master/Dockerfile
+    image: dokeza_2_0_master_django
+    volumes:
+      - media:/app/media/
+    depends_on:
+      - postgres
+      - redis
+    env_file:
+      - ./.envs/.production/.django-master
+      - ./.envs/.production/.postgres
+    command: /start
+    networks:
+      - dokeza-network
+
+  trackerservice:
+    build:
+      context: ./tracker/reportservice
+      dockerfile: Dockerfile
+    image: dokeza_2_0_tracker_service
+    container_name: trackerservice
+    depends_on:
+      - postgres
+      - django
+    restart: always
+    networks:
+      - dokeza-network
+
+  documentserver:
+    build:
+      context: .
+      dockerfile: ./compose/production/documentserver/Dockerfile-master
+    container_name: documentserver
+    env_file:
+      - ./.envs/.documentserver
+    depends_on:
+      - ds-postgresql
+      - onlyoffice-rabbitmq
+      - ds-redis
+      - certbot
+    ports:
+      - '8082:80'
+      - '8443:443'
+    stdin_open: true
+    restart: always
+    volumes:
+      - /var/www/onlyoffice/Data
+      - /var/log/onlyoffice
+      - /var/lib/onlyoffice/documentserver/App_Data/cache/files
+      - /var/www/onlyoffice/documentserver-example/public/files
+      - /usr/share/fonts
+      - master_certbot_etc:/etc/letsencrypt
+    networks:
+      - ds-network
+
+  onlyoffice-rabbitmq:
+    container_name: onlyoffice-rabbitmq
+    image: rabbitmq
+    restart: always
+    expose:
+      - '5672'
+    networks:
+      - ds-network
+
+  ds-postgresql:
+    container_name: ds-postgresql
+    image: postgres:12.3-alpine
+    env_file:
+      - ./.envs/.documentserver
+    restart: always
+    expose:
+      - '5432'
+    volumes:
+      - documentserver_postgresql_data:/var/lib/postgresql
+    networks:
+      - ds-network
+
+  ds-redis:
+    image: redis:5.0
+    container_name: ds-redis
+    restart: always
+    networks:
+      - ds-network
+
+  celeryworker:
+    <<: *django
+    image: dokeza_2_0_master_celeryworker
+    command: /start-celeryworker
+    networks:
+      - dokeza-network
+
+  celerybeat:
+    <<: *django
+    image: dokeza_2_0_master_celerybeat
+    command: /start-celerybeat
+    networks:
+      - dokeza-network
+
+  flower:
+    <<: *django
+    image: dokeza_2_0_master_flower
+    command: /start-flower
+    networks:
+      - dokeza-network

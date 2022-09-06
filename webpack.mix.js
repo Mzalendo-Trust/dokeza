@@ -62,7 +62,7 @@ if (mix.inProduction()) {
           whitelist: whitelister("node_modules/fullcalendar/main.min.css"),
           extractors: [
             {
-              extractor: DokezaCssExtractor,
+              extractor: new DokezaCssExtractor,
               extensions: ["html", "js"],
             },
           ],

@@ -1,4 +1,4 @@
-FROM python:3.8-slim-buster
+FROM python:3.9-slim-buster
 
 ENV PYTHONUNBUFFERED 1
 
@@ -23,7 +23,8 @@ RUN addgroup --system django \
 
 # Requirements are installed here to ensure they will be cached.
 COPY ./requirements /requirements
-RUN pip install --no-cache-dir -r /requirements/production.txt \
+RUN pip install --upgrade pip
+RUN pip install --no-cache-dir -r ./requirements/production.txt \
     && rm -rf /requirements
 
 COPY ./compose/production/django/entrypoint /entrypoint
@@ -50,12 +51,12 @@ COPY ./compose/production/django/celery/flower/start /start-flower
 RUN sed -i 's/\r$//g' /start-flower && \
     chmod +x /start-flower
     
+COPY ./media/missing-bill.docx /app/media/missing-bill.docx
+
 COPY --chown=django:django . /app
 RUN chown django:django /tmp
 
-
+# This user is the only one who can write to django 'app/media'
 USER root
-
-WORKDIR /app
 
 ENTRYPOINT ["/entrypoint"]

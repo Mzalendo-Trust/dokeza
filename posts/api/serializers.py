@@ -1,8 +1,6 @@
 from rest_framework.serializers import ModelSerializer, HyperlinkedIdentityField, SerializerMethodField
 
 from dokeza_2_0.users.api.serializers import UserDetailSerializer
-from comments.api.serializers import CommentSerializer
-from comments.models import Comment
 
 from posts.models import Post
 
@@ -32,7 +30,6 @@ class PostDetailSerializer(ModelSerializer):
     user = UserDetailSerializer(read_only=True)
     image = SerializerMethodField()
     html = SerializerMethodField()
-    comments = SerializerMethodField()
     delete_url = post_delete_url
 
     class Meta:
@@ -45,7 +42,6 @@ class PostDetailSerializer(ModelSerializer):
             'html',
             'content',
             'publish',
-            'comments',
             'timestamp',
             'delete_url',
         ]
@@ -58,12 +54,7 @@ class PostDetailSerializer(ModelSerializer):
             image = obj.image.url
         except:
             image = None
-        return image
-
-    def get_comments(self, obj):
-        c_qs = Comment.objects.filter_by_instance(obj)
-        comments = CommentSerializer(c_qs, many=True).data
-        return comments
+        return image    
 
 
 class PostListSerializer(ModelSerializer):

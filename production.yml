@@ -6,7 +6,7 @@ volumes:
   production_certbot_var:
   production_certbot_etc:
   documentserver_postgresql_data:
-  media:
+  production_media:
 
 networks:
   dokeza-network:
@@ -36,7 +36,7 @@ services:
     volumes:
       - production_certbot_var:/var/www/certbot
       - production_certbot_etc:/etc/letsencrypt
-      - media:/app/media/
+      - production_media:/usr/share/nginx/media:ro
     ports:
       - '80:80'
       - '443:443'
@@ -52,7 +52,7 @@ services:
       - production_certbot_var:/var/www/certbot
       - production_certbot_etc:/etc/letsencrypt
     command: certonly --cert-name dokeza.mzalendo.com --webroot -w /var/www/certbot -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
-    networks:  
+    networks:
       - dokeza-network
 
   redis:
@@ -70,7 +70,7 @@ services:
       dockerfile: ./compose/production/django/Dockerfile
     image: dokeza_2_0_django
     volumes:
-      - media:/app/media/
+      - production_media:/app/media
     depends_on:
       - postgres
       - redis
@@ -103,7 +103,7 @@ services:
       - ./.envs/.documentserver
     depends_on:
       - ds-postgresql
-      - ds-rabbitmq
+      - onlyoffice-rabbitmq
       - ds-redis
       - certbot
     ports:
@@ -121,8 +121,8 @@ services:
     networks:
       - ds-network
 
-  ds-rabbitmq:
-    container_name: ds-rabbitmq
+  onlyoffice-rabbitmq:
+    container_name: onlyoffice-rabbitmq
     image: rabbitmq
     restart: always
     expose:

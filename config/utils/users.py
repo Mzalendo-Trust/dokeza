@@ -25,30 +25,27 @@
 """
 from django.contrib.auth import get_user_model
 from django.contrib.auth.models import AnonymousUser
+# from dokeza_2_0.users.models import Visitor
 from urllib.parse import unquote
 
-DEFAULT_USER = AnonymousUser()
+USERS = [
+    {
+        'uid': 'uid-1',
+        'uname': 'mgeni'
+    },
+]
 
-def getUserFromReq(req):
-    current_user = req.user
-    uid = f'{current_user.id}'
-    uname = f'{current_user.first_name}{current_user.last_name}'
-    
-    if (not uid) | (not uname):
-        return { 'uid': None, 'uname': unquote('mgeni') }
-    else:
-        return { 'uid': unquote(uid), 'uname': unquote(uname) }
+DEFAULT_USER = USERS[0]
 
 def getNameFromReq(req):
     current_user = req.user
 
-    if current_user == DEFAULT_USER:
-        return 'mgeni'
+    if current_user == AnonymousUser():
+        return DEFAULT_USER['uname']
     elif current_user.first_name:
-        return f'{current_user.first_name}{current_user.last_name}'
-    else:
-        email_name = re.search(re.search(r'([a-z0-9._%+-]+)', current_user.email))
-        return email_name[0]        
+        return f'{current_user.first_name} {current_user.last_name}'
+    elif not current_user.first_name:
+        return f'{current_user.email}'
 
 def getIdFromReq(req):
     current_user = req.user
@@ -56,4 +53,4 @@ def getIdFromReq(req):
     if current_user.id:
         return f'{current_user.id}'
     else:
-        return None
+        return DEFAULT_USER['uid']
