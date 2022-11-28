@@ -8520,6 +8520,14 @@
       "oAP" : "\/compose\/production\/nginx\/certbot_check.sh",
       "oF" : 0
     },
+    "\/compose\/production\/nginx\/conf.d\/default.conf" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/compose\/production\/nginx\/conf.d\/default.conf",
+      "oF" : 0
+    },
     "\/compose\/production\/nginx\/conf.d\/master.conf" : {
       "cB" : 0,
       "ft" : 8192,
