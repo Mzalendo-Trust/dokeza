@@ -182,4 +182,5 @@ class BillDetailView(DetailView):
         context['historyData'] = json.dumps(hist['historyData']) if 'historyData' in hist else None
         context['fileType'] = fileType
         context['apiUrl'] = settings.DOC_SERV_API_URL
+        print('cfg -',edConfig, 'hist -', hist)
         return context
