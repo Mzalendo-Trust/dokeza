@@ -53,20 +53,25 @@ LANGUAGES = {
     'sl': 'Slovenian',
     'es': 'Spanish',
     'tr': 'Turkish',
-    
+
 }
+
 
 def isCanView(ext):
     return ext in settings.DOC_SERV_VIEWED
 
+
 def isCanEdit(ext):
     return ext in settings.DOC_SERV_EDITED
+
 
 def isCanConvert(ext):
     return ext in settings.DOC_SERV_CONVERT
 
+
 def isSupportedExt(ext):
     return isCanView(ext) | isCanEdit(ext) | isCanConvert(ext)
+
 
 def getInternalExtension(fileType):
     mapping = {
@@ -76,6 +81,7 @@ def getInternalExtension(fileType):
     }
 
     return mapping.get(fileType, '.docx')
+
 
 def getCorrectName(filename, req):
     basename = fileUtils.getFileNameWithoutExt(filename)
@@ -88,6 +94,7 @@ def getCorrectName(filename, req):
         i += 1
 
     return name
+
 
 def getFileUri(filename, req):
     path = getStoragePath(filename, req)
@@ -106,7 +113,8 @@ def getFileUri(filename, req):
         if not user.username:
             user.username = f'{user.first_name}_{user.last_name}'
         return f'{host}{settings.MEDIA_URL}{uname}/{filename}'
-    
+
+
 def getCallbackUrl(filename, req):
     path = getStoragePath(filename, req)
     host = settings.SITE_DOMAIN.rstrip('/')
@@ -116,6 +124,7 @@ def getCallbackUrl(filename, req):
     if re.search('bills', filename):
         return f'{host}/bills/track?filename={filename}&userAddress=bills'
     return f'{host}/users/~documents/track?filename={filename}&userAddress={uname}'
+
 
 def getRootFolder(req):
     uname = users.getNameFromReq(req)
@@ -133,9 +142,11 @@ def getRootFolder(req):
         os.makedirs(directory)
     return directory
 
+
 def getStoragePath(filename, req):
     directory = getRootFolder(req)
     return os.path.join(directory, filename)
+
 
 def getStoredFiles(req):
     directory = getRootFolder(req)
@@ -147,11 +158,12 @@ def getStoredFiles(req):
 
     for f in files:
         if os.path.isfile(os.path.join(directory, f)):
-            fileInfos.append({ 'type': fileUtils.getFileType(f), 'title': f, 'url': getFileUri(f, req) })
+            fileInfos.append({'type': fileUtils.getFileType(f), 'title': f, 'url': getFileUri(f, req)})
     print('fileInfos -', fileInfos)
     return fileInfos
 
-def createFile(stream, path, req = None, meta = False):
+
+def createFile(stream, path, req=None, meta=False):
     bufSize = 8196
     with io.open(path, 'wb') as out:
         read = stream.read(bufSize)
@@ -164,16 +176,18 @@ def createFile(stream, path, req = None, meta = False):
         historyManager.createMeta(path, req)
     return
 
-def saveFileFromUri(uri, path, req = None, meta = False):
+
+def saveFileFromUri(uri, path, req=None, meta=False):
     resp = requests.get(uri, stream=True)
     createFile(resp.raw, path, req, meta)
     return
+
 
 def createSample(fileType, sample, req):
     ext = getInternalExtension(fileType)
     if not sample:
         sample = 'false'
-    
+
     if sample == 'true':
         sampleName = 'sample'
     elif fileType == 'memorandum':
@@ -182,15 +196,15 @@ def createSample(fileType, sample, req):
         sampleName = 'petition'
     else:
         sampleName = 'new'
-    
 
     filename = getCorrectName(f'{sampleName}{ext}', req)
     path = getStoragePath(filename, req)
-    
+
     with io.open(os.path.join('dokeza_2_0/static/samples/office', f'{sampleName}{ext}'), 'rb') as stream:
         createFile(stream, path, req, True)
     return filename
-    
+
+
 def removeFile(filename, req):
     path = getStoragePath(filename, req)
     if os.path.exists(path):
@@ -198,6 +212,7 @@ def removeFile(filename, req):
     histDir = historyManager.getHistoryDir(path)
     if os.path.exists(histDir):
         shutil.rmtree(histDir)
+
 
 def generateFileKey(filename, req):
     host = settings.SITE_DOMAIN.rstrip('/')
@@ -211,7 +226,7 @@ def generateFileKey(filename, req):
         path_missing = 'media/missing-bill.docx'
         uri = f'{host}{settings.MEDIA_URL}media/missing-bill.docx'
         stat = os.stat(path_missing)
-    
+
     h = str(hash(f'{uri}_{stat.st_mtime_ns}'))
     replaced = re.sub(r'[^0-9-.a-zA-Z_=]', '_', h)
     return replaced[:20]

@@ -26,19 +26,23 @@
 
 from django.conf import settings
 
+
 def getFileName(str):
     ind = str.rfind('/')
     return str[ind+1:]
+
 
 def getFileNameWithoutExt(str):
     fn = getFileName(str)
     ind = fn.rfind('.')
     return fn[:ind]
 
+
 def getFileExt(str):
     fn = getFileName(str)
     ind = fn.rfind('.')
     return fn[ind:].lower()
+
 
 def getFileType(str):
     ext = getFileExt(str)

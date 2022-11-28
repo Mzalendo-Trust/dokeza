@@ -7,7 +7,7 @@ class BillQuerySet(models.QuerySet):
 
     def public_bills(self):
         return self.filter(private=False)
-    
+
     def private_bills(self):
         return self.filter(private=True)
 
@@ -23,13 +23,13 @@ class BillQuerySet(models.QuerySet):
 
 class BillManager(models.Manager):
     def get_queryset(self):
-        return BillQuerySet(self.model, using=self._db) # important
+        return BillQuerySet(self.model, using=self._db)  # important
 
     def all(self):
         return self.get_queryset().public_bills().by_date()
 
     def private_bills(self):
-     	return self.get_queryset().private_bills().by_date()
+        return self.get_queryset().private_bills().by_date()
 
     def assembly_bills(self):
         return self.get_queryset().assembly_bills().public_bills().by_date()
