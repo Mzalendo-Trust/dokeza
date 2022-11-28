@@ -1,0 +1,9 @@
+# PostgreSQL
+# ------------------------------------------------------------------------------
+POSTGRES_HOST=postgres
+POSTGRES_PORT=5432
+POSTGRES_DB=dokeza
+POSTGRES_USER=!!create_user
+POSTGRES_PASSWORD=!!create_password
+POSTGRES_HOST_AUTH_METHOD=trust
+
