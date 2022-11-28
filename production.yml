@@ -51,7 +51,7 @@ services:
     volumes:
       - production_certbot_var:/var/www/certbot
       - production_certbot_etc:/etc/letsencrypt
-    command: certonly --cert-name dokeza.mzalendo.com --webroot -w /var/www/certbot -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos
+    command: certonly --cert-name dokeza.mzalendo.com --webroot -w /var/www/certbot -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --dry-run
     networks:
       - dokeza-network
 
@@ -103,7 +103,7 @@ services:
       - ./.envs/.documentserver
     depends_on:
       - ds-postgresql
-      - onlyoffice-rabbitmq
+      - ds-rabbitmq
       - ds-redis
       - certbot
     ports:
@@ -121,8 +121,8 @@ services:
     networks:
       - ds-network
 
-  onlyoffice-rabbitmq:
-    container_name: onlyoffice-rabbitmq
+  ds-rabbitmq:
+    container_name: ds-rabbitmq
     image: rabbitmq
     restart: always
     expose:

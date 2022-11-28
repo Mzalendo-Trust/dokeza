@@ -73,7 +73,7 @@ services:
       - postgres
       - redis
     env_file:
-      - ./.envs/.production/.django-staging
+      - ./.envs/.production/.django
       - ./.envs/.production/.postgres
     command: /start
     networks:
@@ -150,6 +150,7 @@ services:
 
   celeryworker:
     <<: *django
+    container_name: celeryworker
     image: dokeza_2_0_staging_celeryworker
     command: /start-celeryworker
     networks:
@@ -157,6 +158,7 @@ services:
 
   celerybeat:
     <<: *django
+    container_name: celerybeat
     image: dokeza_2_0_staging_celerybeat
     command: /start-celerybeat
     networks:
@@ -164,6 +166,7 @@ services:
 
   flower:
     <<: *django
+    container_name: flower
     image: dokeza_2_0_staging_flower
     command: /start-flower
     networks:
