@@ -7,4 +7,74 @@
   ga('create', 'UA-97900706-1', 'auto');
   ga('send', 'pageview');
 
+  
+  /**
+   * Track Social Share and scroll depth with google analytics 
+  */
+
+  //log scrol depth function
+	function logScroll(depth_in_percentage, depth_in_number, article_link){
+		gtag('event', depth_in_percentage, {
+		    'event_category': 'Scroll Depth',
+		    'event_label': article_link,
+		    'event_value': depth_in_number ,
+		    'non_interaction' : true
+		});
+		console.log('Logging scroll depth at '+ depth_in_percentage +' to google analytics');
+	}
+
+  var maxScrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	$(document).scroll(function(){
+		var scrollVal = window.scrollY;
+    	var scrollPercentage = Math.round(scrollVal / maxScrollHeight * 100);
+		let articleLink=location.href; //page url
+
+    if(scrollPercentage===25){
+			logScroll('25%', 25, article_link);
+		}
+		
+		if(scrollPercentage===50){
+			logScroll('50%', 50, article_link);
+		}
+		
+		if(scrollPercentage===75){
+			logScroll('75%', 75, article_link);
+		}
+		
+		if(scrollPercentage===100){
+			logScroll('100%', 100, article_link);
+		}
+	});
+
+	//log facebook share action
+	$('.facebookShare').click(function(){
+		gtag('event', 'Social Share', {
+		    'event_category': 'Dokeza social',
+		    'event_label': 'facebook',
+		    'non_interaction' : false
+		});
+		console.log('facebook share has been logged');
+	});
+
+	//log twitter share action
+	$('.twitterShare').click(function(){
+		gtag('event', 'Social Share', {
+		    'event_category': 'Dokeza social',
+		    'event_label': 'twitter',
+		    'non_interaction' : false
+		});
+		console.log('twitter share has been logged');
+	});
+
+
+	//log whatsapp share action
+	$('.whatsappShare').click(function(){
+		gtag('event', 'Social Share', {
+		    'event_category': 'Dokeza social',
+		    'event_label': 'whatsapp',
+		    'non_interaction' : false
+		});
+		console.log('whatsapp share has been logged');
+	});
+
 </script>
