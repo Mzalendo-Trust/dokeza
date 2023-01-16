@@ -3,6 +3,7 @@ from django.conf import settings
 from django.utils.timezone import datetime
 import uuid
 
+
 class MyBill(models.Model):
     title = models.CharField(max_length=100)
     purpose = models.TextField()
@@ -28,7 +29,7 @@ class BillTracker(models.Model):
     stage_date = models.DateField('date published')
 
     class Meta:
-        ordering=['-stage_date']
+        ordering = ['-stage_date']
 
     def __str__(self):
         # return str('kimana')
