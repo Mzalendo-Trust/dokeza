@@ -1,3 +1,4 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97900706-1"> </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -6,11 +7,15 @@
 
   ga('create', 'UA-97900706-1', 'auto');
   ga('send', 'pageview');
-
-  
   /**
    * Track Social Share and scroll depth with google analytics 
   */
+  <!---->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-97900706-1');
 
   //log scrol depth function
 	function logScroll(depth_in_percentage, depth_in_number, article_link){
@@ -20,14 +25,15 @@
 		    'event_value': depth_in_number ,
 		    'non_interaction' : true
 		});
-		console.log('Logging scroll depth at '+ depth_in_percentage +' to google analytics');
+		console.log('Logging scroll depth at '+ depth_in_percentage +' to google analytics for ' + article_link);
 	}
 
   var maxScrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-	$(document).scroll(function(){
+	// $(document).scroll(function(){
+  window.onscroll = function (e) {  
 		var scrollVal = window.scrollY;
     	var scrollPercentage = Math.round(scrollVal / maxScrollHeight * 100);
-		let articleLink=location.href; //page url
+		let article_link=location.href; //page url
 
     if(scrollPercentage===25){
 			logScroll('25%', 25, article_link);
@@ -44,37 +50,47 @@
 		if(scrollPercentage===100){
 			logScroll('100%', 100, article_link);
 		}
-	});
+	// });
+  }
 
 	//log facebook share action
-	$('.facebookShare').click(function(){
-		gtag('event', 'Social Share', {
+  function logShare(medium){
+    gtag('event', 'Social Share', {
 		    'event_category': 'Dokeza social',
-		    'event_label': 'facebook',
+		    'event_label': medium,
 		    'non_interaction' : false
 		});
-		console.log('facebook share has been logged');
-	});
+		console.log(medium + ' share has been logged');
+  }
 
-	//log twitter share action
-	$('.twitterShare').click(function(){
-		gtag('event', 'Social Share', {
-		    'event_category': 'Dokeza social',
-		    'event_label': 'twitter',
-		    'non_interaction' : false
-		});
-		console.log('twitter share has been logged');
-	});
+  	//log facebook share action
+	// $('.facebookShare').click(function(){
+	// 	gtag('event', 'Social Share', {
+	// 	    'event_category': 'Dokeza social',
+	// 	    'event_label': 'facebook',
+	// 	    'non_interaction' : false
+	// 	});
+	// 	console.log('facebook share has been logged');
+	// });
 
+	// //log twitter share action
+	// $('.twitterShare').click(function(){
+	// 	gtag('event', 'Social Share', {
+	// 	    'event_category': 'Dokeza social',
+	// 	    'event_label': 'twitter',
+	// 	    'non_interaction' : false
+	// 	});
+	// 	console.log('twitter share has been logged');
+	// });
 
-	//log whatsapp share action
-	$('.whatsappShare').click(function(){
-		gtag('event', 'Social Share', {
-		    'event_category': 'Dokeza social',
-		    'event_label': 'whatsapp',
-		    'non_interaction' : false
-		});
-		console.log('whatsapp share has been logged');
-	});
+	// //log whatsapp share action
+	// $('.whatsappShare').click(function(){
+	// 	gtag('event', 'Social Share', {
+	// 	    'event_category': 'Dokeza social',
+	// 	    'event_label': 'whatsapp',
+	// 	    'non_interaction' : false
+	// 	});
+	// 	console.log('whatsapp share has been logged');
+	// });
 
 </script>
