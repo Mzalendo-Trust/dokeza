@@ -1,0 +1,24 @@
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{ bill.title }}",
+    "image": [
+	{% if bill.bill_pic %}
+      "https://{{ request.get_host }}{{ bill.bill_pic.url }}"
+	{% else %}
+		{%if bill.bill_from == 1 %}
+			"https://dokeza.mzalendo.com/static/dist/images/bills/bill_draft_assembly.svg"
+			{% elif bill.bill_from == 2 %}
+			"https://dokeza.mzalendo.com/static/dist/images/bills/bill_draft_senate.svg"
+		{% else %}
+			"https://dokeza.mzalendo.com/static/dist/images/bills/bill_draft.svg"
+		{% endif %}
+	{% endif %}
+     ],
+	"document_type": "bill",
+	"description": "{{ bill.pourpose }}",
+    "datePublished": "{{bill.created|date:"Y-m-d h:m:s T"}}",
+    "dateModified": "{{bill.updated_date|date:"Y-m-d h:m:s T"}}"
+  }
+</script>

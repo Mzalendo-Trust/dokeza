@@ -6,11 +6,11 @@ const whitelister = require("purgecss-whitelister");
 
 const staticPath = "dokeza_2_0/static/";
 const devPath = "dokeza_2_0/static/dev/";
-const distPath = "dokeza_2_0/static/dist/";
+const distPath = "dokeza_2_0/static/";
 const nodeModules = "node_modules/";
 
 mix
-  .setPublicPath("dokeza_2_0/static/dist/")
+  .setPublicPath("dokeza_2_0/static/")
   .copyDirectory(`${nodeModules}font-awesome/fonts/`, `${distPath}fonts/`)
   .copyDirectory(`${devPath}images/`, `${distPath}images/`)
   .sass(`${devPath}scss/dokeza.scss`, `${distPath}css/`)
@@ -20,9 +20,9 @@ mix
   .babel(`${devPath}js/dokeza.js`, `${distPath}js/dokeza.min.js`)
   .babel(
     [
-      `${nodeModules}jquery/dist/jquery.js`,
-      `${nodeModules}popper.js/dist/umd/popper.js`,
-      `${nodeModules}bootstrap/dist/js/bootstrap.js`,
+      `${nodeModules}jquery/jquery.js`,
+      `${nodeModules}popper.js/umd/popper.js`,
+      `${nodeModules}bootstrap/js/bootstrap.js`,
     ],
     `${staticPath}js/vendor/bootstrap.min.js`
   )

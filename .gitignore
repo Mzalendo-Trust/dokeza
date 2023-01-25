@@ -26,6 +26,7 @@ wheels/
 .installed.cfg
 *.egg
 
+
 # PyInstaller
 #  Usually these files are written by a python script from a template
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
@@ -268,9 +269,7 @@ tags
 
 
 ### Project template
-
 dokeza_2_0/media/
-
 media/timeline
 <<<<<<< HEAD
 media/*
@@ -292,3 +291,6 @@ certs/*
 !.envs/.local/
 >>>>>>> 939be82 (Merge remote-tracking branch 'origin/master')
 tracker/reportservice/reports/report_Jan2021.pdf
+
+backup*
+*.tar

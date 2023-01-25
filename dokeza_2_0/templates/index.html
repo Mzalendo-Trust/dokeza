@@ -35,11 +35,11 @@
                       {% if bill.bill_pic %}
                         <img src="{{ MEDIA_URL }}{{ bill.bill_pic }}" alt="">
                         {% elif bill.bill_from == 1 %}
-                        <img src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="">
+                        <img src="{% static 'images/bills/bill_draft_assembly.svg' %}" alt="">
                         {% elif bill.bill_from == 2 %}
-                        <img src="{% static 'dist/images/bills/bill_draft_senate.svg' %}" alt="">
+                        <img src="{% static 'images/bills/bill_draft_senate.svg' %}" alt="">
                       {% else %}
-                        <img src="{% static 'dist/images/bills/bill_draft.svg' %}" alt="">
+                        <img src="{% static 'images/bills/bill_draft.svg' %}" alt="">
                       {% endif %}
                     </div>
                     <div class="pic-text">
@@ -57,7 +57,7 @@
                     {% if doc.doc_pic %}
                       <img src="{{ doc.doc_pic }}" alt="">
                     {% else %}
-                      <img src="{% static 'dist/images/public/default-image.svg' %}" alt="">
+                      <img src="{% static 'images/public/default-image.svg' %}" alt="">
                     {% endif %}</div>
                     <div class="pic-text">
                       <h2>{{ doc.title}}</h2>
@@ -74,7 +74,7 @@
                       {% if article.article_pic %}
                         <img src="{{ article.image }}" alt="">
                       {% else %}
-                        <img src="{% static 'dist/images/public/default-image.svg' %}" alt="">
+                        <img src="{% static 'images/public/default-image.svg' %}" alt="">
                       {% endif %}</div>
                       <div class="pic-text">
                         <h2>{{ article.title}}</h2>
@@ -215,7 +215,7 @@
 <!-- END Main Content -->
 {% block fullcalendar %}
 <script src="{% static 'js/vendor/fullcalendar.min.js' %}"></script>
-<script src="{% static 'dist/js/dokeza-fullcalendar.min.js' %}"></script>
+<script src="{% static 'js/dokeza-fullcalendar.min.js' %}"></script>
 {% endblock fullcalendar %}
 {% block cookieconsent %}
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js" data-cfasync="false"></script>

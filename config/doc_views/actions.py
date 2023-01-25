@@ -1,5 +1,5 @@
 """
-These 'actions' process the calls made on the page links. 
+These 'actions' process the calls made on the page links.
 
 """
 
@@ -18,6 +18,7 @@ from django.views.decorators.csrf import csrf_protect, csrf_exempt, ensure_csrf_
 from config.doc_views import index, actions
 from config.utils import docManager, fileUtils, serviceConverter, users, jwtManager, historyManager
 
+
 @csrf_protect
 def upload(request):
     response = {}
@@ -31,7 +32,7 @@ def upload(request):
         curExt = fileUtils.getFileExt(fileInfo.name)
         if not docManager.isSupportedExt(curExt):
             raise Exception('File type is not supported')
-        
+
         name = docManager.getCorrectName(fileInfo.name, request)
         # If the file is being uploaded by a user, get the current address
         # and add it to the file path.
@@ -44,6 +45,7 @@ def upload(request):
     except Exception as e:
         response.setdefault('error', f'{e}')
     return HttpResponse(json.dumps(response), content_type='application/json')
+
 
 def convert(request):
     response = {}
@@ -77,12 +79,13 @@ def convert(request):
 
     return HttpResponse(json.dumps(response), content_type='application/json')
 
+
 def createNew(request):
     response = {}
     try:
         fileType = request.GET['fileType']
         sample = request.GET.get('sample', False)
-        
+
         # new.docx = docManager.createSample(document, none, GET '/users/~documents/create/?fileType=text')
         filename = docManager.createSample(fileType, sample, request)
 
@@ -93,6 +96,7 @@ def createNew(request):
     except Exception as e:
         response.setdefault('error', f'details - {e}')
     return HttpResponse(json.dumps(response), content_type='application/json')
+
 
 @csrf_exempt
 def edit(request):
@@ -183,13 +187,14 @@ def edit(request):
     }
     return render(request, 'editor.html', context)
 
+
 @csrf_exempt
 def track(request):
     filename = request.GET['filename']
     print("uDoc track - ", request)
     usAddr = request.GET['userAddress']
     response = {}
-    
+
     try:
         body = json.loads(request.body)
         if jwtManager.isEnabled():
@@ -209,7 +214,7 @@ def track(request):
 
         status = body['status']
         download = body.get('url')
-        if (status == 2) | (status == 3): # mustsave, corrupted
+        if (status == 2) | (status == 3):  # mustsave, corrupted
             path = docManager.getStoragePath(filename, usAddr)
             histDir = historyManager.getHistoryDir(path)
             versionDir = historyManager.getNextVersionDir(histDir)
@@ -234,6 +239,7 @@ def track(request):
 
     response.setdefault('error', 0)
     return HttpResponse(json.dumps(response), content_type='application/json', status=200 if response['error'] == 0 else 500)
+
 
 def remove(request):
     filename = request.GET['filename']

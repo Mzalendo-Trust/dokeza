@@ -38,15 +38,14 @@ $brand-primary: $dz-clr--green;
 // Fonts
 $font-family-base: "Rubik";
 // Font-awesome
-$fa-font-path: "/static/dist/fonts";
+$fa-font-path: "/static/fonts";
 
 // Screen sizes
 $breakpoints: (
 	mobile: 360px,
 	phablet: 640px,
 	tablet: 768px,
-	desktop: 1024px
-) !default;
+	desktop: 1024px) !default;
 $mobile-port: 360px;
 $mobile-land: 640px;
 $tablet-port: 768px;
@@ -57,5 +56,6 @@ $desktop-large: 1920px;
 
 $link-color: $dz-clr--green;
 $link-decoration: $dz-clr--green;
-$link-hover-color: lighten($dz-clr--green, 10%);
+$link-hover-color: lighten($dz-clr--green, 10%
+);
 $link-hover-decoration: lighten($dz-clr--green, 10%);

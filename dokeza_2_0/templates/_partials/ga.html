@@ -1,3 +1,4 @@
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-97900706-1"> </script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -6,5 +7,59 @@
 
   ga('create', 'UA-97900706-1', 'auto');
   ga('send', 'pageview');
+  /**
+   * Track Social Share and scroll depth with google analytics 
+  */
+  <!---->
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'UA-97900706-1');
+
+  //log scrol depth function
+	function logScroll(depth_in_percentage, depth_in_number, article_link){
+		gtag('event', depth_in_percentage, {
+		    'event_category': 'Scroll Depth',
+		    'event_label': article_link,
+		    'event_value': depth_in_number ,
+		    'non_interaction' : true
+		});
+		console.log('Logging scroll depth at '+ depth_in_percentage +' to google analytics for ' + article_link);
+	}
+
+  var maxScrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	// $(document).scroll(function(){
+  window.onscroll = function (e) {  
+		var scrollVal = window.scrollY;
+    	var scrollPercentage = Math.round(scrollVal / maxScrollHeight * 100);
+		let article_link=location.href; //page url
+
+    if(scrollPercentage===25){
+			logScroll('25%', 25, article_link);
+		}
+		
+		if(scrollPercentage===50){
+			logScroll('50%', 50, article_link);
+		}
+		
+		if(scrollPercentage===75){
+			logScroll('75%', 75, article_link);
+		}
+		
+		if(scrollPercentage===100){
+			logScroll('100%', 100, article_link);
+		}
+	// });
+  }
+
+	//log facebook share action
+  function logShare(medium){
+    gtag('event', 'Social Share', {
+		    'event_category': 'Dokeza social',
+		    'event_label': medium,
+		    'non_interaction' : false
+		});
+		console.log(medium + ' share has been logged');
+  }
 </script>
