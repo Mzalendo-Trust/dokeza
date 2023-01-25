@@ -14,6 +14,7 @@ from django.urls import reverse
 from django.db import models
 from django.db.models.signals import pre_save, post_save
 from django.dispatch import receiver
+from django.template.defaultfilters import truncatechars  # or truncatewords
 from django.utils.translation import ugettext_lazy as _
 
 from slugify import slugify
@@ -21,7 +22,6 @@ from slugify import slugify
 from .managers import BillManager
 from taggit.managers import TaggableManager
 from hitcount.models import HitCount, HitCountMixin
-
 
 
 class Bill(HitCountMixin, models.Model):
@@ -92,7 +92,8 @@ class Bill(HitCountMixin, models.Model):
     slug = models.SlugField(unique=True)
     purpose = models.TextField(max_length=500, blank=True, null=True)
     sponsor = models.CharField(max_length=500, blank=True, null=True)
-    sponsor_title = models.PositiveSmallIntegerField(_('Sponsor Title'), choices=SPONSOR_TITLE, default=1, blank=True, null=True)
+    sponsor_title = models.PositiveSmallIntegerField(
+        _('Sponsor Title'), choices=SPONSOR_TITLE, default=1, blank=True, null=True)
     created = models.DateTimeField(auto_now_add=True, db_index=True)
     word_doc = models.FileField(upload_to='bills/', blank=True, null=True, help_text='Upload the actual bill here.')
     bill_pic = models.ImageField(upload_to='bill_pics/', blank=True, null=True,
@@ -109,11 +110,12 @@ class Bill(HitCountMixin, models.Model):
     assented_date = models.DateTimeField(auto_now_add=False,
                                          blank=True, null=True)
     updated_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
-    law_reference = models.URLField(blank=True, null=True, help_text="This should be a link to the Kenya Law Review repository of the bill.")
+    law_reference = models.URLField(
+        blank=True, null=True, help_text="This should be a link to the Kenya Law Review repository of the bill.")
     tags = TaggableManager(blank=True)
     hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk',
-        related_query_name='hit_count_generic_relation')
-    
+                                        related_query_name='hit_count_generic_relation')
+
     objects = BillManager()
 
     @property
@@ -121,6 +123,10 @@ class Bill(HitCountMixin, models.Model):
         instance = self
         content_type = ContentType.objects.get_for_model(instance.__class__)
         return content_type
+
+    @property
+    def short_doc_name(self):
+        return truncatechars(self.word_doc, 25)
 
     def get_absolute_url(self):
         return reverse('bills:detail', kwargs={'slug': self.slug})

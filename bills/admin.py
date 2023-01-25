@@ -10,7 +10,7 @@ from docbuilder.views import report
 
 
 class BillAdmin(admin.ModelAdmin):
-    list_display = ["title", "bill_from", "owner", "private", "updated_date", "generate_memorandum"]
+    list_display = ["title", "bill_from", "short_doc_name", "owner", "updated_date", "generate_memorandum"]
     prepopulated_fields = {"slug": ("title", )}
     ordering = ('updated_date',)
     change_form_template = 'admin/bills/comment_button.html'
