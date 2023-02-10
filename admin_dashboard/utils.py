@@ -14,10 +14,10 @@ def get_hit_counts():
         count = Hit.objects.filter(created__date=date).count()
         hit_counts.append({"day_of_week": day_of_week, "count": count})
 
-    # @remove it when you after test
-    hit_counts = [{'day_of_week': 'Monday', 'count': 30}, {'day_of_week': 'Tuesday', 'count': 25},
-                  {'day_of_week': 'Wednesday', 'count': 31}, {'day_of_week': 'Thursday', 'count': 33},
-                  {'day_of_week': 'Friday', 'count': 35}, {'day_of_week': 'Saturday', 'count': 32},
-                  {'day_of_week': 'Sunday', 'count': 28}]
+    # @just for tests
+    # hit_counts = [{'day_of_week': 'Monday', 'count': 30}, {'day_of_week': 'Tuesday', 'count': 25},
+    #               {'day_of_week': 'Wednesday', 'count': 31}, {'day_of_week': 'Thursday', 'count': 33},
+    #               {'day_of_week': 'Friday', 'count': 35}, {'day_of_week': 'Saturday', 'count': 32},
+    #               {'day_of_week': 'Sunday', 'count': 28}]
 
     return hit_counts
