@@ -1,18 +1,18 @@
 from django.conf import settings
 from django.conf.urls.static import static
-from django.contrib import admin
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 from django.urls import include, path
 from django.views import defaults as default_views
-from django.views.i18n import JavaScriptCatalog
 from django.views.generic import TemplateView
+from django.views.i18n import JavaScriptCatalog
 from rest_framework.authtoken.views import obtain_auth_token
+
+from admin_dashboard.admin import dashboard_admin_site
+from posts.views import TagIndexView
 from .views import (
-    HomeView,  HowToView, FaqView, PrivacyView, SearchView,
+    HomeView, HowToView, FaqView, PrivacyView, SearchView,
     ResourcesView, AboutView, ContactView
 )
-from posts.views import TagIndexView
-
 
 urlpatterns = [
     path('', HomeView.as_view(), name='home'),
@@ -28,7 +28,9 @@ urlpatterns = [
 
     # Django Admin, use {% url 'admin:index' %}
     path('jsi18n', JavaScriptCatalog.as_view(), name='js-catlog'),
-    path(settings.ADMIN_URL, admin.site.urls),
+      # new
+    path(settings.ADMIN_URL, dashboard_admin_site.urls),
+    path('ds/', include('admin_dashboard.urls')),
     path('maintenance-mode/', include('maintenance_mode.urls')),
 
     # User management
