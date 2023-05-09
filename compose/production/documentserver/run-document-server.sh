@@ -1,5 +1,7 @@
 #!/bin/bash
 
+umask 0022
+
 function clean_exit {
   /usr/bin/documentserver-prepare4shutdown.sh
 }
@@ -37,7 +39,14 @@ if [ "${RELEASE_DATE}" != "${PREV_RELEASE_DATE}" ]; then
   fi
 fi
 
-SSL_CERTIFICATES_DIR="${DATA_DIR}/certs"
+SSL_CERTIFICATES_DIR="/usr/share/ca-certificates/ds"
+mkdir -p ${SSL_CERTIFICATES_DIR}
+if [[ -d ${DATA_DIR}/certs ]] && [ -e ${DATA_DIR}/certs/*.crt ]; then
+  cp -f ${DATA_DIR}/certs/* ${SSL_CERTIFICATES_DIR}
+  chmod 644 ${SSL_CERTIFICATES_DIR}/*.crt ${SSL_CERTIFICATES_DIR}/*.pem
+  chmod 400 ${SSL_CERTIFICATES_DIR}/*.key
+fi
+
 if [[ -z $SSL_CERTIFICATE_PATH ]] && [[ -f ${SSL_CERTIFICATES_DIR}/${COMPANY_NAME}.crt ]]; then
   SSL_CERTIFICATE_PATH=${SSL_CERTIFICATES_DIR}/${COMPANY_NAME}.crt
 else
@@ -64,9 +73,10 @@ NGINX_ONLYOFFICE_EXAMPLE_CONF="${NGINX_ONLYOFFICE_EXAMPLE_PATH}/includes/ds-exam
 
 NGINX_CONFIG_PATH="/etc/nginx/nginx.conf"
 NGINX_WORKER_PROCESSES=${NGINX_WORKER_PROCESSES:-1}
-NGINX_WORKER_CONNECTIONS=${NGINX_WORKER_CONNECTIONS:-$(ulimit -n)}
+# Limiting the maximum number of simultaneous connections due to possible memory shortage
+[ $(ulimit -n) -gt 1048576 ] && NGINX_WORKER_CONNECTIONS=${NGINX_WORKER_CONNECTIONS:-1048576} || NGINX_WORKER_CONNECTIONS=${NGINX_WORKER_CONNECTIONS:-$(ulimit -n)}
 
-JWT_ENABLED=${JWT_ENABLED:-false}
+JWT_ENABLED=${JWT_ENABLED:-true}
 
 # validate user's vars before usinig in json
 if [ "${JWT_ENABLED}" == "true" ]; then
@@ -75,7 +85,9 @@ else
   JWT_ENABLED="false"
 fi
 
-JWT_SECRET=${JWT_SECRET:-secret}
+[ -z $JWT_SECRET ] && JWT_MESSAGE='JWT is enabled by default. A random secret is generated automatically. Run the command "docker exec $(sudo docker ps -q) sudo documentserver-jwt-status.sh" to get information about JWT.'
+
+JWT_SECRET=${JWT_SECRET:-$(pwgen -s 32)}
 JWT_HEADER=${JWT_HEADER:-Authorization}
 JWT_IN_BODY=${JWT_IN_BODY:-false}
 
@@ -83,7 +95,7 @@ WOPI_ENABLED=${WOPI_ENABLED:-false}
 
 GENERATE_FONTS=${GENERATE_FONTS:-true}
 
-if [[ ${PRODUCT_NAME} == "documentserver" ]]; then
+if [[ ${PRODUCT_NAME}${PRODUCT_EDITION} == "documentserver" ]]; then
   REDIS_ENABLED=false
 else
   REDIS_ENABLED=true
@@ -188,7 +200,7 @@ parse_rabbitmq_url(){
   # extract the host
   local hostport="$(echo ${url/$userpass@/} | cut -d/ -f1)"
   # by request - try to extract the port
-  local port="$(echo $hostport | sed -e 's,^.*:,:,g' -e 's,.*:\([0-9]*\).*,\1,g' -e 's,[^0-9],,g')"
+  local port="$(echo $hostport | grep : | sed -r 's_^.*:+|/.*$__g')"
 
   local host
   if [ -n "$port" ]; then
@@ -253,7 +265,7 @@ update_rabbitmq_setting(){
     ${JSON} -I -e "this.queue.type = 'rabbitmq'"
     ${JSON} -I -e "this.rabbitmq.url = '${AMQP_URI}'"
   fi
-
+  
   if [ "${AMQP_TYPE}" == "activemq" ]; then
     ${JSON} -I -e "if(this.queue===undefined)this.queue={};"
     ${JSON} -I -e "this.queue.type = 'activemq'"
@@ -287,7 +299,7 @@ update_rabbitmq_setting(){
       *)
         ${JSON} -I -e "delete this.activemq.connectOptions.transport"
         ;;
-    esac
+    esac 
   fi
 }
 
@@ -295,6 +307,11 @@ update_redis_settings(){
   ${JSON} -I -e "if(this.services.CoAuthoring.redis===undefined)this.services.CoAuthoring.redis={};"
   ${JSON} -I -e "this.services.CoAuthoring.redis.host = '${REDIS_SERVER_HOST}'"
   ${JSON} -I -e "this.services.CoAuthoring.redis.port = '${REDIS_SERVER_PORT}'"
+
+  if [ -n "${REDIS_SERVER_PASS}" ]; then
+    ${JSON} -I -e "this.services.CoAuthoring.redis.options = {'password':'${REDIS_SERVER_PASS}'}"
+  fi
+
 }
 
 update_ds_settings(){
@@ -317,7 +334,7 @@ update_ds_settings(){
     ${JSON_EXAMPLE} -I -e "this.server.token.secret = '${JWT_SECRET}'"
     ${JSON_EXAMPLE} -I -e "this.server.token.authorizationHeader = '${JWT_HEADER}'"
   fi
-
+ 
   if [ "${USE_UNAUTHORIZED_STORAGE}" == "true" ]; then
     ${JSON} -I -e "if(this.services.CoAuthoring.requestDefaults===undefined)this.services.CoAuthoring.requestDefaults={}"
     ${JSON} -I -e "if(this.services.CoAuthoring.requestDefaults.rejectUnauthorized===undefined)this.services.CoAuthoring.requestDefaults.rejectUnauthorized=false"
@@ -341,9 +358,8 @@ create_postgresql_cluster(){
 }
 
 create_postgresql_db(){
-  sudo -u postgres psql -c "CREATE DATABASE $DB_NAME;"
   sudo -u postgres psql -c "CREATE USER $DB_USER WITH password '"$DB_PWD"';"
-  sudo -u postgres psql -c "GRANT ALL privileges ON DATABASE $DB_NAME TO $DB_USER;"
+  sudo -u postgres psql -c "CREATE DATABASE $DB_NAME OWNER $DB_USER;"
 }
 
 create_db_tbl() {
@@ -410,12 +426,15 @@ update_welcome_page() {
   WELCOME_PAGE="${APP_DIR}-example/welcome/docker.html"
   if [[ -e $WELCOME_PAGE ]]; then
     DOCKER_CONTAINER_ID=$(basename $(cat /proc/1/cpuset))
+    (( ${#DOCKER_CONTAINER_ID} < 12 )) && DOCKER_CONTAINER_ID=$(hostname)
     if (( ${#DOCKER_CONTAINER_ID} >= 12 )); then
       if [[ -x $(command -v docker) ]]; then
         DOCKER_CONTAINER_NAME=$(docker inspect --format="{{.Name}}" $DOCKER_CONTAINER_ID)
         sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_NAME#/}"'/' -i $WELCOME_PAGE
+        JWT_MESSAGE=$(echo $JWT_MESSAGE | sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_NAME#/}"'/')
       else
         sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_ID::12}"'/' -i $WELCOME_PAGE
+        JWT_MESSAGE=$(echo $JWT_MESSAGE | sed 's/$(sudo docker ps -q)/'"${DOCKER_CONTAINER_ID::12}"'/')
       fi
     fi
   fi
@@ -451,9 +470,6 @@ update_nginx_settings(){
       sed '/ssl_verify_client/a '"ssl_client_certificate ${CA_CERTIFICATES_PATH}"';' -i ${NGINX_ONLYOFFICE_CONF}
     fi
 
-    sed 's/ssl on;/#ssl on;/g' -i ${NGINX_ONLYOFFICE_CONF}
-    sed 's/ssl_verify_client true;/#ssl_verify_client true;/g' -i ${NGINX_ONLYOFFICE_CONF}
-
     if [ "${ONLYOFFICE_HTTPS_HSTS_ENABLED}" == "true" ]; then
       sed 's,\(max-age=\).*\(;\)$,'"\1${ONLYOFFICE_HTTPS_HSTS_MAXAGE}\2"',' -i ${NGINX_ONLYOFFICE_CONF}
     else
@@ -471,21 +487,18 @@ update_nginx_settings(){
   if [ -f "${NGINX_ONLYOFFICE_EXAMPLE_CONF}" ]; then
     sed 's/linux/docker/' -i ${NGINX_ONLYOFFICE_EXAMPLE_CONF}
   fi
-
-  # RA-Overide
-  # Comment out the 'ssl on;'
   sed 's/ssl on;/#ssl on;/g' -i ${NGINX_ONLYOFFICE_CONF}
-  # Comment out 'ssl_verify_client true;'
   sed 's/ssl_verify_client true;/#ssl_verify_client true;/g' -i ${NGINX_ONLYOFFICE_CONF}
+  documentserver-update-securelink.sh -s ${SECURE_LINK_SECRET:-$(pwgen -s 20)} -r false
 }
-
-
 
 update_supervisor_settings(){
   # Copy modified supervisor start script
   cp ${SYSCONF_TEMPLATES_DIR}/supervisor/supervisor /etc/init.d/
   # Copy modified supervisor config
   cp ${SYSCONF_TEMPLATES_DIR}/supervisor/supervisord.conf /etc/supervisor/supervisord.conf
+  sed "s/COMPANY_NAME/${COMPANY_NAME}/g" -i ${SYSCONF_TEMPLATES_DIR}/supervisor/ds/*.conf
+  cp ${SYSCONF_TEMPLATES_DIR}/supervisor/ds/*.conf /etc/supervisor/conf.d/
 }
 
 update_log_settings(){
@@ -514,7 +527,7 @@ for i in ${DS_LIB_DIR}/App_Data/cache/files ${DS_LIB_DIR}/App_Data/docbuilder ${
 done
 
 # change folder rights
-for i in ${LOG_DIR} ${LIB_DIR} ${DATA_DIR}; do
+for i in ${LOG_DIR} ${LIB_DIR}; do
   chown -R ds:ds "$i"
   chmod -R 755 "$i"
 done
@@ -584,9 +597,11 @@ else
   # read settings after the data container in ready state
   # to prevent get unconfigureted data
   read_setting
-
+  
   update_welcome_page
 fi
+
+find /etc/${COMPANY_NAME} -exec chown ds:ds {} \;
 
 #start needed local services
 for i in ${LOCAL_SERVICES[@]}; do
@@ -614,7 +629,7 @@ if [ ${ONLYOFFICE_DATA_CONTAINER} != "true" ]; then
 
   update_supervisor_settings
   service supervisor start
-
+  
   # start cron to enable log rotating
   update_logrotate_settings
   service cron start
@@ -635,6 +650,8 @@ if [ "${GENERATE_FONTS}" == "true" ]; then
   documentserver-generate-allfonts.sh ${ONLYOFFICE_DATA_CONTAINER}
 fi
 documentserver-static-gzip.sh ${ONLYOFFICE_DATA_CONTAINER}
+
+echo "${JWT_MESSAGE}" 
 
 tail -f /var/log/${COMPANY_NAME}/**/*.log &
 wait $!
