@@ -30,3 +30,8 @@ DOC_SERV_API_URL=http://192.168.100.82:8082/web-apps/apps/api/documents/api.js
 DOC_SERV_PRELOADER_URL=http://192.168.100.82:8082/web-apps/apps/api/documents/cache-scripts.html
 
 SITE_DOMAIN=http://192.168.100.82:8000
+
+
+# These will be enabled for the JSON Web Token validation by the ONLYOFFICE Document Server
+JWT_ENABLED=true
+JWT_SECRET=oZx66VLT5c7FxPLncbuIjtt6qfN13wjU

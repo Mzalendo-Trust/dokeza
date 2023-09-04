@@ -21,6 +21,7 @@ user_detail_url = HyperlinkedIdentityField(
     lookup_field='username',
 )
 
+
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
@@ -29,6 +30,7 @@ class UserSerializer(serializers.ModelSerializer):
         extra_kwargs = {
             "url": {"view_name": "api:user-detail", "lookup_field": "username"}
         }
+
 
 class UserCreateSerializer(ModelSerializer):
     email2 = EmailField(label='Confirm Email')
@@ -149,7 +151,6 @@ class UserDetailSerializer(ModelSerializer):
     # def get_profile(self, obj):
     #     profile = Profile.objects.filter_by_instance(obj).first()
     #     return profile
-
 
 
 class UserListSerializer(ModelSerializer):

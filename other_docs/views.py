@@ -58,11 +58,11 @@ class DocDetailView(DetailView):
         return context
 
 
-
 class DocDisplayView(View):
     """
     This view combines the Detail "GET" view and the Comment "POST" view.
     """
+
     def get(self, request, *args, **kwargs):
         view = DocDetailView.as_view()
         return view(request, *args, **kwargs)

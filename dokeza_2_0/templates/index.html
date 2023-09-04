@@ -186,7 +186,7 @@
     <h1 class="dz-main__heading">Events</h1>
     <!-- Calender -->
     <div class="dz-events__loading"></div>
-    <div id="dz-home-events" class="dz-events__calender" style="height:100px"></div>
+    <div id="dz-home-events" class="dz-events__index"></div>
     <!-- END calender -->
     <div class="dz-home__content dz-home__events--content">
       {% for event in events|slice:"8" %}
@@ -214,7 +214,7 @@
 {% endblock content%}
 <!-- END Main Content -->
 {% block fullcalendar %}
-<script src="{% static 'js/vendor/fullcalendar.min.js' %}"></script>
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.8/index.global.min.js'></script>
 <script src="{% static 'js/dokeza-fullcalendar.min.js' %}"></script>
 {% endblock fullcalendar %}
 {% block cookieconsent %}

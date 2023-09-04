@@ -204,22 +204,28 @@ label .checkbox {
     height: 6em;
     background-color: transparent;
     background-position: center 0;
-    background-repeat: no-repeat;
-    width: 6rem; }
+    background-repeat: no-repeat; }
   .try-editor .document {
-    background-image: url("/static/images/users/new_doc.svg"); }
+    background-image: url("/static/images/users/new_doc.svg");
+    width: 6rem; }
   .try-editor .spreadsheet {
-    background-image: url("/static/images/users/new_spreadsheet.svg"); }
+    background-image: url("/static/images/users/new_spreadsheet.svg");
+    width: 6rem; }
   .try-editor .presentation {
-    background-image: url("/static/images/onlyoffice/file_pptx.png"); }
+    background-image: url("/static/images/onlyoffice/file_pptx.png");
+    width: 6rem; }
   .try-editor .petition {
-    background-image: url("/static/images/users/new_petition.svg"); }
+    background-image: url("/static/images/users/new_petition.svg");
+    width: 6rem; }
   .try-editor .bill {
-    background-image: url("/static/images/users/new_bill.svg"); }
+    background-image: url("/static/images/users/new_bill.svg");
+    width: 6rem; }
   .try-editor .memorandum {
-    background-image: url("/static/images/users/new_memorandum.svg"); }
+    background-image: url("/static/images/users/new_memorandum.svg");
+    width: 6rem; }
   .try-editor .presentation {
-    background-image: url("/static/images/users/new_presentation.svg"); }
+    background-image: url("/static/images/users/new_presentation.svg");
+    width: 6rem; }
   .try-editor .editor-text {
     padding-top: 2em; }
 
@@ -296,16 +302,15 @@ label .checkbox {
   right: 0;
   top: 0; }
 
-button.send-memo {
+.send-memo {
   background: url("/static/images/users/send-memo.svg") no-repeat center 0 transparent;
   cursor: pointer;
-  width: 5em;
-  height: 2rem;
+  width: 4em;
   display: inline-block;
   overflow: hidden;
   position: relative;
   border: 0; }
-  button.send-memo:active {
+  .send-memo:active {
     background: url("/static/images/users/send-memo-green.svg") no-repeat center 0 transparent;
     border: 0; }
 

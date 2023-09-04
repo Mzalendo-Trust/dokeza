@@ -29,7 +29,7 @@
             {% if petition.image %}
             <img class="petition-icon" src="{{ petition.image.url }}" alt="Petition image">
             {% else %}
-            <img class="petition-icon" src="{% static 'dist/images/public/petition-icon.svg' %}" alt="">
+            <img class="petition-icon" src="{% static 'images/public/petition-icon.svg' %}" alt="">
             {% endif %}
           </div>
           <p class="card-text">{{ petition.content|safe|truncatewords:20 }}
@@ -40,7 +40,7 @@
     </div>
     {% empty %}
     <hr>
-    There are currently no petitions.
+    <h2>There are currently no petitions.</h2>
     <hr>
     {% endfor %}
     <!--END Petitions Cards-->

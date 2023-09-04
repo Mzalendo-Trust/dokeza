@@ -56,11 +56,11 @@
               <img class="bill-cover" src="//{{ request.get_host }}{{ bill.bill_pic.url }}" alt="{{ bill.title }}">
             {% else %}
               {% if bill.bill_from == 1 %}
-                <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="{{ bill.title }}">
+                <img class="bill-cover" src="{% static 'images/bills/bill_draft_assembly.svg' %}" alt="{{ bill.title }}">
                 {% elif bill.bill_from == 2 %}
-                <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_senate.svg' %}" alt="{{ bill.title }}">
+                <img class="bill-cover" src="{% static 'images/bills/bill_draft_senate.svg' %}" alt="{{ bill.title }}">
               {% else %}
-                <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft.svg' %}" alt="{{ bill.title }}">
+                <img class="bill-cover" src="{% static 'images/bills/bill_draft.svg' %}" alt="{{ bill.title }}">
               {% endif %}
             {% endif %}
           </div>

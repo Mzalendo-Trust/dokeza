@@ -50,7 +50,7 @@ REDIS_SERVER_PORT=6379
 
 # These will be enabled for the JSON Web Token validation by the ONLYOFFICE Document Server
 # JWT_ENABLED=true
-# JWT_SECRET=secret
+# JWT_SECRET=oZx66VLT5c7FxPLncbuIjtt6qfN13wjU
 
 # Defines the http header that will be used to send the JSON Web Token.
 # JWT_HEADER=Authorization
