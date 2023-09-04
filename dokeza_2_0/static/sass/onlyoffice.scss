@@ -58,6 +58,7 @@ label .checkbox {
     background-color: transparent;
     background-position: center 0;
     background-repeat: no-repeat;
+    width: 6rem
   }
 
   .document {
@@ -179,10 +180,11 @@ label .checkbox {
 
 }
 
-.send-memo {
+button.send-memo {
   background: url("/static/images/users/send-memo.svg") no-repeat center 0 transparent;
   cursor: pointer;
-  width: 4em;
+  width: 5em;
+  height: 2rem;
   display: inline-block;
   overflow: hidden;
   position: relative;

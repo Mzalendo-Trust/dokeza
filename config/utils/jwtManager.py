@@ -27,11 +27,14 @@
 import jwt
 from django.conf import settings
 
+
 def isEnabled():
     return bool(settings.DOC_SERV_JWT_SECRET)
 
+
 def encode(payload):
     return jwt.encode(payload, settings.DOC_SERV_JWT_SECRET, algorithm='HS256').decode('utf-8')
+
 
 def decode(string):
     return jwt.decode(string, settings.DOC_SERV_JWT_SECRET, algorithms=['HS256'])

@@ -2,6 +2,7 @@
   margin: 80px 50vw 16px 0;
   width: 50vw;
 }
+
 .main-panel h3 {
   text-align: center;
 }
@@ -46,30 +47,38 @@ label .checkbox {
   text-decoration: none;
   cursor: pointer;
 }
+
 .try-editor div {
   height: 6em;
   background-color: transparent;
   background-position: center 0;
   background-repeat: no-repeat;
 }
+
 .try-editor .document {
-  background-image: url("/static/dist/images/users/new_doc.svg");
+  background-image: url("/static/images/users/new_doc.svg");
 }
+
 .try-editor .spreadsheet {
-  background-image: url("/static/dist/images/users/new_spreadsheet.svg");
+  background-image: url("/static/images/users/new_spreadsheet.svg");
 }
+
 .try-editor .presentation {
-  background-image: url("/static/dist/images/onlyoffice/file_pptx.png");
+  background-image: url("/static/images/onlyoffice/file_pptx.png");
 }
+
 .try-editor .petition {
-  background-image: url("/static/dist/images/users/new_petition.svg");
+  background-image: url("/static/images/users/new_petition.svg");
 }
+
 .try-editor .bill {
-  background-image: url("/static/dist/images/users/new_bill.svg");
+  background-image: url("/static/images/users/new_bill.svg");
 }
+
 .try-editor .memorandum {
-  background-image: url("/static/dist/images/users/new_memorandum.svg");
+  background-image: url("/static/images/users/new_memorandum.svg");
 }
+
 .try-editor .editor-text {
   padding-top: 2em;
 }
@@ -128,6 +137,7 @@ label .checkbox {
   float: left;
   margin-right: 25px;
 }
+
 .upload-panel div {
   text-align: center;
   font-size: 16px;
@@ -135,8 +145,7 @@ label .checkbox {
 }
 
 .file-upload {
-  background: url("/static/dist/images/users/upload_doc.svg") no-repeat center 0
-    transparent;
+  background: url("/static/images/users/upload_doc.svg") no-repeat center 0 transparent;
   cursor: pointer;
   display: inline-block;
   height: 45px;
@@ -185,8 +194,7 @@ label .checkbox {
 }
 
 .error-message {
-  background: url("/static/dist/images/onlyoffice/alert.png") no-repeat scroll
-    4px 10px #ffece3;
+  background: url("/static/images/onlyoffice/alert.png") no-repeat scroll 4px 10px #ffece3;
   color: #666668 !important;
   display: none;
   font-size: 13px;
@@ -211,17 +219,17 @@ label .checkbox {
 }
 
 .current {
-  background-image: url("/static/dist/images/onlyoffice/loader16.gif");
+  background-image: url("/static/images/onlyoffice/loader16.gif");
   color: #333;
 }
 
 .done {
-  background-image: url("/static/dist/images/onlyoffice/done.png");
+  background-image: url("/static/images/onlyoffice/done.png");
   color: #333;
 }
 
 .error {
-  background-image: url("/static/dist/images/onlyoffice/alert.png");
+  background-image: url("/static/images/onlyoffice/alert.png");
 }
 
 .step-descr {
@@ -280,15 +288,15 @@ label .checkbox {
 }
 
 .stored-edit.text {
-  background-image: url("/static/dist/images/onlyoffice/icon_docx.png");
+  background-image: url("/static/images/onlyoffice/icon_docx.png");
 }
 
 .stored-edit.spreadsheet {
-  background-image: url("/static/dist/images/onlyoffice/icon_xlsx.png");
+  background-image: url("/static/images/onlyoffice/icon_xlsx.png");
 }
 
 .stored-edit.presentation {
-  background-image: url("/static/dist/images/onlyoffice/icon_pptx.png");
+  background-image: url("/static/images/onlyoffice/icon_pptx.png");
 }
 
 .stored-edit span {
@@ -326,8 +334,7 @@ label .checkbox {
 }
 
 .dialog-close {
-  background: url("/static/dist/images/onlyoffice/close.png") no-repeat scroll
-    left top #e2e2e2;
+  background: url("/static/images/onlyoffice/close.png") no-repeat scroll left top #e2e2e2;
   cursor: pointer;
   float: right;
   font-size: 1px;
@@ -416,7 +423,7 @@ label .checkbox {
   -webkit-user-select: none;
 }
 
-.contentCells > a {
+.contentCells>a {
   text-decoration: none;
 }
 

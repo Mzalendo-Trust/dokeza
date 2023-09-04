@@ -84,14 +84,29 @@ COPY ./compose/local/documentserver/overides.css /opt/overides.css
 
 COPY ./compose/local/documentserver/run-document-server.sh /app/ds/run-document-server.sh
 
-RUN wget -q -P /tmp "$PACKAGE_URL" && \
+# RUN wget -q -P /tmp "$PACKAGE_URL" && \
+#     apt-get -y update && \
+#     service postgresql start && \
+#     apt-get -yq install /tmp/$(basename "$PACKAGE_URL") && \
+#     service postgresql stop && \
+#     service supervisor stop && \
+#     chmod 755 /app/ds/*.sh && \
+#     rm -f /tmp/$(basename "$PACKAGE_URL") && \
+#     rm -rf /var/log/$COMPANY_NAME && \
+#     rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p -m 700 ~/.gnupg && \
+    curl -fsSL https://download.onlyoffice.com/GPG-KEY-ONLYOFFICE | gpg --no-default-keyring --keyring gnupg-ring:/tmp/onlyoffice.gpg --import && \
+    chmod 644 /tmp/onlyoffice.gpg && \
+    chown root:root /tmp/onlyoffice.gpg && \
+    mv /tmp/onlyoffice.gpg /usr/share/keyrings/onlyoffice.gpg && \
+    echo "deb [signed-by=/usr/share/keyrings/onlyoffice.gpg] https://download.onlyoffice.com/repo/debian squeeze main" | tee /etc/apt/sources.list.d/onlyoffice.list && \
     apt-get -y update && \
     service postgresql start && \
-    apt-get -yq install /tmp/$(basename "$PACKAGE_URL") && \
+    apt-get -y install onlyoffice-documentserver=7.3.3-49~stretch && \
     service postgresql stop && \
     service supervisor stop && \
     chmod 755 /app/ds/*.sh && \
-    rm -f /tmp/$(basename "$PACKAGE_URL") && \
     rm -rf /var/log/$COMPANY_NAME && \
     rm -rf /var/lib/apt/lists/*
 

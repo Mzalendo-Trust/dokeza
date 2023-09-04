@@ -35,7 +35,7 @@
 
 // 1. CONFIGURATION AND HELPERS
 @import "./_variables";
-@import "./overides-fullcalender";
+@import "./_overides-fullcalender";
 
 .dz-bg-orange {
   background-color: $dz-clr--orange;
@@ -63,6 +63,7 @@ h3 {
   font-weight: 500;
   font-size: 1.6rem;
   line-height: 2rem;
+  padding: 0 1rem;
 }
 
 h4,
@@ -71,6 +72,7 @@ h5 {
   font-weight: 500;
   font-size: 1.2rem;
   line-height: 1.5rem;
+  padding: 0 1rem;
 }
 
 h6 {
@@ -89,6 +91,7 @@ p {
   width: 100%;
   font-weight: 300;
   font-size: 1rem;
+  padding: 0 1rem;
 }
 
 label {
@@ -102,13 +105,9 @@ label {
 a {
   color: $link-color;
   text-decoration: $link-decoration;
+
   p {
     color: $dz-clr--maroon;
-  }
-
-  @include hover-focus {
-    color: $link-hover-color;
-    text-decoration: $link-hover-decoration;
   }
 }
 
@@ -130,6 +129,7 @@ hr {
   width: 100%;
   border-top: 2px solid $dz-clr--darkgreen;
 }
+
 .pagination-container {
   width: 100%;
 }
@@ -140,7 +140,7 @@ hr {
   justify-content: center;
   font-family: "Open sans", sans-serif;
   font-weight: 600;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 
   li.active,
   a.live {
@@ -191,19 +191,15 @@ hr {
   background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
 
   @include media-breakpoint-up(lg) {
-    background-image: linear-gradient(
-      to right,
-      #c22710 15%,
-      $brand-primary 15%
-    );
+    background-image: linear-gradient(to right,
+        #c22710 15%,
+        $brand-primary 15%);
   }
 
   @media (min-width: 2000px) {
-    background-image: linear-gradient(
-      to right,
-      #c22710 15%,
-      $brand-primary 15%
-    );
+    background-image: linear-gradient(to right,
+        #c22710 15%,
+        $brand-primary 15%);
   }
 }
 
@@ -229,29 +225,6 @@ hr {
       display: flex;
       flex-wrap: nowrap;
     }
-
-    .user-profile {
-      display: flex;
-      flex-wrap: nowrap;
-      color: white;
-
-      @media screen and (max-width: $tablet-port) {
-        flex-wrap: wrap;
-      }
-
-      &__name {
-        color: white;
-        margin-bottom: 0;
-
-        @media screen and (max-width: $tablet-port) {
-          display: none;
-        }
-      }
-
-      img {
-        height: 1.5rem;
-      }
-    }
   }
 
   &__scroll {
@@ -264,6 +237,74 @@ hr {
       display: none;
     }
   }
+}
+
+.user-profile {
+  height: 60px;
+  background-color: $dz-clr--green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  @media screen and (max-width: $mobile-land - 1) {
+    max-width: 16rem;
+  }
+
+  @media screen and (max-width: $tablet-port - 1) {
+    flex-wrap: wrap;
+    flex: 0 1 66%;
+    padding-right: 0.5rem;
+  }
+
+  @media screen and (min-width: $tablet-port) and (max-width: $tablet-land) {
+    flex: 0 1 40%;
+    padding-right: 0.5rem;
+  }
+
+  &__name {
+    color: white;
+    margin: 0;
+    padding: 0 0.5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xs) {
+      display: flex;
+      flex: 0 1 66%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .head-shot {
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $tablet-port - 1) {
+      flex: 0 1 20%;
+    }
+
+    @media screen and (min-width: $tablet-port) and (max-width: $tablet-land) {
+      flex: 0 1 40%;
+    }
+
+    img {
+      height: 1.5rem;
+    }
+  }
+
+  .sign-in {
+    font-style: italic;
+    font-size: smaller;
+    text-align: center;
+    flex: 0 1 33%;
+    color: $dz-clr--lightgreen;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.2rem;
+    background-color: darken($dz-clr--green, 10%);
+  }
+
 }
 
 .dz-navigation {
@@ -286,32 +327,122 @@ hr {
     background-color: $brand-primary;
     justify-content: flex-start;
 
+    .top-bar {
+      display: flex;
+
+      @include media-breakpoint-up(xs) {
+        padding: 0;
+        flex-wrap: nowrap;
+      }
+
+      @include media-breakpoint-up(sm) {
+        .navbar-brand {
+          flex: 0 1 28%;
+          display: flex;
+          justify-content: flex-end;
+          background: #c22710;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        .navbar-brand {
+          flex: 0 1 30%;
+        }
+
+        .user-profile {
+          flex: 0 1 40%;
+          max-width: 20rem;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        .navbar-brand {
+          background-color: #008941;
+        }
+      }
+    }
+
+    .top-2-bar {
+      display: flex;
+
+      @include media-breakpoint-up(xs) {
+        padding: 0;
+        flex-wrap: wrap;
+
+        .dz-search {
+          order: 1;
+          flex: 0 1 100%;
+        }
+
+        .class__share {
+          order: 2;
+          flex: 0 1 66%
+        }
+      }
+
+      @include media-breakpoint-up(sm) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .dz-search {
+          order: 1;
+          flex: 0 1 50%;
+          margin-top: 0.5rem;
+        }
+
+        .class__share {
+          order: 2;
+          flex: 0 1 30%
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        .dz-search {
+          margin-top: 1rem;
+          display: flex;
+          flex: 0 1 100%;
+          justify-content: center;
+
+          .input-group {
+            max-width: 20rem;
+            max-height: 1rem;
+          }
+        }
+      }
+    }
+
     li {
       margin-left: auto;
     }
 
     @include media-breakpoint-up(xs) {
       padding: 0;
-      margin-left: 5%;
-      width: 95%;
+      width: 100%;
     }
 
     @include media-breakpoint-up(sm) {
-      padding-left: 3px;
+      padding-left: 0;
       padding-right: 0;
-      margin-left: 6%;
-      width: 94%;
+      margin-left: 0;
+      width: 100%;
       margin-right: 0;
     }
 
     @include media-breakpoint-up(xl) {
       padding-left: 0;
+
+      .top-bar {
+        flex: 0 1 60%
+      }
+
+      .top-2-bar {
+        flex: 0 1 40%
+      }
     }
   }
 
   .nav-toggle-button {
     width: 4rem;
-    height: 60px;
     background-color: $brand-primary;
 
     @media screen and (max-width: 359px) {
@@ -321,17 +452,37 @@ hr {
     @media screen and (min-width: 1200px) {
       display: none;
     }
+
+    @include media-breakpoint-up(xs) {
+      flex: 0 1 33%;
+      order: 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      flex: 0 1 10%;
+      order: 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
   }
 
   .navbar-toggler {
-    padding-top: 15px;
-    position: absolute;
     right: 1rem;
   }
 
   .navbar-toggler-icon {
-    width: 30px;
-    height: 30px;
+    width: 2rem;
+    height: 2rem;
     background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='3' stroke-linecap='butt' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
   }
 
@@ -345,14 +496,10 @@ hr {
     align-items: center;
     color: white;
 
-    @include media-breakpoint-up(lg) {
-      // padding-top: 19.2px;
-      // height: 60px;
-    }
-
     &.active {
       background-color: darken($brand-primary, 10%);
     }
+
     &.sub-active {
       background-color: white;
       color: darken($brand-primary, 10%);
@@ -363,52 +510,20 @@ hr {
     color: white;
     flex-wrap: wrap;
     justify-content: center;
+    display: flex;
+
+    @include media-breakpoint-up(xs) {
+      flex: 0 1 80%;
+    }
   }
 
   .long-navs {
     text-align: center;
+    padding: 0 1rem;
 
     @media screen and (max-width: $tablet-land) {
       text-align: left;
       padding: 0.5rem 1rem;
-    }
-  }
-
-  .user-profile {
-    padding-top: 6px;
-    height: 60px;
-    background-color: $dz-clr--green;
-
-    .head-shot {
-      width: 22px;
-      margin: 0 0.5rem 0 0;
-
-      @media screen and (max-width: $desktop - 1) {
-        margin: 0;
-      }
-    }
-
-    &__name {
-      margin: 0;
-      text-align: center;
-
-      @media screen and (max-width: $desktop - 1) {
-        margin: 0 1rem;
-      }
-    }
-
-    @media screen and (min-width: $desktop) {
-      max-width: 16rem;
-    }
-
-    .sign-in {
-      margin: 0 0.75rem;
-      font-style: italic;
-      font-size: smaller;
-      color: $dz-clr--lightgreen;
-      padding: 0.15rem 0.5rem;
-      border-radius: 0.2rem;
-      background-color: darken($dz-clr--green, 10%);
     }
   }
 }
@@ -455,7 +570,7 @@ hr {
   }
 
   @include media-breakpoint-up(sm) {
-    padding: 0 1rem;
+    padding: 1rem;
   }
 
   &__results {
@@ -511,6 +626,96 @@ hr {
   }
 }
 
+.login-or {
+  padding-top: 1.3rem;
+  color: darken($dz-clr--lightgreen, 10%);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.dz-btn {
+  &__facebook {
+    border: none;
+    color: lighten($dz-clr--facebook, 40%);
+    background-color: $dz-clr--facebook;
+
+    &:hover {
+      color: white;
+      background: darken($dz-clr--facebook, 10%);
+    }
+  }
+
+  &__twitter {
+    border: none;
+    color: lighten($dz-clr--twitter, 20%);
+    background-color: $dz-clr--twitter;
+
+    &:hover {
+      color: white;
+      background-color: darken($dz-clr--twitter, 10%);
+    }
+  }
+
+  &__google {
+    border: none;
+    color: lighten($dz-clr--google, 30%);
+    background-color: $dz-clr--google;
+
+    &:hover {
+      color: white;
+      background-color: darken($dz-clr--google, 10%);
+    }
+  }
+}
+
+.class__share {
+  display: flex;
+  padding: 0 1em;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: visible;
+  order: 3;
+
+  a {
+    text-decoration: none;
+    font-size: normal;
+    margin: 0 1em;
+
+    .twitter-this,
+    .facebook-this,
+    .mzalendo-this {
+      width: 2.5em;
+      height: 2.5em;
+    }
+
+    .twitter-this {
+      background-color: transparent;
+      padding: 0.25em;
+      width: 3em;
+      height: 2.5em;
+
+      img {
+        width: 3em;
+        height: 2.5em;
+      }
+    }
+
+    .facebook-this {
+      background-color: transparent;
+      background-size: 100%;
+      border-radius: 2em;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+    }
+
+    .mzalendo-this {
+      background-color: transparent;
+      background-size: 100%;
+      border-radius: 0.5em;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
 //    Main
 .container-fluid {
   padding: 0 !important;
@@ -521,12 +726,25 @@ hr {
     position: relative;
     padding-bottom: 15em;
     display: flex;
-    flex-wrap: wrap;
     max-width: 1140px;
     justify-content: center;
 
     @media screen and (min-width: $tablet-land + 1) {
       max-width: 1440px;
+    }
+
+    main {
+      display: flex;
+      position: relative;
+
+      @media screen and (max-width: $mobile-land) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @include media-breakpoint-up(xs) {
+      padding: 0;
     }
   }
 }
@@ -550,6 +768,11 @@ hr {
     padding-left: 0;
     margin-bottom: 0;
 
+    @media screen and (max-width: $mobile-land) {
+
+      position: relative;
+    }
+
     @media screen and (min-width: $mobile-land + 1) {
       padding-left: 0.5rem;
     }
@@ -567,21 +790,17 @@ hr {
   }
 
   &__content {
-    display: flex;
-    flex-wrap: wrap;
+    width: 100%;
     margin: 0 auto;
-    padding-top: 1em;
+
     &-heading {
       font-weight: 500;
       font-size: 1.8rem;
     }
 
-    // @media screen and (max-width: $mobile-land) {
-    //   padding: 0.5rem 0;
-    // }
-    // @include media-breakpoint-up(sm){
-    //   flex: 1 1 75%;
-    // }
+    .dz-aside {
+      padding: 1rem;
+    }
   }
 
   .text-muted,
@@ -622,15 +841,15 @@ hr {
 
 //    Footer
 .dz-footer {
-  position: absolute;
-  bottom: 0;
   border-top: 0.5rem solid $dz-clr--red;
   background-color: $black;
   color: $white;
   width: 100%;
   z-index: 100;
+  bottom: 0;
+
   @media screen and (max-width: $mobile-land) {
-    bottom: auto;
+    bottom: 0;
   }
 
   .container {
@@ -653,9 +872,11 @@ hr {
   ul {
     font-size: 0.9rem;
     font-weight: 300;
+
     li {
       width: 100%;
       padding: 0.5em 0;
+
       img.cipesa-logo {
         width: 100%;
         max-width: 280px;
@@ -677,6 +898,7 @@ hr {
 //    page__home
 .dz-home {
   flex: 1 1 100%;
+
   @media screen and (min-width: $desktop-small) and (max-width: $desktop) {
     flex: 1 1 100%;
   }
@@ -722,6 +944,7 @@ hr {
       padding: 1rem;
       background-color: $brand-primary;
     }
+
     .image-content {
       position: relative;
       display: flex;
@@ -731,6 +954,7 @@ hr {
       height: auto;
       overflow: hidden;
       margin: 1em 0;
+
       .prev-img,
       .next-img {
         flex: 0 1 5%;
@@ -741,6 +965,12 @@ hr {
         z-index: 1600;
         background-color: $brand-primary;
         cursor: pointer;
+
+        @media screen and (min-width: $mobile-port) and (max-width: $mobile-land - 1) {
+          flex: 0 1 10%;
+        }
+
+
         .left-arrow,
         .right-arrow {
           img {
@@ -748,8 +978,10 @@ hr {
           }
         }
       }
+
       .slider-holder {
         flex: 0 1 100%;
+
         .images-container {
           position: relative;
           display: flex;
@@ -759,6 +991,7 @@ hr {
           height: 28em;
           border-top-left-radius: 0.5em;
           border-top-right-radius: 0.5em;
+
           .image-holder {
             position: absolute;
             top: 0;
@@ -769,6 +1002,7 @@ hr {
             width: 100%;
             height: 25em;
             padding: 0 0.5em;
+
             .image-wrapper {
               width: 100%;
               height: 20em;
@@ -778,6 +1012,7 @@ hr {
                 width: 100%;
               }
             }
+
             .pic-text {
               position: absolute;
               top: 20em;
@@ -786,20 +1021,27 @@ hr {
               z-index: 500;
               height: 8em;
               padding: 1em;
+
               h2,
               p {
                 color: darken($brand-primary, 20%);
               }
+
               p {
                 font-size: 1.1em;
                 line-height: 1.1em;
                 font-weight: 300;
+              }
+
+              @include media-breakpoint-up(xs) {
+                top: 12em;
               }
             }
           }
         }
       }
     }
+
     .p-1 {
       padding: 0 !important;
     }
@@ -816,7 +1058,7 @@ hr {
   .public-heading {
     color: #2b0800;
     margin-bottom: 0.2rem;
-    height: 2.5em;
+    height: max-content;
   }
 
   // page__home--other_docs
@@ -845,13 +1087,11 @@ hr {
 
     &-caucus {
       padding: 0.75rem;
-      background-color: linear-gradient(
-        108deg,
-        $dz-clr--lightbrown 0%,
-        $dz-clr--lightbrown 50%,
-        $dz-clr--lightpurple 50%,
-        $dz-clr--lightpurple 100%
-      );
+      background-color: linear-gradient(108deg,
+          $dz-clr--lightbrown 0%,
+          $dz-clr--lightbrown 50%,
+          $dz-clr--lightpurple 50%,
+          $dz-clr--lightpurple 100%);
     }
   }
 
@@ -1002,6 +1242,10 @@ hr {
   }
 }
 
+.dz-home__about--content {
+  padding: 0 1rem;
+}
+
 .bill-sponsor,
 .event-dates,
 .analysis-dates {
@@ -1067,6 +1311,7 @@ hr {
     margin: 2px 0.25rem;
   }
 }
+
 .no-ideas {
   height: 10em;
   text-align: center;
@@ -1130,6 +1375,7 @@ hr {
 
 .idea-edit {
   flex: 1 1 30%;
+
   &__detail {
     display: flex;
   }
@@ -1160,15 +1406,16 @@ hr {
   padding-top: 1em;
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 80%;
   max-width: 960px;
 }
+
 .how-images {
   display: flex;
   padding: 1em;
-  width: 640px;
+  width: 100%;
   flex-wrap: nowrap;
   justify-content: center;
+
   img {
     width: 100%;
   }
@@ -1180,6 +1427,7 @@ hr {
   margin: 0 auto;
   max-width: 960px;
 }
+
 .dz-about {
   flex: 1 1 auto;
 
@@ -1194,6 +1442,10 @@ hr {
     top: 0;
     left: 3em;
     width: 18em;
+
+    @include media-breakpoint-up(xs) {
+      width: 100%;
+    }
 
     &--list {
       position: relative;
@@ -1303,6 +1555,7 @@ hr {
     }
 
     @include media-breakpoint-up(md) {
+
       h3,
       h4 {
         margin: 0;
@@ -1442,6 +1695,7 @@ hr {
 
 //      page_contacts
 .dz-contacts {
+
   p,
   ul {
     font-weight: 300;
@@ -1692,8 +1946,10 @@ hr {
   display: flex;
   flex-wrap: wrap;
   flex: 0 1 100%;
+
   aside {
     flex: 0 1 25%;
+
     @media screen and (max-width: $mobile-land - 1) {
       flex: 0 1 100%;
     }
@@ -1837,12 +2093,15 @@ hr {
 
 .bill-content {
   width: 100%;
+
   @media screen and (max-width: $tablet-port - 1) {
     width: 100%;
   }
+
   @media screen and (min-width: $tablet-port) {
     flex: 0 1 75%;
   }
+
   h2 {
     font-size: 1.4rem;
     line-height: 1.6rem;
@@ -1883,7 +2142,12 @@ hr {
 .resource-page {
   flex: 1 0 100%;
   margin: 1rem 0 3rem;
+
+  p {
+    padding: 0 1rem;
+  }
 }
+
 .dz-events,
 .dz-petitions,
 .dz-memoranda {
@@ -1915,7 +2179,8 @@ hr {
     }
 
     &__calender {
-      margin: 1rem 3rem;
+      margin: 1rem 2rem;
+      height: 44vh;
     }
 
     &__loading {
@@ -1934,8 +2199,13 @@ hr {
     border-radius: 0;
     flex: 1 1 100%;
   }
+
   &__heading {
     color: #2b0800;
+  }
+
+  &__list {
+    flex: 0 1 33%;
   }
 }
 
@@ -1960,7 +2230,7 @@ hr {
   }
 }
 
-.dz-events__calender {
+.dz-events__index {
   padding: 0.5rem 0 0;
   min-height: 30vh;
 
@@ -2108,13 +2378,30 @@ hr {
 
     input#id_remember {
       display: inline;
-      margin-right: 1rem;
+      margin: 0.5rem 1rem 0 0;
       height: auto;
+    }
+
+    .form-group {
+      display: flex;
+      margin-bottom: 0.5rem;
+
+      div {
+        width: 100%;
+      }
+
+      .form-check {
+        padding: 0;
+      }
     }
   }
 
   &-register {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.95rem;
+    margin: 0.5rem 0;
 
     a {
       margin-left: 1rem;
@@ -2122,6 +2409,9 @@ hr {
   }
 
   &-reset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 0.95rem;
   }
 }
@@ -2138,91 +2428,6 @@ hr {
   }
 }
 
-.login-or {
-  padding-top: 1.3rem;
-  color: darken($dz-clr--lightgreen, 10%);
-  font-size: 2rem;
-  font-weight: 500;
-}
-
-.dz-btn {
-  &__facebook {
-    border: none;
-    color: lighten($dz-clr--facebook, 40%);
-    background-color: $dz-clr--facebook;
-
-    &:hover {
-      color: white;
-      background: darken($dz-clr--facebook, 10%);
-    }
-  }
-
-  &__twitter {
-    border: none;
-    color: lighten($dz-clr--twitter, 20%);
-    background-color: $dz-clr--twitter;
-
-    &:hover {
-      color: white;
-      background-color: darken($dz-clr--twitter, 10%);
-    }
-  }
-
-  &__google {
-    border: none;
-    color: lighten($dz-clr--google, 30%);
-    background-color: $dz-clr--google;
-
-    &:hover {
-      color: white;
-      background-color: darken($dz-clr--google, 10%);
-    }
-  }
-}
-
-.class__share {
-  display: flex;
-  padding: 0 1em;
-  justify-content: flex-end;
-  align-items: center;
-  overflow: visible;
-  order: 3;
-  a {
-    text-decoration: none;
-    font-size: normal;
-    margin: 0 1em;
-    .twitter-this,
-    .facebook-this,
-    .mzalendo-this {
-      width: 2.5em;
-      height: 2.5em;
-    }
-    .twitter-this {
-      background-color: transparent;
-      padding: 0.25em;
-      width: 3em;
-      height: 2.5em;
-      img {
-        width: 3em;
-        height: 2.5em;
-      }
-    }
-
-    .facebook-this {
-      background-color: transparent;
-      background-size: 100%;
-      border-radius: 2em;
-      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
-    }
-
-    .mzalendo-this {
-      background-color: transparent;
-      background-size: 100%;
-      border-radius: 0.5em;
-      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
-    }
-  }
-}
 
 .bill-heading {
   color: white;
@@ -2257,6 +2462,7 @@ hr {
 }
 
 .card-details {
+
   h2,
   h3,
   h4 {
@@ -2282,6 +2488,7 @@ hr {
   &__pic {
     margin: 1rem;
     width: 12rem;
+
     img {
       width: 100%
     }
@@ -2361,15 +2568,35 @@ hr {
 .user__entry {
   justify-content: center;
   width: 100%;
+  display: flex;
 }
 
 .user__page {
-  width: 90%;
+  flex: 0 1 100%;
   margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  h3 {
+    flex: 0 1 100%;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      padding-left: 3rem;
+    }
+  }
 
   @include media-breakpoint-up(sm) {
     width: 75%;
   }
+}
+
+.help-block {
+  flex: 0 1 100%;
+  overflow-x: scroll;
+  display: flex;
 }
 
 .user__profile {
@@ -2444,9 +2671,33 @@ input.form-control.form-control-sm.form-search::placeholder {
 
 .dz-profile {
   width: 100%;
+  display: flex;
+
+  .profile-main {
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: $mobile-land - 1) {
+    flex-wrap: wrap;
+
+    .dz-aside,
+    .profile-main {
+      flex: 0 1 100%;
+    }
+
+  }
+
+  @media screen and (min-width: $mobile-land) {
+    .dz-aside {
+      flex: 0 1 30%;
+    }
+
+    .profile-main {
+      flex: 0 1 60%;
+    }
+  }
 
   @include media-breakpoint-up(md) {
-    width: 80%;
     margin: 0 auto;
   }
 
@@ -2495,6 +2746,8 @@ input.form-control.form-control-sm.form-search::placeholder {
       width: 30%;
     }
   }
+
+
 }
 
 .profile {
@@ -2536,10 +2789,11 @@ input.form-control.form-control-sm.form-search::placeholder {
 
 #div_id_remember label {
   background-color: $dz-clr--lightgreen;
-  padding: 1.2rem 1rem 0.3rem;
+  padding: 1rem;
   border-radius: 0.25rem;
   border: none;
   font-size: 0.9rem;
+  width: fit-content;
 }
 
 .btn-outline-primary {
@@ -2598,18 +2852,15 @@ input.form-control.form-control-sm.form-search::placeholder {
   }
 }
 
-//    page__search
-
 //    page__events
 .dz-public__events {
   .container {
     display: block;
+    height: max-content;
   }
 
   .dz-main__content {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 1rem;
+    padding-top: 1rem;
 
     .dz-bills__card {
       padding: 0;
@@ -2626,7 +2877,14 @@ input.form-control.form-control-sm.form-search::placeholder {
   }
 
   .dz-events__fullcalender {
-    grid-column: 2/-1;
+    height: 45vh;
+    flex: 0 1 66%;
+    padding: 1rem;
+    min-height: 34rem;
+
+    .fc-toolbar-chunk {
+      display: flex;
+    }
   }
 
   .events-footer {
@@ -2634,6 +2892,7 @@ input.form-control.form-control-sm.form-search::placeholder {
     grid-template-columns: repeat(1, auto);
     justify-content: center;
     line-height: 1rem;
+
     .event-description {
       p {
         color: $dz-clr--text-color;
@@ -2641,7 +2900,7 @@ input.form-control.form-control-sm.form-search::placeholder {
     }
 
     .event-date {
-      text-align:left;
+      text-align: left;
       font-size: 0.9em;
       padding: 0.75em 0 0;
       color: $dz-clr--text-color;
@@ -2676,6 +2935,7 @@ input.form-control.form-control-sm.form-search::placeholder {
   justify-content: center;
   flex-wrap: wrap;
   padding-top: 0.5em;
+
   .no-ideas {
     padding: 1em;
     font-weight: 500;

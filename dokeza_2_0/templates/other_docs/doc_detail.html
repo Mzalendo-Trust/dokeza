@@ -32,11 +32,11 @@
                 <img class="bill-cover" src="{{ object.bill_pic.url }}" alt="">
               {% else %}
                 {% if object.bill_from == 1 %}
-                  <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_assembly.svg' %}" alt="">
+                  <img class="bill-cover" src="{% static 'images/bills/bill_draft_assembly.svg' %}" alt="">
                   {% elif object.bill_from == 2 %}
-                  <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft_senate.svg' %}" alt="">
+                  <img class="bill-cover" src="{% static 'images/bills/bill_draft_senate.svg' %}" alt="">
                 {% else %}
-                  <img class="bill-cover" src="{% static 'dist/images/bills/bill_draft.svg' %}" alt="">
+                  <img class="bill-cover" src="{% static 'images/bills/bill_draft.svg' %}" alt="">
                 {% endif %}
               {% endif %}
             </div>

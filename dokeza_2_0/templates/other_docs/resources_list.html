@@ -29,7 +29,7 @@
             {% if resource.image %}
             <img class="memo-icon" src="{{ resource.image.url }}" alt="Petition image">
             {% else %}
-            <img class="memo-icon" src="{% static 'dist/images/public/memo-icon.svg' %}" alt="">
+            <img class="memo-icon" src="{% static 'images/public/memo-icon.svg' %}" alt="">
             {% endif %}
           </div>
           <p class="card-text">{{ resource.content|safe|truncatewords:20}}
@@ -47,7 +47,7 @@
     </div>
     {% empty %}
   <hr>
-    There are currently no resources available.
+    <p>There are currently no resources available.</p>
     {% endfor %}
     <!--END Memoranda Cards-->
   </section>

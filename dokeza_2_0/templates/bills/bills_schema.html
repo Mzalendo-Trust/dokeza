@@ -8,11 +8,11 @@
       "https://{{ request.get_host }}{{ bill.bill_pic.url }}"
 	{% else %}
 		{%if bill.bill_from == 1 %}
-			"https://dokeza.mzalendo.com/static/dist/images/bills/bill_draft_assembly.svg"
+			"https://dokeza.mzalendo.com/static/images/bills/bill_draft_assembly.svg"
 			{% elif bill.bill_from == 2 %}
-			"https://dokeza.mzalendo.com/static/dist/images/bills/bill_draft_senate.svg"
+			"https://dokeza.mzalendo.com/static/images/bills/bill_draft_senate.svg"
 		{% else %}
-			"https://dokeza.mzalendo.com/static/dist/images/bills/bill_draft.svg"
+			"https://dokeza.mzalendo.com/static/images/bills/bill_draft.svg"
 		{% endif %}
 	{% endif %}
      ],
