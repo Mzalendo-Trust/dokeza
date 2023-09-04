@@ -2950,3 +2950,2956 @@ input.form-control.form-control-sm.form-search::placeholder {
     color: $dz-clr--darkgreen;
   }
 }
+
+/*
+  TABLE OF CONTENTS
+  1. CONFIGURATION AND HELPERS
+      ..Globally-available variables and config.
+
+  2. VENDORS
+      ..Vendor specific styles or Libraries.
+        Bootstrap                   .. Bootstrap library (v4 alpha6)
+        Font-awesome                .. Font-awesome icon fonts
+        Quill Editor                .. Font-awesome icon fonts
+
+  3. BASE
+      ..Base or root level styles.
+
+  4. COMPONENTS
+      ..Globally-available page components styles.
+        Header                      .. Header styles
+            Navigation              .. Top Navigation styles
+        Main                        .. Main content styles
+        Footer                      .. Footer styles
+
+  5. PAGE-SPECIFIC
+      ..Page specific styles
+        page__home                  .. Home page specific styles
+          page_about                .. About page styles
+          page_news                 .. News page styles
+          page_contacts             .. Contacts page styles
+        page__bills                 .. Bills page specific styles
+        page__public participation  .. Public Participation page specific styles
+        page__help                  .. Help page specific styles
+        page__login/register        .. Login/Register page specific styles
+        page__user                  .. User page specific styles
+        page__search                .. Search page specific styles
+ */
+
+// 1. CONFIGURATION AND HELPERS
+@import "./_variables";
+@import "./_overides-fullcalender";
+
+.dz-bg-orange {
+  background-color: $dz-clr--orange;
+}
+
+// 2. VENDORS
+//    Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+//    Font-awesome
+@import "../../node_modules/font-awesome/scss/font-awesome";
+//    Fullcalendar
+// @import "../../node_modules/fullcalendar/main.min.css";
+
+// 3. BASE
+body {
+  padding: 0;
+}
+
+h1,
+h2,
+h3 {
+  width: 100%;
+  color: #2a6445;
+  font-weight: 500;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  padding: 0 1rem;
+}
+
+h4,
+h5 {
+  width: 100%;
+  font-weight: 500;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  padding: 0 1rem;
+}
+
+h6 {
+  color: #2a6445;
+  width: 100%;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.4rem;
+}
+
+strong {
+  font-weight: 500;
+}
+
+p {
+  width: 100%;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0 1rem;
+}
+
+label {
+  width: 15rem;
+}
+
+::selection {
+  background: #f7c09c;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  p {
+    color: $dz-clr--maroon;
+  }
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.row {
+  margin: 0;
+}
+
+p.user-action {
+  font-size: 0.9rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+hr {
+  width: 100%;
+  border-top: 2px solid $dz-clr--darkgreen;
+}
+
+.pagination-container {
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  flex: 0 1 100%;
+  justify-content: center;
+  font-family: "Open sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+
+  li.active,
+  a.live {
+    height: 2rem;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 1px;
+    margin: 0 0.25em;
+
+    span {
+      font-size: 1.2em;
+      margin: 0 0.25em;
+    }
+  }
+
+  svg {
+    padding-top: 3px;
+    width: 1.5em;
+    height: 2em;
+    margin: 0 0.4em;
+  }
+
+  .enabled {
+    fill: $dz-clr--green;
+  }
+
+  .disabled {
+    display: none;
+  }
+}
+
+// Button colours
+.btn-dokeza {
+  border-color: darken($dz-clr--orange, 20%);
+  background-color: darken($dz-clr--orange, 20%);
+  color: white;
+}
+
+.dz-small-hor {
+  width: 80%;
+  border-top: 1px solid rgba(240, 107, 35, 0.2);
+}
+
+// 4. COMPONENTS
+//    Header
+.dz-header {
+  background-color: $brand-primary;
+  background-image: linear-gradient(to right, #c22710 15%, $brand-primary 15%);
+
+  @include media-breakpoint-up(lg) {
+    background-image: linear-gradient(to right,
+        #c22710 15%,
+        $brand-primary 15%);
+  }
+
+  @media (min-width: 2000px) {
+    background-image: linear-gradient(to right,
+        #c22710 15%,
+        $brand-primary 15%);
+  }
+}
+
+//    Navigation
+.dz-navigation,
+.dz-sub-navigation {
+  overflow-x: auto;
+  font-size: 0.9rem;
+
+  &__navbar {
+    overflow: auto;
+    padding-left: 10vh;
+
+    @media screen and (max-width: $mobile-land) {
+      padding-left: 4vh;
+    }
+
+    @media screen and (max-width: $tablet-port) {
+      flex-wrap: wrap;
+    }
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-wrap: nowrap;
+    }
+  }
+
+  &__scroll {
+    width: 70px;
+    background-color: $dz-clr--red;
+  }
+
+  @media (min-width: 400px) {
+    &__scroll {
+      display: none;
+    }
+  }
+}
+
+.user-profile {
+  height: 60px;
+  background-color: $dz-clr--green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  @media screen and (max-width: $mobile-land - 1) {
+    max-width: 16rem;
+  }
+
+  @media screen and (max-width: $tablet-port - 1) {
+    flex-wrap: wrap;
+    flex: 0 1 66%;
+    padding-right: 0.5rem;
+  }
+
+  @media screen and (min-width: $tablet-port) and (max-width: $tablet-land) {
+    flex: 0 1 40%;
+    padding-right: 0.5rem;
+  }
+
+  &__name {
+    color: white;
+    margin: 0;
+    padding: 0 0.5rem;
+    text-align: center;
+
+    @include media-breakpoint-up(xs) {
+      display: flex;
+      flex: 0 1 66%;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .head-shot {
+    padding: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+
+    @media screen and (max-width: $tablet-port - 1) {
+      flex: 0 1 20%;
+    }
+
+    @media screen and (min-width: $tablet-port) and (max-width: $tablet-land) {
+      flex: 0 1 40%;
+    }
+
+    img {
+      height: 1.5rem;
+    }
+  }
+
+  .sign-in {
+    font-style: italic;
+    font-size: smaller;
+    text-align: center;
+    flex: 0 1 33%;
+    color: $dz-clr--lightgreen;
+    padding: 0.15rem 0.5rem;
+    border-radius: 0.2rem;
+    background-color: darken($dz-clr--green, 10%);
+  }
+
+}
+
+.dz-navigation {
+  background-color: $brand-primary;
+  padding: 0;
+
+  @include media-breakpoint-up(xs) {
+    padding: 0;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: 0;
+  }
+
+  @include media-breakpoint-up(md) {
+    padding: 0;
+  }
+
+  &__navbar {
+    background-color: $brand-primary;
+    justify-content: flex-start;
+
+    .top-bar {
+      display: flex;
+
+      @include media-breakpoint-up(xs) {
+        padding: 0;
+        flex-wrap: nowrap;
+      }
+
+      @include media-breakpoint-up(sm) {
+        .navbar-brand {
+          flex: 0 1 28%;
+          display: flex;
+          justify-content: flex-end;
+          background: #c22710;
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        .navbar-brand {
+          flex: 0 1 30%;
+        }
+
+        .user-profile {
+          flex: 0 1 40%;
+          max-width: 20rem;
+        }
+      }
+
+      @include media-breakpoint-up(xl) {
+        .navbar-brand {
+          background-color: #008941;
+        }
+      }
+    }
+
+    .top-2-bar {
+      display: flex;
+
+      @include media-breakpoint-up(xs) {
+        padding: 0;
+        flex-wrap: wrap;
+
+        .dz-search {
+          order: 1;
+          flex: 0 1 100%;
+        }
+
+        .class__share {
+          order: 2;
+          flex: 0 1 66%
+        }
+      }
+
+      @include media-breakpoint-up(sm) {
+        flex-wrap: nowrap;
+        justify-content: space-between;
+
+        .dz-search {
+          order: 1;
+          flex: 0 1 50%;
+          margin-top: 0.5rem;
+        }
+
+        .class__share {
+          order: 2;
+          flex: 0 1 30%
+        }
+      }
+
+      @include media-breakpoint-up(md) {
+        .dz-search {
+          margin-top: 1rem;
+          display: flex;
+          flex: 0 1 100%;
+          justify-content: center;
+
+          .input-group {
+            max-width: 20rem;
+            max-height: 1rem;
+          }
+        }
+      }
+    }
+
+    li {
+      margin-left: auto;
+    }
+
+    @include media-breakpoint-up(xs) {
+      padding: 0;
+      width: 100%;
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 0;
+      padding-right: 0;
+      margin-left: 0;
+      width: 100%;
+      margin-right: 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-left: 0;
+
+      .top-bar {
+        flex: 0 1 60%
+      }
+
+      .top-2-bar {
+        flex: 0 1 40%
+      }
+    }
+  }
+
+  .nav-toggle-button {
+    width: 4rem;
+    background-color: $brand-primary;
+
+    @media screen and (max-width: 359px) {
+      width: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: none;
+    }
+
+    @include media-breakpoint-up(xs) {
+      flex: 0 1 33%;
+      order: 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 0.5rem 1rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      flex: 0 1 10%;
+      order: 3;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem;
+    }
+
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+
+  .navbar-toggler {
+    right: 1rem;
+  }
+
+  .navbar-toggler-icon {
+    width: 2rem;
+    height: 2rem;
+    background-image: url("data:image/svg+xml;charset=utf8, %3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='3' stroke-linecap='butt' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .nav-link {
+    display: flex;
+    align-items: center;
+    color: white;
+
+    &.active {
+      background-color: darken($brand-primary, 10%);
+    }
+
+    &.sub-active {
+      background-color: white;
+      color: darken($brand-primary, 10%);
+    }
+  }
+
+  .user-sign {
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+
+    @include media-breakpoint-up(xs) {
+      flex: 0 1 80%;
+    }
+  }
+
+  .long-navs {
+    text-align: center;
+
+    @media screen and (max-width: $desktop-small - 1) {
+      text-align: left;
+      padding: 0.5rem 1rem;
+    }
+
+    @media screen and (min-width: $desktop-small) {
+      padding: 0 1rem;
+      height: 2rem;
+    }
+  }
+}
+
+.dz-navbar {
+  background-color: $brand-primary;
+  ;
+
+  @media screen and (max-width: $mobile-land) {
+    flex-wrap: nowrap;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: block !important;
+  }
+
+  .nav-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    max-width: 65rem;
+    margin: 0 auto;
+
+    a:last-child {
+      margin-right: auto;
+    }
+
+    @media screen and (max-width: 1023px) {
+      padding: 0;
+      flex-wrap: wrap;
+
+      .nav-link {
+        flex: 1 0 100%;
+      }
+    }
+  }
+}
+
+.dz-search {
+  @include media-breakpoint-up(xs) {
+    padding: 0 1rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    padding: 1rem;
+  }
+
+  &__results {
+    padding: 1rem;
+  }
+
+  &__bar {
+    width: 70%;
+    margin: 2rem;
+  }
+}
+
+.nav-items {
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.dz-sub-navigation {
+  background-color: darken($brand-primary, 10%);
+
+  .subnav-link {
+    padding: 0.5em 1em;
+
+    @include media-breakpoint-down(sm) {
+      padding: 0.5rem;
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding: 0.5rem 1rem;
+    }
+
+    color: white;
+    white-space: nowrap;
+
+    &:hover {
+      color: $white;
+    }
+
+    &.active {
+      background-color: white;
+      color: darken($brand-primary, 10%);
+    }
+  }
+
+  .subnav-head {
+    padding: 0.5em 1em;
+    white-space: nowrap;
+
+    &.active {
+      background-color: white;
+      color: darken($brand-primary, 10%);
+    }
+  }
+}
+
+.login-or {
+  padding-top: 1.3rem;
+  color: darken($dz-clr--lightgreen, 10%);
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.dz-btn {
+  &__facebook {
+    border: none;
+    color: lighten($dz-clr--facebook, 40%);
+    background-color: $dz-clr--facebook;
+
+    &:hover {
+      color: white;
+      background: darken($dz-clr--facebook, 10%);
+    }
+  }
+
+  &__twitter {
+    border: none;
+    color: lighten($dz-clr--twitter, 20%);
+    background-color: $dz-clr--twitter;
+
+    &:hover {
+      color: white;
+      background-color: darken($dz-clr--twitter, 10%);
+    }
+  }
+
+  &__google {
+    border: none;
+    color: lighten($dz-clr--google, 30%);
+    background-color: $dz-clr--google;
+
+    &:hover {
+      color: white;
+      background-color: darken($dz-clr--google, 10%);
+    }
+  }
+}
+
+.class__share {
+  display: flex;
+  padding: 0 1em;
+  justify-content: flex-end;
+  align-items: center;
+  overflow: visible;
+  order: 3;
+
+  a {
+    text-decoration: none;
+    font-size: normal;
+    margin: 0 1em;
+
+    .twitter-this,
+    .facebook-this,
+    .mzalendo-this {
+      width: 2.5em;
+      height: 2.5em;
+    }
+
+    .twitter-this {
+      background-color: transparent;
+      padding: 0.25em;
+      width: 3em;
+      height: 2.5em;
+
+      img {
+        width: 3em;
+        height: 2.5em;
+      }
+    }
+
+    .facebook-this {
+      background-color: transparent;
+      background-size: 100%;
+      border-radius: 2em;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+    }
+
+    .mzalendo-this {
+      background-color: transparent;
+      background-size: 100%;
+      border-radius: 0.5em;
+      box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.5);
+    }
+  }
+}
+
+//    Main
+.container-fluid {
+  padding: 0 !important;
+  position: relative;
+  min-height: 90vh;
+
+  .container {
+    position: relative;
+    padding-bottom: 15em;
+    max-width: 1140px;
+    justify-content: center;
+
+    @media screen and (min-width: $tablet-land + 1) {
+      max-width: 1440px;
+    }
+
+    main {
+      display: flex;
+      position: relative;
+
+      @media screen and (max-width: $mobile-land) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    @include media-breakpoint-up(xs) {
+      padding: 0;
+    }
+  }
+}
+
+.dz-main {
+  background-color: $white;
+
+  @include media-breakpoint-up(sm) {
+    padding: 0.5rem 0 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  &__submenu {
+    // position: fixed;
+    // top: 7em;
+    // left: 3em;
+    // width: 20em;
+    z-index: 1020;
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+
+    @media screen and (max-width: $mobile-land) {
+
+      position: relative;
+    }
+
+    @media screen and (min-width: $mobile-land + 1) {
+      padding-left: 0.5rem;
+    }
+  }
+
+  &__heading {
+    margin-top: 0;
+    padding: 0.5rem 1rem;
+    background-color: $brand-primary;
+    color: rgba($white, 0.9);
+    font-weight: 400;
+    font-size: 1.5rem;
+
+    @extend .dz-main;
+  }
+
+  &__content {
+    width: 100%;
+    margin: 0 auto;
+
+    &-heading {
+      font-weight: 500;
+      font-size: 1.8rem;
+    }
+
+    .dz-aside {
+      padding: 1rem;
+    }
+  }
+
+  .text-muted,
+  .card-title {
+    margin: 0;
+  }
+
+  .card-text {
+    margin: 0.5rem 0 1rem;
+    height: 6em;
+  }
+
+  .verified,
+  .unverified,
+  .primary {
+    margin: 0 0.5rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .verified {
+    background-color: lighten($brand-primary, 20%);
+  }
+
+  .unverified {
+    background-color: lighten($dz-clr--red, 20%);
+  }
+
+  .primary {
+    background-color: lighten($dz-clr--orange, 20%);
+  }
+}
+
+.lead {
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+//    Footer
+.dz-footer {
+  border-top: 0.5rem solid $dz-clr--red;
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  z-index: 100;
+  bottom: 0;
+
+  @media screen and (max-width: $mobile-land) {
+    bottom: 0;
+  }
+
+  .container {
+    padding: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 11em;
+    max-width: 1140px;
+    justify-content: center;
+
+    @media screen and (min-width: $tablet-land + 1) {
+      max-width: 1440px;
+    }
+  }
+
+  h4 {
+    font-weight: 500;
+  }
+
+  ul {
+    font-size: 0.9rem;
+    font-weight: 300;
+
+    li {
+      width: 100%;
+      padding: 0.5em 0;
+
+      img.cipesa-logo {
+        width: 100%;
+        max-width: 280px;
+        height: 100%;
+      }
+    }
+  }
+
+  @extend .dz-main;
+
+  &__copyright {
+    padding-top: 1rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+
+// 5. PAGE-SPECIFIC
+//    page__home
+.dz-home {
+  flex: 1 1 100%;
+
+  @media screen and (min-width: $desktop-small) and (max-width: $desktop) {
+    flex: 1 1 100%;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex: 1 1 66%;
+    padding: 0 0.5em;
+  }
+
+  //    page__home--bills
+  &__bills {
+    &-card {
+      @media screen and (min-width: $mobile-port) and (max-width: $mobile-land - 1) {
+        flex: 1 1 100%;
+      }
+
+      @media screen and (min-width: $mobile-land) {
+        flex: 0 1 50%;
+      }
+    }
+
+    &-senate {
+      padding: 0.75rem;
+      background-color: $dz-clr--lightpurple;
+
+      .stage {
+        color: white;
+        background-color: lighten($dz-clr--purple, 15%);
+      }
+    }
+
+    &-national-assembly {
+      padding: 0.75rem;
+      background-color: $dz-clr--lightbrown;
+
+      .stage {
+        color: white;
+        background-color: lighten($dz-clr--brown, 15%);
+      }
+    }
+
+    &-none {
+      padding: 1rem;
+      background-color: $brand-primary;
+    }
+
+    .image-content {
+      position: relative;
+      display: flex;
+      flex: 1 0 100%;
+      flex-wrap: nowrap;
+      min-height: 15em;
+      height: auto;
+      overflow: hidden;
+      margin: 1em 0;
+
+      .prev-img,
+      .next-img {
+        flex: 0 1 5%;
+        padding: 0.5em;
+        display: flex;
+        align-items: center;
+        height: 20em;
+        z-index: 1600;
+        background-color: $brand-primary;
+        cursor: pointer;
+
+        @media screen and (min-width: $mobile-port) and (max-width: $mobile-land - 1) {
+          flex: 0 1 10%;
+        }
+
+
+        .left-arrow,
+        .right-arrow {
+          img {
+            width: 100%;
+          }
+        }
+      }
+
+      .slider-holder {
+        flex: 0 1 100%;
+
+        .images-container {
+          position: relative;
+          display: flex;
+          justify-content: space-around;
+          flex: 1 0 100%;
+          overflow: hidden;
+          height: 28em;
+          border-top-left-radius: 0.5em;
+          border-top-right-radius: 0.5em;
+
+          .image-holder {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            width: 100%;
+            height: 25em;
+            padding: 0 0.5em;
+
+            .image-wrapper {
+              width: 100%;
+              height: 20em;
+              overflow: visible;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .pic-text {
+              position: absolute;
+              top: 20em;
+              width: 98%;
+              background-color: rgba(white, 0.8);
+              z-index: 500;
+              height: 8em;
+              padding: 1em;
+
+              h2,
+              p {
+                color: darken($brand-primary, 20%);
+              }
+
+              p {
+                font-size: 1.1em;
+                line-height: 1.1em;
+                font-weight: 300;
+              }
+
+              @include media-breakpoint-up(xs) {
+                top: 12em;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .p-1 {
+      padding: 0 !important;
+    }
+
+    .bill-sponsor {
+      margin-bottom: 0;
+      color: black;
+      font-weight: 300;
+      font-size: 1rem;
+    }
+  }
+
+  &__bill-heading,
+  .public-heading {
+    color: #2b0800;
+    margin-bottom: 0.2rem;
+    height: max-content;
+  }
+
+  // page__home--other_docs
+  &__docs {
+    margin-top: 1rem;
+
+    &-card {
+      @media screen and (min-width: $mobile-port) and (max-width: $mobile-land - 1) {
+        flex: 0 1 100%;
+      }
+
+      @media screen and (min-width: $mobile-land) {
+        flex: 0 1 50%;
+      }
+    }
+
+    &-mzalendo {
+      padding: 0.75rem;
+      background-color: $dz-clr--lightgreen;
+    }
+
+    &-civic {
+      padding: 0.75rem;
+      background-color: $dz-clr--lightblue;
+    }
+
+    &-caucus {
+      padding: 0.75rem;
+      background-color: linear-gradient(108deg,
+          $dz-clr--lightbrown 0%,
+          $dz-clr--lightbrown 50%,
+          $dz-clr--lightpurple 50%,
+          $dz-clr--lightpurple 100%);
+    }
+  }
+
+  &__news {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &--card {
+      padding: 0.5rem;
+      flex: 1 1 100%;
+
+      @media screen and (min-width: $mobile-land + 1) and (max-width: $desktop - 1) {
+        flex: 0 1 50%;
+      }
+
+      @media screen and (min-width: $desktop) {
+        flex: 1 1 100%;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+    }
+
+    &--heading {
+      border-radius: 0.25rem;
+      background-color: $dz-clr--lightred;
+      padding: 0.75rem;
+    }
+
+    &--hor {
+      margin-top: 0;
+      margin-bottom: 0.5rem;
+      width: calc(100% - 1rem);
+      border-bottom: 1px solid $dz-clr--lightred;
+    }
+  }
+
+  &__memoranda {
+    margin-top: 0.5rem;
+
+    &-card {
+      @media screen and (min-width: $mobile-port) and (max-width: $mobile-land - 1) {
+        flex: 1 1 100%;
+      }
+
+      @media screen and (min-width: $mobile-land) {
+        flex: 1 1 50%;
+      }
+    }
+
+    &-national-assembly {
+      padding: 1rem;
+      background-color: $dz-clr--lightbrown;
+    }
+
+    &-senate {
+      padding: 1rem;
+      background-color: $dz-clr--lightpurple;
+    }
+  }
+
+  &__content {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__event {
+    flex: 1 1 100%;
+    border-bottom: 1px solid rgba(240, 107, 35, 0.2);
+
+    @media screen and (min-width: $mobile-land + 1) and (max-width: $desktop) {
+      padding: 0 0.5rem;
+      flex: 0 1 50%;
+      border-bottom: 0;
+    }
+
+    @media screen and (min-width: $desktop +1) {
+      flex: 1 1 100%;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(240, 107, 35, 0.2);
+    }
+  }
+
+  &__about-help {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__about {
+    flex: 1 100%;
+    padding: 0.5rem;
+
+    @media screen and (min-width: $mobile-land) {
+      flex: 1 50%;
+    }
+  }
+
+  &__help {
+    flex: 1 100%;
+    padding: 0.5rem;
+
+    @media screen and (min-width: $mobile-land) {
+      flex: 1 50%;
+    }
+  }
+}
+
+.bill-state {
+  display: flex;
+  font-size: 0.8rem;
+  color: $dz-clr--text-color;
+  padding: 1px 8px;
+  border-radius: 3px;
+}
+
+.reading-dates {
+  margin-left: auto;
+}
+
+.dz-home__events {
+  margin: 1em 0 0;
+  padding: 0 0.5rem;
+  flex: 1 1 100%;
+
+  @media screen and (min-width: $mobile-port) and (max-width: $tablet-port) {
+    margin-top: 0.5rem;
+    padding: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    flex: 1 1 33%;
+    padding: 0 0.5em 1em;
+  }
+
+  &-heading {
+    padding: 1rem;
+    border-radius: 0.25rem;
+    background-color: $dz-clr--lightorange;
+  }
+
+  &--content {
+    @media screen and (min-width: $mobile-port) and (max-width: $mobile-land) {
+      padding: 0 0.5rem;
+    }
+  }
+}
+
+.dz-home__about--content {
+  padding: 0 1rem;
+}
+
+.bill-sponsor,
+.event-dates,
+.analysis-dates {
+  margin-bottom: 0;
+  color: black;
+  font-weight: 400;
+  font-size: 0.8rem;
+  line-height: 1.2rem;
+  flex: 1 0 50%;
+}
+
+.dz-house {
+  text-align: right;
+  margin-top: 5px;
+
+  &__name {
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+  }
+}
+
+.dz-national-assembly {
+  background-color: $dz-clr--brown;
+}
+
+.dz-senate {
+  background-color: $dz-clr--purple;
+}
+
+.dz-ideas {
+  padding: 1rem;
+  flex: 1 1 100%;
+  color: darken($dz-clr--maroon, 10%);
+  background-color: $dz-clr--lightorange;
+  border-radius: 0.25rem;
+
+  &__heading {
+    color: darken($dz-clr--maroon, 10%);
+  }
+
+  &__card {
+    flex: 0 1 50%;
+    padding: 0.25rem 0.5rem 0.75rem;
+  }
+
+  &__bill-opinion {
+    background-color: darken($dz-clr--green, 10%);
+  }
+
+  &__petition {
+    background-color: darken($dz-clr--orange, 15%);
+  }
+
+  &__memorandum {
+    background-color: $dz-clr--maroon;
+  }
+
+  &__detail {
+    padding: 0.5rem 0.75rem;
+    margin: 2px 0.25rem;
+  }
+}
+
+.no-ideas {
+  height: 10em;
+  text-align: center;
+}
+
+.idea-type,
+.idea-house,
+.idea-private,
+.idea-draft,
+.idea-edit {
+  font-size: 0.8rem;
+  font-weight: 100;
+  padding: 1px 8px;
+  border-radius: 3px;
+  flex: 0 1 60%;
+}
+
+.idea-house {
+  flex: 1 1 62%;
+  text-align: right;
+
+  &__detail {
+    text-align: left;
+  }
+}
+
+.idea-status {
+  font-size: 0.7rem;
+  font-weight: 100;
+  padding: 1px 8px;
+  border-radius: 3px;
+  flex: 0 1 50%;
+
+  &__detail {
+    flex: 0 1 33%;
+  }
+}
+
+.editing-icon {
+  width: 32px;
+  margin-top: -0.4rem;
+
+  .edit_icon {
+    width: 100%;
+  }
+}
+
+.idea-private {
+  background-color: lighten($dz-clr--red, 10%);
+  color: white;
+}
+
+.idea-draft {
+  background-color: grey;
+  color: white;
+}
+
+.idea-details {
+  flex: 1 1 50%;
+}
+
+.idea-edit {
+  flex: 1 1 30%;
+
+  &__detail {
+    display: flex;
+  }
+}
+
+.idea-details__status {
+  display: flex;
+}
+
+.idea-content {
+  padding: 0.5rem;
+}
+
+.dz-mzalendo {
+  background-color: $dz-clr--green;
+}
+
+.dz-civic {
+  background-color: $dz-clr--blue;
+}
+
+.memo__bg {
+  background-color: #f2e3e2;
+}
+
+//      page_about
+.dz-howto {
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 960px;
+}
+
+.how-images {
+  display: flex;
+  padding: 1em;
+  width: 100%;
+  flex-wrap: nowrap;
+  justify-content: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+.dz-faqs {
+  flex: 1 1 auto;
+  padding-top: 1em;
+  margin: 0 auto;
+  max-width: 960px;
+}
+
+.dz-about {
+  flex: 1 1 auto;
+
+  @media screen and (min-width: $mobile-land + 1) {
+    flex: 0 1 50%;
+    padding: 1em 0.5em 0 0;
+  }
+
+  &__submenu {
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    left: 3em;
+    width: 18em;
+
+    @include media-breakpoint-up(xs) {
+      width: 100%;
+    }
+
+    &--list {
+      position: relative;
+      display: block;
+      padding: 0.75rem 1.25rem;
+      background-color: $dz-clr--lightgreen;
+      border-radius: 5px;
+      margin: 1px 0;
+      width: 100%;
+      color: #495057;
+      text-align: inherit;
+    }
+
+    &--list:hover {
+      color: white;
+      background-color: $dz-clr--green;
+      border-color: $dz-clr--green;
+    }
+  }
+
+  &__content {
+    padding: 0 1rem 0 0;
+  }
+}
+
+//      page_news
+.dz-news {
+  padding-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100%;
+  max-width: 960px;
+
+  h3,
+  h4 {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+
+  &__post {
+    padding: 0.5rem;
+    flex: 0 1 100%;
+
+    @media screen and (min-width: $mobile-land) {
+      flex: 0 1 50%;
+    }
+  }
+
+  &__thumbnail {
+    margin: 0.25rem 0;
+    width: 100%;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+
+  &__submenu {
+    padding: 0 1rem;
+
+    @include media-breakpoint-up(sm) {
+      font-size: 0.8rem;
+      flex: 1 1 20%;
+      order: 2;
+    }
+
+    @media screen and (min-width: 1231px) {
+      padding-right: 0;
+    }
+  }
+
+  h2 {
+    max-width: 960px;
+    margin: 0.5rem auto;
+  }
+
+  p {
+    max-width: 960px;
+    margin: 0.3em auto;
+  }
+
+  &__excerpt {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    flex: 1 0 70%;
+
+    @media screen and (max-width: 360px) {
+      h2 {
+        margin: 0;
+        font-size: 1.4rem;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 0;
+
+      h3,
+      h4 {
+        font-size: 0.9rem;
+        line-height: 1.1rem;
+      }
+
+      font-size: 0.8rem;
+    }
+
+    @include media-breakpoint-up(md) {
+
+      h3,
+      h4 {
+        margin: 0;
+        font-size: 1rem;
+        line-height: 1.2rem;
+      }
+
+      font-size: 0.9rem;
+    }
+  }
+
+  .news-intro {
+    p {
+      font-size: 0.9rem;
+
+      @include media-breakpoint-up(md) {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  &__image {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    object-fit: cover;
+
+    @include media-breakpoint-up(sm) {
+      height: 25rem;
+    }
+
+    img {
+      max-width: 960px;
+      width: 100%;
+      align-self: center;
+    }
+  }
+
+  &__content {
+    display: flex;
+    font-weight: 300;
+    flex-wrap: wrap;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0;
+    }
+  }
+
+  &--date-author {
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  &__detail {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    font-style: italic;
+    order: 2;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(md) {
+      flex: 1 1 60%;
+      order: 3;
+    }
+
+    &--break {
+      @include media-breakpoint-down(sm) {
+        flex: 1 0 100%;
+      }
+
+      @include media-breakpoint-up(sm) {
+        &:before {
+          content: " | ";
+        }
+
+        flex: 1 0 40%;
+      }
+    }
+  }
+
+  &__link {
+    margin: 0.5rem 0 1rem;
+    padding-right: 2rem;
+    text-align: right;
+
+    @include media-breakpoint-up(md) {
+      flex: 1 1 100%;
+      order: 4;
+    }
+  }
+
+  .page-links {
+    padding-left: 1rem;
+    font-size: 1rem;
+    display: flex;
+    flex-wrap: nowrap;
+
+    &__box {
+      flex: 1 1 50%;
+      padding: 1rem 0;
+
+      &--left {
+        float: left;
+      }
+
+      &--right {
+        float: right;
+      }
+
+      span.active {
+        color: $dz-clr--red;
+      }
+
+      span.inactive {
+        color: $dz-clr--grey-red;
+      }
+    }
+  }
+}
+
+.no-content {
+  margin: 0 1rem;
+  padding-top: 1rem;
+  min-height: 3.75rem;
+  border-bottom: 0;
+}
+
+.news__meta {
+  font-style: italic;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}
+
+//      page_contacts
+.dz-contacts {
+
+  p,
+  ul {
+    font-weight: 300;
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    color: darken($dz-clr--red, 10%);
+  }
+
+  &__submenu {
+    padding: 0.5rem;
+  }
+
+  // &__content {}
+  &__search {
+    padding: 1rem;
+  }
+
+  .adr {
+    font-size: 1rem;
+  }
+}
+
+//    page__bills
+.dz-bills {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 0.5rem;
+  }
+
+  &__card {
+    padding: 0.5rem;
+    flex: 1 1 100%;
+
+    @media screen and (min-width: $mobile-land) and (max-width: $desktop - 1) {
+      flex: 0 1 50%;
+    }
+
+    @media screen and (min-width: $desktop) {
+      flex: 0 1 33%;
+    }
+  }
+
+  &__senate,
+  &__national-assembly,
+  &__none {
+    padding: 1rem;
+    min-height: 5rem;
+    color: $white;
+  }
+
+  &__senate {
+    background-color: $dz-clr--purple;
+  }
+
+  &__national-assembly {
+    background-color: $dz-clr--brown;
+  }
+
+  &__none {
+    background-color: $dz-clr--green;
+  }
+
+  &__content {
+    padding-top: 1em;
+  }
+
+  .p-1 {
+    padding: 0 !important;
+
+    a:hover {
+      text-decoration: none;
+    }
+  }
+
+
+}
+
+.bill-details {
+  color: $dz-clr--green;
+}
+
+.dz-sidebar {
+  flex: 1 1 20%;
+  padding: 0.5rem 0.25rem 0 0.75rem;
+
+  .idea-bar {
+    width: 100%;
+    margin: 1px 0;
+    text-align: inherit;
+
+    &__list {
+      position: relative;
+      display: block;
+      color: darken($dz-clr--maroon, 10%);
+      border-radius: 5px;
+      padding: 0.75rem 1.25rem;
+      background-color: $dz-clr--midorange;
+      border: 0;
+      margin: 1px 0;
+      width: 100%;
+      text-align: inherit;
+    }
+  }
+
+  .active {
+    background-color: $dz-clr--orange;
+    color: darken($dz-clr--maroon, 10%);
+    font-weight: 500;
+  }
+
+  .status-group {
+    text-align: center;
+
+    h6.status-title {
+      padding: 0.5rem;
+      margin-bottom: 0;
+      border-top-left-radius: 0.25rem;
+      border-top-right-radius: 0.25rem;
+      color: $dz-clr--darkgreen;
+      background-color: $dz-clr--lightgreen;
+      border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+  }
+
+  .status-bar {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+
+    .idea-status {
+      span.badge {
+        font-size: 0.8rem;
+        font-weight: 400;
+      }
+    }
+  }
+
+  padding: 0.5rem;
+  flex: 1 1 80%;
+}
+
+//    page__other-docs
+.dz-docs {
+  padding: 0.75rem;
+
+  &__mzalendo {
+    color: darken($dz-clr--green, 20%);
+    background-color: $dz-clr--lightgreen;
+  }
+
+  &__civic {
+    color: darken($dz-clr--blue, 30%);
+    background-color: $dz-clr--lightblue;
+  }
+}
+
+.comments-head {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background-color: #eaa930;
+  color: #755e2e;
+}
+
+.dz-comments {
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.comment-section {
+  padding: 0.5rem;
+  flex: 1 1 100%;
+  margin: 0 auto;
+
+  @include media-breakpoint-up(lg) {
+    flex: 1 1 75%;
+    max-width: 1024px;
+  }
+}
+
+.dz-comment {
+  padding: 0.25rem;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 1rem;
+
+  &__header {
+    background-color: #f4d38c;
+    color: #845953;
+  }
+
+  &__item {
+    a {
+      color: $dz-clr--brown;
+    }
+
+    padding: 1rem 2rem 0;
+    list-style-type: none;
+  }
+
+  &__child {
+    padding: 0.25rem;
+    border-radius: 4px;
+    background-color: #fae8c3;
+  }
+
+  &__page {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.blockquote {
+  padding: 0.5rem;
+}
+
+.comment-bg {
+  border-left: 0.2rem solid #95835a;
+  background-color: #fae8c3;
+}
+
+.comment-details {
+  color: $dz-clr--brown;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.comment-replies {
+  border-left: 0.2rem solid #95835a;
+  background-color: #f0d7a3;
+  font-size: 1rem;
+}
+
+.header-replies {
+  margin: 0.5rem 0 0.75rem;
+  font-weight: 400;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  background-color: #f4d38c;
+  color: #95835a;
+}
+
+/* Bill  page */
+
+.dz-bill {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 100%;
+
+  aside {
+    flex: 0 1 25%;
+    padding: 1rem;
+    display: flex;
+    height: fit-content;
+
+    @media screen and (max-width: $mobile-land - 1) {
+      flex: 0 1 100%;
+    }
+
+    @media screen and (min-width: $tablet-port) and (max-width: $desktop-small - 1) {
+      width: calc(100% - 312px);
+    }
+  }
+
+  &_content {
+    width: 75%;
+  }
+
+  &_details {
+    display: flex;
+
+    @media screen and (max-width: $mobile-land - 1) {
+      .bill-specs {
+        flex: 0 1 100%;
+
+        .bill-dates {
+          font-size: 0.8rem;
+        }
+      }
+
+      .bill-pic {
+        flex: 0 1 100%;
+        max-width: 20rem;
+      }
+    }
+
+    @media screen and (min-width: $mobile-land) and (max-width: $desktop-small - 1) {
+
+      .bill-specs {
+        flex: 0 1 60%;
+
+        .bill-dates {
+          font-size: 1rem;
+        }
+      }
+
+      .bill-pic {
+        flex: 0 1 40%;
+      }
+    }
+  }
+
+  .card {
+    display: flex;
+    flex: 0 1 100%;
+
+    @media screen and (min-width: $tablet-port + 1) and (max-width: $desktop-small - 1) {
+      width: 100%;
+    }
+
+    @media screen and (min-width: $desktop-small) {
+      margin: 1em;
+    }
+
+    .card-block {
+      flex: 0 1 100%;
+      padding: 0.5rem;
+      display: flex;
+    }
+  }
+}
+
+.bill-heading {
+  color: white;
+}
+
+.card-title {
+  color: #2b0800;
+  text-align: left;
+  margin: 0.5rem 0;
+
+  @media screen and (min-width: $mobile-land) and (max-width: $desktop-small - 1) {
+    flex: 0 1 100%;
+  }
+
+  &__bio {
+    font-style: italic;
+    border-bottom: 1px solid $dz-clr--lightgreen;
+    width: 100%;
+
+    @include media-breakpoint-up(sm) {
+      width: 80%;
+    }
+  }
+}
+
+.card-block {
+  padding: 0.5rem 0.5rem 1rem 1rem;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+
+  p {
+    margin-bottom: 0;
+  }
+}
+
+.card-details {
+
+  h2,
+  h3,
+  h4 {
+    font-size: 1rem;
+    line-height: 1.4rem;
+    text-decoration: none;
+    display: flex;
+  }
+}
+
+.card-img-top {
+  margin: 1.5rem auto;
+  max-width: 200px;
+}
+
+.dates-layout {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.memorandum-dates,
+.bill-dates,
+.idea-dates {
+  flex: 0 1 50%;
+  font-size: 0.8rem;
+  font-weight: 400;
+  line-height: 1.2rem;
+  text-align: left;
+  padding-right: 0.3rem;
+  color: lighten($dz-clr--darkgreen, 5%);
+
+  .reading-dates {
+    padding-left: 0.5rem;
+    color: darken($dz-clr--red, 10%);
+  }
+}
+
+.idea-dates {
+  color: darken($dz-clr--maroon, 10%);
+}
+
+
+// Annotation style ends
+
+.dz-bill_details {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 100%;
+
+  @media screen and (min-width: $mobile-land + 1) {
+    flex: 0 1 50%;
+  }
+
+  p {
+    padding: 0.25rem;
+    margin: 0.25rem auto;
+  }
+}
+
+.bill-specs {
+  margin: 0 auto;
+
+  @media screen and (min-width: $mobile-land + 1) {
+    margin: 0;
+    flex: 0 1 50%;
+  }
+}
+
+.bill-actions {
+  font-size: 1rem;
+}
+
+.bill-pic {
+  margin: 0 auto;
+  padding: 0 1rem;
+  flex: 0 1 100%;
+
+  @media screen and (min-width: $mobile-land + 1) and (max-width: $tablet-port) {
+    flex: 0 1 50%;
+  }
+
+  .bill-cover {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
+
+.bill-content {
+
+  @media screen and (max-width: $tablet-port - 1) {
+    flex: 0 1 100%;
+  }
+
+  @media screen and (min-width: $tablet-port) {
+    flex: 0 1 75%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    margin: 1rem 0 1.5rem;
+  }
+}
+
+//    page__public participation
+.dz-public {
+  @include media-breakpoint-up(sm) {
+    padding: 0 1rem;
+  }
+
+  @media screen and (min-width: $mobile-land) {
+    padding: 0.5rem 1rem;
+  }
+
+  &__house {
+    margin: 0.5rem 0;
+  }
+
+  &__heading {
+    padding: 1rem 1rem 0rem;
+    font-size: 2rem;
+  }
+
+  &__content {
+    max-width: 1024px;
+    padding: 0.5rem;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0.5rem 1rem 0.5rem 0;
+      margin: 0 auto;
+    }
+  }
+}
+
+.resource-page {
+  flex: 1 0 100%;
+  margin: 1rem 0 3rem;
+
+  p {
+    padding: 0 1rem;
+  }
+}
+
+.dz-events,
+.dz-petitions,
+.dz-memoranda {
+  display: flex;
+  flex-wrap: wrap;
+
+  &__card {
+    padding: 0.5rem;
+
+    @media screen and (min-width: $mobile-port) and (max-width: $mobile-land) {
+      flex: 1 1 100%;
+    }
+
+    @media screen and (min-width: $mobile-land + 1) and (max-width: $desktop) {
+      flex: 0 1 50%;
+    }
+
+    @media screen and (min-width: $desktop + 1) {
+      flex: 0 1 33.3%;
+    }
+  }
+}
+
+.dz-events {
+  &__card {
+    &--heading {
+      color: $dz-clr--maroon;
+      background-color: $dz-clr--grey-red;
+    }
+
+    &__calender {
+      margin: 1rem 2rem;
+      height: 44vh;
+    }
+
+    &__loading {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      display: none;
+      color: $dz-clr--red;
+    }
+  }
+
+  &__none {
+    height: 4rem;
+    padding: 1rem;
+    border: 1px solid $dz-clr--green;
+    border-radius: 0;
+    flex: 1 1 100%;
+  }
+
+  &__heading {
+    color: #2b0800;
+  }
+
+  &__list {
+    flex: 0 1 33%;
+  }
+}
+
+.dz-events__home {
+  padding: 1rem 0.5rem 0;
+  border: 0;
+  margin: 0;
+
+  @media screen and (min-width: $mobile-port) and (max-width: $mobile-land) {
+    padding: 0;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 0.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    border: 1px solid $dz-clr--lightorange;
+    border-top: 0;
+  }
+}
+
+.dz-events__index {
+  padding: 0.5rem 0 0;
+  min-height: 30vh;
+
+  @include media-breakpoint-up(md) {
+    padding: 0 0.5em;
+  }
+}
+
+.dz-petitions {
+  &__card {
+    &--heading {
+      color: darken($dz-clr--brown, 10%);
+      background-color: #f7edce;
+    }
+  }
+}
+
+.dz-memoranda {
+  &__card {
+    &--heading {
+      color: darken($dz-clr--red, 20%);
+      background-color: $dz-clr--lightmaroon;
+    }
+  }
+}
+
+.dz-memoranda,
+.dz-petitions {
+  &__content {
+    padding-top: 1rem;
+  }
+}
+
+.dz-events__details {
+  flex: 1;
+}
+
+.dz-memo {
+  display: inline-flex;
+  width: 100%;
+
+  &__read {
+    width: 50%;
+    margin: 0.75em 0 0;
+  }
+
+  &__house {
+    padding: 0.25rem 0.5rem;
+    width: 50%;
+    border-radius: 3px;
+    color: white;
+    text-align: right;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+  }
+}
+
+.dz-pub {
+  padding: 5px;
+  height: 3.6rem;
+  color: white;
+
+  &__assembly {
+    background-color: darken($dz-clr--brown, 3%);
+  }
+
+  &__senate {
+    background-color: darken($dz-clr--purple, 3%);
+  }
+
+  &__county {
+    background-color: darken($dz-clr--green, 3%);
+  }
+}
+
+.dz-social {
+  display: flex;
+}
+
+.image-view {
+  overflow: hidden;
+  margin-bottom: 1rem;
+  width: 100%;
+  height: 5rem;
+}
+
+.memo-icon {
+  width: 100%;
+}
+
+.public-image {
+  margin: 2rem auto;
+  max-width: 960px;
+}
+
+.cal {
+  &__head {
+    width: 50px;
+  }
+
+  &__months {
+    font-size: 1.5rem;
+  }
+
+  &__day {
+    border-top: 1px solid lightgrey;
+
+    &__s {
+      border: none;
+    }
+
+    a {
+      color: white;
+      font-size: 0.9rem;
+    }
+  }
+
+  &__label {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 5px solid black;
+    color: darken($brand-primary, 10%);
+    font-variant: small-caps;
+  }
+}
+
+//    page__help
+//    page__login/register
+.dz-form__email {
+  &-signup {
+    input {
+      display: block;
+      margin-bottom: 1rem !important;
+      padding: 1rem !important;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 0.25rem;
+      background-color: #ffffff;
+      background-image: none;
+      background-clip: padding-box;
+      color: #464a4c;
+      font-size: 1rem;
+      height: 3.5rem;
+      transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    }
+
+    input#id_remember {
+      display: inline;
+      margin: 0.5rem 1rem 0 0;
+      height: auto;
+    }
+
+    .form-group {
+      display: flex;
+      margin-bottom: 0.5rem;
+
+      div {
+        width: 100%;
+      }
+
+      .form-check {
+        padding: 0;
+      }
+    }
+  }
+
+  &-register {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+    margin: 0.5rem 0;
+
+    a {
+      margin-left: 1rem;
+    }
+  }
+
+  &-reset {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+  }
+}
+
+.account__forms {
+  margin: 1rem auto;
+}
+
+.socialaccount_providers {
+  padding: 0;
+
+  li {
+    list-style: none;
+  }
+}
+
+
+
+
+.dz-error {
+  padding-top: 2rem;
+
+  h1 {
+    margin-bottom: 1.5rem;
+  }
+
+  &__pic {
+    margin: 1rem;
+    width: 12rem;
+
+    img {
+      width: 100%
+    }
+  }
+}
+
+//    page__user
+.dz-user {
+  padding: 0.2rem 1rem;
+  border-radius: 5px;
+
+  h1 {
+    color: white;
+  }
+
+  &__standard {
+    background-color: darken($dz-clr--green, 10%);
+  }
+
+  &__mp {
+    background-color: $dz-clr--brown;
+  }
+
+  &__institution {
+    background-color: $dz-clr--purple;
+  }
+
+  &__comment {
+    margin: 1rem auto;
+  }
+}
+
+.user-annotations,
+.user-comments {
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: nowrap;
+
+  .dz-aside {
+    flex: 0 1 25%;
+    margin: 0 0.5rem;
+  }
+
+  .dz-article {
+    flex: 0 1 75%;
+    margin: 0 0.5rem;
+  }
+}
+
+.user-comments__header {
+  color: darken($dz-clr--orange, 5%);
+  background-color: $dz-clr--lightorange;
+}
+
+.user-annotations__header {
+  color: darken($dz-clr--green, 5%);
+  background-color: $dz-clr--lightgreen;
+}
+
+.dz-user__content {
+  flex-wrap: wrap;
+
+  &--time {
+    text-align: right;
+    font-style: italic;
+    font-size: 0.8rem;
+  }
+
+  &--meta {
+    padding-left: 2rem;
+    text-align: right;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+}
+
+.user__entry {
+  justify-content: center;
+  width: 100%;
+  display: flex;
+}
+
+.user__page {
+  flex: 0 1 100%;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+
+  h3 {
+    flex: 0 1 100%;
+    text-align: center;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      padding-left: 3rem;
+    }
+  }
+
+  @include media-breakpoint-up(sm) {
+    width: 75%;
+  }
+}
+
+.help-block {
+  flex: 0 1 100%;
+  overflow-x: scroll;
+  display: flex;
+}
+
+.user__profile {
+  color: #7ba58b;
+  font-style: italic;
+}
+
+.nav-link.active.dz-user {
+  margin-bottom: 1rem;
+
+  &__standard {
+    @extend .dz-user__standard;
+  }
+
+  &__mp {
+    @extend .dz-user__mp;
+  }
+
+  &__institution {
+    @extend .dz-user__institution;
+  }
+}
+
+form .form-story {
+  font-size: 0.8rem;
+  margin: 0.5rem 0;
+}
+
+input.form-search {
+  border: 1px solid white;
+}
+
+input.form-control.form-control-sm.form-search::placeholder {
+  color: $dz-clr--green;
+}
+
+.btn-primary {
+  background-color: $brand-primary;
+  border-color: $brand-primary;
+}
+
+.btn-secondary {
+  background-color: lighten($dz-clr--red, 40%);
+}
+
+.btn-small {
+  padding: 0 0.5rem;
+  font-style: normal;
+}
+
+.btn-search {
+  color: $dz-clr--darkgreen;
+  background-color: darken($dz-clr--lightgreen, 15%);
+  border-color: white;
+  border-left: none;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+
+  &:hover {
+    color: white;
+    background-color: $brand-primary;
+  }
+}
+
+.btn-login {
+  color: white;
+  background-color: $brand-primary;
+  border-color: white;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
+.dz-profile {
+  width: 100%;
+  display: flex;
+
+  .profile-main {
+    padding: 1rem;
+  }
+
+  @media screen and (max-width: $mobile-land - 1) {
+    flex-wrap: wrap;
+
+    .dz-aside,
+    .profile-main {
+      flex: 0 1 100%;
+    }
+
+  }
+
+  @media screen and (min-width: $mobile-land) {
+    .dz-aside {
+      flex: 0 1 30%;
+    }
+
+    .profile-main {
+      flex: 0 1 60%;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    margin: 0 auto;
+  }
+
+  &__data {
+    width: 30%;
+  }
+
+  &__header {
+    background-color: $dz-clr--lightorange;
+    color: #2b0800;
+    font-size: 1.2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 5px;
+    margin-bottom: 2rem;
+  }
+
+  &__activity {
+    background-color: $dz-clr--lightorange;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-bottom: none;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+
+  &-info {
+    display: inline-block;
+    padding: 0.25em 0.5em;
+    font-size: 75%;
+    font-weight: normal;
+    line-height: 1;
+    color: #2b0800;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: 10rem;
+  }
+
+  &__buttons {
+    width: 100%;
+    margin: 0.5rem 0;
+
+    @include media-breakpoint-up(sm) {
+      margin: 0.5rem;
+      width: 30%;
+    }
+  }
+
+
+}
+
+.profile {
+  &-annotations {
+    background-color: $dz-clr--lightgreen;
+  }
+
+  &-comments {
+    background-color: $dz-clr--lightorange;
+  }
+}
+
+.dz-biodata {
+  padding: 0;
+  margin: 1rem 0;
+
+  .bio-name {
+    padding-top: 0.5rem;
+    color: #2b0800;
+    font-size: 1.2rem;
+  }
+
+  .profile-links {
+    margin-left: 1.5rem;
+  }
+
+  @include media-breakpoint-up(sm) {
+    margin: 0;
+  }
+}
+
+#div_id_login label,
+#div_id_email label,
+#div_id_password label,
+#div_id_password1 label,
+#div_id_password2 label {
+  display: none;
+}
+
+#div_id_remember label {
+  background-color: $dz-clr--lightgreen;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  border: none;
+  font-size: 0.9rem;
+  width: fit-content;
+}
+
+.btn-outline-primary {
+  margin-left: 1rem;
+  color: $brand-primary;
+  border-color: $brand-primary;
+
+  &:hover {
+    background-color: $brand-primary;
+    border-color: $brand-primary;
+  }
+}
+
+.btn-outline-reset {
+  margin-left: 1rem;
+  color: $dz-clr--orange;
+  border-color: $dz-clr--orange;
+
+  &:hover {
+    color: white;
+    background-color: $dz-clr--orange;
+    border-color: $dz-clr--orange;
+  }
+}
+
+#draftContent {
+  height: 375px;
+}
+
+@media screen and (max-width: 633px) {
+  .nav-items {
+    flex-wrap: wrap;
+  }
+
+  .user-profile {
+    order: 1;
+  }
+
+  .nav-toggle-button {
+    order: 2;
+  }
+
+  .dz-search {
+    order: 3;
+  }
+}
+
+// Global Media Queries
+@media screen and (min-width: 634px) {
+  .dz-search {
+    order: 2;
+  }
+
+  .nav-toggle-button {
+    order: 3;
+  }
+}
+
+//    page__events
+.dz-public__events {
+  .container {
+    display: block;
+    height: max-content;
+  }
+
+  .dz-main__content {
+    padding-top: 1rem;
+
+    .dz-bills__card {
+      padding: 0;
+      padding-top: 1rem;
+
+      .card {
+        border: none;
+      }
+    }
+  }
+
+  .dz-home__bill-heading {
+    color: black;
+  }
+
+  .dz-events__fullcalender {
+    height: 45vh;
+    flex: 0 1 66%;
+    padding: 1rem;
+    min-height: 34rem;
+
+    .fc-toolbar-chunk {
+      display: flex;
+    }
+  }
+
+  .events-footer {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    justify-content: center;
+    line-height: 1rem;
+
+    .event-description {
+      p {
+        color: $dz-clr--text-color;
+      }
+    }
+
+    .event-date {
+      text-align: left;
+      font-size: 0.9em;
+      padding: 0.75em 0 0;
+      color: $dz-clr--text-color;
+    }
+  }
+
+  .dz-stage-event {
+    background-color: $dz-clr--red;
+  }
+
+  .dz-home__bills-mzalendo {
+    background-color: $dz-clr--lightgreen;
+    padding: 0.75rem;
+  }
+
+  .dz-mzalendo {
+    background-color: $dz-clr--green;
+  }
+
+  .dz-home__bills-katiba {
+    background-color: $dz-clr--lightblue;
+    padding: 0.75rem;
+  }
+
+  .dz-katiba {
+    background-color: $dz-clr--blue;
+  }
+}
+
+.dz-mainbar {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding-top: 0.5em;
+
+  .no-ideas {
+    padding: 1em;
+    font-weight: 500;
+    font-size: 2em;
+    color: $dz-clr--darkgreen;
+  }
+}
