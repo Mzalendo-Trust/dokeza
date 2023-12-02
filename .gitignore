@@ -270,14 +270,9 @@ tags
 
 ### Project template
 dokeza_2_0/media/
-media/timeline
-<<<<<<< HEAD
-media/*
 media/
 !media/missing-bill.docx
-=======
 
->>>>>>> 939be82 (Merge remote-tracking branch 'origin/master')
 .pytest_cache/
 
 app_data/*
@@ -285,11 +280,7 @@ certs/*
 .ipython/
 .env
 .envs/*
-<<<<<<< HEAD
-!.envs/.local/*
-=======
 !.envs/.local/
->>>>>>> 939be82 (Merge remote-tracking branch 'origin/master')
 tracker/reportservice/reports/report_Jan2021.pdf
 
 backup*
