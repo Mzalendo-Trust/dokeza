@@ -1,4 +1,5 @@
-docker compose -f staging.yml build --compress --force-rm --pull --parallel
+# docker compose -f staging.yml build --compress --force-rm --pull --parallel
+docker compose -f staging.yml build django
 docker compose -f staging.yml up -d django
  
 while [ ! "curl $(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' django):5000 | grep doctype" ]; do

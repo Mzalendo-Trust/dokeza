@@ -100,7 +100,7 @@ services:
     env_file:
       - ./.envs/.documentserver
     depends_on:
-      - ds-postgresql
+      - onlyoffice-postgresql
       - ds-rabbitmq
       - ds-redis
       - certbot
@@ -128,8 +128,8 @@ services:
     networks:
       - ds-network
 
-  ds-postgresql:
-    container_name: ds-postgresql
+  onlyoffice-postgresql:
+    container_name: onlyoffice-postgresql
     image: postgres:12.3-alpine
     env_file:
       - ./.envs/.documentserver

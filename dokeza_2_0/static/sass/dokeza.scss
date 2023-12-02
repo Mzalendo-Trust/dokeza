@@ -5053,7 +5053,6 @@ hr {
   color: darken($dz-clr--maroon, 10%);
 }
 
-
 // Annotation style ends
 
 .dz-bill_details {
@@ -5062,7 +5061,7 @@ hr {
   flex: 0 1 100%;
 
   @media screen and (min-width: $mobile-land + 1) {
-    flex: 0 1 50%;
+    flex: 0 1 100%;
   }
 
   p {
@@ -5076,7 +5075,7 @@ hr {
 
   @media screen and (min-width: $mobile-land + 1) {
     margin: 0;
-    flex: 0 1 50%;
+    flex: 0 1 100%;
   }
 }
 
