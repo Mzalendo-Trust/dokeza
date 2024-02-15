@@ -6,7 +6,7 @@ from django.db import models
 from django.template.defaultfilters import slugify
 from schedule.models import Event, Calendar
 
-from django.utils.translation import ugettext, ugettext_lazy as _
+from django.utils.translation import gettext, gettext_lazy as _
 
 try:
     from notification import models as notification
@@ -24,7 +24,7 @@ EVENT_STATUS = (
     (2, 'Bill: In Committee'),
     (3, 'Bill: Plenary Session'),
     (4, 'Public Participation Meeting')
-  )
+)
 
 
 class EventLocation(models.Model):

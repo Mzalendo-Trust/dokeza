@@ -5,7 +5,7 @@ from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.urls import reverse
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 from django.utils.decorators import method_decorator
 from django.views import View
 from django.views.generic import DetailView, ListView, RedirectView, TemplateView, UpdateView, CreateView
@@ -36,9 +36,9 @@ class UserDetailView(LoginRequiredMixin, DetailView):
 
     def get_context_data(self, **kwargs):
         context = super(UserDetailView, self).get_context_data(**kwargs)
-        # my_annotations = 
+        # my_annotations =
         my_bills = Bill.objects.filter(owner=self.request.user)
-        # my_comments = 
+        # my_comments =
 
         context['my_bills'] = my_bills
         # context['my_annotations'] = my_annotations
@@ -131,6 +131,7 @@ class ProfileUpdateView(ProfileObjectMixin, UpdateView):
     Uses a form dynamically created for the `Profile` model and
     the default model's update template.
     """
+
     def get_success_url(self):
         return reverse("users:detail",
                        kwargs={"email": self.request.user.email})
@@ -138,10 +139,10 @@ class ProfileUpdateView(ProfileObjectMixin, UpdateView):
 
 class UserDocumentsView(LoginRequiredMixin, TemplateView):
     template_name = 'users/user_documents.html'
-    
+
     def get_context_data(self, **kwargs):
         context = super(UserDocumentsView, self).get_context_data(**kwargs)
-        print('document context',context)
+        print('document context', context)
         context['languages'] = docManager.LANGUAGES,
         context['preloadurl'] = base.DOC_SERV_PRELOADER_URL,
         context['editExt'] = json.dumps(base.DOC_SERV_EDITED),

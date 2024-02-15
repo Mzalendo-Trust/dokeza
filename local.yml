@@ -69,60 +69,60 @@ services:
     networks:
       - dokeza-network
 
-  documentserver:
-    build:
-      context: .
-      dockerfile: ./compose/local/documentserver/Dockerfile
-    container_name: documentserver
-    env_file:
-      - ./.envs/.local/.documentserver
-    depends_on:
-      - ds-postgresql
-      - onlyoffice-rabbitmq
-      - ds-redis
-    ports:
-      - "8082:80"
-      - "8443:443"
-    stdin_open: true
-    restart: always
-    stop_grace_period: 60s
-    volumes:
-      - /var/www/onlyoffice/Data
-      - /var/log/onlyoffice
-      - /var/lib/onlyoffice/documentserver/App_Data/cache/files
-      - /var/www/onlyoffice/documentserver-example/public/files
-      - /usr/share/fonts
-    networks:
-      - ds-network
+  # documentserver:
+  #   build:
+  #     context: .
+  #     dockerfile: ./compose/local/documentserver/Dockerfile
+  #   container_name: documentserver
+  #   env_file:
+  #     - ./.envs/.local/.documentserver
+  #   depends_on:
+  #     - ds-postgresql
+  #     - onlyoffice-rabbitmq
+  #     - ds-redis
+  #   ports:
+  #     - "8082:80"
+  #     - "8443:443"
+  #   stdin_open: true
+  #   restart: always
+  #   stop_grace_period: 60s
+  #   volumes:
+  #     - /var/www/onlyoffice/Data
+  #     - /var/log/onlyoffice
+  #     - /var/lib/onlyoffice/documentserver/App_Data/cache/files
+  #     - /var/www/onlyoffice/documentserver-example/public/files
+  #     - /usr/share/fonts
+  #   networks:
+  #     - ds-network
 
-  onlyoffice-rabbitmq:
-    container_name: onlyoffice-rabbitmq
-    image: rabbitmq
-    restart: always
-    expose:
-      - "5672"
-    networks:
-      - ds-network
+  # onlyoffice-rabbitmq:
+  #   container_name: onlyoffice-rabbitmq
+  #   image: rabbitmq
+  #   restart: always
+  #   expose:
+  #     - "5672"
+  #   networks:
+  #     - ds-network
 
-  ds-postgresql:
-    container_name: ds-postgresql
-    image: postgres:12.3-alpine
-    env_file:
-      - ./.envs/.local/.documentserver
-    restart: always
-    expose:
-      - "5432"
-    volumes:
-      - documentserver_postgresql_data:/var/lib/postgresql
-    networks:
-      - ds-network
+  # ds-postgresql:
+  #   container_name: ds-postgresql
+  #   image: postgres:12.3-alpine
+  #   env_file:
+  #     - ./.envs/.local/.documentserver
+  #   restart: always
+  #   expose:
+  #     - "5432"
+  #   volumes:
+  #     - documentserver_postgresql_data:/var/lib/postgresql
+  #   networks:
+  #     - ds-network
 
-  ds-redis:
-    image: redis:5.0
-    container_name: ds-redis
-    restart: always
-    networks:
-      - ds-network
+  # ds-redis:
+  #   image: redis:5.0
+  #   container_name: ds-redis
+  #   restart: always
+  #   networks:
+  #     - ds-network
 
   mailhog:
     image: mailhog/mailhog:v1.0.0

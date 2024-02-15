@@ -8,7 +8,7 @@ from django.db import models
 from django.db.models.signals import pre_save
 from django.utils import timezone
 from slugify import slugify
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from ckeditor.fields import RichTextField
 from taggit.managers import TaggableManager
@@ -60,7 +60,6 @@ class Memorandum(models.Model):
     def get_api_url(self):
         return reverse("posts_api:memo_api-detail", kwargs={"slug": self.slug})
 
-
     @property
     def get_content_type(self):
         instance = self
@@ -96,7 +95,6 @@ class Petition(models.Model):
 
     def get_api_url(self):
         return reverse("posts_api:petition_api-detail", kwargs={"slug": self.slug})
-
 
     @property
     def get_content_type(self):
@@ -143,7 +141,6 @@ class Post(HitCountMixin, models.Model):
 
     class Meta:
         ordering = ["-timestamp", "-updated"]
-
 
     @property
     def get_content_type(self):

@@ -6,6 +6,13 @@ from pathlib import Path
 import re
 import environ
 import datetime
+import django
+
+from django.utils.encoding import smart_str
+from django.utils.translation import gettext
+
+django.utils.encoding.smart_text = smart_str
+django.utils.translation.ugettext = gettext
 
 ROOT_DIR = Path(__file__).resolve(strict=True).parent.parent.parent
 # dokeza_2_0/

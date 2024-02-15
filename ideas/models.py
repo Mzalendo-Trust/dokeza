@@ -13,7 +13,7 @@ from django.conf import settings
 from django.urls import reverse
 from django.db import models
 from django.db.models.signals import pre_save
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 from slugify import slugify
 from taggit.managers import TaggableManager
@@ -53,7 +53,6 @@ class SubmittedIdea(models.Model):
 
     def get_absolute_url(self):
         return reverse('ideas:detail', kwargs={'slug': self.slug})
-
 
     @property
     def get_content_type(self):

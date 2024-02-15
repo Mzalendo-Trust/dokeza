@@ -1,6 +1,6 @@
 from django.contrib.auth import forms, get_user_model
 from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext_lazy as _
+from django.utils.translation import gettext_lazy as _
 
 User = get_user_model()
 
@@ -9,7 +9,7 @@ class UserChangeForm(forms.UserChangeForm):
     class Meta(forms.UserChangeForm.Meta):
         model = User
         fields = ['first_name', 'last_name', 'email', 'is_subscribed_tracker']
-        labels={
+        labels = {
             'first_name': 'First Name',
             'last_name': 'last_name',
             'email': 'Email Address',
@@ -26,7 +26,7 @@ class UserCreationForm(forms.UserCreationForm):
     class Meta(forms.UserCreationForm.Meta):
         model = User
         fields = ['first_name', 'last_name', 'email', 'is_subscribed_tracker']
-        labels={
+        labels = {
             'first_name': 'First Name',
             'last_name': 'last_name',
             'email': 'Email Address',
