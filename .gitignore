@@ -280,7 +280,7 @@ certs/*
 .ipython/
 .env
 .envs/*
-!.envs/.local/
+!.envs/.local/env.example
 tracker/reportservice/reports/report_Jan2021.pdf
 
 backup*
