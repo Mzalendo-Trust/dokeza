@@ -49,11 +49,11 @@ REDIS_SERVER_PORT=6379
 # NGINX_WORKER_CONNECTIONS=
 
 # These will be enabled for the JSON Web Token validation by the ONLYOFFICE Document Server
-# JWT_ENABLED=true
-# JWT_SECRET=oZx66VLT5c7FxPLncbuIjtt6qfN13wjU
+JWT_ENABLED=true
+JWT_SECRET=d0cs-@-sTashed!
 
 # Defines the http header that will be used to send the JSON Web Token.
-# JWT_HEADER=Authorization
+JWT_HEADER=Authorization
 
 # Specifies the enabling the token validation in the request body to the ONLYOFFICE Document Server.
-# JWT_IN_BODY=true
+JWT_IN_BODY=true
