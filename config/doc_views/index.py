@@ -35,6 +35,7 @@ from config.utils import docManager
 
 User = get_user_model()
 
+
 def default(request):
     context = {
         'languages': docManager.LANGUAGES,
@@ -42,7 +43,7 @@ def default(request):
         'editExt': json.dumps(settings.DOC_SERV_EDITED),
         'convExt': json.dumps(settings.DOC_SERV_CONVERT),
         'files': docManager.getStoredFiles(request),
-        'page':'users',
-        'stingo':'documents'
+        'page': 'users',
+        'stingo': 'documents'
     }
     return render(request, 'users/user_documents.html', context)

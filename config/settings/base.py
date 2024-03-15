@@ -480,7 +480,6 @@ DOC_SERV_CONVERT = [
 
 DOC_SERV_JWT_SECRET = env('JWT_SECRET')
 
-
 EXT_SPREADSHEET = [
     ".xls", ".xlsx", ".xlsm",
     ".xlt", ".xltx", ".xltm",
