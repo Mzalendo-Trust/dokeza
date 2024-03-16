@@ -70,10 +70,11 @@ services:
       - dokeza-network
 
   documentserver:
-    container_name: documentserver
-    build:
-      context: .
-      dockerfile: ./compose/local/documentserver/Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: ./compose/local/documentserver/Dockerfile
+    # container_name: documentserver
+    image: theredafro/dokezamzalendocom-documentserver
     env_file:
       - ./.envs/.local/.documentserver
     depends_on:
