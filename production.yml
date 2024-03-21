@@ -15,10 +15,10 @@ networks:
 services:
   postgres:
     container_name: postgres
-    build:
-      context: ./compose/production/postgres
-      dockerfile: Dockerfile
-    image: dokeza_2_0_production_postgres
+    # build:
+    #   context: ./compose/production/postgres
+    #   dockerfile: Dockerfile
+    image: theredafro/dokeza-postgres
     env_file:
       - ./.envs/.production/.postgres
     volumes:
@@ -32,6 +32,7 @@ services:
     build:
       context: ./compose/production/nginx
       dockerfile: Dockerfile
+    image: dokeza-nginx
     restart: always
     volumes:
       - production_certbot_var:/var/www/certbot
@@ -51,7 +52,7 @@ services:
     volumes:
       - production_certbot_var:/var/www/certbot
       - production_certbot_etc:/etc/letsencrypt
-    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --dry-run
+    command: certonly --cert-name staging-dokeza.mzalendo.com --webroot -w /var/www/certbot -d staging-dokeza.mzalendo.com -d dokeza.mzalendo.com -m admin@ra.co.ke,chanua@ra.co.ke -n --agree-tos --dry-run
     networks:
       - dokeza-network
 
@@ -65,10 +66,10 @@ services:
 
   django: &django
     container_name: django
-    build:
-      context: .
-      dockerfile: ./compose/production/django/Dockerfile
-    image: dokeza_2_0_django
+    # build:
+    #   context: .
+    #   dockerfile: ./compose/production/django/Dockerfile
+    image: theredafro/dokeza-django
     volumes:
       - production_media:/app/media
     depends_on:
@@ -82,10 +83,10 @@ services:
       - dokeza-network
 
   trackerservice:
-    build:
-      context: ./tracker/reportservice
-      dockerfile: Dockerfile
-    image: dokeza_2_0_tracker_service
+    # build:
+    #   context: ./tracker/reportservice
+    #   dockerfile: Dockerfile
+    image: theredafro/dokeza-tracker
     container_name: trackerservice
     depends_on:
       - postgres
@@ -95,14 +96,15 @@ services:
       - dokeza-network
 
   documentserver:
-    build:
-      context: .
-      dockerfile: ./compose/production/documentserver/Dockerfile
+    # build:
+    #   context: .
+    #   dockerfile: ./compose/production/documentserver/Dockerfile
     container_name: documentserver
+    image: theredafro/dokezamzalendocom-documentserver
     env_file:
       - ./.envs/.documentserver
     depends_on:
-      - ds-postgresql
+      - onlyoffice-postgresql
       - ds-rabbitmq
       - ds-redis
       - certbot
@@ -130,8 +132,8 @@ services:
     networks:
       - ds-network
 
-  ds-postgresql:
-    container_name: ds-postgresql
+  onlyoffice-postgresql:
+    container_name: onlyoffice-postgresql
     image: postgres:12.3-alpine
     env_file:
       - ./.envs/.documentserver
