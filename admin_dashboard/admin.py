@@ -18,7 +18,7 @@ class DashboardAdminSite(AdminSite):
         urls = super().get_urls()
         dashboard_urls = [
             path('dashboard/', self.admin_view(DashboardFrameView.as_view()), name='dashboard_view'),
-         ]
+        ]
         return dashboard_urls + urls
 
     def get_app_list(self, request):
@@ -71,4 +71,3 @@ class DashboardAdminSite(AdminSite):
 
 
 dashboard_admin_site = DashboardAdminSite(name='dashboard_admin')
-
