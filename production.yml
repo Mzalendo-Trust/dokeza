@@ -66,10 +66,10 @@ services:
 
   django: &django
     container_name: django
-    # build:
-    #   context: .
-    #   dockerfile: ./compose/production/django/Dockerfile
-    image: theredafro/dokeza-django
+    build:
+      context: .
+      dockerfile: ./compose/production/django/Dockerfile
+    image: dokeza-django
     volumes:
       - production_media:/app/media
     depends_on:
