@@ -14,7 +14,7 @@ services:
     build:
       context: .
       dockerfile: ./compose/local/django/Dockerfile
-    image: dokeza_2_0_local_django
+    image: dokeza_local_django
     container_name: django
     depends_on:
       - postgres
@@ -136,7 +136,7 @@ services:
 
   celeryworker:
     <<: *django
-    image: dokeza_2_0_local_celeryworker
+    image: dokeza_local_celeryworker
     container_name: celeryworker
     depends_on:
       - redis
@@ -150,7 +150,7 @@ services:
 
   celerybeat:
     <<: *django
-    image: dokeza_2_0_local_celerybeat
+    image: dokeza_local_celerybeat
     container_name: celerybeat
     depends_on:
       - redis
@@ -164,7 +164,7 @@ services:
 
   flower:
     <<: *django
-    image: dokeza_2_0_local_flower
+    image: dokeza_local_flower
     container_name: flower
     ports:
       - "5555:5555"
@@ -172,18 +172,4 @@ services:
     restart: always
     networks:
       - dokeza-network
-  # docs:
-  #   image: dokeza_2_0_local_docs
-  #   container_name: dokeza_docs
-  #   build:
-  #     context: .
-  #     dockerfile: ./compose/local/docs/Dockerfile
-  #   env_file:
-  #     - ./.envs/.local/.docs
-  #   volumes:
-  #     - ./docs:/docs:z
-  #     - ./config:/app/config:z
-  #     - ./dokeza_2_0:/app/dokeza_2_0:z
-  #   ports:
-  #     - "7000:7000"
-  #   command: /start-docs
+
