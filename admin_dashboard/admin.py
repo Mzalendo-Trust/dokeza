@@ -2,6 +2,7 @@ from django.contrib.admin import AdminSite, site
 from django.contrib.auth import REDIRECT_FIELD_NAME
 from django.http import HttpResponseRedirect
 from django.urls import reverse, path
+from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
 from django.views.decorators.cache import never_cache
 
@@ -18,7 +19,7 @@ class DashboardAdminSite(AdminSite):
         urls = super().get_urls()
         dashboard_urls = [
             path('dashboard/', self.admin_view(DashboardFrameView.as_view()), name='dashboard_view'),
-         ]
+        ]
         return dashboard_urls + urls
 
     def get_app_list(self, request):
@@ -33,7 +34,7 @@ class DashboardAdminSite(AdminSite):
         })
         return app_list
 
-    @never_cache
+    @method_decorator(never_cache)
     def login(self, request, extra_context=None):
         """
         Display the login form for the given HttpRequest.
@@ -71,4 +72,3 @@ class DashboardAdminSite(AdminSite):
 
 
 dashboard_admin_site = DashboardAdminSite(name='dashboard_admin')
-
