@@ -36,6 +36,7 @@ django-ckeditor==6.7.1 # https://github.com/django-ckeditor/django-ckeditor
 django-countries==7.5.1 # https://github.com/SmileyChris/django-countries/
 django-scheduler==0.10.1 # https://github.com/llazzaro/django-scheduler
 django-taggit==5.0.1 # https://github.com/jazzband/django-taggit
+crispy-bootstrap4 # https://github.com/django-crispy-forms/crispy-bootstrap4
 requests
 
 # HTML Parsing
