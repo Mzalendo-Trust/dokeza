@@ -181,3 +181,13 @@ MAINTENANCE_MODE_IGNORE_SUPERUSER = True
 
 STORAGE_PATH = MEDIA_ROOT
 SITE_MODE = 'production'
+
+DOC_SERV_JWT_SECRET = "oZx66VLT5c7FxPLncbuIjtt6qfN13wjU"
+
+DOC_SERV_TIMEOUT = "120000"
+DOC_SERV = "https://dokeza.mzalendo.com"
+DOC_SERV_CONVERTER_URL = "https://dokeza.mzalendo.com/ConvertService.ashx"
+DOC_SERV_API_URL = "https://dokeza.mzalendo.com/web-apps/apps/api/documents/api.js"
+DOC_SERV_PRELOADER_URL = "https://dokeza.mzalendo.com/web-apps/apps/api/documents/cache-scripts.html"
+
+SITE_DOMAIN = "https://dokeza.mzalendo.com"

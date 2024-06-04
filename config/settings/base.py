@@ -479,9 +479,6 @@ DOC_SERV_CONVERT = [
     ".odp", ".fodp", ".otp", ".rtf", ".mht", ".html", ".htm", ".epub"
 ]
 
-DOC_SERV_JWT_SECRET = env('JWT_SECRET')
-
-
 EXT_SPREADSHEET = [
     ".xls", ".xlsx", ".xlsm",
     ".xlt", ".xltx", ".xltm",
@@ -502,12 +499,3 @@ EXT_DOCUMENT = [
     ".html", ".htm", ".mht",
     ".pdf", ".djvu", ".fb2", ".epub", ".xps"
 ]
-
-DOC_SERV = env('DOC_SERV')
-DOC_SERV_TIMEOUT = env('DOC_SERV_TIMEOUT')
-
-DOC_SERV_CONVERTER_URL = env('DOC_SERV_CONVERTER_URL')
-DOC_SERV_API_URL = env('DOC_SERV_API_URL')
-DOC_SERV_PRELOADER_URL = env('DOC_SERV_PRELOADER_URL')
-
-SITE_DOMAIN = env('SITE_DOMAIN')
