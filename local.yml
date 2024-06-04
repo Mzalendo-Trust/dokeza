@@ -32,10 +32,10 @@ services:
       - dokeza-network
 
   trackerservice:
-    build:
-      context: ./tracker/reportservice
-      dockerfile: Dockerfile
-    image: dokeza_2_0_tracker_service
+    # build:
+    #   context: ./tracker/reportservice
+    #   dockerfile: Dockerfile
+    image: theredafro/dokeza-tracker
     container_name: trackerservice
     depends_on:
       - postgres
@@ -46,10 +46,11 @@ services:
       - dokeza-network
 
   postgres:
-    build:
-      context: ./compose/production/postgres
-      dockerfile: Dockerfile
-    image: dokeza_2_0_production_postgres
+    # build:
+    #   context: ./compose/production/postgres
+    #   dockerfile: Dockerfile
+    image: theredafro/dokeza-postgres
+    env_file:
     container_name: postgres
     volumes:
       - local_postgres_data:/var/lib/postgresql/data
