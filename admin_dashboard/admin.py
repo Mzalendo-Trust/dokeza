@@ -2,6 +2,7 @@ from django.contrib.admin import AdminSite, site
 from django.contrib.auth import REDIRECT_FIELD_NAME
 from django.http import HttpResponseRedirect
 from django.urls import reverse, path
+from django.utils.decorators import method_decorator
 from django.utils.translation import gettext as _
 from django.views.decorators.cache import never_cache
 from django.utils.decorators import method_decorator
