@@ -479,7 +479,7 @@ DOC_SERV_CONVERT = [
     ".odp", ".fodp", ".otp", ".rtf", ".mht", ".html", ".htm", ".epub"
 ]
 
-DOC_SERV_JWT_SECRET = env('JWT_SECRET')
+DOC_SERV_JWT_SECRET = 'oZx66VLT5c7FxPLncbuIjtt6qfN13wjU'
 
 
 EXT_SPREADSHEET = [
