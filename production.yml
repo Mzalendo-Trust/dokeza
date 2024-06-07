@@ -1,4 +1,4 @@
-version: '3'
+name: dokeza
 
 volumes:
   production_postgres_data:
@@ -96,11 +96,11 @@ services:
       - dokeza-network
 
   documentserver:
-    # build:
-    #   context: .
-    #   dockerfile: ./compose/production/documentserver/Dockerfile
+    build:
+      context: .
+      dockerfile: ./compose/production/documentserver/Dockerfile
     container_name: documentserver
-    image: theredafro/dokezamzalendocom-documentserver
+    image: dokeza-documentserver
     env_file:
       - ./.envs/.documentserver
     depends_on:
