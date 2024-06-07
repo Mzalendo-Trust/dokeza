@@ -28,7 +28,7 @@ urlpatterns = [
 
     # Django Admin, use {% url 'admin:index' %}
     path('jsi18n', JavaScriptCatalog.as_view(), name='js-catlog'),
-      # new
+    # new
     path(settings.ADMIN_URL, dashboard_admin_site.urls),
     path('ds/', include('admin_dashboard.urls')),
     path('maintenance-mode/', include('maintenance_mode.urls')),
@@ -48,27 +48,6 @@ urlpatterns = [
     path('ckeditor/', include('ckeditor_uploader.urls')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-if settings.DEBUG:
-    # Static file serving when using Gunicorn + Uvicorn for local web socket development
-    urlpatterns += staticfiles_urlpatterns()
-
-# API URLS
-urlpatterns += [
-    # API base url
-    path("api/", include("config.api_router")),
-    # DRF auth token
-    path("auth-token/", obtain_auth_token),
-    path('api/auth/', include('rest_framework.urls', namespace='rest_framework')),
-    path('api/users/', include('dokeza_2_0.users.api.urls', namespace='users-api')),
-
-    # Access APIs
-    path('api/bills/', include('bills.api.urls', namespace='bills-api')),
-    path('api/tracker/', include('tracker.api.urls', namespace='tracker-api')),
-    path('api/highlights/', include('highlights.api.urls', namespace='highlights-api')),
-    # path('api/analysis/', include('posts.api.urls', namespace='posts-api')),
-    # path('api/comments/', include('comments.api.urls', namespace='comments-api')),
-    path('api/public-participation/', include('public_participation.api.urls', namespace='public_participation-api'))
-]
 
 if settings.DEBUG:
     # This allows the error pages to be debugged during development, just visit

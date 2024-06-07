@@ -1,206 +1,258 @@
 """
 
- (c) Copyright Ascensio System SIA 2020
- *
- The MIT License (MIT)
+ (c) Copyright Ascensio System SIA 2023
 
- Permission is hereby granted, free of charge, to any person obtaining a copy
- of this software and associated documentation files (the "Software"), to deal
- in the Software without restriction, including without limitation the rights
- to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- copies of the Software, and to permit persons to whom the Software is
- furnished to do so, subject to the following conditions:
+ Licensed under the Apache License, Version 2.0 (the "License");
+ you may not use this file except in compliance with the License.
+ You may obtain a copy of the License at
 
- The above copyright notice and this permission notice shall be included in all
- copies or substantial portions of the Software.
+     http://www.apache.org/licenses/LICENSE-2.0
 
- THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- SOFTWARE.
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
 
 """
 
 import os
 import io
 import json
-from django.conf import settings
 
 from . import users, fileUtils
 from datetime import datetime
-    
+from config.utils import docManager
+from config.utils import jwtManager
+
+
+# get the path to the history direction
 def getHistoryDir(storagePath):
     return f'{storagePath}-hist'
 
+
+# get the path to the given file version
 def getVersionDir(histDir, version):
-    print(os.path.join(histDir, str(version)))
     return os.path.join(histDir, str(version))
 
+
+# get file version of the given history directory
 def getFileVersion(histDir):
-    if not os.path.exists(histDir):
-        return 0
+    if not os.path.exists(histDir):  # if the history directory doesn't exist
+        return 0  # file version is 0
 
-    cnt = 0
+    cnt = 1
 
-    for f in os.listdir(histDir):
+    for f in os.listdir(histDir):  # run through all the files in the history directory
+        # and count the number of files
         if not os.path.isfile(os.path.join(histDir, f)):
             cnt += 1
-    
+
     return cnt
 
-def getNextVersionDir(histDir):
-    v = getFileVersion(histDir)
-    path = getVersionDir(histDir, v + 1)
 
-    if not os.path.exists(path):
-        os.makedirs(path)
+# get the path to the next file version
+def getNextVersionDir(histDir):
+    # get file version of the given history directory
+    v = getFileVersion(histDir)
+    path = getVersionDir(histDir, v)  # get the path to the next file version
+
+    if not os.path.exists(path):  # if this path doesn't exist
+        os.makedirs(path)  # make the directory for this file version
     return path
 
+
+# get the path to a file archive with differences in the given file version
 def getChangesZipPath(verDir):
     return os.path.join(verDir, 'diff.zip')
 
+
+# get the path to a json file with changes of the given file version
 def getChangesHistoryPath(verDir):
     return os.path.join(verDir, 'changes.json')
 
+
+# get the path to the previous file version
 def getPrevFilePath(verDir, ext):
     return os.path.join(verDir, f'prev{ext}')
 
+
+# get the path to a txt file with a key information in it
 def getKeyPath(verDir):
     return os.path.join(verDir, 'key.txt')
 
+
+# get the path to a json file with meta data about this file
 def getMetaPath(histDir):
     return os.path.join(histDir, 'createdInfo.json')
 
+
+# create a json file with file meta data using the storage path and request
 def createMeta(storagePath, req):
     histDir = getHistoryDir(storagePath)
+    # get the path to a json file with meta data about file
     path = getMetaPath(histDir)
 
     if not os.path.exists(histDir):
         os.makedirs(histDir)
 
-    user = req.user
-    if not user.first_name:
-        user.first_name = 'Mgeni'
-        if not user.username:
-            user.username = f'{user.first_name}_{user.last_name}'
+    user = users.getUserFromReq(req)  # get the user information (id and name)
 
-    obj = {
-        'created': datetime.today().strftime('%d.%m.%Y %H:%M:%S'),
-        'uid': f'{user.id}',
-        'uname': f'{user.username}'
+    obj = {  # create the meta data object
+        'created': datetime.today().strftime('%Y-%m-%d %H:%M:%S'),
+        'uid': user.id,
+        'uname': user.name
     }
 
     writeFile(path, json.dumps(obj))
-    
+
     return
 
+
+# create a json file with file meta data using the file name, user id, user name and user address
+def createMetaData(filename, uid, uname, usAddr):
+    histDir = getHistoryDir(docManager.getStoragePath(filename, usAddr))
+    # get the path to a json file with meta data about file
+    path = getMetaPath(histDir)
+
+    if not os.path.exists(histDir):
+        os.makedirs(histDir)
+
+    obj = {  # create the meta data object
+        'created': datetime.today().strftime('%Y-%m-%d %H:%M:%S'),
+        'uid': uid,
+        'uname': uname
+    }
+
+    writeFile(path, json.dumps(obj))
+
+    return
+
+
+# create file with a given content in it
 def writeFile(path, content):
     with io.open(path, 'w') as out:
         out.write(content)
     return
 
+
+# read a file
 def readFile(path):
     with io.open(path, 'r') as stream:
         return stream.read()
 
-def getPrevUri(filename, ver, ext, req):
-    host = settings.SITE_DOMAIN.rstrip('/')
-    if re.search('bills', filename):
-        return f'{host}{settings.MEDIA_URL}{filename}'
-    else:
-        user = req.user
-        if not user.first_name:
-            user.first_name = 'Mgeni'
-        if not user.username:
-            user.username = f'{user.first_name}_{user.last_name}'
-        return f'{host}{settings.MEDIA_URL}{user.username}/{filename}-hist/{ver}/prev{ext}'
 
-def getZipUri(filename, ver, req):
-    host = settings.SITE_DOMAIN.rstrip('/')
-    if re.search('bills', filename):
-        return f'{host}{settings.MEDIA_URL}{filename}'
-    else:
-        user = req.user
-        if not user.first_name:
-            user.first_name = 'Mgeni'
-        if not user.username:
-            user.username = f'{user.first_name}_{user.last_name}'
-        return f'{host}{settings.MEDIA_URL}{user.username}/{filename}-hist/{ver}/diff.zip'
+# get the url to the history file version with a given extension
+def getPublicHistUri(filename, ver, file, req, isServerUrl=True):
+    host = docManager.getServerUrl(isServerUrl, req)
+    curAdr = f'&userAddress={req.META["REMOTE_ADDR"]}' if isServerUrl else ''
+    return f'{host}/downloadhistory?fileName={filename}&ver={ver}&file={file}{curAdr}'
 
+
+# get the meta data of the file
 def getMeta(storagePath):
     histDir = getHistoryDir(storagePath)
     path = getMetaPath(histDir)
 
-    if os.path.exists(path):
+    if os.path.exists(path):  # check if the json file with file meta data exists
         with io.open(path, 'r') as stream:
+            # turn meta data into python format
             return json.loads(stream.read())
-    
+
     return None
 
-def getHistoryObject(storagePath, filename, docKey, docUrl, req):
+
+# get the document history of a given file
+def getHistoryObject(storagePath, filename, docKey, docUrl, isEnableDirectUrl, req):
     histDir = getHistoryDir(storagePath)
     version = getFileVersion(histDir)
-    user = req.user
+    # if the file was modified (the file version is greater than 0)
     if version > 0:
         hist = []
         histData = {}
 
-        for i in range(version + 1):
+        for i in range(1, version + 1):  # run through all the file versions
             obj = {}
             dataObj = {}
-            prevVerDir = getVersionDir(histDir, i)
-            verDir = getVersionDir(histDir, i + 1)
+            # get the path to the previous file version
+            prevVerDir = getVersionDir(histDir, i - 1)
+            # get the path to the given file version
+            verDir = getVersionDir(histDir, i)
 
             try:
-                key = docKey if i == version else readFile(getKeyPath(verDir))
+                key = docKey if i == version else readFile(
+                    getKeyPath(verDir))  # get document key
 
                 obj['key'] = key
                 obj['version'] = i
+                dataObj['fileType'] = fileUtils.getFileExt(filename)[1:]
                 dataObj['key'] = key
                 dataObj['version'] = i
 
-                if i == 0:
-                    meta = getMeta(storagePath)
+                if i == 1:  # check if the version number is equal to 1
+                    meta = getMeta(storagePath)  # get meta data of this file
+                    # write meta information to the object (user information and creation date)
                     if meta:
                         obj['created'] = meta['created']
                         obj['user'] = {
-                            'id': meta[f'{user.id}'],
-                            'name': meta[f'{user.username}']
+                            'id': meta['uid'],
+                            'name': meta['uname']
                         }
-                    
-                dataObj['url'] = docUrl if i == version else getPrevUri(filename, i + 1, fileUtils.getFileExt(filename), req)
 
-                if i > 0:
-                    changes = json.loads(readFile(getChangesHistoryPath(prevVerDir)))
+                dataObj['url'] = docUrl if i == version else getPublicHistUri(
+                    filename, i, "prev" + fileUtils.getFileExt(filename), req)  # write file url to the data object
+                if isEnableDirectUrl:
+                    dataObj['directUrl'] = docManager.getDownloadUrl(filename, req, False) if i == version else getPublicHistUri(
+                        # write file direct url to the data object
+                        filename, i, "prev" + fileUtils.getFileExt(filename), req, False)
+
+                # check if the version number is greater than 1 (the file was modified)
+                if i > 1:
+                    # get the path to the changes.json file
+                    changes = json.loads(
+                        readFile(getChangesHistoryPath(prevVerDir)))
                     change = changes['changes'][0]
-                    
-                    obj['changes'] = changes['changes']
-                    obj['serverVersion'] = changes['serverVersion']
-                    obj['created'] = change['created']
-                    obj['user'] = change['user']
 
-                    prev = histData[str(i - 1)]
-                    prevInfo = {
+                    # write information about changes to the object
+                    obj['changes'] = changes['changes'] if change else None
+                    obj['serverVersion'] = changes['serverVersion']
+                    obj['created'] = change['created'] if change else None
+                    obj['user'] = change['user'] if change else None
+
+                    # get the history data from the previous file version
+                    prev = histData[str(i - 2)]
+                    prevInfo = {  # write key and url information about previous file version
+                        'fileType': prev['fileType'],
+                        'key': prev['key'],
+                        'url': prev['url'],
+                        'directUrl': prev['directUrl']
+                        # write key and url information about previous file version
+                    } if isEnableDirectUrl else {
+                        'fileType': prev['fileType'],
                         'key': prev['key'],
                         'url': prev['url']
                     }
+                    # write information about previous file version to the data object
                     dataObj['previous'] = prevInfo
-                    dataObj['changesUrl'] = getZipUri(filename, i, req)
+                    # write the path to the diff.zip archive with differences in this file version
+                    dataObj['changesUrl'] = getPublicHistUri(
+                        filename, i - 1, "diff.zip", req)
 
-                hist.append(obj)
-                histData[str(i)] = dataObj
+                if jwtManager.isEnabled():
+                    dataObj['token'] = jwtManager.encode(dataObj)
+
+                hist.append(obj)  # add object dictionary to the hist list
+                # write data object information to the history data
+                histData[str(i - 1)] = dataObj
             except Exception:
                 return {}
-        
-        histObj = {
+
+        histObj = {  # write history information about the current file version to the history object
             'currentVersion': version,
             'history': hist
         }
 
-        return { 'history': histObj, 'historyData': histData }
+        return {'history': histObj, 'historyData': histData}
     return {}
 
 
@@ -210,6 +262,6 @@ class CorsHeaderMiddleware:
 
     def __call__(self, request):
         resp = self.get_response(request)
-        if request.path.endswith('.zip'):
+        if request.path == '/downloadhistory':
             resp['Access-Control-Allow-Origin'] = '*'
         return resp
